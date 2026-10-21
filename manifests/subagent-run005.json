@@ -1,0 +1,70 @@
+{
+  "run": "RUN005",
+  "date_kst": "2026-10-21",
+  "prior_unique_agents": 17,
+  "new_unique_agents": 3,
+  "cumulative_unique_agents": 20,
+  "agents": [
+    {
+      "name": "storage_producer_run005",
+      "role": "SIF callback installation and storage-state queue producer",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "reason": "Cross-function pointer, member-field and worker-message tracing",
+      "report": "analysis/architecture/STORAGE_PRODUCER_RUN005.md",
+      "fork_turns": "none",
+      "verified_runtime_model_id": null,
+      "runtime_model_identity": "Not exposed by available provider result; requested setting is not an independently verified runtime identity",
+      "status": "completed",
+      "limitations": [
+        "Requested model ID recorded; independent runtime model identity not exposed",
+        "Bounded static work, not runtime/device validation"
+      ],
+      "selected_attempts": 32,
+      "selected_completed": 32,
+      "reviewed_elf_findings": 7,
+      "result": "Concrete conditional worker callback installation and separate queued status producer traced"
+    },
+    {
+      "name": "app_storage_run005",
+      "role": "APP registration, storage-status conversion, error handling and counters",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "reason": "Original ELF relocation, jump-table and consumer analysis",
+      "report": "analysis/architecture/APP_STORAGE_RUN005.md",
+      "fork_turns": "none",
+      "verified_runtime_model_id": null,
+      "runtime_model_identity": "Not exposed by available provider result; requested setting is not an independently verified runtime identity",
+      "status": "completed",
+      "limitations": [
+        "Requested model ID recorded; independent runtime model identity not exposed",
+        "Bounded static work, not runtime/device validation"
+      ],
+      "selected_attempts": 15,
+      "selected_completed": 15,
+      "reviewed_elf_findings": 7,
+      "result": "Concrete app registration, numeric status conversion and accounting/error/BT routes traced"
+    },
+    {
+      "name": "review_run005",
+      "role": "Independent original-byte/address and claim review",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "reason": "Separate reproduction and semantic checks",
+      "report": "docs/INDEPENDENT_REVIEW_RUN005.md",
+      "fork_turns": "none",
+      "verified_runtime_model_id": null,
+      "runtime_model_identity": "Not exposed by available provider result; requested setting is not an independently verified runtime identity",
+      "status": "completed",
+      "limitations": [
+        "Requested model ID recorded; independent runtime model identity not exposed",
+        "Bounded static work, not runtime/device validation"
+      ],
+      "validated_new_exports": 41,
+      "validated_selected_attempts": 47,
+      "checked_original_byte_windows": 57,
+      "result": "Independent bounded review complete; original-offset wording and literal/decode boundaries corrected",
+      "checked_original_instruction_rows": 1435
+    }
+  ]
+}

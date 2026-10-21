@@ -1,0 +1,134 @@
+{
+  "run": "20261021_run005",
+  "recorded_date_kst": "2026-10-21",
+  "previous_run": "manifests/drive-artifacts-run004.json",
+  "semantic_completion_percent": null,
+  "loaded_elf_contents": 41,
+  "total_unique_elf_contents": 1895,
+  "unique_selected_decompile_completed": 288,
+  "reviewed_elf_units": 49,
+  "new_reviewed_raw_rtos_units": 2,
+  "total_reviewed_raw_rtos_units": 6,
+  "total_reviewed_raw_kernel_units": 3,
+  "artifacts": [
+    {
+      "name": "NX500_FW112_GhidraSurveySnapshot_20261021_run005.zip",
+      "id": "1my02XObPyZz9dUqSZYEfO0BSdLcPOh8J",
+      "url": "https://drive.google.com/file/d/1my02XObPyZz9dUqSZYEfO0BSdLcPOh8J/view?usp=drivesdk",
+      "bytes": 57054430,
+      "sha256": "c70a8203e80058c3d08e95594905b5c3a313d03294dda28cb5cc444adbaa59a9",
+      "verified_parent_id": "1qWBUqiXxBFfDLA6AQ6UGjYaNCfcZJuV3",
+      "remote_verification": "Parent/size metadata + full authenticated redownload SHA-256 and ZIP CRC verified"
+    },
+    {
+      "name": "NX500_FW112_GhidraPhotoSnapshot_20261021_run005.zip",
+      "id": "1j-HsfLABnrbWQ8IXEWtkg0eWag6jHfwJ",
+      "url": "https://drive.google.com/file/d/1j-HsfLABnrbWQ8IXEWtkg0eWag6jHfwJ/view?usp=drivesdk",
+      "bytes": 8328187,
+      "sha256": "c4cd1e9f1a9f03ec2b46a2abc52e72aa63469cb0084d36ddd77504c0f7492cf8",
+      "verified_parent_id": "1qWBUqiXxBFfDLA6AQ6UGjYaNCfcZJuV3",
+      "remote_verification": "Parent/size metadata + full authenticated redownload SHA-256 and ZIP CRC verified"
+    },
+    {
+      "name": "NX500_FW112_Exports_20261021_run005.zip",
+      "id": "1qKoRlrEd6HJVqXKtFPa9I-XxH0ZjaCeu",
+      "url": "https://drive.google.com/file/d/1qKoRlrEd6HJVqXKtFPa9I-XxH0ZjaCeu/view?usp=drivesdk",
+      "bytes": 8963728,
+      "sha256": "65712a4d6e04e4bca882c3a9053fe50ea856b0085f10fa9ed3a57cbc7950268f",
+      "verified_parent_id": "1qWBUqiXxBFfDLA6AQ6UGjYaNCfcZJuV3",
+      "remote_verification": "Parent/size metadata + full authenticated redownload SHA-256 and ZIP CRC verified"
+    },
+    {
+      "name": "NX500_FW112_Research_20261021_run005.zip",
+      "id": "1m20nPtP8HNs_pmbLE6Jv8x0qDStugqtC",
+      "url": "https://drive.google.com/file/d/1m20nPtP8HNs_pmbLE6Jv8x0qDStugqtC/view?usp=drivesdk",
+      "bytes": 1113600,
+      "sha256": "e16978ab56ad2cdd577845b56500529054389b641a66d8792192e521e68bb087",
+      "verified_parent_id": "1CZcxRYF9R-YziuZTGl8Rw3n2M3wWOY0g",
+      "remote_verification": "Parent/size metadata + full authenticated redownload SHA-256 and ZIP CRC verified"
+    },
+    {
+      "name": "STATUS_20261021_RUN005.md",
+      "repo_path": "docs/STATUS_20261021_RUN005.md",
+      "id": "1FjmmRD1wbQM33eX31TKV_zLCfX1evOW0",
+      "url": "https://drive.google.com/file/d/1FjmmRD1wbQM33eX31TKV_zLCfX1evOW0/view?usp=drivesdk",
+      "verified_parent_id": "1CZcxRYF9R-YziuZTGl8Rw3n2M3wWOY0g",
+      "remote_verification": "Parent metadata and exact full body readback verified"
+    },
+    {
+      "name": "VALIDATION_20261021_RUN005.md",
+      "repo_path": "docs/VALIDATION_20261021_RUN005.md",
+      "id": "1HrgfAjyDVh_zMhnAO1HOauDkUlvmakJL",
+      "url": "https://drive.google.com/file/d/1HrgfAjyDVh_zMhnAO1HOauDkUlvmakJL/view?usp=drivesdk",
+      "verified_parent_id": "1CZcxRYF9R-YziuZTGl8Rw3n2M3wWOY0g",
+      "remote_verification": "Parent metadata and exact full body readback verified"
+    },
+    {
+      "name": "INDEPENDENT_REVIEW_RUN005.md",
+      "repo_path": "docs/INDEPENDENT_REVIEW_RUN005.md",
+      "id": "1QUyL4Gyq4OHDb3ZSG19m8qvK77Cc8EcR",
+      "url": "https://drive.google.com/file/d/1QUyL4Gyq4OHDb3ZSG19m8qvK77Cc8EcR/view?usp=drivesdk",
+      "verified_parent_id": "1CZcxRYF9R-YziuZTGl8Rw3n2M3wWOY0g",
+      "remote_verification": "Parent metadata and exact full body readback verified"
+    },
+    {
+      "name": "ANALYSIS_PROGRESS_RUN005.md",
+      "repo_path": "docs/ANALYSIS_PROGRESS.md",
+      "id": "1OqEyS2pPvQhD1hhkNBH1IuWfBmC7ywpB",
+      "url": "https://drive.google.com/file/d/1OqEyS2pPvQhD1hhkNBH1IuWfBmC7ywpB/view?usp=drivesdk",
+      "verified_parent_id": "198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+      "remote_verification": "Parent metadata and exact full body readback verified"
+    },
+    {
+      "name": "RUN005_REPRODUCTION.md",
+      "repo_path": "docs/RUN005_REPRODUCTION.md",
+      "id": "1egwtPPnaOXfP3Br7PVbzRNJqDGsary2Y",
+      "url": "https://drive.google.com/file/d/1egwtPPnaOXfP3Br7PVbzRNJqDGsary2Y/view?usp=drivesdk",
+      "verified_parent_id": "198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+      "remote_verification": "Parent metadata and exact full body readback verified"
+    },
+    {
+      "name": "SUBAGENT_USAGE_20261021_RUN005.md",
+      "repo_path": "docs/SUBAGENT_USAGE_20261021.md",
+      "id": "1WCSbujgv4AhniNdQur2IHFSQ7gHFxya3",
+      "url": "https://drive.google.com/file/d/1WCSbujgv4AhniNdQur2IHFSQ7gHFxya3/view?usp=drivesdk",
+      "verified_parent_id": "198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+      "remote_verification": "Parent metadata and exact full body readback verified"
+    },
+    {
+      "name": "STORAGE_PRODUCER_RUN005.md",
+      "repo_path": "analysis/architecture/STORAGE_PRODUCER_RUN005.md",
+      "id": "1h3fL4GsrJfln0DiMlqF5aFqRJVYwcicv",
+      "url": "https://drive.google.com/file/d/1h3fL4GsrJfln0DiMlqF5aFqRJVYwcicv/view?usp=drivesdk",
+      "verified_parent_id": "10xY2YyYAyarseUKK24i-rwA0ZMiTrm6G",
+      "remote_verification": "Parent metadata and exact full body readback verified"
+    },
+    {
+      "name": "APP_STORAGE_RUN005.md",
+      "repo_path": "analysis/architecture/APP_STORAGE_RUN005.md",
+      "id": "17vaXfUnxSSRAn6iqv6wRjiExsDZMJZ_t",
+      "url": "https://drive.google.com/file/d/17vaXfUnxSSRAn6iqv6wRjiExsDZMJZ_t/view?usp=drivesdk",
+      "verified_parent_id": "10xY2YyYAyarseUKK24i-rwA0ZMiTrm6G",
+      "remote_verification": "Parent metadata and exact full body readback verified"
+    },
+    {
+      "name": "RTOS_PUBLISH_RUN005.md",
+      "repo_path": "analysis/architecture/RTOS_PUBLISH_RUN005.md",
+      "id": "1HsiejCL1ziGymSkVQUDYSZ8sC0-14gNQ",
+      "url": "https://drive.google.com/file/d/1HsiejCL1ziGymSkVQUDYSZ8sC0-14gNQ/view?usp=drivesdk",
+      "verified_parent_id": "10xY2YyYAyarseUKK24i-rwA0ZMiTrm6G",
+      "remote_verification": "Parent metadata and exact full body readback verified"
+    },
+    {
+      "name": "Codex_START_HERE_20261021_run005.md",
+      "id": "1TB2xhuWWmB-jI7PwWVNixLLJ1WJA-Ffi",
+      "url": "https://drive.google.com/file/d/1TB2xhuWWmB-jI7PwWVNixLLJ1WJA-Ffi/view?usp=drivesdk",
+      "verified_parent_id": "1Xr8YHrtXuPudHGPC_fUl9zBoFxhhSZGJ",
+      "remote_verification": "Parent metadata and exact full body readback verified; older guides preserved"
+    }
+  ],
+  "source_firmware_preserved": true,
+  "existing_drive_files_preserved": true,
+  "camera_io": false,
+  "firmware_installation": false
+}
