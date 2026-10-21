@@ -1,0 +1,200 @@
+{
+  "package": "NX500 v1.12 SLP exact byte-range archival slices; RESEARCH ONLY, DO NOT FLASH",
+  "original_zip_name": "NX500_FW_v1.12.zip",
+  "original_zip_size": 281999904,
+  "original_zip_sha256": "bceabae2bfef9faf90fe0bef0782f6458605ce4dc187bad39497ab7ec3305af1",
+  "bin_name": "NX500.bin",
+  "bin_size": 352121435,
+  "bin_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+  "slp_header_offset": 0,
+  "slp_header_bytes": 304,
+  "section_count": 10,
+  "sections": [
+    {
+      "index": 0,
+      "offset_decimal": 304,
+      "offset_hex": "0x00000130",
+      "length_bytes": 6160624,
+      "sha256": "f847a8bb1617e7413270cecf588c39ddc2a44ceb56d2da199df982a15ca61b8a",
+      "inverted_crc32": "0x48F3183B",
+      "classification": "ARM Linux kernel uImage",
+      "archive_filename": "NX500_v1.12_SLP_header_and_sections_except_06.zip",
+      "archive_member": "section_00_offset_0x00000130.bin"
+    },
+    {
+      "index": 1,
+      "offset_decimal": 6160928,
+      "offset_hex": "0x005E0220",
+      "length_bytes": 56289,
+      "sha256": "c1069c67fe05308957490ea3df80d8a14cb86fc9371455d859d396fad7c71c1e",
+      "inverted_crc32": "0x19D433B2",
+      "classification": "ARM boot code (unclassified)",
+      "archive_filename": "NX500_v1.12_SLP_header_and_sections_except_06.zip",
+      "archive_member": "section_01_offset_0x005E0220.bin"
+    },
+    {
+      "index": 2,
+      "offset_decimal": 6217217,
+      "offset_hex": "0x005EDE01",
+      "length_bytes": 3176040,
+      "sha256": "9aacd82b09bce302dd72109c750fadfba2cedcc86f0e75a2b3f012826c1d796e",
+      "inverted_crc32": "0xD8719107",
+      "classification": "ARM Linux kernel uImage",
+      "archive_filename": "NX500_v1.12_SLP_header_and_sections_except_06.zip",
+      "archive_member": "section_02_offset_0x005EDE01.bin"
+    },
+    {
+      "index": 3,
+      "offset_decimal": 9393257,
+      "offset_hex": "0x008F5469",
+      "length_bytes": 6169816,
+      "sha256": "4672e0c2c46d1472aa492264523dc0d5919ec0cf8a1ba7a94e82757f6dd418d4",
+      "inverted_crc32": "0x2180947F",
+      "classification": "ARM Linux kernel uImage",
+      "archive_filename": "NX500_v1.12_SLP_header_and_sections_except_06.zip",
+      "archive_member": "section_03_offset_0x008F5469.bin"
+    },
+    {
+      "index": 4,
+      "offset_decimal": 15563073,
+      "offset_hex": "0x00ED7941",
+      "length_bytes": 117184,
+      "sha256": "eef8232942a6fd8dcb4ce5b6073511e5d5f78d71c08444f1e540b30964483b52",
+      "inverted_crc32": "0x8785210E",
+      "classification": "binary data (unclassified)",
+      "archive_filename": "NX500_v1.12_SLP_header_and_sections_except_06.zip",
+      "archive_member": "section_04_offset_0x00ED7941.bin"
+    },
+    {
+      "index": 5,
+      "offset_decimal": 15680257,
+      "offset_hex": "0x00EF4301",
+      "length_bytes": 12075648,
+      "sha256": "f8e417cb5b55768851ba7e2b8017d3a98dc0b0c8444cc0a5061265cc08dbbf7f",
+      "inverted_crc32": "0xDF679D3B",
+      "classification": "ARM boot code (unclassified)",
+      "archive_filename": "NX500_v1.12_SLP_header_and_sections_except_06.zip",
+      "archive_member": "section_05_offset_0x00EF4301.bin"
+    },
+    {
+      "index": 6,
+      "offset_decimal": 27755905,
+      "offset_hex": "0x01A78581",
+      "length_bytes": 280505658,
+      "sha256": "516e6531179c32efc24831016a18243871b73a400d2fae2fd00d84535827fe2e",
+      "inverted_crc32": "0xBDA66EC1",
+      "classification": "LZOP compressed ext4 rootfs"
+    },
+    {
+      "index": 7,
+      "offset_decimal": 308261563,
+      "offset_hex": "0x125FB2BB",
+      "length_bytes": 5022551,
+      "sha256": "8029a654102e057e2690b0b822cb04c801ff16fb4ee0ad45faf8edbfa2535378",
+      "inverted_crc32": "0x41191FB5",
+      "classification": "LZOP compressed ext4 opt",
+      "archive_filename": "NX500_v1.12_SLP_header_and_sections_except_06.zip",
+      "archive_member": "section_07_offset_0x125FB2BB.bin"
+    },
+    {
+      "index": 8,
+      "offset_decimal": 313284114,
+      "offset_hex": "0x12AC5612",
+      "length_bytes": 28672,
+      "sha256": "7c2ebd85dc310a74eb19f94066729c92fffc94f68f235df2e7c72fbb53b0dad8",
+      "inverted_crc32": "0xEF2256DF",
+      "classification": "zero-filled reservation",
+      "archive_filename": "NX500_v1.12_SLP_header_and_sections_except_06.zip",
+      "archive_member": "section_08_offset_0x12AC5612.bin"
+    },
+    {
+      "index": 9,
+      "offset_decimal": 313312786,
+      "offset_hex": "0x12ACC612",
+      "length_bytes": 38808649,
+      "sha256": "7862d95748dc5309e2f553972fcc96e9eda5ccd720438da9a67f7068a5540f2d",
+      "inverted_crc32": "0xB5082DE3",
+      "classification": "LZOP compressed Linux swap",
+      "archive_filename": "NX500_v1.12_SLP_header_and_sections_except_06.zip",
+      "archive_member": "section_09_offset_0x12ACC612.bin"
+    }
+  ],
+  "deliverables": [
+    {
+      "file": "NX500_v1.12_SLP_header_and_sections_except_06.zip",
+      "size_bytes": 71617191,
+      "sha256": "dcbc70f4972f788b151b0766e8a235e7f79b9df67b529a594c66cfb564177f9c",
+      "purpose": "Header and sections 0-5,7-9, all in exact original bytes",
+      "drive_id": "1i-4qQtqYEIibxF_1x7LqZ3UbCBmaQApO"
+    },
+    {
+      "file": "NX500_v1.12_section06_rootfs_part01_of03.binpart",
+      "size_bytes": 104857600,
+      "sha256": "0db60ad922f818e7abafd504c4429ea35eb3822310371429d1e4ce422db54335",
+      "offset_within_section": 0,
+      "offset_within_bin": 27755905,
+      "purpose": "Exactly ordered raw bytes of SLP section #6 (compressed rootfs).",
+      "drive_id": "1rcL8NCiNeLrpXNk8whMQcMWKZLGs8LrV"
+    },
+    {
+      "file": "NX500_v1.12_section06_rootfs_part02_of03.binpart",
+      "size_bytes": 104857600,
+      "sha256": "47b454276549d096304f38d5e8b3443e69165e275b93f7eaa39cccccfe184dc8",
+      "offset_within_section": 104857600,
+      "offset_within_bin": 132613505,
+      "purpose": "Exactly ordered raw bytes of SLP section #6 (compressed rootfs).",
+      "drive_id": "1Ixc4OAmMFfzLQgUdrh869QNALjJU_Pe1"
+    },
+    {
+      "file": "NX500_v1.12_section06_rootfs_part03_of03.binpart",
+      "size_bytes": 70790458,
+      "sha256": "33aaa30c93a3fb1b441f931131dd4b2f0afd3ac1f8ce16be206b2476d74eb449",
+      "offset_within_section": 209715200,
+      "offset_within_bin": 237471105,
+      "purpose": "Exactly ordered raw bytes of SLP section #6 (compressed rootfs).",
+      "drive_id": "16NysR_CYQZxot1846W0L6K_A-aydw55M"
+    }
+  ],
+  "reconstruction_verified": true,
+  "reconstructed_size_bytes": 352121435,
+  "reconstructed_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+  "section_crc_pass_count": 10,
+  "zip_members_checked": true,
+  "notes": [
+    "The original ZIP is untouched. Extracted bytes are NOT safe for writing to the camera.",
+    "ZIP member and section names are archival aids; each section retains exact original byte values.",
+    "Part01+Part02+Part03 are exact contiguous pieces of section 6, no additional per-part header.",
+    "Reconstruction: SLP header, sections 0..5, section6 part01-03, sections7..9 in ascending section order.",
+    "File hashes in this manifest are computed locally from current original ZIP; not Samsung digital signatures.",
+    "Never interpret CRC/SHA matches as firmware cryptographic trust or rollback capability."
+  ],
+  "source_manifest_drive_id": "1A6CLflO7eutsqdiC_vAEI6hR3vwsuiNS",
+  "source_manifest_verification": "inherited manifest; newly measured bytes recorded separately",
+  "decompressed": {
+    "6": {
+      "format": "ext4",
+      "label": "rootfs",
+      "bytes": 534056960,
+      "sha256": "9c66f76f3124acb3b8d0c31374ca209d333fcb76267bb86ed9bc18c9e8ea73f7",
+      "lzop_blocks": 2038,
+      "adler_errors": 0,
+      "tree_paths": 16020
+    },
+    "7": {
+      "format": "ext4",
+      "label": "opt",
+      "bytes": 104857088,
+      "sha256": "0a11f1763532a56f79eb023c994540e9b29aea4fb00d471303f67afad430e92a",
+      "lzop_blocks": 400,
+      "adler_errors": 0,
+      "tree_paths": 1374
+    },
+    "9": {
+      "format": "swap",
+      "bytes": 157285888,
+      "sha256": "46e69b6fc342885147a88831e2723ff87c282326ab457a80bbdd35b5742a3f5e",
+      "lzop_blocks": 600,
+      "adler_errors": 0
+    }
+  }
+}

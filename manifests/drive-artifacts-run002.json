@@ -1,0 +1,93 @@
+{
+  "run": "20261021_run002",
+  "recorded_date_kst": "2026-10-21",
+  "artifacts": [
+    {
+      "name": "NX500_FW112_WholeInventory_20261021_run002.zip",
+      "id": "15oNR8Ho99OUzRkWU-pOxeN66u7-IyYYv",
+      "url": "https://drive.google.com/file/d/15oNR8Ho99OUzRkWU-pOxeN66u7-IyYYv/view?usp=drivesdk",
+      "bytes": 2862570,
+      "sha256": "f7b7ee791ffec845594e9b6522a20f2321dc398ecd24eaba11ae12ecd6c1f52d",
+      "verified_parent_id": "1cIz9Sldkq1stFttm6RI_XOZfQ29UrOGd",
+      "remote_verification": "metadata size/parent and fresh authenticated full redownload SHA-256 + ZIP CRC verified"
+    },
+    {
+      "name": "NX500_FW112_Ghidra_20261021_run002.zip",
+      "id": "1aT5HqaNrjbf0QaWw7-8wuxNJxs3zhNyx",
+      "url": "https://drive.google.com/file/d/1aT5HqaNrjbf0QaWw7-8wuxNJxs3zhNyx/view?usp=drivesdk",
+      "bytes": 26205255,
+      "sha256": "b1252e30eefc27f6c367568c61f61c746e401888ed3887ee27e4646315b289ef",
+      "verified_parent_id": "1qWBUqiXxBFfDLA6AQ6UGjYaNCfcZJuV3",
+      "remote_verification": "metadata size/parent and fresh authenticated full redownload SHA-256 + ZIP CRC verified"
+    },
+    {
+      "name": "STATUS_20261021_RUN002.md",
+      "repo_path": "docs/STATUS_20261021_RUN002.md",
+      "id": "1Ckcajtxasa-B-Tl4XzH2XxA6n4UNTJWJ",
+      "url": "https://drive.google.com/file/d/1Ckcajtxasa-B-Tl4XzH2XxA6n4UNTJWJ/view?usp=drivesdk",
+      "verified_parent_id": "1CZcxRYF9R-YziuZTGl8Rw3n2M3wWOY0g",
+      "remote_verification": "parent metadata and exact body readback verified"
+    },
+    {
+      "name": "VALIDATION_20261021_RUN002.md",
+      "repo_path": "docs/VALIDATION_20261021_RUN002.md",
+      "id": "16IrwP-5YwWxwWpz0TalHLDdpWX5z2ny7",
+      "url": "https://drive.google.com/file/d/16IrwP-5YwWxwWpz0TalHLDdpWX5z2ny7/view?usp=drivesdk",
+      "verified_parent_id": "1CZcxRYF9R-YziuZTGl8Rw3n2M3wWOY0g",
+      "remote_verification": "parent metadata and exact body readback verified"
+    },
+    {
+      "name": "BOOT_SERVICES_20261021.md",
+      "repo_path": "analysis/architecture/BOOT_SERVICES_20261021.md",
+      "id": "1ioLGr_sZs7fINkwBJfnDma7J2gi7dlC_",
+      "url": "https://drive.google.com/file/d/1ioLGr_sZs7fINkwBJfnDma7J2gi7dlC_/view?usp=drivesdk",
+      "verified_parent_id": "10xY2YyYAyarseUKK24i-rwA0ZMiTrm6G",
+      "remote_verification": "parent metadata and exact body readback verified"
+    },
+    {
+      "name": "EXPANDED_GHIDRA_20261021.md",
+      "repo_path": "analysis/architecture/EXPANDED_GHIDRA_20261021.md",
+      "id": "1BvAWxVvZQ1SF3_v6S1rgTjlP858yBNtU",
+      "url": "https://drive.google.com/file/d/1BvAWxVvZQ1SF3_v6S1rgTjlP858yBNtU/view?usp=drivesdk",
+      "verified_parent_id": "10xY2YyYAyarseUKK24i-rwA0ZMiTrm6G",
+      "remote_verification": "parent metadata and exact body readback verified"
+    },
+    {
+      "name": "ENVIRONMENT_CHANGES_20261021_RUN002.md",
+      "repo_path": "docs/ENVIRONMENT_CHANGES_20261021_RUN002.md",
+      "id": "1xYKh_prliUFdKo9Kb2dioQwtAzELbVVZ",
+      "url": "https://drive.google.com/file/d/1xYKh_prliUFdKo9Kb2dioQwtAzELbVVZ/view?usp=drivesdk",
+      "verified_parent_id": "198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+      "remote_verification": "parent metadata and exact body readback verified"
+    },
+    {
+      "name": "FULL_REPRODUCTION_RUN002.md",
+      "repo_path": "docs/FULL_REPRODUCTION_RUN002.md",
+      "id": "1hUTF7uBC4mUyBbAjJDU4Kk7w0VrugAX9",
+      "url": "https://drive.google.com/file/d/1hUTF7uBC4mUyBbAjJDU4Kk7w0VrugAX9/view?usp=drivesdk",
+      "verified_parent_id": "198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+      "remote_verification": "parent metadata and exact body readback verified"
+    },
+    {
+      "name": "full-reproduction-run002.json",
+      "repo_path": "manifests/full-reproduction-run002.json",
+      "id": "19zO15uLBATyge2NCw1-sqmUnyJ0TeVBe",
+      "url": "https://drive.google.com/file/d/19zO15uLBATyge2NCw1-sqmUnyJ0TeVBe/view?usp=drivesdk",
+      "verified_parent_id": "178-0nFtvKvRXjLZvrIn-ubyWEjACsI-G",
+      "remote_verification": "parent metadata readback; local receipt content"
+    },
+    {
+      "name": "Codex_START_HERE_20261021_run002.md",
+      "id": "1ODNKMab5S-QCXOUOPzbtkxABFPWvCfMA",
+      "url": "https://drive.google.com/file/d/1ODNKMab5S-QCXOUOPzbtkxABFPWvCfMA/view?usp=drivesdk",
+      "verified_parent_id": "1Xr8YHrtXuPudHGPC_fUl9zBoFxhhSZGJ",
+      "remote_verification": "exact body readback verified; new file, previous guide preserved"
+    }
+  ],
+  "previous_ghidra_snapshot": {
+    "id": "1WySJImu8Uq_PVzC9T1aQ4q-oaNbXsO_D",
+    "sha256_remeasured": "e2af81f29c7cbf933748c35a19d6b18c8badf3dc333365ec74f4af495b2df3f2"
+  },
+  "source_bytes_remain_in_archive": true,
+  "camera_io": false
+}

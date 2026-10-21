@@ -1,0 +1,1243 @@
+{
+  "schema_version": 1,
+  "recorded_date_kst": "2026-10-21",
+  "project": "NX500_FULL_RUN002",
+  "source_bin_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+  "rootfs_sha256": "9c66f76f3124acb3b8d0c31374ca209d333fcb76267bb86ed9bc18c9e8ea73f7",
+  "new_distinct_elfs": 8,
+  "initial_function_entries": 13281,
+  "initial_string_entries": 21045,
+  "selected_decompile_attempted": 43,
+  "selected_decompile_completed": 43,
+  "initial_matches_omitted_by_budget": 11,
+  "analyzer_timeout_count": 0,
+  "runs": [
+    {
+      "stage": "initial_auto_analysis",
+      "receipt": ".work/run002/logs/NX500_FULL_RUN002-09c11306-a965-433c-bbac-7ff29e203155.json",
+      "run_id": "09c11306-a965-433c-bbac-7ff29e203155",
+      "auto_analysis": true,
+      "programs": [
+        {
+          "program": "allshare-dms",
+          "sha256": "da2567f9849bb9936a9b66b4a61e280741422d351b153845b9a76e9671377be6",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 282,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 410,
+          "decompile_budget": 8,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "(?i)(main$|StartHTTP|SendFile|GetFilePath|RetriveFile|StartDMS|StopDMS|DlnaDms|wlan_manager_request|storage_get_path|mmc_secure_unmount|deviced_request_change_usb_mode|device_set_property|device_get_property|setConfirmResult)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "09c11306-a965-433c-bbac-7ff29e203155",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": true,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 63035,
+              "sha256": "98b12431294886eda696b838f7752f591f36be232f94365144a87a1b82edbcf2"
+            },
+            "calls.jsonl": {
+              "bytes": 77354,
+              "sha256": "22128042473aa9e30c44bc53247b83eb0641323c38df4b02d75893f0332a1038"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 65813,
+              "sha256": "ce29d16e461153fae18d2df78deff49aa058369bb1475df3ccb469966c51e7bd"
+            }
+          },
+          "firmware_path": "/usr/bin/allshare-dms",
+          "output_directory": ".work/run002/outputs/ghidra/allshare-dms-da2567f9849b"
+        },
+        {
+          "program": "allshare-svc",
+          "sha256": "dc4240cbee49821fb5c945bc7ab727abd208042254773a62d59e50df449cfcd3",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 803,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 982,
+          "decompile_budget": 8,
+          "decompile_attempted": 2,
+          "decompile_completed": 2,
+          "decompile_pattern": "(?i)(main$|StartHTTP|SendFile|GetFilePath|RetriveFile|StartDMS|StopDMS|DlnaDms|wlan_manager_request|storage_get_path|mmc_secure_unmount|deviced_request_change_usb_mode|device_set_property|device_get_property|setConfirmResult)",
+          "matched_functions": 2,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "09c11306-a965-433c-bbac-7ff29e203155",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": true,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 213983,
+              "sha256": "423aa5af046fef86c540ec4bfefdc9712fe4c00487329512f61832e6bc9deb78"
+            },
+            "calls.jsonl": {
+              "bytes": 336536,
+              "sha256": "1e41bf196b755c72defdac1fc025e6aab70d6ba8f390fe7c3290240149440a2b"
+            },
+            "decompiled.jsonl": {
+              "bytes": 13154,
+              "sha256": "9086a52bdfe525f87f2a2fa745a99acb9044b125199798a554e6a6ffb694f7d3"
+            },
+            "strings.jsonl": {
+              "bytes": 157242,
+              "sha256": "65d31b698a74cfe24dafb27569056a4927321260deb9d25930544f8741eafca7"
+            }
+          },
+          "firmware_path": "/usr/bin/allshare-svc",
+          "output_directory": ".work/run002/outputs/ghidra/allshare-svc-dc4240cbee49"
+        },
+        {
+          "program": "libdevice-node.so.0.1",
+          "sha256": "843ecf26516114370e16cd2ebc742f515cdd8b590812947b1063daa61565389e",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 309,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 102,
+          "decompile_budget": 8,
+          "decompile_attempted": 2,
+          "decompile_completed": 2,
+          "decompile_pattern": "(?i)(main$|StartHTTP|SendFile|GetFilePath|RetriveFile|StartDMS|StopDMS|DlnaDms|wlan_manager_request|storage_get_path|mmc_secure_unmount|deviced_request_change_usb_mode|device_set_property|device_get_property|setConfirmResult)",
+          "matched_functions": 2,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "09c11306-a965-433c-bbac-7ff29e203155",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": true,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 62327,
+              "sha256": "e931edceb1e9404d73b9e4b688130532bc2b09f52d25cba6396de9d36cb73db0"
+            },
+            "calls.jsonl": {
+              "bytes": 6116,
+              "sha256": "85eed35f45e269ad8326f26782f6d73d560b7e55cff6aa92388b4884d5d9eaf8"
+            },
+            "decompiled.jsonl": {
+              "bytes": 10437,
+              "sha256": "46425ebe3d0121f8f3c0eee96fd14b1855c9e9fe3b1d5f87d90ee7ff61193a2b"
+            },
+            "strings.jsonl": {
+              "bytes": 13367,
+              "sha256": "29406d5a5b65aeb85193b81f40d5fd6346835eac8039ed1743c9f8f20979480f"
+            }
+          },
+          "firmware_path": "/usr/lib/libdevice-node.so.0.1",
+          "output_directory": ".work/run002/outputs/ghidra/libdevice-node.so.0.1-843ecf265161"
+        },
+        {
+          "program": "libdeviced.so.0.1.0",
+          "sha256": "df70b308f88d6c0eb038e2e67b69b4825ef12dec60230b6fd1c3dab942989f5d",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 161,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 218,
+          "decompile_budget": 8,
+          "decompile_attempted": 3,
+          "decompile_completed": 3,
+          "decompile_pattern": "(?i)(main$|StartHTTP|SendFile|GetFilePath|RetriveFile|StartDMS|StopDMS|DlnaDms|wlan_manager_request|storage_get_path|mmc_secure_unmount|deviced_request_change_usb_mode|device_set_property|device_get_property|setConfirmResult)",
+          "matched_functions": 3,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "09c11306-a965-433c-bbac-7ff29e203155",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": true,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 36127,
+              "sha256": "8d2b0738e7d155d335178eaa94befe0763fbdcfdb02432435113a22a565308ce"
+            },
+            "calls.jsonl": {
+              "bytes": 54034,
+              "sha256": "056a1e8eb9c0a39e5e676040f1fe11eb950e80bf48a83023becdfd8a8749e434"
+            },
+            "decompiled.jsonl": {
+              "bytes": 11080,
+              "sha256": "b7fc31b9e35170868a3aeab68e4c298f82a8e3759c5cae2d00b2692f8d827724"
+            },
+            "strings.jsonl": {
+              "bytes": 31835,
+              "sha256": "bafd46fe269198957baaae66eb5813d1823e06d69d95a16e308fbf75a0b21c71"
+            }
+          },
+          "firmware_path": "/usr/lib/libdeviced.so.0.1.0",
+          "output_directory": ".work/run002/outputs/ghidra/libdeviced.so.0.1.0-df70b308f88d"
+        },
+        {
+          "program": "libdi-network-dlna-api.so",
+          "sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1426,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 2230,
+          "decompile_budget": 8,
+          "decompile_attempted": 7,
+          "decompile_completed": 7,
+          "decompile_pattern": "(?i)(main$|StartHTTP|SendFile|GetFilePath|RetriveFile|StartDMS|StopDMS|DlnaDms|wlan_manager_request|storage_get_path|mmc_secure_unmount|deviced_request_change_usb_mode|device_set_property|device_get_property|setConfirmResult)",
+          "matched_functions": 7,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "09c11306-a965-433c-bbac-7ff29e203155",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": true,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 359122,
+              "sha256": "fb82a83c90b8dfbee996cd57daabf3df9f6e6bf978186d41168a310fac34bf2e"
+            },
+            "calls.jsonl": {
+              "bytes": 548537,
+              "sha256": "2a7650dddc7d21bc8f4443f9e7a5c2104a6e121ca363623dff21ed65e80508b3"
+            },
+            "decompiled.jsonl": {
+              "bytes": 66263,
+              "sha256": "b817883fad8a1a0022704fb58f28828394a690455d66942eaa1be948e5988952"
+            },
+            "strings.jsonl": {
+              "bytes": 408219,
+              "sha256": "cb5c0b6a97a94097960f702b30bfbd507097dc53b6bf80d6fe2fccc3505d4190"
+            }
+          },
+          "firmware_path": "/usr/lib/libdi-network-dlna-api.so",
+          "output_directory": ".work/run002/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95"
+        },
+        {
+          "program": "libdi-network-dlna-extlib.so",
+          "sha256": "45c5bb3bec7b63f2755ec24de896d975e178f84ac88e5378fa4ff9158bf83ea5",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1217,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1850,
+          "decompile_budget": 8,
+          "decompile_attempted": 7,
+          "decompile_completed": 7,
+          "decompile_pattern": "(?i)(main$|StartHTTP|SendFile|GetFilePath|RetriveFile|StartDMS|StopDMS|DlnaDms|wlan_manager_request|storage_get_path|mmc_secure_unmount|deviced_request_change_usb_mode|device_set_property|device_get_property|setConfirmResult)",
+          "matched_functions": 7,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "09c11306-a965-433c-bbac-7ff29e203155",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": true,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 310340,
+              "sha256": "48663bc4767f9c6738f2851b00e84b3442317572af93444ca8c3efdebf965f6b"
+            },
+            "calls.jsonl": {
+              "bytes": 451765,
+              "sha256": "20c39a3339ce6b20e02748931b7d7c9aa401b23a102990c8c2f973f34c95365a"
+            },
+            "decompiled.jsonl": {
+              "bytes": 6623,
+              "sha256": "c6c2b4eabf2a372d8c4e53b8161ceec86b8968f7998e0dff1096f45c2312fe67"
+            },
+            "strings.jsonl": {
+              "bytes": 264819,
+              "sha256": "fb4be416c37d0a601f2a6b596a0396b4a3099b75109077693aab8e831cc7560b"
+            }
+          },
+          "firmware_path": "/usr/lib/libdi-network-dlna-extlib.so",
+          "output_directory": ".work/run002/outputs/ghidra/libdi-network-dlna-extlib.so-45c5bb3bec7b"
+        },
+        {
+          "program": "libdi-network-dlna-stack.so",
+          "sha256": "4c2926b910b6df381061f0b6dd2856ea8059f60f2cf667ac9af9524eb87b3b17",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 5561,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 7094,
+          "decompile_budget": 8,
+          "decompile_attempted": 8,
+          "decompile_completed": 8,
+          "decompile_pattern": "(?i)(main$|StartHTTP|SendFile|GetFilePath|RetriveFile|StartDMS|StopDMS|DlnaDms|wlan_manager_request|storage_get_path|mmc_secure_unmount|deviced_request_change_usb_mode|device_set_property|device_get_property|setConfirmResult)",
+          "matched_functions": 14,
+          "decompile_omitted_by_budget": 6,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "09c11306-a965-433c-bbac-7ff29e203155",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": true,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 1474858,
+              "sha256": "da16c481a2f98d2a5f9b443391ac84e8e32c3f0fee11d199b766f7d6c3b1c8bc"
+            },
+            "calls.jsonl": {
+              "bytes": 2862536,
+              "sha256": "dc6c2f1421a768771f4744f34fbcf9c560cde623106ddff0577f67670c36a069"
+            },
+            "decompiled.jsonl": {
+              "bytes": 159278,
+              "sha256": "275f9289e5d8860cf93d3903d88dc1895e240b2a7a1cfb4714dc5385f470f271"
+            },
+            "strings.jsonl": {
+              "bytes": 1187582,
+              "sha256": "ae9e0d08cd8fa4c04b1a0fc649eb646017528294088a4971e0cdf60c86e093f7"
+            }
+          },
+          "firmware_path": "/usr/lib/libdi-network-dlna-stack.so",
+          "output_directory": ".work/run002/outputs/ghidra/libdi-network-dlna-stack.so-4c2926b910b6"
+        },
+        {
+          "program": "smart-wifi-app",
+          "sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 3522,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 8159,
+          "decompile_budget": 8,
+          "decompile_attempted": 8,
+          "decompile_completed": 8,
+          "decompile_pattern": "(?i)(main$|StartHTTP|SendFile|GetFilePath|RetriveFile|StartDMS|StopDMS|DlnaDms|wlan_manager_request|storage_get_path|mmc_secure_unmount|deviced_request_change_usb_mode|device_set_property|device_get_property|setConfirmResult)",
+          "matched_functions": 13,
+          "decompile_omitted_by_budget": 5,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "09c11306-a965-433c-bbac-7ff29e203155",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": true,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 899382,
+              "sha256": "c8b279c4f3d0c247efdb9b07b3f017dd69b172dc66b6de486b62339b48fa12ea"
+            },
+            "calls.jsonl": {
+              "bytes": 1877012,
+              "sha256": "6477b8316eb4c0497eba63506da8c58f7185392ad6e30cff8167dc70efb9db8d"
+            },
+            "decompiled.jsonl": {
+              "bytes": 41755,
+              "sha256": "dd0fe6d634ad5453e89317629896c800b9e5cbb9d7320260fc715c12334b4c12"
+            },
+            "strings.jsonl": {
+              "bytes": 1274490,
+              "sha256": "5a17f2f47264958a10753a3a346d5db09d3ad91850488650b82860b1b3e25c57"
+            }
+          },
+          "firmware_path": "/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app",
+          "output_directory": ".work/run002/outputs/ghidra/smart-wifi-app-1a3cd718c355"
+        }
+      ]
+    },
+    {
+      "stage": "followup-recursive",
+      "receipt": ".work/run002/followup-recursive/logs/NX500_FULL_RUN002-38e0beb2-2e0f-4bb3-93f2-17ffefc3da00.json",
+      "run_id": "38e0beb2-2e0f-4bb3-93f2-17ffefc3da00",
+      "auto_analysis": false,
+      "programs": [
+        {
+          "program": "allshare-dms",
+          "sha256": "da2567f9849bb9936a9b66b4a61e280741422d351b153845b9a76e9671377be6",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 282,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 410,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(NetworkAPI|handle|handleAllshare)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "38e0beb2-2e0f-4bb3-93f2-17ffefc3da00",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 63035,
+              "sha256": "98b12431294886eda696b838f7752f591f36be232f94365144a87a1b82edbcf2"
+            },
+            "calls.jsonl": {
+              "bytes": 77354,
+              "sha256": "b311a55c503dafe660370b6cbedc59395a1cf36ce0883462f1881beefef0aaf0"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 65813,
+              "sha256": "ce29d16e461153fae18d2df78deff49aa058369bb1475df3ccb469966c51e7bd"
+            }
+          },
+          "firmware_path": "/usr/bin/allshare-dms",
+          "output_directory": ".work/run002/followup-recursive/outputs/ghidra/allshare-dms-da2567f9849b"
+        },
+        {
+          "program": "allshare-svc",
+          "sha256": "dc4240cbee49821fb5c945bc7ab727abd208042254773a62d59e50df449cfcd3",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 803,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 982,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(NetworkAPI|handle|handleAllshare)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "38e0beb2-2e0f-4bb3-93f2-17ffefc3da00",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 213983,
+              "sha256": "423aa5af046fef86c540ec4bfefdc9712fe4c00487329512f61832e6bc9deb78"
+            },
+            "calls.jsonl": {
+              "bytes": 336536,
+              "sha256": "2b7fbf31676e5f7970a3c6b8437f63d584fc3deaeed12c6fb91dcc7ba150c62f"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 157242,
+              "sha256": "65d31b698a74cfe24dafb27569056a4927321260deb9d25930544f8741eafca7"
+            }
+          },
+          "firmware_path": "/usr/bin/allshare-svc",
+          "output_directory": ".work/run002/followup-recursive/outputs/ghidra/allshare-svc-dc4240cbee49"
+        },
+        {
+          "program": "libdevice-node.so.0.1",
+          "sha256": "843ecf26516114370e16cd2ebc742f515cdd8b590812947b1063daa61565389e",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 309,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 102,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(NetworkAPI|handle|handleAllshare)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "38e0beb2-2e0f-4bb3-93f2-17ffefc3da00",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 62327,
+              "sha256": "e931edceb1e9404d73b9e4b688130532bc2b09f52d25cba6396de9d36cb73db0"
+            },
+            "calls.jsonl": {
+              "bytes": 6116,
+              "sha256": "96e75880fd04c099fb587148dc1965cf4f855a207dc56773990455a2c8013654"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 13367,
+              "sha256": "29406d5a5b65aeb85193b81f40d5fd6346835eac8039ed1743c9f8f20979480f"
+            }
+          },
+          "firmware_path": "/usr/lib/libdevice-node.so.0.1",
+          "output_directory": ".work/run002/followup-recursive/outputs/ghidra/libdevice-node.so.0.1-843ecf265161"
+        },
+        {
+          "program": "libdeviced.so.0.1.0",
+          "sha256": "df70b308f88d6c0eb038e2e67b69b4825ef12dec60230b6fd1c3dab942989f5d",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 161,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 218,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(NetworkAPI|handle|handleAllshare)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "38e0beb2-2e0f-4bb3-93f2-17ffefc3da00",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 36127,
+              "sha256": "8d2b0738e7d155d335178eaa94befe0763fbdcfdb02432435113a22a565308ce"
+            },
+            "calls.jsonl": {
+              "bytes": 54034,
+              "sha256": "96ed509a7dbe5b050edaaa932c01f425654d3e874c8fe3828cbc0acdc10d01ba"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 31835,
+              "sha256": "bafd46fe269198957baaae66eb5813d1823e06d69d95a16e308fbf75a0b21c71"
+            }
+          },
+          "firmware_path": "/usr/lib/libdeviced.so.0.1.0",
+          "output_directory": ".work/run002/followup-recursive/outputs/ghidra/libdeviced.so.0.1.0-df70b308f88d"
+        },
+        {
+          "program": "libdi-network-dlna-api.so",
+          "sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1426,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 2230,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(NetworkAPI|handle|handleAllshare)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "38e0beb2-2e0f-4bb3-93f2-17ffefc3da00",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 359122,
+              "sha256": "fb82a83c90b8dfbee996cd57daabf3df9f6e6bf978186d41168a310fac34bf2e"
+            },
+            "calls.jsonl": {
+              "bytes": 548537,
+              "sha256": "e4987e7cb482ed6df9c8c0c5ff24413b4d4b4bb91028fd684398850032d7c1c8"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 408219,
+              "sha256": "cb5c0b6a97a94097960f702b30bfbd507097dc53b6bf80d6fe2fccc3505d4190"
+            }
+          },
+          "firmware_path": "/usr/lib/libdi-network-dlna-api.so",
+          "output_directory": ".work/run002/followup-recursive/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95"
+        },
+        {
+          "program": "libdi-network-dlna-extlib.so",
+          "sha256": "45c5bb3bec7b63f2755ec24de896d975e178f84ac88e5378fa4ff9158bf83ea5",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1217,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1850,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(NetworkAPI|handle|handleAllshare)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "38e0beb2-2e0f-4bb3-93f2-17ffefc3da00",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 310340,
+              "sha256": "48663bc4767f9c6738f2851b00e84b3442317572af93444ca8c3efdebf965f6b"
+            },
+            "calls.jsonl": {
+              "bytes": 451765,
+              "sha256": "e74658d1789a8475781cc9bd4d02c4c8faa33768b91214f4992cb0e6f117f8fa"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 264819,
+              "sha256": "fb4be416c37d0a601f2a6b596a0396b4a3099b75109077693aab8e831cc7560b"
+            }
+          },
+          "firmware_path": "/usr/lib/libdi-network-dlna-extlib.so",
+          "output_directory": ".work/run002/followup-recursive/outputs/ghidra/libdi-network-dlna-extlib.so-45c5bb3bec7b"
+        },
+        {
+          "program": "libdi-network-dlna-stack.so",
+          "sha256": "4c2926b910b6df381061f0b6dd2856ea8059f60f2cf667ac9af9524eb87b3b17",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 5561,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 7094,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(NetworkAPI|handle|handleAllshare)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "38e0beb2-2e0f-4bb3-93f2-17ffefc3da00",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 1474858,
+              "sha256": "da16c481a2f98d2a5f9b443391ac84e8e32c3f0fee11d199b766f7d6c3b1c8bc"
+            },
+            "calls.jsonl": {
+              "bytes": 2862536,
+              "sha256": "afac5e1095be135de00555bdcb3b0b77a34c183d85d3e361b081632835ffb1e1"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 1187582,
+              "sha256": "ae9e0d08cd8fa4c04b1a0fc649eb646017528294088a4971e0cdf60c86e093f7"
+            }
+          },
+          "firmware_path": "/usr/lib/libdi-network-dlna-stack.so",
+          "output_directory": ".work/run002/followup-recursive/outputs/ghidra/libdi-network-dlna-stack.so-4c2926b910b6"
+        },
+        {
+          "program": "smart-wifi-app",
+          "sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 3522,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 8159,
+          "decompile_budget": 6,
+          "decompile_attempted": 3,
+          "decompile_completed": 3,
+          "decompile_pattern": "^CSNetworkAPI::(NetworkAPI|handle|handleAllshare)$",
+          "matched_functions": 3,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "38e0beb2-2e0f-4bb3-93f2-17ffefc3da00",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 899382,
+              "sha256": "c8b279c4f3d0c247efdb9b07b3f017dd69b172dc66b6de486b62339b48fa12ea"
+            },
+            "calls.jsonl": {
+              "bytes": 1877012,
+              "sha256": "5972306b4e0548edeca46b5b4cd6b49b0a66578641ba2249211bb403b7bfdfda"
+            },
+            "decompiled.jsonl": {
+              "bytes": 13586,
+              "sha256": "e1b2056b051a18cfb0e021e8f28b409cf78d620c9588bc6a10fc51c55aefe8c7"
+            },
+            "strings.jsonl": {
+              "bytes": 1274490,
+              "sha256": "5a17f2f47264958a10753a3a346d5db09d3ad91850488650b82860b1b3e25c57"
+            }
+          },
+          "firmware_path": "/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app",
+          "output_directory": ".work/run002/followup-recursive/outputs/ghidra/smart-wifi-app-1a3cd718c355"
+        }
+      ]
+    },
+    {
+      "stage": "message-route",
+      "receipt": ".work/run002/message-route/logs/NX500_FULL_RUN002-64cd7451-fb94-4a8e-b6a2-640e2ef8f8f1.json",
+      "run_id": "64cd7451-fb94-4a8e-b6a2-640e2ef8f8f1",
+      "auto_analysis": false,
+      "programs": [
+        {
+          "program": "allshare-dms",
+          "sha256": "da2567f9849bb9936a9b66b4a61e280741422d351b153845b9a76e9671377be6",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 282,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 410,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(handleSmartphoneLink|sendMsg|getMsg)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "64cd7451-fb94-4a8e-b6a2-640e2ef8f8f1",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 63035,
+              "sha256": "98b12431294886eda696b838f7752f591f36be232f94365144a87a1b82edbcf2"
+            },
+            "calls.jsonl": {
+              "bytes": 77354,
+              "sha256": "b8e3a5acc14b0b5e07aedebbbae9643edfac73b6402ffc121754d30edb16493d"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 65813,
+              "sha256": "ce29d16e461153fae18d2df78deff49aa058369bb1475df3ccb469966c51e7bd"
+            }
+          },
+          "firmware_path": "/usr/bin/allshare-dms",
+          "output_directory": ".work/run002/message-route/outputs/ghidra/allshare-dms-da2567f9849b"
+        },
+        {
+          "program": "allshare-svc",
+          "sha256": "dc4240cbee49821fb5c945bc7ab727abd208042254773a62d59e50df449cfcd3",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 803,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 982,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(handleSmartphoneLink|sendMsg|getMsg)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "64cd7451-fb94-4a8e-b6a2-640e2ef8f8f1",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 213983,
+              "sha256": "423aa5af046fef86c540ec4bfefdc9712fe4c00487329512f61832e6bc9deb78"
+            },
+            "calls.jsonl": {
+              "bytes": 336536,
+              "sha256": "1e8ab681b005323e8f361142cd7407ebe3d0f2016ed238a29173e459521f1561"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 157242,
+              "sha256": "65d31b698a74cfe24dafb27569056a4927321260deb9d25930544f8741eafca7"
+            }
+          },
+          "firmware_path": "/usr/bin/allshare-svc",
+          "output_directory": ".work/run002/message-route/outputs/ghidra/allshare-svc-dc4240cbee49"
+        },
+        {
+          "program": "libdevice-node.so.0.1",
+          "sha256": "843ecf26516114370e16cd2ebc742f515cdd8b590812947b1063daa61565389e",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 309,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 102,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(handleSmartphoneLink|sendMsg|getMsg)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "64cd7451-fb94-4a8e-b6a2-640e2ef8f8f1",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 62327,
+              "sha256": "e931edceb1e9404d73b9e4b688130532bc2b09f52d25cba6396de9d36cb73db0"
+            },
+            "calls.jsonl": {
+              "bytes": 6116,
+              "sha256": "96e75880fd04c099fb587148dc1965cf4f855a207dc56773990455a2c8013654"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 13367,
+              "sha256": "29406d5a5b65aeb85193b81f40d5fd6346835eac8039ed1743c9f8f20979480f"
+            }
+          },
+          "firmware_path": "/usr/lib/libdevice-node.so.0.1",
+          "output_directory": ".work/run002/message-route/outputs/ghidra/libdevice-node.so.0.1-843ecf265161"
+        },
+        {
+          "program": "libdeviced.so.0.1.0",
+          "sha256": "df70b308f88d6c0eb038e2e67b69b4825ef12dec60230b6fd1c3dab942989f5d",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 161,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 218,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(handleSmartphoneLink|sendMsg|getMsg)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "64cd7451-fb94-4a8e-b6a2-640e2ef8f8f1",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 36127,
+              "sha256": "8d2b0738e7d155d335178eaa94befe0763fbdcfdb02432435113a22a565308ce"
+            },
+            "calls.jsonl": {
+              "bytes": 54034,
+              "sha256": "d89d58da82b0e7cf0f815857c62a0b7876e2df1f677b8bf7d9570576e6c5d29c"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 31835,
+              "sha256": "bafd46fe269198957baaae66eb5813d1823e06d69d95a16e308fbf75a0b21c71"
+            }
+          },
+          "firmware_path": "/usr/lib/libdeviced.so.0.1.0",
+          "output_directory": ".work/run002/message-route/outputs/ghidra/libdeviced.so.0.1.0-df70b308f88d"
+        },
+        {
+          "program": "libdi-network-dlna-api.so",
+          "sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1426,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 2230,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(handleSmartphoneLink|sendMsg|getMsg)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "64cd7451-fb94-4a8e-b6a2-640e2ef8f8f1",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 359122,
+              "sha256": "fb82a83c90b8dfbee996cd57daabf3df9f6e6bf978186d41168a310fac34bf2e"
+            },
+            "calls.jsonl": {
+              "bytes": 548537,
+              "sha256": "de9aa27a258e524a2dc8d5f63a109a5a96b06eb398a1b01c7dfed2e0d41dd7f7"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 408219,
+              "sha256": "cb5c0b6a97a94097960f702b30bfbd507097dc53b6bf80d6fe2fccc3505d4190"
+            }
+          },
+          "firmware_path": "/usr/lib/libdi-network-dlna-api.so",
+          "output_directory": ".work/run002/message-route/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95"
+        },
+        {
+          "program": "libdi-network-dlna-extlib.so",
+          "sha256": "45c5bb3bec7b63f2755ec24de896d975e178f84ac88e5378fa4ff9158bf83ea5",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1217,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1850,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(handleSmartphoneLink|sendMsg|getMsg)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "64cd7451-fb94-4a8e-b6a2-640e2ef8f8f1",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 310340,
+              "sha256": "48663bc4767f9c6738f2851b00e84b3442317572af93444ca8c3efdebf965f6b"
+            },
+            "calls.jsonl": {
+              "bytes": 451765,
+              "sha256": "c76aa74aeaaf7bbe93a03839b7f0eb6c28c05d2ff1eaebacf97091b3ee15e32e"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 264819,
+              "sha256": "fb4be416c37d0a601f2a6b596a0396b4a3099b75109077693aab8e831cc7560b"
+            }
+          },
+          "firmware_path": "/usr/lib/libdi-network-dlna-extlib.so",
+          "output_directory": ".work/run002/message-route/outputs/ghidra/libdi-network-dlna-extlib.so-45c5bb3bec7b"
+        },
+        {
+          "program": "libdi-network-dlna-stack.so",
+          "sha256": "4c2926b910b6df381061f0b6dd2856ea8059f60f2cf667ac9af9524eb87b3b17",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 5561,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 7094,
+          "decompile_budget": 6,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_pattern": "^CSNetworkAPI::(handleSmartphoneLink|sendMsg|getMsg)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "64cd7451-fb94-4a8e-b6a2-640e2ef8f8f1",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 1474858,
+              "sha256": "da16c481a2f98d2a5f9b443391ac84e8e32c3f0fee11d199b766f7d6c3b1c8bc"
+            },
+            "calls.jsonl": {
+              "bytes": 2862536,
+              "sha256": "ae6cfc78608df87aa9fc65b259077d5db33f0b1c5380a097ab0c14dcc378401a"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 1187582,
+              "sha256": "ae9e0d08cd8fa4c04b1a0fc649eb646017528294088a4971e0cdf60c86e093f7"
+            }
+          },
+          "firmware_path": "/usr/lib/libdi-network-dlna-stack.so",
+          "output_directory": ".work/run002/message-route/outputs/ghidra/libdi-network-dlna-stack.so-4c2926b910b6"
+        },
+        {
+          "program": "smart-wifi-app",
+          "sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 3522,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 8159,
+          "decompile_budget": 6,
+          "decompile_attempted": 3,
+          "decompile_completed": 3,
+          "decompile_pattern": "^CSNetworkAPI::(handleSmartphoneLink|sendMsg|getMsg)$",
+          "matched_functions": 3,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.2",
+          "export_schema_version": 2,
+          "run_id": "64cd7451-fb94-4a8e-b6a2-640e2ef8f8f1",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 899382,
+              "sha256": "c8b279c4f3d0c247efdb9b07b3f017dd69b172dc66b6de486b62339b48fa12ea"
+            },
+            "calls.jsonl": {
+              "bytes": 1877012,
+              "sha256": "c27d38309b91bf5d8ecc15d41e2043e9831a8342f218e17746689cbd6429506b"
+            },
+            "decompiled.jsonl": {
+              "bytes": 15275,
+              "sha256": "97610771e10e2e5ca19623af056ef27d76d83195f9e4459f6c78fa6d01fe4882"
+            },
+            "strings.jsonl": {
+              "bytes": 1274490,
+              "sha256": "5a17f2f47264958a10753a3a346d5db09d3ad91850488650b82860b1b3e25c57"
+            }
+          },
+          "firmware_path": "/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app",
+          "output_directory": ".work/run002/message-route/outputs/ghidra/smart-wifi-app-1a3cd718c355"
+        }
+      ]
+    }
+  ],
+  "independent_disassembly_checks": [
+    {
+      "artifact": ".work/run002/storage-get-path-capstone.json",
+      "sha256_artifact": "68c719dee669d152b0e30d32010ae526f83803fe416ef51b594ec1ee325d8718",
+      "input_sha256": "df70b308f88d6c0eb038e2e67b69b4825ef12dec60230b6fd1c3dab942989f5d",
+      "symbol": "storage_get_path",
+      "elf_va": "0x3a50",
+      "file_offset": "0x3a50",
+      "size": 772,
+      "method": "Independent Capstone linear symbol disassembly, including literal pools; selected code instructions interpreted separately",
+      "selected_instructions": [
+        {
+          "elf_va": "0x3acc",
+          "bytes": "adf6ffeb",
+          "mnemonic": "bl",
+          "operands": "#0x1588"
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run002/selective-push-capstone.json",
+      "sha256_artifact": "e0635cc817039afa98832bc9a5da342082c62bd707338cd0acc34737cb8b6bdb",
+      "input_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "symbol": "_ZN25CUSLNetworkSmartphoneLink21SelectivePushSendFileEPc",
+      "elf_va": "0x63e6c",
+      "file_offset": "0x5be6c",
+      "size": 256,
+      "method": "Independent Capstone linear symbol disassembly, including literal pools; selected code instructions interpreted separately",
+      "selected_instructions": [
+        {
+          "elf_va": "0x63f18",
+          "bytes": "0020a0e3",
+          "mnemonic": "mov",
+          "operands": "r2, #0"
+        },
+        {
+          "elf_va": "0x63f1c",
+          "bytes": "0510a0e1",
+          "mnemonic": "mov",
+          "operands": "r1, r5"
+        },
+        {
+          "elf_va": "0x63f20",
+          "bytes": "0230a0e1",
+          "mnemonic": "mov",
+          "operands": "r3, r2"
+        },
+        {
+          "elf_va": "0x63f24",
+          "bytes": "530700e3",
+          "mnemonic": "movw",
+          "operands": "r0, #0x753"
+        },
+        {
+          "elf_va": "0x63f28",
+          "bytes": "95d6ffeb",
+          "mnemonic": "bl",
+          "operands": "#0x59984"
+        }
+      ]
+    }
+  ],
+  "failed_runs": [
+    {
+      "receipt": ".work/run002/followup/logs/NX500_FULL_RUN002-4de49848-8161-4f24-8120-97cc9e2f22cf.json",
+      "reason": "Single basename process lookup did not find /inputs/smart-wifi-app; corrected by recursive project processing"
+    }
+  ],
+  "limitations": [
+    "Function/string totals include Ghidra-generated entries, thunks and metadata; not feature count or coverage percent.",
+    "The followups re-export the same programs; their function/string counts are not additive.",
+    "A bounded regex selected decompilation; no target executed.",
+    "Missing external DWARF and incomplete demangled vtables were logged. Full transitive library resolution and indirect calls remain incomplete.",
+    "Neither camera concurrency nor original-file byte identity nor cancellation resource release is device-verified."
+  ]
+}

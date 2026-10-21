@@ -1,0 +1,313 @@
+{
+  "reconstruction": {
+    "schema_version": 1,
+    "bin_bytes": 352121435,
+    "bin_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+    "sections": [
+      {
+        "index": 0,
+        "offset": 304,
+        "bytes": 6160624,
+        "sha256": "f847a8bb1617e7413270cecf588c39ddc2a44ceb56d2da199df982a15ca61b8a",
+        "inverted_crc32": "48f3183b",
+        "verified": true
+      },
+      {
+        "index": 1,
+        "offset": 6160928,
+        "bytes": 56289,
+        "sha256": "c1069c67fe05308957490ea3df80d8a14cb86fc9371455d859d396fad7c71c1e",
+        "inverted_crc32": "19d433b2",
+        "verified": true
+      },
+      {
+        "index": 2,
+        "offset": 6217217,
+        "bytes": 3176040,
+        "sha256": "9aacd82b09bce302dd72109c750fadfba2cedcc86f0e75a2b3f012826c1d796e",
+        "inverted_crc32": "d8719107",
+        "verified": true
+      },
+      {
+        "index": 3,
+        "offset": 9393257,
+        "bytes": 6169816,
+        "sha256": "4672e0c2c46d1472aa492264523dc0d5919ec0cf8a1ba7a94e82757f6dd418d4",
+        "inverted_crc32": "2180947f",
+        "verified": true
+      },
+      {
+        "index": 4,
+        "offset": 15563073,
+        "bytes": 117184,
+        "sha256": "eef8232942a6fd8dcb4ce5b6073511e5d5f78d71c08444f1e540b30964483b52",
+        "inverted_crc32": "8785210e",
+        "verified": true
+      },
+      {
+        "index": 5,
+        "offset": 15680257,
+        "bytes": 12075648,
+        "sha256": "f8e417cb5b55768851ba7e2b8017d3a98dc0b0c8444cc0a5061265cc08dbbf7f",
+        "inverted_crc32": "df679d3b",
+        "verified": true
+      },
+      {
+        "index": 6,
+        "offset": 27755905,
+        "bytes": 280505658,
+        "sha256": "516e6531179c32efc24831016a18243871b73a400d2fae2fd00d84535827fe2e",
+        "inverted_crc32": "bda66ec1",
+        "verified": true
+      },
+      {
+        "index": 7,
+        "offset": 308261563,
+        "bytes": 5022551,
+        "sha256": "8029a654102e057e2690b0b822cb04c801ff16fb4ee0ad45faf8edbfa2535378",
+        "inverted_crc32": "41191fb5",
+        "verified": true
+      },
+      {
+        "index": 8,
+        "offset": 313284114,
+        "bytes": 28672,
+        "sha256": "7c2ebd85dc310a74eb19f94066729c92fffc94f68f235df2e7c72fbb53b0dad8",
+        "inverted_crc32": "ef2256df",
+        "verified": true
+      },
+      {
+        "index": 9,
+        "offset": 313312786,
+        "bytes": 38808649,
+        "sha256": "7862d95748dc5309e2f553972fcc96e9eda5ccd720438da9a67f7068a5540f2d",
+        "inverted_crc32": "b5082de3",
+        "verified": true
+      }
+    ],
+    "original_zip_verified": false,
+    "verification": "reconstructed_BIN_and_each_section_against_inherited_hashes",
+    "semantic_analysis_complete": false
+  },
+  "rootfs-decode": {
+    "bytes": 534056960,
+    "sha256": "9c66f76f3124acb3b8d0c31374ca209d333fcb76267bb86ed9bc18c9e8ea73f7",
+    "blocks": 2038,
+    "header_flags": "0x300000d",
+    "method": 2,
+    "level": 1,
+    "compressed_bytes": 280505658,
+    "fully_consumed": true,
+    "input_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+    "input_offset": 27755905
+  },
+  "opt-decode": {
+    "bytes": 104857088,
+    "sha256": "0a11f1763532a56f79eb023c994540e9b29aea4fb00d471303f67afad430e92a",
+    "blocks": 400,
+    "header_flags": "0x300000d",
+    "method": 3,
+    "level": 9,
+    "compressed_bytes": 5022551,
+    "fully_consumed": true,
+    "input_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+    "input_offset": 308261563
+  },
+  "swap-decode": {
+    "bytes": 157285888,
+    "sha256": "46e69b6fc342885147a88831e2723ff87c282326ab457a80bbdd35b5742a3f5e",
+    "blocks": 600,
+    "header_flags": "0x300000d",
+    "method": 2,
+    "level": 1,
+    "compressed_bytes": 38808649,
+    "fully_consumed": true,
+    "input_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+    "input_offset": 313312786
+  },
+  "filesystem_extraction": {
+    "rootfs": {
+      "source_paths": 16020,
+      "host_paths": 16008,
+      "source_types": {
+        "0o40000": 1323,
+        "0o120000": 921,
+        "0o100000": 13764,
+        "0o20000": 12
+      },
+      "missing": [
+        "/dev/console",
+        "/dev/fb0",
+        "/dev/full",
+        "/dev/null",
+        "/dev/ptmx",
+        "/dev/random",
+        "/dev/tty",
+        "/dev/tty0",
+        "/dev/tty1",
+        "/dev/tty2",
+        "/dev/urandom",
+        "/dev/zero"
+      ],
+      "extra": [],
+      "errors": [],
+      "all_paths_types_sizes_match": false,
+      "missing_materializable": [],
+      "unmaterialized_special_paths": [
+        "/dev/console",
+        "/dev/fb0",
+        "/dev/full",
+        "/dev/null",
+        "/dev/ptmx",
+        "/dev/random",
+        "/dev/tty",
+        "/dev/tty0",
+        "/dev/tty1",
+        "/dev/tty2",
+        "/dev/urandom",
+        "/dev/zero"
+      ],
+      "all_regular_directory_symlink_paths_match": true,
+      "metadata_warning": "Host owner/mode/timestamps may differ; use source inode metadata in this inventory",
+      "byte_hashes_verified": true,
+      "regular_paths_verified": 13764,
+      "unique_source_inodes_verified": 12845,
+      "source_image_bytes": 534056960,
+      "source_image_sha256": "9c66f76f3124acb3b8d0c31374ca209d333fcb76267bb86ed9bc18c9e8ea73f7",
+      "source_method": "debugfs 1.47.2 read-only ls -p by inode; no host symlink traversal"
+    },
+    "opt": {
+      "source_paths": 1374,
+      "host_paths": 1374,
+      "source_types": {
+        "0o40000": 235,
+        "0o100000": 996,
+        "0o120000": 143
+      },
+      "missing": [],
+      "extra": [],
+      "errors": [],
+      "all_paths_types_sizes_match": true,
+      "missing_materializable": [],
+      "unmaterialized_special_paths": [],
+      "all_regular_directory_symlink_paths_match": true,
+      "metadata_warning": "Host owner/mode/timestamps may differ; use source inode metadata in this inventory",
+      "byte_hashes_verified": true,
+      "regular_paths_verified": 996,
+      "unique_source_inodes_verified": 996,
+      "source_image_bytes": 104857088,
+      "source_image_sha256": "0a11f1763532a56f79eb023c994540e9b29aea4fb00d471303f67afad430e92a",
+      "source_method": "debugfs 1.47.2 read-only ls -p by inode; no host symlink traversal"
+    }
+  },
+  "read_only_fsck": {
+    "rootfs": "e2fsck 1.47.2 (1-Jan-2025)\nPass 1: Checking inodes, blocks, and sizes\nPass 2: Checking directory structure\nPass 3: Checking directory connectivity\nPass 4: Checking reference counts\nPass 5: Checking group summary information\nrootfs: 15111/31168 files (0.4% non-contiguous), 123441/130385 blocks\n",
+    "opt": "e2fsck 1.47.2 (1-Jan-2025)\nWarning: skipping journal recovery because doing a read-only filesystem check.\nPass 1: Checking inodes, blocks, and sizes\nExtended attribute block 1760 has reference count 376, should be 372.  Fix? no\n\nPass 2: Checking directory structure\nPass 3: Checking directory connectivity\nPass 4: Checking reference counts\nPass 5: Checking group summary information\n\nopt: ********** WARNING: Filesystem still has errors **********\n\nopt: 1384/23040 files (1.9% non-contiguous), 9104/19445 blocks\n"
+  },
+  "network": {
+    "checked_date_kst": "2026-10-21",
+    "policy_mode": "unrestricted",
+    "state": "enforced",
+    "observations_current": true,
+    "github_http": 200,
+    "github_api_http": 200,
+    "authenticated_drive_stream_succeeded": true,
+    "samsung_support_refresh_http": 403
+  },
+  "run": "20261021_run002",
+  "device_access_performed": false,
+  "firmware_installation_performed": false,
+  "fsck_receipt": {
+    "rootfs": {
+      "returncode": 0,
+      "source_sha256_before": "9c66f76f3124acb3b8d0c31374ca209d333fcb76267bb86ed9bc18c9e8ea73f7",
+      "source_sha256_after": "9c66f76f3124acb3b8d0c31374ca209d333fcb76267bb86ed9bc18c9e8ea73f7",
+      "source_unchanged": true,
+      "mode": "read-only forced check; no journal recovery/repairs",
+      "log_sha256": "610f9deccdc916c8937b032b8ff54476dd601169109f634c90870d64224b30f0"
+    },
+    "opt": {
+      "returncode": 4,
+      "source_sha256_before": "0a11f1763532a56f79eb023c994540e9b29aea4fb00d471303f67afad430e92a",
+      "source_sha256_after": "0a11f1763532a56f79eb023c994540e9b29aea4fb00d471303f67afad430e92a",
+      "source_unchanged": true,
+      "mode": "read-only forced check; no journal recovery/repairs",
+      "log_sha256": "f1389b419f934dcd7a0a2e69c6728cf66a3b4de33a4516a5c76c39c9cd4c81e8"
+    }
+  },
+  "full_inventory_summary": {
+    "schema_version": 1,
+    "path_entries": 17394,
+    "partitions": {
+      "rootfs": {
+        "path_entries": 16020,
+        "types": {
+          "directory": 1323,
+          "symlink": 921,
+          "regular": 13764,
+          "char_device": 12
+        }
+      },
+      "opt": {
+        "path_entries": 1374,
+        "types": {
+          "directory": 235,
+          "regular": 996,
+          "symlink": 143
+        }
+      }
+    },
+    "regular_file_paths": 14760,
+    "hashed_regular_file_paths": 14760,
+    "regular_paths_verified_against_source_inode": 14760,
+    "symlink_paths": 1064,
+    "symlink_targets_verified_against_source": 1064,
+    "unique_regular_content_sha256": 12180,
+    "host_extracted_path_entries": 17382,
+    "metadata_only_source_paths": 12,
+    "unique_extracted_regular_inodes": 14760,
+    "elf_paths": 1956,
+    "unique_elf_contents": 1895,
+    "elf_types": {
+      "ET_EXEC": 662,
+      "ET_DYN": 1288,
+      "ET_REL": 6
+    },
+    "elf_machines": {
+      "EM_ARM": 1956
+    },
+    "kernel_module_paths": 6,
+    "dependency_edges": 12348,
+    "dependency_status": {
+      "resolved_static_default_search": 12345,
+      "unresolved": 3
+    },
+    "errors": 0,
+    "inode_provenance": "separate_host_extracted_inode_and_native_source_inode",
+    "source_inode_inventory_complete": true,
+    "extraction_completeness": "Every source path inventoried; ordinary file/directory/symlink path types and sizes match. Special nodes may be source metadata only.",
+    "whole_firmware_semantically_analyzed": false,
+    "dependency_limitations": "Static rootfs + mounted /opt namespace; default /lib /usr/lib /usr/local/lib plus object RPATH/RUNPATH. Does not model ld.so.cache, inherited RPATH, LD_LIBRARY_PATH, dlopen or runtime mount changes. SONAME candidates outside search are not resolved calls.",
+    "source_images": {
+      "rootfs": {
+        "bytes": 534056960,
+        "sha256": "9c66f76f3124acb3b8d0c31374ca209d333fcb76267bb86ed9bc18c9e8ea73f7"
+      },
+      "opt": {
+        "bytes": 104857088,
+        "sha256": "0a11f1763532a56f79eb023c994540e9b29aea4fb00d471303f67afad430e92a"
+      }
+    },
+    "source_tree_metadata": {
+      "rootfs": {
+        "sha256": "83421dda571d02f6b6e490f477425182981d07a260cb5a393f3f87ae717dad27"
+      },
+      "opt": {
+        "sha256": "4487de51e99083cf180fce9dccb5445b7999e20ee9e7af3f62a7f36e67d4a7c7"
+      }
+    },
+    "unique_source_regular_inodes": 13841,
+    "all_regular_data_and_symlink_targets_source_verified": true,
+    "source_inventory_limitation": "Source inode SHA256 from native debugfs dump is separately compared with extracted rdump-file SHA256, and native symlink targets are compared with readlink. Both extraction paths use the same debugfs implementation; this is not an independent filesystem parser or runtime verification. Host ownership/modes are not authoritative."
+  }
+}

@@ -45,7 +45,11 @@ https://www.samsung.com/es/support/model/EV-NX500ZBMIES/
 Preserved original Drive ID: `1aRDIHiq_6HEoHIunxXmDuYmld5w67-sY`.
 Inherited ZIP SHA-256: `bceabae2bfef9faf90fe0bef0782f6458605ce4dc187bad39497ab7ec3305af1`.
 Inherited BIN SHA-256: `f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997`.
-These are prior baseline values until a new complete download is independently verified.
+Run002 reconstructed the complete 352,121,435-byte BIN from preserved archival slices and
+remeasured the matching BIN SHA-256 and all 10 section SHA/CRC values. The ZIP itself was
+not downloaded again, so its hash remains inherited. See `manifests/full-reproduction-run002.json`
+and `docs/STATUS_20261021_RUN002.md`. The rootfs/opt/swap decompression hashes were also
+remeasured; all ordinary file bytes and symlink targets were read back from source inodes.
 
 ## Reproduction
 
@@ -71,6 +75,9 @@ calls and all unselected functions remain pending. Cross-program edges must be r
 against ELF imports/exports; same-named functions alone are not proof of a call.
 
 ## Work completion and next-session handoff
+
+For full-image reconstruction and native readback commands, use
+`docs/FULL_REPRODUCTION_RUN002.md`. Run002 no longer requires a network-policy change.
 
 Upload new artifacts into their matching Codex child folder and read back metadata/content.
 Record source hashes, tool versions, completed stages, failed stages, and next commands.

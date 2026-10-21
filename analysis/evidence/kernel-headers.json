@@ -1,0 +1,111 @@
+{
+  "bin_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+  "method": "uImage big-endian header/data CRC32 + bounded gzip stream decoding; string inspection",
+  "kernels": [
+    {
+      "section_index": 0,
+      "bin_offset": 304,
+      "section_bytes": 6160624,
+      "section_sha256": "f847a8bb1617e7413270cecf588c39ddc2a44ceb56d2da199df982a15ca61b8a",
+      "name": "Linux-3.5.0",
+      "payload_bytes": 6160560,
+      "timestamp_unix": 1436932826,
+      "load_address": "0x86008000",
+      "entry_address": "0x86008000",
+      "os_id": 5,
+      "arch_id": 2,
+      "type_id": 2,
+      "compression_id": 0,
+      "header_crc32": "be77fa61",
+      "payload_crc32": "f1572707",
+      "crc_verified": true,
+      "arm_zimage_magic": true,
+      "kernel_streams": [
+        {
+          "offset_in_section": 21952,
+          "compressed_bytes": 6138617,
+          "decompressed_bytes": 9201060,
+          "sha256": "942492550b303d203a5ab43614aafd46bc4644ae8afa474f3676db3b809a072b",
+          "gzip_complete": true,
+          "linux_version_strings": [
+            "Linux version 3.5.0 (zay.lee@Linux_33) (gcc version 4.4.1 (Sourcery G++ Lite 2010q1-202) ) #150 PREEMPT Wed Jul 15 13:00:24 KST 2015"
+          ],
+          "ikconfig_start_marker_present": false,
+          "ikconfig_end_marker_present": false,
+          "offset_in_bin": 22256
+        }
+      ],
+      "limitations": "Embedded metadata and CRC checks only; boot slot selection and hardware execution unverified. uImage compression_id=0 describes the outer payload; ARM zImage can contain compressed code."
+    },
+    {
+      "section_index": 2,
+      "bin_offset": 6217217,
+      "section_bytes": 3176040,
+      "section_sha256": "9aacd82b09bce302dd72109c750fadfba2cedcc86f0e75a2b3f012826c1d796e",
+      "name": "Linux-3.5.0",
+      "payload_bytes": 3175976,
+      "timestamp_unix": 1433310033,
+      "load_address": "0x86008000",
+      "entry_address": "0x86008000",
+      "os_id": 5,
+      "arch_id": 2,
+      "type_id": 2,
+      "compression_id": 0,
+      "header_crc32": "b2337ef3",
+      "payload_crc32": "62eb5c06",
+      "crc_verified": true,
+      "arm_zimage_magic": true,
+      "kernel_streams": [
+        {
+          "offset_in_section": 21952,
+          "compressed_bytes": 3154033,
+          "decompressed_bytes": 7474108,
+          "sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+          "gzip_complete": true,
+          "linux_version_strings": [
+            "Linux version 3.5.0 (hs2704.sung@SWDA7604) (gcc version 4.4.1 (Sourcery G++ Lite 2010q1-202) ) #7 PREEMPT Wed Jun 3 14:40:29 KST 2015"
+          ],
+          "ikconfig_start_marker_present": false,
+          "ikconfig_end_marker_present": false,
+          "offset_in_bin": 6239169
+        }
+      ],
+      "limitations": "Embedded metadata and CRC checks only; boot slot selection and hardware execution unverified. uImage compression_id=0 describes the outer payload; ARM zImage can contain compressed code."
+    },
+    {
+      "section_index": 3,
+      "bin_offset": 9393257,
+      "section_bytes": 6169816,
+      "section_sha256": "4672e0c2c46d1472aa492264523dc0d5919ec0cf8a1ba7a94e82757f6dd418d4",
+      "name": "Linux-3.5.0",
+      "payload_bytes": 6169752,
+      "timestamp_unix": 1433390786,
+      "load_address": "0x86008000",
+      "entry_address": "0x86008000",
+      "os_id": 5,
+      "arch_id": 2,
+      "type_id": 2,
+      "compression_id": 0,
+      "header_crc32": "116ddab4",
+      "payload_crc32": "588ba89f",
+      "crc_verified": true,
+      "arm_zimage_magic": true,
+      "kernel_streams": [
+        {
+          "offset_in_section": 21952,
+          "compressed_bytes": 6147810,
+          "decompressed_bytes": 9201060,
+          "sha256": "fc38d13a10fdf4ae964f5100c0f043c7650f3e11385c90d7e07d58e9a3fecf9c",
+          "gzip_complete": true,
+          "linux_version_strings": [
+            "Linux version 3.5.0 (js0924.lee@SWDA7604) (gcc version 4.4.1 (Sourcery G++ Lite 2010q1-202) ) #1183 PREEMPT Thu Jun 4 13:06:24 KST 2015"
+          ],
+          "ikconfig_start_marker_present": false,
+          "ikconfig_end_marker_present": false,
+          "offset_in_bin": 9415209
+        }
+      ],
+      "limitations": "Embedded metadata and CRC checks only; boot slot selection and hardware execution unverified. uImage compression_id=0 describes the outer payload; ARM zImage can contain compressed code."
+    }
+  ]
+}

@@ -1,6 +1,14 @@
 # NX500 whole-firmware navigation map
 
-Status: initial offline map, 2026-10-21. This is a research navigation index, not a recovered runtime architecture or a complete firmware extraction.
+Latest update: run002 reconstructed and verified the full BIN and all sections, decoded
+rootfs/opt/swap, inventoried 17,394 source paths, and measured 1,956 ELF paths / 1,895
+unique ELF contents. See [current status](../../docs/STATUS_20261021_RUN002.md),
+[boot/services](BOOT_SERVICES_20261021.md), and [expanded Ghidra survey](EXPANDED_GHIDRA_20261021.md).
+The navigation entries below preserve the first-run evidence levels; their `Next retrieval`
+items are now available locally and require semantic inspection. They must not be read
+as current download blockers or runtime facts.
+
+Status of the following baseline map: initial offline map, 2026-10-21 run001.
 
 ## Evidence contract and coverage
 

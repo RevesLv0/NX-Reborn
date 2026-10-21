@@ -1,0 +1,37 @@
+[
+  {
+    "package": "e2fsprogs",
+    "version": "1.47.2-3+b12",
+    "sha256": "e9e638eb3e22b5f14d01ce0b28aa512a5a22fcc0e70d1c733444579b67ea236b",
+    "url": "https://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.47.2-3+b12_amd64.deb",
+    "bytes": 591288
+  },
+  {
+    "package": "libcom-err2",
+    "version": "1.47.2-3+b12",
+    "sha256": "bd43e020b8fed399db3eebf098111f10fba4c436fff99ccad72cc7e27c9764ec",
+    "url": "https://deb.debian.org/debian/pool/main/e/e2fsprogs/libcom-err2_1.47.2-3+b12_amd64.deb",
+    "bytes": 25036
+  },
+  {
+    "package": "libext2fs2t64",
+    "version": "1.47.2-3+b12",
+    "sha256": "9f5783fa48239e42260d41846fbc6c8b19c233251063524456096195660eaa09",
+    "url": "https://deb.debian.org/debian/pool/main/e/e2fsprogs/libext2fs2t64_1.47.2-3+b12_amd64.deb",
+    "bytes": 212664
+  },
+  {
+    "package": "libss2",
+    "version": "1.47.2-3+b12",
+    "sha256": "c5d38d71984c1bf774c1254238636e605fc4e0dc24d853f709921eb740327f4a",
+    "url": "https://deb.debian.org/debian/pool/main/e/e2fsprogs/libss2_1.47.2-3+b12_amd64.deb",
+    "bytes": 29724
+  },
+  {
+    "package": "liblzo2-2",
+    "version": "2.10-3+b1",
+    "sha256": "f3032201fe2928a87e13f05ce256ff3ac2a7860c7e594dc51ae6d7348a4466ce",
+    "url": "https://deb.debian.org/debian/pool/main/l/lzo2/liblzo2-2_2.10-3+b1_amd64.deb",
+    "bytes": 55100
+  }
+]
