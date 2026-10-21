@@ -1,0 +1,3045 @@
+{
+  "schema_version": 1,
+  "static_only": true,
+  "method": "Ghidra 12.1.4 selected decompilation and instruction inspection, independent Capstone 5.0.6 bounded ARM disassembly from PT_LOAD-mapped original firmware ELF bytes",
+  "address_convention": "All original_elf_va/file_offset and Capstone instruction VAs use original ELF addresses; raw Ghidra API library program addresses add 0x10000. App Ghidra addresses equal original ELF VAs.",
+  "sources": [
+    {
+      "program": "libdi-network-dlna-api.so",
+      "firmware_path": "/usr/lib/libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_local_path": ".work/full/extracted/rootfs/usr/lib/libdi-network-dlna-api.so"
+    },
+    {
+      "program": "smart-wifi-app",
+      "firmware_path": "/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "original_local_path": ".work/full/extracted/rootfs/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app"
+    }
+  ],
+  "instruction_windows": [
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x5851c",
+      "file_offset": "0x5851c",
+      "bytes": "b6d8feeb44c19de5112e8de2133e8de20710a0e100c08de532dbfeeb44319fe50020a0e3",
+      "instructions": [
+        {
+          "original_elf_va": "0x5851c",
+          "bytes": "b6d8feeb",
+          "mnemonic": "bl",
+          "operands": "#0xe7fc"
+        },
+        {
+          "original_elf_va": "0x58520",
+          "bytes": "44c19de5",
+          "mnemonic": "ldr",
+          "operands": "ip, [sp, #0x144]"
+        },
+        {
+          "original_elf_va": "0x58524",
+          "bytes": "112e8de2",
+          "mnemonic": "add",
+          "operands": "r2, sp, #0x110"
+        },
+        {
+          "original_elf_va": "0x58528",
+          "bytes": "133e8de2",
+          "mnemonic": "add",
+          "operands": "r3, sp, #0x130"
+        },
+        {
+          "original_elf_va": "0x5852c",
+          "bytes": "0710a0e1",
+          "mnemonic": "mov",
+          "operands": "r1, r7"
+        },
+        {
+          "original_elf_va": "0x58530",
+          "bytes": "00c08de5",
+          "mnemonic": "str",
+          "operands": "ip, [sp]"
+        },
+        {
+          "original_elf_va": "0x58534",
+          "bytes": "32dbfeeb",
+          "mnemonic": "bl",
+          "operands": "#0xf204"
+        },
+        {
+          "original_elf_va": "0x58538",
+          "bytes": "44319fe5",
+          "mnemonic": "ldr",
+          "operands": "r3, [pc, #0x144]"
+        },
+        {
+          "original_elf_va": "0x5853c",
+          "bytes": "0020a0e3",
+          "mnemonic": "mov",
+          "operands": "r2, #0"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x594dc",
+      "file_offset": "0x594dc",
+      "bytes": "c6d4feeb44c19de50710a0e1112e8de20630a0e100c08de542d7feeb0100a0e3c0ffffea",
+      "instructions": [
+        {
+          "original_elf_va": "0x594dc",
+          "bytes": "c6d4feeb",
+          "mnemonic": "bl",
+          "operands": "#0xe7fc"
+        },
+        {
+          "original_elf_va": "0x594e0",
+          "bytes": "44c19de5",
+          "mnemonic": "ldr",
+          "operands": "ip, [sp, #0x144]"
+        },
+        {
+          "original_elf_va": "0x594e4",
+          "bytes": "0710a0e1",
+          "mnemonic": "mov",
+          "operands": "r1, r7"
+        },
+        {
+          "original_elf_va": "0x594e8",
+          "bytes": "112e8de2",
+          "mnemonic": "add",
+          "operands": "r2, sp, #0x110"
+        },
+        {
+          "original_elf_va": "0x594ec",
+          "bytes": "0630a0e1",
+          "mnemonic": "mov",
+          "operands": "r3, r6"
+        },
+        {
+          "original_elf_va": "0x594f0",
+          "bytes": "00c08de5",
+          "mnemonic": "str",
+          "operands": "ip, [sp]"
+        },
+        {
+          "original_elf_va": "0x594f4",
+          "bytes": "42d7feeb",
+          "mnemonic": "bl",
+          "operands": "#0xf204"
+        },
+        {
+          "original_elf_va": "0x594f8",
+          "bytes": "0100a0e3",
+          "mnemonic": "mov",
+          "operands": "r0, #1"
+        },
+        {
+          "original_elf_va": "0x594fc",
+          "bytes": "c0ffffea",
+          "mnemonic": "b",
+          "operands": "#0x59404"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x59758",
+      "file_offset": "0x59758",
+      "bytes": "fdd6feeb26d4feeb451f8de2f6dafeeb0100a0e34adf8de2",
+      "instructions": [
+        {
+          "original_elf_va": "0x59758",
+          "bytes": "fdd6feeb",
+          "mnemonic": "bl",
+          "operands": "#0xf354"
+        },
+        {
+          "original_elf_va": "0x5975c",
+          "bytes": "26d4feeb",
+          "mnemonic": "bl",
+          "operands": "#0xe7fc"
+        },
+        {
+          "original_elf_va": "0x59760",
+          "bytes": "451f8de2",
+          "mnemonic": "add",
+          "operands": "r1, sp, #0x114"
+        },
+        {
+          "original_elf_va": "0x59764",
+          "bytes": "f6dafeeb",
+          "mnemonic": "bl",
+          "operands": "#0x10344"
+        },
+        {
+          "original_elf_va": "0x59768",
+          "bytes": "0100a0e3",
+          "mnemonic": "mov",
+          "operands": "r0, #1"
+        },
+        {
+          "original_elf_va": "0x5976c",
+          "bytes": "4adf8de2",
+          "mnemonic": "add",
+          "operands": "sp, sp, #0x128"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x41890",
+      "file_offset": "0x41890",
+      "bytes": "042096e50130a0e3080092e70a30c0e50a35ffeb043096e50600a0e1081093e74f3affeb043096e5014084e2",
+      "instructions": [
+        {
+          "original_elf_va": "0x41890",
+          "bytes": "042096e5",
+          "mnemonic": "ldr",
+          "operands": "r2, [r6, #4]"
+        },
+        {
+          "original_elf_va": "0x41894",
+          "bytes": "0130a0e3",
+          "mnemonic": "mov",
+          "operands": "r3, #1"
+        },
+        {
+          "original_elf_va": "0x41898",
+          "bytes": "080092e7",
+          "mnemonic": "ldr",
+          "operands": "r0, [r2, r8]"
+        },
+        {
+          "original_elf_va": "0x4189c",
+          "bytes": "0a30c0e5",
+          "mnemonic": "strb",
+          "operands": "r3, [r0, #0xa]"
+        },
+        {
+          "original_elf_va": "0x418a0",
+          "bytes": "0a35ffeb",
+          "mnemonic": "bl",
+          "operands": "#0xecd0"
+        },
+        {
+          "original_elf_va": "0x418a4",
+          "bytes": "043096e5",
+          "mnemonic": "ldr",
+          "operands": "r3, [r6, #4]"
+        },
+        {
+          "original_elf_va": "0x418a8",
+          "bytes": "0600a0e1",
+          "mnemonic": "mov",
+          "operands": "r0, r6"
+        },
+        {
+          "original_elf_va": "0x418ac",
+          "bytes": "081093e7",
+          "mnemonic": "ldr",
+          "operands": "r1, [r3, r8]"
+        },
+        {
+          "original_elf_va": "0x418b0",
+          "bytes": "4f3affeb",
+          "mnemonic": "bl",
+          "operands": "#0x101f4"
+        },
+        {
+          "original_elf_va": "0x418b4",
+          "bytes": "043096e5",
+          "mnemonic": "ldr",
+          "operands": "r3, [r6, #4]"
+        },
+        {
+          "original_elf_va": "0x418b8",
+          "bytes": "014084e2",
+          "mnemonic": "add",
+          "operands": "r4, r4, #1"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x47e6c",
+      "file_offset": "0x47e6c",
+      "bytes": "10402de90130a0e308d04de20830c0e50040a0e1491cffeb043094e5000053e10200000a040094e504108de2771bffeb08d08de21080bde8",
+      "instructions": [
+        {
+          "original_elf_va": "0x47e6c",
+          "bytes": "10402de9",
+          "mnemonic": "push",
+          "operands": "{r4, lr}"
+        },
+        {
+          "original_elf_va": "0x47e70",
+          "bytes": "0130a0e3",
+          "mnemonic": "mov",
+          "operands": "r3, #1"
+        },
+        {
+          "original_elf_va": "0x47e74",
+          "bytes": "08d04de2",
+          "mnemonic": "sub",
+          "operands": "sp, sp, #8"
+        },
+        {
+          "original_elf_va": "0x47e78",
+          "bytes": "0830c0e5",
+          "mnemonic": "strb",
+          "operands": "r3, [r0, #8]"
+        },
+        {
+          "original_elf_va": "0x47e7c",
+          "bytes": "0040a0e1",
+          "mnemonic": "mov",
+          "operands": "r4, r0"
+        },
+        {
+          "original_elf_va": "0x47e80",
+          "bytes": "491cffeb",
+          "mnemonic": "bl",
+          "operands": "#0xefac"
+        },
+        {
+          "original_elf_va": "0x47e84",
+          "bytes": "043094e5",
+          "mnemonic": "ldr",
+          "operands": "r3, [r4, #4]"
+        },
+        {
+          "original_elf_va": "0x47e88",
+          "bytes": "000053e1",
+          "mnemonic": "cmp",
+          "operands": "r3, r0"
+        },
+        {
+          "original_elf_va": "0x47e8c",
+          "bytes": "0200000a",
+          "mnemonic": "beq",
+          "operands": "#0x47e9c"
+        },
+        {
+          "original_elf_va": "0x47e90",
+          "bytes": "040094e5",
+          "mnemonic": "ldr",
+          "operands": "r0, [r4, #4]"
+        },
+        {
+          "original_elf_va": "0x47e94",
+          "bytes": "04108de2",
+          "mnemonic": "add",
+          "operands": "r1, sp, #4"
+        },
+        {
+          "original_elf_va": "0x47e98",
+          "bytes": "771bffeb",
+          "mnemonic": "bl",
+          "operands": "#0xec7c"
+        },
+        {
+          "original_elf_va": "0x47e9c",
+          "bytes": "08d08de2",
+          "mnemonic": "add",
+          "operands": "sp, sp, #8"
+        },
+        {
+          "original_elf_va": "0x47ea0",
+          "bytes": "1080bde8",
+          "mnemonic": "pop",
+          "operands": "{r4, pc}"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x41d60",
+      "file_offset": "0x41d60",
+      "bytes": "3b33ffeb000050e3e900000a143095e5010053e34a00000a0010a0e3",
+      "instructions": [
+        {
+          "original_elf_va": "0x41d60",
+          "bytes": "3b33ffeb",
+          "mnemonic": "bl",
+          "operands": "#0xea54"
+        },
+        {
+          "original_elf_va": "0x41d64",
+          "bytes": "000050e3",
+          "mnemonic": "cmp",
+          "operands": "r0, #0"
+        },
+        {
+          "original_elf_va": "0x41d68",
+          "bytes": "e900000a",
+          "mnemonic": "beq",
+          "operands": "#0x42114"
+        },
+        {
+          "original_elf_va": "0x41d6c",
+          "bytes": "143095e5",
+          "mnemonic": "ldr",
+          "operands": "r3, [r5, #0x14]"
+        },
+        {
+          "original_elf_va": "0x41d70",
+          "bytes": "010053e3",
+          "mnemonic": "cmp",
+          "operands": "r3, #1"
+        },
+        {
+          "original_elf_va": "0x41d74",
+          "bytes": "4a00000a",
+          "mnemonic": "beq",
+          "operands": "#0x41ea4"
+        },
+        {
+          "original_elf_va": "0x41d78",
+          "bytes": "0010a0e3",
+          "mnemonic": "mov",
+          "operands": "r1, #0"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x41fc0",
+      "file_offset": "0x41fc0",
+      "bytes": "fc189fe520029de501108fe0a032ffeb009050e2b100001a",
+      "instructions": [
+        {
+          "original_elf_va": "0x41fc0",
+          "bytes": "fc189fe5",
+          "mnemonic": "ldr",
+          "operands": "r1, [pc, #0x8fc]"
+        },
+        {
+          "original_elf_va": "0x41fc4",
+          "bytes": "20029de5",
+          "mnemonic": "ldr",
+          "operands": "r0, [sp, #0x220]"
+        },
+        {
+          "original_elf_va": "0x41fc8",
+          "bytes": "01108fe0",
+          "mnemonic": "add",
+          "operands": "r1, pc, r1"
+        },
+        {
+          "original_elf_va": "0x41fcc",
+          "bytes": "a032ffeb",
+          "mnemonic": "bl",
+          "operands": "#0xea54"
+        },
+        {
+          "original_elf_va": "0x41fd0",
+          "bytes": "009050e2",
+          "mnemonic": "subs",
+          "operands": "sb, r0, #0"
+        },
+        {
+          "original_elf_va": "0x41fd4",
+          "bytes": "b100001a",
+          "mnemonic": "bne",
+          "operands": "#0x422a0"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x42524",
+      "file_offset": "0x42524",
+      "bytes": "0400a0e10010a0e3892f8de28a3f8de2e834ffeb004050e24d00000a14449fe50700a0e1",
+      "instructions": [
+        {
+          "original_elf_va": "0x42524",
+          "bytes": "0400a0e1",
+          "mnemonic": "mov",
+          "operands": "r0, r4"
+        },
+        {
+          "original_elf_va": "0x42528",
+          "bytes": "0010a0e3",
+          "mnemonic": "mov",
+          "operands": "r1, #0"
+        },
+        {
+          "original_elf_va": "0x4252c",
+          "bytes": "892f8de2",
+          "mnemonic": "add",
+          "operands": "r2, sp, #0x224"
+        },
+        {
+          "original_elf_va": "0x42530",
+          "bytes": "8a3f8de2",
+          "mnemonic": "add",
+          "operands": "r3, sp, #0x228"
+        },
+        {
+          "original_elf_va": "0x42534",
+          "bytes": "e834ffeb",
+          "mnemonic": "bl",
+          "operands": "#0xf8dc"
+        },
+        {
+          "original_elf_va": "0x42538",
+          "bytes": "004050e2",
+          "mnemonic": "subs",
+          "operands": "r4, r0, #0"
+        },
+        {
+          "original_elf_va": "0x4253c",
+          "bytes": "4d00000a",
+          "mnemonic": "beq",
+          "operands": "#0x42678"
+        },
+        {
+          "original_elf_va": "0x42540",
+          "bytes": "14449fe5",
+          "mnemonic": "ldr",
+          "operands": "r4, [pc, #0x414]"
+        },
+        {
+          "original_elf_va": "0x42544",
+          "bytes": "0700a0e1",
+          "mnemonic": "mov",
+          "operands": "r0, r7"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x42230",
+      "file_offset": "0x42230",
+      "bytes": "03308fe00c20d3e5000052e306ffff0a0400a0e10110a0e30c0093e9db35ffeb01ffffea1c029de5e534ffeb081095e5",
+      "instructions": [
+        {
+          "original_elf_va": "0x42230",
+          "bytes": "03308fe0",
+          "mnemonic": "add",
+          "operands": "r3, pc, r3"
+        },
+        {
+          "original_elf_va": "0x42234",
+          "bytes": "0c20d3e5",
+          "mnemonic": "ldrb",
+          "operands": "r2, [r3, #0xc]"
+        },
+        {
+          "original_elf_va": "0x42238",
+          "bytes": "000052e3",
+          "mnemonic": "cmp",
+          "operands": "r2, #0"
+        },
+        {
+          "original_elf_va": "0x4223c",
+          "bytes": "06ffff0a",
+          "mnemonic": "beq",
+          "operands": "#0x41e5c"
+        },
+        {
+          "original_elf_va": "0x42240",
+          "bytes": "0400a0e1",
+          "mnemonic": "mov",
+          "operands": "r0, r4"
+        },
+        {
+          "original_elf_va": "0x42244",
+          "bytes": "0110a0e3",
+          "mnemonic": "mov",
+          "operands": "r1, #1"
+        },
+        {
+          "original_elf_va": "0x42248",
+          "bytes": "0c0093e9",
+          "mnemonic": "ldmib",
+          "operands": "r3, {r2, r3}"
+        },
+        {
+          "original_elf_va": "0x4224c",
+          "bytes": "db35ffeb",
+          "mnemonic": "bl",
+          "operands": "#0xf9c0"
+        },
+        {
+          "original_elf_va": "0x42250",
+          "bytes": "01ffffea",
+          "mnemonic": "b",
+          "operands": "#0x41e5c"
+        },
+        {
+          "original_elf_va": "0x42254",
+          "bytes": "1c029de5",
+          "mnemonic": "ldr",
+          "operands": "r0, [sp, #0x21c]"
+        },
+        {
+          "original_elf_va": "0x42258",
+          "bytes": "e534ffeb",
+          "mnemonic": "bl",
+          "operands": "#0xf5f4"
+        },
+        {
+          "original_elf_va": "0x4225c",
+          "bytes": "081095e5",
+          "mnemonic": "ldr",
+          "operands": "r1, [r5, #8]"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x4854c",
+      "file_offset": "0x4854c",
+      "bytes": "f0402de900c0a0e145df4de288208ce584308ce50260a0e18c10c0e5fc20a0e3",
+      "instructions": [
+        {
+          "original_elf_va": "0x4854c",
+          "bytes": "f0402de9",
+          "mnemonic": "push",
+          "operands": "{r4, r5, r6, r7, lr}"
+        },
+        {
+          "original_elf_va": "0x48550",
+          "bytes": "00c0a0e1",
+          "mnemonic": "mov",
+          "operands": "ip, r0"
+        },
+        {
+          "original_elf_va": "0x48554",
+          "bytes": "45df4de2",
+          "mnemonic": "sub",
+          "operands": "sp, sp, #0x114"
+        },
+        {
+          "original_elf_va": "0x48558",
+          "bytes": "88208ce5",
+          "mnemonic": "str",
+          "operands": "r2, [ip, #0x88]"
+        },
+        {
+          "original_elf_va": "0x4855c",
+          "bytes": "84308ce5",
+          "mnemonic": "str",
+          "operands": "r3, [ip, #0x84]"
+        },
+        {
+          "original_elf_va": "0x48560",
+          "bytes": "0260a0e1",
+          "mnemonic": "mov",
+          "operands": "r6, r2"
+        },
+        {
+          "original_elf_va": "0x48564",
+          "bytes": "8c10c0e5",
+          "mnemonic": "strb",
+          "operands": "r1, [r0, #0x8c]"
+        },
+        {
+          "original_elf_va": "0x48568",
+          "bytes": "fc20a0e3",
+          "mnemonic": "mov",
+          "operands": "r2, #0xfc"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x4bae0",
+      "file_offset": "0x4bae0",
+      "bytes": "8c30d5e5000053e3ac00001a403095e5",
+      "instructions": [
+        {
+          "original_elf_va": "0x4bae0",
+          "bytes": "8c30d5e5",
+          "mnemonic": "ldrb",
+          "operands": "r3, [r5, #0x8c]"
+        },
+        {
+          "original_elf_va": "0x4bae4",
+          "bytes": "000053e3",
+          "mnemonic": "cmp",
+          "operands": "r3, #0"
+        },
+        {
+          "original_elf_va": "0x4bae8",
+          "bytes": "ac00001a",
+          "mnemonic": "bne",
+          "operands": "#0x4bda0"
+        },
+        {
+          "original_elf_va": "0x4baec",
+          "bytes": "403095e5",
+          "mnemonic": "ldr",
+          "operands": "r3, [r5, #0x40]"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x4d3e4",
+      "file_offset": "0x4d3e4",
+      "bytes": "400095e5003090e5143093e533ff2fe1000050e38600001a40e095e50a10a0e140028de5052aa0e3093d8de200c09ee50e00a0e110c09ce53cff2fe1",
+      "instructions": [
+        {
+          "original_elf_va": "0x4d3e4",
+          "bytes": "400095e5",
+          "mnemonic": "ldr",
+          "operands": "r0, [r5, #0x40]"
+        },
+        {
+          "original_elf_va": "0x4d3e8",
+          "bytes": "003090e5",
+          "mnemonic": "ldr",
+          "operands": "r3, [r0]"
+        },
+        {
+          "original_elf_va": "0x4d3ec",
+          "bytes": "143093e5",
+          "mnemonic": "ldr",
+          "operands": "r3, [r3, #0x14]"
+        },
+        {
+          "original_elf_va": "0x4d3f0",
+          "bytes": "33ff2fe1",
+          "mnemonic": "blx",
+          "operands": "r3"
+        },
+        {
+          "original_elf_va": "0x4d3f4",
+          "bytes": "000050e3",
+          "mnemonic": "cmp",
+          "operands": "r0, #0"
+        },
+        {
+          "original_elf_va": "0x4d3f8",
+          "bytes": "8600001a",
+          "mnemonic": "bne",
+          "operands": "#0x4d618"
+        },
+        {
+          "original_elf_va": "0x4d3fc",
+          "bytes": "40e095e5",
+          "mnemonic": "ldr",
+          "operands": "lr, [r5, #0x40]"
+        },
+        {
+          "original_elf_va": "0x4d400",
+          "bytes": "0a10a0e1",
+          "mnemonic": "mov",
+          "operands": "r1, sl"
+        },
+        {
+          "original_elf_va": "0x4d404",
+          "bytes": "40028de5",
+          "mnemonic": "str",
+          "operands": "r0, [sp, #0x240]"
+        },
+        {
+          "original_elf_va": "0x4d408",
+          "bytes": "052aa0e3",
+          "mnemonic": "mov",
+          "operands": "r2, #0x5000"
+        },
+        {
+          "original_elf_va": "0x4d40c",
+          "bytes": "093d8de2",
+          "mnemonic": "add",
+          "operands": "r3, sp, #0x240"
+        },
+        {
+          "original_elf_va": "0x4d410",
+          "bytes": "00c09ee5",
+          "mnemonic": "ldr",
+          "operands": "ip, [lr]"
+        },
+        {
+          "original_elf_va": "0x4d414",
+          "bytes": "0e00a0e1",
+          "mnemonic": "mov",
+          "operands": "r0, lr"
+        },
+        {
+          "original_elf_va": "0x4d418",
+          "bytes": "10c09ce5",
+          "mnemonic": "ldr",
+          "operands": "ip, [ip, #0x10]"
+        },
+        {
+          "original_elf_va": "0x4d41c",
+          "bytes": "3cff2fe1",
+          "mnemonic": "blx",
+          "operands": "ip"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x4dc74",
+      "file_offset": "0x4dc74",
+      "bytes": "848095e50a00a0e1881095e508806be018308de5050a58e3058aa0230b1081e00bb088e014c08de50820a0e1e807ffeb",
+      "instructions": [
+        {
+          "original_elf_va": "0x4dc74",
+          "bytes": "848095e5",
+          "mnemonic": "ldr",
+          "operands": "r8, [r5, #0x84]"
+        },
+        {
+          "original_elf_va": "0x4dc78",
+          "bytes": "0a00a0e1",
+          "mnemonic": "mov",
+          "operands": "r0, sl"
+        },
+        {
+          "original_elf_va": "0x4dc7c",
+          "bytes": "881095e5",
+          "mnemonic": "ldr",
+          "operands": "r1, [r5, #0x88]"
+        },
+        {
+          "original_elf_va": "0x4dc80",
+          "bytes": "08806be0",
+          "mnemonic": "rsb",
+          "operands": "r8, fp, r8"
+        },
+        {
+          "original_elf_va": "0x4dc84",
+          "bytes": "18308de5",
+          "mnemonic": "str",
+          "operands": "r3, [sp, #0x18]"
+        },
+        {
+          "original_elf_va": "0x4dc88",
+          "bytes": "050a58e3",
+          "mnemonic": "cmp",
+          "operands": "r8, #0x5000"
+        },
+        {
+          "original_elf_va": "0x4dc8c",
+          "bytes": "058aa023",
+          "mnemonic": "movhs",
+          "operands": "r8, #0x5000"
+        },
+        {
+          "original_elf_va": "0x4dc90",
+          "bytes": "0b1081e0",
+          "mnemonic": "add",
+          "operands": "r1, r1, fp"
+        },
+        {
+          "original_elf_va": "0x4dc94",
+          "bytes": "0bb088e0",
+          "mnemonic": "add",
+          "operands": "fp, r8, fp"
+        },
+        {
+          "original_elf_va": "0x4dc98",
+          "bytes": "14c08de5",
+          "mnemonic": "str",
+          "operands": "ip, [sp, #0x14]"
+        },
+        {
+          "original_elf_va": "0x4dc9c",
+          "bytes": "0820a0e1",
+          "mnemonic": "mov",
+          "operands": "r2, r8"
+        },
+        {
+          "original_elf_va": "0x4dca0",
+          "bytes": "e807ffeb",
+          "mnemonic": "bl",
+          "operands": "#0xfc48"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x4d4a0",
+      "file_offset": "0x4d4a0",
+      "bytes": "0500a0e10a10a0e10820a0e13c0affeb008050e2cb03000a",
+      "instructions": [
+        {
+          "original_elf_va": "0x4d4a0",
+          "bytes": "0500a0e1",
+          "mnemonic": "mov",
+          "operands": "r0, r5"
+        },
+        {
+          "original_elf_va": "0x4d4a4",
+          "bytes": "0a10a0e1",
+          "mnemonic": "mov",
+          "operands": "r1, sl"
+        },
+        {
+          "original_elf_va": "0x4d4a8",
+          "bytes": "0820a0e1",
+          "mnemonic": "mov",
+          "operands": "r2, r8"
+        },
+        {
+          "original_elf_va": "0x4d4ac",
+          "bytes": "3c0affeb",
+          "mnemonic": "bl",
+          "operands": "#0xfda4"
+        },
+        {
+          "original_elf_va": "0x4d4b0",
+          "bytes": "008050e2",
+          "mnemonic": "subs",
+          "operands": "r8, r0, #0"
+        },
+        {
+          "original_elf_va": "0x4d4b4",
+          "bytes": "cb03000a",
+          "mnemonic": "beq",
+          "operands": "#0x4e3e8"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x4dd00",
+      "file_offset": "0x4dd00",
+      "bytes": "40c08de50820a0e10500a0e10a10a0e12308ffeb008050e2e400000a843095e503005be1",
+      "instructions": [
+        {
+          "original_elf_va": "0x4dd00",
+          "bytes": "40c08de5",
+          "mnemonic": "str",
+          "operands": "ip, [sp, #0x40]"
+        },
+        {
+          "original_elf_va": "0x4dd04",
+          "bytes": "0820a0e1",
+          "mnemonic": "mov",
+          "operands": "r2, r8"
+        },
+        {
+          "original_elf_va": "0x4dd08",
+          "bytes": "0500a0e1",
+          "mnemonic": "mov",
+          "operands": "r0, r5"
+        },
+        {
+          "original_elf_va": "0x4dd0c",
+          "bytes": "0a10a0e1",
+          "mnemonic": "mov",
+          "operands": "r1, sl"
+        },
+        {
+          "original_elf_va": "0x4dd10",
+          "bytes": "2308ffeb",
+          "mnemonic": "bl",
+          "operands": "#0xfda4"
+        },
+        {
+          "original_elf_va": "0x4dd14",
+          "bytes": "008050e2",
+          "mnemonic": "subs",
+          "operands": "r8, r0, #0"
+        },
+        {
+          "original_elf_va": "0x4dd18",
+          "bytes": "e400000a",
+          "mnemonic": "beq",
+          "operands": "#0x4e0b0"
+        },
+        {
+          "original_elf_va": "0x4dd1c",
+          "bytes": "843095e5",
+          "mnemonic": "ldr",
+          "operands": "r3, [r5, #0x84]"
+        },
+        {
+          "original_elf_va": "0x4dd20",
+          "bytes": "03005be1",
+          "mnemonic": "cmp",
+          "operands": "fp, r3"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x4bcd8",
+      "file_offset": "0x4bcd8",
+      "bytes": "100095e5000050e30100000a8f7f8de28b0fffeb400095e5000050e30c00000a003090e58f7f8de20c3093e533ff2fe1400095e5000050e30300000a003090e58f7f8de2043093e533ff2fe10030a0e3403085e5",
+      "instructions": [
+        {
+          "original_elf_va": "0x4bcd8",
+          "bytes": "100095e5",
+          "mnemonic": "ldr",
+          "operands": "r0, [r5, #0x10]"
+        },
+        {
+          "original_elf_va": "0x4bcdc",
+          "bytes": "000050e3",
+          "mnemonic": "cmp",
+          "operands": "r0, #0"
+        },
+        {
+          "original_elf_va": "0x4bce0",
+          "bytes": "0100000a",
+          "mnemonic": "beq",
+          "operands": "#0x4bcec"
+        },
+        {
+          "original_elf_va": "0x4bce4",
+          "bytes": "8f7f8de2",
+          "mnemonic": "add",
+          "operands": "r7, sp, #0x23c"
+        },
+        {
+          "original_elf_va": "0x4bce8",
+          "bytes": "8b0fffeb",
+          "mnemonic": "bl",
+          "operands": "#0xfb1c"
+        },
+        {
+          "original_elf_va": "0x4bcec",
+          "bytes": "400095e5",
+          "mnemonic": "ldr",
+          "operands": "r0, [r5, #0x40]"
+        },
+        {
+          "original_elf_va": "0x4bcf0",
+          "bytes": "000050e3",
+          "mnemonic": "cmp",
+          "operands": "r0, #0"
+        },
+        {
+          "original_elf_va": "0x4bcf4",
+          "bytes": "0c00000a",
+          "mnemonic": "beq",
+          "operands": "#0x4bd2c"
+        },
+        {
+          "original_elf_va": "0x4bcf8",
+          "bytes": "003090e5",
+          "mnemonic": "ldr",
+          "operands": "r3, [r0]"
+        },
+        {
+          "original_elf_va": "0x4bcfc",
+          "bytes": "8f7f8de2",
+          "mnemonic": "add",
+          "operands": "r7, sp, #0x23c"
+        },
+        {
+          "original_elf_va": "0x4bd00",
+          "bytes": "0c3093e5",
+          "mnemonic": "ldr",
+          "operands": "r3, [r3, #0xc]"
+        },
+        {
+          "original_elf_va": "0x4bd04",
+          "bytes": "33ff2fe1",
+          "mnemonic": "blx",
+          "operands": "r3"
+        },
+        {
+          "original_elf_va": "0x4bd08",
+          "bytes": "400095e5",
+          "mnemonic": "ldr",
+          "operands": "r0, [r5, #0x40]"
+        },
+        {
+          "original_elf_va": "0x4bd0c",
+          "bytes": "000050e3",
+          "mnemonic": "cmp",
+          "operands": "r0, #0"
+        },
+        {
+          "original_elf_va": "0x4bd10",
+          "bytes": "0300000a",
+          "mnemonic": "beq",
+          "operands": "#0x4bd24"
+        },
+        {
+          "original_elf_va": "0x4bd14",
+          "bytes": "003090e5",
+          "mnemonic": "ldr",
+          "operands": "r3, [r0]"
+        },
+        {
+          "original_elf_va": "0x4bd18",
+          "bytes": "8f7f8de2",
+          "mnemonic": "add",
+          "operands": "r7, sp, #0x23c"
+        },
+        {
+          "original_elf_va": "0x4bd1c",
+          "bytes": "043093e5",
+          "mnemonic": "ldr",
+          "operands": "r3, [r3, #4]"
+        },
+        {
+          "original_elf_va": "0x4bd20",
+          "bytes": "33ff2fe1",
+          "mnemonic": "blx",
+          "operands": "r3"
+        },
+        {
+          "original_elf_va": "0x4bd24",
+          "bytes": "0030a0e3",
+          "mnemonic": "mov",
+          "operands": "r3, #0"
+        },
+        {
+          "original_elf_va": "0x4bd28",
+          "bytes": "403085e5",
+          "mnemonic": "str",
+          "operands": "r3, [r5, #0x40]"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x4c15c",
+      "file_offset": "0x4c15c",
+      "bytes": "0c2095e564c0a0e3780095e50430a0e13cc08de50310a0e340208de50020a0e300c090e500c09ce53cff2fe1fbfeffea",
+      "instructions": [
+        {
+          "original_elf_va": "0x4c15c",
+          "bytes": "0c2095e5",
+          "mnemonic": "ldr",
+          "operands": "r2, [r5, #0xc]"
+        },
+        {
+          "original_elf_va": "0x4c160",
+          "bytes": "64c0a0e3",
+          "mnemonic": "mov",
+          "operands": "ip, #0x64"
+        },
+        {
+          "original_elf_va": "0x4c164",
+          "bytes": "780095e5",
+          "mnemonic": "ldr",
+          "operands": "r0, [r5, #0x78]"
+        },
+        {
+          "original_elf_va": "0x4c168",
+          "bytes": "0430a0e1",
+          "mnemonic": "mov",
+          "operands": "r3, r4"
+        },
+        {
+          "original_elf_va": "0x4c16c",
+          "bytes": "3cc08de5",
+          "mnemonic": "str",
+          "operands": "ip, [sp, #0x3c]"
+        },
+        {
+          "original_elf_va": "0x4c170",
+          "bytes": "0310a0e3",
+          "mnemonic": "mov",
+          "operands": "r1, #3"
+        },
+        {
+          "original_elf_va": "0x4c174",
+          "bytes": "40208de5",
+          "mnemonic": "str",
+          "operands": "r2, [sp, #0x40]"
+        },
+        {
+          "original_elf_va": "0x4c178",
+          "bytes": "0020a0e3",
+          "mnemonic": "mov",
+          "operands": "r2, #0"
+        },
+        {
+          "original_elf_va": "0x4c17c",
+          "bytes": "00c090e5",
+          "mnemonic": "ldr",
+          "operands": "ip, [r0]"
+        },
+        {
+          "original_elf_va": "0x4c180",
+          "bytes": "00c09ce5",
+          "mnemonic": "ldr",
+          "operands": "ip, [ip]"
+        },
+        {
+          "original_elf_va": "0x4c184",
+          "bytes": "3cff2fe1",
+          "mnemonic": "blx",
+          "operands": "ip"
+        },
+        {
+          "original_elf_va": "0x4c188",
+          "bytes": "fbfeffea",
+          "mnemonic": "b",
+          "operands": "#0x4bd7c"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x4e300",
+      "file_offset": "0x4e300",
+      "bytes": "208095e580159fe50800a0e101108fe0cf01ffeb00b050e28700001a",
+      "instructions": [
+        {
+          "original_elf_va": "0x4e300",
+          "bytes": "208095e5",
+          "mnemonic": "ldr",
+          "operands": "r8, [r5, #0x20]"
+        },
+        {
+          "original_elf_va": "0x4e304",
+          "bytes": "80159fe5",
+          "mnemonic": "ldr",
+          "operands": "r1, [pc, #0x580]"
+        },
+        {
+          "original_elf_va": "0x4e308",
+          "bytes": "0800a0e1",
+          "mnemonic": "mov",
+          "operands": "r0, r8"
+        },
+        {
+          "original_elf_va": "0x4e30c",
+          "bytes": "01108fe0",
+          "mnemonic": "add",
+          "operands": "r1, pc, r1"
+        },
+        {
+          "original_elf_va": "0x4e310",
+          "bytes": "cf01ffeb",
+          "mnemonic": "bl",
+          "operands": "#0xea54"
+        },
+        {
+          "original_elf_va": "0x4e314",
+          "bytes": "00b050e2",
+          "mnemonic": "subs",
+          "operands": "fp, r0, #0"
+        },
+        {
+          "original_elf_va": "0x4e318",
+          "bytes": "8700001a",
+          "mnemonic": "bne",
+          "operands": "#0x4e53c"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x4e3d8",
+      "file_offset": "0x4e3d8",
+      "bytes": "08b08de54504ffeb0280a0e33bf6ffea",
+      "instructions": [
+        {
+          "original_elf_va": "0x4e3d8",
+          "bytes": "08b08de5",
+          "mnemonic": "str",
+          "operands": "fp, [sp, #8]"
+        },
+        {
+          "original_elf_va": "0x4e3dc",
+          "bytes": "4504ffeb",
+          "mnemonic": "bl",
+          "operands": "#0xf4f8"
+        },
+        {
+          "original_elf_va": "0x4e3e0",
+          "bytes": "0280a0e3",
+          "mnemonic": "mov",
+          "operands": "r8, #2"
+        },
+        {
+          "original_elf_va": "0x4e3e4",
+          "bytes": "3bf6ffea",
+          "mnemonic": "b",
+          "operands": "#0x4bcd8"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x48c98",
+      "file_offset": "0x48c98",
+      "bytes": "1993a0e110708de50a30dae5000053e3f800001a10709de54a3f8de20440a3e5",
+      "instructions": [
+        {
+          "original_elf_va": "0x48c98",
+          "bytes": "1993a0e1",
+          "mnemonic": "lsl",
+          "operands": "sb, sb, r3"
+        },
+        {
+          "original_elf_va": "0x48c9c",
+          "bytes": "10708de5",
+          "mnemonic": "str",
+          "operands": "r7, [sp, #0x10]"
+        },
+        {
+          "original_elf_va": "0x48ca0",
+          "bytes": "0a30dae5",
+          "mnemonic": "ldrb",
+          "operands": "r3, [sl, #0xa]"
+        },
+        {
+          "original_elf_va": "0x48ca4",
+          "bytes": "000053e3",
+          "mnemonic": "cmp",
+          "operands": "r3, #0"
+        },
+        {
+          "original_elf_va": "0x48ca8",
+          "bytes": "f800001a",
+          "mnemonic": "bne",
+          "operands": "#0x49090"
+        },
+        {
+          "original_elf_va": "0x48cac",
+          "bytes": "10709de5",
+          "mnemonic": "ldr",
+          "operands": "r7, [sp, #0x10]"
+        },
+        {
+          "original_elf_va": "0x48cb0",
+          "bytes": "4a3f8de2",
+          "mnemonic": "add",
+          "operands": "r3, sp, #0x128"
+        },
+        {
+          "original_elf_va": "0x48cb4",
+          "bytes": "0440a3e5",
+          "mnemonic": "str",
+          "operands": "r4, [r3, #4]!"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x55804",
+      "file_offset": "0x55804",
+      "bytes": "010050e3f0412de90150a0e111de4de24500000a020050e30900000a",
+      "instructions": [
+        {
+          "original_elf_va": "0x55804",
+          "bytes": "010050e3",
+          "mnemonic": "cmp",
+          "operands": "r0, #1"
+        },
+        {
+          "original_elf_va": "0x55808",
+          "bytes": "f0412de9",
+          "mnemonic": "push",
+          "operands": "{r4, r5, r6, r7, r8, lr}"
+        },
+        {
+          "original_elf_va": "0x5580c",
+          "bytes": "0150a0e1",
+          "mnemonic": "mov",
+          "operands": "r5, r1"
+        },
+        {
+          "original_elf_va": "0x55810",
+          "bytes": "11de4de2",
+          "mnemonic": "sub",
+          "operands": "sp, sp, #0x110"
+        },
+        {
+          "original_elf_va": "0x55814",
+          "bytes": "4500000a",
+          "mnemonic": "beq",
+          "operands": "#0x55930"
+        },
+        {
+          "original_elf_va": "0x55818",
+          "bytes": "020050e3",
+          "mnemonic": "cmp",
+          "operands": "r0, #2"
+        },
+        {
+          "original_elf_va": "0x5581c",
+          "bytes": "0900000a",
+          "mnemonic": "beq",
+          "operands": "#0x55848"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x55adc",
+      "file_offset": "0x55adc",
+      "bytes": "08808de584e6feeb042095e56410a0e34900a0e3f2e9feeb51ffffea0010a0e3",
+      "instructions": [
+        {
+          "original_elf_va": "0x55adc",
+          "bytes": "08808de5",
+          "mnemonic": "str",
+          "operands": "r8, [sp, #8]"
+        },
+        {
+          "original_elf_va": "0x55ae0",
+          "bytes": "84e6feeb",
+          "mnemonic": "bl",
+          "operands": "#0xf4f8"
+        },
+        {
+          "original_elf_va": "0x55ae4",
+          "bytes": "042095e5",
+          "mnemonic": "ldr",
+          "operands": "r2, [r5, #4]"
+        },
+        {
+          "original_elf_va": "0x55ae8",
+          "bytes": "6410a0e3",
+          "mnemonic": "mov",
+          "operands": "r1, #0x64"
+        },
+        {
+          "original_elf_va": "0x55aec",
+          "bytes": "4900a0e3",
+          "mnemonic": "mov",
+          "operands": "r0, #0x49"
+        },
+        {
+          "original_elf_va": "0x55af0",
+          "bytes": "f2e9feeb",
+          "mnemonic": "bl",
+          "operands": "#0x102c0"
+        },
+        {
+          "original_elf_va": "0x55af4",
+          "bytes": "51ffffea",
+          "mnemonic": "b",
+          "operands": "#0x55840"
+        },
+        {
+          "original_elf_va": "0x55af8",
+          "bytes": "0010a0e3",
+          "mnemonic": "mov",
+          "operands": "r1, #0"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_elf_va": "0x213b8",
+      "file_offset": "0x213b8",
+      "bytes": "04408fe0033094e7006093e5000056e30300000a36ff2fe10100a0e3",
+      "instructions": [
+        {
+          "original_elf_va": "0x213b8",
+          "bytes": "04408fe0",
+          "mnemonic": "add",
+          "operands": "r4, pc, r4"
+        },
+        {
+          "original_elf_va": "0x213bc",
+          "bytes": "033094e7",
+          "mnemonic": "ldr",
+          "operands": "r3, [r4, r3]"
+        },
+        {
+          "original_elf_va": "0x213c0",
+          "bytes": "006093e5",
+          "mnemonic": "ldr",
+          "operands": "r6, [r3]"
+        },
+        {
+          "original_elf_va": "0x213c4",
+          "bytes": "000056e3",
+          "mnemonic": "cmp",
+          "operands": "r6, #0"
+        },
+        {
+          "original_elf_va": "0x213c8",
+          "bytes": "0300000a",
+          "mnemonic": "beq",
+          "operands": "#0x213dc"
+        },
+        {
+          "original_elf_va": "0x213cc",
+          "bytes": "36ff2fe1",
+          "mnemonic": "blx",
+          "operands": "r6"
+        },
+        {
+          "original_elf_va": "0x213d0",
+          "bytes": "0100a0e3",
+          "mnemonic": "mov",
+          "operands": "r0, #1"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "smart-wifi-app",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "original_elf_va": "0x64044",
+      "file_offset": "0x5c044",
+      "bytes": "08402de90120a0e10030a0e30010a0e1620700e349d6ffeb010070e20000a0330880bde8",
+      "instructions": [
+        {
+          "original_elf_va": "0x64044",
+          "bytes": "08402de9",
+          "mnemonic": "push",
+          "operands": "{r3, lr}"
+        },
+        {
+          "original_elf_va": "0x64048",
+          "bytes": "0120a0e1",
+          "mnemonic": "mov",
+          "operands": "r2, r1"
+        },
+        {
+          "original_elf_va": "0x6404c",
+          "bytes": "0030a0e3",
+          "mnemonic": "mov",
+          "operands": "r3, #0"
+        },
+        {
+          "original_elf_va": "0x64050",
+          "bytes": "0010a0e1",
+          "mnemonic": "mov",
+          "operands": "r1, r0"
+        },
+        {
+          "original_elf_va": "0x64054",
+          "bytes": "620700e3",
+          "mnemonic": "movw",
+          "operands": "r0, #0x762"
+        },
+        {
+          "original_elf_va": "0x64058",
+          "bytes": "49d6ffeb",
+          "mnemonic": "bl",
+          "operands": "#0x59984"
+        },
+        {
+          "original_elf_va": "0x6405c",
+          "bytes": "010070e2",
+          "mnemonic": "rsbs",
+          "operands": "r0, r0, #1"
+        },
+        {
+          "original_elf_va": "0x64060",
+          "bytes": "0000a033",
+          "mnemonic": "movlo",
+          "operands": "r0, #0"
+        },
+        {
+          "original_elf_va": "0x64064",
+          "bytes": "0880bde8",
+          "mnemonic": "pop",
+          "operands": "{r3, pc}"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "smart-wifi-app",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "original_elf_va": "0x64068",
+      "file_offset": "0x5c068",
+      "bytes": "08402de90120a0e10030a0e30010a0e1630700e340d6ffeb010070e20000a0330880bde8",
+      "instructions": [
+        {
+          "original_elf_va": "0x64068",
+          "bytes": "08402de9",
+          "mnemonic": "push",
+          "operands": "{r3, lr}"
+        },
+        {
+          "original_elf_va": "0x6406c",
+          "bytes": "0120a0e1",
+          "mnemonic": "mov",
+          "operands": "r2, r1"
+        },
+        {
+          "original_elf_va": "0x64070",
+          "bytes": "0030a0e3",
+          "mnemonic": "mov",
+          "operands": "r3, #0"
+        },
+        {
+          "original_elf_va": "0x64074",
+          "bytes": "0010a0e1",
+          "mnemonic": "mov",
+          "operands": "r1, r0"
+        },
+        {
+          "original_elf_va": "0x64078",
+          "bytes": "630700e3",
+          "mnemonic": "movw",
+          "operands": "r0, #0x763"
+        },
+        {
+          "original_elf_va": "0x6407c",
+          "bytes": "40d6ffeb",
+          "mnemonic": "bl",
+          "operands": "#0x59984"
+        },
+        {
+          "original_elf_va": "0x64080",
+          "bytes": "010070e2",
+          "mnemonic": "rsbs",
+          "operands": "r0, r0, #1"
+        },
+        {
+          "original_elf_va": "0x64084",
+          "bytes": "0000a033",
+          "mnemonic": "movlo",
+          "operands": "r0, #0"
+        },
+        {
+          "original_elf_va": "0x64088",
+          "bytes": "0880bde8",
+          "mnemonic": "pop",
+          "operands": "{r3, pc}"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    },
+    {
+      "program": "smart-wifi-app",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "original_elf_va": "0x7ddc0",
+      "file_offset": "0x75dc0",
+      "bytes": "64c090e500005ce30000a0d30a0000da0030a0e30020a0e10300a0e1ac1092e5013083e2442082e2031041e2030051e3010080920c0053e1f7ffff1a00306ce0000073e20300a0e01eff2fe1",
+      "instructions": [
+        {
+          "original_elf_va": "0x7ddc0",
+          "bytes": "64c090e5",
+          "mnemonic": "ldr",
+          "operands": "ip, [r0, #0x64]"
+        },
+        {
+          "original_elf_va": "0x7ddc4",
+          "bytes": "00005ce3",
+          "mnemonic": "cmp",
+          "operands": "ip, #0"
+        },
+        {
+          "original_elf_va": "0x7ddc8",
+          "bytes": "0000a0d3",
+          "mnemonic": "movle",
+          "operands": "r0, #0"
+        },
+        {
+          "original_elf_va": "0x7ddcc",
+          "bytes": "0a0000da",
+          "mnemonic": "ble",
+          "operands": "#0x7ddfc"
+        },
+        {
+          "original_elf_va": "0x7ddd0",
+          "bytes": "0030a0e3",
+          "mnemonic": "mov",
+          "operands": "r3, #0"
+        },
+        {
+          "original_elf_va": "0x7ddd4",
+          "bytes": "0020a0e1",
+          "mnemonic": "mov",
+          "operands": "r2, r0"
+        },
+        {
+          "original_elf_va": "0x7ddd8",
+          "bytes": "0300a0e1",
+          "mnemonic": "mov",
+          "operands": "r0, r3"
+        },
+        {
+          "original_elf_va": "0x7dddc",
+          "bytes": "ac1092e5",
+          "mnemonic": "ldr",
+          "operands": "r1, [r2, #0xac]"
+        },
+        {
+          "original_elf_va": "0x7dde0",
+          "bytes": "013083e2",
+          "mnemonic": "add",
+          "operands": "r3, r3, #1"
+        },
+        {
+          "original_elf_va": "0x7dde4",
+          "bytes": "442082e2",
+          "mnemonic": "add",
+          "operands": "r2, r2, #0x44"
+        },
+        {
+          "original_elf_va": "0x7dde8",
+          "bytes": "031041e2",
+          "mnemonic": "sub",
+          "operands": "r1, r1, #3"
+        },
+        {
+          "original_elf_va": "0x7ddec",
+          "bytes": "030051e3",
+          "mnemonic": "cmp",
+          "operands": "r1, #3"
+        },
+        {
+          "original_elf_va": "0x7ddf0",
+          "bytes": "01008092",
+          "mnemonic": "addls",
+          "operands": "r0, r0, #1"
+        },
+        {
+          "original_elf_va": "0x7ddf4",
+          "bytes": "0c0053e1",
+          "mnemonic": "cmp",
+          "operands": "r3, ip"
+        },
+        {
+          "original_elf_va": "0x7ddf8",
+          "bytes": "f7ffff1a",
+          "mnemonic": "bne",
+          "operands": "#0x7dddc"
+        },
+        {
+          "original_elf_va": "0x7ddfc",
+          "bytes": "00306ce0",
+          "mnemonic": "rsb",
+          "operands": "r3, ip, r0"
+        },
+        {
+          "original_elf_va": "0x7de00",
+          "bytes": "000073e2",
+          "mnemonic": "rsbs",
+          "operands": "r0, r3, #0"
+        },
+        {
+          "original_elf_va": "0x7de04",
+          "bytes": "0300a0e0",
+          "mnemonic": "adc",
+          "operands": "r0, r0, r3"
+        },
+        {
+          "original_elf_va": "0x7de08",
+          "bytes": "1eff2fe1",
+          "mnemonic": "bx",
+          "operands": "lr"
+        }
+      ],
+      "limitation": "Listed window only; indirect targets and runtime binding not independently established."
+    }
+  ],
+  "decompilation_excerpts": [
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "name": "SPClientManager::stopFileTransfer",
+      "original_elf_va": "0x416cc",
+      "file_offset": "0x416cc",
+      "raw_artifact": ".work/run003/transfer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "raw_artifact_sha256": "cbc764b64974fd75f06cedb9cd41b8c4bf385423450e46839e0e57b0e8e8012d",
+      "c_lines": 80,
+      "selected_lines": [
+        {
+          "line": 53,
+          "text": "                     DAT_00051a24 + 0x518bc,0x119,local_128);"
+        },
+        {
+          "line": 54,
+          "text": "        this_00 = *(SPGenericThread **)(*(int *)(this + 4) + uVar5 * 4);"
+        },
+        {
+          "line": 55,
+          "text": "        this_00[10] = (SPGenericThread)0x1;"
+        },
+        {
+          "line": 56,
+          "text": "        SPGenericThread::join(this_00);"
+        },
+        {
+          "line": 57,
+          "text": "        deleteFileTransfer(this,*(void **)(*(int *)(this + 4) + uVar5 * 4));"
+        },
+        {
+          "line": 58,
+          "text": "      }"
+        },
+        {
+          "line": 59,
+          "text": "      else {"
+        },
+        {
+          "line": 60,
+          "text": "        builtin_strncpy(local_128,\"\\x1b[m\",4);"
+        }
+      ],
+      "limitations": "Excerpt lines only; omitted lines are not represented. Decompiled C types/signatures are inferred."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "name": "SPClientManager::stopFileTransfer",
+      "original_elf_va": "0x41a40",
+      "file_offset": "0x41a40",
+      "raw_artifact": ".work/run003/transfer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "raw_artifact_sha256": "cbc764b64974fd75f06cedb9cd41b8c4bf385423450e46839e0e57b0e8e8012d",
+      "c_lines": 43,
+      "selected_lines": [
+        {
+          "line": 31,
+          "text": "    do {"
+        },
+        {
+          "line": 32,
+          "text": "      this = *(SPGenericThread **)(iVar3 + uVar4 * 4);"
+        },
+        {
+          "line": 33,
+          "text": "      this[10] = (SPGenericThread)0x1;"
+        },
+        {
+          "line": 34,
+          "text": "      SPGenericThread::join(this);"
+        },
+        {
+          "line": 35,
+          "text": "      iVar3 = uVar4 * 4;"
+        },
+        {
+          "line": 36,
+          "text": "      uVar4 = uVar4 + 1;"
+        },
+        {
+          "line": 37,
+          "text": "      deleteFileTransfer(param_1,*(void **)(*(int *)((int)param_1 + 4) + iVar3));"
+        },
+        {
+          "line": 38,
+          "text": "      iVar3 = *(int *)((int)param_1 + 4);"
+        },
+        {
+          "line": 39,
+          "text": "    } while (uVar4 < (uint)(*(int *)((int)param_1 + 8) - iVar3 >> 2));"
+        },
+        {
+          "line": 40,
+          "text": "  }"
+        }
+      ],
+      "limitations": "Excerpt lines only; omitted lines are not represented. Decompiled C types/signatures are inferred."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "name": "SPTransferFile",
+      "original_elf_va": "0x583ac",
+      "file_offset": "0x583ac",
+      "raw_artifact": ".work/run003/transfer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "raw_artifact_sha256": "cbc764b64974fd75f06cedb9cd41b8c4bf385423450e46839e0e57b0e8e8012d",
+      "c_lines": 113,
+      "selected_lines": [
+        {
+          "line": 104,
+          "text": "                   DAT_00068678 + 0x686c0,0xe1,&local_158);"
+        },
+        {
+          "line": 105,
+          "text": "      this = (SPClientManager *)SPClientManager::getInstance();"
+        },
+        {
+          "line": 106,
+          "text": "      SPClientManager::createFileTransfer(this,param_1,local_58,(char *)&local_38,local_24[0]);"
+        },
+        {
+          "line": 107,
+          "text": "      uVar3 = 1;"
+        },
+        {
+          "line": 108,
+          "text": "      *(undefined1 *)(DAT_00068684 + 0x6854c) = 0;"
+        },
+        {
+          "line": 109,
+          "text": "    }"
+        },
+        {
+          "line": 110,
+          "text": "  }"
+        }
+      ],
+      "limitations": "Excerpt lines only; omitted lines are not represented. Decompiled C types/signatures are inferred."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "name": "SNPushTransferFile",
+      "original_elf_va": "0x59360",
+      "file_offset": "0x59360",
+      "raw_artifact": ".work/run003/transfer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "raw_artifact_sha256": "cbc764b64974fd75f06cedb9cd41b8c4bf385423450e46839e0e57b0e8e8012d",
+      "c_lines": 120,
+      "selected_lines": [
+        {
+          "line": 112,
+          "text": "                   DAT_00069628 + 0x696f4,0x197,&local_158);"
+        },
+        {
+          "line": 113,
+          "text": "      this = (SPClientManager *)SPClientManager::getInstance();"
+        },
+        {
+          "line": 114,
+          "text": "      SPClientManager::createFileTransfer(this,param_2,local_58,param_1,local_24[0]);"
+        },
+        {
+          "line": 115,
+          "text": "      uVar3 = 1;"
+        },
+        {
+          "line": 116,
+          "text": "    }"
+        },
+        {
+          "line": 117,
+          "text": "  }"
+        },
+        {
+          "line": 118,
+          "text": "  return uVar3;"
+        }
+      ],
+      "limitations": "Excerpt lines only; omitted lines are not represented. Decompiled C types/signatures are inferred."
+    },
+    {
+      "program": "smart-wifi-app",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "name": "CAPPNetworkSmartphoneLinkState::nPushCheckSendComplete",
+      "original_elf_va": "0x7ddc0",
+      "file_offset": "0x75dc0",
+      "raw_artifact": ".work/run003/transfer/outputs/ghidra/smart-wifi-app-1a3cd718c355/decompiled.jsonl",
+      "raw_artifact_sha256": "0e22e68f29cde98c42e8b51db2d10de28c69cb5e146803816c2ec007943a5702",
+      "c_lines": 31,
+      "selected_lines": [
+        {
+          "line": 11,
+          "text": "  int iVar4;"
+        },
+        {
+          "line": 12,
+          "text": "  "
+        },
+        {
+          "line": 13,
+          "text": "  iVar4 = *(int *)(this + 100);"
+        },
+        {
+          "line": 14,
+          "text": "  if (iVar4 < 1) {"
+        },
+        {
+          "line": 15,
+          "text": "    iVar2 = 0;"
+        },
+        {
+          "line": 16,
+          "text": "  }"
+        },
+        {
+          "line": 19,
+          "text": "    iVar2 = 0;"
+        },
+        {
+          "line": 20,
+          "text": "    do {"
+        },
+        {
+          "line": 21,
+          "text": "      pCVar1 = this + 0xac;"
+        },
+        {
+          "line": 22,
+          "text": "      iVar3 = iVar3 + 1;"
+        },
+        {
+          "line": 23,
+          "text": "      this = this + 0x44;"
+        },
+        {
+          "line": 24,
+          "text": "      if (*(int *)pCVar1 - 3U < 4) {"
+        },
+        {
+          "line": 25,
+          "text": "        iVar2 = iVar2 + 1;"
+        },
+        {
+          "line": 26,
+          "text": "      }"
+        },
+        {
+          "line": 27,
+          "text": "    } while (iVar3 != iVar4);"
+        },
+        {
+          "line": 28,
+          "text": "  }"
+        },
+        {
+          "line": 29,
+          "text": "  return iVar2 == iVar4;"
+        },
+        {
+          "line": 30,
+          "text": "}"
+        },
+        {
+          "line": 31,
+          "text": ""
+        }
+      ],
+      "limitations": "Excerpt lines only; omitted lines are not represented. Decompiled C types/signatures are inferred."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "name": "SPClientManager::createFileTransfer",
+      "original_elf_va": "0x413d8",
+      "file_offset": "0x413d8",
+      "raw_artifact": ".work/run003/transfer-detail/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "raw_artifact_sha256": "3c4c2e79b171fcc4239cc633efbb050b67e13e7976feb35c44299809d2123c7f",
+      "c_lines": 52,
+      "selected_lines": [
+        {
+          "line": 33,
+          "text": "  __dlog_print(3,4,DAT_0005154c + 0x514d0,DAT_00051550 + 0x514d8,DAT_00051544 + 0x514b4,"
+        },
+        {
+          "line": 34,
+          "text": "               DAT_00051548 + 0x514c4,0x78,__s);"
+        },
+        {
+          "line": 35,
+          "text": "  SPGenericThread::start((SPGenericThread *)local_1c);"
+        },
+        {
+          "line": 36,
+          "text": "  puVar3 = *(undefined4 **)(this + 8);"
+        },
+        {
+          "line": 37,
+          "text": "  if (puVar3 == *(undefined4 **)(this + 0xc)) {"
+        },
+        {
+          "line": 38,
+          "text": "    std::vector<SPHTTPClientHandler*,std::allocator<SPHTTPClientHandler*>>::_M_insert_aux"
+        }
+      ],
+      "limitations": "Excerpt lines only; omitted lines are not represented. Decompiled C types/signatures are inferred."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "name": "SPClientManager::createFileTransfer",
+      "original_elf_va": "0x41d08",
+      "file_offset": "0x41d08",
+      "raw_artifact": ".work/run003/transfer-detail/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "raw_artifact_sha256": "3c4c2e79b171fcc4239cc633efbb050b67e13e7976feb35c44299809d2123c7f",
+      "c_lines": 299,
+      "selected_lines": [
+        {
+          "line": 47,
+          "text": "  if (iVar6 == 0) {"
+        },
+        {
+          "line": 48,
+          "text": "LAB_00052114:"
+        },
+        {
+          "line": 49,
+          "text": "    if ((*(int *)(this + 0x14) == 1) && (*(char *)(DAT_000528ec + 0x52139) != '\\0')) {"
+        },
+        {
+          "line": 50,
+          "text": "      local_144 = 0x6d5b1b;"
+        },
+        {
+          "line": 51,
+          "text": "      memset(&local_140,0,0xfc);"
+        },
+        {
+          "line": 52,
+          "text": "      snprintf((char *)((int)&local_144 + 3),0xf8,(char *)(DAT_000528f0 + 0x52164));"
+        },
+        {
+          "line": 95,
+          "text": "        __dlog_print(3,4,DAT_00052954 + 0x52514,DAT_00052958 + 0x52520,DAT_0005294c + 0x524f4,"
+        },
+        {
+          "line": 96,
+          "text": "                     DAT_00052950 + 0x52584,0xaf,&local_144);"
+        },
+        {
+          "line": 97,
+          "text": "        iVar10 = NASLWifi_jpegResizeInMemory(&local_244,0,&local_3c,&local_38);"
+        },
+        {
+          "line": 98,
+          "text": "        iVar4 = DAT_00052978;"
+        },
+        {
+          "line": 99,
+          "text": "        iVar6 = DAT_0005295c;"
+        },
+        {
+          "line": 100,
+          "text": "        if (iVar10 == 0) {"
+        },
+        {
+          "line": 149,
+          "text": "      local_44 = (SPGenericThread *)pSVar8;"
+        },
+        {
+          "line": 150,
+          "text": "      if (*(char *)(DAT_0005290c + 0x52244) != '\\0') {"
+        },
+        {
+          "line": 151,
+          "text": "        SPHTTPClientHandler::setResizeParams"
+        },
+        {
+          "line": 152,
+          "text": "                  (pSVar8,true,*(char **)(DAT_0005290c + 0x5223c),*(uint *)(DAT_0005290c + 0x52240))"
+        },
+        {
+          "line": 153,
+          "text": "        ;"
+        },
+        {
+          "line": 154,
+          "text": "      }"
+        },
+        {
+          "line": 156,
+          "text": "    }"
+        },
+        {
+          "line": 157,
+          "text": "  }"
+        },
+        {
+          "line": 158,
+          "text": "  else if (*(int *)(this + 0x14) == 1) {"
+        },
+        {
+          "line": 159,
+          "text": "    *(undefined1 *)(iVar9 + 0x51d6c) = 0;"
+        },
+        {
+          "line": 160,
+          "text": "    local_244 = 0x6d5b1b;"
+        },
+        {
+          "line": 161,
+          "text": "    memset(local_240,0,0xfc);"
+        },
+        {
+          "line": 271,
+          "text": "LAB_00051e5c:"
+        },
+        {
+          "line": 272,
+          "text": "  if (*(char *)(DAT_000528a8 + 0x51e78) == '\\0') {"
+        },
+        {
+          "line": 273,
+          "text": "    SPGenericThread::start(local_44);"
+        },
+        {
+          "line": 274,
+          "text": "    puVar11 = *(undefined4 **)(this + 8);"
+        },
+        {
+          "line": 275,
+          "text": "    if (puVar11 == *(undefined4 **)(this + 0xc)) {"
+        },
+        {
+          "line": 276,
+          "text": "      std::vector<SPHTTPClientHandler*,std::allocator<SPHTTPClientHandler*>>::_M_insert_aux"
+        }
+      ],
+      "limitations": "Excerpt lines only; omitted lines are not represented. Decompiled C types/signatures are inferred."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "name": "SPGenericThread::join",
+      "original_elf_va": "0x47e6c",
+      "file_offset": "0x47e6c",
+      "raw_artifact": ".work/run003/transfer-detail/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "raw_artifact_sha256": "3c4c2e79b171fcc4239cc633efbb050b67e13e7976feb35c44299809d2123c7f",
+      "c_lines": 17,
+      "selected_lines": [
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "{"
+        },
+        {
+          "line": 7,
+          "text": "  pthread_t pVar1;"
+        },
+        {
+          "line": 8,
+          "text": "  void *pvStack_c;"
+        },
+        {
+          "line": 9,
+          "text": "  "
+        },
+        {
+          "line": 10,
+          "text": "  this[8] = (SPGenericThread)0x1;"
+        },
+        {
+          "line": 11,
+          "text": "  pVar1 = pthread_self();"
+        },
+        {
+          "line": 12,
+          "text": "  if (*(pthread_t *)(this + 4) != pVar1) {"
+        },
+        {
+          "line": 13,
+          "text": "    pthread_join(*(pthread_t *)(this + 4),&pvStack_c);"
+        },
+        {
+          "line": 14,
+          "text": "  }"
+        },
+        {
+          "line": 15,
+          "text": "  return;"
+        },
+        {
+          "line": 16,
+          "text": "}"
+        }
+      ],
+      "limitations": "Excerpt lines only; omitted lines are not represented. Decompiled C types/signatures are inferred."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "name": "SPHTTPClientHandler::sendData",
+      "original_elf_va": "0x48bf0",
+      "file_offset": "0x48bf0",
+      "raw_artifact": ".work/run003/transfer-worker/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "raw_artifact_sha256": "5414c2090943d09b7de5481b0c70f95bb522e5ced414b3ef75c76fbb6120404b",
+      "c_lines": 176,
+      "selected_lines": [
+        {
+          "line": 61,
+          "text": "    local_1c0 = param_1;"
+        },
+        {
+          "line": 62,
+          "text": "    do {"
+        },
+        {
+          "line": 63,
+          "text": "      if (this[10] != (SPHTTPClientHandler)0x0) {"
+        },
+        {
+          "line": 64,
+          "text": "        local_1b4 = *(undefined4 *)(DAT_00059300 + 0x590b8);"
+        },
+        {
+          "line": 65,
+          "text": "        local_1b0 = (undefined2)*(undefined4 *)(DAT_00059300 + 0x590bc);"
+        },
+        {
+          "line": 66,
+          "text": "        memset(auStack_1ae,0,0xfa);"
+        },
+        {
+          "line": 121,
+          "text": "      else if (iVar7 == 1) {"
+        },
+        {
+          "line": 122,
+          "text": "        local_2c[0] = 0;"
+        },
+        {
+          "line": 123,
+          "text": "        iVar7 = SPGenericSocket::send(*(SPGenericSocket **)(this + 0x10),local_1c0,param_2,local_2c)"
+        },
+        {
+          "line": 124,
+          "text": "        ;"
+        },
+        {
+          "line": 125,
+          "text": "        if (iVar7 == 0) {"
+        },
+        {
+          "line": 126,
+          "text": "          local_1b4 = *(undefined4 *)(DAT_00059320 + 0x591bc);"
+        },
+        {
+          "line": 143,
+          "text": "        }"
+        },
+        {
+          "line": 144,
+          "text": "        param_2 = param_2 - local_2c[0];"
+        },
+        {
+          "line": 145,
+          "text": "        if (param_2 == 0) {"
+        },
+        {
+          "line": 146,
+          "text": "          return 1;"
+        },
+        {
+          "line": 147,
+          "text": "        }"
+        },
+        {
+          "line": 148,
+          "text": "        local_1c0 = local_1c0 + local_2c[0];"
+        }
+      ],
+      "limitations": "Excerpt lines only; omitted lines are not represented. Decompiled C types/signatures are inferred."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "name": "SPHTTPClientHandler::entry",
+      "original_elf_va": "0x4b848",
+      "file_offset": "0x4b848",
+      "raw_artifact": ".work/run003/transfer-worker/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "raw_artifact_sha256": "5414c2090943d09b7de5481b0c70f95bb522e5ced414b3ef75c76fbb6120404b",
+      "c_lines": 910,
+      "selected_lines": [
+        {
+          "line": 81,
+          "text": "  local_34 = paVar10 + 0xc;"
+        },
+        {
+          "line": 82,
+          "text": "  prctl(0xf,DAT_0005c800 + 0x5bad4,0,0,0);"
+        },
+        {
+          "line": 83,
+          "text": "  if (this[0x8c] == (SPHTTPClientHandler)0x0) {"
+        },
+        {
+          "line": 84,
+          "text": "    if (*(int *)(this + 0x40) != 0) {"
+        },
+        {
+          "line": 85,
+          "text": "LAB_0005baf8:"
+        },
+        {
+          "line": 86,
+          "text": "      local_234 = 0x6d5b1b;"
+        },
+        {
+          "line": 100,
+          "text": "    }"
+        },
+        {
+          "line": 101,
+          "text": "    this_00 = operator_new(0x20);"
+        },
+        {
+          "line": 102,
+          "text": "    SPFileStream::SPFileStream(this_00);"
+        },
+        {
+          "line": 103,
+          "text": "    *(SPFileStream **)(this + 0x40) = this_00;"
+        },
+        {
+          "line": 104,
+          "text": "    if (this_00 == (SPFileStream *)0x0) {"
+        },
+        {
+          "line": 105,
+          "text": "      local_234 = *(undefined4 *)(DAT_0005c9d4 + 0x5cf70);"
+        },
+        {
+          "line": 142,
+          "text": "  }"
+        },
+        {
+          "line": 143,
+          "text": "  else {"
+        },
+        {
+          "line": 144,
+          "text": "    if ((*(int *)(this + 0x88) == 0) || (*(int *)(this + 0x84) == 0)) {"
+        },
+        {
+          "line": 145,
+          "text": "      local_234 = *(undefined4 *)(DAT_0005c840 + 0x5bdd8);"
+        },
+        {
+          "line": 146,
+          "text": "      local_230 = CONCAT22(local_230._2_2_,(short)*(undefined4 *)(DAT_0005c840 + 0x5bddc));"
+        },
+        {
+          "line": 147,
+          "text": "      memset((void *)((int)&local_230 + 2),0,0xfa);"
+        },
+        {
+          "line": 242,
+          "text": "      __dlog_print(3,4,DAT_0005c874 + 0x5bf5c,DAT_0005c878 + 0x5bf64,DAT_0005c86c + 0x5bf34,"
+        },
+        {
+          "line": 243,
+          "text": "                   DAT_0005c870 + 0x5c090,0x153,&local_134);"
+        },
+        {
+          "line": 244,
+          "text": "      iVar4 = readResponse(this,7000);"
+        },
+        {
+          "line": 245,
+          "text": "      if (iVar4 == 0) {"
+        },
+        {
+          "line": 246,
+          "text": "        iVar4 = *(int *)(this + 0x74);"
+        },
+        {
+          "line": 247,
+          "text": "        if (*(int *)(iVar4 + -0xc) == 0) {"
+        },
+        {
+          "line": 384,
+          "text": "                goto LAB_0005d80c;"
+        },
+        {
+          "line": 385,
+          "text": "              }"
+        },
+        {
+          "line": 386,
+          "text": "              if (this[0x8c] == (SPHTTPClientHandler)0x0) {"
+        },
+        {
+          "line": 387,
+          "text": "                iVar12 = -1;"
+        },
+        {
+          "line": 388,
+          "text": "                uVar6 = *(uint *)(*(int *)(this + 0x40) + 0x10);"
+        },
+        {
+          "line": 389,
+          "text": "                iVar4 = *(int *)(*(int *)(this + 0x40) + 0x14);"
+        },
+        {
+          "line": 393,
+          "text": "                do {"
+        },
+        {
+          "line": 394,
+          "text": "                  while( true ) {"
+        },
+        {
+          "line": 395,
+          "text": "                    if (this[10] != (SPHTTPClientHandler)0x0) goto LAB_0005d19c;"
+        },
+        {
+          "line": 396,
+          "text": "                    iVar7 = (**(code **)(**(int **)(this + 0x40) + 0x14))();"
+        },
+        {
+          "line": 397,
+          "text": "                    if (iVar7 != 0) goto LAB_0005d618;"
+        },
+        {
+          "line": 398,
+          "text": "                    local_30[0] = iVar7;"
+        },
+        {
+          "line": 441,
+          "text": "                    }"
+        },
+        {
+          "line": 442,
+          "text": "                    SPGenericThread::sleep(5);"
+        },
+        {
+          "line": 443,
+          "text": "                    iVar12 = sendData(this,pcVar11,iVar12);"
+        },
+        {
+          "line": 444,
+          "text": "                    if (iVar12 == 0) {"
+        },
+        {
+          "line": 445,
+          "text": "                      local_134 = *(undefined4 *)(DAT_0005e8a8 + 0x5e410);"
+        },
+        {
+          "line": 446,
+          "text": "                      local_130 = CONCAT22(local_130._2_2_,"
+        },
+        {
+          "line": 519,
+          "text": "                    sVar3 = 0x5000;"
+        },
+        {
+          "line": 520,
+          "text": "                  }"
+        },
+        {
+          "line": 521,
+          "text": "                  __src = (void *)(*(int *)(this + 0x88) + uVar13);"
+        },
+        {
+          "line": 522,
+          "text": "                  uVar13 = sVar3 + uVar13;"
+        },
+        {
+          "line": 523,
+          "text": "                  memcpy(pcVar11,__src,sVar3);"
+        },
+        {
+          "line": 524,
+          "text": "                  iVar7 = __aeabi_uidiv((uVar13 >> 10) * 100,iVar4 >> 10);"
+        },
+        {
+          "line": 531,
+          "text": "                    local_230 = 0;"
+        },
+        {
+          "line": 532,
+          "text": "                  }"
+        },
+        {
+          "line": 533,
+          "text": "                  iVar12 = sendData(this,pcVar11,sVar3);"
+        },
+        {
+          "line": 534,
+          "text": "                  if (iVar12 == 0) {"
+        },
+        {
+          "line": 535,
+          "text": "                    local_134 = *(undefined4 *)(DAT_0005e844 + 0x5e0d8);"
+        },
+        {
+          "line": 536,
+          "text": "                    local_130 = CONCAT22(local_130._2_2_,"
+        },
+        {
+          "line": 557,
+          "text": "                  iVar12 = iVar7;"
+        },
+        {
+          "line": 558,
+          "text": "                }"
+        },
+        {
+          "line": 559,
+          "text": "                iVar4 = 2;"
+        },
+        {
+          "line": 560,
+          "text": "              }"
+        },
+        {
+          "line": 561,
+          "text": "              goto LAB_0005d1a8;"
+        },
+        {
+          "line": 562,
+          "text": "            }"
+        },
+        {
+          "line": 672,
+          "text": "LAB_0005bcd8:"
+        },
+        {
+          "line": 673,
+          "text": "  if (*(SPGenericSocket **)(this + 0x10) != (SPGenericSocket *)0x0) {"
+        },
+        {
+          "line": 674,
+          "text": "    SPGenericSocket::close(*(SPGenericSocket **)(this + 0x10));"
+        },
+        {
+          "line": 675,
+          "text": "  }"
+        },
+        {
+          "line": 676,
+          "text": "  if (*(int **)(this + 0x40) != (int *)0x0) {"
+        },
+        {
+          "line": 677,
+          "text": "    (**(code **)(**(int **)(this + 0x40) + 0xc))();"
+        },
+        {
+          "line": 684,
+          "text": "    operator_delete__(pcVar11);"
+        },
+        {
+          "line": 685,
+          "text": "  }"
+        },
+        {
+          "line": 686,
+          "text": "  if (iVar4 == 2) {"
+        },
+        {
+          "line": 687,
+          "text": "    local_230 = *(undefined4 *)(this + 0xc);"
+        },
+        {
+          "line": 688,
+          "text": "    local_234 = 100;"
+        },
+        {
+          "line": 689,
+          "text": "    (**(code **)**(undefined4 **)(this + 0x78))(*(undefined4 **)(this + 0x78),3,0,&local_234);"
+        },
+        {
+          "line": 700,
+          "text": "    }"
+        },
+        {
+          "line": 701,
+          "text": "    else {"
+        },
+        {
+          "line": 702,
+          "text": "      (**(code **)*puVar5)(puVar5,5);"
+        },
+        {
+          "line": 703,
+          "text": "    }"
+        },
+        {
+          "line": 704,
+          "text": "  }"
+        },
+        {
+          "line": 705,
+          "text": "  local_234 = 0;"
+        },
+        {
+          "line": 728,
+          "text": "  if (this[10] == (SPHTTPClientHandler)0x0) {"
+        },
+        {
+          "line": 729,
+          "text": "    std::string::assign((char *)(this + 0x74),DAT_0005ca7c + 0x5d634);"
+        },
+        {
+          "line": 730,
+          "text": "    iVar4 = readResponse(this,7000);"
+        },
+        {
+          "line": 731,
+          "text": "    if (iVar4 == 0) {"
+        },
+        {
+          "line": 732,
+          "text": "      iVar4 = *(int *)(this + 0x74);"
+        },
+        {
+          "line": 733,
+          "text": "      if (*(int *)(iVar4 + -0xc) == 0) {"
+        },
+        {
+          "line": 802,
+          "text": "        else {"
+        },
+        {
+          "line": 803,
+          "text": "          __s1 = *(char **)(this + 0x20);"
+        },
+        {
+          "line": 804,
+          "text": "          iVar4 = strcasecmp(__s1,(char *)(DAT_0005e88c + 0x5e314));"
+        },
+        {
+          "line": 805,
+          "text": "          if (iVar4 == 0) {"
+        },
+        {
+          "line": 806,
+          "text": "            local_134 = 0x6d5b1b;"
+        },
+        {
+          "line": 807,
+          "text": "            memset(&local_130,0,0xfc);"
+        },
+        {
+          "line": 817,
+          "text": "            __dlog_print(3,4,DAT_0005e8a0 + 0x5e3d4,DAT_0005e8a4 + 0x5e3d8,DAT_0005e898 + 0x5e3ac,"
+        },
+        {
+          "line": 818,
+          "text": "                         DAT_0005e89c + 0x5e524,599,&local_134);"
+        },
+        {
+          "line": 819,
+          "text": "            iVar4 = 2;"
+        },
+        {
+          "line": 820,
+          "text": "            goto LAB_0005bcd8;"
+        },
+        {
+          "line": 821,
+          "text": "          }"
+        },
+        {
+          "line": 822,
+          "text": "          local_134 = *(undefined4 *)(DAT_0005e8d0 + 0x5e560);"
+        },
+        {
+          "line": 862,
+          "text": "  }"
+        },
+        {
+          "line": 863,
+          "text": "LAB_0005d19c:"
+        },
+        {
+          "line": 864,
+          "text": "  iVar4 = 2;"
+        },
+        {
+          "line": 865,
+          "text": "LAB_0005d1a8:"
+        },
+        {
+          "line": 866,
+          "text": "  local_134 = *(undefined4 *)(DAT_0005ca10 + 0x5d1cc);"
+        },
+        {
+          "line": 867,
+          "text": "  local_130 = CONCAT22(local_130._2_2_,(short)*(undefined4 *)(DAT_0005ca10 + 0x5d1d0));"
+        },
+        {
+          "line": 903,
+          "text": "               DAT_0005ca44 + 0x5d500,0x226,&local_134);"
+        },
+        {
+          "line": 904,
+          "text": "  fprintf((FILE *)*puVar5,(char *)(DAT_0005ca54 + 0x5d3d4),DAT_0005ca50 + 0x5d3cc,&local_134);"
+        },
+        {
+          "line": 905,
+          "text": "  if (this[10] != (SPHTTPClientHandler)0x0) {"
+        },
+        {
+          "line": 906,
+          "text": "    iVar4 = 1;"
+        },
+        {
+          "line": 907,
+          "text": "  }"
+        },
+        {
+          "line": 908,
+          "text": "  goto LAB_0005bcd8;"
+        }
+      ],
+      "limitations": "Excerpt lines only; omitted lines are not represented. Decompiled C types/signatures are inferred."
+    },
+    {
+      "program": "libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "name": "SNPushClientNotificationCallback",
+      "original_elf_va": "0x55804",
+      "file_offset": "0x55804",
+      "raw_artifact": ".work/run003/transfer-worker/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "raw_artifact_sha256": "5414c2090943d09b7de5481b0c70f95bb522e5ced414b3ef75c76fbb6120404b",
+      "c_lines": 98,
+      "selected_lines": [
+        {
+          "line": 9,
+          "text": "  char local_118 [256];"
+        },
+        {
+          "line": 10,
+          "text": "  "
+        },
+        {
+          "line": 11,
+          "text": "  if (param_1 == 1) {"
+        },
+        {
+          "line": 12,
+          "text": "    builtin_strncpy(local_118,\"\\x1b[m\",4);"
+        },
+        {
+          "line": 13,
+          "text": "    memset(local_118 + 4,0,0xfc);"
+        },
+        {
+          "line": 14,
+          "text": "    snprintf(local_118 + 3,0xf8,(char *)(DAT_00065cf8 + 0x65960));"
+        },
+        {
+          "line": 23,
+          "text": "    __dlog_print(3,4,DAT_00065d08 + 0x659e8,DAT_00065d0c + 0x659f0,DAT_00065d00 + 0x659c5,"
+        },
+        {
+          "line": 24,
+          "text": "                 DAT_00065d04 + 0x659dc,0x250,local_118);"
+        },
+        {
+          "line": 25,
+          "text": "    SelectivePushSendEventToUI(0x4a,1,param_2[1]);"
+        },
+        {
+          "line": 26,
+          "text": "  }"
+        },
+        {
+          "line": 27,
+          "text": "  else if (param_1 == 2) {"
+        },
+        {
+          "line": 28,
+          "text": "    if (param_2 != (undefined4 *)0x0) {"
+        },
+        {
+          "line": 29,
+          "text": "      SelectivePushSendEventToUI(0x4a,*param_2,param_2[1]);"
+        },
+        {
+          "line": 30,
+          "text": "    }"
+        },
+        {
+          "line": 31,
+          "text": "  }"
+        },
+        {
+          "line": 32,
+          "text": "  else if (param_1 == 3) {"
+        },
+        {
+          "line": 33,
+          "text": "    builtin_strncpy(local_118,\"\\x1b[m\",4);"
+        },
+        {
+          "line": 34,
+          "text": "    memset(local_118 + 4,0,0xfc);"
+        },
+        {
+          "line": 35,
+          "text": "    snprintf(local_118 + 3,0xf8,(char *)(DAT_00065d10 + 0x65a44));"
+        },
+        {
+          "line": 44,
+          "text": "    __dlog_print(3,4,DAT_00065d20 + 0x65acc,DAT_00065d24 + 0x65ad4,DAT_00065d18 + 0x65aa9,"
+        },
+        {
+          "line": 45,
+          "text": "                 DAT_00065d1c + 0x65ac0,0x25c,local_118);"
+        },
+        {
+          "line": 46,
+          "text": "    SelectivePushSendEventToUI(0x49,100,param_2[1]);"
+        },
+        {
+          "line": 47,
+          "text": "  }"
+        },
+        {
+          "line": 48,
+          "text": "  else if (param_1 == 4) {"
+        },
+        {
+          "line": 49,
+          "text": "    builtin_strncpy(local_118,\"\\x1b[m\",4);"
+        },
+        {
+          "line": 50,
+          "text": "    memset(local_118 + 4,0,0xfc);"
+        },
+        {
+          "line": 51,
+          "text": "    snprintf(local_118 + 3,0xf8,(char *)(DAT_00065ce0 + 0x65890));"
+        },
+        {
+          "line": 60,
+          "text": "    __dlog_print(3,4,DAT_00065cf0 + 0x65904,DAT_00065cf4 + 0x6590c,DAT_00065ce8 + 0x658e1,"
+        },
+        {
+          "line": 61,
+          "text": "                 DAT_00065cec + 0x658f8,0x262,local_118);"
+        },
+        {
+          "line": 62,
+          "text": "    SelectivePushSendEventToUI(0x4d,0,param_2[1]);"
+        },
+        {
+          "line": 63,
+          "text": "  }"
+        },
+        {
+          "line": 64,
+          "text": "  else if (param_1 == 5) {"
+        },
+        {
+          "line": 65,
+          "text": "    builtin_strncpy(local_118,\"\\x1b[m\",4);"
+        },
+        {
+          "line": 66,
+          "text": "    memset(local_118 + 4,0,0xfc);"
+        },
+        {
+          "line": 67,
+          "text": "    snprintf(local_118 + 3,0xf8,(char *)(DAT_00065d40 + 0x65bf8));"
+        },
+        {
+          "line": 76,
+          "text": "    __dlog_print(3,4,DAT_00065d50 + 0x65c6c,DAT_00065d54 + 0x65c74,DAT_00065d48 + 0x65c49,"
+        },
+        {
+          "line": 77,
+          "text": "                 DAT_00065d4c + 0x65c60,0x268,local_118);"
+        },
+        {
+          "line": 78,
+          "text": "    SelectivePushSendEventToUI(0x4b,0,param_2[1]);"
+        },
+        {
+          "line": 79,
+          "text": "  }"
+        },
+        {
+          "line": 80,
+          "text": "  else if (param_1 == 6) {"
+        },
+        {
+          "line": 81,
+          "text": "    builtin_strncpy(local_118,\"\\x1b[m\",4);"
+        },
+        {
+          "line": 82,
+          "text": "    memset(local_118 + 4,0,0xfc);"
+        },
+        {
+          "line": 83,
+          "text": "    snprintf(local_118 + 3,0xf8,(char *)(DAT_00065d28 + 0x65b28));"
+        },
+        {
+          "line": 92,
+          "text": "    __dlog_print(3,4,DAT_00065d38 + 0x65b9c,DAT_00065d3c + 0x65ba4,DAT_00065d30 + 0x65b79,"
+        },
+        {
+          "line": 93,
+          "text": "                 DAT_00065d34 + 0x65b90,0x26e,local_118);"
+        },
+        {
+          "line": 94,
+          "text": "    SelectivePushSendEventToUI(0x4c,0,param_2[1]);"
+        },
+        {
+          "line": 95,
+          "text": "  }"
+        },
+        {
+          "line": 96,
+          "text": "  return;"
+        },
+        {
+          "line": 97,
+          "text": "}"
+        }
+      ],
+      "limitations": "Excerpt lines only; omitted lines are not represented. Decompiled C types/signatures are inferred."
+    }
+  ],
+  "literal_checks": [
+    {
+      "datum_original_elf_va": "0x428c4",
+      "datum_file_offset": "0x428c4",
+      "pc_base_original_elf_va": "0x41fd0",
+      "signed_displacement": 208072,
+      "literal_original_elf_va": "0x74c98",
+      "literal_file_offset": "0x74c98",
+      "literal": "jpg",
+      "raw_hex": "6a706700"
+    },
+    {
+      "datum_original_elf_va": "0x4e88c",
+      "datum_file_offset": "0x4e88c",
+      "pc_base_original_elf_va": "0x4e314",
+      "signed_displacement": 163936,
+      "literal_original_elf_va": "0x76374",
+      "literal_file_offset": "0x76374",
+      "literal": "200",
+      "raw_hex": "32303000"
+    }
+  ],
+  "failure_receipts": [
+    {
+      "method": "tools/firmware/elf_function.py; Capstone 5.0.6 full symbol linear ARM disassembly",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "symbol": "_Z33SNPushControlNotificationCallback21eSPNotifyControlEventP15stSPInformation",
+      "elf_va": "0x56298",
+      "symbol_size": 3616,
+      "returncode": 1,
+      "error": "ValueError: Disassembly did not cover the complete symbol",
+      "interpretation": "No full-symbol independent verification claimed; use bounded executable instruction windows mapped through PT_LOAD instead."
+    }
+  ]
+}

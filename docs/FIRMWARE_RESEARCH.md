@@ -1,5 +1,9 @@
 # NX500 firmware research
 
+Latest offline survey: `docs/STATUS_20261021_RUN003.md`; measured stage coverage:
+`docs/ANALYSIS_PROGRESS.md`. Coverage percentages describe their stated ELF stages,
+not whole-firmware semantic completion.
+
 ## Scope and storage
 
 The complete final official NX500 firmware is the research scope: boot/update/recovery,

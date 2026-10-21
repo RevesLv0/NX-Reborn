@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-10-21",
+  "static_only": true,
+  "project": "NX500_FW112",
+  "new_imports": 0,
+  "auto_analysis_enabled_this_run": false,
+  "source_sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+  "firmware_path": "/usr/lib/libsif.so",
+  "original_elf_va": "0x3649c",
+  "file_offset": "0x3649c",
+  "method": "Selected Ghidra 12.1.4 decompiled-C and instruction readback, with independent Capstone 5.0.6 ARM windows from original ELF PT_LOAD bytes.",
+  "evidence": "analysis/evidence/jpeg-worker-run003.json",
+  "evidence_sha256": "d4d12d8637f261d0c27cadc3412d3943b8c0420320716b37c1443fe4072ec85c",
+  "selected_function_completed": true,
+  "distinct_selected_functions_completed": 1,
+  "historical_failures": [
+    {
+      "run_id": "f7c0daeb-0e45-47e1-941a-78988d54b838",
+      "artifact": ".work/restored-run001/outputs/ghidra/libsif.so-9790fc02fe5b/decompiled.jsonl",
+      "artifact_sha256": "0344cc76e8493ced5b41fdc23b87ea6e24040335a2b37bffe710135276ccd7c9",
+      "function": "DscJPEG::taskMain",
+      "original_elf_va": "0x3649c",
+      "completed": false,
+      "error": "Exception while decompiling 0004649c: process: timeout\n"
+    },
+    {
+      "run_id": "d521b317-98b9-41a6-b926-28df2f03c23c",
+      "artifact": ".work/run003/jpeg/outputs/ghidra/libsif.so-9790fc02fe5b/decompiled.jsonl",
+      "artifact_sha256": "2c2bb6bdc3c5fb41c2521dbcd6db89d67037327708934da5e7e88adba512323a",
+      "function": "DscJPEG::taskMain",
+      "original_elf_va": "0x3649c",
+      "completed": false,
+      "error": "Exception while decompiling 0004649c: Response buffer size exceeded for: libsif.so\n"
+    }
+  ],
+  "runs": [
+    {
+      "stage": "jpeg",
+      "receipt": ".work/run003/jpeg/logs/NX500_FW112-d521b317-98b9-41a6-b926-28df2f03c23c.json",
+      "receipt_sha256": "54f8bc0fbef61468af19cd530277e7c9f596012625aa571f57c020fd0a4f0876",
+      "run_id": "d521b317-98b9-41a6-b926-28df2f03c23c",
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_FW112",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run003/jpeg/outputs/ghidra",
+        "^DscJPEG::taskMain$",
+        "1",
+        "d521b317-98b9-41a6-b926-28df2f03c23c",
+        "60",
+        "-log",
+        "/workspace/NX-Reborn/.work/run003/jpeg/logs/NX500_FW112.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run003/jpeg/logs/NX500_FW112-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "decompile_timeout_seconds": 60,
+      "decompile_payload_mb_override": null,
+      "programs": [
+        {
+          "summary": ".work/run003/jpeg/outputs/ghidra/libmm-photo.so-ea4ae65608a6/summary.json",
+          "summary_sha256": "809413d122ceb60f79d240e9f734bd3497c27998ade423c77aee909e163e1f04",
+          "program": "libmm-photo.so",
+          "sha256": "ea4ae65608a6f9ea0761e35c18764401cf7b876652f7949c322e880fa9f68ca9",
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 1019564,
+              "sha256": "d8c7f193ce6543e5eeec04fd1b1a6807e9296ba80a79c7b9181deda132e53fec"
+            },
+            "calls.jsonl": {
+              "bytes": 1288000,
+              "sha256": "2f310e40750bb5a8eede3d729ed10014007df513e434801db6c966308effcce8"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 732668,
+              "sha256": "081ac145bc2c32e9f9155903305397bfe3182ca7eb97cae51fa1171004a7c5fc"
+            }
+          }
+        },
+        {
+          "summary": ".work/run003/jpeg/outputs/ghidra/libsif.so-9790fc02fe5b/summary.json",
+          "summary_sha256": "9dc0c40e5294969af31f6107b343f301316a8daffc432debcf49594239269830",
+          "program": "libsif.so",
+          "sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+          "decompile_attempted": 1,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 324273,
+              "sha256": "0c414b1dff8c300d4bd4e3c997e44f39e74f941936d99b617e320aa26add1a0e"
+            },
+            "calls.jsonl": {
+              "bytes": 445459,
+              "sha256": "0a5204276389e0807a87078c7d5a9ff521468bdf147132e1b493595c4ce65e75"
+            },
+            "decompiled.jsonl": {
+              "bytes": 289,
+              "sha256": "2c2bb6bdc3c5fb41c2521dbcd6db89d67037327708934da5e7e88adba512323a"
+            },
+            "strings.jsonl": {
+              "bytes": 339466,
+              "sha256": "40116d570c53bc0051f8f205f4789e8a1a119a5d22607448dbd59242a18300ab"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stage": "jpeg-expanded",
+      "receipt": ".work/run003/jpeg-expanded/logs/NX500_FW112-c8f1388b-1bfb-4af5-b00b-3eccd2752de3.json",
+      "receipt_sha256": "66dab544c80c92fdc217e42c63949d7e4ff33a33f769643cd3575e9e5fd4bbc8",
+      "run_id": "c8f1388b-1bfb-4af5-b00b-3eccd2752de3",
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_FW112",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run003/jpeg-expanded/outputs/ghidra",
+        "^DscJPEG::taskMain$",
+        "1",
+        "c8f1388b-1bfb-4af5-b00b-3eccd2752de3",
+        "60",
+        "256",
+        "-log",
+        "/workspace/NX-Reborn/.work/run003/jpeg-expanded/logs/NX500_FW112.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run003/jpeg-expanded/logs/NX500_FW112-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "decompile_timeout_seconds": 60,
+      "decompile_payload_mb_override": 256,
+      "programs": [
+        {
+          "summary": ".work/run003/jpeg-expanded/outputs/ghidra/libmm-photo.so-ea4ae65608a6/summary.json",
+          "summary_sha256": "3d4e15e959038fa7adc6a6bbbe139c5742d9cfc250175c4247dddef85de6233f",
+          "program": "libmm-photo.so",
+          "sha256": "ea4ae65608a6f9ea0761e35c18764401cf7b876652f7949c322e880fa9f68ca9",
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 1019564,
+              "sha256": "d8c7f193ce6543e5eeec04fd1b1a6807e9296ba80a79c7b9181deda132e53fec"
+            },
+            "calls.jsonl": {
+              "bytes": 1288000,
+              "sha256": "b7db73c952ad22e87bc4b7561abe28c565601a8e2b60bf0e47e43be8b579b965"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 732668,
+              "sha256": "081ac145bc2c32e9f9155903305397bfe3182ca7eb97cae51fa1171004a7c5fc"
+            }
+          }
+        },
+        {
+          "summary": ".work/run003/jpeg-expanded/outputs/ghidra/libsif.so-9790fc02fe5b/summary.json",
+          "summary_sha256": "cb2261bba93a8338efbd389ac0637b1aef5d922efdad127f985e3f458142a71e",
+          "program": "libsif.so",
+          "sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+          "decompile_attempted": 1,
+          "decompile_completed": 1,
+          "decompile_omitted_by_budget": 0,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 324273,
+              "sha256": "0c414b1dff8c300d4bd4e3c997e44f39e74f941936d99b617e320aa26add1a0e"
+            },
+            "calls.jsonl": {
+              "bytes": 445459,
+              "sha256": "cdd5cee84bf1024faa5b3d5c39222a60218336be3fa506879d3d2d4f2754a6a2"
+            },
+            "decompiled.jsonl": {
+              "bytes": 259346,
+              "sha256": "5c1b60ed7211933d1669002e09ee89683244f8f43d0331aba0b9632323252aa4"
+            },
+            "strings.jsonl": {
+              "bytes": 339466,
+              "sha256": "40116d570c53bc0051f8f205f4789e8a1a119a5d22607448dbd59242a18300ab"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "reviewed_findings": [
+    {
+      "id": "jpeg-worker-exif-mpf-routes",
+      "source_sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+      "firmware_path": "/usr/lib/libsif.so",
+      "original_elf_va": "0x3649c",
+      "file_offset": "0x3649c",
+      "claim": "Worker cases3/7 call Exif/Mpf execute, copy output chunk vectors and conditionally call DscFileHandler::operate only when message field+4 is zero.",
+      "callsites_original_elf_va": [
+        "0x38dfc",
+        "0x38e48",
+        "0x3c730",
+        "0x3c77c"
+      ],
+      "evidence": "analysis/evidence/jpeg-worker-run003.json",
+      "method": "Selected Ghidra 12.1.4 decompiled-C and instruction readback, with independent Capstone 5.0.6 ARM windows from original ELF PT_LOAD bytes.",
+      "limitations": [
+        "No execution/encoding result or storage-durability conclusion.",
+        "Encoder internals and downstream operate implementation not inspected here."
+      ],
+      "unresolved_questions": [
+        "Meaning and callers of message+4 mode.",
+        "Exact chunk contents and file-handler completion behavior."
+      ]
+    },
+    {
+      "id": "jpeg-worker-optional-callbacks",
+      "source_sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+      "firmware_path": "/usr/lib/libsif.so",
+      "original_elf_va": "0x3649c",
+      "file_offset": "0x3649c",
+      "claim": "Cases3/7 check worker callback field+0x1c and call it after copyChunkData; common loop later checks a separate callback taken from message+0x18.",
+      "callsites_original_elf_va": [
+        "0x38e80",
+        "0x38eb0",
+        "0x3c7c4",
+        "0x3c7f4",
+        "0x3e2b0"
+      ],
+      "evidence": "analysis/evidence/jpeg-worker-run003.json",
+      "method": "Selected Ghidra 12.1.4 decompiled-C and instruction readback, with independent Capstone 5.0.6 ARM windows from original ELF PT_LOAD bytes.",
+      "limitations": [
+        "Callback identities/signatures unverified.",
+        "Common callback r0 argument cannot be interpreted as a stable success status from inferred decompiled uVar5."
+      ],
+      "unresolved_questions": [
+        "Registered callback targets, lifetimes and completion semantics."
+      ]
+    },
+    {
+      "id": "jpeg-worker-case-specific-asserts",
+      "source_sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+      "firmware_path": "/usr/lib/libsif.so",
+      "original_elf_va": "0x3649c",
+      "file_offset": "0x3649c",
+      "claim": "Selected cases0/1/6 pass jpeg encode/jpeg decode/srw decode here prohibition strings to __assert_fail.",
+      "callsites_original_elf_va": [
+        "0x38574",
+        "0x37da0",
+        "0x3a80c"
+      ],
+      "evidence": "analysis/evidence/jpeg-worker-run003.json",
+      "method": "Selected Ghidra 12.1.4 decompiled-C and instruction readback, with independent Capstone 5.0.6 ARM windows from original ELF PT_LOAD bytes.",
+      "limitations": [
+        "These are case-specific paths in one worker; they do not imply encoding/decoding disabled across camera.",
+        "Mode enumeration, reachability and caller behavior remain unknown."
+      ],
+      "unresolved_questions": [
+        "Which callers submit these numeric modes?",
+        "Where actual JPEG encoding is dispatched."
+      ]
+    }
+  ],
+  "limitations": [
+    "One selected worker; not full JPEG/EXIF/MPF pipeline semantic coverage.",
+    "No firmware execution or device observations.",
+    "Inferred signatures/object layouts, unknown caller modes and unresolved callback targets.",
+    "Ghidra recovered body28272 address bytes versus ELF symbol32476 bytes is unreconciled; successful selected C does not establish complete function recovery."
+  ],
+  "report": "analysis/architecture/JPEG_WORKER_RUN003.md",
+  "report_sha256": "e35531695240f23fbbdbb1ba50aa94ff15e9443ce9b9c6d2cd3f13526aa4afa3"
+}

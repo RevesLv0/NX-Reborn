@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "expected_unique_elf_contents": 1895,
+  "cataloged_unique_elf_contents": 1895,
+  "error_count": 0,
+  "completed": true,
+  "totals": {
+    "named_symbol_entries": 356482,
+    "named_function_symbol_entries": 168772,
+    "distinct_declared_function_locations": 156813,
+    "dynamic_import_entries": 138549,
+    "dynamic_export_candidates": 211045
+  },
+  "limitations": "Declared ELF symbol metadata only; function counts use STT_FUNC, preserving OS-specific types separately without interpreting them. Tables may duplicate names/locations; stripped or hidden implementation functions are absent. Dynamic export candidates do not prove binding or calls. ET_REL values are section-relative; other values are original ELF VAs, not file offsets. ARM Thumb low bits are preserved separately. No semantic completion percentage.",
+  "catalog_sha256": "5d45ef9f8e26fa7bc387eda58d4544833688050accce056edc9c15cfdfb78324",
+  "collector": "tools/firmware/symbol_catalog.py",
+  "collector_sha256": "02b69953cc718e169a50c5d4fb5d230ffba9c38479b5fac49c1ecf073d37184a",
+  "source_inventory_sha256": "c874bc1a39049f8f6afb508aa34e9fb0b4aacd1480e7603afade30a4613d461f",
+  "pyelftools_version": "0.32",
+  "full_catalog_location": "Drive run003 symbol/progress bundle; manifests/drive-artifacts-run003.json"
+}

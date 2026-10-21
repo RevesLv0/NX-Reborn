@@ -3,6 +3,7 @@
 import ghidra.app.util.headless.HeadlessScript;
 import ghidra.app.decompiler.DecompInterface;
 import ghidra.app.decompiler.DecompileResults;
+import ghidra.app.decompiler.DecompileOptions;
 import ghidra.app.util.opinion.ElfLoader;
 import ghidra.framework.Application;
 import ghidra.program.model.address.Address;
@@ -36,8 +37,15 @@ public class ExportEvidence extends HeadlessScript {
         Pattern targets = Pattern.compile(args.length > 1 ? args[1] :
             "(?i)(captureSaveDone|SIFListener|runFromCapture|UI_Capture_File_Write_Done|UI_BT_Send_Contents|DMS|SendFileThruGet|RetriveFilePath|GetFilePathFromURI|DlnaGetContentUri|StartHTTPServer|createFileTransfer|jpegResize|WiFi.*(Start|Stop)|Wifi.*(Start|Stop)|fw_upgrade)");
         int budget = args.length > 2 ? Integer.parseInt(args[2]) : 35;
+        int decompileTimeout = args.length > 4 ? Integer.parseInt(args[4]) : 20;
+        if (budget < 0 || decompileTimeout <= 0) throw new IllegalArgumentException("Invalid decompile budget/timeout");
         int count = 0, attempted = 0, completed = 0, eligible = 0;
         DecompInterface dec = new DecompInterface();
+        DecompileOptions options = new DecompileOptions();
+        int payloadOverride = args.length > 5 ? Integer.parseInt(args[5]) : 0;
+        if (payloadOverride < 0) throw new IllegalArgumentException("Invalid decompile response size");
+        if (payloadOverride > 0) options.setMaxPayloadMBytes(payloadOverride);
+        dec.setOptions(options);
         dec.openProgram(currentProgram);
         try (BufferedWriter functions = Files.newBufferedWriter(out.resolve("functions.jsonl.partial"),StandardCharsets.UTF_8);
              BufferedWriter edges = Files.newBufferedWriter(out.resolve("calls.jsonl.partial"),StandardCharsets.UTF_8);
@@ -65,7 +73,7 @@ public class ExportEvidence extends HeadlessScript {
                 if(matches) eligible++;
                 if (matches && attempted < budget) {
                     attempted++;
-                    DecompileResults result = dec.decompileFunction(f,20,monitor);
+                    DecompileResults result = dec.decompileFunction(f,decompileTimeout,monitor);
                     Map<String,Object> d = new LinkedHashMap<>();
                     d.put("va",f.getEntryPoint().toString()); d.put("name",f.getName(true));
                     d.put("elf_va",elfVa(f.getEntryPoint()));
@@ -110,10 +118,12 @@ public class ExportEvidence extends HeadlessScript {
         summary.put("address_convention","va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.");
         summary.put("strings",strings); summary.put("decompile_budget",budget);
         summary.put("decompile_attempted",attempted); summary.put("decompile_completed",completed);
+        summary.put("decompile_timeout_seconds",decompileTimeout);
+        summary.put("decompile_max_payload_mb",options.getMaxPayloadMBytes());
         summary.put("decompile_pattern",targets.pattern()); summary.put("matched_functions",eligible);
         summary.put("decompile_omitted_by_budget",eligible-attempted);
         summary.put("ghidra_version",Application.getApplicationVersion());
-        summary.put("exporter_version","2026-10-21.2");
+        summary.put("exporter_version","2026-10-21.3");
         summary.put("export_schema_version",2);
         summary.put("run_id",args.length>3?args[3]:"manual-unspecified");
         summary.put("static_only",true); summary.put("scope","auto-analysis; selected decompilation, not full semantic verification");

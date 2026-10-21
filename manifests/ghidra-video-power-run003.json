@@ -1,0 +1,2427 @@
+{
+  "schema_version": 1,
+  "task": "NX500 RUN003 VIDEO_POWER offline survey",
+  "static_only": true,
+  "source_inventory": {
+    "path": ".work/full/inventory/full_filesystem_inventory.json",
+    "sha256": "c874bc1a39049f8f6afb508aa34e9fb0b4aacd1480e7603afade30a4613d461f"
+  },
+  "inputs": [
+    {
+      "original_path": "/usr/lib/libmmfcore.so",
+      "local_input": ".work/run003/video-power/inputs/libmmfcore.so",
+      "sha256": "b3e7cd2987282d856a8f95b8768d44ea2f4f3804684a391de0567c10dada73c8",
+      "bytes": 340268,
+      "copy_method": "hardlink_from_regular_extracted_rootfs",
+      "inventory_entry": {
+        "partition": "rootfs",
+        "original_path": "/usr/lib/libmmfcore.so",
+        "runtime_path": "/usr/lib/libmmfcore.so",
+        "mode": "0o100755",
+        "extracted_bytes": 340268,
+        "extracted_inode": 1583590,
+        "extracted_device": 27,
+        "inode_provenance": "host_extracted_tree_only",
+        "type": "regular",
+        "sha256": "b3e7cd2987282d856a8f95b8768d44ea2f4f3804684a391de0567c10dada73c8",
+        "elf": {
+          "machine": "EM_ARM",
+          "elf_class": 32,
+          "little_endian": true,
+          "type": "ET_DYN",
+          "entry": "0x13b60",
+          "needed": [
+            "libmmfmodules.so",
+            "libmmfosal.so",
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "/lib",
+          "runpath": null,
+          "interpreter": null,
+          "symbol_tables": {
+            ".dynsym": 1105
+          }
+        },
+        "source_inode": 11997,
+        "source_mode": "0o100755",
+        "source_uid": 0,
+        "source_gid": 0,
+        "source_bytes": 340268,
+        "source_type": "regular",
+        "source_metadata_method": "native_debugfs_read_only_ls_by_inode",
+        "source_sha256": "b3e7cd2987282d856a8f95b8768d44ea2f4f3804684a391de0567c10dada73c8",
+        "source_byte_verification": "native_debugfs_dump_by_source_inode_matches_rdump_file",
+        "source_bytes_match_extracted": true,
+        "extracted": true
+      }
+    },
+    {
+      "original_path": "/usr/lib/libmmfmodules.so",
+      "local_input": ".work/run003/video-power/inputs/libmmfmodules.so",
+      "sha256": "e40d3c7fdbab8ea7f67d0e876468c2a31fa8572d602d969d32348f3fd0f45de7",
+      "bytes": 315716,
+      "copy_method": "hardlink_from_regular_extracted_rootfs",
+      "inventory_entry": {
+        "partition": "rootfs",
+        "original_path": "/usr/lib/libmmfmodules.so",
+        "runtime_path": "/usr/lib/libmmfmodules.so",
+        "mode": "0o100755",
+        "extracted_bytes": 315716,
+        "extracted_inode": 1583506,
+        "extracted_device": 27,
+        "inode_provenance": "host_extracted_tree_only",
+        "type": "regular",
+        "sha256": "e40d3c7fdbab8ea7f67d0e876468c2a31fa8572d602d969d32348f3fd0f45de7",
+        "elf": {
+          "machine": "EM_ARM",
+          "elf_class": 32,
+          "little_endian": true,
+          "type": "ET_DYN",
+          "entry": "0x14028",
+          "needed": [
+            "libasound.so.2",
+            "libmmfsound.so.0",
+            "libaudioutil.so.0",
+            "libmm-displayer.so",
+            "libmm-type.so",
+            "libtint-util.so",
+            "librt.so.1",
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "/lib",
+          "runpath": null,
+          "interpreter": null,
+          "symbol_tables": {
+            ".dynsym": 1231
+          }
+        },
+        "source_inode": 11988,
+        "source_mode": "0o100755",
+        "source_uid": 0,
+        "source_gid": 0,
+        "source_bytes": 315716,
+        "source_type": "regular",
+        "source_metadata_method": "native_debugfs_read_only_ls_by_inode",
+        "source_sha256": "e40d3c7fdbab8ea7f67d0e876468c2a31fa8572d602d969d32348f3fd0f45de7",
+        "source_byte_verification": "native_debugfs_dump_by_source_inode_matches_rdump_file",
+        "source_bytes_match_extracted": true,
+        "extracted": true
+      }
+    },
+    {
+      "original_path": "/usr/lib/libmm-displayer.so",
+      "local_input": ".work/run003/video-power/inputs/libmm-displayer.so",
+      "sha256": "59a61fc93afacd39940e68771fae0cecbb12f1b0bc9abffb10170868d3512426",
+      "bytes": 28844,
+      "copy_method": "hardlink_from_regular_extracted_rootfs",
+      "inventory_entry": {
+        "partition": "rootfs",
+        "original_path": "/usr/lib/libmm-displayer.so",
+        "runtime_path": "/usr/lib/libmm-displayer.so",
+        "mode": "0o100755",
+        "extracted_bytes": 28844,
+        "extracted_inode": 1583093,
+        "extracted_device": 27,
+        "inode_provenance": "host_extracted_tree_only",
+        "type": "regular",
+        "sha256": "59a61fc93afacd39940e68771fae0cecbb12f1b0bc9abffb10170868d3512426",
+        "elf": {
+          "machine": "EM_ARM",
+          "elf_class": 32,
+          "little_endian": true,
+          "type": "ET_DYN",
+          "entry": "0x2df8",
+          "needed": [
+            "libpthread.so.0",
+            "libmm-type.so",
+            "libsys-mmap-manager.so",
+            "liblogutil.so",
+            "librt.so.1",
+            "libdlog.so.0",
+            "libtint-util.so",
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libc.so.6",
+            "ld-linux.so.3",
+            "libgcc_s.so.1"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "interpreter": null,
+          "symbol_tables": {
+            ".dynsym": 170
+          }
+        },
+        "source_inode": 8389,
+        "source_mode": "0o100755",
+        "source_uid": 0,
+        "source_gid": 0,
+        "source_bytes": 28844,
+        "source_type": "regular",
+        "source_metadata_method": "native_debugfs_read_only_ls_by_inode",
+        "source_sha256": "59a61fc93afacd39940e68771fae0cecbb12f1b0bc9abffb10170868d3512426",
+        "source_byte_verification": "native_debugfs_dump_by_source_inode_matches_rdump_file",
+        "source_bytes_match_extracted": true,
+        "extracted": true
+      }
+    },
+    {
+      "original_path": "/usr/lib/libsysman.so.0.2.0",
+      "local_input": ".work/run003/video-power/inputs/libsysman.so.0.2.0",
+      "sha256": "f3df0b8c6e3200ed7cd607f8094446f45d0ddc5e7804fcd946e467b96f6f074a",
+      "bytes": 14440,
+      "copy_method": "hardlink_from_regular_extracted_rootfs",
+      "inventory_entry": {
+        "partition": "rootfs",
+        "original_path": "/usr/lib/libsysman.so.0.2.0",
+        "runtime_path": "/usr/lib/libsysman.so.0.2.0",
+        "mode": "0o100755",
+        "extracted_bytes": 14440,
+        "extracted_inode": 1583779,
+        "extracted_device": 27,
+        "inode_provenance": "host_extracted_tree_only",
+        "type": "regular",
+        "sha256": "f3df0b8c6e3200ed7cd607f8094446f45d0ddc5e7804fcd946e467b96f6f074a",
+        "elf": {
+          "machine": "EM_ARM",
+          "elf_class": 32,
+          "little_endian": true,
+          "type": "ET_DYN",
+          "entry": "0x1294",
+          "needed": [
+            "libvconf.so.0",
+            "libdlog.so.0",
+            "libpthread.so.0",
+            "libdl.so.2",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux.so.3"
+          ],
+          "soname": "libsysman.so.0",
+          "rpath": null,
+          "runpath": null,
+          "interpreter": null,
+          "symbol_tables": {
+            ".dynsym": 81
+          }
+        },
+        "source_inode": 10402,
+        "source_mode": "0o100755",
+        "source_uid": 0,
+        "source_gid": 0,
+        "source_bytes": 14440,
+        "source_type": "regular",
+        "source_metadata_method": "native_debugfs_read_only_ls_by_inode",
+        "source_sha256": "f3df0b8c6e3200ed7cd607f8094446f45d0ddc5e7804fcd946e467b96f6f074a",
+        "source_byte_verification": "native_debugfs_dump_by_source_inode_matches_rdump_file",
+        "source_bytes_match_extracted": true,
+        "extracted": true
+      }
+    },
+    {
+      "original_path": "/usr/lib/libhibernation.so",
+      "local_input": ".work/run003/video-power/inputs/libhibernation.so",
+      "sha256": "fe10b00aea33234bb144c28f14892d4a0583a1b81d27f070a0e7e0f1b5198e03",
+      "bytes": 19228,
+      "copy_method": "hardlink_from_regular_extracted_rootfs",
+      "inventory_entry": {
+        "partition": "rootfs",
+        "original_path": "/usr/lib/libhibernation.so",
+        "runtime_path": "/usr/lib/libhibernation.so",
+        "mode": "0o100644",
+        "extracted_bytes": 19228,
+        "extracted_inode": 1583001,
+        "extracted_device": 27,
+        "inode_provenance": "host_extracted_tree_only",
+        "type": "regular",
+        "sha256": "fe10b00aea33234bb144c28f14892d4a0583a1b81d27f070a0e7e0f1b5198e03",
+        "elf": {
+          "machine": "EM_ARM",
+          "elf_class": 32,
+          "little_endian": true,
+          "type": "ET_DYN",
+          "entry": "0x13b4",
+          "needed": [
+            "libprefman.so",
+            "liblogutil.so",
+            "librt.so.1",
+            "libdlog.so.0",
+            "libpthread.so.0",
+            "libversion-info.so",
+            "libfirmware-upgrade.so",
+            "libmicom-node.so.0.1",
+            "libdevice-node.so.0.1",
+            "libtbm.so.1",
+            "libdrm.so.2",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux.so.3"
+          ],
+          "soname": null,
+          "rpath": "/lib",
+          "runpath": null,
+          "interpreter": null,
+          "symbol_tables": {
+            ".dynsym": 82
+          }
+        },
+        "source_inode": 10386,
+        "source_mode": "0o100644",
+        "source_uid": 0,
+        "source_gid": 0,
+        "source_bytes": 19228,
+        "source_type": "regular",
+        "source_metadata_method": "native_debugfs_read_only_ls_by_inode",
+        "source_sha256": "fe10b00aea33234bb144c28f14892d4a0583a1b81d27f070a0e7e0f1b5198e03",
+        "source_byte_verification": "native_debugfs_dump_by_source_inode_matches_rdump_file",
+        "source_bytes_match_extracted": true,
+        "extracted": true
+      }
+    },
+    {
+      "original_path": "/usr/lib/libmicom-node.so.0.1",
+      "local_input": ".work/run003/video-power/inputs/libmicom-node.so.0.1",
+      "sha256": "26f7304fca29d9e24da3e9147805a494a79eb3752f128158523c5674b2294454",
+      "bytes": 17712,
+      "copy_method": "hardlink_from_regular_extracted_rootfs",
+      "inventory_entry": {
+        "partition": "rootfs",
+        "original_path": "/usr/lib/libmicom-node.so.0.1",
+        "runtime_path": "/usr/lib/libmicom-node.so.0.1",
+        "mode": "0o100755",
+        "extracted_bytes": 17712,
+        "extracted_inode": 1583832,
+        "extracted_device": 27,
+        "inode_provenance": "host_extracted_tree_only",
+        "type": "regular",
+        "sha256": "26f7304fca29d9e24da3e9147805a494a79eb3752f128158523c5674b2294454",
+        "elf": {
+          "machine": "EM_ARM",
+          "elf_class": 32,
+          "little_endian": true,
+          "type": "ET_DYN",
+          "entry": "0x1144",
+          "needed": [
+            "libdlog.so.0",
+            "libpthread.so.0",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux.so.3"
+          ],
+          "soname": "libmicom-node.so.0.1",
+          "rpath": null,
+          "runpath": null,
+          "interpreter": null,
+          "symbol_tables": {
+            ".dynsym": 80
+          }
+        },
+        "source_inode": 8360,
+        "source_mode": "0o100755",
+        "source_uid": 0,
+        "source_gid": 0,
+        "source_bytes": 17712,
+        "source_type": "regular",
+        "source_metadata_method": "native_debugfs_read_only_ls_by_inode",
+        "source_sha256": "26f7304fca29d9e24da3e9147805a494a79eb3752f128158523c5674b2294454",
+        "source_byte_verification": "native_debugfs_dump_by_source_inode_matches_rdump_file",
+        "source_bytes_match_extracted": true,
+        "extracted": true
+      }
+    },
+    {
+      "original_path": "/usr/lib/libfirmware-upgrade.so",
+      "local_input": ".work/run003/video-power/inputs/libfirmware-upgrade.so",
+      "sha256": "7639927b05e4290198d53d8a14ebb219e36f71dcc73693c3cf09988337c522d7",
+      "bytes": 43684,
+      "copy_method": "hardlink_from_regular_extracted_rootfs",
+      "inventory_entry": {
+        "partition": "rootfs",
+        "original_path": "/usr/lib/libfirmware-upgrade.so",
+        "runtime_path": "/usr/lib/libfirmware-upgrade.so",
+        "mode": "0o100644",
+        "extracted_bytes": 43684,
+        "extracted_inode": 1583845,
+        "extracted_device": 27,
+        "inode_provenance": "host_extracted_tree_only",
+        "type": "regular",
+        "sha256": "7639927b05e4290198d53d8a14ebb219e36f71dcc73693c3cf09988337c522d7",
+        "elf": {
+          "machine": "EM_ARM",
+          "elf_class": 32,
+          "little_endian": true,
+          "type": "ET_DYN",
+          "entry": "0x2424",
+          "needed": [
+            "libpthread.so.0",
+            "liblogutil.so",
+            "librt.so.1",
+            "libdlog.so.0",
+            "libversion-info.so",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux.so.3"
+          ],
+          "soname": null,
+          "rpath": "/lib",
+          "runpath": null,
+          "interpreter": null,
+          "symbol_tables": {
+            ".dynsym": 160
+          }
+        },
+        "source_inode": 8135,
+        "source_mode": "0o100644",
+        "source_uid": 0,
+        "source_gid": 0,
+        "source_bytes": 43684,
+        "source_type": "regular",
+        "source_metadata_method": "native_debugfs_read_only_ls_by_inode",
+        "source_sha256": "7639927b05e4290198d53d8a14ebb219e36f71dcc73693c3cf09988337c522d7",
+        "source_byte_verification": "native_debugfs_dump_by_source_inode_matches_rdump_file",
+        "source_bytes_match_extracted": true,
+        "extracted": true
+      }
+    },
+    {
+      "original_path": "/usr/bin/deviced",
+      "local_input": ".work/run003/video-power/inputs/deviced",
+      "sha256": "7df5d80e88e6668dff2274f86a550e480250d95dce1d3da29b489aa5e5d40f59",
+      "bytes": 330880,
+      "copy_method": "hardlink_from_regular_extracted_rootfs",
+      "inventory_entry": {
+        "partition": "rootfs",
+        "original_path": "/usr/bin/deviced",
+        "runtime_path": "/usr/bin/deviced",
+        "mode": "0o100755",
+        "extracted_bytes": 330880,
+        "extracted_inode": 1581918,
+        "extracted_device": 27,
+        "inode_provenance": "host_extracted_tree_only",
+        "type": "regular",
+        "sha256": "7df5d80e88e6668dff2274f86a550e480250d95dce1d3da29b489aa5e5d40f59",
+        "elf": {
+          "machine": "EM_ARM",
+          "elf_class": 32,
+          "little_endian": true,
+          "type": "ET_EXEC",
+          "entry": "0xb4a8",
+          "needed": [
+            "librt.so.1",
+            "libecore.so.1",
+            "libecore_file.so.1",
+            "libecore_x.so.1",
+            "libedbus.so.1",
+            "libdbus-1.so.3",
+            "libeina.so.1",
+            "libvconf.so.0",
+            "libglib-2.0.so.0",
+            "liblogutil.so",
+            "libdlog.so.0",
+            "libpthread.so.0",
+            "libdevice-node.so.0.1",
+            "libxml2.so.2",
+            "libsensor.so.1",
+            "libdl.so.2",
+            "libm.so.6",
+            "libudev.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "interpreter": "/lib/ld-linux.so.3",
+          "symbol_tables": {
+            ".dynsym": 211
+          }
+        },
+        "source_inode": 13194,
+        "source_mode": "0o100755",
+        "source_uid": 0,
+        "source_gid": 0,
+        "source_bytes": 330880,
+        "source_type": "regular",
+        "source_metadata_method": "native_debugfs_read_only_ls_by_inode",
+        "source_sha256": "7df5d80e88e6668dff2274f86a550e480250d95dce1d3da29b489aa5e5d40f59",
+        "source_byte_verification": "native_debugfs_dump_by_source_inode_matches_rdump_file",
+        "source_bytes_match_extracted": true,
+        "extracted": true
+      }
+    },
+    {
+      "original_path": "/usr/bin/resourced",
+      "local_input": ".work/run003/video-power/inputs/resourced",
+      "sha256": "9287ac34eb83caced12a4163657a3ce9049cf0233a583512333089854ba60d57",
+      "bytes": 118024,
+      "copy_method": "hardlink_from_regular_extracted_rootfs",
+      "inventory_entry": {
+        "partition": "rootfs",
+        "original_path": "/usr/bin/resourced",
+        "runtime_path": "/usr/bin/resourced",
+        "mode": "0o100701",
+        "extracted_bytes": 118024,
+        "extracted_inode": 1581903,
+        "extracted_device": 27,
+        "inode_provenance": "host_extracted_tree_only",
+        "type": "regular",
+        "sha256": "9287ac34eb83caced12a4163657a3ce9049cf0233a583512333089854ba60d57",
+        "elf": {
+          "machine": "EM_ARM",
+          "elf_class": 32,
+          "little_endian": true,
+          "type": "ET_EXEC",
+          "entry": "0xc1e4",
+          "needed": [
+            "libnetwork.so.0",
+            "libecore.so.1",
+            "libdlog.so.0",
+            "libpthread.so.0",
+            "libsqlite3.so.0",
+            "libvconf.so.0",
+            "libglib-2.0.so.0",
+            "libX11.so.6",
+            "libecore_x.so.1",
+            "libecore_file.so.1",
+            "libeina.so.1",
+            "libedbus.so.1",
+            "libdbus-1.so.3",
+            "libresourced.so.0",
+            "libcapi-telephony-network-info.so.0",
+            "libc.so.6",
+            "ld-linux.so.3"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "interpreter": "/lib/ld-linux.so.3",
+          "symbol_tables": {
+            ".dynsym": 267
+          }
+        },
+        "source_inode": 11765,
+        "source_mode": "0o100701",
+        "source_uid": 0,
+        "source_gid": 0,
+        "source_bytes": 118024,
+        "source_type": "regular",
+        "source_metadata_method": "native_debugfs_read_only_ls_by_inode",
+        "source_sha256": "9287ac34eb83caced12a4163657a3ce9049cf0233a583512333089854ba60d57",
+        "source_byte_verification": "native_debugfs_dump_by_source_inode_matches_rdump_file",
+        "source_bytes_match_extracted": true,
+        "extracted": true
+      }
+    },
+    {
+      "original_path": "/usr/bin/hib_tool",
+      "local_input": ".work/run003/video-power/inputs/hib_tool",
+      "sha256": "a77d74a9f8b2a8a03d1697f85cb30b4e49e78d69e46991b0702709d2a72afbbc",
+      "bytes": 7644,
+      "copy_method": "hardlink_from_regular_extracted_rootfs",
+      "inventory_entry": {
+        "partition": "rootfs",
+        "original_path": "/usr/bin/hib_tool",
+        "runtime_path": "/usr/bin/hib_tool",
+        "mode": "0o100755",
+        "extracted_bytes": 7644,
+        "extracted_inode": 1581886,
+        "extracted_device": 27,
+        "inode_provenance": "host_extracted_tree_only",
+        "type": "regular",
+        "sha256": "a77d74a9f8b2a8a03d1697f85cb30b4e49e78d69e46991b0702709d2a72afbbc",
+        "elf": {
+          "machine": "EM_ARM",
+          "elf_class": 32,
+          "little_endian": true,
+          "type": "ET_EXEC",
+          "entry": "0x8a80",
+          "needed": [
+            "libhibernation.so",
+            "libprefman.so",
+            "liblogutil.so",
+            "librt.so.1",
+            "libdlog.so.0",
+            "libpthread.so.0",
+            "libversion-info.so",
+            "libfirmware-upgrade.so",
+            "libmicom-node.so.0.1",
+            "libdevice-node.so.0.1",
+            "libtbm.so.1",
+            "libdrm.so.2",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux.so.3"
+          ],
+          "soname": null,
+          "rpath": "/lib",
+          "runpath": null,
+          "interpreter": "/lib/ld-linux.so.3",
+          "symbol_tables": {
+            ".dynsym": 39
+          }
+        },
+        "source_inode": 10382,
+        "source_mode": "0o100755",
+        "source_uid": 0,
+        "source_gid": 0,
+        "source_bytes": 7644,
+        "source_type": "regular",
+        "source_metadata_method": "native_debugfs_read_only_ls_by_inode",
+        "source_sha256": "a77d74a9f8b2a8a03d1697f85cb30b4e49e78d69e46991b0702709d2a72afbbc",
+        "source_byte_verification": "native_debugfs_dump_by_source_inode_matches_rdump_file",
+        "source_bytes_match_extracted": true,
+        "extracted": true
+      }
+    },
+    {
+      "original_path": "/usr/bin/micom_updater",
+      "local_input": ".work/run003/video-power/inputs/micom_updater",
+      "sha256": "c8fbcb73b060d8642821645eb17200c467da4e2df9460c6c560b15e9492a2ca6",
+      "bytes": 14924,
+      "copy_method": "hardlink_from_regular_extracted_rootfs",
+      "inventory_entry": {
+        "partition": "rootfs",
+        "original_path": "/usr/bin/micom_updater",
+        "runtime_path": "/usr/bin/micom_updater",
+        "mode": "0o100755",
+        "extracted_bytes": 14924,
+        "extracted_inode": 1582105,
+        "extracted_device": 27,
+        "inode_provenance": "host_extracted_tree_only",
+        "type": "regular",
+        "sha256": "c8fbcb73b060d8642821645eb17200c467da4e2df9460c6c560b15e9492a2ca6",
+        "elf": {
+          "machine": "EM_ARM",
+          "elf_class": 32,
+          "little_endian": true,
+          "type": "ET_EXEC",
+          "entry": "0x95fc",
+          "needed": [
+            "libpthread.so.0",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux.so.3"
+          ],
+          "soname": null,
+          "rpath": "/lib",
+          "runpath": null,
+          "interpreter": "/lib/ld-linux.so.3",
+          "symbol_tables": {
+            ".dynsym": 41
+          }
+        },
+        "source_inode": 17332,
+        "source_mode": "0o100755",
+        "source_uid": 0,
+        "source_gid": 0,
+        "source_bytes": 14924,
+        "source_type": "regular",
+        "source_metadata_method": "native_debugfs_read_only_ls_by_inode",
+        "source_sha256": "c8fbcb73b060d8642821645eb17200c467da4e2df9460c6c560b15e9492a2ca6",
+        "source_byte_verification": "native_debugfs_dump_by_source_inode_matches_rdump_file",
+        "source_bytes_match_extracted": true,
+        "extracted": true
+      }
+    },
+    {
+      "original_path": "/usr/sbin/fw_upgrade",
+      "local_input": ".work/run003/video-power/inputs/fw_upgrade",
+      "sha256": "a494ecb878c3d7c7c152ea84509c38a8acd87e86848e25b77cd2f91103ae987a",
+      "bytes": 35380,
+      "copy_method": "hardlink_from_regular_extracted_rootfs",
+      "inventory_entry": {
+        "partition": "rootfs",
+        "original_path": "/usr/sbin/fw_upgrade",
+        "runtime_path": "/usr/sbin/fw_upgrade",
+        "mode": "0o100755",
+        "extracted_bytes": 35380,
+        "extracted_inode": 1590220,
+        "extracted_device": 27,
+        "inode_provenance": "host_extracted_tree_only",
+        "type": "regular",
+        "sha256": "a494ecb878c3d7c7c152ea84509c38a8acd87e86848e25b77cd2f91103ae987a",
+        "elf": {
+          "machine": "EM_ARM",
+          "elf_class": 32,
+          "little_endian": true,
+          "type": "ET_EXEC",
+          "entry": "0x952c",
+          "needed": [
+            "libpthread.so.0",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux.so.3"
+          ],
+          "soname": null,
+          "rpath": "/lib",
+          "runpath": null,
+          "interpreter": "/lib/ld-linux.so.3",
+          "symbol_tables": {
+            ".dynsym": 88
+          }
+        },
+        "source_inode": 8174,
+        "source_mode": "0o100755",
+        "source_uid": 0,
+        "source_gid": 0,
+        "source_bytes": 35380,
+        "source_type": "regular",
+        "source_metadata_method": "native_debugfs_read_only_ls_by_inode",
+        "source_sha256": "a494ecb878c3d7c7c152ea84509c38a8acd87e86848e25b77cd2f91103ae987a",
+        "source_byte_verification": "native_debugfs_dump_by_source_inode_matches_rdump_file",
+        "source_bytes_match_extracted": true,
+        "extracted": true
+      }
+    }
+  ],
+  "run_receipts": [
+    {
+      "path": ".work/run003/video-power/logs/NX500_RUN003_VIDEO_POWER-3f6eaf68-7c10-4d38-97e3-22fcb042b685.json",
+      "sha256": "04479193f0560a7153b6647815d5879d426ffe439c131faa1328ddb43f9293cf",
+      "receipt": {
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "started_unix": 1792557932.9451168,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN003_VIDEO_POWER",
+          "-import",
+          "/workspace/NX-Reborn/.work/run003/video-power/inputs",
+          "-analysisTimeoutPerFile",
+          "150",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportEvidence.java",
+          "/workspace/NX-Reborn/.work/run003/video-power/outputs/ghidra",
+          "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+          "10",
+          "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+          "25",
+          "-log",
+          "/workspace/NX-Reborn/.work/run003/video-power/logs/NX500_RUN003_VIDEO_POWER.log",
+          "-scriptlog",
+          "/workspace/NX-Reborn/.work/run003/video-power/logs/NX500_RUN003_VIDEO_POWER-script.log",
+          "-recursive"
+        ],
+        "max_memory": "1536M",
+        "max_cpu": 1,
+        "decompile_timeout_seconds": 25,
+        "exporter_sha256": "cdb1e4e1d57e36558c1ddec47f9409e10bd8b3882b1e9f217af97f8ad28b95c8",
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792558080.20241
+      }
+    },
+    {
+      "path": ".work/run003/video-power/hevc-followup/logs/NX500_RUN003_VIDEO_POWER-ca69bd7c-cf60-438d-bb8a-057e78b44b26.json",
+      "sha256": "c2004257d129f41367bb0b986dcc1067a2aa204f52e6da74d71724435d075580",
+      "receipt": {
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "started_unix": 1792558106.2351289,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN003_VIDEO_POWER",
+          "-process",
+          "*",
+          "-analysisTimeoutPerFile",
+          "150",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportEvidence.java",
+          "/workspace/NX-Reborn/.work/run003/video-power/hevc-followup/outputs/ghidra",
+          "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+          "10",
+          "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+          "25",
+          "-log",
+          "/workspace/NX-Reborn/.work/run003/video-power/hevc-followup/logs/NX500_RUN003_VIDEO_POWER.log",
+          "-scriptlog",
+          "/workspace/NX-Reborn/.work/run003/video-power/hevc-followup/logs/NX500_RUN003_VIDEO_POWER-script.log",
+          "-recursive",
+          "-noanalysis"
+        ],
+        "max_memory": "1536M",
+        "max_cpu": 1,
+        "decompile_timeout_seconds": 25,
+        "exporter_sha256": "cdb1e4e1d57e36558c1ddec47f9409e10bd8b3882b1e9f217af97f8ad28b95c8",
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792558123.4250317
+      }
+    }
+  ],
+  "exports": [
+    {
+      "generation": "initial",
+      "original_path": "/usr/bin/deviced",
+      "summary_path": ".work/run003/video-power/outputs/ghidra/deviced-7df5d80e88e6/summary.json",
+      "summary_sha256": "01a4d400d20e5f81935a4869b07806f8322c16ac2126288ea0f0fa1d1e0544ed",
+      "summary": {
+        "program": "deviced",
+        "sha256": "7df5d80e88e6668dff2274f86a550e480250d95dce1d3da29b489aa5e5d40f59",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00008000",
+        "functions": 791,
+        "elf_original_image_base": "0x8000",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 1267,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": true,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 169994,
+            "sha256": "2b5161b4596e52e58fc5393259bac2d3a41e152fdc2fa95f7d4270661c1bdb6c"
+          },
+          "calls.jsonl": {
+            "bytes": 533925,
+            "sha256": "3ceb178f7d29eedba826cbbf5c400c743a88e74ad35553dddd32044068458367"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 204236,
+            "sha256": "1e281276f93762958f908b145fd577847aaa0664ffe67e50bf81fbfa918efa78"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "initial",
+      "original_path": "/usr/sbin/fw_upgrade",
+      "summary_path": ".work/run003/video-power/outputs/ghidra/fw_upgrade-a494ecb878c3/summary.json",
+      "summary_sha256": "c84ef96f35ff92607ee3fc2bc4085e71c34cab9a2410e7f6091893e436b236a8",
+      "summary": {
+        "program": "fw_upgrade",
+        "sha256": "a494ecb878c3d7c7c152ea84509c38a8acd87e86848e25b77cd2f91103ae987a",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00008000",
+        "functions": 188,
+        "elf_original_image_base": "0x8000",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 375,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": true,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 40758,
+            "sha256": "41f33059e4de83d7d27b4dd2b6f60bf2ea951f4fe0b215e0fab9d289da314283"
+          },
+          "calls.jsonl": {
+            "bytes": 61936,
+            "sha256": "caa00c5c813ae64a285b9f77e83ef2c1e3740bc35ad807526778399d8dc8316b"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 53021,
+            "sha256": "0d61b9f0ebcdbcba2f5a2b6d06c39cf92dedfa652bc2ed571fe0c54022d48445"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "initial",
+      "original_path": "/usr/bin/hib_tool",
+      "summary_path": ".work/run003/video-power/outputs/ghidra/hib_tool-a77d74a9f8b2/summary.json",
+      "summary_sha256": "e9e72bf7e64d2749ab3e74453c1084bd6af2bbb2eb292cda5fde39b035db98ff",
+      "summary": {
+        "program": "hib_tool",
+        "sha256": "a77d74a9f8b2a8a03d1697f85cb30b4e49e78d69e46991b0702709d2a72afbbc",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00008000",
+        "functions": 56,
+        "elf_original_image_base": "0x8000",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 104,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": true,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 12212,
+            "sha256": "1415b8905ded75272074dfa588a7040b11ed5072d13018006d6a5e740d704496"
+          },
+          "calls.jsonl": {
+            "bytes": 9675,
+            "sha256": "ea8ca6f3c656e39400bf546ce8beeb49249a9dcb339935aeef8d52043f067ceb"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 13208,
+            "sha256": "e14d1a16220d7638be3d6e1c022780385d4361f80ea4613b24a560c9534a4066"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "initial",
+      "original_path": "/usr/lib/libfirmware-upgrade.so",
+      "summary_path": ".work/run003/video-power/outputs/ghidra/libfirmware-upgrade.so-7639927b05e4/summary.json",
+      "summary_sha256": "375fafcafb62e9d22ab58d597a3419f802cd2d092f6daad20f9834e7cb672b09",
+      "summary": {
+        "program": "libfirmware-upgrade.so",
+        "sha256": "7639927b05e4290198d53d8a14ebb219e36f71dcc73693c3cf09988337c522d7",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 256,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 479,
+        "decompile_budget": 10,
+        "decompile_attempted": 5,
+        "decompile_completed": 5,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+        "matched_functions": 5,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": true,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 55616,
+            "sha256": "a2acd090fc806db4357aae9f1daa988c32d649e14414ff1fb0bf716f3ddd77f0"
+          },
+          "calls.jsonl": {
+            "bytes": 83750,
+            "sha256": "f6f1b837b08549bec5f8c2d545af7f075b8709f3868c3bc6237faf1a5ac200d6"
+          },
+          "decompiled.jsonl": {
+            "bytes": 30929,
+            "sha256": "75f439c2789f2651a23d2ef6693d6a633357453b0879d8be21e61905e0755791"
+          },
+          "strings.jsonl": {
+            "bytes": 67338,
+            "sha256": "9ff1236d108106eade8deb84cd19b66c4e803f3a4198a8028ba4c64b69edb3c1"
+          }
+        }
+      },
+      "selected_functions": [
+        {
+          "name": "fw_get_meta_header",
+          "va": "00012de8",
+          "elf_va": "0x2de8",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "fw_validate",
+          "va": "000131d4",
+          "elf_va": "0x31d4",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "fw_start_upgrade",
+          "va": "0001359c",
+          "elf_va": "0x359c",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "fw_merge_check_hw",
+          "va": "0001381c",
+          "elf_va": "0x381c",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "fw_upgrade_crc32",
+          "va": "00014700",
+          "elf_va": "0x4700",
+          "completed": true,
+          "error": ""
+        }
+      ],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "initial",
+      "original_path": "/usr/lib/libhibernation.so",
+      "summary_path": ".work/run003/video-power/outputs/ghidra/libhibernation.so-fe10b00aea33/summary.json",
+      "summary_sha256": "ce5de84afb7f95540ff2a4d3097e967b71fe5ae8c355a7c61423f1f13f75e395",
+      "summary": {
+        "program": "libhibernation.so",
+        "sha256": "fe10b00aea33234bb144c28f14892d4a0583a1b81d27f070a0e7e0f1b5198e03",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 124,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 231,
+        "decompile_budget": 10,
+        "decompile_attempted": 5,
+        "decompile_completed": 5,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+        "matched_functions": 5,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": true,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 26834,
+            "sha256": "2cf9c4df73700f28291377a1feeb9d2af6d35ac767fb3abb8f5b9e4df3f56427"
+          },
+          "calls.jsonl": {
+            "bytes": 29568,
+            "sha256": "fd1279c3ac93c45efa8066f5157f1c408363d4eb6425a40e2d22d94c7c92b33f"
+          },
+          "decompiled.jsonl": {
+            "bytes": 13372,
+            "sha256": "91f409d5f7770037ced4b7ef7a41268575ff0fd7cb0f15b23aaae96fb33984a1"
+          },
+          "strings.jsonl": {
+            "bytes": 31748,
+            "sha256": "f72c672bf0108374d30cc3f756768f03a5e4249a6e9a1681f1185d18ccab7e6f"
+          }
+        }
+      },
+      "selected_functions": [
+        {
+          "name": "hib_post",
+          "va": "000119dc",
+          "elf_va": "0x19dc",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "hib_has_hibdata",
+          "va": "00011d20",
+          "elf_va": "0x1d20",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "hib_register_exmem",
+          "va": "00011fb8",
+          "elf_va": "0x1fb8",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "hib_part_preproc",
+          "va": "00012474",
+          "elf_va": "0x2474",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "hib_part_postproc",
+          "va": "000124e0",
+          "elf_va": "0x24e0",
+          "completed": true,
+          "error": ""
+        }
+      ],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "initial",
+      "original_path": "/usr/lib/libmicom-node.so.0.1",
+      "summary_path": ".work/run003/video-power/outputs/ghidra/libmicom-node.so.0.1-26f7304fca29/summary.json",
+      "summary_sha256": "4cd03a0ab54824e9e2555b33bd86cad95cb037d44853d42778de1b80a86fd775",
+      "summary": {
+        "program": "libmicom-node.so.0.1",
+        "sha256": "26f7304fca29d9e24da3e9147805a494a79eb3752f128158523c5674b2294454",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 106,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 159,
+        "decompile_budget": 10,
+        "decompile_attempted": 4,
+        "decompile_completed": 4,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+        "matched_functions": 4,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": true,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 23556,
+            "sha256": "c6f17f55fa6e72ed346ebb84c576a42330c1b71d56ee8be9fb0bf105f9d96082"
+          },
+          "calls.jsonl": {
+            "bytes": 34890,
+            "sha256": "0e7f2b4081c95cbcfa26d10b2424eae0f0ea9b55f1089569413ec7bd2415187e"
+          },
+          "decompiled.jsonl": {
+            "bytes": 6858,
+            "sha256": "61196e0bd91e66eda3f6985a1a06e99a5926e6066d2b6e59d254d5f78eb8a577"
+          },
+          "strings.jsonl": {
+            "bytes": 22169,
+            "sha256": "911ea32ae7e02bae5ee3dfc0ecaab61691704102780fd47f83070998806a1531"
+          }
+        }
+      },
+      "selected_functions": [
+        {
+          "name": "get_micom_version",
+          "va": "000111cc",
+          "elf_va": "0x11cc",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "get_micom_status",
+          "va": "0001122c",
+          "elf_va": "0x122c",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "get_body_bat_soc",
+          "va": "00011564",
+          "elf_va": "0x1564",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "get_body_bat_voltage",
+          "va": "000115bc",
+          "elf_va": "0x15bc",
+          "completed": true,
+          "error": ""
+        }
+      ],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "initial",
+      "original_path": "/usr/lib/libmm-displayer.so",
+      "summary_path": ".work/run003/video-power/outputs/ghidra/libmm-displayer.so-59a61fc93afa/summary.json",
+      "summary_sha256": "28c5871a6621edbf7f360beaa12308a425002f8fb1a5a2ad24cc5cdad7aa4eab",
+      "summary": {
+        "program": "libmm-displayer.so",
+        "sha256": "59a61fc93afacd39940e68771fae0cecbb12f1b0bc9abffb10170868d3512426",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 190,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 264,
+        "decompile_budget": 10,
+        "decompile_attempted": 3,
+        "decompile_completed": 3,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+        "matched_functions": 3,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": true,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 45450,
+            "sha256": "ea5d3a2b575cec775bc55b55a8d2c0492944c8f13c8d01bc6b18bac681906baa"
+          },
+          "calls.jsonl": {
+            "bytes": 49400,
+            "sha256": "59118bcc19bb79d0db8fecc4458383475dd5f6d40749a285cb0f33e261f2ae25"
+          },
+          "decompiled.jsonl": {
+            "bytes": 16620,
+            "sha256": "178641871d6d56605faae2adc9998fecc0c7a59c5cb418eb53845c29f6bb1c28"
+          },
+          "strings.jsonl": {
+            "bytes": 37839,
+            "sha256": "d4b08502d9b6e25efe672fb204478a7b786160df61f7a9f349ef1845bdbe78a1"
+          }
+        }
+      },
+      "selected_functions": [
+        {
+          "name": "CDisplayerFactory::CreateDisplayer",
+          "va": "00012f88",
+          "elf_va": "0x2f88",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "CDisplayerFactory::CreateDisplayer",
+          "va": "0001308c",
+          "elf_va": "0x308c",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "CDisplayLCD::SetVisible",
+          "va": "0001356c",
+          "elf_va": "0x356c",
+          "completed": true,
+          "error": ""
+        }
+      ],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "initial",
+      "original_path": "/usr/lib/libmmfcore.so",
+      "summary_path": ".work/run003/video-power/outputs/ghidra/libmmfcore.so-b3e7cd298728/summary.json",
+      "summary_sha256": "e0982ac805a5c7c971391eac2f92644e62e5678c1b8d3c5c3354c02041fb0223",
+      "summary": {
+        "program": "libmmfcore.so",
+        "sha256": "b3e7cd2987282d856a8f95b8768d44ea2f4f3804684a391de0567c10dada73c8",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 1335,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 2172,
+        "decompile_budget": 10,
+        "decompile_attempted": 5,
+        "decompile_completed": 5,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+        "matched_functions": 5,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": true,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 335851,
+            "sha256": "2f4ef90f19b00c18df76ee5d861f6720534cfbee62bf499e668ce5d9220c112b"
+          },
+          "calls.jsonl": {
+            "bytes": 404720,
+            "sha256": "e4387b61156e36e608cfbdcdd516316ecafaf14129dfd89f6ff6901d78b5fc2f"
+          },
+          "decompiled.jsonl": {
+            "bytes": 41269,
+            "sha256": "dffdffff15161eb7d75a2b977c38b0b2d57b08137c6835a29086d2a5e95fb930"
+          },
+          "strings.jsonl": {
+            "bytes": 324440,
+            "sha256": "3e0815364eb03b3352a837361aeb8a1a41c49e9e6b10a8158707391ea6ed54e8"
+          }
+        }
+      },
+      "selected_functions": [
+        {
+          "name": "cMmfVideoEncoder::OnStart",
+          "va": "00046b80",
+          "elf_va": "0x36b80",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "cMmfVideoEncoder::OnStop",
+          "va": "000471d8",
+          "elf_va": "0x371d8",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "cMmfRecorder::SetVideoPipeline",
+          "va": "0004fb10",
+          "elf_va": "0x3fb10",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "cMmfRecorder::SetAudioPipeline",
+          "va": "00050194",
+          "elf_va": "0x40194",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "cMmfPlayer::createVideoPipeline",
+          "va": "000522fc",
+          "elf_va": "0x422fc",
+          "completed": true,
+          "error": ""
+        }
+      ],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "initial",
+      "original_path": "/usr/lib/libmmfmodules.so",
+      "summary_path": ".work/run003/video-power/outputs/ghidra/libmmfmodules.so-e40d3c7fdbab/summary.json",
+      "summary_sha256": "7b840a8d0a7ef5c854aa97c27c79a51c807eb7abfaf6306f8818793720e2a3bb",
+      "summary": {
+        "program": "libmmfmodules.so",
+        "sha256": "e40d3c7fdbab8ea7f67d0e876468c2a31fa8572d602d969d32348f3fd0f45de7",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 1478,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 1911,
+        "decompile_budget": 10,
+        "decompile_attempted": 3,
+        "decompile_completed": 3,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+        "matched_functions": 3,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": true,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 359639,
+            "sha256": "16d40d9ff448a3623ad74677b1b5f64c1d795b6a9c7a454b48476098000a30f9"
+          },
+          "calls.jsonl": {
+            "bytes": 353672,
+            "sha256": "36d8cf7751ed8216750925821c396a8eb3718a279e143e200d8a8b4b2388d9a5"
+          },
+          "decompiled.jsonl": {
+            "bytes": 13840,
+            "sha256": "64782b96701cac03aba609012d63dabb1cdcd8e8a8180905aa0b9d9ce2ed9cf4"
+          },
+          "strings.jsonl": {
+            "bytes": 273030,
+            "sha256": "b6b0c0d0cf83c09ad90f8b4a499ed8647a0ace33a8ef94a031ce1041f67c4138"
+          }
+        }
+      },
+      "selected_functions": [
+        {
+          "name": "cMmfCamera::Stop",
+          "va": "00032fb8",
+          "elf_va": "0x22fb8",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "cMmfCamera::Start",
+          "va": "0003315c",
+          "elf_va": "0x2315c",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "iVideoEncoder::Create",
+          "va": "0003d92c",
+          "elf_va": "0x2d92c",
+          "completed": true,
+          "error": ""
+        }
+      ],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "initial",
+      "original_path": "/usr/lib/libsysman.so.0.2.0",
+      "summary_path": ".work/run003/video-power/outputs/ghidra/libsysman.so.0.2.0-f3df0b8c6e32/summary.json",
+      "summary_sha256": "f286aef52a8f6636baa52d0684499934a2e35402448723d82eba1f060da61160",
+      "summary": {
+        "program": "libsysman.so.0.2.0",
+        "sha256": "f3df0b8c6e3200ed7cd607f8094446f45d0ddc5e7804fcd946e467b96f6f074a",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 115,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 110,
+        "decompile_budget": 10,
+        "decompile_attempted": 4,
+        "decompile_completed": 4,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+        "matched_functions": 4,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": true,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 25161,
+            "sha256": "24bd97b00424128de01d867263d4fd07fcd489f8f0f6bf628bdec99132630d1d"
+          },
+          "calls.jsonl": {
+            "bytes": 29310,
+            "sha256": "110fcbe3a5d37c192a0786c37d224e1824299ca286d2c08882a975193a343f81"
+          },
+          "decompiled.jsonl": {
+            "bytes": 14591,
+            "sha256": "710d65fce66ed004f292b0a67830adf1a968e81e6505cb6bf72eab7ee79a2349"
+          },
+          "strings.jsonl": {
+            "bytes": 13371,
+            "sha256": "68d4d07d650071484a274499d2d09cc1c327514f61eb9cf640e153c50b19498f"
+          }
+        }
+      },
+      "selected_functions": [
+        {
+          "name": "sysman_call_predef_action",
+          "va": "00011518",
+          "elf_va": "0x1518",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "sysman_request_poweroff",
+          "va": "00011da0",
+          "elf_va": "0x1da0",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "sysman_request_entersleep",
+          "va": "00011db8",
+          "elf_va": "0x1db8",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "sysman_request_reboot",
+          "va": "00011de8",
+          "elf_va": "0x1de8",
+          "completed": true,
+          "error": ""
+        }
+      ],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "initial",
+      "original_path": "/usr/bin/micom_updater",
+      "summary_path": ".work/run003/video-power/outputs/ghidra/micom_updater-c8fbcb73b060/summary.json",
+      "summary_sha256": "cacf69f28e1a21ed7a1e89d4e8473624bbfe626709da1961afe5d88e572e9dfe",
+      "summary": {
+        "program": "micom_updater",
+        "sha256": "c8fbcb73b060d8642821645eb17200c467da4e2df9460c6c560b15e9492a2ca6",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00008000",
+        "functions": 113,
+        "elf_original_image_base": "0x8000",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 128,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": true,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 24003,
+            "sha256": "4c160d5c50750442200d4dfe461c0442e9629dafa01fa2bf890872320cd33cb7"
+          },
+          "calls.jsonl": {
+            "bytes": 24926,
+            "sha256": "a7d2a8730d0d4a3d5c5a9bab3b460f2f0ed17c14c90b82436fb0a63c85181fb0"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 17029,
+            "sha256": "8d329b5f1a478e744b6f0b4b13444daaf02ae1037fe53a00881fa772721b1753"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "initial",
+      "original_path": "/usr/bin/resourced",
+      "summary_path": ".work/run003/video-power/outputs/ghidra/resourced-9287ac34eb83/summary.json",
+      "summary_sha256": "3b8d8485c92758103b65b14b12608fc73833bf3732266787d69c05e094534275",
+      "summary": {
+        "program": "resourced",
+        "sha256": "9287ac34eb83caced12a4163657a3ce9049cf0233a583512333089854ba60d57",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00008000",
+        "functions": 711,
+        "elf_original_image_base": "0x8000",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 1179,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "(?i)(SetVideoPipeline|SetAudioPipeline|createVideoPipeline|cMmfVideoEncoder.*On(Start|Stop)|cMmfCamera::(Start|Stop)|iVideoEncoder::Create|CDisplayerFactory::CreateDisplayer|CDisplayLCD::SetVisible|sysman_(request_(poweroff|entersleep|reboot)|call_predef_action$)|hib_(post$|has_hibdata|part_preproc|part_postproc|register_exmem)|get_micom_(version|status)|get_body_bat_(soc|voltage)|fw_(validate|upgrade_crc32|get_meta_header|start_upgrade|merge_check_hw)|^main$)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "3f6eaf68-7c10-4d38-97e3-22fcb042b685",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": true,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 154945,
+            "sha256": "a6b9640df05397b28e9a804b53a015bc1f0b08df1d6675e1ad1c91905ed3a2a3"
+          },
+          "calls.jsonl": {
+            "bytes": 226480,
+            "sha256": "572584c2f5634df93dba69af13beff720e500712fbc5fae529f2ffe0a0227b1e"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 190190,
+            "sha256": "98f849c2cf1492bbc13dd2ec363ad2a593bc5a7eacb2730b91736816ee9d3470"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "hevc-followup",
+      "original_path": "/usr/bin/deviced",
+      "summary_path": ".work/run003/video-power/hevc-followup/outputs/ghidra/deviced-7df5d80e88e6/summary.json",
+      "summary_sha256": "828da3c43b33df7d1d908c74d73d4c6c0854815c68ec59df4071a6d1d95c26d8",
+      "summary": {
+        "program": "deviced",
+        "sha256": "7df5d80e88e6668dff2274f86a550e480250d95dce1d3da29b489aa5e5d40f59",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00008000",
+        "functions": 791,
+        "elf_original_image_base": "0x8000",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 1267,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": false,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 169994,
+            "sha256": "2b5161b4596e52e58fc5393259bac2d3a41e152fdc2fa95f7d4270661c1bdb6c"
+          },
+          "calls.jsonl": {
+            "bytes": 533925,
+            "sha256": "9173f58cd1d2c43fdb3b5624fc16b6a69635a28fbe30eabbd158cc04c4d55fb5"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 204236,
+            "sha256": "1e281276f93762958f908b145fd577847aaa0664ffe67e50bf81fbfa918efa78"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "hevc-followup",
+      "original_path": "/usr/sbin/fw_upgrade",
+      "summary_path": ".work/run003/video-power/hevc-followup/outputs/ghidra/fw_upgrade-a494ecb878c3/summary.json",
+      "summary_sha256": "589ad372bff49077d65f7f333fb3159d6e8e60ac40c6dc769e7bdada310c065d",
+      "summary": {
+        "program": "fw_upgrade",
+        "sha256": "a494ecb878c3d7c7c152ea84509c38a8acd87e86848e25b77cd2f91103ae987a",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00008000",
+        "functions": 188,
+        "elf_original_image_base": "0x8000",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 375,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": false,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 40758,
+            "sha256": "41f33059e4de83d7d27b4dd2b6f60bf2ea951f4fe0b215e0fab9d289da314283"
+          },
+          "calls.jsonl": {
+            "bytes": 61936,
+            "sha256": "5e1f93bb02710036f7f7f81bdfafebee120b7ba5956f3ab95614be8143c32007"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 53021,
+            "sha256": "0d61b9f0ebcdbcba2f5a2b6d06c39cf92dedfa652bc2ed571fe0c54022d48445"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "hevc-followup",
+      "original_path": "/usr/bin/hib_tool",
+      "summary_path": ".work/run003/video-power/hevc-followup/outputs/ghidra/hib_tool-a77d74a9f8b2/summary.json",
+      "summary_sha256": "0c21a29d3952f00dd8bccd4724b958eff2d5520cd4231404a4dd5c6303c8e642",
+      "summary": {
+        "program": "hib_tool",
+        "sha256": "a77d74a9f8b2a8a03d1697f85cb30b4e49e78d69e46991b0702709d2a72afbbc",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00008000",
+        "functions": 56,
+        "elf_original_image_base": "0x8000",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 104,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": false,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 12212,
+            "sha256": "1415b8905ded75272074dfa588a7040b11ed5072d13018006d6a5e740d704496"
+          },
+          "calls.jsonl": {
+            "bytes": 9675,
+            "sha256": "722808d2920f50bc73659df7503a17b533178e56972fb924170a16819ca50610"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 13208,
+            "sha256": "e14d1a16220d7638be3d6e1c022780385d4361f80ea4613b24a560c9534a4066"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "hevc-followup",
+      "original_path": "/usr/lib/libfirmware-upgrade.so",
+      "summary_path": ".work/run003/video-power/hevc-followup/outputs/ghidra/libfirmware-upgrade.so-7639927b05e4/summary.json",
+      "summary_sha256": "e5a67eb7886b7faf8dc2a7be993aea04d9e142979ed8c361d872ef01304c22de",
+      "summary": {
+        "program": "libfirmware-upgrade.so",
+        "sha256": "7639927b05e4290198d53d8a14ebb219e36f71dcc73693c3cf09988337c522d7",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 256,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 479,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": false,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 55616,
+            "sha256": "a2acd090fc806db4357aae9f1daa988c32d649e14414ff1fb0bf716f3ddd77f0"
+          },
+          "calls.jsonl": {
+            "bytes": 83750,
+            "sha256": "7ae7ef8d55c0c220f397e17724a9da7f43eb2d4173578f182d46d486ac2d3e08"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 67338,
+            "sha256": "9ff1236d108106eade8deb84cd19b66c4e803f3a4198a8028ba4c64b69edb3c1"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "hevc-followup",
+      "original_path": "/usr/lib/libhibernation.so",
+      "summary_path": ".work/run003/video-power/hevc-followup/outputs/ghidra/libhibernation.so-fe10b00aea33/summary.json",
+      "summary_sha256": "4a424ceb22675025ab3f28a0b1230c90b022639c0bafb09759993c0fe041352b",
+      "summary": {
+        "program": "libhibernation.so",
+        "sha256": "fe10b00aea33234bb144c28f14892d4a0583a1b81d27f070a0e7e0f1b5198e03",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 124,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 231,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": false,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 26834,
+            "sha256": "2cf9c4df73700f28291377a1feeb9d2af6d35ac767fb3abb8f5b9e4df3f56427"
+          },
+          "calls.jsonl": {
+            "bytes": 29568,
+            "sha256": "b57958618b3fc526485c30a9c4cb02c61f02276a4986215e495397e1698135d0"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 31748,
+            "sha256": "f72c672bf0108374d30cc3f756768f03a5e4249a6e9a1681f1185d18ccab7e6f"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "hevc-followup",
+      "original_path": "/usr/lib/libmicom-node.so.0.1",
+      "summary_path": ".work/run003/video-power/hevc-followup/outputs/ghidra/libmicom-node.so.0.1-26f7304fca29/summary.json",
+      "summary_sha256": "c39afaf6169d68c38993a670175397499568f975ac732b27c08a161b44b13363",
+      "summary": {
+        "program": "libmicom-node.so.0.1",
+        "sha256": "26f7304fca29d9e24da3e9147805a494a79eb3752f128158523c5674b2294454",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 106,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 159,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": false,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 23556,
+            "sha256": "c6f17f55fa6e72ed346ebb84c576a42330c1b71d56ee8be9fb0bf105f9d96082"
+          },
+          "calls.jsonl": {
+            "bytes": 34890,
+            "sha256": "4b11dde61cedbfe2ea48dd21f637431b04dc02d02215d29bc33c6c9313948a61"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 22169,
+            "sha256": "911ea32ae7e02bae5ee3dfc0ecaab61691704102780fd47f83070998806a1531"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "hevc-followup",
+      "original_path": "/usr/lib/libmm-displayer.so",
+      "summary_path": ".work/run003/video-power/hevc-followup/outputs/ghidra/libmm-displayer.so-59a61fc93afa/summary.json",
+      "summary_sha256": "14ddf907a8f4d36595078385eada834865263113b55a53f7a637fdc49b860f32",
+      "summary": {
+        "program": "libmm-displayer.so",
+        "sha256": "59a61fc93afacd39940e68771fae0cecbb12f1b0bc9abffb10170868d3512426",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 190,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 264,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": false,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 45450,
+            "sha256": "ea5d3a2b575cec775bc55b55a8d2c0492944c8f13c8d01bc6b18bac681906baa"
+          },
+          "calls.jsonl": {
+            "bytes": 49400,
+            "sha256": "b3c45b75031cf3592a11b1803144a3c09c656f48101580b772d58f656b71d00a"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 37839,
+            "sha256": "d4b08502d9b6e25efe672fb204478a7b786160df61f7a9f349ef1845bdbe78a1"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "hevc-followup",
+      "original_path": "/usr/lib/libmmfcore.so",
+      "summary_path": ".work/run003/video-power/hevc-followup/outputs/ghidra/libmmfcore.so-b3e7cd298728/summary.json",
+      "summary_sha256": "5436cbcecbc27787989bb4f3f1eb4889a9b3131f860264d15ddf7ebcf5f31b74",
+      "summary": {
+        "program": "libmmfcore.so",
+        "sha256": "b3e7cd2987282d856a8f95b8768d44ea2f4f3804684a391de0567c10dada73c8",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 1335,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 2172,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": false,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 335851,
+            "sha256": "2f4ef90f19b00c18df76ee5d861f6720534cfbee62bf499e668ce5d9220c112b"
+          },
+          "calls.jsonl": {
+            "bytes": 404720,
+            "sha256": "a0759d17fed2b43f775dd2e34a4a215d9b5a6b065f114cee7e4c4fe5c16b231b"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 324440,
+            "sha256": "3e0815364eb03b3352a837361aeb8a1a41c49e9e6b10a8158707391ea6ed54e8"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "hevc-followup",
+      "original_path": "/usr/lib/libmmfmodules.so",
+      "summary_path": ".work/run003/video-power/hevc-followup/outputs/ghidra/libmmfmodules.so-e40d3c7fdbab/summary.json",
+      "summary_sha256": "e22605edfe4fc235d0ab21aab906fabf13306158c8224c9dc472da2224729fd6",
+      "summary": {
+        "program": "libmmfmodules.so",
+        "sha256": "e40d3c7fdbab8ea7f67d0e876468c2a31fa8572d602d969d32348f3fd0f45de7",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 1478,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 1911,
+        "decompile_budget": 10,
+        "decompile_attempted": 3,
+        "decompile_completed": 3,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+        "matched_functions": 3,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": false,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 359639,
+            "sha256": "16d40d9ff448a3623ad74677b1b5f64c1d795b6a9c7a454b48476098000a30f9"
+          },
+          "calls.jsonl": {
+            "bytes": 353672,
+            "sha256": "04d0771e67f99b034e678430de555f16bd151128fc0b74bf3c4e0c9adb5c872a"
+          },
+          "decompiled.jsonl": {
+            "bytes": 24795,
+            "sha256": "f00f452770aa79ab2153e973886aaac2c6552f7e652329b213a0f8bb982da7ac"
+          },
+          "strings.jsonl": {
+            "bytes": 273030,
+            "sha256": "b6b0c0d0cf83c09ad90f8b4a499ed8647a0ace33a8ef94a031ce1041f67c4138"
+          }
+        }
+      },
+      "selected_functions": [
+        {
+          "name": "cHalHevcVideoEncoder::Initialize",
+          "va": "0003ceb4",
+          "elf_va": "0x2ceb4",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "cHalHevcVideoEncoder::SetHevcEncMode",
+          "va": "0003d078",
+          "elf_va": "0x2d078",
+          "completed": true,
+          "error": ""
+        },
+        {
+          "name": "cHalHevcVideoEncoder::Configure",
+          "va": "0003d1f0",
+          "elf_va": "0x2d1f0",
+          "completed": true,
+          "error": ""
+        }
+      ],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "hevc-followup",
+      "original_path": "/usr/lib/libsysman.so.0.2.0",
+      "summary_path": ".work/run003/video-power/hevc-followup/outputs/ghidra/libsysman.so.0.2.0-f3df0b8c6e32/summary.json",
+      "summary_sha256": "37872382641f382f7f69d193eb9a767abb8dff2b5897c2e0dfadb7a8c8efac93",
+      "summary": {
+        "program": "libsysman.so.0.2.0",
+        "sha256": "f3df0b8c6e3200ed7cd607f8094446f45d0ddc5e7804fcd946e467b96f6f074a",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00010000",
+        "functions": 115,
+        "elf_original_image_base": "0x0",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 110,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": false,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 25161,
+            "sha256": "24bd97b00424128de01d867263d4fd07fcd489f8f0f6bf628bdec99132630d1d"
+          },
+          "calls.jsonl": {
+            "bytes": 29310,
+            "sha256": "a2d7b9edc43e8a8a959fed0b172a783a8ef33f44e63fcbffce42b3eb2d3d60a8"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 13371,
+            "sha256": "68d4d07d650071484a274499d2d09cc1c327514f61eb9cf640e153c50b19498f"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "hevc-followup",
+      "original_path": "/usr/bin/micom_updater",
+      "summary_path": ".work/run003/video-power/hevc-followup/outputs/ghidra/micom_updater-c8fbcb73b060/summary.json",
+      "summary_sha256": "fa6bc8a6cd21d098f5d127f9e2114decb85aecc99121e3438be03d281df82385",
+      "summary": {
+        "program": "micom_updater",
+        "sha256": "c8fbcb73b060d8642821645eb17200c467da4e2df9460c6c560b15e9492a2ca6",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00008000",
+        "functions": 113,
+        "elf_original_image_base": "0x8000",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 128,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": false,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 24003,
+            "sha256": "4c160d5c50750442200d4dfe461c0442e9629dafa01fa2bf890872320cd33cb7"
+          },
+          "calls.jsonl": {
+            "bytes": 24926,
+            "sha256": "fd836d76dd86f02dfe3198dfc58809edfbfa40f6390a68f658143a471305b460"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 17029,
+            "sha256": "8d329b5f1a478e744b6f0b4b13444daaf02ae1037fe53a00881fa772721b1753"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    },
+    {
+      "generation": "hevc-followup",
+      "original_path": "/usr/bin/resourced",
+      "summary_path": ".work/run003/video-power/hevc-followup/outputs/ghidra/resourced-9287ac34eb83/summary.json",
+      "summary_sha256": "0505ac7a692bc6eaebba2c5d8c3c6f653e4a13e3d7624a0863057e49f4cce9ec",
+      "summary": {
+        "program": "resourced",
+        "sha256": "9287ac34eb83caced12a4163657a3ce9049cf0233a583512333089854ba60d57",
+        "language": "ARM:LE:32:v8",
+        "compiler_spec": "default",
+        "image_base": "00008000",
+        "functions": 711,
+        "elf_original_image_base": "0x8000",
+        "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+        "strings": 1179,
+        "decompile_budget": 10,
+        "decompile_attempted": 0,
+        "decompile_completed": 0,
+        "decompile_timeout_seconds": 25,
+        "decompile_pattern": "cHalHevcVideoEncoder::(Initialize|Configure|SetHevcEncMode)",
+        "matched_functions": 0,
+        "decompile_omitted_by_budget": 0,
+        "ghidra_version": "12.1.4",
+        "exporter_version": "2026-10-21.2",
+        "export_schema_version": 2,
+        "run_id": "ca69bd7c-cf60-438d-bb8a-057e78b44b26",
+        "static_only": true,
+        "scope": "auto-analysis; selected decompilation, not full semantic verification",
+        "auto_analysis_timed_out": false,
+        "auto_analysis_enabled_this_run": false,
+        "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+        "export_completed": true,
+        "artifacts": {
+          "functions.jsonl": {
+            "bytes": 154945,
+            "sha256": "a6b9640df05397b28e9a804b53a015bc1f0b08df1d6675e1ad1c91905ed3a2a3"
+          },
+          "calls.jsonl": {
+            "bytes": 226480,
+            "sha256": "d319b9a5dda04136738585ff0be10598aca47539a8b9d36488a5c65dda599b14"
+          },
+          "decompiled.jsonl": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "strings.jsonl": {
+            "bytes": 190190,
+            "sha256": "98f849c2cf1492bbc13dd2ec363ad2a593bc5a7eacb2730b91736816ee9d3470"
+          }
+        }
+      },
+      "selected_functions": [],
+      "validation": "schema-v2 expected input SHA/run ID, artifact hashes, byte lengths, row counts, decompilation selection accounting passed"
+    }
+  ],
+  "totals": {
+    "unique_imported_elf": 12,
+    "initial_functions": 5463,
+    "initial_strings": 8379,
+    "initial_decompile_attempted": 29,
+    "initial_decompile_completed": 29,
+    "followup_distinct_decompile_attempted": 3,
+    "followup_distinct_decompile_completed": 3,
+    "analysis_timeouts": [],
+    "decompile_failures": [],
+    "budget_omitted": 0
+  },
+  "reviewed_findings": [
+    {
+      "id": "VP003-01",
+      "source_sha256": "e40d3c7fdbab8ea7f67d0e876468c2a31fa8572d602d969d32348f3fd0f45de7",
+      "original_elf_va": "0x2d92c",
+      "evidence": "analysis/evidence/video-power-run003.json",
+      "method": "Ghidra selected decompilation/direct calls; independent pyelftools symbol/PT_LOAD mapping and Capstone original-ELF disassembly; resolved PC-relative string literal",
+      "claim": "Encoder format 0xb selects the concrete HEVC class; HEVC Configure opens /dev/d5_hevc and submits ioctl 0xc10c7408. Recorder constructs parameterized source/encoder/mux buffer routes.",
+      "additional_sources": [
+        {
+          "source_sha256": "b3e7cd2987282d856a8f95b8768d44ea2f4f3804684a391de0567c10dada73c8",
+          "original_path": "/usr/lib/libmmfcore.so",
+          "original_elf_va": "0x3fb10"
+        }
+      ],
+      "code_anchors": [
+        "0x2d92c",
+        "0x2d1f0",
+        "0x2d364"
+      ],
+      "limitations": [
+        "Class/enum and object-field meanings partly inferred; indirect calls not fully resolved.",
+        "This does not establish supported modes, bitrate limits, frame timing, thermal performance or active INI consumption."
+      ],
+      "unresolved_questions": [
+        "Resolve sysconfig provider and real codec-mode fields.",
+        "Trace M4 image loading and kernel HEVC ioctl handler."
+      ]
+    },
+    {
+      "id": "VP003-02",
+      "source_sha256": "f3df0b8c6e3200ed7cd607f8094446f45d0ddc5e7804fcd946e467b96f6f074a",
+      "original_elf_va": "0x1da0",
+      "evidence": "analysis/evidence/video-power-run003.json",
+      "method": "Ghidra selected decompilation/direct calls; independent pyelftools symbol/PT_LOAD mapping and Capstone original-ELF disassembly; resolved PC-relative literals",
+      "claim": "Poweroff public wrapper requests pwroff-popup via AF_UNIX stream /tmp/sn and helper reads a four-byte response.",
+      "code_anchors": [
+        "0x1da0",
+        "0x1518",
+        "0x1634",
+        "0x166a",
+        "0x1766"
+      ],
+      "limitations": [
+        "Wire framing and library code only; daemon action, acknowledgement meaning and final hardware shutdown are unreviewed.",
+        "Ghidra infers a void helper signature despite instruction return-value flow; no source ABI claim."
+      ],
+      "unresolved_questions": [
+        "Identify /tmp/sn listener and pwroff-popup handler.",
+        "Determine completion semantics and in-flight capture/transfer policy."
+      ]
+    },
+    {
+      "id": "VP003-03",
+      "source_sha256": "26f7304fca29d9e24da3e9147805a494a79eb3752f128158523c5674b2294454",
+      "original_elf_va": "0x1564",
+      "evidence": "analysis/evidence/video-power-run003.json",
+      "method": "Ghidra selected decompilation/direct calls; independent pyelftools symbol/PT_LOAD mapping and Capstone original-ELF disassembly; resolved PC-relative device-path literals",
+      "claim": "MICOM status and body battery SOC wrappers open /dev/micom-ctrl; status ioctl0x80044d00 maps second response word0xa5 to output0, and body SOC ioctl0x80044d05 copies its word to caller.",
+      "code_anchors": [
+        "0x122c",
+        "0x1564"
+      ],
+      "limitations": [
+        "Only user-space wrappers inspected; no kernel/microcontroller command ABI, units, calibration, SOC policy or device readings established."
+      ],
+      "unresolved_questions": [
+        "Resolve MICOM driver handlers and response structure.",
+        "Trace battery low threshold and shutdown policy in deviced."
+      ]
+    },
+    {
+      "id": "VP003-04",
+      "source_sha256": "7639927b05e4290198d53d8a14ebb219e36f71dcc73693c3cf09988337c522d7",
+      "original_elf_va": "0x359c",
+      "evidence": "analysis/evidence/video-power-run003.json",
+      "method": "Ghidra selected decompilation/direct calls; independent pyelftools symbol/PT_LOAD mapping and Capstone original-ELF disassembly",
+      "claim": "fw_start_upgrade sets validation third argument to0; fw_validate then seeks over section data instead of its nonzero-argument CRC32 path, while checking header/tag/project/count/table guards.",
+      "code_anchors": [
+        "0x35ec",
+        "0x35f2",
+        "0x31d4",
+        "0x3350",
+        "0x3448",
+        "0x3362",
+        "0x4700"
+      ],
+      "limitations": [
+        "This is one library call path, not a complete authorization/signature/security review.",
+        "Separate /usr/sbin/fw_upgrade, flash plugins, bootloader checks and prior callers may apply additional checks; no bypass claim.",
+        "Ghidra type propagation warning in fw_validate; register/branch evidence independently checked."
+      ],
+      "unresolved_questions": [
+        "Trace every caller and project-name provider.",
+        "Audit executable updater, flash plugins, bootloader and cryptographic verification before any authenticity claim."
+      ]
+    }
+  ],
+  "selected_evidence": {
+    "path": "analysis/evidence/video-power-run003.json",
+    "sha256": "c9307831c82cebc02b75c0ee4f96f42f930a2ea859a02dbfd67a36af69e79349",
+    "bytes": 537581,
+    "extractor": "tools/firmware/video_power_evidence.py",
+    "extractor_sha256": "9b3c86529fe7b17d098cce0df74966fde87ccc1a2e1b60057679c19cad8c537e"
+  },
+  "limitations": [
+    "Import/auto-analysis/selected decompilation and bounded reviewed findings are separate coverage stages.",
+    "Function and string counts include stubs, inferred functions and metadata and are not feature/semantic coverage percentages.",
+    "Followup re-exports same12 files with auto-analysis disabled; do not add its function/string counts.",
+    "Five stripped executable programs have no matching named selected functions and zero selected decompilation.",
+    "Missing external DWARF, incomplete demangled tables and unresolved project dependencies remain."
+  ],
+  "project": {
+    "name": "NX500_RUN003_VIDEO_POWER",
+    "database_prefix": "ghidra-projects/NX500_RUN003_VIDEO_POWER",
+    "unlocked_safe_to_snapshot": true
+  }
+}
