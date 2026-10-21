@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "run": "RUN008",
+  "reviewed_findings": [
+    {
+      "id": "THERM008-DISPLAY",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "original_elf_va": "0x2b10dc",
+      "evidence": "analysis/evidence/thermal-userspace-run008.json",
+      "evidence_sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+      "method": "Primary-agent selected C and original PT_LOAD-mapped ARM/Thumb windows, saved TMode contexts and exact relocations",
+      "claim": "App OSD display requests Sensor/CPU/ISP through sensorapi ID2 wrappers; the separate preview temperature timer only toggles its icon.",
+      "limitations": [
+        "UI entry guards and active display/recording policy remain runtime questions.",
+        "Independent semantic review remains incomplete after actual reviewer quota failure."
+      ],
+      "unresolved_questions": [
+        "UI entry guards and active display/recording policy remain runtime questions."
+      ],
+      "independent_review_completed": false
+    },
+    {
+      "id": "THERM008-MODULE",
+      "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+      "original_path": "/usr/lib/libdi-sensor.so",
+      "original_elf_va": "0x514c",
+      "evidence": "analysis/evidence/thermal-userspace-run008.json",
+      "evidence_sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+      "method": "Primary-agent selected C and original PT_LOAD-mapped ARM/Thumb windows, saved TMode contexts and exact relocations",
+      "claim": "API initialization installs thermometer object in slot2; ctor and ABS32 virtual entries bind update4728 and getter41f8.",
+      "limitations": [
+        "Conditional on initialization and stable callback/object binding; dynamic replacement remains unobserved.",
+        "Independent semantic review remains incomplete after actual reviewer quota failure."
+      ],
+      "unresolved_questions": [
+        "Conditional on initialization and stable callback/object binding; dynamic replacement remains unobserved."
+      ],
+      "independent_review_completed": false
+    },
+    {
+      "id": "THERM008-ACQUIRE",
+      "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+      "original_path": "/usr/lib/libdi-sensor.so",
+      "original_elf_va": "0x4728",
+      "evidence": "analysis/evidence/thermal-userspace-run008.json",
+      "evidence_sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+      "method": "Primary-agent selected C and original PT_LOAD-mapped ARM/Thumb windows, saved TMode contexts and exact relocations",
+      "claim": "Thermometer updates request40 bytes from drime5-thermister and read separate d5_tsu ISP/CPU paths; getters select locked cached fields.",
+      "limitations": [
+        "Physical units, conversion correctness, partial/error reads and complete resource/lock lifecycle are not established.",
+        "Independent semantic review remains incomplete after actual reviewer quota failure."
+      ],
+      "unresolved_questions": [
+        "Physical units, conversion correctness, partial/error reads and complete resource/lock lifecycle are not established."
+      ],
+      "independent_review_completed": false
+    },
+    {
+      "id": "THERM008-LEVEL",
+      "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+      "original_path": "/usr/lib/libdi-sensor.so",
+      "original_elf_va": "0x46f8",
+      "evidence": "analysis/evidence/thermal-userspace-run008.json",
+      "evidence_sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+      "method": "Primary-agent selected C and original PT_LOAD-mapped ARM/Thumb windows, saved TMode contexts and exact relocations",
+      "claim": "Signed comparisons classify below lower as0, below upper as1, otherwise2; initialize loads concrete adjustment IDs and update filters candidate changes across consecutive evaluations.",
+      "limitations": [
+        "Actual adjustment words, mode0/default behavior, cadence, callback delivery and final stop/shutdown policy remain unresolved.",
+        "Independent semantic review remains incomplete after actual reviewer quota failure."
+      ],
+      "unresolved_questions": [
+        "Actual adjustment words, mode0/default behavior, cadence, callback delivery and final stop/shutdown policy remain unresolved."
+      ],
+      "independent_review_completed": false
+    },
+    {
+      "id": "THERM008-OEM",
+      "source_sha256": "a88cb8130ba246b45c077cf25f0c5944077e41b780eee20f5a5a675b35a15588",
+      "original_path": "/usr/lib/libslp_devman_plugin.so",
+      "original_elf_va": "0x5384",
+      "evidence": "analysis/evidence/thermal-userspace-run008.json",
+      "evidence_sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+      "method": "Primary-agent selected C and original PT_LOAD-mapped ARM/Thumb windows, saved TMode contexts and exact relocations",
+      "claim": "Separate OEM wrappers delegate to generic sec-thermistor, battery, MICOM and power-state paths; they are not substituted for the selected app sensor route.",
+      "limitations": [
+        "Node existence, units and active caller use are not observed.",
+        "Independent semantic review remains incomplete after actual reviewer quota failure."
+      ],
+      "unresolved_questions": [
+        "Node existence, units and active caller use are not observed."
+      ],
+      "independent_review_completed": false
+    },
+    {
+      "id": "THERM008-POWER",
+      "source_sha256": "a88cb8130ba246b45c077cf25f0c5944077e41b780eee20f5a5a675b35a15588",
+      "original_path": "/usr/lib/libslp_devman_plugin.so",
+      "original_elf_va": "0x57dc",
+      "evidence": "analysis/evidence/thermal-userspace-run008.json",
+      "evidence_sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+      "method": "Primary-agent selected C and original PT_LOAD-mapped ARM/Thumb windows, saved TMode contexts and exact relocations",
+      "claim": "OEM shutdown and one-shot setters delegate supplied integers to d5-keys node paths through sys_set_int formatting.",
+      "limitations": [
+        "Static request endpoint only; checked writer result, final power state and persistence are not established.",
+        "Independent semantic review remains incomplete after actual reviewer quota failure."
+      ],
+      "unresolved_questions": [
+        "Static request endpoint only; checked writer result, final power state and persistence are not established."
+      ],
+      "independent_review_completed": false
+    }
+  ],
+  "independent_semantic_review_completed": false
+}

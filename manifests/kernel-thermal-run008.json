@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "run": "RUN008",
+  "elf_coverage_contribution": 0,
+  "source_sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+  "decoded_base": "0xc0008000",
+  "evidence": {
+    "path": "analysis/evidence/thermal-kernel-run008.json",
+    "sha256": "a7535132e3a2a449836d5e549cc07c4660e326b57c974b159551b39ca82a6955"
+  },
+  "reviewed_findings": [
+    {
+      "id": "K008-THERMISTER",
+      "kernel_link_vas": [
+        "0xc06d5d78",
+        "0xc071b290",
+        "0xc0586110",
+        "0xc027b064",
+        "0xc027b01c"
+      ],
+      "claim": "Probe registers named thermister miscdevice and CMOS attribute; read path takes ten ADC channel7 samples, caches an average and copies40 bytes; show formats cached word."
+    }
+  ],
+  "independent_semantic_review_completed": false,
+  "limitations": [
+    "Packaged kernel2 active boot role unverified.",
+    "Cached average, ADC words and app-converted value have no assumed common units.",
+    "No runtime sensor or power observation."
+  ]
+}

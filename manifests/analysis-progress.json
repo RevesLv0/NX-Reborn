@@ -56,18 +56,18 @@
     }
   },
   "totals": {
-    "run_receipts_completed": 62,
+    "run_receipts_completed": 69,
     "run_receipts_failed": 1,
     "run_receipts_incomplete": 1,
-    "valid_export_generations": 454,
+    "valid_export_generations": 502,
     "duplicate_export_generations_excluded": 0,
     "invalid_export_generations": 11,
     "exported_without_matching_auto_analysis_generation": 13,
     "unique_exported_functions": 46893,
-    "unique_selected_decompile_attempted": 523,
-    "unique_selected_decompile_completed": 523,
+    "unique_selected_decompile_attempted": 553,
+    "unique_selected_decompile_completed": 553,
     "unique_abi_unverified_functions": 46893,
-    "reviewed_static_units": 67
+    "reviewed_static_units": 73
   },
   "run_roots": [
     ".work/restored-run001",
@@ -76,7 +76,8 @@
     ".work/run004",
     ".work/run005",
     ".work/run006",
-    ".work/run007"
+    ".work/run007",
+    ".work/run008"
   ],
   "run_receipts": [
     {
@@ -2643,6 +2644,293 @@
       "finished_unix": 1792599365.1977084,
       "receipt_path": ".work/run007/plugin/read/logs/NX500_RUN007_PLUGIN-97896fae-40fe-45c3-95fb-e0b1e50ce490.json",
       "receipt_sha256": "0ff1bdb1c4519c4064c74d6cc4930799037c4db1c2999a1bddc61d36e7bea97b"
+    },
+    {
+      "run_id": "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+      "started_unix": 1792600215.9866662,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_FW112_SURVEY",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run008/app/initial/outputs/ghidra",
+        "^UI_Get_Display_Temperature_Status$|^CAPPGUIPreviewState::onEventThermometer$|^CAPPGUIPreviewView::(on_timer_temperature|timer_start_temperature)$|^set_temperature$|^CAPPGUITopState::onEventDisplayTemperature$",
+        "8",
+        "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+        "30",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run008/app/initial/logs/NX500_FW112_SURVEY.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run008/app/initial/logs/NX500_FW112_SURVEY-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 30,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792600233.2936234,
+      "receipt_path": ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+      "receipt_sha256": "dfb06c449d334b9f3fd4c916a422087c96541c7102e93d47be3756519ebdeb4d"
+    },
+    {
+      "run_id": "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+      "started_unix": 1792600295.8520749,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_FW112_SURVEY",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run008/app/sensor/outputs/ghidra",
+        "^UI_Di_Sensor_Get_Temp_(Sensor|Cpu|Isp|Level)$",
+        "6",
+        "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+        "30",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run008/app/sensor/logs/NX500_FW112_SURVEY.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run008/app/sensor/logs/NX500_FW112_SURVEY-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 30,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792600317.838236,
+      "receipt_path": ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
+      "receipt_sha256": "4aa66ed004e0553e368e9d9995b48deaa367de973ae3ecfff72e8bd6bb98d885"
+    },
+    {
+      "run_id": "f717d8da-917a-459c-a3d6-ab66fa44cab8",
+      "started_unix": 1792600108.2802315,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_RUN007_PLUGIN",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run008/plugin/initial/outputs/ghidra",
+        "^OEM_sys_(get_temperature_(adc|value)|get_battery_temperature|get_body_bat_(det|soc|volt)|get_bat_event_flag|set_power_(one_shot|shutdown)|get_bootmode|get_wakeup_source)$",
+        "12",
+        "f717d8da-917a-459c-a3d6-ab66fa44cab8",
+        "30",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run008/plugin/initial/logs/NX500_RUN007_PLUGIN.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run008/plugin/initial/logs/NX500_RUN007_PLUGIN-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 30,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792600115.697787,
+      "receipt_path": ".work/run008/plugin/initial/logs/NX500_RUN007_PLUGIN-f717d8da-917a-459c-a3d6-ab66fa44cab8.json",
+      "receipt_sha256": "ea01996f269188210b2f38a33b589e43a7096a0aeb8d8c9080cd50c3b52a2a53"
+    },
+    {
+      "run_id": "4ef74bbd-34f8-498f-80d2-99327563da1b",
+      "started_unix": 1792600297.2291172,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_RUN007_PLUGIN",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run008/plugin/setter/outputs/ghidra",
+        "^sys_set_int$",
+        "3",
+        "4ef74bbd-34f8-498f-80d2-99327563da1b",
+        "30",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run008/plugin/setter/logs/NX500_RUN007_PLUGIN.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run008/plugin/setter/logs/NX500_RUN007_PLUGIN-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 30,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792600311.9254303,
+      "receipt_path": ".work/run008/plugin/setter/logs/NX500_RUN007_PLUGIN-4ef74bbd-34f8-498f-80d2-99327563da1b.json",
+      "receipt_sha256": "70bc22073d0ea46fdd26ec6f51ab2bcd36fe22dedb51def25779c189557d7dc7"
+    },
+    {
+      "run_id": "baf39394-3e04-4b87-897d-4c5e3ccdb6d5",
+      "started_unix": 1792600381.885171,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_RUN003_CAPTURE",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run008/sensor/initial/outputs/ghidra",
+        "^sensorapi::get_value$",
+        "6",
+        "baf39394-3e04-4b87-897d-4c5e3ccdb6d5",
+        "30",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 30,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792600393.4084158,
+      "receipt_path": ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+      "receipt_sha256": "755f72f4486f179614d3127557b6e1824ac5e302c9dcbef8fc2f50c53968f735"
+    },
+    {
+      "run_id": "9c645b50-fdb5-4633-a97c-b1e26a539652",
+      "started_unix": 1792600512.2955165,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_RUN003_CAPTURE",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run008/sensor/levels/outputs/ghidra",
+        "^csensor_thermometer::(get_level|csensor_thermometer)$|^csensor_module::(lock|unlock)$",
+        "6",
+        "9c645b50-fdb5-4633-a97c-b1e26a539652",
+        "30",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 30,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792600523.8227088,
+      "receipt_path": ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+      "receipt_sha256": "8b242699e52fc88cea0f9fc0cd8352e8899089a48ee65f9ab32b4f288282b9b1"
+    },
+    {
+      "run_id": "07d57750-9f47-466e-bd59-3505e2f4c51e",
+      "started_unix": 1792600429.709225,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_RUN003_CAPTURE",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run008/sensor/thermometer/outputs/ghidra",
+        "^csensor_thermometer::(initialize|update_value|get_value)$|^sensorapi::initialize$",
+        "6",
+        "07d57750-9f47-466e-bd59-3505e2f4c51e",
+        "30",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 30,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792600442.2072387,
+      "receipt_path": ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json",
+      "receipt_sha256": "1856dcff63887c0142cbca55f875a1542ddd1c24149445d904861eb1f5902d72"
     }
   ],
   "export_generations": [
@@ -22230,6 +22518,2022 @@
       "decompile_completed": 1,
       "decompile_omitted_by_budget": 0,
       "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/initial/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
+      "summary_sha256": "2ec24e14d189351d60d531e51b0f69fda5b47ff2fd5e35215963b160268f56ec",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "run_id": "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 2282866,
+          "sha256": "a91f1e486ad8d433ad7ca196047fc72e457b4500641cebeb714f23c4d7dd4f3f"
+        },
+        "calls.jsonl": {
+          "bytes": 7524918,
+          "sha256": "74adae9aced4698cd3b02b4273b193e18db21b4735f5f696b85c6f1c0b00f409"
+        },
+        "decompiled.jsonl": {
+          "bytes": 8565,
+          "sha256": "a837ae0d93bd13ef246c0be9511803f63fb55072cd07915703a7b4590a7e22f1"
+        },
+        "strings.jsonl": {
+          "bytes": 4565592,
+          "sha256": "252cf23162b93f0e835a9ea32a72f5f9aa007c293f1a00465debad97711d36f3"
+        }
+      },
+      "receipt_path": ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+      "receipt_sha256": "dfb06c449d334b9f3fd4c916a422087c96541c7102e93d47be3756519ebdeb4d",
+      "valid": true,
+      "program": "di-camera-app",
+      "input_manifest": ".work/run008/app/initial/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 9258,
+      "mapped_nonexternal_functions": 9258,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 6,
+      "decompile_completed": 6,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/initial/outputs/ghidra/fw_upgrade_recovery-7bf571fa83ce/summary.json",
+      "summary_sha256": "f094d6636fd01bc17f49aa07695794fa1518afd44c75d5e86f718245521e5549",
+      "source_sha256": "7bf571fa83ce39f417b0759c024942311e4b1aa6487b46eda9562ae339aef3ff",
+      "run_id": "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 41164,
+          "sha256": "cf8e8ee92d4eb52d97802d943a68a5820a12f9e563ba8d81827d0b8bf9b05a8e"
+        },
+        "calls.jsonl": {
+          "bytes": 64549,
+          "sha256": "319ed60ed02ab4a34a7dd1710d0f25d5be212541f837deb2f0f4cac250989c75"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 49522,
+          "sha256": "d11da519f08beb3b36e51cfd1d700cef70ff064a536eefb484f15c4db3d285c0"
+        }
+      },
+      "receipt_path": ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+      "receipt_sha256": "dfb06c449d334b9f3fd4c916a422087c96541c7102e93d47be3756519ebdeb4d",
+      "valid": true,
+      "program": "fw_upgrade_recovery",
+      "input_manifest": ".work/run008/app/initial/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 190,
+      "mapped_nonexternal_functions": 190,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/initial/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+      "summary_sha256": "c45d16eed6e4f6037bb436f771124a970c6fe49d1d54843ad522ba2e6d96d0fd",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "run_id": "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 785032,
+          "sha256": "679f3415f6fbbf3b2a5f5d30640d3fba37e8a7c45407fc142b93ed5233be817d"
+        },
+        "calls.jsonl": {
+          "bytes": 829651,
+          "sha256": "e1ad3d4ae1e1af40f03bf8a92394a74fc5aad326b91236e01bf8df7c3c9fc2da"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 582689,
+          "sha256": "d4afddbb6595ec6ea204b4932c2e2973bfc445c8df5966d18b996a1f6c595ab3"
+        }
+      },
+      "receipt_path": ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+      "receipt_sha256": "dfb06c449d334b9f3fd4c916a422087c96541c7102e93d47be3756519ebdeb4d",
+      "valid": true,
+      "program": "libcapture-fw-prod.so",
+      "input_manifest": ".work/run008/app/initial/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 2679,
+      "mapped_nonexternal_functions": 2679,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/initial/outputs/ghidra/libdi-network-bt-app.so-94a8f7ae0529/summary.json",
+      "summary_sha256": "59bd132219f5a11d07c546cf9a0c4bfbe0bbc08076871794c40b1059d469d746",
+      "source_sha256": "94a8f7ae05298d9a143d89c3b67cb1141ef3aea7c2cdc0004ef9799cda261eae",
+      "run_id": "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 134896,
+          "sha256": "1f92831bce1ba0d4e30761dae53d01a0ddf7b2dfb8fd10ab433e9324a2aff623"
+        },
+        "calls.jsonl": {
+          "bytes": 227813,
+          "sha256": "6c07f6607524138803864b96d6f9d4b5d5323305a2a33dffba4576b4d8aea36d"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 249490,
+          "sha256": "5a6ec60784bc6a4d9eb3440f380824e8b2412b6a1a5ffa94b2277ec48ad720af"
+        }
+      },
+      "receipt_path": ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+      "receipt_sha256": "dfb06c449d334b9f3fd4c916a422087c96541c7102e93d47be3756519ebdeb4d",
+      "valid": true,
+      "program": "libdi-network-bt-app.so",
+      "input_manifest": ".work/run008/app/initial/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 560,
+      "mapped_nonexternal_functions": 560,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/initial/outputs/ghidra/libdi-network-dlna-rvf.so-a7c8f03e4fdc/summary.json",
+      "summary_sha256": "5752d2282fc1cb48335867ccb306e01cda66911468fde511e97ce470d9285354",
+      "source_sha256": "a7c8f03e4fdcc035762f83a2168efbbb4a4d93ac34802d1d4e097eb74404f567",
+      "run_id": "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 468127,
+          "sha256": "f4f8e5d6365ec9caa945426fa47a8b90cb27336872ea8b91e8947471daafa829"
+        },
+        "calls.jsonl": {
+          "bytes": 790319,
+          "sha256": "621ffd8ece924a4178c3d1ec1b809979ad76c38307daf621959429963f3a1d84"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 450513,
+          "sha256": "ecdbd4cb0ef949a966b675980166e0cf712330497c72e5c4c69bb80f7630dbd4"
+        }
+      },
+      "receipt_path": ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+      "receipt_sha256": "dfb06c449d334b9f3fd4c916a422087c96541c7102e93d47be3756519ebdeb4d",
+      "valid": true,
+      "program": "libdi-network-dlna-rvf.so",
+      "input_manifest": ".work/run008/app/initial/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 1763,
+      "mapped_nonexternal_functions": 1763,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/initial/outputs/ghidra/libface.so-f2936a156173/summary.json",
+      "summary_sha256": "30ca8fd22d79d6deb5f239b397b000e7b84117e3681bc630c279fda6b28c129c",
+      "source_sha256": "f2936a156173d48b1a54a6647da6d169f3bd8276c3d8448eca1f784ddd29047f",
+      "run_id": "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 237559,
+          "sha256": "06d4d6029a8e309cfb595b5ccab286700d0fe0c28f35cd70a58b39cfb64925fa"
+        },
+        "calls.jsonl": {
+          "bytes": 260557,
+          "sha256": "122e4d77d3529cf3d8fe9f87c64dbc28876125892e9a61cee742ce4966a31bcc"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 557457,
+          "sha256": "4063b91fd851c9fd1388882e4c1bb9fda716291db4dd0133faf7c18a949fa2fe"
+        }
+      },
+      "receipt_path": ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+      "receipt_sha256": "dfb06c449d334b9f3fd4c916a422087c96541c7102e93d47be3756519ebdeb4d",
+      "valid": true,
+      "program": "libface.so",
+      "input_manifest": ".work/run008/app/initial/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 929,
+      "mapped_nonexternal_functions": 929,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/initial/outputs/ghidra/libmmf-camcorder.so-49f89956d0a0/summary.json",
+      "summary_sha256": "c0821ee3903c299da8d78fc03294fe5279d5b6e41dd8c7aa2933b2b5f60028f7",
+      "source_sha256": "49f89956d0a09de51656e4427cc960c10d01f4971c39a1b85d19554431c03c78",
+      "run_id": "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 77701,
+          "sha256": "2ac95d8e6b0a78f1e31aa98d7f7e2a2bc50c9536d468e5e388bfe7af4c6136ed"
+        },
+        "calls.jsonl": {
+          "bytes": 71213,
+          "sha256": "34936c251895ccb298ba18e003bf25f72cea4d394745f1c996e2791fbc0e1c14"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 82212,
+          "sha256": "2364bd91e09c3e9e969ae517909833fbf6e5129d9afe47017f84415067e96d55"
+        }
+      },
+      "receipt_path": ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+      "receipt_sha256": "dfb06c449d334b9f3fd4c916a422087c96541c7102e93d47be3756519ebdeb4d",
+      "valid": true,
+      "program": "libmmf-camcorder.so",
+      "input_manifest": ".work/run008/app/initial/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 330,
+      "mapped_nonexternal_functions": 330,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/initial/outputs/ghidra/libsap-api.so.1.0.0-f130d83a9313/summary.json",
+      "summary_sha256": "119240ea57ec25d93db60be3a8a8f413aafb7ccf404095bc1455d4b0885db6a0",
+      "source_sha256": "f130d83a9313710104c9c972e4ac3285e7c2b6cd8e7ee40cbce0a77142a96ac0",
+      "run_id": "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 241487,
+          "sha256": "2d966cef9ce881cb45b2a80408dc4a4ca8d7a277a5a868f505395a917cfd8285"
+        },
+        "calls.jsonl": {
+          "bytes": 435640,
+          "sha256": "38810346d523bb161cd93ed23719ffed28637d9b55d78c0a356afe045454ed98"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 413713,
+          "sha256": "c8ea39b925fc4111009b865197fb5985f8d510661fa3dd9662625368ed182e1c"
+        }
+      },
+      "receipt_path": ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+      "receipt_sha256": "dfb06c449d334b9f3fd4c916a422087c96541c7102e93d47be3756519ebdeb4d",
+      "valid": true,
+      "program": "libsap-api.so.1.0.0",
+      "input_manifest": ".work/run008/app/initial/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 1090,
+      "mapped_nonexternal_functions": 1090,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/initial/outputs/ghidra/mtp-responder-630d4f6c8beb/summary.json",
+      "summary_sha256": "0cbce911ef165ea908e3ecdddb1b85efaad437186488c6bc7bbda4f1d6bd9e54",
+      "source_sha256": "630d4f6c8beb4008973c2bf3646fa032768e5810d5aa6b673b472330e983409b",
+      "run_id": "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 144219,
+          "sha256": "f05a73d2d82dcc39f1338740f947996e5ffd042e6cc0ec430137c5307d5146fd"
+        },
+        "calls.jsonl": {
+          "bytes": 342185,
+          "sha256": "f69955c04f7645ae304ea253f13c4eb951d0a801aab93e40e01be7d41c92af5b"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 324340,
+          "sha256": "ed08991dec4742a9eff02977f02d574d31a10ae1cecddff484e26bc179f210ff"
+        }
+      },
+      "receipt_path": ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+      "receipt_sha256": "dfb06c449d334b9f3fd4c916a422087c96541c7102e93d47be3756519ebdeb4d",
+      "valid": true,
+      "program": "mtp-responder",
+      "input_manifest": ".work/run008/app/initial/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 683,
+      "mapped_nonexternal_functions": 683,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/initial/outputs/ghidra/nfc-manager-daemon-4f71b292ced7/summary.json",
+      "summary_sha256": "c95b00bd1c91a0df35cd9a65e4ed47c521798df470fdb3ba64bd8513c4201eaf",
+      "source_sha256": "4f71b292ced7180280eb53c87bb52f7e6e188278cfee84ad2b106b45ee219ddf",
+      "run_id": "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 160884,
+          "sha256": "383afa962db1e8b0619dd94af2db45db904bd929bc2c0fadf609b25be61563d0"
+        },
+        "calls.jsonl": {
+          "bytes": 355174,
+          "sha256": "111d6c43c4acaa4e1f04f753892a68a7e504ad71bccc43b2da0915f884ddd100"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 304828,
+          "sha256": "92dcd9c575856bc04641bd2b1cf627297e7234b995147e648d283a9ee4229360"
+        }
+      },
+      "receipt_path": ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+      "receipt_sha256": "dfb06c449d334b9f3fd4c916a422087c96541c7102e93d47be3756519ebdeb4d",
+      "valid": true,
+      "program": "nfc-manager-daemon",
+      "input_manifest": ".work/run008/app/initial/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 704,
+      "mapped_nonexternal_functions": 704,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/initial/outputs/ghidra/system-recovery-161f5656f5d9/summary.json",
+      "summary_sha256": "0f2c5f6bcf2cf9e57894b03f41f9aacd5a81fbad2a72a1d58545091239a3be35",
+      "source_sha256": "161f5656f5d9e2df53b835dda648ce0c173696dbae5b8a56c61130b7f1f541cb",
+      "run_id": "90b7f60b-fad3-4d81-a7e3-e0ef22347a5c",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 33538,
+          "sha256": "e6a070b56f157d5c194775f0a67a065872950f769d5defd24e1f5b8b1fa7c74d"
+        },
+        "calls.jsonl": {
+          "bytes": 31713,
+          "sha256": "19e0ec18c10e0c95b5feae225207a3117ef1572cf48689a76ff889acc62edd0a"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 24010,
+          "sha256": "ac43dc196f7a1c2dcbd3834cd569209c17b271f7eebf8143471d7339c0d23b4b"
+        }
+      },
+      "receipt_path": ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+      "receipt_sha256": "dfb06c449d334b9f3fd4c916a422087c96541c7102e93d47be3756519ebdeb4d",
+      "valid": true,
+      "program": "system-recovery",
+      "input_manifest": ".work/run008/app/initial/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 153,
+      "mapped_nonexternal_functions": 153,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/sensor/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
+      "summary_sha256": "feb6cf427fe56c64193601f4ace6590022dd05d7157fea87a9a254d2924e4e94",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "run_id": "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 2282866,
+          "sha256": "a91f1e486ad8d433ad7ca196047fc72e457b4500641cebeb714f23c4d7dd4f3f"
+        },
+        "calls.jsonl": {
+          "bytes": 7524918,
+          "sha256": "6e11c20830be55ae1ead76fc68c192a91e9b740035b8865020639c7876a75cfc"
+        },
+        "decompiled.jsonl": {
+          "bytes": 10131,
+          "sha256": "09aa771d4877ed417b006f2c80947eb974af61846818c87e7045df117edb821b"
+        },
+        "strings.jsonl": {
+          "bytes": 4565592,
+          "sha256": "252cf23162b93f0e835a9ea32a72f5f9aa007c293f1a00465debad97711d36f3"
+        }
+      },
+      "receipt_path": ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
+      "receipt_sha256": "4aa66ed004e0553e368e9d9995b48deaa367de973ae3ecfff72e8bd6bb98d885",
+      "valid": true,
+      "program": "di-camera-app",
+      "input_manifest": ".work/run008/app/sensor/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 9258,
+      "mapped_nonexternal_functions": 9258,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 4,
+      "decompile_completed": 4,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/sensor/outputs/ghidra/fw_upgrade_recovery-7bf571fa83ce/summary.json",
+      "summary_sha256": "c79d847cfe1e48c82460ea25d342fc074fddcac3770f5dbb9cbae8a102208bdc",
+      "source_sha256": "7bf571fa83ce39f417b0759c024942311e4b1aa6487b46eda9562ae339aef3ff",
+      "run_id": "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 41164,
+          "sha256": "cf8e8ee92d4eb52d97802d943a68a5820a12f9e563ba8d81827d0b8bf9b05a8e"
+        },
+        "calls.jsonl": {
+          "bytes": 64549,
+          "sha256": "58393a3b193060186b17be7a7d743eeb278733b97e204c26fddc29fa3ac0e1c0"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 49522,
+          "sha256": "d11da519f08beb3b36e51cfd1d700cef70ff064a536eefb484f15c4db3d285c0"
+        }
+      },
+      "receipt_path": ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
+      "receipt_sha256": "4aa66ed004e0553e368e9d9995b48deaa367de973ae3ecfff72e8bd6bb98d885",
+      "valid": true,
+      "program": "fw_upgrade_recovery",
+      "input_manifest": ".work/run008/app/sensor/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 190,
+      "mapped_nonexternal_functions": 190,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/sensor/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+      "summary_sha256": "9582acd3a4e8ff11922d2eab69f1e1a385da57571f921bf9c6ced341e768983b",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "run_id": "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 785032,
+          "sha256": "679f3415f6fbbf3b2a5f5d30640d3fba37e8a7c45407fc142b93ed5233be817d"
+        },
+        "calls.jsonl": {
+          "bytes": 829651,
+          "sha256": "d61a6ff286562ee0d38b4c75a5781ecfb96a67cead3605dc674f51ddec9971fc"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 582689,
+          "sha256": "d4afddbb6595ec6ea204b4932c2e2973bfc445c8df5966d18b996a1f6c595ab3"
+        }
+      },
+      "receipt_path": ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
+      "receipt_sha256": "4aa66ed004e0553e368e9d9995b48deaa367de973ae3ecfff72e8bd6bb98d885",
+      "valid": true,
+      "program": "libcapture-fw-prod.so",
+      "input_manifest": ".work/run008/app/sensor/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 2679,
+      "mapped_nonexternal_functions": 2679,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/sensor/outputs/ghidra/libdi-network-bt-app.so-94a8f7ae0529/summary.json",
+      "summary_sha256": "d465de87b65b7f37ab32e822955505b01ab5091669562784445056e297c338aa",
+      "source_sha256": "94a8f7ae05298d9a143d89c3b67cb1141ef3aea7c2cdc0004ef9799cda261eae",
+      "run_id": "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 134896,
+          "sha256": "1f92831bce1ba0d4e30761dae53d01a0ddf7b2dfb8fd10ab433e9324a2aff623"
+        },
+        "calls.jsonl": {
+          "bytes": 227813,
+          "sha256": "46b6d5ff36226edee6f5977f7b4b5e573a0c7ee87dc0bfd354c685e8d541e5ee"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 249490,
+          "sha256": "5a6ec60784bc6a4d9eb3440f380824e8b2412b6a1a5ffa94b2277ec48ad720af"
+        }
+      },
+      "receipt_path": ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
+      "receipt_sha256": "4aa66ed004e0553e368e9d9995b48deaa367de973ae3ecfff72e8bd6bb98d885",
+      "valid": true,
+      "program": "libdi-network-bt-app.so",
+      "input_manifest": ".work/run008/app/sensor/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 560,
+      "mapped_nonexternal_functions": 560,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/sensor/outputs/ghidra/libdi-network-dlna-rvf.so-a7c8f03e4fdc/summary.json",
+      "summary_sha256": "49c547674c0ce23bd9829239b5655e9c7fa869ca118c89b06ff4eda050f1c7b0",
+      "source_sha256": "a7c8f03e4fdcc035762f83a2168efbbb4a4d93ac34802d1d4e097eb74404f567",
+      "run_id": "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 468127,
+          "sha256": "f4f8e5d6365ec9caa945426fa47a8b90cb27336872ea8b91e8947471daafa829"
+        },
+        "calls.jsonl": {
+          "bytes": 790319,
+          "sha256": "8b14371e9f681cf2b2d9debaad2cf9e160f15a1ac0128f74d67967de1e71315c"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 450513,
+          "sha256": "ecdbd4cb0ef949a966b675980166e0cf712330497c72e5c4c69bb80f7630dbd4"
+        }
+      },
+      "receipt_path": ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
+      "receipt_sha256": "4aa66ed004e0553e368e9d9995b48deaa367de973ae3ecfff72e8bd6bb98d885",
+      "valid": true,
+      "program": "libdi-network-dlna-rvf.so",
+      "input_manifest": ".work/run008/app/sensor/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 1763,
+      "mapped_nonexternal_functions": 1763,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/sensor/outputs/ghidra/libface.so-f2936a156173/summary.json",
+      "summary_sha256": "50abdc36bd4d8c72795fd63a58c129c71ee9839b43f9cbee8877e3af5a5ef899",
+      "source_sha256": "f2936a156173d48b1a54a6647da6d169f3bd8276c3d8448eca1f784ddd29047f",
+      "run_id": "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 237559,
+          "sha256": "06d4d6029a8e309cfb595b5ccab286700d0fe0c28f35cd70a58b39cfb64925fa"
+        },
+        "calls.jsonl": {
+          "bytes": 260557,
+          "sha256": "80155864e68c1c8931ce373859abafd45d83c02b3bb585aca317d58c4b333453"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 557457,
+          "sha256": "4063b91fd851c9fd1388882e4c1bb9fda716291db4dd0133faf7c18a949fa2fe"
+        }
+      },
+      "receipt_path": ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
+      "receipt_sha256": "4aa66ed004e0553e368e9d9995b48deaa367de973ae3ecfff72e8bd6bb98d885",
+      "valid": true,
+      "program": "libface.so",
+      "input_manifest": ".work/run008/app/sensor/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 929,
+      "mapped_nonexternal_functions": 929,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/sensor/outputs/ghidra/libmmf-camcorder.so-49f89956d0a0/summary.json",
+      "summary_sha256": "2470a17c327d0e2fe36de5afded235055919cef357ab9b0d0513b058bca4709d",
+      "source_sha256": "49f89956d0a09de51656e4427cc960c10d01f4971c39a1b85d19554431c03c78",
+      "run_id": "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 77701,
+          "sha256": "2ac95d8e6b0a78f1e31aa98d7f7e2a2bc50c9536d468e5e388bfe7af4c6136ed"
+        },
+        "calls.jsonl": {
+          "bytes": 71213,
+          "sha256": "196f36115d32a5c71951a17132ce5045364804c03588f0473bea08a9c9a37dea"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 82212,
+          "sha256": "2364bd91e09c3e9e969ae517909833fbf6e5129d9afe47017f84415067e96d55"
+        }
+      },
+      "receipt_path": ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
+      "receipt_sha256": "4aa66ed004e0553e368e9d9995b48deaa367de973ae3ecfff72e8bd6bb98d885",
+      "valid": true,
+      "program": "libmmf-camcorder.so",
+      "input_manifest": ".work/run008/app/sensor/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 330,
+      "mapped_nonexternal_functions": 330,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/sensor/outputs/ghidra/libsap-api.so.1.0.0-f130d83a9313/summary.json",
+      "summary_sha256": "e9e93e34aca236e309385c55a702d2eea2bb585ea9798665774dc25e224701a3",
+      "source_sha256": "f130d83a9313710104c9c972e4ac3285e7c2b6cd8e7ee40cbce0a77142a96ac0",
+      "run_id": "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 241487,
+          "sha256": "2d966cef9ce881cb45b2a80408dc4a4ca8d7a277a5a868f505395a917cfd8285"
+        },
+        "calls.jsonl": {
+          "bytes": 435640,
+          "sha256": "e3ac826cc4952a398fd0e88652b9dbeca0669d87ebe6dcb44095bc8afb75c473"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 413713,
+          "sha256": "c8ea39b925fc4111009b865197fb5985f8d510661fa3dd9662625368ed182e1c"
+        }
+      },
+      "receipt_path": ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
+      "receipt_sha256": "4aa66ed004e0553e368e9d9995b48deaa367de973ae3ecfff72e8bd6bb98d885",
+      "valid": true,
+      "program": "libsap-api.so.1.0.0",
+      "input_manifest": ".work/run008/app/sensor/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 1090,
+      "mapped_nonexternal_functions": 1090,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/sensor/outputs/ghidra/mtp-responder-630d4f6c8beb/summary.json",
+      "summary_sha256": "8fa092c597fa6a86ed80119c1a99d62050cfbc24baddcaf8d0a520c2e9ade47c",
+      "source_sha256": "630d4f6c8beb4008973c2bf3646fa032768e5810d5aa6b673b472330e983409b",
+      "run_id": "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 144219,
+          "sha256": "f05a73d2d82dcc39f1338740f947996e5ffd042e6cc0ec430137c5307d5146fd"
+        },
+        "calls.jsonl": {
+          "bytes": 342185,
+          "sha256": "13d36b32313b1678aff200ec9c13281445edb4bca2665f9bdd9ff98f2078e302"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 324340,
+          "sha256": "ed08991dec4742a9eff02977f02d574d31a10ae1cecddff484e26bc179f210ff"
+        }
+      },
+      "receipt_path": ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
+      "receipt_sha256": "4aa66ed004e0553e368e9d9995b48deaa367de973ae3ecfff72e8bd6bb98d885",
+      "valid": true,
+      "program": "mtp-responder",
+      "input_manifest": ".work/run008/app/sensor/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 683,
+      "mapped_nonexternal_functions": 683,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/sensor/outputs/ghidra/nfc-manager-daemon-4f71b292ced7/summary.json",
+      "summary_sha256": "c333a1f3625cf206ffa4ff9c7d2bd4e8bf49e2bd2f6cb449f9c465813c355e9c",
+      "source_sha256": "4f71b292ced7180280eb53c87bb52f7e6e188278cfee84ad2b106b45ee219ddf",
+      "run_id": "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 160884,
+          "sha256": "383afa962db1e8b0619dd94af2db45db904bd929bc2c0fadf609b25be61563d0"
+        },
+        "calls.jsonl": {
+          "bytes": 355174,
+          "sha256": "2ebf54ea2a2a3bac1bc10513b021873d1f8cc27621f8541d59d59a33ca5fc783"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 304828,
+          "sha256": "92dcd9c575856bc04641bd2b1cf627297e7234b995147e648d283a9ee4229360"
+        }
+      },
+      "receipt_path": ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
+      "receipt_sha256": "4aa66ed004e0553e368e9d9995b48deaa367de973ae3ecfff72e8bd6bb98d885",
+      "valid": true,
+      "program": "nfc-manager-daemon",
+      "input_manifest": ".work/run008/app/sensor/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 704,
+      "mapped_nonexternal_functions": 704,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/app/sensor/outputs/ghidra/system-recovery-161f5656f5d9/summary.json",
+      "summary_sha256": "99277470e59d95735efb5f851804b2e731d69998829c9c25ae2ceea6f4dfbbbe",
+      "source_sha256": "161f5656f5d9e2df53b835dda648ce0c173696dbae5b8a56c61130b7f1f541cb",
+      "run_id": "0bbdeef4-ad31-4a19-9573-5344a212fbee",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 33538,
+          "sha256": "e6a070b56f157d5c194775f0a67a065872950f769d5defd24e1f5b8b1fa7c74d"
+        },
+        "calls.jsonl": {
+          "bytes": 31713,
+          "sha256": "c1ca565f4869c95d78a041a6ca861195827a0286068f92ccdffff2b11bbabe6d"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 24010,
+          "sha256": "ac43dc196f7a1c2dcbd3834cd569209c17b271f7eebf8143471d7339c0d23b4b"
+        }
+      },
+      "receipt_path": ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
+      "receipt_sha256": "4aa66ed004e0553e368e9d9995b48deaa367de973ae3ecfff72e8bd6bb98d885",
+      "valid": true,
+      "program": "system-recovery",
+      "input_manifest": ".work/run008/app/sensor/input-manifest.json",
+      "input_manifest_sha256": "17bbc882f2cd81a8f9844debe1fcc4a18b4b113c195b21f75b83bbf5d48ec52c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 153,
+      "mapped_nonexternal_functions": 153,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/plugin/initial/outputs/ghidra/libslp_devman_plugin.so-a88cb8130ba2/summary.json",
+      "summary_sha256": "fd3133568cfb05df71ffe8f70eecd5669f1c056295f00fa478ddb5d23390e81a",
+      "source_sha256": "a88cb8130ba246b45c077cf25f0c5944077e41b780eee20f5a5a675b35a15588",
+      "run_id": "f717d8da-917a-459c-a3d6-ab66fa44cab8",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 80528,
+          "sha256": "99d7d562a04b1c89e659655df07f851a957700b874e351fb9b9d7e0351f85a97"
+        },
+        "calls.jsonl": {
+          "bytes": 71928,
+          "sha256": "93f666b2197d569e963334459b036884e24ca2df81e501c3afea382595ee48fd"
+        },
+        "decompiled.jsonl": {
+          "bytes": 5643,
+          "sha256": "0a6dbb613510d7aa570d49958f81933426be3bb89919bd483230734e9edbb044"
+        },
+        "strings.jsonl": {
+          "bytes": 83880,
+          "sha256": "c2317c6acba689bb2b20e709ef9974f6ee4fd3d11d0d2772a0fc4c83a778251a"
+        }
+      },
+      "receipt_path": ".work/run008/plugin/initial/logs/NX500_RUN007_PLUGIN-f717d8da-917a-459c-a3d6-ab66fa44cab8.json",
+      "receipt_sha256": "ea01996f269188210b2f38a33b589e43a7096a0aeb8d8c9080cd50c3b52a2a53",
+      "valid": true,
+      "program": "libslp_devman_plugin.so",
+      "input_manifest": ".work/run008/plugin/initial/input-manifest.json",
+      "input_manifest_sha256": "159f58c632d90a982e657dbd4236cbba9bf53aa0276f44d392b2f3df6d98116c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 354,
+      "mapped_nonexternal_functions": 354,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 11,
+      "decompile_completed": 11,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/plugin/setter/outputs/ghidra/libslp_devman_plugin.so-a88cb8130ba2/summary.json",
+      "summary_sha256": "f3ffa3258406741118c69965435af2b84327ba483a9454a832d2d8589114b508",
+      "source_sha256": "a88cb8130ba246b45c077cf25f0c5944077e41b780eee20f5a5a675b35a15588",
+      "run_id": "4ef74bbd-34f8-498f-80d2-99327563da1b",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 80528,
+          "sha256": "99d7d562a04b1c89e659655df07f851a957700b874e351fb9b9d7e0351f85a97"
+        },
+        "calls.jsonl": {
+          "bytes": 71928,
+          "sha256": "df0638ceecafdc6d1151d2fafd38a1329bb9c7d49548170db3388ddac8ad290f"
+        },
+        "decompiled.jsonl": {
+          "bytes": 1579,
+          "sha256": "83a16576107a2909eecfd38763f113ada500b6f6eee461e5ae0b4ec6944038fc"
+        },
+        "strings.jsonl": {
+          "bytes": 83880,
+          "sha256": "c2317c6acba689bb2b20e709ef9974f6ee4fd3d11d0d2772a0fc4c83a778251a"
+        }
+      },
+      "receipt_path": ".work/run008/plugin/setter/logs/NX500_RUN007_PLUGIN-4ef74bbd-34f8-498f-80d2-99327563da1b.json",
+      "receipt_sha256": "70bc22073d0ea46fdd26ec6f51ab2bcd36fe22dedb51def25779c189557d7dc7",
+      "valid": true,
+      "program": "libslp_devman_plugin.so",
+      "input_manifest": ".work/run008/plugin/setter/input-manifest.json",
+      "input_manifest_sha256": "159f58c632d90a982e657dbd4236cbba9bf53aa0276f44d392b2f3df6d98116c",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 354,
+      "mapped_nonexternal_functions": 354,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 1,
+      "decompile_completed": 1,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
+      "summary_sha256": "808ea7ab1ab262927b45d7188063f28f7509ea8c41b7eb7c8e2016c543e50000",
+      "source_sha256": "c8e6c6226d634a47b805cc8ecfdbf7110620ace3ddf5668bae0e3a474752f203",
+      "run_id": "baf39394-3e04-4b87-897d-4c5e3ccdb6d5",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 17262,
+          "sha256": "9e7bf807c5054171737bcf960eb5ddef028f0d9b8f2817f7c3335ceacbfa835f"
+        },
+        "calls.jsonl": {
+          "bytes": 2726,
+          "sha256": "2456486cca14ac0600a60f8f194288d0b327e2faeff0cb2099c5e0c9d0083d5e"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 14506,
+          "sha256": "e63fc47f2550861ec313a11e8e46c1af79833b2643c0c4551679bb297af32fbb"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+      "receipt_sha256": "755f72f4486f179614d3127557b6e1824ac5e302c9dcbef8fc2f50c53968f735",
+      "valid": true,
+      "program": "libdi-alg-ipplatform.so",
+      "input_manifest": ".work/run008/sensor/initial/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 70,
+      "mapped_nonexternal_functions": 70,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
+      "summary_sha256": "42d58641be8baa3ef2ba1e2e74a54d7e6b99a72cf45f306d6c7c9492bea8029d",
+      "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+      "run_id": "baf39394-3e04-4b87-897d-4c5e3ccdb6d5",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 60362,
+          "sha256": "db5236d2ea2c9d96732dd0fa4ac4d7d23946bd1e144232ee1a99eedd16ea9f2c"
+        },
+        "calls.jsonl": {
+          "bytes": 62234,
+          "sha256": "e3641f95d426e6626346997c9ee4e48a360c91d49a825827b9e118b747e40052"
+        },
+        "decompiled.jsonl": {
+          "bytes": 2149,
+          "sha256": "baa654195d4265431141bfebefc7fbc43be142998180e38095720a9c5d7f7bcf"
+        },
+        "strings.jsonl": {
+          "bytes": 46857,
+          "sha256": "8655c00d3999860189adc43d654178f1c827951dfc9e0b1f49175cc090c3cae7"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+      "receipt_sha256": "755f72f4486f179614d3127557b6e1824ac5e302c9dcbef8fc2f50c53968f735",
+      "valid": true,
+      "program": "libdi-sensor.so",
+      "input_manifest": ".work/run008/sensor/initial/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 251,
+      "mapped_nonexternal_functions": 251,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 1,
+      "decompile_completed": 1,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
+      "summary_sha256": "8eb87f1a236b4f64164bf16aa0e338cf39441eb74d038f71546fd1e07b80c43a",
+      "source_sha256": "fb27249f43b671484e4c6bc028eb42b6d9c579daac30e516c7eefe0b20b3d95f",
+      "run_id": "baf39394-3e04-4b87-897d-4c5e3ccdb6d5",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 53568,
+          "sha256": "8e0f2cfc9fda1f1cb1e2315e040a89c2d435e5a8157148a5594b841822ee6379"
+        },
+        "calls.jsonl": {
+          "bytes": 55742,
+          "sha256": "48f4e32cefe9c1f216d5075f61222ad4804ca623cd351c7f49edc22be3cfa576"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 45610,
+          "sha256": "051a8a6baae36b142d98d3562367d1feeb07d6e7d70c3884849ad6b5f6280aae"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+      "receipt_sha256": "755f72f4486f179614d3127557b6e1824ac5e302c9dcbef8fc2f50c53968f735",
+      "valid": true,
+      "program": "libdiosal.so",
+      "input_manifest": ".work/run008/sensor/initial/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 237,
+      "mapped_nonexternal_functions": 237,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+      "summary_sha256": "13989bb0ad2f4ead00d210e62bab22299a8d409801f4f6e2d0dff2af3b4df19f",
+      "source_sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+      "run_id": "baf39394-3e04-4b87-897d-4c5e3ccdb6d5",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 92092,
+          "sha256": "5e0160a7e5b47024e763d385fd046413c1158ba835f8a0af346a6b9ff5579bf3"
+        },
+        "calls.jsonl": {
+          "bytes": 68100,
+          "sha256": "4feea2fada24369204d0aba10061260a3dc44a52000a191a88d3d1fe746722ea"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 58023,
+          "sha256": "c7cda65b952309611add5f408fe9556fdee65bf8c7c80ec4503e4da78fd75773"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+      "receipt_sha256": "755f72f4486f179614d3127557b6e1824ac5e302c9dcbef8fc2f50c53968f735",
+      "valid": true,
+      "program": "libmulticore-bridge.so",
+      "input_manifest": ".work/run008/sensor/initial/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 390,
+      "mapped_nonexternal_functions": 390,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
+      "summary_sha256": "498507f4cf2fbb88fb3a8e4560f5bc6ade0572bb398ea4233b55e68b2bc5f56d",
+      "source_sha256": "59d2356428f528280397da46178d9cf319bb72885a2eff82a32f3f9f25131c9f",
+      "run_id": "baf39394-3e04-4b87-897d-4c5e3ccdb6d5",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 633544,
+          "sha256": "6ff44789af48cc6dc0fded73f4833d2f42c37ad80e3e33f91f3ecd684e0d1cde"
+        },
+        "calls.jsonl": {
+          "bytes": 1153150,
+          "sha256": "2f6b87f192018490f077e85e3d467cf3af75091e88b9977c6c0aa92bcca79c2f"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 421069,
+          "sha256": "17effe137eab9e95d611718c08bcdcb05fa099147a8b26d574a9bbe0f0035343"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+      "receipt_sha256": "755f72f4486f179614d3127557b6e1824ac5e302c9dcbef8fc2f50c53968f735",
+      "valid": true,
+      "program": "libpalm.so",
+      "input_manifest": ".work/run008/sensor/initial/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 2390,
+      "mapped_nonexternal_functions": 2390,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
+      "summary_sha256": "6512ff5ce8c44ffe00859860481e1197de90fae770e03e01a361ee9f1638618b",
+      "source_sha256": "c44802d1983bd07eaf53f02761cf402143bce245b7e5d20499c62ce1164df18d",
+      "run_id": "baf39394-3e04-4b87-897d-4c5e3ccdb6d5",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 37476,
+          "sha256": "1ee55e2bc99c608f903714699bdd525c115f77a41e9630a2c16d81d5dece5228"
+        },
+        "calls.jsonl": {
+          "bytes": 52368,
+          "sha256": "77e6c346971de9224947fb4f24718f2871a0efe119ca6685d181e3758316b21d"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 174939,
+          "sha256": "e64a5675cff4f3e310e8cc4922b9856ac3231529cc33938e81372a8aade5c701"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+      "receipt_sha256": "755f72f4486f179614d3127557b6e1824ac5e302c9dcbef8fc2f50c53968f735",
+      "valid": true,
+      "program": "libprefman.so",
+      "input_manifest": ".work/run008/sensor/initial/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 174,
+      "mapped_nonexternal_functions": 174,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
+      "summary_sha256": "5f296d35282b37f3cad4ef8243d7f08bd65e2efd9e98adedf50634da994effe9",
+      "source_sha256": "8c56bea30a591fbfb8e9e86c237504f5e28f464f74c18cffc8bbaa7f717b0ea1",
+      "run_id": "baf39394-3e04-4b87-897d-4c5e3ccdb6d5",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 226664,
+          "sha256": "5362499d33540bc83e2f0fc2a6125dc29f779cf5b773b6c0792e6e458d705a90"
+        },
+        "calls.jsonl": {
+          "bytes": 267782,
+          "sha256": "4262a97582438405c9b2db09f1d5a553750c302114f358145031c255d53f8dec"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 109074,
+          "sha256": "9eb64f5d7456b292d327fc8e3d78afb1ded516e54b72610d5e4cf4c59087966c"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+      "receipt_sha256": "755f72f4486f179614d3127557b6e1824ac5e302c9dcbef8fc2f50c53968f735",
+      "valid": true,
+      "program": "libudd5.so",
+      "input_manifest": ".work/run008/sensor/initial/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 1017,
+      "mapped_nonexternal_functions": 1017,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+      "summary_sha256": "f4d1063b24eafdadb355e7275bd07dea046c92a3b11f09d0c51cc2e1d2bec155",
+      "source_sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec",
+      "run_id": "baf39394-3e04-4b87-897d-4c5e3ccdb6d5",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 89459,
+          "sha256": "16bd64bc790abe2cc6cbf02f48d8d0a779901d68b2902a39f645482fd10022db"
+        },
+        "calls.jsonl": {
+          "bytes": 198290,
+          "sha256": "ff7df3c61077bda439bc14911ba1e773eb8bc56ed372a7568121882ee3026005"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 161398,
+          "sha256": "d04b7ab507a169ecc830a4332ff34fdaf41695a30460fc7f1026516fd580d7ac"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+      "receipt_sha256": "755f72f4486f179614d3127557b6e1824ac5e302c9dcbef8fc2f50c53968f735",
+      "valid": true,
+      "program": "libuser-spec.so",
+      "input_manifest": ".work/run008/sensor/initial/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 379,
+      "mapped_nonexternal_functions": 379,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
+      "summary_sha256": "e9c2e6eb5e488ff8b832730c36b37a1aff10309d7c286e8240ac30d04d7a4554",
+      "source_sha256": "c8e6c6226d634a47b805cc8ecfdbf7110620ace3ddf5668bae0e3a474752f203",
+      "run_id": "9c645b50-fdb5-4633-a97c-b1e26a539652",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 17262,
+          "sha256": "9e7bf807c5054171737bcf960eb5ddef028f0d9b8f2817f7c3335ceacbfa835f"
+        },
+        "calls.jsonl": {
+          "bytes": 2726,
+          "sha256": "44bc21e0fbb56c7ac47e26570799e81e722be6e0c3bb21cbb9598cf5263140ef"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 14506,
+          "sha256": "e63fc47f2550861ec313a11e8e46c1af79833b2643c0c4551679bb297af32fbb"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+      "receipt_sha256": "8b242699e52fc88cea0f9fc0cd8352e8899089a48ee65f9ab32b4f288282b9b1",
+      "valid": true,
+      "program": "libdi-alg-ipplatform.so",
+      "input_manifest": ".work/run008/sensor/levels/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 70,
+      "mapped_nonexternal_functions": 70,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
+      "summary_sha256": "69b35e56721bc19cc7dae28b515d2f86d35bfe4ab19f1eaa164ebc9522d11184",
+      "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+      "run_id": "9c645b50-fdb5-4633-a97c-b1e26a539652",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 60362,
+          "sha256": "db5236d2ea2c9d96732dd0fa4ac4d7d23946bd1e144232ee1a99eedd16ea9f2c"
+        },
+        "calls.jsonl": {
+          "bytes": 62234,
+          "sha256": "fa830cec8644fb569352bbe490897c5935e244af257772e012122f372b34645f"
+        },
+        "decompiled.jsonl": {
+          "bytes": 3298,
+          "sha256": "06f68b4616169fcacaf9d8614289a469da7b7bd350a8f4df8a0e579ee00f4fc5"
+        },
+        "strings.jsonl": {
+          "bytes": 46857,
+          "sha256": "8655c00d3999860189adc43d654178f1c827951dfc9e0b1f49175cc090c3cae7"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+      "receipt_sha256": "8b242699e52fc88cea0f9fc0cd8352e8899089a48ee65f9ab32b4f288282b9b1",
+      "valid": true,
+      "program": "libdi-sensor.so",
+      "input_manifest": ".work/run008/sensor/levels/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 251,
+      "mapped_nonexternal_functions": 251,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 4,
+      "decompile_completed": 4,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
+      "summary_sha256": "cffcf334dd6617150cee10ce49c55a210d777de0cf173cea1e5491808699ee23",
+      "source_sha256": "fb27249f43b671484e4c6bc028eb42b6d9c579daac30e516c7eefe0b20b3d95f",
+      "run_id": "9c645b50-fdb5-4633-a97c-b1e26a539652",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 53568,
+          "sha256": "8e0f2cfc9fda1f1cb1e2315e040a89c2d435e5a8157148a5594b841822ee6379"
+        },
+        "calls.jsonl": {
+          "bytes": 55742,
+          "sha256": "7a46147df18c567f3a0252ba00a7f063acb95547f03dd65d64d6063e3e496033"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 45610,
+          "sha256": "051a8a6baae36b142d98d3562367d1feeb07d6e7d70c3884849ad6b5f6280aae"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+      "receipt_sha256": "8b242699e52fc88cea0f9fc0cd8352e8899089a48ee65f9ab32b4f288282b9b1",
+      "valid": true,
+      "program": "libdiosal.so",
+      "input_manifest": ".work/run008/sensor/levels/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 237,
+      "mapped_nonexternal_functions": 237,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+      "summary_sha256": "1a199564b2fad6570611c2ff0684c08142679356a4b1f963be15fd2d1eb16310",
+      "source_sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+      "run_id": "9c645b50-fdb5-4633-a97c-b1e26a539652",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 92092,
+          "sha256": "5e0160a7e5b47024e763d385fd046413c1158ba835f8a0af346a6b9ff5579bf3"
+        },
+        "calls.jsonl": {
+          "bytes": 68100,
+          "sha256": "37d74f30e002c4c6a53e15ca2ddd85413c5e4e069e7df399f20b3434ff1b1c01"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 58023,
+          "sha256": "c7cda65b952309611add5f408fe9556fdee65bf8c7c80ec4503e4da78fd75773"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+      "receipt_sha256": "8b242699e52fc88cea0f9fc0cd8352e8899089a48ee65f9ab32b4f288282b9b1",
+      "valid": true,
+      "program": "libmulticore-bridge.so",
+      "input_manifest": ".work/run008/sensor/levels/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 390,
+      "mapped_nonexternal_functions": 390,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
+      "summary_sha256": "e82e827fbfc0fa64701cf8bbb5a13ebf79bbfbea72cef356de644c50821bd1b9",
+      "source_sha256": "59d2356428f528280397da46178d9cf319bb72885a2eff82a32f3f9f25131c9f",
+      "run_id": "9c645b50-fdb5-4633-a97c-b1e26a539652",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 633544,
+          "sha256": "6ff44789af48cc6dc0fded73f4833d2f42c37ad80e3e33f91f3ecd684e0d1cde"
+        },
+        "calls.jsonl": {
+          "bytes": 1153150,
+          "sha256": "768deb40f72773f0edc7a11bb6ea74f7dd764aa1ea5c3c93fdb58915fa4fde47"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 421069,
+          "sha256": "17effe137eab9e95d611718c08bcdcb05fa099147a8b26d574a9bbe0f0035343"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+      "receipt_sha256": "8b242699e52fc88cea0f9fc0cd8352e8899089a48ee65f9ab32b4f288282b9b1",
+      "valid": true,
+      "program": "libpalm.so",
+      "input_manifest": ".work/run008/sensor/levels/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 2390,
+      "mapped_nonexternal_functions": 2390,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
+      "summary_sha256": "f4606ea67937108801859293aea28f5c3e40d5cbb5256f499299283e4110a6f1",
+      "source_sha256": "c44802d1983bd07eaf53f02761cf402143bce245b7e5d20499c62ce1164df18d",
+      "run_id": "9c645b50-fdb5-4633-a97c-b1e26a539652",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 37476,
+          "sha256": "1ee55e2bc99c608f903714699bdd525c115f77a41e9630a2c16d81d5dece5228"
+        },
+        "calls.jsonl": {
+          "bytes": 52368,
+          "sha256": "1202af6f846904225be2ed7701b491d595dad0c22b5f4c2e6a6eb42cbf5c2c9a"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 174939,
+          "sha256": "e64a5675cff4f3e310e8cc4922b9856ac3231529cc33938e81372a8aade5c701"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+      "receipt_sha256": "8b242699e52fc88cea0f9fc0cd8352e8899089a48ee65f9ab32b4f288282b9b1",
+      "valid": true,
+      "program": "libprefman.so",
+      "input_manifest": ".work/run008/sensor/levels/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 174,
+      "mapped_nonexternal_functions": 174,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
+      "summary_sha256": "89e86493a320881c6f0c5038b222035f9e37bab9c8ac732b1c32334d4abf7f53",
+      "source_sha256": "8c56bea30a591fbfb8e9e86c237504f5e28f464f74c18cffc8bbaa7f717b0ea1",
+      "run_id": "9c645b50-fdb5-4633-a97c-b1e26a539652",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 226664,
+          "sha256": "5362499d33540bc83e2f0fc2a6125dc29f779cf5b773b6c0792e6e458d705a90"
+        },
+        "calls.jsonl": {
+          "bytes": 267782,
+          "sha256": "652ad618fea7d7e4ddbaae42d896fdd1597533ac6e322c54b1273f02d89b75c5"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 109074,
+          "sha256": "9eb64f5d7456b292d327fc8e3d78afb1ded516e54b72610d5e4cf4c59087966c"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+      "receipt_sha256": "8b242699e52fc88cea0f9fc0cd8352e8899089a48ee65f9ab32b4f288282b9b1",
+      "valid": true,
+      "program": "libudd5.so",
+      "input_manifest": ".work/run008/sensor/levels/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 1017,
+      "mapped_nonexternal_functions": 1017,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+      "summary_sha256": "9d99f0f0ccd4237947dac1102014a8c3e6adfe3de38a0db1120772dea09b9dcb",
+      "source_sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec",
+      "run_id": "9c645b50-fdb5-4633-a97c-b1e26a539652",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 89459,
+          "sha256": "16bd64bc790abe2cc6cbf02f48d8d0a779901d68b2902a39f645482fd10022db"
+        },
+        "calls.jsonl": {
+          "bytes": 198290,
+          "sha256": "7f712e0f352bbef282414c5bcc455511f57c8ee609b38fe758c71367e28bf167"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 161398,
+          "sha256": "d04b7ab507a169ecc830a4332ff34fdaf41695a30460fc7f1026516fd580d7ac"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+      "receipt_sha256": "8b242699e52fc88cea0f9fc0cd8352e8899089a48ee65f9ab32b4f288282b9b1",
+      "valid": true,
+      "program": "libuser-spec.so",
+      "input_manifest": ".work/run008/sensor/levels/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 379,
+      "mapped_nonexternal_functions": 379,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
+      "summary_sha256": "b319e31ec9372255a4c37e36cdf384ad549b942040a77f97bb35318e74758685",
+      "source_sha256": "c8e6c6226d634a47b805cc8ecfdbf7110620ace3ddf5668bae0e3a474752f203",
+      "run_id": "07d57750-9f47-466e-bd59-3505e2f4c51e",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 17262,
+          "sha256": "9e7bf807c5054171737bcf960eb5ddef028f0d9b8f2817f7c3335ceacbfa835f"
+        },
+        "calls.jsonl": {
+          "bytes": 2726,
+          "sha256": "fe7ce730af8aa98456de2571b09f6b9e094008715dead230147ff96501167eb5"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 14506,
+          "sha256": "e63fc47f2550861ec313a11e8e46c1af79833b2643c0c4551679bb297af32fbb"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json",
+      "receipt_sha256": "1856dcff63887c0142cbca55f875a1542ddd1c24149445d904861eb1f5902d72",
+      "valid": true,
+      "program": "libdi-alg-ipplatform.so",
+      "input_manifest": ".work/run008/sensor/thermometer/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 70,
+      "mapped_nonexternal_functions": 70,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
+      "summary_sha256": "582510c815e665bb0ac782354dab73c8f53a08393c8a7298b0ef1174d80f265d",
+      "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+      "run_id": "07d57750-9f47-466e-bd59-3505e2f4c51e",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 60362,
+          "sha256": "db5236d2ea2c9d96732dd0fa4ac4d7d23946bd1e144232ee1a99eedd16ea9f2c"
+        },
+        "calls.jsonl": {
+          "bytes": 62234,
+          "sha256": "6bf1ef290dc75c3461e7d9d4edd216386638e6abcf5885ff87939a81fcaaef4d"
+        },
+        "decompiled.jsonl": {
+          "bytes": 39597,
+          "sha256": "712c2dfaf2eea7eda4f143d2b6bf1b031af3a17442f65217a1674f8d8b537653"
+        },
+        "strings.jsonl": {
+          "bytes": 46857,
+          "sha256": "8655c00d3999860189adc43d654178f1c827951dfc9e0b1f49175cc090c3cae7"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json",
+      "receipt_sha256": "1856dcff63887c0142cbca55f875a1542ddd1c24149445d904861eb1f5902d72",
+      "valid": true,
+      "program": "libdi-sensor.so",
+      "input_manifest": ".work/run008/sensor/thermometer/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 251,
+      "mapped_nonexternal_functions": 251,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 4,
+      "decompile_completed": 4,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
+      "summary_sha256": "5bbda12bf4cee9200835cabca0138a4db37f056d6c636bfd9a7f6e5051335023",
+      "source_sha256": "fb27249f43b671484e4c6bc028eb42b6d9c579daac30e516c7eefe0b20b3d95f",
+      "run_id": "07d57750-9f47-466e-bd59-3505e2f4c51e",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 53568,
+          "sha256": "8e0f2cfc9fda1f1cb1e2315e040a89c2d435e5a8157148a5594b841822ee6379"
+        },
+        "calls.jsonl": {
+          "bytes": 55742,
+          "sha256": "80cc4e4e0aa2acdeb3a8f5f6f7e3bea0d1360ee7ef3dd0f64d95ef85ba46043e"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 45610,
+          "sha256": "051a8a6baae36b142d98d3562367d1feeb07d6e7d70c3884849ad6b5f6280aae"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json",
+      "receipt_sha256": "1856dcff63887c0142cbca55f875a1542ddd1c24149445d904861eb1f5902d72",
+      "valid": true,
+      "program": "libdiosal.so",
+      "input_manifest": ".work/run008/sensor/thermometer/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 237,
+      "mapped_nonexternal_functions": 237,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+      "summary_sha256": "e60c02e8cbb096d8a175f218c958ac782eb941be337882b1d779972a57d95f89",
+      "source_sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+      "run_id": "07d57750-9f47-466e-bd59-3505e2f4c51e",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 92092,
+          "sha256": "5e0160a7e5b47024e763d385fd046413c1158ba835f8a0af346a6b9ff5579bf3"
+        },
+        "calls.jsonl": {
+          "bytes": 68100,
+          "sha256": "1ba9ac47bd26448804f82583f337af7655537d36ac9185ba961a7a0dcb18b536"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 58023,
+          "sha256": "c7cda65b952309611add5f408fe9556fdee65bf8c7c80ec4503e4da78fd75773"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json",
+      "receipt_sha256": "1856dcff63887c0142cbca55f875a1542ddd1c24149445d904861eb1f5902d72",
+      "valid": true,
+      "program": "libmulticore-bridge.so",
+      "input_manifest": ".work/run008/sensor/thermometer/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 390,
+      "mapped_nonexternal_functions": 390,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
+      "summary_sha256": "8827db81d4dd82b6500d1208111638aea59a6e22b7457baf4be6071bfb3dcb12",
+      "source_sha256": "59d2356428f528280397da46178d9cf319bb72885a2eff82a32f3f9f25131c9f",
+      "run_id": "07d57750-9f47-466e-bd59-3505e2f4c51e",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 633544,
+          "sha256": "6ff44789af48cc6dc0fded73f4833d2f42c37ad80e3e33f91f3ecd684e0d1cde"
+        },
+        "calls.jsonl": {
+          "bytes": 1153150,
+          "sha256": "0103a6c25ebde3e043b24da0ec9268feb7cbcb19872d11992a993953378963e8"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 421069,
+          "sha256": "17effe137eab9e95d611718c08bcdcb05fa099147a8b26d574a9bbe0f0035343"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json",
+      "receipt_sha256": "1856dcff63887c0142cbca55f875a1542ddd1c24149445d904861eb1f5902d72",
+      "valid": true,
+      "program": "libpalm.so",
+      "input_manifest": ".work/run008/sensor/thermometer/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 2390,
+      "mapped_nonexternal_functions": 2390,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
+      "summary_sha256": "451c6f538936c25872dd4cbfd378ef42d1af5c444875dd81c3682b3265a72b42",
+      "source_sha256": "c44802d1983bd07eaf53f02761cf402143bce245b7e5d20499c62ce1164df18d",
+      "run_id": "07d57750-9f47-466e-bd59-3505e2f4c51e",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 37476,
+          "sha256": "1ee55e2bc99c608f903714699bdd525c115f77a41e9630a2c16d81d5dece5228"
+        },
+        "calls.jsonl": {
+          "bytes": 52368,
+          "sha256": "931a505b185b90caafc0a76d5e2eeca8de1d2a924be88ebfa79839b10416ecdd"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 174939,
+          "sha256": "e64a5675cff4f3e310e8cc4922b9856ac3231529cc33938e81372a8aade5c701"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json",
+      "receipt_sha256": "1856dcff63887c0142cbca55f875a1542ddd1c24149445d904861eb1f5902d72",
+      "valid": true,
+      "program": "libprefman.so",
+      "input_manifest": ".work/run008/sensor/thermometer/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 174,
+      "mapped_nonexternal_functions": 174,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
+      "summary_sha256": "3e8667eeddaf5e02a6cc52bf7462ec53f1f1702fe22e749fc9f5b49e00c6b9b8",
+      "source_sha256": "8c56bea30a591fbfb8e9e86c237504f5e28f464f74c18cffc8bbaa7f717b0ea1",
+      "run_id": "07d57750-9f47-466e-bd59-3505e2f4c51e",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 226664,
+          "sha256": "5362499d33540bc83e2f0fc2a6125dc29f779cf5b773b6c0792e6e458d705a90"
+        },
+        "calls.jsonl": {
+          "bytes": 267782,
+          "sha256": "f2b12bd537da6aa432341e70e942fffdcb6abc9529565243f2b37ea16445bc4d"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 109074,
+          "sha256": "9eb64f5d7456b292d327fc8e3d78afb1ded516e54b72610d5e4cf4c59087966c"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json",
+      "receipt_sha256": "1856dcff63887c0142cbca55f875a1542ddd1c24149445d904861eb1f5902d72",
+      "valid": true,
+      "program": "libudd5.so",
+      "input_manifest": ".work/run008/sensor/thermometer/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 1017,
+      "mapped_nonexternal_functions": 1017,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+      "summary_sha256": "e6d48ce10371cf7b95c8ad7bd47dafd3103635ff2a4fec211c9b0f6f7fac70b9",
+      "source_sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec",
+      "run_id": "07d57750-9f47-466e-bd59-3505e2f4c51e",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 89459,
+          "sha256": "16bd64bc790abe2cc6cbf02f48d8d0a779901d68b2902a39f645482fd10022db"
+        },
+        "calls.jsonl": {
+          "bytes": 198290,
+          "sha256": "b3e886a1219c195f85475b732cbc2eb2d0f2b9beba982604effd028fe81ed9dd"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 161398,
+          "sha256": "d04b7ab507a169ecc830a4332ff34fdaf41695a30460fc7f1026516fd580d7ac"
+        }
+      },
+      "receipt_path": ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json",
+      "receipt_sha256": "1856dcff63887c0142cbca55f875a1542ddd1c24149445d904861eb1f5902d72",
+      "valid": true,
+      "program": "libuser-spec.so",
+      "input_manifest": ".work/run008/sensor/thermometer/input-manifest.json",
+      "input_manifest_sha256": "97ec8aaa02bbfd94f3c90f95b5c0ee8bc7b4b12bb7ec0fba892d5473e3b0b20d",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 379,
+      "mapped_nonexternal_functions": 379,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
     }
   ],
   "validation_errors": [
@@ -22322,6 +24626,10 @@
     {
       "path": "manifests/review-run007.json",
       "sha256": "559e21f99427d458d4e6d17432593b1a9e754985b1cb87a3bbb7cff08b0f22d8"
+    },
+    {
+      "path": "manifests/review-run008.json",
+      "sha256": "f87d9db6b148d2b82dc6affd55d7a464daac098586505f11ce458a3ad16e30ef"
     }
   ],
   "programs": [
@@ -28802,7 +31110,9 @@
         ".work/run006/app-linked/outputs/ghidra/system-recovery-161f5656f5d9/summary.json",
         ".work/run006/app-registration/outputs/ghidra/system-recovery-161f5656f5d9/summary.json",
         ".work/run006/app-transport/outputs/ghidra/system-recovery-161f5656f5d9/summary.json",
-        ".work/run006/app-url-info/outputs/ghidra/system-recovery-161f5656f5d9/summary.json"
+        ".work/run006/app-url-info/outputs/ghidra/system-recovery-161f5656f5d9/summary.json",
+        ".work/run008/app/initial/outputs/ghidra/system-recovery-161f5656f5d9/summary.json",
+        ".work/run008/app/sensor/outputs/ghidra/system-recovery-161f5656f5d9/summary.json"
       ],
       "import_receipts": [],
       "auto_analysis_completed_receipts": [],
@@ -28821,7 +31131,9 @@
         ".work/run006/app-linked/logs/NX500_FW112_SURVEY-190a3d47-ba05-4c90-b641-f7a147b15b25.json",
         ".work/run006/app-registration/logs/NX500_FW112_SURVEY-d1ff4011-ea96-4c7b-9f3e-486462ed84b9.json",
         ".work/run006/app-transport/logs/NX500_FW112_SURVEY-3988ad1e-d42c-45f6-b232-1d6076b638a7.json",
-        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json"
+        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json",
+        ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+        ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json"
       ],
       "reviewed_units": [],
       "decompile_failed_attempts": [],
@@ -28900,6 +31212,16 @@
         {
           "summary_path": ".work/run006/app-url-info/outputs/ghidra/system-recovery-161f5656f5d9/summary.json",
           "pattern": "^UPnPCDSRVFShotwithGPS::getURLInfo$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/initial/outputs/ghidra/system-recovery-161f5656f5d9/summary.json",
+          "pattern": "^UI_Get_Display_Temperature_Status$|^CAPPGUIPreviewState::onEventThermometer$|^CAPPGUIPreviewView::(on_timer_temperature|timer_start_temperature)$|^set_temperature$|^CAPPGUITopState::onEventDisplayTemperature$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/sensor/outputs/ghidra/system-recovery-161f5656f5d9/summary.json",
+          "pattern": "^UI_Di_Sensor_Get_Temp_(Sensor|Cpu|Isp|Level)$",
           "omitted_by_budget": 0
         }
       ],
@@ -35807,7 +38129,10 @@
         ".work/run003/capture/followup/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
         ".work/run006/app-bridge-buffer/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
         ".work/run006/app-bridge-handoff/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
-        ".work/run006/app-bridge-initial/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json"
+        ".work/run006/app-bridge-initial/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+        ".work/run008/sensor/initial/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+        ".work/run008/sensor/levels/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+        ".work/run008/sensor/thermometer/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json"
       ],
       "import_receipts": [
         ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json"
@@ -35819,7 +38144,10 @@
         ".work/run003/capture/followup/logs/NX500_RUN003_CAPTURE-d5e2998f-c8f1-437b-9bee-956109001def.json",
         ".work/run006/app-bridge-buffer/logs/NX500_RUN003_CAPTURE-30543645-8d9c-42c3-88a0-39fc2518889d.json",
         ".work/run006/app-bridge-handoff/logs/NX500_RUN003_CAPTURE-1bfcf6ab-95f8-4e9a-b546-4b8fa4b72ab7.json",
-        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json"
+        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json",
+        ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+        ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+        ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json"
       ],
       "reviewed_units": [
         {
@@ -35897,6 +38225,21 @@
         {
           "summary_path": ".work/run006/app-bridge-initial/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
           "pattern": "(mcb_register_handler$|CFrame::Receive$|CIPCCDriverIf::Receive$|CReceiver::OnReceived$|CReceiver::receive$|CReceiver::t_Main$|CMulticoreBridge::_myReceiver$)",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+          "pattern": "^sensorapi::get_value$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+          "pattern": "^csensor_thermometer::(get_level|csensor_thermometer)$|^csensor_module::(lock|unlock)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+          "pattern": "^csensor_thermometer::(initialize|update_value|get_value)$|^sensorapi::initialize$",
           "omitted_by_budget": 0
         }
       ],
@@ -44871,7 +47214,9 @@
         ".work/run006/app-linked/outputs/ghidra/libmmf-camcorder.so-49f89956d0a0/summary.json",
         ".work/run006/app-registration/outputs/ghidra/libmmf-camcorder.so-49f89956d0a0/summary.json",
         ".work/run006/app-transport/outputs/ghidra/libmmf-camcorder.so-49f89956d0a0/summary.json",
-        ".work/run006/app-url-info/outputs/ghidra/libmmf-camcorder.so-49f89956d0a0/summary.json"
+        ".work/run006/app-url-info/outputs/ghidra/libmmf-camcorder.so-49f89956d0a0/summary.json",
+        ".work/run008/app/initial/outputs/ghidra/libmmf-camcorder.so-49f89956d0a0/summary.json",
+        ".work/run008/app/sensor/outputs/ghidra/libmmf-camcorder.so-49f89956d0a0/summary.json"
       ],
       "import_receipts": [],
       "auto_analysis_completed_receipts": [],
@@ -44890,7 +47235,9 @@
         ".work/run006/app-linked/logs/NX500_FW112_SURVEY-190a3d47-ba05-4c90-b641-f7a147b15b25.json",
         ".work/run006/app-registration/logs/NX500_FW112_SURVEY-d1ff4011-ea96-4c7b-9f3e-486462ed84b9.json",
         ".work/run006/app-transport/logs/NX500_FW112_SURVEY-3988ad1e-d42c-45f6-b232-1d6076b638a7.json",
-        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json"
+        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json",
+        ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+        ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json"
       ],
       "reviewed_units": [],
       "decompile_failed_attempts": [],
@@ -44969,6 +47316,16 @@
         {
           "summary_path": ".work/run006/app-url-info/outputs/ghidra/libmmf-camcorder.so-49f89956d0a0/summary.json",
           "pattern": "^UPnPCDSRVFShotwithGPS::getURLInfo$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/initial/outputs/ghidra/libmmf-camcorder.so-49f89956d0a0/summary.json",
+          "pattern": "^UI_Get_Display_Temperature_Status$|^CAPPGUIPreviewState::onEventThermometer$|^CAPPGUIPreviewView::(on_timer_temperature|timer_start_temperature)$|^set_temperature$|^CAPPGUITopState::onEventDisplayTemperature$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/sensor/outputs/ghidra/libmmf-camcorder.so-49f89956d0a0/summary.json",
+          "pattern": "^UI_Di_Sensor_Get_Temp_(Sensor|Cpu|Isp|Level)$",
           "omitted_by_budget": 0
         }
       ],
@@ -46916,7 +49273,9 @@
         ".work/run006/app-linked/outputs/ghidra/nfc-manager-daemon-4f71b292ced7/summary.json",
         ".work/run006/app-registration/outputs/ghidra/nfc-manager-daemon-4f71b292ced7/summary.json",
         ".work/run006/app-transport/outputs/ghidra/nfc-manager-daemon-4f71b292ced7/summary.json",
-        ".work/run006/app-url-info/outputs/ghidra/nfc-manager-daemon-4f71b292ced7/summary.json"
+        ".work/run006/app-url-info/outputs/ghidra/nfc-manager-daemon-4f71b292ced7/summary.json",
+        ".work/run008/app/initial/outputs/ghidra/nfc-manager-daemon-4f71b292ced7/summary.json",
+        ".work/run008/app/sensor/outputs/ghidra/nfc-manager-daemon-4f71b292ced7/summary.json"
       ],
       "import_receipts": [],
       "auto_analysis_completed_receipts": [],
@@ -46935,7 +49294,9 @@
         ".work/run006/app-linked/logs/NX500_FW112_SURVEY-190a3d47-ba05-4c90-b641-f7a147b15b25.json",
         ".work/run006/app-registration/logs/NX500_FW112_SURVEY-d1ff4011-ea96-4c7b-9f3e-486462ed84b9.json",
         ".work/run006/app-transport/logs/NX500_FW112_SURVEY-3988ad1e-d42c-45f6-b232-1d6076b638a7.json",
-        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json"
+        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json",
+        ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+        ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json"
       ],
       "reviewed_units": [],
       "decompile_failed_attempts": [],
@@ -47014,6 +49375,16 @@
         {
           "summary_path": ".work/run006/app-url-info/outputs/ghidra/nfc-manager-daemon-4f71b292ced7/summary.json",
           "pattern": "^UPnPCDSRVFShotwithGPS::getURLInfo$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/initial/outputs/ghidra/nfc-manager-daemon-4f71b292ced7/summary.json",
+          "pattern": "^UI_Get_Display_Temperature_Status$|^CAPPGUIPreviewState::onEventThermometer$|^CAPPGUIPreviewView::(on_timer_temperature|timer_start_temperature)$|^set_temperature$|^CAPPGUITopState::onEventDisplayTemperature$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/sensor/outputs/ghidra/nfc-manager-daemon-4f71b292ced7/summary.json",
+          "pattern": "^UI_Di_Sensor_Get_Temp_(Sensor|Cpu|Isp|Level)$",
           "omitted_by_budget": 0
         }
       ],
@@ -49609,7 +51980,9 @@
         ".work/run006/app-linked/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
         ".work/run006/app-registration/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
         ".work/run006/app-transport/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
-        ".work/run006/app-url-info/outputs/ghidra/di-camera-app-55dcc7814372/summary.json"
+        ".work/run006/app-url-info/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
+        ".work/run008/app/initial/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
+        ".work/run008/app/sensor/outputs/ghidra/di-camera-app-55dcc7814372/summary.json"
       ],
       "import_receipts": [],
       "auto_analysis_completed_receipts": [],
@@ -49628,7 +52001,9 @@
         ".work/run006/app-linked/logs/NX500_FW112_SURVEY-190a3d47-ba05-4c90-b641-f7a147b15b25.json",
         ".work/run006/app-registration/logs/NX500_FW112_SURVEY-d1ff4011-ea96-4c7b-9f3e-486462ed84b9.json",
         ".work/run006/app-transport/logs/NX500_FW112_SURVEY-3988ad1e-d42c-45f6-b232-1d6076b638a7.json",
-        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json"
+        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json",
+        ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+        ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json"
       ],
       "reviewed_units": [
         {
@@ -49803,6 +52178,24 @@
           ],
           "reviewer": "primary agent",
           "independent_review_completed": false
+        },
+        {
+          "id": "THERM008-DISPLAY",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "original_elf_va": "0x2b10dc",
+          "evidence": "analysis/evidence/thermal-userspace-run008.json",
+          "evidence_sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+          "method": "Primary-agent selected C and original PT_LOAD-mapped ARM/Thumb windows, saved TMode contexts and exact relocations",
+          "claim": "App OSD display requests Sensor/CPU/ISP through sensorapi ID2 wrappers; the separate preview temperature timer only toggles its icon.",
+          "limitations": [
+            "UI entry guards and active display/recording policy remain runtime questions.",
+            "Independent semantic review remains incomplete after actual reviewer quota failure."
+          ],
+          "unresolved_questions": [
+            "UI entry guards and active display/recording policy remain runtime questions."
+          ],
+          "independent_review_completed": false
         }
       ],
       "decompile_failed_attempts": [],
@@ -49882,6 +52275,16 @@
           "summary_path": ".work/run006/app-url-info/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
           "pattern": "^UPnPCDSRVFShotwithGPS::getURLInfo$",
           "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/initial/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
+          "pattern": "^UI_Get_Display_Temperature_Status$|^CAPPGUIPreviewState::onEventThermometer$|^CAPPGUIPreviewView::(on_timer_temperature|timer_start_temperature)$|^set_temperature$|^CAPPGUITopState::onEventDisplayTemperature$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/sensor/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
+          "pattern": "^UI_Di_Sensor_Get_Temp_(Sensor|Cpu|Isp|Level)$",
+          "omitted_by_budget": 0
         }
       ],
       "stages": {
@@ -49894,8 +52297,8 @@
       },
       "function_counts": {
         "mapped_nonexternal_exported": 9258,
-        "selected_attempted_unique": 53,
-        "selected_completed_unique": 53,
+        "selected_attempted_unique": 63,
+        "selected_completed_unique": 63,
         "abi_unverified_unique": 9258
       },
       "pending_work_units": [
@@ -49913,7 +52316,8 @@
         "Who emits dispatcher id0x39 and how is duplicate accounting prevented?",
         "What conditions reject partial or stale contents in later transfer execution?",
         "Conditional on installed callback and entry guards; dual notification for one capture is not established.",
-        "No file-success or remote-receipt inference; substring test is not an extension parser."
+        "No file-success or remote-receipt inference; substring test is not an extension parser.",
+        "UI entry guards and active display/recording policy remain runtime questions."
       ]
     },
     {
@@ -51916,7 +54320,10 @@
         ".work/run003/capture/followup/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
         ".work/run006/app-bridge-buffer/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
         ".work/run006/app-bridge-handoff/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
-        ".work/run006/app-bridge-initial/outputs/ghidra/libpalm.so-59d2356428f5/summary.json"
+        ".work/run006/app-bridge-initial/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
+        ".work/run008/sensor/initial/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
+        ".work/run008/sensor/levels/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
+        ".work/run008/sensor/thermometer/outputs/ghidra/libpalm.so-59d2356428f5/summary.json"
       ],
       "import_receipts": [
         ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json"
@@ -51928,7 +54335,10 @@
         ".work/run003/capture/followup/logs/NX500_RUN003_CAPTURE-d5e2998f-c8f1-437b-9bee-956109001def.json",
         ".work/run006/app-bridge-buffer/logs/NX500_RUN003_CAPTURE-30543645-8d9c-42c3-88a0-39fc2518889d.json",
         ".work/run006/app-bridge-handoff/logs/NX500_RUN003_CAPTURE-1bfcf6ab-95f8-4e9a-b546-4b8fa4b72ab7.json",
-        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json"
+        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json",
+        ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+        ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+        ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json"
       ],
       "reviewed_units": [],
       "decompile_failed_attempts": [],
@@ -51957,6 +54367,21 @@
         {
           "summary_path": ".work/run006/app-bridge-initial/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
           "pattern": "(mcb_register_handler$|CFrame::Receive$|CIPCCDriverIf::Receive$|CReceiver::OnReceived$|CReceiver::receive$|CReceiver::t_Main$|CMulticoreBridge::_myReceiver$)",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
+          "pattern": "^sensorapi::get_value$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
+          "pattern": "^csensor_thermometer::(get_level|csensor_thermometer)$|^csensor_module::(lock|unlock)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libpalm.so-59d2356428f5/summary.json",
+          "pattern": "^csensor_thermometer::(initialize|update_value|get_value)$|^sensorapi::initialize$",
           "omitted_by_budget": 0
         }
       ],
@@ -55048,7 +57473,9 @@
         ".work/run006/app-linked/outputs/ghidra/mtp-responder-630d4f6c8beb/summary.json",
         ".work/run006/app-registration/outputs/ghidra/mtp-responder-630d4f6c8beb/summary.json",
         ".work/run006/app-transport/outputs/ghidra/mtp-responder-630d4f6c8beb/summary.json",
-        ".work/run006/app-url-info/outputs/ghidra/mtp-responder-630d4f6c8beb/summary.json"
+        ".work/run006/app-url-info/outputs/ghidra/mtp-responder-630d4f6c8beb/summary.json",
+        ".work/run008/app/initial/outputs/ghidra/mtp-responder-630d4f6c8beb/summary.json",
+        ".work/run008/app/sensor/outputs/ghidra/mtp-responder-630d4f6c8beb/summary.json"
       ],
       "import_receipts": [],
       "auto_analysis_completed_receipts": [],
@@ -55067,7 +57494,9 @@
         ".work/run006/app-linked/logs/NX500_FW112_SURVEY-190a3d47-ba05-4c90-b641-f7a147b15b25.json",
         ".work/run006/app-registration/logs/NX500_FW112_SURVEY-d1ff4011-ea96-4c7b-9f3e-486462ed84b9.json",
         ".work/run006/app-transport/logs/NX500_FW112_SURVEY-3988ad1e-d42c-45f6-b232-1d6076b638a7.json",
-        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json"
+        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json",
+        ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+        ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json"
       ],
       "reviewed_units": [],
       "decompile_failed_attempts": [],
@@ -55146,6 +57575,16 @@
         {
           "summary_path": ".work/run006/app-url-info/outputs/ghidra/mtp-responder-630d4f6c8beb/summary.json",
           "pattern": "^UPnPCDSRVFShotwithGPS::getURLInfo$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/initial/outputs/ghidra/mtp-responder-630d4f6c8beb/summary.json",
+          "pattern": "^UI_Get_Display_Temperature_Status$|^CAPPGUIPreviewState::onEventThermometer$|^CAPPGUIPreviewView::(on_timer_temperature|timer_start_temperature)$|^set_temperature$|^CAPPGUITopState::onEventDisplayTemperature$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/sensor/outputs/ghidra/mtp-responder-630d4f6c8beb/summary.json",
+          "pattern": "^UI_Di_Sensor_Get_Temp_(Sensor|Cpu|Isp|Level)$",
           "omitted_by_budget": 0
         }
       ],
@@ -60839,7 +63278,10 @@
         ".work/run003/capture/followup/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
         ".work/run006/app-bridge-buffer/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
         ".work/run006/app-bridge-handoff/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
-        ".work/run006/app-bridge-initial/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json"
+        ".work/run006/app-bridge-initial/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
+        ".work/run008/sensor/initial/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
+        ".work/run008/sensor/levels/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
+        ".work/run008/sensor/thermometer/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json"
       ],
       "import_receipts": [
         ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json"
@@ -60851,7 +63293,10 @@
         ".work/run003/capture/followup/logs/NX500_RUN003_CAPTURE-d5e2998f-c8f1-437b-9bee-956109001def.json",
         ".work/run006/app-bridge-buffer/logs/NX500_RUN003_CAPTURE-30543645-8d9c-42c3-88a0-39fc2518889d.json",
         ".work/run006/app-bridge-handoff/logs/NX500_RUN003_CAPTURE-1bfcf6ab-95f8-4e9a-b546-4b8fa4b72ab7.json",
-        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json"
+        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json",
+        ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+        ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+        ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json"
       ],
       "reviewed_units": [
         {
@@ -60869,6 +63314,60 @@
             "How is failure propagated elsewhere?"
           ],
           "evidence_sha256": "daa4b3b2bbdae78772b6b81b7bfdade00718ad6937f3546c19b126a454486b70"
+        },
+        {
+          "id": "THERM008-MODULE",
+          "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+          "original_path": "/usr/lib/libdi-sensor.so",
+          "original_elf_va": "0x514c",
+          "evidence": "analysis/evidence/thermal-userspace-run008.json",
+          "evidence_sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+          "method": "Primary-agent selected C and original PT_LOAD-mapped ARM/Thumb windows, saved TMode contexts and exact relocations",
+          "claim": "API initialization installs thermometer object in slot2; ctor and ABS32 virtual entries bind update4728 and getter41f8.",
+          "limitations": [
+            "Conditional on initialization and stable callback/object binding; dynamic replacement remains unobserved.",
+            "Independent semantic review remains incomplete after actual reviewer quota failure."
+          ],
+          "unresolved_questions": [
+            "Conditional on initialization and stable callback/object binding; dynamic replacement remains unobserved."
+          ],
+          "independent_review_completed": false
+        },
+        {
+          "id": "THERM008-ACQUIRE",
+          "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+          "original_path": "/usr/lib/libdi-sensor.so",
+          "original_elf_va": "0x4728",
+          "evidence": "analysis/evidence/thermal-userspace-run008.json",
+          "evidence_sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+          "method": "Primary-agent selected C and original PT_LOAD-mapped ARM/Thumb windows, saved TMode contexts and exact relocations",
+          "claim": "Thermometer updates request40 bytes from drime5-thermister and read separate d5_tsu ISP/CPU paths; getters select locked cached fields.",
+          "limitations": [
+            "Physical units, conversion correctness, partial/error reads and complete resource/lock lifecycle are not established.",
+            "Independent semantic review remains incomplete after actual reviewer quota failure."
+          ],
+          "unresolved_questions": [
+            "Physical units, conversion correctness, partial/error reads and complete resource/lock lifecycle are not established."
+          ],
+          "independent_review_completed": false
+        },
+        {
+          "id": "THERM008-LEVEL",
+          "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+          "original_path": "/usr/lib/libdi-sensor.so",
+          "original_elf_va": "0x46f8",
+          "evidence": "analysis/evidence/thermal-userspace-run008.json",
+          "evidence_sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+          "method": "Primary-agent selected C and original PT_LOAD-mapped ARM/Thumb windows, saved TMode contexts and exact relocations",
+          "claim": "Signed comparisons classify below lower as0, below upper as1, otherwise2; initialize loads concrete adjustment IDs and update filters candidate changes across consecutive evaluations.",
+          "limitations": [
+            "Actual adjustment words, mode0/default behavior, cadence, callback delivery and final stop/shutdown policy remain unresolved.",
+            "Independent semantic review remains incomplete after actual reviewer quota failure."
+          ],
+          "unresolved_questions": [
+            "Actual adjustment words, mode0/default behavior, cadence, callback delivery and final stop/shutdown policy remain unresolved."
+          ],
+          "independent_review_completed": false
         }
       ],
       "decompile_failed_attempts": [],
@@ -60898,6 +63397,21 @@
           "summary_path": ".work/run006/app-bridge-initial/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
           "pattern": "(mcb_register_handler$|CFrame::Receive$|CIPCCDriverIf::Receive$|CReceiver::OnReceived$|CReceiver::receive$|CReceiver::t_Main$|CMulticoreBridge::_myReceiver$)",
           "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
+          "pattern": "^sensorapi::get_value$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
+          "pattern": "^csensor_thermometer::(get_level|csensor_thermometer)$|^csensor_module::(lock|unlock)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libdi-sensor.so-75541051bc8e/summary.json",
+          "pattern": "^csensor_thermometer::(initialize|update_value|get_value)$|^sensorapi::initialize$",
+          "omitted_by_budget": 0
         }
       ],
       "stages": {
@@ -60910,8 +63424,8 @@
       },
       "function_counts": {
         "mapped_nonexternal_exported": 251,
-        "selected_attempted_unique": 3,
-        "selected_completed_unique": 3,
+        "selected_attempted_unique": 11,
+        "selected_completed_unique": 11,
         "abi_unverified_unique": 251
       },
       "pending_work_units": [
@@ -60919,7 +63433,10 @@
       ],
       "unresolved_questions": [
         "Which consumer handles these messages?",
-        "How is failure propagated elsewhere?"
+        "How is failure propagated elsewhere?",
+        "Conditional on initialization and stable callback/object binding; dynamic replacement remains unobserved.",
+        "Physical units, conversion correctness, partial/error reads and complete resource/lock lifecycle are not established.",
+        "Actual adjustment words, mode0/default behavior, cadence, callback delivery and final stop/shutdown policy remain unresolved."
       ]
     },
     {
@@ -63416,7 +65933,9 @@
         ".work/run006/app-linked/outputs/ghidra/fw_upgrade_recovery-7bf571fa83ce/summary.json",
         ".work/run006/app-registration/outputs/ghidra/fw_upgrade_recovery-7bf571fa83ce/summary.json",
         ".work/run006/app-transport/outputs/ghidra/fw_upgrade_recovery-7bf571fa83ce/summary.json",
-        ".work/run006/app-url-info/outputs/ghidra/fw_upgrade_recovery-7bf571fa83ce/summary.json"
+        ".work/run006/app-url-info/outputs/ghidra/fw_upgrade_recovery-7bf571fa83ce/summary.json",
+        ".work/run008/app/initial/outputs/ghidra/fw_upgrade_recovery-7bf571fa83ce/summary.json",
+        ".work/run008/app/sensor/outputs/ghidra/fw_upgrade_recovery-7bf571fa83ce/summary.json"
       ],
       "import_receipts": [],
       "auto_analysis_completed_receipts": [],
@@ -63435,7 +65954,9 @@
         ".work/run006/app-linked/logs/NX500_FW112_SURVEY-190a3d47-ba05-4c90-b641-f7a147b15b25.json",
         ".work/run006/app-registration/logs/NX500_FW112_SURVEY-d1ff4011-ea96-4c7b-9f3e-486462ed84b9.json",
         ".work/run006/app-transport/logs/NX500_FW112_SURVEY-3988ad1e-d42c-45f6-b232-1d6076b638a7.json",
-        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json"
+        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json",
+        ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+        ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json"
       ],
       "reviewed_units": [],
       "decompile_failed_attempts": [],
@@ -63514,6 +66035,16 @@
         {
           "summary_path": ".work/run006/app-url-info/outputs/ghidra/fw_upgrade_recovery-7bf571fa83ce/summary.json",
           "pattern": "^UPnPCDSRVFShotwithGPS::getURLInfo$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/initial/outputs/ghidra/fw_upgrade_recovery-7bf571fa83ce/summary.json",
+          "pattern": "^UI_Get_Display_Temperature_Status$|^CAPPGUIPreviewState::onEventThermometer$|^CAPPGUIPreviewView::(on_timer_temperature|timer_start_temperature)$|^set_temperature$|^CAPPGUITopState::onEventDisplayTemperature$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/sensor/outputs/ghidra/fw_upgrade_recovery-7bf571fa83ce/summary.json",
+          "pattern": "^UI_Di_Sensor_Get_Temp_(Sensor|Cpu|Isp|Level)$",
           "omitted_by_budget": 0
         }
       ],
@@ -69174,7 +71705,10 @@
         ".work/run003/capture/followup/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
         ".work/run006/app-bridge-buffer/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
         ".work/run006/app-bridge-handoff/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
-        ".work/run006/app-bridge-initial/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json"
+        ".work/run006/app-bridge-initial/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
+        ".work/run008/sensor/initial/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
+        ".work/run008/sensor/levels/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
+        ".work/run008/sensor/thermometer/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json"
       ],
       "import_receipts": [
         ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json"
@@ -69186,7 +71720,10 @@
         ".work/run003/capture/followup/logs/NX500_RUN003_CAPTURE-d5e2998f-c8f1-437b-9bee-956109001def.json",
         ".work/run006/app-bridge-buffer/logs/NX500_RUN003_CAPTURE-30543645-8d9c-42c3-88a0-39fc2518889d.json",
         ".work/run006/app-bridge-handoff/logs/NX500_RUN003_CAPTURE-1bfcf6ab-95f8-4e9a-b546-4b8fa4b72ab7.json",
-        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json"
+        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json",
+        ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+        ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+        ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json"
       ],
       "reviewed_units": [
         {
@@ -69232,6 +71769,21 @@
         {
           "summary_path": ".work/run006/app-bridge-initial/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
           "pattern": "(mcb_register_handler$|CFrame::Receive$|CIPCCDriverIf::Receive$|CReceiver::OnReceived$|CReceiver::receive$|CReceiver::t_Main$|CMulticoreBridge::_myReceiver$)",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
+          "pattern": "^sensorapi::get_value$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
+          "pattern": "^csensor_thermometer::(get_level|csensor_thermometer)$|^csensor_module::(lock|unlock)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libudd5.so-8c56bea30a59/summary.json",
+          "pattern": "^csensor_thermometer::(initialize|update_value|get_value)$|^sensorapi::initialize$",
           "omitted_by_budget": 0
         }
       ],
@@ -72328,7 +74880,9 @@
         ".work/run006/app-linked/outputs/ghidra/libdi-network-bt-app.so-94a8f7ae0529/summary.json",
         ".work/run006/app-registration/outputs/ghidra/libdi-network-bt-app.so-94a8f7ae0529/summary.json",
         ".work/run006/app-transport/outputs/ghidra/libdi-network-bt-app.so-94a8f7ae0529/summary.json",
-        ".work/run006/app-url-info/outputs/ghidra/libdi-network-bt-app.so-94a8f7ae0529/summary.json"
+        ".work/run006/app-url-info/outputs/ghidra/libdi-network-bt-app.so-94a8f7ae0529/summary.json",
+        ".work/run008/app/initial/outputs/ghidra/libdi-network-bt-app.so-94a8f7ae0529/summary.json",
+        ".work/run008/app/sensor/outputs/ghidra/libdi-network-bt-app.so-94a8f7ae0529/summary.json"
       ],
       "import_receipts": [],
       "auto_analysis_completed_receipts": [],
@@ -72347,7 +74901,9 @@
         ".work/run006/app-linked/logs/NX500_FW112_SURVEY-190a3d47-ba05-4c90-b641-f7a147b15b25.json",
         ".work/run006/app-registration/logs/NX500_FW112_SURVEY-d1ff4011-ea96-4c7b-9f3e-486462ed84b9.json",
         ".work/run006/app-transport/logs/NX500_FW112_SURVEY-3988ad1e-d42c-45f6-b232-1d6076b638a7.json",
-        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json"
+        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json",
+        ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+        ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json"
       ],
       "reviewed_units": [],
       "decompile_failed_attempts": [],
@@ -72426,6 +74982,16 @@
         {
           "summary_path": ".work/run006/app-url-info/outputs/ghidra/libdi-network-bt-app.so-94a8f7ae0529/summary.json",
           "pattern": "^UPnPCDSRVFShotwithGPS::getURLInfo$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/initial/outputs/ghidra/libdi-network-bt-app.so-94a8f7ae0529/summary.json",
+          "pattern": "^UI_Get_Display_Temperature_Status$|^CAPPGUIPreviewState::onEventThermometer$|^CAPPGUIPreviewView::(on_timer_temperature|timer_start_temperature)$|^set_temperature$|^CAPPGUITopState::onEventDisplayTemperature$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/sensor/outputs/ghidra/libdi-network-bt-app.so-94a8f7ae0529/summary.json",
+          "pattern": "^UI_Di_Sensor_Get_Temp_(Sensor|Cpu|Isp|Level)$",
           "omitted_by_budget": 0
         }
       ],
@@ -75820,7 +78386,9 @@
         ".work/run006/app-linked/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
         ".work/run006/app-registration/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
         ".work/run006/app-transport/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
-        ".work/run006/app-url-info/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json"
+        ".work/run006/app-url-info/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+        ".work/run008/app/initial/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+        ".work/run008/app/sensor/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json"
       ],
       "import_receipts": [],
       "auto_analysis_completed_receipts": [],
@@ -75839,7 +78407,9 @@
         ".work/run006/app-linked/logs/NX500_FW112_SURVEY-190a3d47-ba05-4c90-b641-f7a147b15b25.json",
         ".work/run006/app-registration/logs/NX500_FW112_SURVEY-d1ff4011-ea96-4c7b-9f3e-486462ed84b9.json",
         ".work/run006/app-transport/logs/NX500_FW112_SURVEY-3988ad1e-d42c-45f6-b232-1d6076b638a7.json",
-        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json"
+        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json",
+        ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+        ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json"
       ],
       "reviewed_units": [
         {
@@ -75968,6 +78538,16 @@
         {
           "summary_path": ".work/run006/app-url-info/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
           "pattern": "^UPnPCDSRVFShotwithGPS::getURLInfo$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/initial/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+          "pattern": "^UI_Get_Display_Temperature_Status$|^CAPPGUIPreviewState::onEventThermometer$|^CAPPGUIPreviewView::(on_timer_temperature|timer_start_temperature)$|^set_temperature$|^CAPPGUITopState::onEventDisplayTemperature$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/sensor/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+          "pattern": "^UI_Di_Sensor_Get_Temp_(Sensor|Cpu|Isp|Level)$",
           "omitted_by_budget": 0
         }
       ],
@@ -78396,7 +80976,9 @@
         ".work/run006/app-linked/outputs/ghidra/libdi-network-dlna-rvf.so-a7c8f03e4fdc/summary.json",
         ".work/run006/app-registration/outputs/ghidra/libdi-network-dlna-rvf.so-a7c8f03e4fdc/summary.json",
         ".work/run006/app-transport/outputs/ghidra/libdi-network-dlna-rvf.so-a7c8f03e4fdc/summary.json",
-        ".work/run006/app-url-info/outputs/ghidra/libdi-network-dlna-rvf.so-a7c8f03e4fdc/summary.json"
+        ".work/run006/app-url-info/outputs/ghidra/libdi-network-dlna-rvf.so-a7c8f03e4fdc/summary.json",
+        ".work/run008/app/initial/outputs/ghidra/libdi-network-dlna-rvf.so-a7c8f03e4fdc/summary.json",
+        ".work/run008/app/sensor/outputs/ghidra/libdi-network-dlna-rvf.so-a7c8f03e4fdc/summary.json"
       ],
       "import_receipts": [],
       "auto_analysis_completed_receipts": [],
@@ -78415,7 +80997,9 @@
         ".work/run006/app-linked/logs/NX500_FW112_SURVEY-190a3d47-ba05-4c90-b641-f7a147b15b25.json",
         ".work/run006/app-registration/logs/NX500_FW112_SURVEY-d1ff4011-ea96-4c7b-9f3e-486462ed84b9.json",
         ".work/run006/app-transport/logs/NX500_FW112_SURVEY-3988ad1e-d42c-45f6-b232-1d6076b638a7.json",
-        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json"
+        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json",
+        ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+        ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json"
       ],
       "reviewed_units": [
         {
@@ -78514,6 +81098,16 @@
         {
           "summary_path": ".work/run006/app-url-info/outputs/ghidra/libdi-network-dlna-rvf.so-a7c8f03e4fdc/summary.json",
           "pattern": "^UPnPCDSRVFShotwithGPS::getURLInfo$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/initial/outputs/ghidra/libdi-network-dlna-rvf.so-a7c8f03e4fdc/summary.json",
+          "pattern": "^UI_Get_Display_Temperature_Status$|^CAPPGUIPreviewState::onEventThermometer$|^CAPPGUIPreviewView::(on_timer_temperature|timer_start_temperature)$|^set_temperature$|^CAPPGUITopState::onEventDisplayTemperature$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/sensor/outputs/ghidra/libdi-network-dlna-rvf.so-a7c8f03e4fdc/summary.json",
+          "pattern": "^UI_Di_Sensor_Get_Temp_(Sensor|Cpu|Isp|Level)$",
           "omitted_by_budget": 0
         }
       ],
@@ -78856,7 +81450,9 @@
       "valid_exports": [
         ".work/run007/plugin/helpers/outputs/ghidra/libslp_devman_plugin.so-a88cb8130ba2/summary.json",
         ".work/run007/plugin/initial/outputs/ghidra/libslp_devman_plugin.so-a88cb8130ba2/summary.json",
-        ".work/run007/plugin/read/outputs/ghidra/libslp_devman_plugin.so-a88cb8130ba2/summary.json"
+        ".work/run007/plugin/read/outputs/ghidra/libslp_devman_plugin.so-a88cb8130ba2/summary.json",
+        ".work/run008/plugin/initial/outputs/ghidra/libslp_devman_plugin.so-a88cb8130ba2/summary.json",
+        ".work/run008/plugin/setter/outputs/ghidra/libslp_devman_plugin.so-a88cb8130ba2/summary.json"
       ],
       "import_receipts": [
         ".work/run007/plugin/initial/logs/NX500_RUN007_PLUGIN-45475a6d-aadb-4bf4-93ce-0b10460c1e39.json"
@@ -78866,7 +81462,9 @@
       ],
       "noanalysis_export_receipts": [
         ".work/run007/plugin/helpers/logs/NX500_RUN007_PLUGIN-2442e170-8ed7-4029-a247-24fe8f777a9d.json",
-        ".work/run007/plugin/read/logs/NX500_RUN007_PLUGIN-97896fae-40fe-45c3-95fb-e0b1e50ce490.json"
+        ".work/run007/plugin/read/logs/NX500_RUN007_PLUGIN-97896fae-40fe-45c3-95fb-e0b1e50ce490.json",
+        ".work/run008/plugin/initial/logs/NX500_RUN007_PLUGIN-f717d8da-917a-459c-a3d6-ab66fa44cab8.json",
+        ".work/run008/plugin/setter/logs/NX500_RUN007_PLUGIN-4ef74bbd-34f8-498f-80d2-99327563da1b.json"
       ],
       "reviewed_units": [
         {
@@ -78884,6 +81482,42 @@
           ],
           "unresolved_questions": [
             "Node existence, parse-input validity and runtime hardware state remain unobserved."
+          ],
+          "independent_review_completed": false
+        },
+        {
+          "id": "THERM008-OEM",
+          "source_sha256": "a88cb8130ba246b45c077cf25f0c5944077e41b780eee20f5a5a675b35a15588",
+          "original_path": "/usr/lib/libslp_devman_plugin.so",
+          "original_elf_va": "0x5384",
+          "evidence": "analysis/evidence/thermal-userspace-run008.json",
+          "evidence_sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+          "method": "Primary-agent selected C and original PT_LOAD-mapped ARM/Thumb windows, saved TMode contexts and exact relocations",
+          "claim": "Separate OEM wrappers delegate to generic sec-thermistor, battery, MICOM and power-state paths; they are not substituted for the selected app sensor route.",
+          "limitations": [
+            "Node existence, units and active caller use are not observed.",
+            "Independent semantic review remains incomplete after actual reviewer quota failure."
+          ],
+          "unresolved_questions": [
+            "Node existence, units and active caller use are not observed."
+          ],
+          "independent_review_completed": false
+        },
+        {
+          "id": "THERM008-POWER",
+          "source_sha256": "a88cb8130ba246b45c077cf25f0c5944077e41b780eee20f5a5a675b35a15588",
+          "original_path": "/usr/lib/libslp_devman_plugin.so",
+          "original_elf_va": "0x57dc",
+          "evidence": "analysis/evidence/thermal-userspace-run008.json",
+          "evidence_sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+          "method": "Primary-agent selected C and original PT_LOAD-mapped ARM/Thumb windows, saved TMode contexts and exact relocations",
+          "claim": "OEM shutdown and one-shot setters delegate supplied integers to d5-keys node paths through sys_set_int formatting.",
+          "limitations": [
+            "Static request endpoint only; checked writer result, final power state and persistence are not established.",
+            "Independent semantic review remains incomplete after actual reviewer quota failure."
+          ],
+          "unresolved_questions": [
+            "Static request endpoint only; checked writer result, final power state and persistence are not established."
           ],
           "independent_review_completed": false
         }
@@ -78905,6 +81539,16 @@
           "summary_path": ".work/run007/plugin/read/outputs/ghidra/libslp_devman_plugin.so-a88cb8130ba2/summary.json",
           "pattern": "^FUN_000148f4$",
           "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/plugin/initial/outputs/ghidra/libslp_devman_plugin.so-a88cb8130ba2/summary.json",
+          "pattern": "^OEM_sys_(get_temperature_(adc|value)|get_battery_temperature|get_body_bat_(det|soc|volt)|get_bat_event_flag|set_power_(one_shot|shutdown)|get_bootmode|get_wakeup_source)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/plugin/setter/outputs/ghidra/libslp_devman_plugin.so-a88cb8130ba2/summary.json",
+          "pattern": "^sys_set_int$",
+          "omitted_by_budget": 0
         }
       ],
       "stages": {
@@ -78917,15 +81561,17 @@
       },
       "function_counts": {
         "mapped_nonexternal_exported": 354,
-        "selected_attempted_unique": 11,
-        "selected_completed_unique": 11,
+        "selected_attempted_unique": 23,
+        "selected_completed_unique": 23,
         "abi_unverified_unique": 354
       },
       "pending_work_units": [
         "Resolve ABI/types and indirect/runtime call behavior with independent evidence"
       ],
       "unresolved_questions": [
-        "Node existence, parse-input validity and runtime hardware state remain unobserved."
+        "Node existence, parse-input validity and runtime hardware state remain unobserved.",
+        "Node existence, units and active caller use are not observed.",
+        "Static request endpoint only; checked writer result, final power state and persistence are not established."
       ]
     },
     {
@@ -87578,7 +90224,10 @@
         ".work/run003/capture/followup/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
         ".work/run006/app-bridge-buffer/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
         ".work/run006/app-bridge-handoff/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
-        ".work/run006/app-bridge-initial/outputs/ghidra/libprefman.so-c44802d1983b/summary.json"
+        ".work/run006/app-bridge-initial/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
+        ".work/run008/sensor/initial/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
+        ".work/run008/sensor/levels/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
+        ".work/run008/sensor/thermometer/outputs/ghidra/libprefman.so-c44802d1983b/summary.json"
       ],
       "import_receipts": [
         ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json"
@@ -87590,7 +90239,10 @@
         ".work/run003/capture/followup/logs/NX500_RUN003_CAPTURE-d5e2998f-c8f1-437b-9bee-956109001def.json",
         ".work/run006/app-bridge-buffer/logs/NX500_RUN003_CAPTURE-30543645-8d9c-42c3-88a0-39fc2518889d.json",
         ".work/run006/app-bridge-handoff/logs/NX500_RUN003_CAPTURE-1bfcf6ab-95f8-4e9a-b546-4b8fa4b72ab7.json",
-        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json"
+        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json",
+        ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+        ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+        ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json"
       ],
       "reviewed_units": [
         {
@@ -87636,6 +90288,21 @@
         {
           "summary_path": ".work/run006/app-bridge-initial/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
           "pattern": "(mcb_register_handler$|CFrame::Receive$|CIPCCDriverIf::Receive$|CReceiver::OnReceived$|CReceiver::receive$|CReceiver::t_Main$|CMulticoreBridge::_myReceiver$)",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
+          "pattern": "^sensorapi::get_value$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
+          "pattern": "^csensor_thermometer::(get_level|csensor_thermometer)$|^csensor_module::(lock|unlock)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libprefman.so-c44802d1983b/summary.json",
+          "pattern": "^csensor_thermometer::(initialize|update_value|get_value)$|^sensorapi::initialize$",
           "omitted_by_budget": 0
         }
       ],
@@ -89402,7 +92069,10 @@
         ".work/run003/capture/followup/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
         ".work/run006/app-bridge-buffer/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
         ".work/run006/app-bridge-handoff/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
-        ".work/run006/app-bridge-initial/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json"
+        ".work/run006/app-bridge-initial/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
+        ".work/run008/sensor/initial/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
+        ".work/run008/sensor/levels/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
+        ".work/run008/sensor/thermometer/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json"
       ],
       "import_receipts": [
         ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json"
@@ -89414,7 +92084,10 @@
         ".work/run003/capture/followup/logs/NX500_RUN003_CAPTURE-d5e2998f-c8f1-437b-9bee-956109001def.json",
         ".work/run006/app-bridge-buffer/logs/NX500_RUN003_CAPTURE-30543645-8d9c-42c3-88a0-39fc2518889d.json",
         ".work/run006/app-bridge-handoff/logs/NX500_RUN003_CAPTURE-1bfcf6ab-95f8-4e9a-b546-4b8fa4b72ab7.json",
-        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json"
+        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json",
+        ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+        ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+        ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json"
       ],
       "reviewed_units": [],
       "decompile_failed_attempts": [],
@@ -89443,6 +92116,21 @@
         {
           "summary_path": ".work/run006/app-bridge-initial/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
           "pattern": "(mcb_register_handler$|CFrame::Receive$|CIPCCDriverIf::Receive$|CReceiver::OnReceived$|CReceiver::receive$|CReceiver::t_Main$|CMulticoreBridge::_myReceiver$)",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
+          "pattern": "^sensorapi::get_value$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
+          "pattern": "^csensor_thermometer::(get_level|csensor_thermometer)$|^csensor_module::(lock|unlock)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libdi-alg-ipplatform.so-c8e6c6226d63/summary.json",
+          "pattern": "^csensor_thermometer::(initialize|update_value|get_value)$|^sensorapi::initialize$",
           "omitted_by_budget": 0
         }
       ],
@@ -102953,7 +105641,9 @@
         ".work/run006/app-linked/outputs/ghidra/libsap-api.so.1.0.0-f130d83a9313/summary.json",
         ".work/run006/app-registration/outputs/ghidra/libsap-api.so.1.0.0-f130d83a9313/summary.json",
         ".work/run006/app-transport/outputs/ghidra/libsap-api.so.1.0.0-f130d83a9313/summary.json",
-        ".work/run006/app-url-info/outputs/ghidra/libsap-api.so.1.0.0-f130d83a9313/summary.json"
+        ".work/run006/app-url-info/outputs/ghidra/libsap-api.so.1.0.0-f130d83a9313/summary.json",
+        ".work/run008/app/initial/outputs/ghidra/libsap-api.so.1.0.0-f130d83a9313/summary.json",
+        ".work/run008/app/sensor/outputs/ghidra/libsap-api.so.1.0.0-f130d83a9313/summary.json"
       ],
       "import_receipts": [],
       "auto_analysis_completed_receipts": [],
@@ -102972,7 +105662,9 @@
         ".work/run006/app-linked/logs/NX500_FW112_SURVEY-190a3d47-ba05-4c90-b641-f7a147b15b25.json",
         ".work/run006/app-registration/logs/NX500_FW112_SURVEY-d1ff4011-ea96-4c7b-9f3e-486462ed84b9.json",
         ".work/run006/app-transport/logs/NX500_FW112_SURVEY-3988ad1e-d42c-45f6-b232-1d6076b638a7.json",
-        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json"
+        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json",
+        ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+        ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json"
       ],
       "reviewed_units": [],
       "decompile_failed_attempts": [],
@@ -103052,6 +105744,16 @@
           "summary_path": ".work/run006/app-url-info/outputs/ghidra/libsap-api.so.1.0.0-f130d83a9313/summary.json",
           "pattern": "^UPnPCDSRVFShotwithGPS::getURLInfo$",
           "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/initial/outputs/ghidra/libsap-api.so.1.0.0-f130d83a9313/summary.json",
+          "pattern": "^UI_Get_Display_Temperature_Status$|^CAPPGUIPreviewState::onEventThermometer$|^CAPPGUIPreviewView::(on_timer_temperature|timer_start_temperature)$|^set_temperature$|^CAPPGUITopState::onEventDisplayTemperature$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/sensor/outputs/ghidra/libsap-api.so.1.0.0-f130d83a9313/summary.json",
+          "pattern": "^UI_Di_Sensor_Get_Temp_(Sensor|Cpu|Isp|Level)$",
+          "omitted_by_budget": 0
         }
       ],
       "stages": {
@@ -103094,7 +105796,10 @@
         ".work/run003/capture/followup/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
         ".work/run006/app-bridge-buffer/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
         ".work/run006/app-bridge-handoff/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
-        ".work/run006/app-bridge-initial/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json"
+        ".work/run006/app-bridge-initial/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+        ".work/run008/sensor/initial/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+        ".work/run008/sensor/levels/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+        ".work/run008/sensor/thermometer/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json"
       ],
       "import_receipts": [
         ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json"
@@ -103106,7 +105811,10 @@
         ".work/run003/capture/followup/logs/NX500_RUN003_CAPTURE-d5e2998f-c8f1-437b-9bee-956109001def.json",
         ".work/run006/app-bridge-buffer/logs/NX500_RUN003_CAPTURE-30543645-8d9c-42c3-88a0-39fc2518889d.json",
         ".work/run006/app-bridge-handoff/logs/NX500_RUN003_CAPTURE-1bfcf6ab-95f8-4e9a-b546-4b8fa4b72ab7.json",
-        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json"
+        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json",
+        ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+        ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+        ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json"
       ],
       "reviewed_units": [
         {
@@ -103187,6 +105895,21 @@
         {
           "summary_path": ".work/run006/app-bridge-initial/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
           "pattern": "(mcb_register_handler$|CFrame::Receive$|CIPCCDriverIf::Receive$|CReceiver::OnReceived$|CReceiver::receive$|CReceiver::t_Main$|CMulticoreBridge::_myReceiver$)",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+          "pattern": "^sensorapi::get_value$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+          "pattern": "^csensor_thermometer::(get_level|csensor_thermometer)$|^csensor_module::(lock|unlock)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+          "pattern": "^csensor_thermometer::(initialize|update_value|get_value)$|^sensorapi::initialize$",
           "omitted_by_budget": 0
         }
       ],
@@ -103631,7 +106354,9 @@
         ".work/run006/app-linked/outputs/ghidra/libface.so-f2936a156173/summary.json",
         ".work/run006/app-registration/outputs/ghidra/libface.so-f2936a156173/summary.json",
         ".work/run006/app-transport/outputs/ghidra/libface.so-f2936a156173/summary.json",
-        ".work/run006/app-url-info/outputs/ghidra/libface.so-f2936a156173/summary.json"
+        ".work/run006/app-url-info/outputs/ghidra/libface.so-f2936a156173/summary.json",
+        ".work/run008/app/initial/outputs/ghidra/libface.so-f2936a156173/summary.json",
+        ".work/run008/app/sensor/outputs/ghidra/libface.so-f2936a156173/summary.json"
       ],
       "import_receipts": [],
       "auto_analysis_completed_receipts": [],
@@ -103650,7 +106375,9 @@
         ".work/run006/app-linked/logs/NX500_FW112_SURVEY-190a3d47-ba05-4c90-b641-f7a147b15b25.json",
         ".work/run006/app-registration/logs/NX500_FW112_SURVEY-d1ff4011-ea96-4c7b-9f3e-486462ed84b9.json",
         ".work/run006/app-transport/logs/NX500_FW112_SURVEY-3988ad1e-d42c-45f6-b232-1d6076b638a7.json",
-        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json"
+        ".work/run006/app-url-info/logs/NX500_FW112_SURVEY-cea8a1a3-adc2-48a3-9094-ae8bbc69b7e8.json",
+        ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
+        ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json"
       ],
       "reviewed_units": [],
       "decompile_failed_attempts": [],
@@ -103729,6 +106456,16 @@
         {
           "summary_path": ".work/run006/app-url-info/outputs/ghidra/libface.so-f2936a156173/summary.json",
           "pattern": "^UPnPCDSRVFShotwithGPS::getURLInfo$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/initial/outputs/ghidra/libface.so-f2936a156173/summary.json",
+          "pattern": "^UI_Get_Display_Temperature_Status$|^CAPPGUIPreviewState::onEventThermometer$|^CAPPGUIPreviewView::(on_timer_temperature|timer_start_temperature)$|^set_temperature$|^CAPPGUITopState::onEventDisplayTemperature$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/app/sensor/outputs/ghidra/libface.so-f2936a156173/summary.json",
+          "pattern": "^UI_Di_Sensor_Get_Temp_(Sensor|Cpu|Isp|Level)$",
           "omitted_by_budget": 0
         }
       ],
@@ -106822,7 +109559,10 @@
         ".work/run003/capture/followup/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
         ".work/run006/app-bridge-buffer/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
         ".work/run006/app-bridge-handoff/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
-        ".work/run006/app-bridge-initial/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json"
+        ".work/run006/app-bridge-initial/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
+        ".work/run008/sensor/initial/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
+        ".work/run008/sensor/levels/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
+        ".work/run008/sensor/thermometer/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json"
       ],
       "import_receipts": [
         ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json"
@@ -106834,7 +109574,10 @@
         ".work/run003/capture/followup/logs/NX500_RUN003_CAPTURE-d5e2998f-c8f1-437b-9bee-956109001def.json",
         ".work/run006/app-bridge-buffer/logs/NX500_RUN003_CAPTURE-30543645-8d9c-42c3-88a0-39fc2518889d.json",
         ".work/run006/app-bridge-handoff/logs/NX500_RUN003_CAPTURE-1bfcf6ab-95f8-4e9a-b546-4b8fa4b72ab7.json",
-        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json"
+        ".work/run006/app-bridge-initial/logs/NX500_RUN003_CAPTURE-e1a2aabd-895b-46e9-9c01-d206cfbb69a0.json",
+        ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
+        ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
+        ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json"
       ],
       "reviewed_units": [
         {
@@ -106880,6 +109623,21 @@
         {
           "summary_path": ".work/run006/app-bridge-initial/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
           "pattern": "(mcb_register_handler$|CFrame::Receive$|CIPCCDriverIf::Receive$|CReceiver::OnReceived$|CReceiver::receive$|CReceiver::t_Main$|CMulticoreBridge::_myReceiver$)",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/initial/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
+          "pattern": "^sensorapi::get_value$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/levels/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
+          "pattern": "^csensor_thermometer::(get_level|csensor_thermometer)$|^csensor_module::(lock|unlock)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run008/sensor/thermometer/outputs/ghidra/libdiosal.so-fb27249f43b6/summary.json",
+          "pattern": "^csensor_thermometer::(initialize|update_value|get_value)$|^sensorapi::initialize$",
           "omitted_by_budget": 0
         }
       ],
