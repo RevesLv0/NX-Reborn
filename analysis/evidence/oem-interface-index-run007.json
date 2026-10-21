@@ -1,0 +1,2286 @@
+{
+  "schema_version": 1,
+  "source_path": "/usr/lib/libslp_devman_plugin.so",
+  "source_sha256": "a88cb8130ba246b45c077cf25f0c5944077e41b780eee20f5a5a675b35a15588",
+  "source_evidence": "analysis/evidence/card-events-run007.json",
+  "source_evidence_sha256": "e8cd1a9c49f4ca87457997fa27f091ef8a3a1a10c58f394b9babc7ca997ddfcd",
+  "interface_builder_original_va": "0x8e98",
+  "table_base_original_va": "0x15830",
+  "assignments": [
+    {
+      "original_table_slot_va": "0x15830",
+      "offset_from_table_base": "0x0",
+      "c_target_expression": "OEM_sys_get_select_device",
+      "symbol": "OEM_sys_get_select_device",
+      "original_symbol_pointer": "0x52c1",
+      "original_code_va": "0x52c0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15834",
+      "offset_from_table_base": "0x4",
+      "c_target_expression": "OEM_sys_set_select_device",
+      "symbol": "OEM_sys_set_select_device",
+      "original_symbol_pointer": "0x59f5",
+      "original_code_va": "0x59f4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15838",
+      "offset_from_table_base": "0x8",
+      "c_target_expression": "OEM_sys_get_flip_state",
+      "symbol": "OEM_sys_get_flip_state",
+      "original_symbol_pointer": "0x52b1",
+      "original_code_va": "0x52b0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x1583c",
+      "offset_from_table_base": "0xc",
+      "c_target_expression": "OEM_sys_set_backlight_control",
+      "symbol": "OEM_sys_set_backlight_control",
+      "original_symbol_pointer": "0x59e5",
+      "original_code_va": "0x59e4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15840",
+      "offset_from_table_base": "0x10",
+      "c_target_expression": "OEM_sys_set_brightness_control",
+      "symbol": "OEM_sys_set_brightness_control",
+      "original_symbol_pointer": "0x59d5",
+      "original_code_va": "0x59d4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15844",
+      "offset_from_table_base": "0x14",
+      "c_target_expression": "OEM_sys_set_dp_onoff_control",
+      "symbol": "OEM_sys_set_dp_onoff_control",
+      "original_symbol_pointer": "0x59c5",
+      "original_code_va": "0x59c4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15848",
+      "offset_from_table_base": "0x18",
+      "c_target_expression": "OEM_sys_set_dp_win_onoff_control",
+      "symbol": "OEM_sys_set_dp_win_onoff_control",
+      "original_symbol_pointer": "0x5e9d",
+      "original_code_va": "0x5e9c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 328
+    },
+    {
+      "original_table_slot_va": "0x1584c",
+      "offset_from_table_base": "0x1c",
+      "c_target_expression": "OEM_sys_set_timming",
+      "symbol": "OEM_sys_set_timming",
+      "original_symbol_pointer": "0x59b5",
+      "original_code_va": "0x59b4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15850",
+      "offset_from_table_base": "0x20",
+      "c_target_expression": "OEM_sys_set_tcc_control",
+      "symbol": "OEM_sys_set_tcc_control",
+      "original_symbol_pointer": "0x59a5",
+      "original_code_va": "0x59a4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15854",
+      "offset_from_table_base": "0x24",
+      "c_target_expression": "OEM_sys_set_csc_control",
+      "symbol": "OEM_sys_set_csc_control",
+      "original_symbol_pointer": "0x5995",
+      "original_code_va": "0x5994",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15858",
+      "offset_from_table_base": "0x28",
+      "c_target_expression": "OEM_sys_set_boot_type",
+      "symbol": "OEM_sys_set_boot_type",
+      "original_symbol_pointer": "0x5985",
+      "original_code_va": "0x5984",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x1585c",
+      "offset_from_table_base": "0x2c",
+      "c_target_expression": "OEM_sys_set_post_control",
+      "symbol": "OEM_sys_set_post_control",
+      "original_symbol_pointer": "0x5975",
+      "original_code_va": "0x5974",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15860",
+      "offset_from_table_base": "0x30",
+      "c_target_expression": "OEM_sys_set_flip_control",
+      "symbol": "OEM_sys_set_flip_control",
+      "original_symbol_pointer": "0x5965",
+      "original_code_va": "0x5964",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15864",
+      "offset_from_table_base": "0x34",
+      "c_target_expression": "OEM_sys_set_hswap_control",
+      "symbol": "OEM_sys_set_hswap_control",
+      "original_symbol_pointer": "0x5955",
+      "original_code_va": "0x5954",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15868",
+      "offset_from_table_base": "0x38",
+      "c_target_expression": "OEM_sys_set_y2r_mode",
+      "symbol": "OEM_sys_set_y2r_mode",
+      "original_symbol_pointer": "0x5945",
+      "original_code_va": "0x5944",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x1586c",
+      "offset_from_table_base": "0x3c",
+      "c_target_expression": "OEM_sys_set_poweroff_logo",
+      "symbol": "OEM_sys_set_poweroff_logo",
+      "original_symbol_pointer": "0x5935",
+      "original_code_va": "0x5934",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15870",
+      "offset_from_table_base": "0x40",
+      "c_target_expression": "OEM_sys_set_bbox_onoff",
+      "symbol": "OEM_sys_set_bbox_onoff",
+      "original_symbol_pointer": "0x5925",
+      "original_code_va": "0x5924",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15874",
+      "offset_from_table_base": "0x44",
+      "c_target_expression": "OEM_sys_set_scaler_onoff",
+      "symbol": "OEM_sys_set_scaler_onoff",
+      "original_symbol_pointer": "0x5915",
+      "original_code_va": "0x5914",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x158e0",
+      "offset_from_table_base": "0xb0",
+      "c_target_expression": "OEM_sys_get_uart_path",
+      "symbol": "OEM_sys_get_uart_path",
+      "original_symbol_pointer": "0x5d51",
+      "original_code_va": "0x5d50",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 124
+    },
+    {
+      "original_table_slot_va": "0x158e4",
+      "offset_from_table_base": "0xb4",
+      "c_target_expression": "OEM_sys_set_uart_path",
+      "symbol": "OEM_sys_set_uart_path",
+      "original_symbol_pointer": "0x7f29",
+      "original_code_va": "0x7f28",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 60
+    },
+    {
+      "original_table_slot_va": "0x158e8",
+      "offset_from_table_base": "0xb8",
+      "c_target_expression": "OEM_sys_get_usb_path",
+      "symbol": "OEM_sys_get_usb_path",
+      "original_symbol_pointer": "0x5cd9",
+      "original_code_va": "0x5cd8",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 120
+    },
+    {
+      "original_table_slot_va": "0x158ec",
+      "offset_from_table_base": "0xbc",
+      "c_target_expression": "OEM_sys_set_usb_path",
+      "symbol": "OEM_sys_set_usb_path",
+      "original_symbol_pointer": "0x7ef5",
+      "original_code_va": "0x7ef4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 52
+    },
+    {
+      "original_table_slot_va": "0x158f0",
+      "offset_from_table_base": "0xc0",
+      "c_target_expression": "OEM_sys_get_haptic_motor_level_max",
+      "symbol": "OEM_sys_get_haptic_motor_level_max",
+      "original_symbol_pointer": "0x5611",
+      "original_code_va": "0x5610",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x158f4",
+      "offset_from_table_base": "0xc4",
+      "c_target_expression": "OEM_sys_get_haptic_motor_level",
+      "symbol": "OEM_sys_get_haptic_motor_level",
+      "original_symbol_pointer": "0x5621",
+      "original_code_va": "0x5620",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x158f8",
+      "offset_from_table_base": "0xc8",
+      "c_target_expression": "OEM_sys_set_haptic_motor_level",
+      "symbol": "OEM_sys_set_haptic_motor_level",
+      "original_symbol_pointer": "0x5c79",
+      "original_code_va": "0x5c78",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x158fc",
+      "offset_from_table_base": "0xcc",
+      "c_target_expression": "OEM_sys_set_haptic_motor_enable",
+      "symbol": "OEM_sys_set_haptic_motor_enable",
+      "original_symbol_pointer": "0x5c69",
+      "original_code_va": "0x5c68",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15900",
+      "offset_from_table_base": "0xd0",
+      "c_target_expression": "OEM_sys_set_haptic_motor_oneshot",
+      "symbol": "OEM_sys_set_haptic_motor_oneshot",
+      "original_symbol_pointer": "0x5c59",
+      "original_code_va": "0x5c58",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15904",
+      "offset_from_table_base": "0xd4",
+      "c_target_expression": "OEM_sys_get_battery_capacity",
+      "symbol": "OEM_sys_get_battery_capacity",
+      "original_symbol_pointer": "0x5601",
+      "original_code_va": "0x5600",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15908",
+      "offset_from_table_base": "0xd8",
+      "c_target_expression": "OEM_sys_get_battery_capacity_raw",
+      "symbol": "OEM_sys_get_battery_capacity_raw",
+      "original_symbol_pointer": "0x5515",
+      "original_code_va": "0x5514",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 28
+    },
+    {
+      "original_table_slot_va": "0x1590c",
+      "offset_from_table_base": "0xdc",
+      "c_target_expression": "OEM_sys_get_battery_charge_full",
+      "symbol": "OEM_sys_get_battery_charge_full",
+      "original_symbol_pointer": "0x55f1",
+      "original_code_va": "0x55f0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15910",
+      "offset_from_table_base": "0xe0",
+      "c_target_expression": "OEM_sys_get_battery_charge_now",
+      "symbol": "OEM_sys_get_battery_charge_now",
+      "original_symbol_pointer": "0x55e1",
+      "original_code_va": "0x55e0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15914",
+      "offset_from_table_base": "0xe4",
+      "c_target_expression": "OEM_sys_get_battery_present",
+      "symbol": "OEM_sys_get_battery_present",
+      "original_symbol_pointer": "0x55d1",
+      "original_code_va": "0x55d0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15928",
+      "offset_from_table_base": "0xf8",
+      "c_target_expression": "OEM_sys_get_battery_skip_power_off",
+      "symbol": "OEM_sys_get_battery_skip_power_off",
+      "original_symbol_pointer": "0x5e8d",
+      "original_code_va": "0x5e8c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15930",
+      "offset_from_table_base": "0x100",
+      "c_target_expression": "OEM_sys_get_battery_adc_spec",
+      "symbol": "OEM_sys_get_battery_adc_spec",
+      "original_symbol_pointer": "0x5cb9",
+      "original_code_va": "0x5cb8",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 32
+    },
+    {
+      "original_table_slot_va": "0x15918",
+      "offset_from_table_base": "0xe8",
+      "c_target_expression": "OEM_sys_get_battery_health",
+      "symbol": "OEM_sys_get_battery_health",
+      "original_symbol_pointer": "0x5dcd",
+      "original_code_va": "0x5dcc",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 124
+    },
+    {
+      "original_table_slot_va": "0x1591c",
+      "offset_from_table_base": "0xec",
+      "c_target_expression": "OEM_sys_get_battery_polling_required",
+      "symbol": "OEM_sys_get_battery_polling_required",
+      "original_symbol_pointer": "0x5015",
+      "original_code_va": "0x5014",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 10
+    },
+    {
+      "original_table_slot_va": "0x15920",
+      "offset_from_table_base": "0xf0",
+      "c_target_expression": "OEM_sys_get_battery_support_insuspend_charging",
+      "symbol": "OEM_sys_get_battery_support_insuspend_charging",
+      "original_symbol_pointer": "0x5021",
+      "original_code_va": "0x5020",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 8
+    },
+    {
+      "original_table_slot_va": "0x15be8",
+      "offset_from_table_base": "0x3b8",
+      "c_target_expression": "OEM_sys_get_body_bat_det",
+      "symbol": "OEM_sys_get_body_bat_det",
+      "original_symbol_pointer": "0x55c1",
+      "original_code_va": "0x55c0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b68",
+      "offset_from_table_base": "0x338",
+      "c_target_expression": "OEM_sys_get_body_bat_soc",
+      "symbol": "OEM_sys_get_body_bat_soc",
+      "original_symbol_pointer": "0x55b1",
+      "original_code_va": "0x55b0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b6c",
+      "offset_from_table_base": "0x33c",
+      "c_target_expression": "OEM_sys_get_body_bat_volt",
+      "symbol": "OEM_sys_get_body_bat_volt",
+      "original_symbol_pointer": "0x55a1",
+      "original_code_va": "0x55a0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15bec",
+      "offset_from_table_base": "0x3bc",
+      "c_target_expression": "OEM_sys_get_vgrip_bat_det",
+      "symbol": "OEM_sys_get_vgrip_bat_det",
+      "original_symbol_pointer": "0x5591",
+      "original_code_va": "0x5590",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15bf0",
+      "offset_from_table_base": "0x3c0",
+      "c_target_expression": "OEM_sys_get_vgrip_bat_soc",
+      "symbol": "OEM_sys_get_vgrip_bat_soc",
+      "original_symbol_pointer": "0x5581",
+      "original_code_va": "0x5580",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15bf4",
+      "offset_from_table_base": "0x3c4",
+      "c_target_expression": "OEM_sys_get_vgrip_bat_volt",
+      "symbol": "OEM_sys_get_vgrip_bat_volt",
+      "original_symbol_pointer": "0x5571",
+      "original_code_va": "0x5570",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b60",
+      "offset_from_table_base": "0x330",
+      "c_target_expression": "OEM_sys_get_bat_selected",
+      "symbol": "OEM_sys_get_bat_selected",
+      "original_symbol_pointer": "0x5561",
+      "original_code_va": "0x5560",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b64",
+      "offset_from_table_base": "0x334",
+      "c_target_expression": "OEM_sys_set_bat_selected",
+      "symbol": "OEM_sys_set_bat_selected",
+      "original_symbol_pointer": "0x5c49",
+      "original_code_va": "0x5c48",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x1592c",
+      "offset_from_table_base": "0xfc",
+      "c_target_expression": "OEM_sys_set_battery_skip_power_off",
+      "symbol": "OEM_sys_set_battery_skip_power_off",
+      "original_symbol_pointer": "0x7a6d",
+      "original_code_va": "0x7a6c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 272
+    },
+    {
+      "original_table_slot_va": "0x15934",
+      "offset_from_table_base": "0x104",
+      "c_target_expression": "OEM_sys_set_battery_adc_spec",
+      "symbol": "OEM_sys_set_battery_adc_spec",
+      "original_symbol_pointer": "0x577d",
+      "original_code_va": "0x577c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15bf8",
+      "offset_from_table_base": "0x3c8",
+      "c_target_expression": "OEM_sys_get_bat_charging",
+      "symbol": "OEM_sys_get_bat_charging",
+      "original_symbol_pointer": "0x5551",
+      "original_code_va": "0x5550",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c08",
+      "offset_from_table_base": "0x3d8",
+      "c_target_expression": "OEM_sys_get_bat_level",
+      "symbol": "OEM_sys_get_bat_level",
+      "original_symbol_pointer": "0x5541",
+      "original_code_va": "0x5540",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c0c",
+      "offset_from_table_base": "0x3dc",
+      "c_target_expression": "OEM_sys_get_bat_event_flag",
+      "symbol": "OEM_sys_get_bat_event_flag",
+      "original_symbol_pointer": "0x5531",
+      "original_code_va": "0x5530",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15938",
+      "offset_from_table_base": "0x108",
+      "c_target_expression": "OEM_sys_get_jack_charger_online",
+      "symbol": "OEM_sys_get_jack_charger_online",
+      "original_symbol_pointer": "0x5505",
+      "original_code_va": "0x5504",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x1593c",
+      "offset_from_table_base": "0x10c",
+      "c_target_expression": "OEM_sys_get_jack_earjack_online",
+      "symbol": "OEM_sys_get_jack_earjack_online",
+      "original_symbol_pointer": "0x54f5",
+      "original_code_va": "0x54f4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15940",
+      "offset_from_table_base": "0x110",
+      "c_target_expression": "OEM_sys_get_jack_earkey_online",
+      "symbol": "OEM_sys_get_jack_earkey_online",
+      "original_symbol_pointer": "0x54e5",
+      "original_code_va": "0x54e4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15944",
+      "offset_from_table_base": "0x114",
+      "c_target_expression": "OEM_sys_get_jack_hdmi_online",
+      "symbol": "OEM_sys_get_jack_hdmi_online",
+      "original_symbol_pointer": "0x54d5",
+      "original_code_va": "0x54d4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15948",
+      "offset_from_table_base": "0x118",
+      "c_target_expression": "OEM_sys_get_jack_usb_online",
+      "symbol": "OEM_sys_get_jack_usb_online",
+      "original_symbol_pointer": "0x54c5",
+      "original_code_va": "0x54c4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x1594c",
+      "offset_from_table_base": "0x11c",
+      "c_target_expression": "OEM_sys_get_jack_cradle_online",
+      "symbol": "OEM_sys_get_jack_cradle_online",
+      "original_symbol_pointer": "0x54b5",
+      "original_code_va": "0x54b4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15950",
+      "offset_from_table_base": "0x120",
+      "c_target_expression": "OEM_sys_get_jack_tvout_online",
+      "symbol": "OEM_sys_get_jack_tvout_online",
+      "original_symbol_pointer": "0x54a5",
+      "original_code_va": "0x54a4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15954",
+      "offset_from_table_base": "0x124",
+      "c_target_expression": "OEM_sys_get_jack_keyboard_online",
+      "symbol": "OEM_sys_get_jack_keyboard_online",
+      "original_symbol_pointer": "0x5029",
+      "original_code_va": "0x5028",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 6
+    },
+    {
+      "original_table_slot_va": "0x15958",
+      "offset_from_table_base": "0x128",
+      "c_target_expression": "OEM_sys_get_jack_proximity_online",
+      "symbol": "OEM_sys_get_jack_proximity_online",
+      "original_symbol_pointer": "0x5495",
+      "original_code_va": "0x5494",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x1595c",
+      "offset_from_table_base": "0x12c",
+      "c_target_expression": "OEM_sys_get_jack_nfc_online",
+      "symbol": "OEM_sys_get_jack_nfc_online",
+      "original_symbol_pointer": "0x5485",
+      "original_code_va": "0x5484",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15960",
+      "offset_from_table_base": "0x130",
+      "c_target_expression": "OEM_sys_get_jack_ext_release_online",
+      "symbol": "OEM_sys_get_jack_ext_release_online",
+      "original_symbol_pointer": "0x5475",
+      "original_code_va": "0x5474",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15964",
+      "offset_from_table_base": "0x134",
+      "c_target_expression": "OEM_sys_get_jack_mrsensor_online",
+      "symbol": "OEM_sys_get_jack_mrsensor_online",
+      "original_symbol_pointer": "0x5465",
+      "original_code_va": "0x5464",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15ae4",
+      "offset_from_table_base": "0x2b4",
+      "c_target_expression": "&DAT_00017fdd",
+      "unresolved_expression": true
+    },
+    {
+      "original_table_slot_va": "0x15ae0",
+      "offset_from_table_base": "0x2b0",
+      "c_target_expression": "&DAT_00018059",
+      "unresolved_expression": true
+    },
+    {
+      "original_table_slot_va": "0x15a04",
+      "offset_from_table_base": "0x1d4",
+      "c_target_expression": "OEM_sys_get_hdmi_support",
+      "symbol": "OEM_sys_get_hdmi_support",
+      "original_symbol_pointer": "0x5031",
+      "original_code_va": "0x5030",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 8
+    },
+    {
+      "original_table_slot_va": "0x15968",
+      "offset_from_table_base": "0x138",
+      "c_target_expression": "OEM_sys_get_leds_torch_max_brightness",
+      "symbol": "OEM_sys_get_leds_torch_max_brightness",
+      "original_symbol_pointer": "0x8b81",
+      "original_code_va": "0x8b80",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 36
+    },
+    {
+      "original_table_slot_va": "0x1596c",
+      "offset_from_table_base": "0x13c",
+      "c_target_expression": "OEM_sys_get_leds_torch_brightness",
+      "symbol": "OEM_sys_get_leds_torch_brightness",
+      "original_symbol_pointer": "0x5455",
+      "original_code_va": "0x5454",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15970",
+      "offset_from_table_base": "0x140",
+      "c_target_expression": "OEM_sys_set_leds_torch_brightness",
+      "symbol": "OEM_sys_set_leds_torch_brightness",
+      "original_symbol_pointer": "0x5c39",
+      "original_code_va": "0x5c38",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15974",
+      "offset_from_table_base": "0x144",
+      "c_target_expression": "OEM_sys_set_power_state",
+      "symbol": "OEM_sys_set_power_state",
+      "original_symbol_pointer": "0x76d9",
+      "original_code_va": "0x76d8",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 916
+    },
+    {
+      "original_table_slot_va": "0x15978",
+      "offset_from_table_base": "0x148",
+      "c_target_expression": "OEM_sys_set_power_lock",
+      "symbol": "OEM_sys_set_power_lock",
+      "original_symbol_pointer": "0x7ead",
+      "original_code_va": "0x7eac",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 72
+    },
+    {
+      "original_table_slot_va": "0x1597c",
+      "offset_from_table_base": "0x14c",
+      "c_target_expression": "OEM_sys_get_power_lock_support",
+      "symbol": "OEM_sys_get_power_lock_support",
+      "original_symbol_pointer": "0x7b7d",
+      "original_code_va": "0x7b7c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 212
+    },
+    {
+      "original_table_slot_va": "0x15980",
+      "offset_from_table_base": "0x150",
+      "c_target_expression": "OEM_sys_get_power_wakeup_count",
+      "symbol": "OEM_sys_get_power_wakeup_count",
+      "original_symbol_pointer": "0x5445",
+      "original_code_va": "0x5444",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15984",
+      "offset_from_table_base": "0x154",
+      "c_target_expression": "OEM_sys_set_power_wakeup_count",
+      "symbol": "OEM_sys_set_power_wakeup_count",
+      "original_symbol_pointer": "0x5bfd",
+      "original_code_va": "0x5bfc",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15988",
+      "offset_from_table_base": "0x158",
+      "c_target_expression": "OEM_sys_get_memnotify_node",
+      "symbol": "OEM_sys_get_memnotify_node",
+      "original_symbol_pointer": "0x5051",
+      "original_code_va": "0x5050",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x1598c",
+      "offset_from_table_base": "0x15c",
+      "c_target_expression": "OEM_sys_get_memnotify_victim_task",
+      "symbol": "OEM_sys_get_memnotify_victim_task",
+      "original_symbol_pointer": "0x65bd",
+      "original_code_va": "0x65bc",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15990",
+      "offset_from_table_base": "0x160",
+      "c_target_expression": "OEM_sys_set_memnotify_threshold_lv1",
+      "symbol": "OEM_sys_set_memnotify_threshold_lv1",
+      "original_symbol_pointer": "0x5bed",
+      "original_code_va": "0x5bec",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15994",
+      "offset_from_table_base": "0x164",
+      "c_target_expression": "OEM_sys_set_memnotify_threshold_lv2",
+      "symbol": "OEM_sys_set_memnotify_threshold_lv2",
+      "original_symbol_pointer": "0x5bdd",
+      "original_code_va": "0x5bdc",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15998",
+      "offset_from_table_base": "0x168",
+      "c_target_expression": "OEM_sys_set_control_prebuffer",
+      "symbol": "OEM_sys_set_control_prebuffer",
+      "original_symbol_pointer": "0x5fe5",
+      "original_code_va": "0x5fe4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 36
+    },
+    {
+      "original_table_slot_va": "0x1599c",
+      "offset_from_table_base": "0x16c",
+      "c_target_expression": "OEM_sys_get_process_monitor_node",
+      "symbol": "OEM_sys_get_process_monitor_node",
+      "original_symbol_pointer": "0x5041",
+      "original_code_va": "0x5040",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159a0",
+      "offset_from_table_base": "0x170",
+      "c_target_expression": "OEM_sys_set_process_monitor_mp_pnp",
+      "symbol": "OEM_sys_set_process_monitor_mp_pnp",
+      "original_symbol_pointer": "0x65ad",
+      "original_code_va": "0x65ac",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159a4",
+      "offset_from_table_base": "0x174",
+      "c_target_expression": "OEM_sys_set_process_monitor_mp_vip",
+      "symbol": "OEM_sys_set_process_monitor_mp_vip",
+      "original_symbol_pointer": "0x659d",
+      "original_code_va": "0x659c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159a8",
+      "offset_from_table_base": "0x178",
+      "c_target_expression": "OEM_sys_get_cpufreq_cpuinfo_max_freq",
+      "symbol": "OEM_sys_get_cpufreq_cpuinfo_max_freq",
+      "original_symbol_pointer": "0x5435",
+      "original_code_va": "0x5434",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159ac",
+      "offset_from_table_base": "0x17c",
+      "c_target_expression": "OEM_sys_get_cpufreq_cpuinfo_min_freq",
+      "symbol": "OEM_sys_get_cpufreq_cpuinfo_min_freq",
+      "original_symbol_pointer": "0x5425",
+      "original_code_va": "0x5424",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159b4",
+      "offset_from_table_base": "0x184",
+      "c_target_expression": "&LAB_00015038_1",
+      "unresolved_expression": true
+    },
+    {
+      "original_table_slot_va": "0x159b0",
+      "offset_from_table_base": "0x180",
+      "c_target_expression": "OEM_sys_get_cpufreq_scaling_max_freq",
+      "symbol": "OEM_sys_get_cpufreq_scaling_max_freq",
+      "original_symbol_pointer": "0x5415",
+      "original_code_va": "0x5414",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159b8",
+      "offset_from_table_base": "0x188",
+      "c_target_expression": "OEM_sys_get_cpufreq_scaling_min_freq",
+      "symbol": "OEM_sys_get_cpufreq_scaling_min_freq",
+      "original_symbol_pointer": "0x5405",
+      "original_code_va": "0x5404",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159bc",
+      "offset_from_table_base": "0x18c",
+      "c_target_expression": "OEM_sys_set_cpufreq_scaling_min_freq",
+      "symbol": "OEM_sys_set_cpufreq_scaling_min_freq",
+      "original_symbol_pointer": "0x5bcd",
+      "original_code_va": "0x5bcc",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159c4",
+      "offset_from_table_base": "0x194",
+      "c_target_expression": "&LAB_00015038_1",
+      "unresolved_expression": true
+    },
+    {
+      "original_table_slot_va": "0x159c0",
+      "offset_from_table_base": "0x190",
+      "c_target_expression": "OEM_sys_get_cpufreq_power_max_freq",
+      "symbol": "OEM_sys_get_cpufreq_power_max_freq",
+      "original_symbol_pointer": "0x53f5",
+      "original_code_va": "0x53f4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159c8",
+      "offset_from_table_base": "0x198",
+      "c_target_expression": "OEM_sys_get_cpufreq_power_min_freq",
+      "symbol": "OEM_sys_get_cpufreq_power_min_freq",
+      "original_symbol_pointer": "0x53e5",
+      "original_code_va": "0x53e4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159cc",
+      "offset_from_table_base": "0x19c",
+      "c_target_expression": "OEM_sys_set_cpufreq_power_min_freq",
+      "symbol": "OEM_sys_set_cpufreq_power_min_freq",
+      "original_symbol_pointer": "0x5bbd",
+      "original_code_va": "0x5bbc",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a74",
+      "offset_from_table_base": "0x244",
+      "c_target_expression": "OEM_sys_set_cpufreq_id_min_freq",
+      "symbol": "OEM_sys_set_cpufreq_id_min_freq",
+      "original_symbol_pointer": "0x5749",
+      "original_code_va": "0x5748",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a78",
+      "offset_from_table_base": "0x248",
+      "c_target_expression": "OEM_sys_set_cpufreq_id_max_freq",
+      "symbol": "OEM_sys_set_cpufreq_id_max_freq",
+      "original_symbol_pointer": "0x5759",
+      "original_code_va": "0x5758",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159d8",
+      "offset_from_table_base": "0x1a8",
+      "c_target_expression": "OEM_sys_get_cpu_enable_max_number",
+      "symbol": "OEM_sys_get_cpu_enable_max_number",
+      "original_symbol_pointer": "0x53d5",
+      "original_code_va": "0x53d4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159dc",
+      "offset_from_table_base": "0x1ac",
+      "c_target_expression": "OEM_sys_set_cpu_enable_max_number",
+      "symbol": "OEM_sys_set_cpu_enable_max_number",
+      "original_symbol_pointer": "0x5bad",
+      "original_code_va": "0x5bac",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a7c",
+      "offset_from_table_base": "0x24c",
+      "c_target_expression": "OEM_sys_get_cpu_fixed_number",
+      "symbol": "OEM_sys_get_cpu_fixed_number",
+      "original_symbol_pointer": "0x53c5",
+      "original_code_va": "0x53c4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a80",
+      "offset_from_table_base": "0x250",
+      "c_target_expression": "OEM_sys_set_cpu_fixed_number",
+      "symbol": "OEM_sys_set_cpu_fixed_number",
+      "original_symbol_pointer": "0x5b9d",
+      "original_code_va": "0x5b9c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15ac0",
+      "offset_from_table_base": "0x290",
+      "c_target_expression": "Tizen_Resource_Manager",
+      "symbol": "Tizen_Resource_Manager",
+      "original_symbol_pointer": "0x4fa1",
+      "original_code_va": "0x4fa0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 116
+    },
+    {
+      "original_table_slot_va": "0x159e0",
+      "offset_from_table_base": "0x1b0",
+      "c_target_expression": "OEM_sys_get_temperature_adc",
+      "symbol": "OEM_sys_get_temperature_adc",
+      "original_symbol_pointer": "0x5395",
+      "original_code_va": "0x5394",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x159e4",
+      "offset_from_table_base": "0x1b4",
+      "c_target_expression": "OEM_sys_get_temperature_value",
+      "symbol": "OEM_sys_get_temperature_value",
+      "original_symbol_pointer": "0x5385",
+      "original_code_va": "0x5384",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a08",
+      "offset_from_table_base": "0x1d8",
+      "c_target_expression": "OEM_sys_set_irled_control",
+      "symbol": "OEM_sys_set_irled_control",
+      "original_symbol_pointer": "0x5769",
+      "original_code_va": "0x5768",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 20
+    },
+    {
+      "original_table_slot_va": "0x15a0c",
+      "offset_from_table_base": "0x1dc",
+      "c_target_expression": "OEM_sys_set_svcled_color",
+      "symbol": "OEM_sys_set_svcled_color",
+      "original_symbol_pointer": "0x5a65",
+      "original_code_va": "0x5a64",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 280
+    },
+    {
+      "original_table_slot_va": "0x15a10",
+      "offset_from_table_base": "0x1e0",
+      "c_target_expression": "OEM_sys_get_hall_status",
+      "symbol": "OEM_sys_get_hall_status",
+      "original_symbol_pointer": "0x679d",
+      "original_code_va": "0x679c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 376
+    },
+    {
+      "original_table_slot_va": "0x15a18",
+      "offset_from_table_base": "0x1e8",
+      "c_target_expression": "OEM_sys_set_resetkey_disable",
+      "symbol": "OEM_sys_set_resetkey_disable",
+      "original_symbol_pointer": "0x5c0d",
+      "original_code_va": "0x5c0c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 44
+    },
+    {
+      "original_table_slot_va": "0x15a1c",
+      "offset_from_table_base": "0x1ec",
+      "c_target_expression": "OEM_sys_get_hardkey_backlight",
+      "symbol": "OEM_sys_get_hardkey_backlight",
+      "original_symbol_pointer": "0x6915",
+      "original_code_va": "0x6914",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 236
+    },
+    {
+      "original_table_slot_va": "0x15a20",
+      "offset_from_table_base": "0x1f0",
+      "c_target_expression": "OEM_sys_set_hardkey_backlight",
+      "symbol": "OEM_sys_set_hardkey_backlight",
+      "original_symbol_pointer": "0x6dc1",
+      "original_code_va": "0x6dc0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 228
+    },
+    {
+      "original_table_slot_va": "0x15a84",
+      "offset_from_table_base": "0x254",
+      "c_target_expression": "OEM_sys_get_touchscreen_clear_cover",
+      "symbol": "OEM_sys_get_touchscreen_clear_cover",
+      "original_symbol_pointer": "0x6cd1",
+      "original_code_va": "0x6cd0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 240
+    },
+    {
+      "original_table_slot_va": "0x15a88",
+      "offset_from_table_base": "0x258",
+      "c_target_expression": "OEM_sys_set_touchscreen_clear_cover",
+      "symbol": "OEM_sys_set_touchscreen_clear_cover",
+      "original_symbol_pointer": "0x715d",
+      "original_code_va": "0x715c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 816
+    },
+    {
+      "original_table_slot_va": "0x15a8c",
+      "offset_from_table_base": "0x25c",
+      "c_target_expression": "OEM_sys_get_touchscreen_glove_mode",
+      "symbol": "OEM_sys_get_touchscreen_glove_mode",
+      "original_symbol_pointer": "0x6be1",
+      "original_code_va": "0x6be0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 240
+    },
+    {
+      "original_table_slot_va": "0x15a90",
+      "offset_from_table_base": "0x260",
+      "c_target_expression": "OEM_sys_set_touchscreen_glove_mode",
+      "symbol": "OEM_sys_set_touchscreen_glove_mode",
+      "original_symbol_pointer": "0x706d",
+      "original_code_va": "0x706c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 240
+    },
+    {
+      "original_table_slot_va": "0x15a94",
+      "offset_from_table_base": "0x264",
+      "c_target_expression": "OEM_sys_get_touchkey_flip_mode",
+      "symbol": "OEM_sys_get_touchkey_flip_mode",
+      "original_symbol_pointer": "0x6af1",
+      "original_code_va": "0x6af0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 240
+    },
+    {
+      "original_table_slot_va": "0x15a98",
+      "offset_from_table_base": "0x268",
+      "c_target_expression": "OEM_sys_set_touchkey_flip_mode",
+      "symbol": "OEM_sys_set_touchkey_flip_mode",
+      "original_symbol_pointer": "0x6f89",
+      "original_code_va": "0x6f88",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 228
+    },
+    {
+      "original_table_slot_va": "0x15a9c",
+      "offset_from_table_base": "0x26c",
+      "c_target_expression": "OEM_sys_get_touchkey_glove_mode",
+      "symbol": "OEM_sys_get_touchkey_glove_mode",
+      "original_symbol_pointer": "0x6a01",
+      "original_code_va": "0x6a00",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 240
+    },
+    {
+      "original_table_slot_va": "0x15aa0",
+      "offset_from_table_base": "0x270",
+      "c_target_expression": "OEM_sys_set_touchkey_glove_mode",
+      "symbol": "OEM_sys_set_touchkey_glove_mode",
+      "original_symbol_pointer": "0x6ea5",
+      "original_code_va": "0x6ea4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 228
+    },
+    {
+      "original_table_slot_va": "0x15aa4",
+      "offset_from_table_base": "0x274",
+      "c_target_expression": "OEM_sys_get_touchmask",
+      "symbol": "OEM_sys_get_touchmask",
+      "original_symbol_pointer": "0x53b5",
+      "original_code_va": "0x53b4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15aa8",
+      "offset_from_table_base": "0x278",
+      "c_target_expression": "OEM_sys_set_touchmask",
+      "symbol": "OEM_sys_set_touchmask",
+      "original_symbol_pointer": "0x5b8d",
+      "original_code_va": "0x5b8c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15aac",
+      "offset_from_table_base": "0x27c",
+      "c_target_expression": "OEM_sys_get_touchversion",
+      "symbol": "OEM_sys_get_touchversion",
+      "original_symbol_pointer": "0x5ca5",
+      "original_code_va": "0x5ca4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 20
+    },
+    {
+      "original_table_slot_va": "0x15ab0",
+      "offset_from_table_base": "0x280",
+      "c_target_expression": "OEM_sys_get_touchgpio_vdd",
+      "symbol": "OEM_sys_get_touchgpio_vdd",
+      "original_symbol_pointer": "0x53a5",
+      "original_code_va": "0x53a4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15ab4",
+      "offset_from_table_base": "0x284",
+      "c_target_expression": "OEM_sys_set_touchgpio_vdd",
+      "symbol": "OEM_sys_set_touchgpio_vdd",
+      "original_symbol_pointer": "0x5b7d",
+      "original_code_va": "0x5b7c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a24",
+      "offset_from_table_base": "0x1f4",
+      "c_target_expression": "OEM_sys_get_battery_technology",
+      "symbol": "OEM_sys_get_battery_technology",
+      "original_symbol_pointer": "0x5c89",
+      "original_code_va": "0x5c88",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 28
+    },
+    {
+      "original_table_slot_va": "0x15a28",
+      "offset_from_table_base": "0x1f8",
+      "c_target_expression": "OEM_sys_get_battery_temperature",
+      "symbol": "OEM_sys_get_battery_temperature",
+      "original_symbol_pointer": "0x5369",
+      "original_code_va": "0x5368",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 28
+    },
+    {
+      "original_table_slot_va": "0x15a2c",
+      "offset_from_table_base": "0x1fc",
+      "c_target_expression": "OEM_sys_get_battery_voltage",
+      "symbol": "OEM_sys_get_battery_voltage",
+      "original_symbol_pointer": "0x534d",
+      "original_code_va": "0x534c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 28
+    },
+    {
+      "original_table_slot_va": "0x15a30",
+      "offset_from_table_base": "0x200",
+      "c_target_expression": "OEM_sys_get_leds_flash_brightness",
+      "symbol": "OEM_sys_get_leds_flash_brightness",
+      "original_symbol_pointer": "0x5331",
+      "original_code_va": "0x5330",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 28
+    },
+    {
+      "original_table_slot_va": "0x15a34",
+      "offset_from_table_base": "0x204",
+      "c_target_expression": "OEM_sys_set_leds_flash_brightness",
+      "symbol": "OEM_sys_set_leds_flash_brightness",
+      "original_symbol_pointer": "0x5a55",
+      "original_code_va": "0x5a54",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a38",
+      "offset_from_table_base": "0x208",
+      "c_target_expression": "OEM_sys_get_led_card_brightness",
+      "symbol": "OEM_sys_get_led_card_brightness",
+      "original_symbol_pointer": "0x5321",
+      "original_code_va": "0x5320",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a3c",
+      "offset_from_table_base": "0x20c",
+      "c_target_expression": "OEM_sys_set_led_card_brightness",
+      "symbol": "OEM_sys_set_led_card_brightness",
+      "original_symbol_pointer": "0x5a45",
+      "original_code_va": "0x5a44",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a40",
+      "offset_from_table_base": "0x210",
+      "c_target_expression": "OEM_sys_get_led_card_delay_on",
+      "symbol": "OEM_sys_get_led_card_delay_on",
+      "original_symbol_pointer": "0x5311",
+      "original_code_va": "0x5310",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a44",
+      "offset_from_table_base": "0x214",
+      "c_target_expression": "OEM_sys_set_led_card_delay_on",
+      "symbol": "OEM_sys_set_led_card_delay_on",
+      "original_symbol_pointer": "0x5a35",
+      "original_code_va": "0x5a34",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a48",
+      "offset_from_table_base": "0x218",
+      "c_target_expression": "OEM_sys_get_led_card_delay_off",
+      "symbol": "OEM_sys_get_led_card_delay_off",
+      "original_symbol_pointer": "0x5301",
+      "original_code_va": "0x5300",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a50",
+      "offset_from_table_base": "0x220",
+      "c_target_expression": "&DAT_00015631",
+      "unresolved_expression": true
+    },
+    {
+      "original_table_slot_va": "0x15a4c",
+      "offset_from_table_base": "0x21c",
+      "c_target_expression": "OEM_sys_set_led_card_delay_off",
+      "symbol": "OEM_sys_set_led_card_delay_off",
+      "original_symbol_pointer": "0x5a25",
+      "original_code_va": "0x5a24",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a58",
+      "offset_from_table_base": "0x228",
+      "c_target_expression": "0x17fad",
+      "unresolved_expression": true
+    },
+    {
+      "original_table_slot_va": "0x15a5c",
+      "offset_from_table_base": "0x22c",
+      "c_target_expression": "&LAB_00017f64_1",
+      "unresolved_expression": true
+    },
+    {
+      "original_table_slot_va": "0x15a54",
+      "offset_from_table_base": "0x224",
+      "c_target_expression": "OEM_sys_get_led_af_brightness",
+      "symbol": "OEM_sys_get_led_af_brightness",
+      "original_symbol_pointer": "0x52f1",
+      "original_code_va": "0x52f0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a60",
+      "offset_from_table_base": "0x230",
+      "c_target_expression": "OEM_sys_get_led_af_delay_on",
+      "symbol": "OEM_sys_get_led_af_delay_on",
+      "original_symbol_pointer": "0x52e1",
+      "original_code_va": "0x52e0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a64",
+      "offset_from_table_base": "0x234",
+      "c_target_expression": "OEM_sys_set_led_af_delay_on",
+      "symbol": "OEM_sys_set_led_af_delay_on",
+      "original_symbol_pointer": "0x5a15",
+      "original_code_va": "0x5a14",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a68",
+      "offset_from_table_base": "0x238",
+      "c_target_expression": "OEM_sys_get_led_af_delay_off",
+      "symbol": "OEM_sys_get_led_af_delay_off",
+      "original_symbol_pointer": "0x52d1",
+      "original_code_va": "0x52d0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15a70",
+      "offset_from_table_base": "0x240",
+      "c_target_expression": "0x17c51",
+      "unresolved_expression": true
+    },
+    {
+      "original_table_slot_va": "0x15a6c",
+      "offset_from_table_base": "0x23c",
+      "c_target_expression": "OEM_sys_set_led_af_delay_off",
+      "symbol": "OEM_sys_set_led_af_delay_off",
+      "original_symbol_pointer": "0x5a05",
+      "original_code_va": "0x5a04",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15ad4",
+      "offset_from_table_base": "0x2a4",
+      "c_target_expression": "OEM_sys_set_key",
+      "symbol": "OEM_sys_set_key",
+      "original_symbol_pointer": "0x8d49",
+      "original_code_va": "0x8d48",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 192
+    },
+    {
+      "original_table_slot_va": "0x15ae8",
+      "offset_from_table_base": "0x2b8",
+      "c_target_expression": "OEM_sys_get_mmc_sdcard_online",
+      "symbol": "OEM_sys_get_mmc_sdcard_online",
+      "original_symbol_pointer": "0x52a1",
+      "original_code_va": "0x52a0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15aec",
+      "offset_from_table_base": "0x2bc",
+      "c_target_expression": "OEM_sys_get_mmc_sdcard_protect",
+      "symbol": "OEM_sys_get_mmc_sdcard_protect",
+      "original_symbol_pointer": "0x5291",
+      "original_code_va": "0x5290",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15af0",
+      "offset_from_table_base": "0x2c0",
+      "c_target_expression": "OEM_sys_get_mmc_sdcard_supportcard",
+      "symbol": "OEM_sys_get_mmc_sdcard_supportcard",
+      "original_symbol_pointer": "0x5281",
+      "original_code_va": "0x5280",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15af4",
+      "offset_from_table_base": "0x2c4",
+      "c_target_expression": "OEM_sys_set_mmc_sdcard_supportcard",
+      "symbol": "OEM_sys_set_mmc_sdcard_supportcard",
+      "original_symbol_pointer": "0x5905",
+      "original_code_va": "0x5904",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15af8",
+      "offset_from_table_base": "0x2c8",
+      "c_target_expression": "OEM_sys_get_mmc_uhs2_sdcard_supportcard",
+      "symbol": "OEM_sys_get_mmc_uhs2_sdcard_supportcard",
+      "original_symbol_pointer": "0x5271",
+      "original_code_va": "0x5270",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15afc",
+      "offset_from_table_base": "0x2cc",
+      "c_target_expression": "OEM_sys_set_mmc_uhs2_sdcard_supportcard",
+      "symbol": "OEM_sys_set_mmc_uhs2_sdcard_supportcard",
+      "original_symbol_pointer": "0x58f5",
+      "original_code_va": "0x58f4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b00",
+      "offset_from_table_base": "0x2d0",
+      "c_target_expression": "OEM_sys_set_mmc_emmc_clock",
+      "symbol": "OEM_sys_set_mmc_emmc_clock",
+      "original_symbol_pointer": "0x58e5",
+      "original_code_va": "0x58e4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b04",
+      "offset_from_table_base": "0x2d4",
+      "c_target_expression": "OEM_sys_get_dial_mode",
+      "symbol": "OEM_sys_get_dial_mode",
+      "original_symbol_pointer": "0x5261",
+      "original_code_va": "0x5260",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b08",
+      "offset_from_table_base": "0x2d8",
+      "c_target_expression": "OEM_sys_get_dial_dmode",
+      "symbol": "OEM_sys_get_dial_dmode",
+      "original_symbol_pointer": "0x5251",
+      "original_code_va": "0x5250",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b0c",
+      "offset_from_table_base": "0x2dc",
+      "c_target_expression": "OEM_sys_get_key_shutter",
+      "symbol": "OEM_sys_get_key_shutter",
+      "original_symbol_pointer": "0x5241",
+      "original_code_va": "0x5240",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b10",
+      "offset_from_table_base": "0x2e0",
+      "c_target_expression": "OEM_sys_get_key_power",
+      "symbol": "OEM_sys_get_key_power",
+      "original_symbol_pointer": "0x5231",
+      "original_code_va": "0x5230",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b18",
+      "offset_from_table_base": "0x2e8",
+      "c_target_expression": "OEM_sys_get_key_mask_power",
+      "symbol": "OEM_sys_get_key_mask_power",
+      "original_symbol_pointer": "0x5179",
+      "original_code_va": "0x5178",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 40
+    },
+    {
+      "original_table_slot_va": "0x15b1c",
+      "offset_from_table_base": "0x2ec",
+      "c_target_expression": "OEM_sys_set_key_mask_power",
+      "symbol": "OEM_sys_set_key_mask_power",
+      "original_symbol_pointer": "0x5869",
+      "original_code_va": "0x5868",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 76
+    },
+    {
+      "original_table_slot_va": "0x15b20",
+      "offset_from_table_base": "0x2f0",
+      "c_target_expression": "OEM_sys_get_key_mask_shutter1",
+      "symbol": "OEM_sys_get_key_mask_shutter1",
+      "original_symbol_pointer": "0x5151",
+      "original_code_va": "0x5150",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 40
+    },
+    {
+      "original_table_slot_va": "0x15b24",
+      "offset_from_table_base": "0x2f4",
+      "c_target_expression": "OEM_sys_set_key_mask_shutter1",
+      "symbol": "OEM_sys_set_key_mask_shutter1",
+      "original_symbol_pointer": "0x581d",
+      "original_code_va": "0x581c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 76
+    },
+    {
+      "original_table_slot_va": "0x15b28",
+      "offset_from_table_base": "0x2f8",
+      "c_target_expression": "OEM_sys_get_key_mask_key",
+      "symbol": "OEM_sys_get_key_mask_key",
+      "original_symbol_pointer": "0x5201",
+      "original_code_va": "0x5200",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b2c",
+      "offset_from_table_base": "0x2fc",
+      "c_target_expression": "OEM_sys_set_key_mask_key",
+      "symbol": "OEM_sys_set_key_mask_key",
+      "original_symbol_pointer": "0x58c5",
+      "original_code_va": "0x58c4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b30",
+      "offset_from_table_base": "0x300",
+      "c_target_expression": "OEM_sys_get_key_record",
+      "symbol": "OEM_sys_get_key_record",
+      "original_symbol_pointer": "0x51f1",
+      "original_code_va": "0x51f0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b34",
+      "offset_from_table_base": "0x304",
+      "c_target_expression": "OEM_sys_get_key_afon",
+      "symbol": "OEM_sys_get_key_afon",
+      "original_symbol_pointer": "0x51e1",
+      "original_code_va": "0x51e0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b38",
+      "offset_from_table_base": "0x308",
+      "c_target_expression": "OEM_sys_get_key_ael",
+      "symbol": "OEM_sys_get_key_ael",
+      "original_symbol_pointer": "0x51d1",
+      "original_code_va": "0x51d0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b3c",
+      "offset_from_table_base": "0x30c",
+      "c_target_expression": "OEM_sys_get_key_enable_stlcd_backlight",
+      "symbol": "OEM_sys_get_key_enable_stlcd_backlight",
+      "original_symbol_pointer": "0x51c1",
+      "original_code_va": "0x51c0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b40",
+      "offset_from_table_base": "0x310",
+      "c_target_expression": "OEM_sys_set_key_enable_stlcd_backlight",
+      "symbol": "OEM_sys_set_key_enable_stlcd_backlight",
+      "original_symbol_pointer": "0x58b5",
+      "original_code_va": "0x58b4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b44",
+      "offset_from_table_base": "0x314",
+      "c_target_expression": "OEM_sys_get_key_wifi",
+      "symbol": "OEM_sys_get_key_wifi",
+      "original_symbol_pointer": "0x51b1",
+      "original_code_va": "0x51b0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b48",
+      "offset_from_table_base": "0x318",
+      "c_target_expression": "OEM_sys_get_rtc_time",
+      "symbol": "OEM_sys_get_rtc_time",
+      "original_symbol_pointer": "0x5141",
+      "original_code_va": "0x5140",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b4c",
+      "offset_from_table_base": "0x31c",
+      "c_target_expression": "OEM_sys_set_rtc_time",
+      "symbol": "OEM_sys_set_rtc_time",
+      "original_symbol_pointer": "0x650d",
+      "original_code_va": "0x650c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 144
+    },
+    {
+      "original_table_slot_va": "0x15b50",
+      "offset_from_table_base": "0x320",
+      "c_target_expression": "OEM_sys_get_rtc_reset",
+      "symbol": "OEM_sys_get_rtc_reset",
+      "original_symbol_pointer": "0x8aa5",
+      "original_code_va": "0x8aa4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 220
+    },
+    {
+      "original_table_slot_va": "0x15b54",
+      "offset_from_table_base": "0x324",
+      "c_target_expression": "OEM_sys_set_rtc_reset",
+      "symbol": "OEM_sys_set_rtc_reset",
+      "original_symbol_pointer": "0x503d",
+      "original_code_va": "0x503c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 4
+    },
+    {
+      "original_table_slot_va": "0x15b58",
+      "offset_from_table_base": "0x328",
+      "c_target_expression": "OEM_sys_get_rtc_alarm",
+      "symbol": "OEM_sys_get_rtc_alarm",
+      "original_symbol_pointer": "0x5131",
+      "original_code_va": "0x5130",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b5c",
+      "offset_from_table_base": "0x32c",
+      "c_target_expression": "OEM_sys_set_rtc_alarm",
+      "symbol": "OEM_sys_set_rtc_alarm",
+      "original_symbol_pointer": "0x5645",
+      "original_code_va": "0x5644",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 260
+    },
+    {
+      "original_table_slot_va": "0x15c3c",
+      "offset_from_table_base": "0x40c",
+      "c_target_expression": "OEM_sys_set_rtc_wakeup_source",
+      "symbol": "OEM_sys_set_rtc_wakeup_source",
+      "original_symbol_pointer": "0x8a75",
+      "original_code_va": "0x8a74",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 48
+    },
+    {
+      "original_table_slot_va": "0x15b70",
+      "offset_from_table_base": "0x340",
+      "c_target_expression": "OEM_sys_set_drs_on",
+      "symbol": "OEM_sys_set_drs_on",
+      "original_symbol_pointer": "0x580d",
+      "original_code_va": "0x580c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b74",
+      "offset_from_table_base": "0x344",
+      "c_target_expression": "OEM_sys_set_drs_off",
+      "symbol": "OEM_sys_set_drs_off",
+      "original_symbol_pointer": "0x57fd",
+      "original_code_va": "0x57fc",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b78",
+      "offset_from_table_base": "0x348",
+      "c_target_expression": "OEM_sys_get_drs_run_status",
+      "symbol": "OEM_sys_get_drs_run_status",
+      "original_symbol_pointer": "0x5121",
+      "original_code_va": "0x5120",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b7c",
+      "offset_from_table_base": "0x34c",
+      "c_target_expression": "OEM_sys_get_drs_progress",
+      "symbol": "OEM_sys_get_drs_progress",
+      "original_symbol_pointer": "0x5111",
+      "original_code_va": "0x5110",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b80",
+      "offset_from_table_base": "0x350",
+      "c_target_expression": "OEM_sys_set_power_one_shot",
+      "symbol": "OEM_sys_set_power_one_shot",
+      "original_symbol_pointer": "0x57ed",
+      "original_code_va": "0x57ec",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b84",
+      "offset_from_table_base": "0x354",
+      "c_target_expression": "OEM_sys_set_power_shutdown",
+      "symbol": "OEM_sys_set_power_shutdown",
+      "original_symbol_pointer": "0x57dd",
+      "original_code_va": "0x57dc",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b88",
+      "offset_from_table_base": "0x358",
+      "c_target_expression": "OEM_sys_get_usb_mode",
+      "symbol": "OEM_sys_get_usb_mode",
+      "original_symbol_pointer": "0x8939",
+      "original_code_va": "0x8938",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 84
+    },
+    {
+      "original_table_slot_va": "0x15b8c",
+      "offset_from_table_base": "0x35c",
+      "c_target_expression": "OEM_sys_get_cmu_codec_rate",
+      "symbol": "OEM_sys_get_cmu_codec_rate",
+      "original_symbol_pointer": "0x6419",
+      "original_code_va": "0x6418",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 244
+    },
+    {
+      "original_table_slot_va": "0x15b90",
+      "offset_from_table_base": "0x360",
+      "c_target_expression": "OEM_sys_get_cmu_gpu_rate",
+      "symbol": "OEM_sys_get_cmu_gpu_rate",
+      "original_symbol_pointer": "0x63b9",
+      "original_code_va": "0x63b8",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 96
+    },
+    {
+      "original_table_slot_va": "0x15b94",
+      "offset_from_table_base": "0x364",
+      "c_target_expression": "OEM_sys_get_cmu_isp_scenario",
+      "symbol": "OEM_sys_get_cmu_isp_scenario",
+      "original_symbol_pointer": "0x5101",
+      "original_code_va": "0x5100",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15b98",
+      "offset_from_table_base": "0x368",
+      "c_target_expression": "OEM_sys_get_cmu_mp_rate",
+      "symbol": "OEM_sys_get_cmu_mp_rate",
+      "original_symbol_pointer": "0x632d",
+      "original_code_va": "0x632c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 140
+    },
+    {
+      "original_table_slot_va": "0x15b9c",
+      "offset_from_table_base": "0x36c",
+      "c_target_expression": "OEM_sys_get_cmu_rcpu_rate",
+      "symbol": "OEM_sys_get_cmu_rcpu_rate",
+      "original_symbol_pointer": "0x6265",
+      "original_code_va": "0x6264",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 200
+    },
+    {
+      "original_table_slot_va": "0x15ba0",
+      "offset_from_table_base": "0x370",
+      "c_target_expression": "OEM_sys_get_cmu_srp_rate",
+      "symbol": "OEM_sys_get_cmu_srp_rate",
+      "original_symbol_pointer": "0x61ed",
+      "original_code_va": "0x61ec",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 120
+    },
+    {
+      "original_table_slot_va": "0x15ba4",
+      "offset_from_table_base": "0x374",
+      "c_target_expression": "OEM_sys_get_cmu_sss_rate",
+      "symbol": "OEM_sys_get_cmu_sss_rate",
+      "original_symbol_pointer": "0x6139",
+      "original_code_va": "0x6138",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 180
+    },
+    {
+      "original_table_slot_va": "0x15ba8",
+      "offset_from_table_base": "0x378",
+      "c_target_expression": "OEM_sys_set_cmu_codec_rate",
+      "symbol": "OEM_sys_set_cmu_codec_rate",
+      "original_symbol_pointer": "0x6109",
+      "original_code_va": "0x6108",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 48
+    },
+    {
+      "original_table_slot_va": "0x15bac",
+      "offset_from_table_base": "0x37c",
+      "c_target_expression": "OEM_sys_set_cmu_gpu_rate",
+      "symbol": "OEM_sys_set_cmu_gpu_rate",
+      "original_symbol_pointer": "0x60d9",
+      "original_code_va": "0x60d8",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 48
+    },
+    {
+      "original_table_slot_va": "0x15bb0",
+      "offset_from_table_base": "0x380",
+      "c_target_expression": "OEM_sys_set_cmu_isp_scenario",
+      "symbol": "OEM_sys_set_cmu_isp_scenario",
+      "original_symbol_pointer": "0x57cd",
+      "original_code_va": "0x57cc",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15bb4",
+      "offset_from_table_base": "0x384",
+      "c_target_expression": "OEM_sys_set_cmu_mp_rate",
+      "symbol": "OEM_sys_set_cmu_mp_rate",
+      "original_symbol_pointer": "0x60a9",
+      "original_code_va": "0x60a8",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 48
+    },
+    {
+      "original_table_slot_va": "0x15bb8",
+      "offset_from_table_base": "0x388",
+      "c_target_expression": "OEM_sys_set_cmu_rcpu_rate",
+      "symbol": "OEM_sys_set_cmu_rcpu_rate",
+      "original_symbol_pointer": "0x6079",
+      "original_code_va": "0x6078",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 48
+    },
+    {
+      "original_table_slot_va": "0x15bbc",
+      "offset_from_table_base": "0x38c",
+      "c_target_expression": "OEM_sys_set_cmu_srp_rate",
+      "symbol": "OEM_sys_set_cmu_srp_rate",
+      "original_symbol_pointer": "0x6049",
+      "original_code_va": "0x6048",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 48
+    },
+    {
+      "original_table_slot_va": "0x15bc0",
+      "offset_from_table_base": "0x390",
+      "c_target_expression": "OEM_sys_set_cmu_sss_rate",
+      "symbol": "OEM_sys_set_cmu_sss_rate",
+      "original_symbol_pointer": "0x6019",
+      "original_code_va": "0x6018",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 48
+    },
+    {
+      "original_table_slot_va": "0x15bc4",
+      "offset_from_table_base": "0x394",
+      "c_target_expression": "OEM_sys_set_ddr_qos",
+      "symbol": "OEM_sys_set_ddr_qos",
+      "original_symbol_pointer": "0x6009",
+      "original_code_va": "0x6008",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15bc8",
+      "offset_from_table_base": "0x398",
+      "c_target_expression": "OEM_sys_get_pmu_mp",
+      "symbol": "OEM_sys_get_pmu_mp",
+      "original_symbol_pointer": "0x86e5",
+      "original_code_va": "0x86e4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 112
+    },
+    {
+      "original_table_slot_va": "0x15bcc",
+      "offset_from_table_base": "0x39c",
+      "c_target_expression": "OEM_sys_get_pmu_hevc",
+      "symbol": "OEM_sys_get_pmu_hevc",
+      "original_symbol_pointer": "0x85c1",
+      "original_code_va": "0x85c0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 112
+    },
+    {
+      "original_table_slot_va": "0x15bd0",
+      "offset_from_table_base": "0x3a0",
+      "c_target_expression": "OEM_sys_set_pmu_mp",
+      "symbol": "OEM_sys_set_pmu_mp",
+      "original_symbol_pointer": "0x7e51",
+      "original_code_va": "0x7e50",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 92
+    },
+    {
+      "original_table_slot_va": "0x15bd4",
+      "offset_from_table_base": "0x3a4",
+      "c_target_expression": "OEM_sys_set_pmu_hevc",
+      "symbol": "OEM_sys_set_pmu_hevc",
+      "original_symbol_pointer": "0x7df5",
+      "original_code_va": "0x7df4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 92
+    },
+    {
+      "original_table_slot_va": "0x15bd8",
+      "offset_from_table_base": "0x3a8",
+      "c_target_expression": "OEM_sys_get_pmu_sss",
+      "symbol": "OEM_sys_get_pmu_sss",
+      "original_symbol_pointer": "0x849d",
+      "original_code_va": "0x849c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 112
+    },
+    {
+      "original_table_slot_va": "0x15bdc",
+      "offset_from_table_base": "0x3ac",
+      "c_target_expression": "OEM_sys_get_pmu_srp",
+      "symbol": "OEM_sys_get_pmu_srp",
+      "original_symbol_pointer": "0x8379",
+      "original_code_va": "0x8378",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 112
+    },
+    {
+      "original_table_slot_va": "0x15be0",
+      "offset_from_table_base": "0x3b0",
+      "c_target_expression": "OEM_sys_set_pmu_sss",
+      "symbol": "OEM_sys_set_pmu_sss",
+      "original_symbol_pointer": "0x7d99",
+      "original_code_va": "0x7d98",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 92
+    },
+    {
+      "original_table_slot_va": "0x15be4",
+      "offset_from_table_base": "0x3b4",
+      "c_target_expression": "OEM_sys_set_pmu_srp",
+      "symbol": "OEM_sys_set_pmu_srp",
+      "original_symbol_pointer": "0x7d3d",
+      "original_code_va": "0x7d3c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 92
+    },
+    {
+      "original_table_slot_va": "0x15bfc",
+      "offset_from_table_base": "0x3cc",
+      "c_target_expression": "OEM_sys_get_wakeup_source",
+      "symbol": "OEM_sys_get_wakeup_source",
+      "original_symbol_pointer": "0x50b1",
+      "original_code_va": "0x50b0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c00",
+      "offset_from_table_base": "0x3d0",
+      "c_target_expression": "OEM_sys_set_watchdog_timer",
+      "symbol": "OEM_sys_set_watchdog_timer",
+      "original_symbol_pointer": "0x88e1",
+      "original_code_va": "0x88e0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 44
+    },
+    {
+      "original_table_slot_va": "0x15c04",
+      "offset_from_table_base": "0x3d4",
+      "c_target_expression": "OEM_sys_get_watchdog_timer",
+      "symbol": "OEM_sys_get_watchdog_timer",
+      "original_symbol_pointer": "0x890d",
+      "original_code_va": "0x890c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 44
+    },
+    {
+      "original_table_slot_va": "0x15c10",
+      "offset_from_table_base": "0x3e0",
+      "c_target_expression": "OEM_sys_get_key_power_on_boot",
+      "symbol": "OEM_sys_get_key_power_on_boot",
+      "original_symbol_pointer": "0x5221",
+      "original_code_va": "0x5220",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c14",
+      "offset_from_table_base": "0x3e4",
+      "c_target_expression": "OEM_sys_get_key_unmask_on_boot",
+      "symbol": "OEM_sys_get_key_unmask_on_boot",
+      "original_symbol_pointer": "0x5211",
+      "original_code_va": "0x5210",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c18",
+      "offset_from_table_base": "0x3e8",
+      "c_target_expression": "OEM_sys_set_key_unmask_on_boot",
+      "symbol": "OEM_sys_set_key_unmask_on_boot",
+      "original_symbol_pointer": "0x58d5",
+      "original_code_va": "0x58d4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c1c",
+      "offset_from_table_base": "0x3ec",
+      "c_target_expression": "OEM_sys_get_bootmode",
+      "symbol": "OEM_sys_get_bootmode",
+      "original_symbol_pointer": "0x51a1",
+      "original_code_va": "0x51a0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c20",
+      "offset_from_table_base": "0x3f0",
+      "c_target_expression": "OEM_sys_get_cmu_isp_use",
+      "symbol": "OEM_sys_get_cmu_isp_use",
+      "original_symbol_pointer": "0x50f1",
+      "original_code_va": "0x50f0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c24",
+      "offset_from_table_base": "0x3f4",
+      "c_target_expression": "OEM_sys_set_cmu_isp_use",
+      "symbol": "OEM_sys_set_cmu_isp_use",
+      "original_symbol_pointer": "0x57bd",
+      "original_code_va": "0x57bc",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c28",
+      "offset_from_table_base": "0x3f8",
+      "c_target_expression": "OEM_sys_get_cmu_isp_bus_boost",
+      "symbol": "OEM_sys_get_cmu_isp_bus_boost",
+      "original_symbol_pointer": "0x50e1",
+      "original_code_va": "0x50e0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c2c",
+      "offset_from_table_base": "0x3fc",
+      "c_target_expression": "OEM_sys_set_cmu_isp_bus_boost",
+      "symbol": "OEM_sys_set_cmu_isp_bus_boost",
+      "original_symbol_pointer": "0x57ad",
+      "original_code_va": "0x57ac",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c30",
+      "offset_from_table_base": "0x400",
+      "c_target_expression": "OEM_sys_get_pmu_asv",
+      "symbol": "OEM_sys_get_pmu_asv",
+      "original_symbol_pointer": "0x50d1",
+      "original_code_va": "0x50d0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c34",
+      "offset_from_table_base": "0x404",
+      "c_target_expression": "OEM_sys_get_cmu_isp_ep_lock",
+      "symbol": "OEM_sys_get_cmu_isp_ep_lock",
+      "original_symbol_pointer": "0x50c1",
+      "original_code_va": "0x50c0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c38",
+      "offset_from_table_base": "0x408",
+      "c_target_expression": "OEM_sys_set_cmu_isp_ep_lock",
+      "symbol": "OEM_sys_set_cmu_isp_ep_lock",
+      "original_symbol_pointer": "0x579d",
+      "original_code_va": "0x579c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c40",
+      "offset_from_table_base": "0x410",
+      "c_target_expression": "OEM_sys_set_memory_swap_threshold",
+      "symbol": "OEM_sys_set_memory_swap_threshold",
+      "original_symbol_pointer": "0x578d",
+      "original_code_va": "0x578c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c44",
+      "offset_from_table_base": "0x414",
+      "c_target_expression": "OEM_sys_get_memory_swap_threshold",
+      "symbol": "OEM_sys_get_memory_swap_threshold",
+      "original_symbol_pointer": "0x50a1",
+      "original_code_va": "0x50a0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c48",
+      "offset_from_table_base": "0x418",
+      "c_target_expression": "OEM_sys_set_watchdog_boot_shutdown",
+      "symbol": "OEM_sys_set_watchdog_boot_shutdown",
+      "original_symbol_pointer": "0x8889",
+      "original_code_va": "0x8888",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 44
+    },
+    {
+      "original_table_slot_va": "0x15c4c",
+      "offset_from_table_base": "0x41c",
+      "c_target_expression": "OEM_sys_get_watchdog_boot_shutdown",
+      "symbol": "OEM_sys_get_watchdog_boot_shutdown",
+      "original_symbol_pointer": "0x88b5",
+      "original_code_va": "0x88b4",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 44
+    },
+    {
+      "original_table_slot_va": "0x15c50",
+      "offset_from_table_base": "0x420",
+      "c_target_expression": "OEM_sys_set_watchdog_reset",
+      "symbol": "OEM_sys_set_watchdog_reset",
+      "original_symbol_pointer": "0x898d",
+      "original_code_va": "0x898c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 56
+    },
+    {
+      "original_table_slot_va": "0x15c54",
+      "offset_from_table_base": "0x424",
+      "c_target_expression": "OEM_sys_set_cpu_governor",
+      "symbol": "OEM_sys_set_cpu_governor",
+      "original_symbol_pointer": "0x8809",
+      "original_code_va": "0x8808",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 128
+    },
+    {
+      "original_table_slot_va": "0x15c58",
+      "offset_from_table_base": "0x428",
+      "c_target_expression": "OEM_sys_get_cpu_governor",
+      "symbol": "OEM_sys_get_cpu_governor",
+      "original_symbol_pointer": "0x748d",
+      "original_code_va": "0x748c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 588
+    },
+    {
+      "original_table_slot_va": "0x15c5c",
+      "offset_from_table_base": "0x42c",
+      "c_target_expression": "OEM_sys_get_hdmi_edid_hdmi_te",
+      "symbol": "OEM_sys_get_hdmi_edid_hdmi_te",
+      "original_symbol_pointer": "0x5091",
+      "original_code_va": "0x5090",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c60",
+      "offset_from_table_base": "0x430",
+      "c_target_expression": "OEM_sys_get_rotation_data",
+      "symbol": "OEM_sys_get_rotation_data",
+      "original_symbol_pointer": "0x5081",
+      "original_code_va": "0x5080",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c68",
+      "offset_from_table_base": "0x438",
+      "c_target_expression": "OEM_sys_set_cmu_sdio_enable",
+      "symbol": "OEM_sys_set_cmu_sdio_enable",
+      "original_symbol_pointer": "0x7ce1",
+      "original_code_va": "0x7ce0",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 92
+    },
+    {
+      "original_table_slot_va": "0x15c64",
+      "offset_from_table_base": "0x434",
+      "c_target_expression": "OEM_sys_get_cmu_sdio_enable",
+      "symbol": "OEM_sys_get_cmu_sdio_enable",
+      "original_symbol_pointer": "0x824d",
+      "original_code_va": "0x824c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 120
+    },
+    {
+      "original_table_slot_va": "0x15c70",
+      "offset_from_table_base": "0x440",
+      "c_target_expression": "OEM_sys_set_pmu_dp_tv",
+      "symbol": "OEM_sys_set_pmu_dp_tv",
+      "original_symbol_pointer": "0x7c85",
+      "original_code_va": "0x7c84",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 92
+    },
+    {
+      "original_table_slot_va": "0x15c6c",
+      "offset_from_table_base": "0x43c",
+      "c_target_expression": "OEM_sys_get_pmu_dp_tv",
+      "symbol": "OEM_sys_get_pmu_dp_tv",
+      "original_symbol_pointer": "0x812d",
+      "original_code_va": "0x812c",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 112
+    },
+    {
+      "original_table_slot_va": "0x15c74",
+      "offset_from_table_base": "0x444",
+      "c_target_expression": "OEM_sys_get_roll_data",
+      "symbol": "OEM_sys_get_roll_data",
+      "original_symbol_pointer": "0x5071",
+      "original_code_va": "0x5070",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c78",
+      "offset_from_table_base": "0x448",
+      "c_target_expression": "OEM_sys_get_pitch_data",
+      "symbol": "OEM_sys_get_pitch_data",
+      "original_symbol_pointer": "0x5061",
+      "original_code_va": "0x5060",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 16
+    },
+    {
+      "original_table_slot_va": "0x15c7c",
+      "offset_from_table_base": "0x44c",
+      "c_target_expression": "OEM_sys_get_usb_state",
+      "symbol": "OEM_sys_get_usb_state",
+      "original_symbol_pointer": "0x5e49",
+      "original_code_va": "0x5e48",
+      "thumb_pointer_bit": true,
+      "symbol_bytes": 68
+    }
+  ],
+  "method": "Parse assignments from selected C and resolve exact exported names against original .dynsym; original interface-builder bytes retained in source evidence.",
+  "limitations": [
+    "Navigation index only; each handler requires its own semantic/ABI review.",
+    "Table slots are runtime-initialized storage, not initialized file offsets.",
+    "Non-symbol target expressions are retained unresolved; C types and names do not establish active hardware support.",
+    "No target execution or sysfs access."
+  ]
+}

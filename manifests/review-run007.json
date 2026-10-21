@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "run": "RUN007",
+  "reviewed_findings": [
+    {
+      "id": "CARD007-UEVENT",
+      "source_sha256": "7df5d80e88e6668dff2274f86a550e480250d95dce1d3da29b489aa5e5d40f59",
+      "original_path": "/usr/bin/deviced",
+      "original_elf_va": "0x260c0",
+      "evidence": "analysis/evidence/card-events-run007.json",
+      "evidence_sha256": "e8cd1a9c49f4ca87457997fa27f091ef8a3a1a10c58f394b9babc7ca997ddfcd",
+      "method": "Primary-agent SHA/PT_LOAD original ARM/Thumb bytes, saved TMode contexts, selected C, incoming references and manual descriptor/TBB/relocation interpretation",
+      "claim": "Accepted block add/remove events dispatch key2; platform EVENT strings sdcard_insert/remove/init_error/data_error dispatch key3 with1/0/2/3.",
+      "limitations": [
+        "Kernel emission and monitor installation timing remain unobserved.",
+        "Independent semantic review remains incomplete after actual reviewer quota failure."
+      ],
+      "unresolved_questions": [
+        "Kernel emission and monitor installation timing remain unobserved."
+      ],
+      "independent_review_completed": false
+    },
+    {
+      "id": "CARD007-REGISTRY",
+      "source_sha256": "7df5d80e88e6668dff2274f86a550e480250d95dce1d3da29b489aa5e5d40f59",
+      "original_path": "/usr/bin/deviced",
+      "original_elf_va": "0x25dd4",
+      "evidence": "analysis/evidence/card-events-run007.json",
+      "evidence_sha256": "e8cd1a9c49f4ca87457997fa27f091ef8a3a1a10c58f394b9babc7ca997ddfcd",
+      "method": "Primary-agent SHA/PT_LOAD original ARM/Thumb bytes, saved TMode contexts, selected C, incoming references and manual descriptor/TBB/relocation interpretation",
+      "claim": "mmc initialization registers key2 callback23558 and key3 callback23ba8 through key/function list; dispatcher bcc8 calls matching functions with its supplied argument.",
+      "limitations": [
+        "Callback registration success, event timing and invocation on a camera remain unobserved.",
+        "Independent semantic review remains incomplete after actual reviewer quota failure."
+      ],
+      "unresolved_questions": [
+        "Callback registration success, event timing and invocation on a camera remain unobserved."
+      ],
+      "independent_review_completed": false
+    },
+    {
+      "id": "CARD007-STATE",
+      "source_sha256": "7df5d80e88e6668dff2274f86a550e480250d95dce1d3da29b489aa5e5d40f59",
+      "original_path": "/usr/bin/deviced",
+      "original_elf_va": "0x203fc",
+      "evidence": "analysis/evidence/card-events-run007.json",
+      "evidence_sha256": "e8cd1a9c49f4ca87457997fa27f091ef8a3a1a10c58f394b9babc7ca997ddfcd",
+      "method": "Primary-agent SHA/PT_LOAD original ARM/Thumb bytes, saved TMode contexts, selected C, incoming references and manual descriptor/TBB/relocation interpretation",
+      "claim": "Mount result branches publish explicit mmc_err_status/mmc/mmc_mount combinations; driver event2 sets error cb and event3 conditionally retries before that error.",
+      "limitations": [
+        "No per-buffer fwrite correlation; multiple vconf keys are not treated as an atomic update.",
+        "Independent semantic review remains incomplete after actual reviewer quota failure."
+      ],
+      "unresolved_questions": [
+        "No per-buffer fwrite correlation; multiple vconf keys are not treated as an atomic update."
+      ],
+      "independent_review_completed": false
+    },
+    {
+      "id": "CARD007-LOAD",
+      "source_sha256": "843ecf26516114370e16cd2ebc742f515cdd8b590812947b1063daa61565389e",
+      "original_path": "/usr/lib/libdevice-node.so.0.1",
+      "original_elf_va": "0x1570",
+      "evidence": "analysis/evidence/card-events-run007.json",
+      "evidence_sha256": "e8cd1a9c49f4ca87457997fa27f091ef8a3a1a10c58f394b9babc7ca997ddfcd",
+      "method": "Primary-agent SHA/PT_LOAD original ARM/Thumb bytes, saved TMode contexts, selected C, incoming references and manual descriptor/TBB/relocation interpretation",
+      "claim": "Initializer loads fixed OEM plugin path, resolves OEM_sys_get_devman_plugin_interface and falls back locally on inspected failures.",
+      "limitations": [
+        "Loader interposition and active runtime initialization remain unobserved.",
+        "Independent semantic review remains incomplete after actual reviewer quota failure."
+      ],
+      "unresolved_questions": [
+        "Loader interposition and active runtime initialization remain unobserved."
+      ],
+      "independent_review_completed": false
+    },
+    {
+      "id": "CARD007-DISPATCH",
+      "source_sha256": "843ecf26516114370e16cd2ebc742f515cdd8b590812947b1063daa61565389e",
+      "original_path": "/usr/lib/libdevice-node.so.0.1",
+      "original_elf_va": "0x3378",
+      "evidence": "analysis/evidence/card-events-run007.json",
+      "evidence_sha256": "e8cd1a9c49f4ca87457997fa27f091ef8a3a1a10c58f394b9babc7ca997ddfcd",
+      "method": "Primary-agent SHA/PT_LOAD original ARM/Thumb bytes, saved TMode contexts, selected C, incoming references and manual descriptor/TBB/relocation interpretation",
+      "claim": "Type11 descriptor c5cc has Thumb getter3379/setter3405; manual TBB routes property0/1 through interface offsets2b8/2bc, with null-slot fallback.",
+      "limitations": [
+        "These two targets lack Ghidra recovered functions and completed C; original byte/table review is separate.",
+        "Independent semantic review remains incomplete after actual reviewer quota failure."
+      ],
+      "unresolved_questions": [
+        "These two targets lack Ghidra recovered functions and completed C; original byte/table review is separate."
+      ],
+      "independent_review_completed": false
+    },
+    {
+      "id": "CARD007-READ",
+      "source_sha256": "a88cb8130ba246b45c077cf25f0c5944077e41b780eee20f5a5a675b35a15588",
+      "original_path": "/usr/lib/libslp_devman_plugin.so",
+      "original_elf_va": "0x52a0",
+      "evidence": "analysis/evidence/card-events-run007.json",
+      "evidence_sha256": "e8cd1a9c49f4ca87457997fa27f091ef8a3a1a10c58f394b9babc7ca997ddfcd",
+      "method": "Primary-agent SHA/PT_LOAD original ARM/Thumb bytes, saved TMode contexts, selected C, incoming references and manual descriptor/TBB/relocation interpretation",
+      "claim": "OEM online/protect getters use concrete dw_mmc_sdcard.0 sysfs paths; table offsets match common dispatch. sys_get_int49dc returns status in r0 despite inferred void C.",
+      "limitations": [
+        "Node existence, parse-input validity and runtime hardware state remain unobserved.",
+        "Independent semantic review remains incomplete after actual reviewer quota failure."
+      ],
+      "unresolved_questions": [
+        "Node existence, parse-input validity and runtime hardware state remain unobserved."
+      ],
+      "independent_review_completed": false
+    }
+  ],
+  "independent_semantic_review_completed": false
+}

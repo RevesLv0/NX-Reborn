@@ -1,8 +1,9 @@
 # NX500 whole-firmware navigation map
 
-Latest update: run002 reconstructed and verified the full BIN and all sections, decoded
-rootfs/opt/swap, inventoried 17,394 source paths, and measured 1,956 ELF paths / 1,895
-unique ELF contents. See [current status](../../docs/STATUS_20261021_RUN002.md),
+Latest update: RUN007 retains the verified full BIN, sections and 17,394-path
+filesystem inventory (1,956 ELF paths / 1,895 unique contents), and extends the
+loaded-program survey to 42 contents. Selected C and bounded semantic review are
+separate stages. See [current status](../../docs/STATUS_20261022_RUN007.md),
 [boot/services](BOOT_SERVICES_20261021.md), and [expanded Ghidra survey](EXPANDED_GHIDRA_20261021.md).
 The navigation entries below preserve the first-run evidence levels; their `Next retrieval`
 items are now available locally and require semantic inspection. They must not be read

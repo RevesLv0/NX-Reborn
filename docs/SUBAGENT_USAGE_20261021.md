@@ -76,3 +76,7 @@ RUN004까지의 펌웨어 역설계 채팅 활동 페이지와 각 에이전트�
 구분한다. 최종 수치는 `manifests/ghidra-run006.json`, 검증 결과는
 `manifests/evidence-verification-run006.json`에 기록한다.
 
+RUN007의 카드 이벤트·OEM 플러그인 분석은 주 에이전트 단독 작업이다. 신규
+서브 에이전트는 없으며 누적 고유 에이전트는 24개로 유지한다. 별도 독립 검토
+완료로 표시하지 않는다. 결과는 `docs/STATUS_20261022_RUN007.md`에 기록한다.
+

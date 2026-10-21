@@ -1,0 +1,39 @@
+{
+  "run": "20261022_run006",
+  "previous_run": "manifests/drive-artifacts-run005.json",
+  "research_commit": "803891997ecd051edd941621d3bc714e6ee29da5",
+  "ci_run_id": 39631159742,
+  "ci_conclusion": "success",
+  "artifacts": [
+    {
+      "name": "NX500_RUN006_RESEARCH_20261022.zip",
+      "bytes": 2804017,
+      "sha256": "f2539e05dc2aef57bf088fb8fbc1c2c817993c9bba170cfc1a1277ad3308b24b",
+      "id": "1hLt6J4a__ZcplLe7Nfkgi7vwPKuMz5TQ",
+      "url": "https://drive.google.com/file/d/1hLt6J4a__ZcplLe7Nfkgi7vwPKuMz5TQ/view",
+      "verified_parent_id": "10xY2YyYAyarseUKK24i-rwA0ZMiTrm6G",
+      "remote_verification": "Full authenticated readback SHA-256 and ZIP CRC; parent and size metadata verified"
+    },
+    {
+      "name": "NX500_RUN006_EXPORTS_20261022.zip",
+      "bytes": 31714882,
+      "sha256": "769348679f9fa69a8a4c73353e7aeb3f8548893f07473a870c434b455a2700f7",
+      "id": "1MkPCJzRIq8wk101QI3tAR8nijTiunt0r",
+      "url": "https://drive.google.com/file/d/1MkPCJzRIq8wk101QI3tAR8nijTiunt0r/view",
+      "verified_parent_id": "1qWBUqiXxBFfDLA6AQ6UGjYaNCfcZJuV3",
+      "remote_verification": "Full authenticated readback SHA-256 and ZIP CRC; parent and size metadata verified"
+    }
+  ],
+  "independent_semantic_review_completed": false,
+  "archive_scope": "Research/Git bundle and all 21 RUN006 output generations/receipts/logs. Full firmware inputs and Ghidra databases excluded; prior source and project snapshots remain required.",
+  "publication_review": "Initial upload rejected because exact destination trust was unverified; checked original Codex instructions, existing folder parent chain, root ownership and payload scope, then same uploads approved.",
+  "agent_model_manifest": "manifests/subagent-run006.json",
+  "restore_guide": {
+    "id": "1KDLzO9wCfsrdVzuosWUsGBmoAeAZp9L5",
+    "url": "https://drive.google.com/file/d/1KDLzO9wCfsrdVzuosWUsGBmoAeAZp9L5/view",
+    "local_path": "docs/DRIVE_RUN006_20261022.md",
+    "sha256": "dde47cd6b8de0a24b8f2c1ac5965e63cf62831d3825c0c6b9a6bae1a74769aca",
+    "verified_parent_id": "198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+    "remote_verification": "Readable full content matched exact local text and expected parent"
+  }
+}
