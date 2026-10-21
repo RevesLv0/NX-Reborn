@@ -1,0 +1,1885 @@
+{
+  "schema_version": 1,
+  "scope": "RUN004 capture completion boundary, offline static only",
+  "new_imports": 0,
+  "new_inventory_coverage": 0,
+  "distinct_reprocessed_programs": 13,
+  "function_discovery_counts_additive": false,
+  "source_inventory": ".work/full/inventory/full_filesystem_inventory.json",
+  "source_inventory_sha256": "c874bc1a39049f8f6afb508aa34e9fb0b4aacd1480e7603afade30a4613d461f",
+  "inputs": [
+    {
+      "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "staged_path": ".work/run004/capture/inputs/di-camera-app",
+      "sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "source_inode_dump_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "partition": "rootfs",
+      "path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 4773516
+    },
+    {
+      "original_path": "/usr/bin/mtp-responder",
+      "staged_path": ".work/run004/capture/inputs/mtp-responder",
+      "sha256": "630d4f6c8beb4008973c2bf3646fa032768e5810d5aa6b673b472330e983409b",
+      "source_inode_dump_sha256": "630d4f6c8beb4008973c2bf3646fa032768e5810d5aa6b673b472330e983409b",
+      "partition": "rootfs",
+      "path": "/usr/bin/mtp-responder",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 231416
+    },
+    {
+      "original_path": "/usr/bin/nfc-manager-daemon",
+      "staged_path": ".work/run004/capture/inputs/nfc-manager-daemon",
+      "sha256": "4f71b292ced7180280eb53c87bb52f7e6e188278cfee84ad2b106b45ee219ddf",
+      "source_inode_dump_sha256": "4f71b292ced7180280eb53c87bb52f7e6e188278cfee84ad2b106b45ee219ddf",
+      "partition": "rootfs",
+      "path": "/usr/bin/nfc-manager-daemon",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 486496
+    },
+    {
+      "original_path": "/usr/bin/system-recovery",
+      "staged_path": ".work/run004/capture/inputs/system-recovery",
+      "sha256": "161f5656f5d9e2df53b835dda648ce0c173696dbae5b8a56c61130b7f1f541cb",
+      "source_inode_dump_sha256": "161f5656f5d9e2df53b835dda648ce0c173696dbae5b8a56c61130b7f1f541cb",
+      "partition": "rootfs",
+      "path": "/usr/bin/system-recovery",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 16004
+    },
+    {
+      "original_path": "/usr/lib/libcapture-fw-prod.so",
+      "staged_path": ".work/run004/capture/inputs/libcapture-fw-prod.so",
+      "sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "source_inode_dump_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "partition": "rootfs",
+      "path": "/usr/lib/libcapture-fw-prod.so",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 734600
+    },
+    {
+      "original_path": "/usr/lib/libdi-network-bt-app.so",
+      "staged_path": ".work/run004/capture/inputs/libdi-network-bt-app.so",
+      "sha256": "94a8f7ae05298d9a143d89c3b67cb1141ef3aea7c2cdc0004ef9799cda261eae",
+      "source_inode_dump_sha256": "94a8f7ae05298d9a143d89c3b67cb1141ef3aea7c2cdc0004ef9799cda261eae",
+      "partition": "rootfs",
+      "path": "/usr/lib/libdi-network-bt-app.so",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 290428
+    },
+    {
+      "original_path": "/usr/lib/libdi-network-dlna-rvf.so",
+      "staged_path": ".work/run004/capture/inputs/libdi-network-dlna-rvf.so",
+      "sha256": "a7c8f03e4fdcc035762f83a2168efbbb4a4d93ac34802d1d4e097eb74404f567",
+      "source_inode_dump_sha256": "a7c8f03e4fdcc035762f83a2168efbbb4a4d93ac34802d1d4e097eb74404f567",
+      "partition": "rootfs",
+      "path": "/usr/lib/libdi-network-dlna-rvf.so",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 524276
+    },
+    {
+      "original_path": "/usr/lib/libface.so",
+      "staged_path": ".work/run004/capture/inputs/libface.so",
+      "sha256": "f2936a156173d48b1a54a6647da6d169f3bd8276c3d8448eca1f784ddd29047f",
+      "source_inode_dump_sha256": "f2936a156173d48b1a54a6647da6d169f3bd8276c3d8448eca1f784ddd29047f",
+      "partition": "rootfs",
+      "path": "/usr/lib/libface.so",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 23432776
+    },
+    {
+      "original_path": "/usr/lib/libmm-photo.so",
+      "staged_path": ".work/run004/capture/inputs/libmm-photo.so",
+      "sha256": "ea4ae65608a6f9ea0761e35c18764401cf7b876652f7949c322e880fa9f68ca9",
+      "source_inode_dump_sha256": "ea4ae65608a6f9ea0761e35c18764401cf7b876652f7949c322e880fa9f68ca9",
+      "partition": "rootfs",
+      "path": "/usr/lib/libmm-photo.so",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 999892
+    },
+    {
+      "original_path": "/usr/lib/libmmf-camcorder.so",
+      "staged_path": ".work/run004/capture/inputs/libmmf-camcorder.so",
+      "sha256": "49f89956d0a09de51656e4427cc960c10d01f4971c39a1b85d19554431c03c78",
+      "source_inode_dump_sha256": "49f89956d0a09de51656e4427cc960c10d01f4971c39a1b85d19554431c03c78",
+      "partition": "rootfs",
+      "path": "/usr/lib/libmmf-camcorder.so",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 77728
+    },
+    {
+      "original_path": "/usr/lib/libsap-api.so.1.0.0",
+      "staged_path": ".work/run004/capture/inputs/libsap-api.so.1.0.0",
+      "sha256": "f130d83a9313710104c9c972e4ac3285e7c2b6cd8e7ee40cbce0a77142a96ac0",
+      "source_inode_dump_sha256": "f130d83a9313710104c9c972e4ac3285e7c2b6cd8e7ee40cbce0a77142a96ac0",
+      "partition": "rootfs",
+      "path": "/usr/lib/libsap-api.so.1.0.0",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 325596
+    },
+    {
+      "original_path": "/usr/lib/libsif.so",
+      "staged_path": ".work/run004/capture/inputs/libsif.so",
+      "sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+      "source_inode_dump_sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+      "partition": "rootfs",
+      "path": "/usr/lib/libsif.so",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 657620
+    },
+    {
+      "original_path": "/usr/sbin/fw_upgrade_recovery",
+      "staged_path": ".work/run004/capture/inputs/fw_upgrade_recovery",
+      "sha256": "7bf571fa83ce39f417b0759c024942311e4b1aa6487b46eda9562ae339aef3ff",
+      "source_inode_dump_sha256": "7bf571fa83ce39f417b0759c024942311e4b1aa6487b46eda9562ae339aef3ff",
+      "partition": "rootfs",
+      "path": "/usr/sbin/fw_upgrade_recovery",
+      "inventory_path": ".work/full/inventory/full_filesystem_inventory.json",
+      "bytes": 33364
+    }
+  ],
+  "readiness_getter_source": {
+    "original_path": "/usr/lib/libuser-spec.so",
+    "sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec",
+    "source_sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec"
+  },
+  "runs": [
+    {
+      "work": ".work/run004/capture/initial",
+      "receipts": [
+        {
+          "path": ".work/run004/capture/initial/logs/NX500_FW112_SURVEY-b817e87f-3b64-436e-ae09-73d62a0e49bb.json",
+          "sha256": "79cc126d58d3d706d6a528e5d07162f62ed04dfd0b147a977b60508ee3a42c60",
+          "receipt": {
+            "run_id": "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+            "started_unix": 1792560028.1006863,
+            "command": [
+              "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+              "/workspace/NX-Reborn/ghidra-projects",
+              "NX500_FW112_SURVEY",
+              "-process",
+              "*",
+              "-analysisTimeoutPerFile",
+              "300",
+              "-max-cpu",
+              "1",
+              "-scriptPath",
+              "/workspace/NX-Reborn/tools/ghidra",
+              "-postScript",
+              "ExportEvidence.java",
+              "/workspace/NX-Reborn/.work/run004/capture/initial/outputs/ghidra",
+              "(CNotifyHandler::(onNextShotReady|onWriteDone|execStillNotify|Run|CNotifyHandler)$|CCapNotifyCb::(OnCallback|RegCallback|publishConvert|subscribeConvert)$|UI_Get_Cb_Flag_Next_Shot_Raedy$|UI_Capture_File_Write_Done$|UI_Set_Mm_Photo_Captue_Callback_Fn$|captureSaveDone)",
+              "12",
+              "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+              "30",
+              "0",
+              "-log",
+              "/workspace/NX-Reborn/.work/run004/capture/initial/logs/NX500_FW112_SURVEY.log",
+              "-scriptlog",
+              "/workspace/NX-Reborn/.work/run004/capture/initial/logs/NX500_FW112_SURVEY-script.log",
+              "-recursive",
+              "-noanalysis"
+            ],
+            "max_memory": "1536M",
+            "max_cpu": 1,
+            "decompile_timeout_seconds": 30,
+            "decompile_payload_mb_override": 0,
+            "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+            "completed": false
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "program": "di-camera-app",
+          "sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 9258,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 29264,
+          "decompile_budget": 12,
+          "decompile_attempted": 3,
+          "decompile_completed": 3,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(onNextShotReady|onWriteDone|execStillNotify|Run|CNotifyHandler)$|CCapNotifyCb::(OnCallback|RegCallback|publishConvert|subscribeConvert)$|UI_Get_Cb_Flag_Next_Shot_Raedy$|UI_Capture_File_Write_Done$|UI_Set_Mm_Photo_Captue_Callback_Fn$|captureSaveDone)",
+          "matched_functions": 3,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 2282866,
+              "sha256": "a91f1e486ad8d433ad7ca196047fc72e457b4500641cebeb714f23c4d7dd4f3f"
+            },
+            "calls.jsonl": {
+              "bytes": 7524918,
+              "sha256": "ed72a0be8154a60f22893fe70c13ff7a114aac5b56cc29ec77511ff241699ed8"
+            },
+            "decompiled.jsonl": {
+              "bytes": 40568,
+              "sha256": "0dea2dd9fc496525ac208b64c7ee872e5c6183ac098ba86619898a4092f6d1b2"
+            },
+            "strings.jsonl": {
+              "bytes": 4565592,
+              "sha256": "252cf23162b93f0e835a9ea32a72f5f9aa007c293f1a00465debad97711d36f3"
+            }
+          }
+        },
+        {
+          "program": "fw_upgrade_recovery",
+          "sha256": "7bf571fa83ce39f417b0759c024942311e4b1aa6487b46eda9562ae339aef3ff",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 190,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 351,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(onNextShotReady|onWriteDone|execStillNotify|Run|CNotifyHandler)$|CCapNotifyCb::(OnCallback|RegCallback|publishConvert|subscribeConvert)$|UI_Get_Cb_Flag_Next_Shot_Raedy$|UI_Capture_File_Write_Done$|UI_Set_Mm_Photo_Captue_Callback_Fn$|captureSaveDone)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 41164,
+              "sha256": "cf8e8ee92d4eb52d97802d943a68a5820a12f9e563ba8d81827d0b8bf9b05a8e"
+            },
+            "calls.jsonl": {
+              "bytes": 64549,
+              "sha256": "db6c74d13ef1f8c32f7ed2095cbb9d9c4d05c97e68decd7a88ce24b41c59344e"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 49522,
+              "sha256": "d11da519f08beb3b36e51cfd1d700cef70ff064a536eefb484f15c4db3d285c0"
+            }
+          }
+        },
+        {
+          "program": "libcapture-fw-prod.so",
+          "sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 2679,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 3575,
+          "decompile_budget": 12,
+          "decompile_attempted": 9,
+          "decompile_completed": 9,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(onNextShotReady|onWriteDone|execStillNotify|Run|CNotifyHandler)$|CCapNotifyCb::(OnCallback|RegCallback|publishConvert|subscribeConvert)$|UI_Get_Cb_Flag_Next_Shot_Raedy$|UI_Capture_File_Write_Done$|UI_Set_Mm_Photo_Captue_Callback_Fn$|captureSaveDone)",
+          "matched_functions": 9,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 785032,
+              "sha256": "679f3415f6fbbf3b2a5f5d30640d3fba37e8a7c45407fc142b93ed5233be817d"
+            },
+            "calls.jsonl": {
+              "bytes": 829651,
+              "sha256": "aba39a608794a50afa103976d71b144a65b9899585e72562a59a41c8f18007e2"
+            },
+            "decompiled.jsonl": {
+              "bytes": 96725,
+              "sha256": "b1121ef57d1fde2cd09cfa75ccc49cb0d95ce8c23adfb29a55d25da7f3864029"
+            },
+            "strings.jsonl": {
+              "bytes": 582689,
+              "sha256": "d4afddbb6595ec6ea204b4932c2e2973bfc445c8df5966d18b996a1f6c595ab3"
+            }
+          }
+        },
+        {
+          "program": "libdi-network-bt-app.so",
+          "sha256": "94a8f7ae05298d9a143d89c3b67cb1141ef3aea7c2cdc0004ef9799cda261eae",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 560,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1251,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(onNextShotReady|onWriteDone|execStillNotify|Run|CNotifyHandler)$|CCapNotifyCb::(OnCallback|RegCallback|publishConvert|subscribeConvert)$|UI_Get_Cb_Flag_Next_Shot_Raedy$|UI_Capture_File_Write_Done$|UI_Set_Mm_Photo_Captue_Callback_Fn$|captureSaveDone)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 134896,
+              "sha256": "1f92831bce1ba0d4e30761dae53d01a0ddf7b2dfb8fd10ab433e9324a2aff623"
+            },
+            "calls.jsonl": {
+              "bytes": 227813,
+              "sha256": "88706cddfcdaeef40fe583b5b21a15996c3d3989e1616991d55d53a418837b1a"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 249490,
+              "sha256": "5a6ec60784bc6a4d9eb3440f380824e8b2412b6a1a5ffa94b2277ec48ad720af"
+            }
+          }
+        },
+        {
+          "program": "libdi-network-dlna-rvf.so",
+          "sha256": "a7c8f03e4fdcc035762f83a2168efbbb4a4d93ac34802d1d4e097eb74404f567",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1763,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 2669,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(onNextShotReady|onWriteDone|execStillNotify|Run|CNotifyHandler)$|CCapNotifyCb::(OnCallback|RegCallback|publishConvert|subscribeConvert)$|UI_Get_Cb_Flag_Next_Shot_Raedy$|UI_Capture_File_Write_Done$|UI_Set_Mm_Photo_Captue_Callback_Fn$|captureSaveDone)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 468127,
+              "sha256": "f4f8e5d6365ec9caa945426fa47a8b90cb27336872ea8b91e8947471daafa829"
+            },
+            "calls.jsonl": {
+              "bytes": 790319,
+              "sha256": "427540ff83e9075d21157fb57c52a351b7719f6bcb62f137e078164673ee1ca0"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 450513,
+              "sha256": "ecdbd4cb0ef949a966b675980166e0cf712330497c72e5c4c69bb80f7630dbd4"
+            }
+          }
+        },
+        {
+          "program": "libface.so",
+          "sha256": "f2936a156173d48b1a54a6647da6d169f3bd8276c3d8448eca1f784ddd29047f",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 929,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 3741,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(onNextShotReady|onWriteDone|execStillNotify|Run|CNotifyHandler)$|CCapNotifyCb::(OnCallback|RegCallback|publishConvert|subscribeConvert)$|UI_Get_Cb_Flag_Next_Shot_Raedy$|UI_Capture_File_Write_Done$|UI_Set_Mm_Photo_Captue_Callback_Fn$|captureSaveDone)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 237559,
+              "sha256": "06d4d6029a8e309cfb595b5ccab286700d0fe0c28f35cd70a58b39cfb64925fa"
+            },
+            "calls.jsonl": {
+              "bytes": 260557,
+              "sha256": "45c3216d5e45cb46bffc2f5503d305bcc04e6df5f153e190e5ac35eca691e5c8"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 557457,
+              "sha256": "4063b91fd851c9fd1388882e4c1bb9fda716291db4dd0133faf7c18a949fa2fe"
+            }
+          }
+        },
+        {
+          "program": "libmmf-camcorder.so",
+          "sha256": "49f89956d0a09de51656e4427cc960c10d01f4971c39a1b85d19554431c03c78",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 330,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 608,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(onNextShotReady|onWriteDone|execStillNotify|Run|CNotifyHandler)$|CCapNotifyCb::(OnCallback|RegCallback|publishConvert|subscribeConvert)$|UI_Get_Cb_Flag_Next_Shot_Raedy$|UI_Capture_File_Write_Done$|UI_Set_Mm_Photo_Captue_Callback_Fn$|captureSaveDone)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 77701,
+              "sha256": "2ac95d8e6b0a78f1e31aa98d7f7e2a2bc50c9536d468e5e388bfe7af4c6136ed"
+            },
+            "calls.jsonl": {
+              "bytes": 71213,
+              "sha256": "8137007b93a132d851d348be5c679f10593e36ab45a6937a26d7d30072a48316"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 82212,
+              "sha256": "2364bd91e09c3e9e969ae517909833fbf6e5129d9afe47017f84415067e96d55"
+            }
+          }
+        },
+        {
+          "program": "libsap-api.so.1.0.0",
+          "sha256": "f130d83a9313710104c9c972e4ac3285e7c2b6cd8e7ee40cbce0a77142a96ac0",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1090,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 2163,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(onNextShotReady|onWriteDone|execStillNotify|Run|CNotifyHandler)$|CCapNotifyCb::(OnCallback|RegCallback|publishConvert|subscribeConvert)$|UI_Get_Cb_Flag_Next_Shot_Raedy$|UI_Capture_File_Write_Done$|UI_Set_Mm_Photo_Captue_Callback_Fn$|captureSaveDone)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 241487,
+              "sha256": "2d966cef9ce881cb45b2a80408dc4a4ca8d7a277a5a868f505395a917cfd8285"
+            },
+            "calls.jsonl": {
+              "bytes": 435640,
+              "sha256": "c952a98be7b2bedd414ee3445d5833fbe80316cded2431a74332d0447e17a772"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 413713,
+              "sha256": "c8ea39b925fc4111009b865197fb5985f8d510661fa3dd9662625368ed182e1c"
+            }
+          }
+        },
+        {
+          "program": "mtp-responder",
+          "sha256": "630d4f6c8beb4008973c2bf3646fa032768e5810d5aa6b673b472330e983409b",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 683,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1895,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(onNextShotReady|onWriteDone|execStillNotify|Run|CNotifyHandler)$|CCapNotifyCb::(OnCallback|RegCallback|publishConvert|subscribeConvert)$|UI_Get_Cb_Flag_Next_Shot_Raedy$|UI_Capture_File_Write_Done$|UI_Set_Mm_Photo_Captue_Callback_Fn$|captureSaveDone)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 144219,
+              "sha256": "f05a73d2d82dcc39f1338740f947996e5ffd042e6cc0ec430137c5307d5146fd"
+            },
+            "calls.jsonl": {
+              "bytes": 342185,
+              "sha256": "261048d4c326cfc1dde82decc35ea5372c9031ad674509b354ad3192b492bae0"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 324340,
+              "sha256": "ed08991dec4742a9eff02977f02d574d31a10ae1cecddff484e26bc179f210ff"
+            }
+          }
+        },
+        {
+          "program": "nfc-manager-daemon",
+          "sha256": "4f71b292ced7180280eb53c87bb52f7e6e188278cfee84ad2b106b45ee219ddf",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 704,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1782,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(onNextShotReady|onWriteDone|execStillNotify|Run|CNotifyHandler)$|CCapNotifyCb::(OnCallback|RegCallback|publishConvert|subscribeConvert)$|UI_Get_Cb_Flag_Next_Shot_Raedy$|UI_Capture_File_Write_Done$|UI_Set_Mm_Photo_Captue_Callback_Fn$|captureSaveDone)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 160884,
+              "sha256": "383afa962db1e8b0619dd94af2db45db904bd929bc2c0fadf609b25be61563d0"
+            },
+            "calls.jsonl": {
+              "bytes": 355174,
+              "sha256": "a6e6efdce20bff84db1f3ecdd0d7693d07bd5c4213bfe560dfb701fa13428ac7"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 304828,
+              "sha256": "92dcd9c575856bc04641bd2b1cf627297e7234b995147e648d283a9ee4229360"
+            }
+          }
+        },
+        {
+          "program": "system-recovery",
+          "sha256": "161f5656f5d9e2df53b835dda648ce0c173696dbae5b8a56c61130b7f1f541cb",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 153,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 187,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(onNextShotReady|onWriteDone|execStillNotify|Run|CNotifyHandler)$|CCapNotifyCb::(OnCallback|RegCallback|publishConvert|subscribeConvert)$|UI_Get_Cb_Flag_Next_Shot_Raedy$|UI_Capture_File_Write_Done$|UI_Set_Mm_Photo_Captue_Callback_Fn$|captureSaveDone)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "b817e87f-3b64-436e-ae09-73d62a0e49bb",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 33538,
+              "sha256": "e6a070b56f157d5c194775f0a67a065872950f769d5defd24e1f5b8b1fa7c74d"
+            },
+            "calls.jsonl": {
+              "bytes": 31713,
+              "sha256": "92751fa00dbd70a68102a4200a82a67d54cd4dbd45cece7b125d05c647d5472a"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 24010,
+              "sha256": "ac43dc196f7a1c2dcbd3834cd569209c17b271f7eebf8143471d7339c0d23b4b"
+            }
+          }
+        }
+      ],
+      "validation": "All emitted summaries pass schema-v2/hash/row-count checks; initial runner failed after 11 exports because 13 staged inputs exceed actual project contents.",
+      "outputs": 11,
+      "attempted": 12,
+      "completed": 12
+    },
+    {
+      "work": ".work/run004/capture/followup",
+      "receipts": [
+        {
+          "path": ".work/run004/capture/followup/logs/NX500_FW112_SURVEY-c74cc999-a9f8-4e15-bc6f-09305f2402b9.json",
+          "sha256": "cfb2d5d3288b700e99e5f7f1beb01c3333033461b3ed62022e0484f08e02b878",
+          "receipt": {
+            "run_id": "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+            "started_unix": 1792560092.3420205,
+            "command": [
+              "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+              "/workspace/NX-Reborn/ghidra-projects",
+              "NX500_FW112_SURVEY",
+              "-process",
+              "*",
+              "-analysisTimeoutPerFile",
+              "300",
+              "-max-cpu",
+              "1",
+              "-scriptPath",
+              "/workspace/NX-Reborn/tools/ghidra",
+              "-postScript",
+              "ExportEvidence.java",
+              "/workspace/NX-Reborn/.work/run004/capture/followup/outputs/ghidra",
+              "(CNotifyHandler::(notifyCategory|subCategory)$|CCapturePublisher::SendAppCallback$|CMCBAdapter::OnReceived$|CCategoryHandleHolder::Run$|CCapCbExtIf::regNotifyFunc$|CCapNotifyCb::RegCallbackId$|UI_Set_Cb_Flag_Next_Shot_Raedy$|UI_Is_Enable_Capture_Possible$|FUN_00218920$|FUN_00214af0$|UI_Mm_Photo_Convert_Storage_Error_Type$|UI_Mm_Photo_Init$|UI_Get_Cb_Flag_Next_Shot_Raedy$)",
+              "12",
+              "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+              "30",
+              "0",
+              "-log",
+              "/workspace/NX-Reborn/.work/run004/capture/followup/logs/NX500_FW112_SURVEY.log",
+              "-scriptlog",
+              "/workspace/NX-Reborn/.work/run004/capture/followup/logs/NX500_FW112_SURVEY-script.log",
+              "-recursive",
+              "-noanalysis"
+            ],
+            "max_memory": "1536M",
+            "max_cpu": 1,
+            "decompile_timeout_seconds": 30,
+            "decompile_payload_mb_override": 0,
+            "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+            "completed": true,
+            "returncode": 0,
+            "finished_unix": 1792560117.0052714
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "program": "di-camera-app",
+          "sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 9258,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 29264,
+          "decompile_budget": 12,
+          "decompile_attempted": 7,
+          "decompile_completed": 7,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(notifyCategory|subCategory)$|CCapturePublisher::SendAppCallback$|CMCBAdapter::OnReceived$|CCategoryHandleHolder::Run$|CCapCbExtIf::regNotifyFunc$|CCapNotifyCb::RegCallbackId$|UI_Set_Cb_Flag_Next_Shot_Raedy$|UI_Is_Enable_Capture_Possible$|FUN_00218920$|FUN_00214af0$|UI_Mm_Photo_Convert_Storage_Error_Type$|UI_Mm_Photo_Init$|UI_Get_Cb_Flag_Next_Shot_Raedy$)",
+          "matched_functions": 7,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 2282866,
+              "sha256": "a91f1e486ad8d433ad7ca196047fc72e457b4500641cebeb714f23c4d7dd4f3f"
+            },
+            "calls.jsonl": {
+              "bytes": 7524918,
+              "sha256": "26638b0b7fdbb4b733891f6bb8819b0b1eccbc6bd349df80f853dfaafb1ef224"
+            },
+            "decompiled.jsonl": {
+              "bytes": 174781,
+              "sha256": "0743f20ab3edb236e0790f95030926b25fa20812240d72dabbcdf23df4a94e1b"
+            },
+            "strings.jsonl": {
+              "bytes": 4565592,
+              "sha256": "252cf23162b93f0e835a9ea32a72f5f9aa007c293f1a00465debad97711d36f3"
+            }
+          }
+        },
+        {
+          "program": "fw_upgrade_recovery",
+          "sha256": "7bf571fa83ce39f417b0759c024942311e4b1aa6487b46eda9562ae339aef3ff",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 190,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 351,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(notifyCategory|subCategory)$|CCapturePublisher::SendAppCallback$|CMCBAdapter::OnReceived$|CCategoryHandleHolder::Run$|CCapCbExtIf::regNotifyFunc$|CCapNotifyCb::RegCallbackId$|UI_Set_Cb_Flag_Next_Shot_Raedy$|UI_Is_Enable_Capture_Possible$|FUN_00218920$|FUN_00214af0$|UI_Mm_Photo_Convert_Storage_Error_Type$|UI_Mm_Photo_Init$|UI_Get_Cb_Flag_Next_Shot_Raedy$)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 41164,
+              "sha256": "cf8e8ee92d4eb52d97802d943a68a5820a12f9e563ba8d81827d0b8bf9b05a8e"
+            },
+            "calls.jsonl": {
+              "bytes": 64549,
+              "sha256": "9ac4879cfb56c6f01ff5b9435c9674742258296f8ac892c5cf3745a160eddf82"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 49522,
+              "sha256": "d11da519f08beb3b36e51cfd1d700cef70ff064a536eefb484f15c4db3d285c0"
+            }
+          }
+        },
+        {
+          "program": "libcapture-fw-prod.so",
+          "sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 2679,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 3575,
+          "decompile_budget": 12,
+          "decompile_attempted": 7,
+          "decompile_completed": 7,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(notifyCategory|subCategory)$|CCapturePublisher::SendAppCallback$|CMCBAdapter::OnReceived$|CCategoryHandleHolder::Run$|CCapCbExtIf::regNotifyFunc$|CCapNotifyCb::RegCallbackId$|UI_Set_Cb_Flag_Next_Shot_Raedy$|UI_Is_Enable_Capture_Possible$|FUN_00218920$|FUN_00214af0$|UI_Mm_Photo_Convert_Storage_Error_Type$|UI_Mm_Photo_Init$|UI_Get_Cb_Flag_Next_Shot_Raedy$)",
+          "matched_functions": 7,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 785032,
+              "sha256": "679f3415f6fbbf3b2a5f5d30640d3fba37e8a7c45407fc142b93ed5233be817d"
+            },
+            "calls.jsonl": {
+              "bytes": 829651,
+              "sha256": "51de20e504d7b340fd68976c4843f6d0df480c1618a4f088f12059c3737ac4a4"
+            },
+            "decompiled.jsonl": {
+              "bytes": 23986,
+              "sha256": "00b551e3df9f620d1fb609cedea8251772f107d629a8d9ac4b4f867381d8ecaf"
+            },
+            "strings.jsonl": {
+              "bytes": 582689,
+              "sha256": "d4afddbb6595ec6ea204b4932c2e2973bfc445c8df5966d18b996a1f6c595ab3"
+            }
+          }
+        },
+        {
+          "program": "libdi-network-bt-app.so",
+          "sha256": "94a8f7ae05298d9a143d89c3b67cb1141ef3aea7c2cdc0004ef9799cda261eae",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 560,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1251,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(notifyCategory|subCategory)$|CCapturePublisher::SendAppCallback$|CMCBAdapter::OnReceived$|CCategoryHandleHolder::Run$|CCapCbExtIf::regNotifyFunc$|CCapNotifyCb::RegCallbackId$|UI_Set_Cb_Flag_Next_Shot_Raedy$|UI_Is_Enable_Capture_Possible$|FUN_00218920$|FUN_00214af0$|UI_Mm_Photo_Convert_Storage_Error_Type$|UI_Mm_Photo_Init$|UI_Get_Cb_Flag_Next_Shot_Raedy$)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 134896,
+              "sha256": "1f92831bce1ba0d4e30761dae53d01a0ddf7b2dfb8fd10ab433e9324a2aff623"
+            },
+            "calls.jsonl": {
+              "bytes": 227813,
+              "sha256": "f0df57381f9bfaa250232171d81fb986ea9b1bbcb618f34afe5ab1e9117fc02e"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 249490,
+              "sha256": "5a6ec60784bc6a4d9eb3440f380824e8b2412b6a1a5ffa94b2277ec48ad720af"
+            }
+          }
+        },
+        {
+          "program": "libdi-network-dlna-rvf.so",
+          "sha256": "a7c8f03e4fdcc035762f83a2168efbbb4a4d93ac34802d1d4e097eb74404f567",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1763,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 2669,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(notifyCategory|subCategory)$|CCapturePublisher::SendAppCallback$|CMCBAdapter::OnReceived$|CCategoryHandleHolder::Run$|CCapCbExtIf::regNotifyFunc$|CCapNotifyCb::RegCallbackId$|UI_Set_Cb_Flag_Next_Shot_Raedy$|UI_Is_Enable_Capture_Possible$|FUN_00218920$|FUN_00214af0$|UI_Mm_Photo_Convert_Storage_Error_Type$|UI_Mm_Photo_Init$|UI_Get_Cb_Flag_Next_Shot_Raedy$)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 468127,
+              "sha256": "f4f8e5d6365ec9caa945426fa47a8b90cb27336872ea8b91e8947471daafa829"
+            },
+            "calls.jsonl": {
+              "bytes": 790319,
+              "sha256": "54ed638aace767f2c9593ae91709d7c48fa5a0499104151a7cf065ce380f692a"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 450513,
+              "sha256": "ecdbd4cb0ef949a966b675980166e0cf712330497c72e5c4c69bb80f7630dbd4"
+            }
+          }
+        },
+        {
+          "program": "libface.so",
+          "sha256": "f2936a156173d48b1a54a6647da6d169f3bd8276c3d8448eca1f784ddd29047f",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 929,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 3741,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(notifyCategory|subCategory)$|CCapturePublisher::SendAppCallback$|CMCBAdapter::OnReceived$|CCategoryHandleHolder::Run$|CCapCbExtIf::regNotifyFunc$|CCapNotifyCb::RegCallbackId$|UI_Set_Cb_Flag_Next_Shot_Raedy$|UI_Is_Enable_Capture_Possible$|FUN_00218920$|FUN_00214af0$|UI_Mm_Photo_Convert_Storage_Error_Type$|UI_Mm_Photo_Init$|UI_Get_Cb_Flag_Next_Shot_Raedy$)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 237559,
+              "sha256": "06d4d6029a8e309cfb595b5ccab286700d0fe0c28f35cd70a58b39cfb64925fa"
+            },
+            "calls.jsonl": {
+              "bytes": 260557,
+              "sha256": "78a4f566c85599f44bbd18ea61d558b869b0a0febbd27a92d515dcdf29e4e3c1"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 557457,
+              "sha256": "4063b91fd851c9fd1388882e4c1bb9fda716291db4dd0133faf7c18a949fa2fe"
+            }
+          }
+        },
+        {
+          "program": "libmmf-camcorder.so",
+          "sha256": "49f89956d0a09de51656e4427cc960c10d01f4971c39a1b85d19554431c03c78",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 330,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 608,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(notifyCategory|subCategory)$|CCapturePublisher::SendAppCallback$|CMCBAdapter::OnReceived$|CCategoryHandleHolder::Run$|CCapCbExtIf::regNotifyFunc$|CCapNotifyCb::RegCallbackId$|UI_Set_Cb_Flag_Next_Shot_Raedy$|UI_Is_Enable_Capture_Possible$|FUN_00218920$|FUN_00214af0$|UI_Mm_Photo_Convert_Storage_Error_Type$|UI_Mm_Photo_Init$|UI_Get_Cb_Flag_Next_Shot_Raedy$)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 77701,
+              "sha256": "2ac95d8e6b0a78f1e31aa98d7f7e2a2bc50c9536d468e5e388bfe7af4c6136ed"
+            },
+            "calls.jsonl": {
+              "bytes": 71213,
+              "sha256": "1f5e8df82e96e5492fd88a34c792ddbc4ae2f6741a01724a35b027634beb980e"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 82212,
+              "sha256": "2364bd91e09c3e9e969ae517909833fbf6e5129d9afe47017f84415067e96d55"
+            }
+          }
+        },
+        {
+          "program": "libsap-api.so.1.0.0",
+          "sha256": "f130d83a9313710104c9c972e4ac3285e7c2b6cd8e7ee40cbce0a77142a96ac0",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1090,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 2163,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(notifyCategory|subCategory)$|CCapturePublisher::SendAppCallback$|CMCBAdapter::OnReceived$|CCategoryHandleHolder::Run$|CCapCbExtIf::regNotifyFunc$|CCapNotifyCb::RegCallbackId$|UI_Set_Cb_Flag_Next_Shot_Raedy$|UI_Is_Enable_Capture_Possible$|FUN_00218920$|FUN_00214af0$|UI_Mm_Photo_Convert_Storage_Error_Type$|UI_Mm_Photo_Init$|UI_Get_Cb_Flag_Next_Shot_Raedy$)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 241487,
+              "sha256": "2d966cef9ce881cb45b2a80408dc4a4ca8d7a277a5a868f505395a917cfd8285"
+            },
+            "calls.jsonl": {
+              "bytes": 435640,
+              "sha256": "aab8d874a6c2d63748c9356d4d55f2d91a23b084cd028c5484e210467c34d1bc"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 413713,
+              "sha256": "c8ea39b925fc4111009b865197fb5985f8d510661fa3dd9662625368ed182e1c"
+            }
+          }
+        },
+        {
+          "program": "mtp-responder",
+          "sha256": "630d4f6c8beb4008973c2bf3646fa032768e5810d5aa6b673b472330e983409b",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 683,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1895,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(notifyCategory|subCategory)$|CCapturePublisher::SendAppCallback$|CMCBAdapter::OnReceived$|CCategoryHandleHolder::Run$|CCapCbExtIf::regNotifyFunc$|CCapNotifyCb::RegCallbackId$|UI_Set_Cb_Flag_Next_Shot_Raedy$|UI_Is_Enable_Capture_Possible$|FUN_00218920$|FUN_00214af0$|UI_Mm_Photo_Convert_Storage_Error_Type$|UI_Mm_Photo_Init$|UI_Get_Cb_Flag_Next_Shot_Raedy$)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 144219,
+              "sha256": "f05a73d2d82dcc39f1338740f947996e5ffd042e6cc0ec430137c5307d5146fd"
+            },
+            "calls.jsonl": {
+              "bytes": 342185,
+              "sha256": "6ddda733d3e19f2aee43216235cbefc148e034fd260b54d1a6fb3514a658ae92"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 324340,
+              "sha256": "ed08991dec4742a9eff02977f02d574d31a10ae1cecddff484e26bc179f210ff"
+            }
+          }
+        },
+        {
+          "program": "nfc-manager-daemon",
+          "sha256": "4f71b292ced7180280eb53c87bb52f7e6e188278cfee84ad2b106b45ee219ddf",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 704,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1782,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(notifyCategory|subCategory)$|CCapturePublisher::SendAppCallback$|CMCBAdapter::OnReceived$|CCategoryHandleHolder::Run$|CCapCbExtIf::regNotifyFunc$|CCapNotifyCb::RegCallbackId$|UI_Set_Cb_Flag_Next_Shot_Raedy$|UI_Is_Enable_Capture_Possible$|FUN_00218920$|FUN_00214af0$|UI_Mm_Photo_Convert_Storage_Error_Type$|UI_Mm_Photo_Init$|UI_Get_Cb_Flag_Next_Shot_Raedy$)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 160884,
+              "sha256": "383afa962db1e8b0619dd94af2db45db904bd929bc2c0fadf609b25be61563d0"
+            },
+            "calls.jsonl": {
+              "bytes": 355174,
+              "sha256": "865a1767fff8613fcc701cf3242ee0647e6c6274e13aa0b91399b32b64507be4"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 304828,
+              "sha256": "92dcd9c575856bc04641bd2b1cf627297e7234b995147e648d283a9ee4229360"
+            }
+          }
+        },
+        {
+          "program": "system-recovery",
+          "sha256": "161f5656f5d9e2df53b835dda648ce0c173696dbae5b8a56c61130b7f1f541cb",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 153,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 187,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(CNotifyHandler::(notifyCategory|subCategory)$|CCapturePublisher::SendAppCallback$|CMCBAdapter::OnReceived$|CCategoryHandleHolder::Run$|CCapCbExtIf::regNotifyFunc$|CCapNotifyCb::RegCallbackId$|UI_Set_Cb_Flag_Next_Shot_Raedy$|UI_Is_Enable_Capture_Possible$|FUN_00218920$|FUN_00214af0$|UI_Mm_Photo_Convert_Storage_Error_Type$|UI_Mm_Photo_Init$|UI_Get_Cb_Flag_Next_Shot_Raedy$)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "c74cc999-a9f8-4e15-bc6f-09305f2402b9",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 33538,
+              "sha256": "e6a070b56f157d5c194775f0a67a065872950f769d5defd24e1f5b8b1fa7c74d"
+            },
+            "calls.jsonl": {
+              "bytes": 31713,
+              "sha256": "5a5eebb6f0361fbfabc655e6d9f60ff5da51692d0e1121c93db1da0acda28fbe"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 24010,
+              "sha256": "ac43dc196f7a1c2dcbd3834cd569209c17b271f7eebf8143471d7339c0d23b4b"
+            }
+          }
+        }
+      ],
+      "validation": "runner exited zero; all emitted summaries independently revalidated",
+      "outputs": 11,
+      "attempted": 14,
+      "completed": 14
+    },
+    {
+      "work": ".work/run004/capture-photo",
+      "receipts": [
+        {
+          "path": ".work/run004/capture-photo/logs/NX500_FW112-5384ced6-5ea6-4914-b13a-6400c2eda3b4.json",
+          "sha256": "43adc7f3130f3f7c2a04a6e0ad6901c224298a0cd91aa5706afcd6cf07a69769",
+          "receipt": {
+            "run_id": "5384ced6-5ea6-4914-b13a-6400c2eda3b4",
+            "started_unix": 1792560155.4275784,
+            "command": [
+              "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+              "/workspace/NX-Reborn/ghidra-projects",
+              "NX500_FW112",
+              "-process",
+              "*",
+              "-analysisTimeoutPerFile",
+              "300",
+              "-max-cpu",
+              "1",
+              "-scriptPath",
+              "/workspace/NX-Reborn/tools/ghidra",
+              "-postScript",
+              "ExportEvidence.java",
+              "/workspace/NX-Reborn/.work/run004/capture-photo/outputs/ghidra",
+              "(ImageGenerator::(ImageGenerator|captureSaveDone|register.*|runFromCapture)$|mm_photo_capture_callback$|DscFileHandler::(operate|taskMain|close.*)$)",
+              "12",
+              "5384ced6-5ea6-4914-b13a-6400c2eda3b4",
+              "30",
+              "0",
+              "-log",
+              "/workspace/NX-Reborn/.work/run004/capture-photo/logs/NX500_FW112.log",
+              "-scriptlog",
+              "/workspace/NX-Reborn/.work/run004/capture-photo/logs/NX500_FW112-script.log",
+              "-recursive",
+              "-noanalysis"
+            ],
+            "max_memory": "1536M",
+            "max_cpu": 1,
+            "decompile_timeout_seconds": 30,
+            "decompile_payload_mb_override": 0,
+            "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+            "completed": true,
+            "returncode": 0,
+            "finished_unix": 1792560166.8572857
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "program": "libmm-photo.so",
+          "sha256": "ea4ae65608a6f9ea0761e35c18764401cf7b876652f7949c322e880fa9f68ca9",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 3364,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 3498,
+          "decompile_budget": 12,
+          "decompile_attempted": 9,
+          "decompile_completed": 9,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(ImageGenerator::(ImageGenerator|captureSaveDone|register.*|runFromCapture)$|mm_photo_capture_callback$|DscFileHandler::(operate|taskMain|close.*)$)",
+          "matched_functions": 9,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "5384ced6-5ea6-4914-b13a-6400c2eda3b4",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 1019564,
+              "sha256": "d8c7f193ce6543e5eeec04fd1b1a6807e9296ba80a79c7b9181deda132e53fec"
+            },
+            "calls.jsonl": {
+              "bytes": 1288000,
+              "sha256": "df4aeb688724ae755b65a4839786fe9b272a32354c92a8bc35cf9e7ace893be9"
+            },
+            "decompiled.jsonl": {
+              "bytes": 251466,
+              "sha256": "38d35585918e62d95e76098d124b9083aea838c571ac5fc5e3bb183372c3f5e9"
+            },
+            "strings.jsonl": {
+              "bytes": 732668,
+              "sha256": "081ac145bc2c32e9f9155903305397bfe3182ca7eb97cae51fa1171004a7c5fc"
+            }
+          }
+        },
+        {
+          "program": "libsif.so",
+          "sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1184,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1610,
+          "decompile_budget": 12,
+          "decompile_attempted": 2,
+          "decompile_completed": 2,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(ImageGenerator::(ImageGenerator|captureSaveDone|register.*|runFromCapture)$|mm_photo_capture_callback$|DscFileHandler::(operate|taskMain|close.*)$)",
+          "matched_functions": 2,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "5384ced6-5ea6-4914-b13a-6400c2eda3b4",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 324273,
+              "sha256": "0c414b1dff8c300d4bd4e3c997e44f39e74f941936d99b617e320aa26add1a0e"
+            },
+            "calls.jsonl": {
+              "bytes": 445459,
+              "sha256": "bbd9eb88da50f9ea2308515bdd844fee1e31031f7d4fea3c2b2ccec57571364a"
+            },
+            "decompiled.jsonl": {
+              "bytes": 38461,
+              "sha256": "68577b67fa985d82248c26c09a7eeb326ea5bba59262efec88457bd5a756758a"
+            },
+            "strings.jsonl": {
+              "bytes": 339466,
+              "sha256": "40116d570c53bc0051f8f205f4789e8a1a119a5d22607448dbd59242a18300ab"
+            }
+          }
+        }
+      ],
+      "validation": "runner exited zero; all emitted summaries independently revalidated",
+      "outputs": 2,
+      "attempted": 11,
+      "completed": 11
+    },
+    {
+      "work": ".work/run004/capture-photo/detail",
+      "receipts": [
+        {
+          "path": ".work/run004/capture-photo/detail/logs/NX500_FW112-4f015fda-1395-4446-98b9-a2246c34286c.json",
+          "sha256": "c18a43fb0bf6fa4d964e41798fd64e07718e38d9f2735ea080f7e138f1f5453b",
+          "receipt": {
+            "run_id": "4f015fda-1395-4446-98b9-a2246c34286c",
+            "started_unix": 1792560210.864686,
+            "command": [
+              "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+              "/workspace/NX-Reborn/ghidra-projects",
+              "NX500_FW112",
+              "-process",
+              "*",
+              "-analysisTimeoutPerFile",
+              "300",
+              "-max-cpu",
+              "1",
+              "-scriptPath",
+              "/workspace/NX-Reborn/tools/ghidra",
+              "-postScript",
+              "ExportEvidence.java",
+              "/workspace/NX-Reborn/.work/run004/capture-photo/detail/outputs/ghidra",
+              "(ImageGenerator::captureNotify$|captureNotifyCB$|DscFileHandler::(writeChunks|write|memoryRelease)$|ImageGenerator::(init|make.*|process.*)$)",
+              "12",
+              "4f015fda-1395-4446-98b9-a2246c34286c",
+              "30",
+              "0",
+              "-log",
+              "/workspace/NX-Reborn/.work/run004/capture-photo/detail/logs/NX500_FW112.log",
+              "-scriptlog",
+              "/workspace/NX-Reborn/.work/run004/capture-photo/detail/logs/NX500_FW112-script.log",
+              "-recursive",
+              "-noanalysis"
+            ],
+            "max_memory": "1536M",
+            "max_cpu": 1,
+            "decompile_timeout_seconds": 30,
+            "decompile_payload_mb_override": 0,
+            "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+            "completed": true,
+            "returncode": 0,
+            "finished_unix": 1792560223.493721
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "program": "libmm-photo.so",
+          "sha256": "ea4ae65608a6f9ea0761e35c18764401cf7b876652f7949c322e880fa9f68ca9",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 3364,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 3498,
+          "decompile_budget": 12,
+          "decompile_attempted": 5,
+          "decompile_completed": 5,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(ImageGenerator::captureNotify$|captureNotifyCB$|DscFileHandler::(writeChunks|write|memoryRelease)$|ImageGenerator::(init|make.*|process.*)$)",
+          "matched_functions": 5,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "4f015fda-1395-4446-98b9-a2246c34286c",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 1019564,
+              "sha256": "d8c7f193ce6543e5eeec04fd1b1a6807e9296ba80a79c7b9181deda132e53fec"
+            },
+            "calls.jsonl": {
+              "bytes": 1288000,
+              "sha256": "a907547e55d49da0aac24b8b4adbe0f1b6ae19901ffcb67612c40a3671d7a1aa"
+            },
+            "decompiled.jsonl": {
+              "bytes": 67902,
+              "sha256": "79fa66fd8b0b36e957dd33a2a68bcf0816c5256decac8e4856e5608292ae925b"
+            },
+            "strings.jsonl": {
+              "bytes": 732668,
+              "sha256": "081ac145bc2c32e9f9155903305397bfe3182ca7eb97cae51fa1171004a7c5fc"
+            }
+          }
+        },
+        {
+          "program": "libsif.so",
+          "sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1184,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1610,
+          "decompile_budget": 12,
+          "decompile_attempted": 3,
+          "decompile_completed": 3,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(ImageGenerator::captureNotify$|captureNotifyCB$|DscFileHandler::(writeChunks|write|memoryRelease)$|ImageGenerator::(init|make.*|process.*)$)",
+          "matched_functions": 3,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "4f015fda-1395-4446-98b9-a2246c34286c",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 324273,
+              "sha256": "0c414b1dff8c300d4bd4e3c997e44f39e74f941936d99b617e320aa26add1a0e"
+            },
+            "calls.jsonl": {
+              "bytes": 445459,
+              "sha256": "1e05c3bd4cd1660fef4b26705e32a303a33b9a1b3f391450aeb559688b1d4d72"
+            },
+            "decompiled.jsonl": {
+              "bytes": 177111,
+              "sha256": "167474183dfaccf7226d89b4ba69a62e378d94de6d337323f16aa428c0337a4e"
+            },
+            "strings.jsonl": {
+              "bytes": 339466,
+              "sha256": "40116d570c53bc0051f8f205f4789e8a1a119a5d22607448dbd59242a18300ab"
+            }
+          }
+        }
+      ],
+      "validation": "runner exited zero; all emitted summaries independently revalidated",
+      "outputs": 2,
+      "attempted": 8,
+      "completed": 8
+    },
+    {
+      "work": ".work/run004/capture-photo/close",
+      "receipts": [
+        {
+          "path": ".work/run004/capture-photo/close/logs/NX500_FW112-70f6a04c-8eda-42cb-9a08-e13601a42103.json",
+          "sha256": "b4098e85dc38514e04beada4bdf5513a25ff343408bdbd516d892bc3b932e21e",
+          "receipt": {
+            "run_id": "70f6a04c-8eda-42cb-9a08-e13601a42103",
+            "started_unix": 1792560304.990356,
+            "command": [
+              "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+              "/workspace/NX-Reborn/ghidra-projects",
+              "NX500_FW112",
+              "-process",
+              "*",
+              "-analysisTimeoutPerFile",
+              "300",
+              "-max-cpu",
+              "1",
+              "-scriptPath",
+              "/workspace/NX-Reborn/tools/ghidra",
+              "-postScript",
+              "ExportEvidence.java",
+              "/workspace/NX-Reborn/.work/run004/capture-photo/close/outputs/ghidra",
+              "(DscOsalFile::(~DscOsalFile|close|write)$|ImageGenerator::run$)",
+              "12",
+              "70f6a04c-8eda-42cb-9a08-e13601a42103",
+              "30",
+              "0",
+              "-log",
+              "/workspace/NX-Reborn/.work/run004/capture-photo/close/logs/NX500_FW112.log",
+              "-scriptlog",
+              "/workspace/NX-Reborn/.work/run004/capture-photo/close/logs/NX500_FW112-script.log",
+              "-recursive",
+              "-noanalysis"
+            ],
+            "max_memory": "1536M",
+            "max_cpu": 1,
+            "decompile_timeout_seconds": 30,
+            "decompile_payload_mb_override": 0,
+            "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+            "completed": true,
+            "returncode": 0,
+            "finished_unix": 1792560317.117714
+          }
+        }
+      ],
+      "summaries": [
+        {
+          "program": "libmm-photo.so",
+          "sha256": "ea4ae65608a6f9ea0761e35c18764401cf7b876652f7949c322e880fa9f68ca9",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 3364,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 3498,
+          "decompile_budget": 12,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(DscOsalFile::(~DscOsalFile|close|write)$|ImageGenerator::run$)",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "70f6a04c-8eda-42cb-9a08-e13601a42103",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 1019564,
+              "sha256": "d8c7f193ce6543e5eeec04fd1b1a6807e9296ba80a79c7b9181deda132e53fec"
+            },
+            "calls.jsonl": {
+              "bytes": 1288000,
+              "sha256": "51885c5ba9902423c5102e1f6c1dc8bde9edf03e4bb4d8129f94c8c023eda403"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 732668,
+              "sha256": "081ac145bc2c32e9f9155903305397bfe3182ca7eb97cae51fa1171004a7c5fc"
+            }
+          }
+        },
+        {
+          "program": "libsif.so",
+          "sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1184,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1610,
+          "decompile_budget": 12,
+          "decompile_attempted": 4,
+          "decompile_completed": 4,
+          "decompile_timeout_seconds": 30,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "(DscOsalFile::(~DscOsalFile|close|write)$|ImageGenerator::run$)",
+          "matched_functions": 4,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "70f6a04c-8eda-42cb-9a08-e13601a42103",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 324273,
+              "sha256": "0c414b1dff8c300d4bd4e3c997e44f39e74f941936d99b617e320aa26add1a0e"
+            },
+            "calls.jsonl": {
+              "bytes": 445459,
+              "sha256": "1de6a81274920c05d4e5fe7a21ffeaf8fc14572e8aca6c494d01144e30080e74"
+            },
+            "decompiled.jsonl": {
+              "bytes": 12664,
+              "sha256": "93476b79ded9fbc5978cf06511459a28e03aaf3bdc495c3be582fa5f4641f53a"
+            },
+            "strings.jsonl": {
+              "bytes": 339466,
+              "sha256": "40116d570c53bc0051f8f205f4789e8a1a119a5d22607448dbd59242a18300ab"
+            }
+          }
+        }
+      ],
+      "validation": "runner exited zero; all emitted summaries independently revalidated",
+      "outputs": 2,
+      "attempted": 4,
+      "completed": 4
+    }
+  ],
+  "known_failure": "Initial run13-input staging exported actual11 project ELFs then runner FileNotFoundError for libsif.so summary; receipt.completed=false and full console retained. No export/decompilation failure occurred among emitted outputs.",
+  "paired_input_manifests": [
+    ".work/run004/capture/initial/input-manifest.json",
+    ".work/run004/capture/followup/input-manifest.json",
+    ".work/run004/capture-photo/input-manifest.json"
+  ],
+  "historical_evidence": "RUN003 CAPTURE_IPC getter/map semantics; newly independently disassembled getter here. Restored run001 captureSaveDone inspected during exploration but final findings use newly exported RUN004 C.",
+  "reviewed_findings": [
+    {
+      "id": "CAP004-READY-NOTIFY",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "original_elf_va": "0x8b93c",
+      "evidence": "analysis/evidence/capture-completion-run004.json",
+      "method": "new Ghidra noanalysis selected decompilation + original ELF relocation/PT_LOAD mapping + bounded Capstone corroboration",
+      "limitations": [
+        "Header semantics derived inside this binary; outer message ID and cross-core sender not fully traced."
+      ],
+      "unresolved_questions": [
+        "Which RTOS caller emits this exact frame, and what ordering relates it to preference writes?"
+      ],
+      "claim": "category table2 / still table10 => packet halfword+4=0x020a; length0 branch calls0x27300 at0x8b974 with0x1010006,0,0; publishConvert maps to0x2010006.",
+      "evidence_sha256": "c9ccaac67f98f2f11527bc5f45f832d91cc700076649636c78b72eca8cd6db7b"
+    },
+    {
+      "id": "CAP004-WRITE-BUFFER",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "original_elf_va": "0x8b804",
+      "evidence": "analysis/evidence/capture-completion-run004.json",
+      "method": "new Ghidra noanalysis selected decompilation + original ELF relocation/PT_LOAD mapping + bounded Capstone corroboration",
+      "limitations": [
+        "ReleaseCaptureBuffer implementation not reviewed; label is not a filesystem durability guarantee."
+      ],
+      "unresolved_questions": [
+        "Which backend buffer/producer supplies the identifier?"
+      ],
+      "claim": "Still table7=>halfword0x0207, length2; reads ushort from packet+8 and calls ReleaseCaptureBuffer via PLT0x282a8 at0x8b854.",
+      "evidence_sha256": "c9ccaac67f98f2f11527bc5f45f832d91cc700076649636c78b72eca8cd6db7b"
+    },
+    {
+      "id": "CAP004-UI-COMBINES",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "original_elf_va": "0x214af0",
+      "evidence": "analysis/evidence/capture-completion-run004.json",
+      "method": "new Ghidra noanalysis selected decompilation + original ELF relocation/PT_LOAD mapping + bounded Capstone corroboration",
+      "limitations": [
+        "UI IDs inferred from usage; helper uses multiple getter calls and is not an atomic snapshot."
+      ],
+      "unresolved_questions": [
+        "How do all counter increments and callbacks interleave?"
+      ],
+      "claim": "Remote helper requires UI_Get_Value0x29d<1 AND RTOS readiness getter true AND capture-run-state10==0; setter0x215b48 writes separate local0x44b48c.",
+      "evidence_sha256": "c9ccaac67f98f2f11527bc5f45f832d91cc700076649636c78b72eca8cd6db7b"
+    },
+    {
+      "id": "CAP004-APP-SAVE-CB",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "original_elf_va": "0x21b978",
+      "evidence": "analysis/evidence/capture-completion-run004.json",
+      "method": "new Ghidra noanalysis selected decompilation + original ELF relocation/PT_LOAD mapping + bounded Capstone corroboration",
+      "limitations": [
+        "Conversion enum and event registration callsites not fully traced; notification alone cannot establish success."
+      ],
+      "unresolved_questions": [
+        "Are error-path BT contents consumers independently guarded?"
+      ],
+      "claim": "Callback event1 converts param2 storage error; only converted values outside1..6 call File_Write_Done0x217cac; UI_BT_Send_Contents executes afterward on both paths.",
+      "evidence_sha256": "c9ccaac67f98f2f11527bc5f45f832d91cc700076649636c78b72eca8cd6db7b"
+    },
+    {
+      "id": "CAP004-PHOTO-NOTIFY",
+      "source_sha256": "ea4ae65608a6f9ea0761e35c18764401cf7b876652f7949c322e880fa9f68ca9",
+      "original_elf_va": "0x90874",
+      "evidence": "analysis/evidence/capture-completion-run004.json",
+      "method": "new Ghidra noanalysis selected decompilation + original ELF relocation/PT_LOAD mapping + bounded Capstone corroboration",
+      "limitations": [
+        "No direct proof from taskMain callback slot to this target; symbols/ABI inferred, default storage state0 when queue empty."
+      ],
+      "unresolved_questions": [
+        "Where is captureSaveDone installed in the SIF buffer callback record?"
+      ],
+      "claim": "captureNotify event1 registers m_pFileSaveDoneNotification and two params; captureSaveDone0x924f4 reads queued storage state/path and calls registered callback at0x93b84.",
+      "evidence_sha256": "c9ccaac67f98f2f11527bc5f45f832d91cc700076649636c78b72eca8cd6db7b"
+    },
+    {
+      "id": "CAP004-WORKER-NONSUCCESS",
+      "source_sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+      "original_elf_va": "0x2c3c4",
+      "evidence": "analysis/evidence/capture-completion-run004.json",
+      "method": "new Ghidra noanalysis selected decompilation + original ELF relocation/PT_LOAD mapping + bounded Capstone corroboration",
+      "limitations": [
+        "Callback target not resolved and buffer+0x2c layout inferred."
+      ],
+      "unresolved_questions": [
+        "How is write failure copied into StorageStateQueue?"
+      ],
+      "claim": "operate0x31c44 queues; taskMain conditionally calls writeChunks0x2d590, logs failure/skip, then calls nonnull buffer callback at0x2d32c regardless of Boolean write result.",
+      "evidence_sha256": "c9ccaac67f98f2f11527bc5f45f832d91cc700076649636c78b72eca8cd6db7b"
+    },
+    {
+      "id": "CAP004-CLOSE-RESULT",
+      "source_sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+      "original_elf_va": "0x5ad4c",
+      "evidence": "analysis/evidence/capture-completion-run004.json",
+      "method": "new Ghidra noanalysis selected decompilation + original ELF relocation/PT_LOAD mapping + bounded Capstone corroboration",
+      "limitations": [
+        "Stdio/kernel durability and alternative writers are outside this bounded route; null-FILE close return register is not a defined Boolean."
+      ],
+      "unresolved_questions": [
+        "Does any separate route fsync or propagate close errors?"
+      ],
+      "claim": "close calls fclose at0x5ad7c and clears FILE pointer; destructor calls close at0x5a214 and discards its result. writeChunks successful write path assigns1 before destructor; taskMain callback does not test fclose.",
+      "evidence_sha256": "c9ccaac67f98f2f11527bc5f45f832d91cc700076649636c78b72eca8cd6db7b"
+    }
+  ],
+  "project_unlocked": true,
+  "limitations": [
+    "No runtime, target, camera or firmware operation.",
+    "Ghidra inferred signatures, unknown indirect/vtable edges, unresolved external libraries and missing external DWARF remain.",
+    "No inference of successful close/durability from readiness, write notification or callback."
+  ],
+  "artifacts": [
+    {
+      "path": "analysis/evidence/capture-completion-run004.json",
+      "sha256": "c9ccaac67f98f2f11527bc5f45f832d91cc700076649636c78b72eca8cd6db7b",
+      "bytes": 140016
+    },
+    {
+      "path": "analysis/evidence/capture-completion-run004-capstone.json",
+      "sha256": "c481e8082187919e454fca6476875220072d30af7e5913bcd6e13afd67510031",
+      "bytes": 388893
+    },
+    {
+      "path": "tools/firmware/capture_completion_evidence.py",
+      "sha256": "257519f61adfe2518e5519e2f8aeb3ad9d1d98f73fb67b646edde99343e001bc",
+      "bytes": 5210
+    },
+    {
+      "path": "analysis/architecture/CAPTURE_COMPLETION_RUN004.md",
+      "sha256": "c559628b42e772342a25429cee3bb49d7d1370aa7589609f1867f6db110457a8",
+      "bytes": 11416
+    }
+  ],
+  "failure_artifacts": [
+    {
+      "path": ".work/run004/capture/initial-console.log",
+      "sha256": "450b5cdd72daad1b897f7969ed46ca91d3ef053ef3270e61938431b6d20e274c",
+      "description": "Ghidra11 emitted outputs followed by Python FileNotFoundError during13-input validation; receipt incomplete"
+    }
+  ],
+  "distinct_selected_functions": 48,
+  "selected_attempts": 49,
+  "selected_completed": 49
+}
