@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "static_only": true,
+  "verifier": "/workspace/NX-Reborn/tools/firmware/verify_run006_evidence.py",
+  "verifier_sha256": "5fc361015bfed5b35a141cb0f66895acee070f8430b81b050d82aa20e04fd43f",
+  "checked_evidence": [
+    {
+      "path": "analysis/evidence/storage-errors-run006.json",
+      "sha256": "479b7054630359a9696149fc2872ccf204cacdbc1b98457943dc0a1875885f01",
+      "original_byte_windows": 87
+    },
+    {
+      "path": "analysis/evidence/app-error-consumers-run006.json",
+      "sha256": "18fc07e9280608a476a423412feb903d3a48e3e561ad06bdaf7f9e2313c18ef9",
+      "original_byte_windows": 34,
+      "data_tables": 3
+    },
+    {
+      "path": "analysis/evidence/transfer-boundaries-run006.json",
+      "sha256": "8795f9c4013105182391e2ff84cb64197f477e1b285119b2e7c20273366dc421",
+      "original_byte_windows": 9
+    },
+    {
+      "path": "analysis/evidence/rtos-transport-run006.json",
+      "sha256": "6744e8e6f5892b355ffce41a7268e3aed42f80fdc327e944e907f162d53f108c",
+      "original_byte_windows": 33,
+      "data_blocks": 8
+    },
+    {
+      "path": "analysis/evidence/kernel-prefix-run006.json",
+      "sha256": "e4b19feef0d5bcc6644811331ccf2916ae29eb0450901bb874da43c059d2f02a",
+      "original_byte_windows": 2
+    }
+  ],
+  "source_checks": {
+    ".work/full/extracted/rootfs/usr/lib/libsif.so": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+    ".work/full/extracted/rootfs/usr/lib/libmm-photo.so": "ea4ae65608a6f9ea0761e35c18764401cf7b876652f7949c322e880fa9f68ca9",
+    ".work/full/extracted/rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+    ".work/full/extracted/rootfs/usr/lib/libmulticore-bridge.so": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+    ".work/full/extracted/rootfs/usr/lib/libudd5.so": "8c56bea30a591fbfb8e9e86c237504f5e28f464f74c18cffc8bbaa7f717b0ea1",
+    ".work/full/extracted/rootfs/usr/lib/libcapture-fw-prod.so": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+    ".work/full/extracted/rootfs/usr/lib/libdi-network-bt-app.so": "94a8f7ae05298d9a143d89c3b67cb1141ef3aea7c2cdc0004ef9799cda261eae",
+    ".work/full/extracted/rootfs/usr/lib/libdi-network-dlna-rvf.so": "a7c8f03e4fdcc035762f83a2168efbbb4a4d93ac34802d1d4e097eb74404f567",
+    ".work/full/extracted/rootfs/usr/lib/libdi-network-dlna-api.so": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+    ".work/full/extracted/rootfs/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87"
+  },
+  "frame_arithmetic_checked": true,
+  "independent_semantic_review_completed": false,
+  "limitations": [
+    "Primary-agent byte/artifact validation and bounded manual interpretation only.",
+    "Independent RUN006 review agent ended with an actual usage-limit error.",
+    "No active-boot, runtime delivery, queue ordering, peer acknowledgement or medium durability validation."
+  ]
+}

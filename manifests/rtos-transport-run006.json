@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "run": "RUN006",
+  "static_only": true,
+  "elf_coverage_contribution": 0,
+  "source": {
+    "bin_path": ".work/full/NX500.bin",
+    "bin_bytes": 352121435,
+    "bin_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+    "section_index": 5,
+    "section_bin_start": 15680257,
+    "section_bytes": 12075648,
+    "section_sha256": "f8e417cb5b55768851ba7e2b8017d3a98dc0b0c8444cc0a5061265cc08dbbf7f",
+    "inferred_link_base": "0x80000000"
+  },
+  "independent_semantic_review_completed": false,
+  "reviewed_findings": [
+    {
+      "id": "RAW006-OBSERVER",
+      "section_offsets": [
+        "0x58110",
+        "0x5821c",
+        "0x59940",
+        "0x58efc",
+        "0x58828"
+      ],
+      "claim": "Concrete observer registration and virtual thunk reach category82/notify020a sender on inspected event1010006."
+    },
+    {
+      "id": "RAW006-RING",
+      "section_offsets": [
+        "0x5e650",
+        "0xe738c",
+        "0x37ac8",
+        "0x37c4c",
+        "0x37c68",
+        "0x383bc"
+      ],
+      "claim": "Normal successful contiguous submission constructs fourteen-byte record, publishes ring write index then calls bound channel2 MMIO signal."
+    },
+    {
+      "id": "RAW006-KERNEL-PREFIX",
+      "source_sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+      "kernel_link_vas": [
+        "0xc02ced00",
+        "0xc02cedc0",
+        "0xc02cedd4",
+        "0xc02cedfc"
+      ],
+      "decoded_base": "0xc0008000",
+      "claim": "Normal nonempty ring path advances four bytes then overwrites same destination with requested ten bytes; this supplies category at+2 and notify at+4."
+    }
+  ],
+  "limitations": [
+    "Raw section evidence, separate from ELF/Ghidra coverage; no import, decompilation or target execution.",
+    "Inferred link base is not an observed runtime mapping. Code-selected globals outside the section are not file-backed data.",
+    "Aligned ARM B/BL scans are encoding candidates only; no exhaustive Thumb, indirect-call, relocation or executable-region scan.",
+    "Selected code windows stop before adjacent literal pools; recorded data blocks are never decoded as code.",
+    "Frame bytes are reconstructed conditional on the inspected initialized normal path, allocation and available ring space, not a device capture.",
+    "Ring-wrap and queue/error branches are retained; detailed conclusions describe the reviewed contiguous successful submission path.",
+    "No peer acknowledgement, runtime visibility/cacheability, memory ownership, file durability or capture/transfer safety is established.",
+    "Primary-agent review; independent RUN006 semantic review incomplete.",
+    "Packaged kernel2 active boot selection remains unverified."
+  ],
+  "artifacts": [
+    {
+      "path": "analysis/evidence/rtos-transport-run006.json",
+      "sha256": "6744e8e6f5892b355ffce41a7268e3aed42f80fdc327e944e907f162d53f108c"
+    },
+    {
+      "path": "analysis/evidence/kernel-prefix-run006.json",
+      "sha256": "e4b19feef0d5bcc6644811331ccf2916ae29eb0450901bb874da43c059d2f02a"
+    },
+    {
+      "path": "analysis/architecture/RTOS_TRANSPORT_RUN006.md",
+      "sha256": "91236d4b5ebe78b55e2ab78d9617e09779310848a129218be4d462c427a83d09"
+    },
+    {
+      "path": "tools/firmware/rtos_transport.py",
+      "sha256": "e8b8c92c12f7d22b65c8d1644c22e05dcb8210229d0b9265f6a1eb1e38fd51d4"
+    }
+  ]
+}

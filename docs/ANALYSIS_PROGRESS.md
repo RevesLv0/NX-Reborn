@@ -11,9 +11,9 @@ The filesystem corpus contains **1,895 unique ELF contents across 1,956 paths**.
 | loaded program export validated | 41 / 1895 | 2.164% |
 | auto analysis completed with success receipt | 28 / 1895 | 1.478% |
 | selected decompilation completed | 30 / 1895 | 1.583% |
-| reviewed static findings | 18 / 1895 | 0.95% |
+| reviewed static findings | 19 / 1895 | 1.003% |
 
-Validated export generations: 203; rejected generations: 11. Deduplicated mapped nonexternal function entries: 46,539. Selected function attempts: 288; completed: 288. There is no whole-corpus function denominator. ABI-unverified mapped entries: 46,539.
+Validated export generations: 371; rejected generations: 11. Deduplicated mapped nonexternal function entries: 46,539. Selected function attempts: 417; completed: 417. There is no whole-corpus function denominator. ABI-unverified mapped entries: 46,539.
 
 Successful `-import` receipts count only when their input manifest SHA and firmware path agree with the source inventory. Restored `-process -noanalysis` exports establish a loaded program and valid export; they do not establish a newly measured import or completed auto-analysis. Artifact bytes, SHA-256, row counts, run IDs and receipt exit state are checked on every rebuild. Failed runs and stale exports remain visible as errors and do not count as coverage.
 
@@ -28,7 +28,7 @@ Reproduce from the repository root:
 ```sh
 python tools/firmware/analysis_progress.py \
   --inventory .work/full/inventory/full_filesystem_inventory.json \
-  --run-root .work/restored-run001 --run-root .work/run002 --run-root .work/run003 --run-root .work/run004 --run-root .work/run005 \
+  --run-root .work/restored-run001 --run-root .work/run002 --run-root .work/run003 --run-root .work/run004 --run-root .work/run005 --run-root .work/run006 \
   --review-ledger manifests/ghidra-capture-run003.json \
   --review-ledger manifests/ghidra-video-power-run003.json \
   --review-ledger manifests/ghidra-transfer-run003.json \
@@ -38,12 +38,13 @@ python tools/firmware/analysis_progress.py \
   --review-ledger manifests/ghidra-transfer-run004.json \
   --review-ledger manifests/ghidra-storage-run005.json \
   --review-ledger manifests/ghidra-app-storage-run005.json \
+  --review-ledger manifests/review-run006.json \
   --output manifests/analysis-progress.json --markdown docs/ANALYSIS_PROGRESS.md
 ```
 
 Review counts are unmeasured unless explicit `--review-ledger` inputs are provided. Review inputs accept a list or a manifest containing `reviewed_findings`. Each reviewed unit must record a stable ID, inventory source SHA, original ELF VA or file offset, existing evidence path, method, limitations and unresolved questions. Prose reports and generated pseudocode are never silently classified as reviewed findings.
 
-Registered reviewed static units: 49. Review content coverage counts primary source SHA associations only; extra source anchors stay attached to each unit. It does not measure the fraction of semantics understood.
+Registered reviewed static units: 61. Review content coverage counts primary source SHA associations only; extra source anchors stay attached to each unit. It does not measure the fraction of semantics understood.
 
 Inventory SHA-256: `c874bc1a39049f8f6afb508aa34e9fb0b4aacd1480e7603afade30a4613d461f`. All source SHA, original paths, export artifact hashes, receipt locations and per-SHA work units are preserved in [the ledger](../manifests/analysis-progress.json).
 

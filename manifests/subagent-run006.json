@@ -1,0 +1,68 @@
+{
+  "run": "RUN006",
+  "date_kst": "2026-10-22",
+  "prior_unique_agents": 20,
+  "new_unique_agents": 4,
+  "cumulative_unique_agents": 24,
+  "new_agents_created_during_resume": 0,
+  "agents": [
+    {
+      "name": "storage_errors_run006",
+      "role": "Async storage errors, cancellation and queues",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "reason": "Cross-function pointer/state/queue reasoning",
+      "fork_turns": "none",
+      "verified_runtime_model_id": null,
+      "status": "errored_on_resume_actual_usage_limit",
+      "report": "analysis/architecture/STORAGE_ERRORS_RUN006.md",
+      "independent_review_completed": false
+    },
+    {
+      "name": "app_error_consumers_run006",
+      "role": "App outcome consumers, callbacks and Linux transport",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "reason": "Relocation, jump-table and callback dataflow reasoning",
+      "fork_turns": "none",
+      "verified_runtime_model_id": null,
+      "status": "errored_on_resume_actual_usage_limit",
+      "report": "analysis/architecture/APP_ERROR_CONSUMERS_RUN006.md",
+      "independent_review_completed": false
+    },
+    {
+      "name": "rtos_transport_run006",
+      "role": "Raw RTOS observer, packet, ring and MMIO transport",
+      "requested_model": "gpt-6-astra",
+      "requested_reasoning_effort": "high",
+      "reason": "Stripped ARM and indirect-call reconstruction",
+      "fork_turns": "none",
+      "verified_runtime_model_id": null,
+      "status": "errored_on_resume_actual_usage_limit",
+      "report": "analysis/architecture/RTOS_TRANSPORT_RUN006.md",
+      "independent_review_completed": false
+    },
+    {
+      "name": "review_run006",
+      "role": "Independent byte and semantic review",
+      "requested_model": "gpt-6.1-sol",
+      "requested_reasoning_effort": "high",
+      "reason": "Separate original-source review",
+      "fork_turns": "none",
+      "verified_runtime_model_id": null,
+      "status": "errored_on_resume_actual_usage_limit",
+      "report": null,
+      "independent_review_completed": false
+    }
+  ],
+  "primary_agent_followup": [
+    "Original evidence reproduction and byte/artifact validation",
+    "Additional kernel/userspace pointer and virtual-handler binding",
+    "Fresh URL-builder selection",
+    "Manifests, stage ledger and reports"
+  ],
+  "limitations": [
+    "Requested model settings are not independently verified runtime identities.",
+    "No repeated quota retry or model bypass; primary-agent work is not independent review."
+  ]
+}

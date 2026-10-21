@@ -1,5 +1,10 @@
 # RUN006 checkpoint — paused for remaining usage
 
+Historical checkpoint. Work resumed after the user clarified that a remaining
+percentage was not a stop instruction. See `STATUS_20261022_RUN006.md` for the
+subsequent primary-agent validation and actual sub-agent quota failures. The
+counts and incomplete artifacts described below are checkpoint-time facts.
+
 2026-10-21 KST. The user reported 3% usage remaining and requested a smaller
 finishing scope, not immediate abandonment. Four sub-agents were interrupted to
 conserve usage; the primary agent then completed the remaining kernel prefix
