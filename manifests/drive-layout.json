@@ -1,0 +1,49 @@
+{
+  "project": "1XKdCmvj9g_XqLKnyrlAmJk52oRDI2SHu",
+  "codex": "1Xr8YHrtXuPudHGPC_fUl9zBoFxhhSZGJ",
+  "archive": "1QSBfSZGHcvMdlWrWRr2IlJzL-hzBfLmS",
+  "folders": {
+    "00_관리_및_진행현황": {
+      "success": true,
+      "id": "198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+      "url": "https://drive.google.com/drive/folders/198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+      "title": "00_관리_및_진행현황",
+      "parent_id": "1Xr8YHrtXuPudHGPC_fUl9zBoFxhhSZGJ"
+    },
+    "01_원본_및_무결성": {
+      "success": true,
+      "id": "178-0nFtvKvRXjLZvrIn-ubyWEjACsI-G",
+      "url": "https://drive.google.com/drive/folders/178-0nFtvKvRXjLZvrIn-ubyWEjACsI-G",
+      "title": "01_원본_및_무결성",
+      "parent_id": "1Xr8YHrtXuPudHGPC_fUl9zBoFxhhSZGJ"
+    },
+    "02_추출_및_전체인덱스": {
+      "success": true,
+      "id": "1cIz9Sldkq1stFttm6RI_XOZfQ29UrOGd",
+      "url": "https://drive.google.com/drive/folders/1cIz9Sldkq1stFttm6RI_XOZfQ29UrOGd",
+      "title": "02_추출_및_전체인덱스",
+      "parent_id": "1Xr8YHrtXuPudHGPC_fUl9zBoFxhhSZGJ"
+    },
+    "03_Ghidra_프로젝트_및_출력": {
+      "success": true,
+      "id": "1qWBUqiXxBFfDLA6AQ6UGjYaNCfcZJuV3",
+      "url": "https://drive.google.com/drive/folders/1qWBUqiXxBFfDLA6AQ6UGjYaNCfcZJuV3",
+      "title": "03_Ghidra_프로젝트_및_출력",
+      "parent_id": "1Xr8YHrtXuPudHGPC_fUl9zBoFxhhSZGJ"
+    },
+    "04_구조_및_기능분석": {
+      "success": true,
+      "id": "10xY2YyYAyarseUKK24i-rwA0ZMiTrm6G",
+      "url": "https://drive.google.com/drive/folders/10xY2YyYAyarseUKK24i-rwA0ZMiTrm6G",
+      "title": "04_구조_및_기능분석",
+      "parent_id": "1Xr8YHrtXuPudHGPC_fUl9zBoFxhhSZGJ"
+    },
+    "05_검증_및_보고서": {
+      "success": true,
+      "id": "1CZcxRYF9R-YziuZTGl8Rw3n2M3wWOY0g",
+      "url": "https://drive.google.com/drive/folders/1CZcxRYF9R-YziuZTGl8Rw3n2M3wWOY0g",
+      "title": "05_검증_및_보고서",
+      "parent_id": "1Xr8YHrtXuPudHGPC_fUl9zBoFxhhSZGJ"
+    }
+  }
+}

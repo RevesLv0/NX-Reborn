@@ -1,0 +1,535 @@
+[
+  {
+    "path": "opt/etc/allshare/config/DMS/xml/ConnectionManager_1.xml",
+    "sha256": "7876a8604977e2df8b711dc01c93ae0a55efa357f48cabd586640f2d009c633b",
+    "bytes": 6372,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "root_tag": "{urn:schemas-upnp-org:service-1-0}scpd",
+    "actions": [
+      "GetCurrentConnectionIDs",
+      "GetCurrentConnectionInfo",
+      "GetProtocolInfo"
+    ],
+    "services": [],
+    "state_variables": [
+      {
+        "name": "A_ARG_TYPE_ProtocolInfo",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_ConnectionStatus",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_AVTransportID",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_RcsID",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_ConnectionID",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_ConnectionManager",
+        "send_events": "no"
+      },
+      {
+        "name": "SourceProtocolInfo",
+        "send_events": "yes"
+      },
+      {
+        "name": "SinkProtocolInfo",
+        "send_events": "yes"
+      },
+      {
+        "name": "A_ARG_TYPE_Direction",
+        "send_events": "no"
+      },
+      {
+        "name": "CurrentConnectionIDs",
+        "send_events": "yes"
+      }
+    ],
+    "device_metadata": {
+      "friendlyName": null,
+      "modelName": null,
+      "modelNumber": null,
+      "UDN": null
+    }
+  },
+  {
+    "path": "opt/etc/allshare/config/DMS/xml/ContentDirectory_1.xml",
+    "sha256": "95ff3e604de11cab594f45f2e0f72a5df2fd0166f8e20ac0ed64617f23d6c14e",
+    "bytes": 13982,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "root_tag": "{urn:schemas-upnp-org:service-1-0}scpd",
+    "actions": [
+      "Browse",
+      "Search",
+      "GetSearchCapabilities",
+      "GetSortCapabilities",
+      "GetSystemUpdateID",
+      "CreateObject",
+      "ImportResource",
+      "ExportResource",
+      "DestroyObject",
+      "StopTransferResource",
+      "GetTransferProgress",
+      "X_GetFeatureList"
+    ],
+    "services": [],
+    "state_variables": [
+      {
+        "name": "A_ARG_TYPE_SortCriteria",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_SearchCriteria",
+        "send_events": "no"
+      },
+      {
+        "name": "TransferIDs",
+        "send_events": "yes"
+      },
+      {
+        "name": "A_ARG_TYPE_UpdateID",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_Filter",
+        "send_events": "no"
+      },
+      {
+        "name": "ContainerUpdateIDs",
+        "send_events": "yes"
+      },
+      {
+        "name": "A_ARG_TYPE_Result",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_Index",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_ObjectID",
+        "send_events": "no"
+      },
+      {
+        "name": "SortCapabilities",
+        "send_events": "no"
+      },
+      {
+        "name": "SearchCapabilities",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_Count",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_BrowseFlag",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_URI",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_TransferID",
+        "send_events": "no"
+      },
+      {
+        "name": "SystemUpdateID",
+        "send_events": "yes"
+      },
+      {
+        "name": "A_ARG_TYPE_TransferStatus",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_TransferLength",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_TransferTotal",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_Featurelist",
+        "send_events": "no"
+      }
+    ],
+    "device_metadata": {
+      "friendlyName": null,
+      "modelName": null,
+      "modelNumber": null,
+      "UDN": null
+    }
+  },
+  {
+    "path": "opt/etc/allshare/config/DMS/xml/DeviceDescription.xml",
+    "sha256": "272de8c2f66b6ec49fb48d27aa28714b4e34bacf044472ebf6a991d4f9e521c2",
+    "bytes": 2294,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "root_tag": "{urn:schemas-upnp-org:device-1-0}root",
+    "actions": [],
+    "services": [
+      {
+        "serviceType": "urn:schemas-upnp-org:service:ConnectionManager:1",
+        "serviceId": "urn:upnp-org:serviceId:ConnectionManager",
+        "SCPDURL": "/smp_5_",
+        "controlURL": "/smp_6_",
+        "eventSubURL": "/smp_7_"
+      },
+      {
+        "serviceType": "urn:schemas-upnp-org:service:ContentDirectory:1",
+        "serviceId": "urn:upnp-org:serviceId:ContentDirectory",
+        "SCPDURL": "/smp_8_",
+        "controlURL": "/smp_9_",
+        "eventSubURL": "/smp_10_"
+      }
+    ],
+    "state_variables": [],
+    "device_metadata": {
+      "friendlyName": "Redwood",
+      "modelName": "Redwood",
+      "modelNumber": "0.765",
+      "UDN": ""
+    }
+  },
+  {
+    "path": "opt/etc/allshare/config/UPnPConfig.xml",
+    "sha256": "2e89111a93d2c7dc88b247516c459d0960443ead051ddc98dabb4bbcb495c26e",
+    "bytes": 1693,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "root_tag": "UPnPConfig",
+    "actions": [],
+    "services": [],
+    "state_variables": [],
+    "device_metadata": {
+      "friendlyName": null,
+      "modelName": null,
+      "modelNumber": null,
+      "UDN": null
+    }
+  },
+  {
+    "path": "rootfs/etc/allshare/config/DMS/xml/ConnectionManager_1.xml",
+    "sha256": "7876a8604977e2df8b711dc01c93ae0a55efa357f48cabd586640f2d009c633b",
+    "bytes": 6372,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "root_tag": "{urn:schemas-upnp-org:service-1-0}scpd",
+    "actions": [
+      "GetCurrentConnectionIDs",
+      "GetCurrentConnectionInfo",
+      "GetProtocolInfo"
+    ],
+    "services": [],
+    "state_variables": [
+      {
+        "name": "A_ARG_TYPE_ProtocolInfo",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_ConnectionStatus",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_AVTransportID",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_RcsID",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_ConnectionID",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_ConnectionManager",
+        "send_events": "no"
+      },
+      {
+        "name": "SourceProtocolInfo",
+        "send_events": "yes"
+      },
+      {
+        "name": "SinkProtocolInfo",
+        "send_events": "yes"
+      },
+      {
+        "name": "A_ARG_TYPE_Direction",
+        "send_events": "no"
+      },
+      {
+        "name": "CurrentConnectionIDs",
+        "send_events": "yes"
+      }
+    ],
+    "device_metadata": {
+      "friendlyName": null,
+      "modelName": null,
+      "modelNumber": null,
+      "UDN": null
+    }
+  },
+  {
+    "path": "rootfs/etc/allshare/config/DMS/xml/ContentDirectory_1.xml",
+    "sha256": "95ff3e604de11cab594f45f2e0f72a5df2fd0166f8e20ac0ed64617f23d6c14e",
+    "bytes": 13982,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "root_tag": "{urn:schemas-upnp-org:service-1-0}scpd",
+    "actions": [
+      "Browse",
+      "Search",
+      "GetSearchCapabilities",
+      "GetSortCapabilities",
+      "GetSystemUpdateID",
+      "CreateObject",
+      "ImportResource",
+      "ExportResource",
+      "DestroyObject",
+      "StopTransferResource",
+      "GetTransferProgress",
+      "X_GetFeatureList"
+    ],
+    "services": [],
+    "state_variables": [
+      {
+        "name": "A_ARG_TYPE_SortCriteria",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_SearchCriteria",
+        "send_events": "no"
+      },
+      {
+        "name": "TransferIDs",
+        "send_events": "yes"
+      },
+      {
+        "name": "A_ARG_TYPE_UpdateID",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_Filter",
+        "send_events": "no"
+      },
+      {
+        "name": "ContainerUpdateIDs",
+        "send_events": "yes"
+      },
+      {
+        "name": "A_ARG_TYPE_Result",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_Index",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_ObjectID",
+        "send_events": "no"
+      },
+      {
+        "name": "SortCapabilities",
+        "send_events": "no"
+      },
+      {
+        "name": "SearchCapabilities",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_Count",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_BrowseFlag",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_URI",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_TransferID",
+        "send_events": "no"
+      },
+      {
+        "name": "SystemUpdateID",
+        "send_events": "yes"
+      },
+      {
+        "name": "A_ARG_TYPE_TransferStatus",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_TransferLength",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_TransferTotal",
+        "send_events": "no"
+      },
+      {
+        "name": "A_ARG_TYPE_Featurelist",
+        "send_events": "no"
+      }
+    ],
+    "device_metadata": {
+      "friendlyName": null,
+      "modelName": null,
+      "modelNumber": null,
+      "UDN": null
+    }
+  },
+  {
+    "path": "rootfs/etc/allshare/config/DMS/xml/DeviceDescription.xml",
+    "sha256": "272de8c2f66b6ec49fb48d27aa28714b4e34bacf044472ebf6a991d4f9e521c2",
+    "bytes": 2294,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "root_tag": "{urn:schemas-upnp-org:device-1-0}root",
+    "actions": [],
+    "services": [
+      {
+        "serviceType": "urn:schemas-upnp-org:service:ConnectionManager:1",
+        "serviceId": "urn:upnp-org:serviceId:ConnectionManager",
+        "SCPDURL": "/smp_5_",
+        "controlURL": "/smp_6_",
+        "eventSubURL": "/smp_7_"
+      },
+      {
+        "serviceType": "urn:schemas-upnp-org:service:ContentDirectory:1",
+        "serviceId": "urn:upnp-org:serviceId:ContentDirectory",
+        "SCPDURL": "/smp_8_",
+        "controlURL": "/smp_9_",
+        "eventSubURL": "/smp_10_"
+      }
+    ],
+    "state_variables": [],
+    "device_metadata": {
+      "friendlyName": "Redwood",
+      "modelName": "Redwood",
+      "modelNumber": "0.765",
+      "UDN": ""
+    }
+  },
+  {
+    "path": "rootfs/etc/allshare/config/UPnPConfig.xml",
+    "sha256": "2e89111a93d2c7dc88b247516c459d0960443ead051ddc98dabb4bbcb495c26e",
+    "bytes": 1693,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "root_tag": "UPnPConfig",
+    "actions": [],
+    "services": [],
+    "state_variables": [],
+    "device_metadata": {
+      "friendlyName": null,
+      "modelName": null,
+      "modelNumber": null,
+      "UDN": null
+    }
+  },
+  {
+    "path": "rootfs/etc/bluetooth/main.conf",
+    "sha256": "a7b420cb29e3e20571f7fdbc9a7141ccccfcef661e5846eb1584a366350c869d",
+    "bytes": 2836,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "sections": [
+      "General"
+    ]
+  },
+  {
+    "path": "rootfs/usr/etc/mmfw_camcorder.ini",
+    "sha256": "a98e2932276d4f55fdd17bce2258a544f34640b41c189657182a7490e86dadf8",
+    "bytes": 3926,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "sections": [
+      "General",
+      "VideoInput",
+      "AudioInput",
+      "VideoOutput",
+      "VideoEncoder",
+      "AudioEncoder",
+      "ImageEncoder",
+      "Capture",
+      "Record",
+      "Mux"
+    ]
+  },
+  {
+    "path": "rootfs/usr/etc/mmfw_camcorder_dev_video_pri.ini",
+    "sha256": "3f22c23dcad890fee2de36231ad03c98685b4d14a4b02e367e8d31453baf8f3e",
+    "bytes": 6493,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "sections": [
+      "Camera",
+      "Strobe",
+      "Effect",
+      "Photograph",
+      "Capture",
+      "Detect"
+    ]
+  },
+  {
+    "path": "rootfs/usr/etc/mmfw_camcorder_dev_video_sec.ini",
+    "sha256": "049ae6460e4cbbb742a8be1542522970b761613108e099a4b84bb6ee396442eb",
+    "bytes": 5828,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "sections": [
+      "Camera",
+      "Strobe",
+      "Effect",
+      "Photograph",
+      "Capture",
+      "Detect"
+    ]
+  },
+  {
+    "path": "rootfs/usr/lib/systemd/system/nfc-manager.service",
+    "sha256": "2bc098524e97bff6dabbe94b99242ed6632646df18c8fd0b9c74311783000162",
+    "bytes": 217,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "sections": [
+      "Unit",
+      "Service",
+      "Install"
+    ],
+    "declarations": {
+      "Unit": {
+        "Description": "NFC manager",
+        "After": "system-server.service",
+        "Requires": "system-server.service"
+      },
+      "Service": {
+        "Type": "simple",
+        "ExecStart": "/usr/bin/nfc-manager-daemon --daemon",
+        "KillSignal": "SIGKILL"
+      },
+      "Install": {
+        "WantedBy": "multi-user.target"
+      }
+    }
+  },
+  {
+    "path": "rootfs/usr/share/deviced/usb-configurations/usb-configurations.xml",
+    "sha256": "52e380d44fa69cc8202c6592564c15d04364020be712f20df1d8b245644994e3",
+    "bytes": 5369,
+    "classification": "STATIC_DECLARATION_NOT_RUNTIME_VERIFIED",
+    "root_tag": "usb-config",
+    "actions": [],
+    "services": [],
+    "state_variables": [],
+    "device_metadata": {
+      "friendlyName": null,
+      "modelName": null,
+      "modelNumber": null,
+      "UDN": null
+    }
+  }
+]

@@ -1,0 +1,1228 @@
+{
+  "schema_version": 1,
+  "date_utc": "2026-10-21",
+  "static_only": true,
+  "project": "NX500_FULL_RUN002",
+  "source_bin_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+  "rootfs_sha256": "9c66f76f3124acb3b8d0c31374ca209d333fcb76267bb86ed9bc18c9e8ea73f7",
+  "auto_analysis_enabled_this_run": false,
+  "new_imports": 0,
+  "distinct_selected_functions": 30,
+  "decompile_attempted": 30,
+  "decompile_completed": 30,
+  "decompile_failed": 0,
+  "decompile_omitted_by_budget": 0,
+  "runs": [
+    {
+      "stage": "transfer",
+      "receipt": ".work/run003/transfer/logs/NX500_FULL_RUN002-7f00cf67-22fc-4921-b59a-c514495f015e.json",
+      "receipt_sha256": "703a9a378d0f73bf25750c8bb96a5c9ff8dba75fa51e1d53d7b1cf9808db3850",
+      "run_id": "7f00cf67-22fc-4921-b59a-c514495f015e",
+      "auto_analysis": false,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_FULL_RUN002",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run003/transfer/outputs/ghidra",
+        "^SPTransferFile$|^SNPush(TransferFile|StopFile|ControlNotificationCallback)$|^DlnaSelective_NPush_(StartFileTransfer|StopFileTransfer)$|^SPClientManager::stop(All)?FileTransfer$|^CAPPNetworkSmartphoneLinkState::(getNPushEachFileCompleteCheck|getNPushAllFileSendWait|nPushCheckSendComplete)$|^CUSLNetworkSmartphoneLink::SelectiveNPush(Start|Stop)FileTransfer$",
+        "12",
+        "7f00cf67-22fc-4921-b59a-c514495f015e",
+        "30",
+        "-log",
+        "/workspace/NX-Reborn/.work/run003/transfer/logs/NX500_FULL_RUN002.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run003/transfer/logs/NX500_FULL_RUN002-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "768M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 30,
+      "programs": [
+        {
+          "program": "allshare-dms",
+          "sha256": "da2567f9849bb9936a9b66b4a61e280741422d351b153845b9a76e9671377be6",
+          "functions": 282,
+          "strings": 410,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 63035,
+              "sha256": "98b12431294886eda696b838f7752f591f36be232f94365144a87a1b82edbcf2"
+            },
+            "calls.jsonl": {
+              "bytes": 77354,
+              "sha256": "d8f8ef8330ab25e95a8503242b3cf22cc92d76394af480856fe6d7bf81ac0320"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 65813,
+              "sha256": "ce29d16e461153fae18d2df78deff49aa058369bb1475df3ccb469966c51e7bd"
+            }
+          },
+          "summary": ".work/run003/transfer/outputs/ghidra/allshare-dms-da2567f9849b/summary.json",
+          "summary_sha256": "4fb46791804abb715080c8b467bdd78973d62f08a5dbf059fec0b5e7d937cf49",
+          "selected_functions": []
+        },
+        {
+          "program": "allshare-svc",
+          "sha256": "dc4240cbee49821fb5c945bc7ab727abd208042254773a62d59e50df449cfcd3",
+          "functions": 803,
+          "strings": 982,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 213983,
+              "sha256": "423aa5af046fef86c540ec4bfefdc9712fe4c00487329512f61832e6bc9deb78"
+            },
+            "calls.jsonl": {
+              "bytes": 336536,
+              "sha256": "7ef0c9b9cd75d6b65719f0d2d723bb70ce0b6304dae9d9c49129ac5874cea302"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 157242,
+              "sha256": "65d31b698a74cfe24dafb27569056a4927321260deb9d25930544f8741eafca7"
+            }
+          },
+          "summary": ".work/run003/transfer/outputs/ghidra/allshare-svc-dc4240cbee49/summary.json",
+          "summary_sha256": "dd3cb56b3c3eb3375d3eaee5dae7e5dcb7502e52644c11bb18a445a93549c8dc",
+          "selected_functions": []
+        },
+        {
+          "program": "libdevice-node.so.0.1",
+          "sha256": "843ecf26516114370e16cd2ebc742f515cdd8b590812947b1063daa61565389e",
+          "functions": 309,
+          "strings": 102,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 62327,
+              "sha256": "e931edceb1e9404d73b9e4b688130532bc2b09f52d25cba6396de9d36cb73db0"
+            },
+            "calls.jsonl": {
+              "bytes": 6116,
+              "sha256": "93a31ec05cee86caad3dad42d7c012dc96a804e03bc1791160b93a386682c6cb"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 13367,
+              "sha256": "29406d5a5b65aeb85193b81f40d5fd6346835eac8039ed1743c9f8f20979480f"
+            }
+          },
+          "summary": ".work/run003/transfer/outputs/ghidra/libdevice-node.so.0.1-843ecf265161/summary.json",
+          "summary_sha256": "0eed6a337c8abcb02fd5d3e2c93870c65277a17c5cd5b0f011a3f52a6ef772bd",
+          "selected_functions": []
+        },
+        {
+          "program": "libdeviced.so.0.1.0",
+          "sha256": "df70b308f88d6c0eb038e2e67b69b4825ef12dec60230b6fd1c3dab942989f5d",
+          "functions": 161,
+          "strings": 218,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 36127,
+              "sha256": "8d2b0738e7d155d335178eaa94befe0763fbdcfdb02432435113a22a565308ce"
+            },
+            "calls.jsonl": {
+              "bytes": 54034,
+              "sha256": "015a462981e91482b271f426fb3d03c202d8ec3ada22ec209122584b8ce94346"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 31835,
+              "sha256": "bafd46fe269198957baaae66eb5813d1823e06d69d95a16e308fbf75a0b21c71"
+            }
+          },
+          "summary": ".work/run003/transfer/outputs/ghidra/libdeviced.so.0.1.0-df70b308f88d/summary.json",
+          "summary_sha256": "8fa3a1bd8213190a8adebf31f159d81ddab6ed51ae8de486b6ec0b407b4798ca",
+          "selected_functions": []
+        },
+        {
+          "program": "libdi-network-dlna-api.so",
+          "sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+          "functions": 1426,
+          "strings": 2230,
+          "decompile_attempted": 9,
+          "decompile_completed": 9,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 359122,
+              "sha256": "fb82a83c90b8dfbee996cd57daabf3df9f6e6bf978186d41168a310fac34bf2e"
+            },
+            "calls.jsonl": {
+              "bytes": 548537,
+              "sha256": "464ad8414a8263528776cfa7a00869b9b866c386ae96d911d3f089f7ec29b63c"
+            },
+            "decompiled.jsonl": {
+              "bytes": 87971,
+              "sha256": "cbc764b64974fd75f06cedb9cd41b8c4bf385423450e46839e0e57b0e8e8012d"
+            },
+            "strings.jsonl": {
+              "bytes": 408219,
+              "sha256": "cb5c0b6a97a94097960f702b30bfbd507097dc53b6bf80d6fe2fccc3505d4190"
+            }
+          },
+          "summary": ".work/run003/transfer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
+          "summary_sha256": "deb34a51cd2429fb41f9097783aeac54099d52b002af2a801577b983da587112",
+          "selected_functions": [
+            {
+              "name": "DlnaSelective_NPush_StartFileTransfer",
+              "original_elf_va": "0x2204c",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "DlnaSelective_NPush_StopFileTransfer",
+              "original_elf_va": "0x222a4",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPClientManager::stopFileTransfer",
+              "original_elf_va": "0x416cc",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPClientManager::stopFileTransfer",
+              "original_elf_va": "0x41a40",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPClientManager::stopAllFileTransfer",
+              "original_elf_va": "0x41ba0",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SNPushControlNotificationCallback",
+              "original_elf_va": "0x56298",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPTransferFile",
+              "original_elf_va": "0x583ac",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SNPushTransferFile",
+              "original_elf_va": "0x59360",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SNPushStopFile",
+              "original_elf_va": "0x59658",
+              "completed": true,
+              "error": ""
+            }
+          ]
+        },
+        {
+          "program": "libdi-network-dlna-extlib.so",
+          "sha256": "45c5bb3bec7b63f2755ec24de896d975e178f84ac88e5378fa4ff9158bf83ea5",
+          "functions": 1217,
+          "strings": 1850,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 310340,
+              "sha256": "48663bc4767f9c6738f2851b00e84b3442317572af93444ca8c3efdebf965f6b"
+            },
+            "calls.jsonl": {
+              "bytes": 451765,
+              "sha256": "77cbd5cf56f4401c72ac2506fe982f734fc7e9cc697886c52456fc145c8219ac"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 264819,
+              "sha256": "fb4be416c37d0a601f2a6b596a0396b4a3099b75109077693aab8e831cc7560b"
+            }
+          },
+          "summary": ".work/run003/transfer/outputs/ghidra/libdi-network-dlna-extlib.so-45c5bb3bec7b/summary.json",
+          "summary_sha256": "22bfb0a659f3acddb4c9897a7e74045d33fc0a688bb7e02684bef6fd441cd134",
+          "selected_functions": []
+        },
+        {
+          "program": "libdi-network-dlna-stack.so",
+          "sha256": "4c2926b910b6df381061f0b6dd2856ea8059f60f2cf667ac9af9524eb87b3b17",
+          "functions": 5561,
+          "strings": 7094,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 1474858,
+              "sha256": "da16c481a2f98d2a5f9b443391ac84e8e32c3f0fee11d199b766f7d6c3b1c8bc"
+            },
+            "calls.jsonl": {
+              "bytes": 2862536,
+              "sha256": "b9de91eace24bf5ba6ec2a445e1b7134eaec1e1d373d404e8f6f83ac6881e4ab"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 1187582,
+              "sha256": "ae9e0d08cd8fa4c04b1a0fc649eb646017528294088a4971e0cdf60c86e093f7"
+            }
+          },
+          "summary": ".work/run003/transfer/outputs/ghidra/libdi-network-dlna-stack.so-4c2926b910b6/summary.json",
+          "summary_sha256": "fd1289663f64c85d22c36b5157de8a7c2b01e4d077276744380df826faae05e8",
+          "selected_functions": []
+        },
+        {
+          "program": "smart-wifi-app",
+          "sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+          "functions": 3522,
+          "strings": 8159,
+          "decompile_attempted": 5,
+          "decompile_completed": 5,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 899382,
+              "sha256": "c8b279c4f3d0c247efdb9b07b3f017dd69b172dc66b6de486b62339b48fa12ea"
+            },
+            "calls.jsonl": {
+              "bytes": 1877012,
+              "sha256": "e93e71a66bd9cc8300d260d6742951798baf6a4b03596adde900583752f3d8bd"
+            },
+            "decompiled.jsonl": {
+              "bytes": 21549,
+              "sha256": "0e22e68f29cde98c42e8b51db2d10de28c69cb5e146803816c2ec007943a5702"
+            },
+            "strings.jsonl": {
+              "bytes": 1274490,
+              "sha256": "5a17f2f47264958a10753a3a346d5db09d3ad91850488650b82860b1b3e25c57"
+            }
+          },
+          "summary": ".work/run003/transfer/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
+          "summary_sha256": "835af02ba488b10587e3db81387c15e45959bcc26efdf23d324e64fcddb82f4a",
+          "selected_functions": [
+            {
+              "name": "CUSLNetworkSmartphoneLink::SelectiveNPushStartFileTransfer",
+              "original_elf_va": "0x64044",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "CUSLNetworkSmartphoneLink::SelectiveNPushStopFileTransfer",
+              "original_elf_va": "0x64068",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "CAPPNetworkSmartphoneLinkState::getNPushEachFileCompleteCheck",
+              "original_elf_va": "0x7d174",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "CAPPNetworkSmartphoneLinkState::getNPushAllFileSendWait",
+              "original_elf_va": "0x7d490",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "CAPPNetworkSmartphoneLinkState::nPushCheckSendComplete",
+              "original_elf_va": "0x7ddc0",
+              "completed": true,
+              "error": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "stage": "transfer-detail",
+      "receipt": ".work/run003/transfer-detail/logs/NX500_FULL_RUN002-5b71efa0-060f-48b5-adac-5f3d7c544b62.json",
+      "receipt_sha256": "bfb0c531e55e84e57179abac988f52812d016771c3479c9c086559921a28b79c",
+      "run_id": "5b71efa0-060f-48b5-adac-5f3d7c544b62",
+      "auto_analysis": false,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_FULL_RUN002",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run003/transfer-detail/outputs/ghidra",
+        "^SPClientManager::(createFileTransfer|deleteFileTransfer|ClearResizeHistory)$|^SPGenericThread::join$|^SPHTTPClientHandler::(run|send|setResizeParams|~SPHTTPClientHandler)$|^SelectivePushSendEventToUI$",
+        "12",
+        "5b71efa0-060f-48b5-adac-5f3d7c544b62",
+        "30",
+        "-log",
+        "/workspace/NX-Reborn/.work/run003/transfer-detail/logs/NX500_FULL_RUN002.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run003/transfer-detail/logs/NX500_FULL_RUN002-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "768M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 30,
+      "programs": [
+        {
+          "program": "allshare-dms",
+          "sha256": "da2567f9849bb9936a9b66b4a61e280741422d351b153845b9a76e9671377be6",
+          "functions": 282,
+          "strings": 410,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 63035,
+              "sha256": "98b12431294886eda696b838f7752f591f36be232f94365144a87a1b82edbcf2"
+            },
+            "calls.jsonl": {
+              "bytes": 77354,
+              "sha256": "38e2e06c28b20f7a1859deee54daf970230cba27e064e838b0195179fa862beb"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 65813,
+              "sha256": "ce29d16e461153fae18d2df78deff49aa058369bb1475df3ccb469966c51e7bd"
+            }
+          },
+          "summary": ".work/run003/transfer-detail/outputs/ghidra/allshare-dms-da2567f9849b/summary.json",
+          "summary_sha256": "ecfac28793cc655769ba2099eb76a76b85405f7c06d1139297b0f3ae9a716aa0",
+          "selected_functions": []
+        },
+        {
+          "program": "allshare-svc",
+          "sha256": "dc4240cbee49821fb5c945bc7ab727abd208042254773a62d59e50df449cfcd3",
+          "functions": 803,
+          "strings": 982,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 213983,
+              "sha256": "423aa5af046fef86c540ec4bfefdc9712fe4c00487329512f61832e6bc9deb78"
+            },
+            "calls.jsonl": {
+              "bytes": 336536,
+              "sha256": "0540714db7d21d30bc6e440dfca7fc61cea1a9aa6ff940384c209c5ff8dc69a0"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 157242,
+              "sha256": "65d31b698a74cfe24dafb27569056a4927321260deb9d25930544f8741eafca7"
+            }
+          },
+          "summary": ".work/run003/transfer-detail/outputs/ghidra/allshare-svc-dc4240cbee49/summary.json",
+          "summary_sha256": "9b7ca58271c8b57705ba98c6b63af651bcb6ac20837690aaf6ff31efc1fa7f5a",
+          "selected_functions": []
+        },
+        {
+          "program": "libdevice-node.so.0.1",
+          "sha256": "843ecf26516114370e16cd2ebc742f515cdd8b590812947b1063daa61565389e",
+          "functions": 309,
+          "strings": 102,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 62327,
+              "sha256": "e931edceb1e9404d73b9e4b688130532bc2b09f52d25cba6396de9d36cb73db0"
+            },
+            "calls.jsonl": {
+              "bytes": 6116,
+              "sha256": "93a31ec05cee86caad3dad42d7c012dc96a804e03bc1791160b93a386682c6cb"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 13367,
+              "sha256": "29406d5a5b65aeb85193b81f40d5fd6346835eac8039ed1743c9f8f20979480f"
+            }
+          },
+          "summary": ".work/run003/transfer-detail/outputs/ghidra/libdevice-node.so.0.1-843ecf265161/summary.json",
+          "summary_sha256": "a289f3c0c375e808595046fc01beaddbb5a1332554272dc8eb8857727c895f41",
+          "selected_functions": []
+        },
+        {
+          "program": "libdeviced.so.0.1.0",
+          "sha256": "df70b308f88d6c0eb038e2e67b69b4825ef12dec60230b6fd1c3dab942989f5d",
+          "functions": 161,
+          "strings": 218,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 36127,
+              "sha256": "8d2b0738e7d155d335178eaa94befe0763fbdcfdb02432435113a22a565308ce"
+            },
+            "calls.jsonl": {
+              "bytes": 54034,
+              "sha256": "67b4faa6f61b6c618bc29fd16770e3434a361ab5114507f2141efcaa81947bac"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 31835,
+              "sha256": "bafd46fe269198957baaae66eb5813d1823e06d69d95a16e308fbf75a0b21c71"
+            }
+          },
+          "summary": ".work/run003/transfer-detail/outputs/ghidra/libdeviced.so.0.1.0-df70b308f88d/summary.json",
+          "summary_sha256": "b07a3be282c01813bc3313314d5764a258d2006d0c21c46fb937ff82e34c29c4",
+          "selected_functions": []
+        },
+        {
+          "program": "libdi-network-dlna-api.so",
+          "sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+          "functions": 1426,
+          "strings": 2230,
+          "decompile_attempted": 9,
+          "decompile_completed": 9,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 359122,
+              "sha256": "fb82a83c90b8dfbee996cd57daabf3df9f6e6bf978186d41168a310fac34bf2e"
+            },
+            "calls.jsonl": {
+              "bytes": 548537,
+              "sha256": "2d53daf9264dda70a09cffcf3fd59dfbf9d9020c159975c7710c2b97076f9c0f"
+            },
+            "decompiled.jsonl": {
+              "bytes": 65950,
+              "sha256": "3c4c2e79b171fcc4239cc633efbb050b67e13e7976feb35c44299809d2123c7f"
+            },
+            "strings.jsonl": {
+              "bytes": 408219,
+              "sha256": "cb5c0b6a97a94097960f702b30bfbd507097dc53b6bf80d6fe2fccc3505d4190"
+            }
+          },
+          "summary": ".work/run003/transfer-detail/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
+          "summary_sha256": "8f79e35aa2b724be199274723ef276f16f494970727c60d7a4e96f9d7e577d91",
+          "selected_functions": [
+            {
+              "name": "SelectivePushSendEventToUI",
+              "original_elf_va": "0x213a8",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPClientManager::ClearResizeHistory",
+              "original_elf_va": "0x412e8",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPClientManager::createFileTransfer",
+              "original_elf_va": "0x413d8",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPClientManager::deleteFileTransfer",
+              "original_elf_va": "0x41554",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPClientManager::createFileTransfer",
+              "original_elf_va": "0x41d08",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPGenericThread::join",
+              "original_elf_va": "0x47e6c",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPHTTPClientHandler::setResizeParams",
+              "original_elf_va": "0x4854c",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPHTTPClientHandler::~SPHTTPClientHandler",
+              "original_elf_va": "0x4fff0",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPHTTPClientHandler::~SPHTTPClientHandler",
+              "original_elf_va": "0x50610",
+              "completed": true,
+              "error": ""
+            }
+          ]
+        },
+        {
+          "program": "libdi-network-dlna-extlib.so",
+          "sha256": "45c5bb3bec7b63f2755ec24de896d975e178f84ac88e5378fa4ff9158bf83ea5",
+          "functions": 1217,
+          "strings": 1850,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 310340,
+              "sha256": "48663bc4767f9c6738f2851b00e84b3442317572af93444ca8c3efdebf965f6b"
+            },
+            "calls.jsonl": {
+              "bytes": 451765,
+              "sha256": "b799c119ab942a4c98b377ed856a6ff28df3929e27e655c3b5d66706837e0d74"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 264819,
+              "sha256": "fb4be416c37d0a601f2a6b596a0396b4a3099b75109077693aab8e831cc7560b"
+            }
+          },
+          "summary": ".work/run003/transfer-detail/outputs/ghidra/libdi-network-dlna-extlib.so-45c5bb3bec7b/summary.json",
+          "summary_sha256": "75007b5b740465d9586702eab07a17061a9c984037b453eeed6b85be068129bf",
+          "selected_functions": []
+        },
+        {
+          "program": "libdi-network-dlna-stack.so",
+          "sha256": "4c2926b910b6df381061f0b6dd2856ea8059f60f2cf667ac9af9524eb87b3b17",
+          "functions": 5561,
+          "strings": 7094,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 1474858,
+              "sha256": "da16c481a2f98d2a5f9b443391ac84e8e32c3f0fee11d199b766f7d6c3b1c8bc"
+            },
+            "calls.jsonl": {
+              "bytes": 2862536,
+              "sha256": "63212a7a855d94d0da4da7b66ec4a23020b268976d1f7d9671b253a8c04960db"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 1187582,
+              "sha256": "ae9e0d08cd8fa4c04b1a0fc649eb646017528294088a4971e0cdf60c86e093f7"
+            }
+          },
+          "summary": ".work/run003/transfer-detail/outputs/ghidra/libdi-network-dlna-stack.so-4c2926b910b6/summary.json",
+          "summary_sha256": "08b7e8df22624ccd0fcd8ae4cc3481f7e7580439a702e7593108e1e0a15dd91e",
+          "selected_functions": []
+        },
+        {
+          "program": "smart-wifi-app",
+          "sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+          "functions": 3522,
+          "strings": 8159,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 899382,
+              "sha256": "c8b279c4f3d0c247efdb9b07b3f017dd69b172dc66b6de486b62339b48fa12ea"
+            },
+            "calls.jsonl": {
+              "bytes": 1877012,
+              "sha256": "46b52fe7e84b8e9021df46a38b32b060dce9597412e20301500ff9b3ace772bd"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 1274490,
+              "sha256": "5a17f2f47264958a10753a3a346d5db09d3ad91850488650b82860b1b3e25c57"
+            }
+          },
+          "summary": ".work/run003/transfer-detail/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
+          "summary_sha256": "981cbaf6680f83487b91d9189df70477b00c6a070edaa399b6d6ce0d86a68e28",
+          "selected_functions": []
+        }
+      ]
+    },
+    {
+      "stage": "transfer-worker",
+      "receipt": ".work/run003/transfer-worker/logs/NX500_FULL_RUN002-135baeee-b6c9-4262-ad94-af70fb4be61e.json",
+      "receipt_sha256": "2c9a76c472db8ce0faa723cd05c5e067efe9e8834302fe29f1884b228e2e0e04",
+      "run_id": "135baeee-b6c9-4262-ad94-af70fb4be61e",
+      "auto_analysis": false,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_FULL_RUN002",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run003/transfer-worker/outputs/ghidra",
+        "^SPHTTPClientHandler::(entry|sendData|sendRequests|readResponse)$|^SPClientManager::(notifyServiceStatus|setImageTransferSize)$|^SNPushClientNotificationCallback$",
+        "12",
+        "135baeee-b6c9-4262-ad94-af70fb4be61e",
+        "30",
+        "-log",
+        "/workspace/NX-Reborn/.work/run003/transfer-worker/logs/NX500_FULL_RUN002.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run003/transfer-worker/logs/NX500_FULL_RUN002-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "768M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 30,
+      "programs": [
+        {
+          "program": "allshare-dms",
+          "sha256": "da2567f9849bb9936a9b66b4a61e280741422d351b153845b9a76e9671377be6",
+          "functions": 282,
+          "strings": 410,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 63035,
+              "sha256": "98b12431294886eda696b838f7752f591f36be232f94365144a87a1b82edbcf2"
+            },
+            "calls.jsonl": {
+              "bytes": 77354,
+              "sha256": "77a39657f20f53dbb1091270e2f4dcce1ec32688a7067ddd1f028ca190d493ca"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 65813,
+              "sha256": "ce29d16e461153fae18d2df78deff49aa058369bb1475df3ccb469966c51e7bd"
+            }
+          },
+          "summary": ".work/run003/transfer-worker/outputs/ghidra/allshare-dms-da2567f9849b/summary.json",
+          "summary_sha256": "50214ec8f1c62bdd1e158ab05cae76d544ea25336f6745a9f8073a2e6d3e0c04",
+          "selected_functions": []
+        },
+        {
+          "program": "allshare-svc",
+          "sha256": "dc4240cbee49821fb5c945bc7ab727abd208042254773a62d59e50df449cfcd3",
+          "functions": 803,
+          "strings": 982,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 213983,
+              "sha256": "423aa5af046fef86c540ec4bfefdc9712fe4c00487329512f61832e6bc9deb78"
+            },
+            "calls.jsonl": {
+              "bytes": 336536,
+              "sha256": "2c589c540869a0274ef1fde947e044fdd2cf09bf86ece51e682e041365227587"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 157242,
+              "sha256": "65d31b698a74cfe24dafb27569056a4927321260deb9d25930544f8741eafca7"
+            }
+          },
+          "summary": ".work/run003/transfer-worker/outputs/ghidra/allshare-svc-dc4240cbee49/summary.json",
+          "summary_sha256": "cf000a49d34b964637506bf0973a7478e1f79e428926e70d888e625840ab8f31",
+          "selected_functions": []
+        },
+        {
+          "program": "libdevice-node.so.0.1",
+          "sha256": "843ecf26516114370e16cd2ebc742f515cdd8b590812947b1063daa61565389e",
+          "functions": 309,
+          "strings": 102,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 62327,
+              "sha256": "e931edceb1e9404d73b9e4b688130532bc2b09f52d25cba6396de9d36cb73db0"
+            },
+            "calls.jsonl": {
+              "bytes": 6116,
+              "sha256": "e19a1da3dc6af707d4fa76e1a461b600c034aea64ae2f281ed5e6c7cf900a6bf"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 13367,
+              "sha256": "29406d5a5b65aeb85193b81f40d5fd6346835eac8039ed1743c9f8f20979480f"
+            }
+          },
+          "summary": ".work/run003/transfer-worker/outputs/ghidra/libdevice-node.so.0.1-843ecf265161/summary.json",
+          "summary_sha256": "d763e7a2c626603253ec66c5df37655503abd17974df6bcc5f7b7973da6a3d97",
+          "selected_functions": []
+        },
+        {
+          "program": "libdeviced.so.0.1.0",
+          "sha256": "df70b308f88d6c0eb038e2e67b69b4825ef12dec60230b6fd1c3dab942989f5d",
+          "functions": 161,
+          "strings": 218,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 36127,
+              "sha256": "8d2b0738e7d155d335178eaa94befe0763fbdcfdb02432435113a22a565308ce"
+            },
+            "calls.jsonl": {
+              "bytes": 54034,
+              "sha256": "b95a8fb14fb17ac04b9716b204e7988ee54d94b55228bb779b7a9cb61cce32f6"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 31835,
+              "sha256": "bafd46fe269198957baaae66eb5813d1823e06d69d95a16e308fbf75a0b21c71"
+            }
+          },
+          "summary": ".work/run003/transfer-worker/outputs/ghidra/libdeviced.so.0.1.0-df70b308f88d/summary.json",
+          "summary_sha256": "65626d644d33feb92138570483aa84ecae8c8d886736ec6882af73a081f748bb",
+          "selected_functions": []
+        },
+        {
+          "program": "libdi-network-dlna-api.so",
+          "sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+          "functions": 1426,
+          "strings": 2230,
+          "decompile_attempted": 7,
+          "decompile_completed": 7,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 359122,
+              "sha256": "fb82a83c90b8dfbee996cd57daabf3df9f6e6bf978186d41168a310fac34bf2e"
+            },
+            "calls.jsonl": {
+              "bytes": 548537,
+              "sha256": "d1332bca6b2cebec704e1a316ec52370bdacf10fa43536c60a747ecc377b6b74"
+            },
+            "decompiled.jsonl": {
+              "bytes": 195323,
+              "sha256": "5414c2090943d09b7de5481b0c70f95bb522e5ced414b3ef75c76fbb6120404b"
+            },
+            "strings.jsonl": {
+              "bytes": 408219,
+              "sha256": "cb5c0b6a97a94097960f702b30bfbd507097dc53b6bf80d6fe2fccc3505d4190"
+            }
+          },
+          "summary": ".work/run003/transfer-worker/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
+          "summary_sha256": "80724063cc8ce4156d206a23315ade5394e845a9d940505da5d2d2532c5f85ed",
+          "selected_functions": [
+            {
+              "name": "SPClientManager::notifyServiceStatus",
+              "original_elf_va": "0x40c14",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPClientManager::setImageTransferSize",
+              "original_elf_va": "0x41200",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPHTTPClientHandler::readResponse",
+              "original_elf_va": "0x4873c",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPHTTPClientHandler::sendData",
+              "original_elf_va": "0x48bf0",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPHTTPClientHandler::sendRequests",
+              "original_elf_va": "0x49340",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SPHTTPClientHandler::entry",
+              "original_elf_va": "0x4b848",
+              "completed": true,
+              "error": ""
+            },
+            {
+              "name": "SNPushClientNotificationCallback",
+              "original_elf_va": "0x55804",
+              "completed": true,
+              "error": ""
+            }
+          ]
+        },
+        {
+          "program": "libdi-network-dlna-extlib.so",
+          "sha256": "45c5bb3bec7b63f2755ec24de896d975e178f84ac88e5378fa4ff9158bf83ea5",
+          "functions": 1217,
+          "strings": 1850,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 310340,
+              "sha256": "48663bc4767f9c6738f2851b00e84b3442317572af93444ca8c3efdebf965f6b"
+            },
+            "calls.jsonl": {
+              "bytes": 451765,
+              "sha256": "5ed141b709789c060bc912ba766aeece0cb788df2bb1d5df7709885874a64194"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 264819,
+              "sha256": "fb4be416c37d0a601f2a6b596a0396b4a3099b75109077693aab8e831cc7560b"
+            }
+          },
+          "summary": ".work/run003/transfer-worker/outputs/ghidra/libdi-network-dlna-extlib.so-45c5bb3bec7b/summary.json",
+          "summary_sha256": "9793917f8f32cc7b8cbeed41b5d225e961285356e5a8d6890fc7fd97034bf830",
+          "selected_functions": []
+        },
+        {
+          "program": "libdi-network-dlna-stack.so",
+          "sha256": "4c2926b910b6df381061f0b6dd2856ea8059f60f2cf667ac9af9524eb87b3b17",
+          "functions": 5561,
+          "strings": 7094,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 1474858,
+              "sha256": "da16c481a2f98d2a5f9b443391ac84e8e32c3f0fee11d199b766f7d6c3b1c8bc"
+            },
+            "calls.jsonl": {
+              "bytes": 2862536,
+              "sha256": "70c3cdf4e24e65fef27d4700619dfb52ab54a6181b2e49aadc783cced602e58e"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 1187582,
+              "sha256": "ae9e0d08cd8fa4c04b1a0fc649eb646017528294088a4971e0cdf60c86e093f7"
+            }
+          },
+          "summary": ".work/run003/transfer-worker/outputs/ghidra/libdi-network-dlna-stack.so-4c2926b910b6/summary.json",
+          "summary_sha256": "c6d22f3bb5d9fc7fd36fcdf4d28ae15f39dc5df4cd00211605554af670d44ac8",
+          "selected_functions": []
+        },
+        {
+          "program": "smart-wifi-app",
+          "sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+          "functions": 3522,
+          "strings": 8159,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_omitted_by_budget": 0,
+          "auto_analysis_timed_out": false,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 899382,
+              "sha256": "c8b279c4f3d0c247efdb9b07b3f017dd69b172dc66b6de486b62339b48fa12ea"
+            },
+            "calls.jsonl": {
+              "bytes": 1877012,
+              "sha256": "1f9146e703947324ef818d475908e3d15bce4f1ae549737be4573103609076da"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 1274490,
+              "sha256": "5a17f2f47264958a10753a3a346d5db09d3ad91850488650b82860b1b3e25c57"
+            }
+          },
+          "summary": ".work/run003/transfer-worker/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
+          "summary_sha256": "afbec3a102399169e9cdc715e5928784d3cea7a021f98e991866fa0b50c9d98a",
+          "selected_functions": []
+        }
+      ]
+    }
+  ],
+  "evidence": "analysis/evidence/transfer-completion-run003.json",
+  "evidence_sha256": "24d15ccd238c212018580dfafe3440c3c04a1bb20bd8ea162d53e799c8242ec6",
+  "full_symbol_capstone_failures": [
+    {
+      "method": "tools/firmware/elf_function.py; Capstone 5.0.6 full symbol linear ARM disassembly",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "symbol": "_Z33SNPushControlNotificationCallback21eSPNotifyControlEventP15stSPInformation",
+      "elf_va": "0x56298",
+      "symbol_size": 3616,
+      "returncode": 1,
+      "error": "ValueError: Disassembly did not cover the complete symbol",
+      "interpretation": "No full-symbol independent verification claimed; use bounded executable instruction windows mapped through PT_LOAD instead."
+    }
+  ],
+  "limitations": [
+    "No target execution or camera observations.",
+    "Decompiled signatures/types inferred.",
+    "Indirect virtual calls and runtime symbol binding incomplete.",
+    "30 selected functions are not semantic coverage or a feature completion percentage."
+  ],
+  "reviewed_findings": [
+    {
+      "id": "transfer-app-queued-start-stop",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "firmware_path": "/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app",
+      "original_elf_va": "0x64044",
+      "file_offset": "0x5c044",
+      "claim": "APP NPush start/stop wrappers pass commands 0x762/0x763 with NetworkAPI fourth argument zero. Immediate return belongs to the previously inspected queue route.",
+      "callsites_original_elf_va": [
+        "0x64058",
+        "0x6407c"
+      ],
+      "evidence": "analysis/evidence/transfer-completion-run003.json",
+      "method": "Inspected Ghidra selected C and instructions plus independent Capstone original-ELF instruction windows; ELF PT_LOAD offset conversion.",
+      "limitations": [
+        "Queue implementation is inherited inspected run002 evidence; wrappers newly inspected.",
+        "No worker-exit acknowledgement in these wrappers."
+      ],
+      "unresolved_questions": [
+        "Which APP event consumer completes the stop flow?"
+      ]
+    },
+    {
+      "id": "transfer-start-creates-worker",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "firmware_path": "/usr/lib/libdi-network-dlna-api.so",
+      "original_elf_va": "0x583ac",
+      "file_offset": "0x583ac",
+      "claim": "SPTransferFile and SNPushTransferFile invoke manager createFileTransfer after server-info checks; start return does not inspect transfer completion.",
+      "callsites_original_elf_va": [
+        "0x58534",
+        "0x594f4"
+      ],
+      "evidence": "analysis/evidence/transfer-completion-run003.json",
+      "method": "Inspected Ghidra selected C and instructions plus independent Capstone original-ELF instruction windows; ELF PT_LOAD offset conversion.",
+      "limitations": [
+        "External/PLT runtime binding not independently proven.",
+        "Inferred object ABI."
+      ],
+      "unresolved_questions": [
+        "Actual runtime server info and success/failure of worker start."
+      ]
+    },
+    {
+      "id": "transfer-file-or-resize-memory",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "firmware_path": "/usr/lib/libdi-network-dlna-api.so",
+      "original_elf_va": "0x41d08",
+      "file_offset": "0x41d08",
+      "claim": "Manager mode +0x14==1, jpg/path/cache checks and successful resize may install memory buffer/length; worker has separate file-stream and memory send branches.",
+      "callsites_original_elf_va": [
+        "0x41fcc",
+        "0x42534",
+        "0x4224c",
+        "0x4d41c",
+        "0x4d4ac",
+        "0x4dc7c",
+        "0x4dd10"
+      ],
+      "evidence": "analysis/evidence/transfer-completion-run003.json",
+      "method": "Inspected Ghidra selected C and instructions plus independent Capstone original-ELF instruction windows; ELF PT_LOAD offset conversion.",
+      "limitations": [
+        "JPEG transform implementation not inspected.",
+        "File stream operations remain indirect.",
+        "Runtime mode and bytes unobserved."
+      ],
+      "unresolved_questions": [
+        "Who selects mode and original path?",
+        "Who owns/releases resize buffer?",
+        "Exact JPEG output parameters and byte fidelity."
+      ]
+    },
+    {
+      "id": "transfer-stop-join-delete",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "firmware_path": "/usr/lib/libdi-network-dlna-api.so",
+      "original_elf_va": "0x416cc",
+      "file_offset": "0x416cc",
+      "claim": "Matching worker receives +0x0a flag, join helper then deleteFileTransfer; join calls pthread_join unless self, without checking status.",
+      "callsites_original_elf_va": [
+        "0x4189c",
+        "0x418a0",
+        "0x418b0",
+        "0x47e80",
+        "0x47e98"
+      ],
+      "evidence": "analysis/evidence/transfer-completion-run003.json",
+      "method": "Inspected Ghidra selected C and instructions plus independent Capstone original-ELF instruction windows; ELF PT_LOAD offset conversion.",
+      "limitations": [
+        "No checked join acknowledgement or bounded latency.",
+        "Indirect destructor targets unverified.",
+        "No camera-wide resource quiescence conclusion."
+      ],
+      "unresolved_questions": [
+        "Callback-to-APP acknowledgement wiring.",
+        "Other shared resources and resize-memory release."
+      ]
+    },
+    {
+      "id": "transfer-worker-local-completion",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "firmware_path": "/usr/lib/libdi-network-dlna-api.so",
+      "original_elf_va": "0x4b848",
+      "file_offset": "0x4b848",
+      "claim": "Worker post-payload response path checks parsed string 200; common cleanup precedes notifier event3/value100. SNPush client callback maps event3 to UI 0x49/value100.",
+      "callsites_original_elf_va": [
+        "0x4d63c",
+        "0x4e310",
+        "0x4e3e0",
+        "0x4bce8",
+        "0x4bd04",
+        "0x4bd20",
+        "0x4c184",
+        "0x55af0"
+      ],
+      "evidence": "analysis/evidence/transfer-completion-run003.json",
+      "method": "Inspected Ghidra selected C and instructions plus independent Capstone original-ELF instruction windows; ELF PT_LOAD offset conversion.",
+      "limitations": [
+        "Indirect runtime callback binding not fully resolved.",
+        "HTTP-level local success does not prove remote durable storage.",
+        "Notifier occurs before worker returns, not join completion."
+      ],
+      "unresolved_questions": [
+        "Exact notifier vtable binding and APP event destination.",
+        "Receiver durability or checksum acknowledgement."
+      ]
+    },
+    {
+      "id": "transfer-app-completion-state-predicate",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "firmware_path": "/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app",
+      "original_elf_va": "0x7ddc0",
+      "file_offset": "0x75dc0",
+      "claim": "nPushCheckSendComplete accepts numeric states3..6 for all client records and returns true with zero clients; name alone does not prove transfer success.",
+      "callsites_original_elf_va": [],
+      "evidence": "analysis/evidence/transfer-completion-run003.json",
+      "method": "Inspected Ghidra selected C and instructions plus independent Capstone original-ELF instruction windows; ELF PT_LOAD offset conversion.",
+      "limitations": [
+        "State enum meanings and writers unresolved.",
+        "No device observations."
+      ],
+      "unresolved_questions": [
+        "Map state writers and distinguish success/cancel/error terminal states."
+      ]
+    }
+  ],
+  "report": "analysis/architecture/TRANSFER_COMPLETION_RUN003.md",
+  "report_sha256": "ab159b3cf8ecf8d1bd8a56b500a932cbb756e932d0e26451b5c4f2988667bcdd",
+  "database_unlocked_after_runs": true
+}

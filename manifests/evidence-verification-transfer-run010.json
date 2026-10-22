@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "static_only": true,
+  "verifier_sha256": "1419ef41af0682f1d257cd8afa77a6646b0ee62886da9df23a7ef1b59420792e",
+  "checked_evidence": [
+    {
+      "path": "analysis/evidence/transfer-state-run010.json",
+      "sha256": "ae4c0286e28001f255ec659ed6376c4ec5f7817bf298cb939d28214a6885281e",
+      "code_windows": 48,
+      "data_blocks": 11,
+      "strings": 10
+    }
+  ],
+  "independent_semantic_review_completed": false,
+  "limitations": [
+    "Primary-agent original-byte and artifact consistency checks, not independent semantic review.",
+    "No camera observations, active-boot proof, sensor calibration or runtime policy validation."
+  ]
+}

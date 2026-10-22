@@ -1,0 +1,30 @@
+{
+  "available_files": 29,
+  "available_elfs": 13,
+  "selected_manifest_matches": true,
+  "filesystem_listings": {
+    "rootfs": {
+      "entries": 16020,
+      "types": {
+        "0x4000": 1323,
+        "0xa000": 921,
+        "0x8000": 13764,
+        "0x2000": 12
+      },
+      "source_sha256": "8fc8d281b63f1c28f9e956fec8e2968450ea439246b7a692921fc4531edb611a",
+      "verification": "inherited_not_reextracted"
+    },
+    "opt": {
+      "entries": 1374,
+      "types": {
+        "0x4000": 235,
+        "0xa000": 143,
+        "0x8000": 996
+      },
+      "source_sha256": "48662e826c378ee888bb641916478ec6e5e41279c577871d4115925779dff1ee",
+      "verification": "inherited_not_reextracted"
+    }
+  },
+  "original_zip_revalidated": false,
+  "whole_firmware_semantically_analyzed": false
+}

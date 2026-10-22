@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "run": "RUN011",
+  "reviewed_findings": [
+    {
+      "id": "PREF011-DISPATCH",
+      "source_sha256": "b9c730df7890fb8c4cbb968e1990b510d7e861365992dd1c821ddd57a9dfca16",
+      "original_path": "/usr/bin/prefman",
+      "original_elf_va": "0x8ef8",
+      "evidence": "analysis/evidence/packaged-preferences-run011.json",
+      "evidence_sha256": "caf51350001f6654f8f6ab7a15c0bdb9992f7555ec1516dff6c42adf103580b1",
+      "method": "Original ARM/Thumb PT_LOAD windows, odd entry/table pointers and selected init C; source script text comparison",
+      "claim": "Odd libc_start_main argument8ef9 and command table14214 bind manually decoded Thumb main/load; main forwards argc-1 and argv+1 to its command pointer.",
+      "limitations": [
+        "Manual regions are not selected Ghidra-C completions; runtime CLI invocation is unobserved."
+      ],
+      "unresolved_questions": [
+        "Manual regions are not selected Ghidra-C completions; runtime CLI invocation is unobserved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/PACKAGED_PREFERENCES_REVIEW_RUN012.md"
+    },
+    {
+      "id": "PREF011-NO-ID-LOAD",
+      "source_sha256": "b9c730df7890fb8c4cbb968e1990b510d7e861365992dd1c821ddd57a9dfca16",
+      "original_path": "/usr/bin/prefman",
+      "original_elf_va": "0x9b8c",
+      "evidence": "analysis/evidence/packaged-preferences-run011.json",
+      "evidence_sha256": "caf51350001f6654f8f6ab7a15c0bdb9992f7555ec1516dff6c42adf103580b1",
+      "method": "Original ARM/Thumb PT_LOAD windows, odd entry/table pointers and selected init C; source script text comparison",
+      "claim": "CLI load handler branches to usage when adjusted argc<=2; script --start invokes init then load without extra arguments, so that inspected source path does not reload all IDs.",
+      "limitations": [
+        "Bootloader preload is a separate source; no absence of live preferences or observed startup failure is claimed."
+      ],
+      "unresolved_questions": [
+        "Bootloader preload is a separate source; no absence of live preferences or observed startup failure is claimed."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/PACKAGED_PREFERENCES_REVIEW_RUN012.md"
+    },
+    {
+      "id": "PREF011-INIT",
+      "source_sha256": "b9c730df7890fb8c4cbb968e1990b510d7e861365992dd1c821ddd57a9dfca16",
+      "original_path": "/usr/bin/prefman",
+      "original_elf_va": "0xa88c",
+      "evidence": "analysis/evidence/packaged-preferences-run011.json",
+      "evidence_sha256": "caf51350001f6654f8f6ab7a15c0bdb9992f7555ec1516dff6c42adf103580b1",
+      "method": "Original ARM/Thumb PT_LOAD windows, odd entry/table pointers and selected init C; source script text comparison",
+      "claim": "The init command iterates preference IDs0\u201310 through pref_init and calls pref_deinit on negative-result branches.",
+      "limitations": [
+        "Mapping/init calls do not themselves establish a live NVD reload or active temperature words."
+      ],
+      "unresolved_questions": [
+        "Mapping/init calls do not themselves establish a live NVD reload or active temperature words."
+      ],
+      "independent_review_completed": false,
+      "independent_review_report": "analysis/architecture/PACKAGED_PREFERENCES_REVIEW_RUN012.md"
+    }
+  ]
+}

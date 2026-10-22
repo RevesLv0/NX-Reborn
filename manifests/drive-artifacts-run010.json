@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "run": "RUN010",
+  "analysis_commit": "bdbf564b5721577c92cad442ac9e340d236d39df",
+  "archives": [
+    {
+      "file_id": "1z6Sw0BQm_mrD34mWtlplKEOsVlOF7Vc9",
+      "parent_id": "10xY2YyYAyarseUKK24i-rwA0ZMiTrm6G",
+      "name": "NX500_RUN010_RESEARCH_AND_EXPORTS_20261022.zip",
+      "bytes": 10624564,
+      "sha256": "d51ebb171b3d3489b4f478ca9a71e2f98df7c4d7a562a270ce5a06a4bd208fa5",
+      "authenticated_full_download_sha256_matched": true,
+      "zip_crc_passed": true,
+      "parent_readback_matched": true
+    },
+    {
+      "file_id": "1DPw6DF8NrSaV55oAsfVxGCZgKE5WM_j1",
+      "parent_id": "1qWBUqiXxBFfDLA6AQ6UGjYaNCfcZJuV3",
+      "name": "NX500_RUN010_AF_PROJECT_20261022.zip",
+      "bytes": 29513359,
+      "sha256": "2d3e6d0994e43d3c4758c92ef1b29be2341651616f4b9a5c70dc08a7d174856d",
+      "authenticated_full_download_sha256_matched": true,
+      "zip_crc_passed": true,
+      "parent_readback_matched": true
+    }
+  ],
+  "guide": {
+    "file_id": "1qI0RcMltztLmap0ri763kQH_9lkKjC11",
+    "parent_id": "198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+    "path": "docs/DRIVE_RUN010_20261022.md",
+    "sha256": "87edcec8e0b7a0cb8cb8a8529ef4125578782c366ab17be1a39288284f1c1e9b",
+    "full_text_readback_matched": true,
+    "parent_readback_matched": true
+  },
+  "ci": {
+    "run_id": 39701841097,
+    "conclusion": "success"
+  },
+  "snapshot_note": "AF database snapshot saved unlocked after RUN012 process/noanalysis exports; source imports/analysis are RUN010."
+}

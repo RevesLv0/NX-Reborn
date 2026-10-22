@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "partition": "rootfs",
+      "original_path": "/usr/lib/libsif.so",
+      "archive_path": "rootfs/usr/lib/libsif.so",
+      "bytes": 657620,
+      "sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+      "drive_id": "1TN5gO3Seom6z9yH3DpyuVP_ejIVbGuOe",
+      "expected_hash_source": "C final handoff; remeasured locally"
+    }
+  ]
+}

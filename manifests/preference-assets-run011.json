@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "run": "RUN011",
+  "reviewed_asset_findings": [
+    {
+      "id": "PREF011-PACKAGED-DEFAULTS",
+      "evidence": "analysis/evidence/packaged-preferences-run011.json",
+      "evidence_sha256": "caf51350001f6654f8f6ab7a15c0bdb9992f7555ec1516dff6c42adf103580b1",
+      "sources": [
+        {
+          "partition": "rootfs",
+          "original_path": "/usr/bin/prefman.sh",
+          "local_path": ".work/full/extracted/rootfs/usr/bin/prefman.sh",
+          "bytes": 2454,
+          "sha256": "c07c36e92eedbe3e87e34b171554dd6a59e1d789445047a57e60367ccd84d115"
+        },
+        {
+          "partition": "opt",
+          "original_path": "/pref/default/pref.bin",
+          "local_path": ".work/full/extracted/opt/pref/default/pref.bin",
+          "bytes": 7971840,
+          "sha256": "f96c3ecd54db98458bf337cd12a780d0fe59142ea3974b3fbe34820170122f9d"
+        },
+        {
+          "partition": "opt",
+          "original_path": "/pref/default/pref_app.bin",
+          "local_path": ".work/full/extracted/opt/pref/default/pref_app.bin",
+          "bytes": 67340,
+          "sha256": "c5144c75e5ad18d2c8f99f5be537292a06ce80812af9b5b100b81bd29e97705f"
+        },
+        {
+          "partition": "opt",
+          "original_path": "/pref/default/pref_app_restore.bin",
+          "local_path": ".work/full/extracted/opt/pref/default/pref_app_restore.bin",
+          "bytes": 43876,
+          "sha256": "9477c2f5ba43486131e5511207a440d5ea3b2f86c59b2703967d7665b5a9717e"
+        },
+        {
+          "partition": "opt",
+          "original_path": "/pref/default/pref_line.bin",
+          "local_path": ".work/full/extracted/opt/pref/default/pref_line.bin",
+          "bytes": 2560,
+          "sha256": "5426d6d92349b6974a62711d3412ca8051188d49e8279e30e127bfdd785c9ef1"
+        },
+        {
+          "partition": "opt",
+          "original_path": "/pref/default/pref_sysrw.bin",
+          "local_path": ".work/full/extracted/opt/pref/default/pref_sysrw.bin",
+          "bytes": 1616,
+          "sha256": "df51884d1e2b0a9c8f13b49d6f75dcf122fccb5a5347a5b94cb080288dd62171"
+        },
+        {
+          "partition": "opt",
+          "original_path": "/pref/default/pref_adj_sys.bin",
+          "local_path": ".work/full/extracted/opt/pref/default/pref_adj_sys.bin",
+          "bytes": 3584,
+          "sha256": "f520d39298ff0e455ff383e0209d5da3d3b3e319467d25d983a651db0e61136e"
+        },
+        {
+          "partition": "opt",
+          "original_path": "/pref/default/pref_adj_cap.bin",
+          "local_path": ".work/full/extracted/opt/pref/default/pref_adj_cap.bin",
+          "bytes": 3584,
+          "sha256": "f520d39298ff0e455ff383e0209d5da3d3b3e319467d25d983a651db0e61136e"
+        },
+        {
+          "partition": "opt",
+          "original_path": "/pref/default/pref_adj_iq.bin",
+          "local_path": ".work/full/extracted/opt/pref/default/pref_adj_iq.bin",
+          "bytes": 3584,
+          "sha256": "f9c8db6605b98e4dc9e3f2828d05df12fffce1cd8a60b44819bc1261125fdf8a"
+        },
+        {
+          "partition": "opt",
+          "original_path": "/pref/default/pref_adj_vfpn.bin",
+          "local_path": ".work/full/extracted/opt/pref/default/pref_adj_vfpn.bin",
+          "bytes": 24064,
+          "sha256": "9fd839d05b28d68d2b0512bba46400194816290df4e2ee98cd6dfbb335ce9000"
+        },
+        {
+          "partition": "opt",
+          "original_path": "/pref/default/pref_adj_cs.bin",
+          "local_path": ".work/full/extracted/opt/pref/default/pref_adj_cs.bin",
+          "bytes": 64000,
+          "sha256": "81bc4f0659b36dcc1946c89c6418d0854448d61ca2a9ec181f3fbdceb8a9a207"
+        },
+        {
+          "partition": "opt",
+          "original_path": "/pref/default/pref_adj_dpc.bin",
+          "local_path": ".work/full/extracted/opt/pref/default/pref_adj_dpc.bin",
+          "bytes": 5246976,
+          "sha256": "7b79120458b3f2be66692e8e055b3d63d3d5f9f85f39925a6737f261acee0fc6"
+        },
+        {
+          "partition": "opt",
+          "original_path": "/pref/default/pref_adj_dpc2.bin",
+          "local_path": ".work/full/extracted/opt/pref/default/pref_adj_dpc2.bin",
+          "bytes": 1049600,
+          "sha256": "a579b0bd4c627cfe92e022d267f6ba0edc8aa37afe95f179de93a5ca5a3a86fb"
+        }
+      ],
+      "method": "Original source SHA verification; script-text seek parsing, whole-slice SHA comparison, magic/size and zlib CRC32 checks",
+      "claim": "Eleven packaged default files match default bundle slices; sys180000 contains factory-corresponding temperaturewords4/106/110/102/105/106/110.",
+      "limitations": [
+        "Non-ELF asset finding; excluded from ELF/function denominators.",
+        "Live NVD selection and script invocation/input-copy are unobserved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/PACKAGED_PREFERENCES_REVIEW_RUN012.md"
+    }
+  ]
+}

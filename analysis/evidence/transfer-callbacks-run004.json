@@ -1,0 +1,4592 @@
+{
+  "schema_version": 1,
+  "static_only": true,
+  "address_convention": "Original ELF link-time VAs; offsets independently mapped through PT_LOAD. Ghidra API instructions/C use VA +0x10000; APP same VA.",
+  "sources": [
+    {
+      "firmware_path": "/usr/lib/libdi-network-dlna-api.so",
+      "staged_path": ".work/run002/inputs/libdi-network-dlna-api.so",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "windows": [
+        {
+          "original_elf_va": "0x411f8",
+          "file_offset": "0x411f8",
+          "bytes": 8,
+          "instructions": [
+            {
+              "va": "0x411f8",
+              "bytes": "101080e5",
+              "mnemonic": "str",
+              "operands": "r1, [r0, #0x10]"
+            },
+            {
+              "va": "0x411fc",
+              "bytes": "1eff2fe1",
+              "mnemonic": "bx",
+              "operands": "lr"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x41328",
+          "file_offset": "0x41328",
+          "bytes": 60,
+          "instructions": [
+            {
+              "va": "0x41328",
+              "bytes": "48209fe5",
+              "mnemonic": "ldr",
+              "operands": "r2, [pc, #0x48]"
+            },
+            {
+              "va": "0x4132c",
+              "bytes": "0030a0e3",
+              "mnemonic": "mov",
+              "operands": "r3, #0"
+            },
+            {
+              "va": "0x41330",
+              "bytes": "44109fe5",
+              "mnemonic": "ldr",
+              "operands": "r1, [pc, #0x44]"
+            },
+            {
+              "va": "0x41334",
+              "bytes": "02208fe0",
+              "mnemonic": "add",
+              "operands": "r2, pc, r2"
+            },
+            {
+              "va": "0x41338",
+              "bytes": "10402de9",
+              "mnemonic": "push",
+              "operands": "{r4, lr}"
+            },
+            {
+              "va": "0x4133c",
+              "bytes": "0040a0e1",
+              "mnemonic": "mov",
+              "operands": "r4, r0"
+            },
+            {
+              "va": "0x41340",
+              "bytes": "012092e7",
+              "mnemonic": "ldr",
+              "operands": "r2, [r2, r1]"
+            },
+            {
+              "va": "0x41344",
+              "bytes": "043080e5",
+              "mnemonic": "str",
+              "operands": "r3, [r0, #4]"
+            },
+            {
+              "va": "0x41348",
+              "bytes": "082082e2",
+              "mnemonic": "add",
+              "operands": "r2, r2, #8"
+            },
+            {
+              "va": "0x4134c",
+              "bytes": "083080e5",
+              "mnemonic": "str",
+              "operands": "r3, [r0, #8]"
+            },
+            {
+              "va": "0x41350",
+              "bytes": "002080e5",
+              "mnemonic": "str",
+              "operands": "r2, [r0]"
+            },
+            {
+              "va": "0x41354",
+              "bytes": "0c3080e5",
+              "mnemonic": "str",
+              "operands": "r3, [r0, #0xc]"
+            },
+            {
+              "va": "0x41358",
+              "bytes": "483bffeb",
+              "mnemonic": "bl",
+              "operands": "#0x10080"
+            },
+            {
+              "va": "0x4135c",
+              "bytes": "0400a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r4"
+            },
+            {
+              "va": "0x41360",
+              "bytes": "1080bde8",
+              "mnemonic": "pop",
+              "operands": "{r4, pc}"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x435e4",
+          "file_offset": "0x435e4",
+          "bytes": 60,
+          "instructions": [
+            {
+              "va": "0x435e4",
+              "bytes": "34c09fe5",
+              "mnemonic": "ldr",
+              "operands": "ip, [pc, #0x34]"
+            },
+            {
+              "va": "0x435e8",
+              "bytes": "0020a0e3",
+              "mnemonic": "mov",
+              "operands": "r2, #0"
+            },
+            {
+              "va": "0x435ec",
+              "bytes": "30002de9",
+              "mnemonic": "push",
+              "operands": "{r4, r5}"
+            },
+            {
+              "va": "0x435f0",
+              "bytes": "0cc08fe0",
+              "mnemonic": "add",
+              "operands": "ip, pc, ip"
+            },
+            {
+              "va": "0x435f4",
+              "bytes": "28509fe5",
+              "mnemonic": "ldr",
+              "operands": "r5, [pc, #0x28]"
+            },
+            {
+              "va": "0x435f8",
+              "bytes": "0030a0e3",
+              "mnemonic": "mov",
+              "operands": "r3, #0"
+            },
+            {
+              "va": "0x435fc",
+              "bytes": "0040a0e3",
+              "mnemonic": "mov",
+              "operands": "r4, #0"
+            },
+            {
+              "va": "0x43600",
+              "bytes": "05c09ce7",
+              "mnemonic": "ldr",
+              "operands": "ip, [ip, r5]"
+            },
+            {
+              "va": "0x43604",
+              "bytes": "184080e5",
+              "mnemonic": "str",
+              "operands": "r4, [r0, #0x18]"
+            },
+            {
+              "va": "0x43608",
+              "bytes": "08c08ce2",
+              "mnemonic": "add",
+              "operands": "ip, ip, #8"
+            },
+            {
+              "va": "0x4360c",
+              "bytes": "f820c0e1",
+              "mnemonic": "strd",
+              "operands": "r2, r3, [r0, #8]"
+            },
+            {
+              "va": "0x43610",
+              "bytes": "00c080e5",
+              "mnemonic": "str",
+              "operands": "ip, [r0]"
+            },
+            {
+              "va": "0x43614",
+              "bytes": "f021c0e1",
+              "mnemonic": "strd",
+              "operands": "r2, r3, [r0, #0x10]"
+            },
+            {
+              "va": "0x43618",
+              "bytes": "3000bde8",
+              "mnemonic": "pop",
+              "operands": "{r4, r5}"
+            },
+            {
+              "va": "0x4361c",
+              "bytes": "1eff2fe1",
+              "mnemonic": "bx",
+              "operands": "lr"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x41e30",
+          "file_offset": "0x41e30",
+          "bytes": 40,
+          "instructions": [
+            {
+              "va": "0x41e30",
+              "bytes": "a800a0e3",
+              "mnemonic": "mov",
+              "operands": "r0, #0xa8"
+            },
+            {
+              "va": "0x41e34",
+              "bytes": "7f32ffeb",
+              "mnemonic": "bl",
+              "operands": "#0xe838"
+            },
+            {
+              "va": "0x41e38",
+              "bytes": "60c29de5",
+              "mnemonic": "ldr",
+              "operands": "ip, [sp, #0x260]"
+            },
+            {
+              "va": "0x41e3c",
+              "bytes": "0720a0e1",
+              "mnemonic": "mov",
+              "operands": "r2, r7"
+            },
+            {
+              "va": "0x41e40",
+              "bytes": "0b30a0e1",
+              "mnemonic": "mov",
+              "operands": "r3, fp"
+            },
+            {
+              "va": "0x41e44",
+              "bytes": "0510a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r5"
+            },
+            {
+              "va": "0x41e48",
+              "bytes": "04608de5",
+              "mnemonic": "str",
+              "operands": "r6, [sp, #4]"
+            },
+            {
+              "va": "0x41e4c",
+              "bytes": "00c08de5",
+              "mnemonic": "str",
+              "operands": "ip, [sp]"
+            },
+            {
+              "va": "0x41e50",
+              "bytes": "0040a0e1",
+              "mnemonic": "mov",
+              "operands": "r4, r0"
+            },
+            {
+              "va": "0x41e54",
+              "bytes": "6634ffeb",
+              "mnemonic": "bl",
+              "operands": "#0xeff4"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x4edd8",
+          "file_offset": "0x4edd8",
+          "bytes": 52,
+          "instructions": [
+            {
+              "va": "0x4edd8",
+              "bytes": "f04f2de9",
+              "mnemonic": "push",
+              "operands": "{r4, r5, r6, r7, r8, sb, sl, fp, lr}"
+            },
+            {
+              "va": "0x4eddc",
+              "bytes": "99df4de2",
+              "mnemonic": "sub",
+              "operands": "sp, sp, #0x264"
+            },
+            {
+              "va": "0x4ede0",
+              "bytes": "1c689fe5",
+              "mnemonic": "ldr",
+              "operands": "r6, [pc, #0x81c]"
+            },
+            {
+              "va": "0x4ede4",
+              "bytes": "0040a0e1",
+              "mnemonic": "mov",
+              "operands": "r4, r0"
+            },
+            {
+              "va": "0x4ede8",
+              "bytes": "1c108de5",
+              "mnemonic": "str",
+              "operands": "r1, [sp, #0x1c]"
+            },
+            {
+              "va": "0x4edec",
+              "bytes": "0010a0e3",
+              "mnemonic": "mov",
+              "operands": "r1, #0"
+            },
+            {
+              "va": "0x4edf0",
+              "bytes": "0250a0e1",
+              "mnemonic": "mov",
+              "operands": "r5, r2"
+            },
+            {
+              "va": "0x4edf4",
+              "bytes": "0390a0e1",
+              "mnemonic": "mov",
+              "operands": "sb, r3"
+            },
+            {
+              "va": "0x4edf8",
+              "bytes": "8c829de5",
+              "mnemonic": "ldr",
+              "operands": "r8, [sp, #0x28c]"
+            },
+            {
+              "va": "0x4edfc",
+              "bytes": "06608fe0",
+              "mnemonic": "add",
+              "operands": "r6, pc, r6"
+            },
+            {
+              "va": "0x4ee00",
+              "bytes": "88a29de5",
+              "mnemonic": "ldr",
+              "operands": "sl, [sp, #0x288]"
+            },
+            {
+              "va": "0x4ee04",
+              "bytes": "d0fefeeb",
+              "mnemonic": "bl",
+              "operands": "#0xe94c"
+            },
+            {
+              "va": "0x4ee08",
+              "bytes": "f8379fe5",
+              "mnemonic": "ldr",
+              "operands": "r3, [pc, #0x7f8]"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x4ee94",
+          "file_offset": "0x4ee94",
+          "bytes": 24,
+          "instructions": [
+            {
+              "va": "0x4ee94",
+              "bytes": "18708de5",
+              "mnemonic": "str",
+              "operands": "r7, [sp, #0x18]"
+            },
+            {
+              "va": "0x4ee98",
+              "bytes": "0700a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r7"
+            },
+            {
+              "va": "0x4ee9c",
+              "bytes": "1c709de5",
+              "mnemonic": "ldr",
+              "operands": "r7, [sp, #0x1c]"
+            },
+            {
+              "va": "0x4eea0",
+              "bytes": "952f8de2",
+              "mnemonic": "add",
+              "operands": "r2, sp, #0x254"
+            },
+            {
+              "va": "0x4eea4",
+              "bytes": "039096e7",
+              "mnemonic": "ldr",
+              "operands": "sb, [r6, r3]"
+            },
+            {
+              "va": "0x4eea8",
+              "bytes": "787084e5",
+              "mnemonic": "str",
+              "operands": "r7, [r4, #0x78]"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x59068",
+          "file_offset": "0x59068",
+          "bytes": 40,
+          "instructions": [
+            {
+              "va": "0x59068",
+              "bytes": "e3d5feeb",
+              "mnemonic": "bl",
+              "operands": "#0xe7fc"
+            },
+            {
+              "va": "0x5906c",
+              "bytes": "68309fe5",
+              "mnemonic": "ldr",
+              "operands": "r3, [pc, #0x68]"
+            },
+            {
+              "va": "0x59070",
+              "bytes": "03308fe0",
+              "mnemonic": "add",
+              "operands": "r3, pc, r3"
+            },
+            {
+              "va": "0x59074",
+              "bytes": "041093e5",
+              "mnemonic": "ldr",
+              "operands": "r1, [r3, #4]"
+            },
+            {
+              "va": "0x59078",
+              "bytes": "70dbfeeb",
+              "mnemonic": "bl",
+              "operands": "#0xfe40"
+            },
+            {
+              "va": "0x5907c",
+              "bytes": "ded5feeb",
+              "mnemonic": "bl",
+              "operands": "#0xe7fc"
+            },
+            {
+              "va": "0x59080",
+              "bytes": "58309fe5",
+              "mnemonic": "ldr",
+              "operands": "r3, [pc, #0x58]"
+            },
+            {
+              "va": "0x59084",
+              "bytes": "031094e7",
+              "mnemonic": "ldr",
+              "operands": "r1, [r4, r3]"
+            },
+            {
+              "va": "0x59088",
+              "bytes": "bad8feeb",
+              "mnemonic": "bl",
+              "operands": "#0xf378"
+            },
+            {
+              "va": "0x5908c",
+              "bytes": "11de8de2",
+              "mnemonic": "add",
+              "operands": "sp, sp, #0x110"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x40d5c",
+          "file_offset": "0x40d5c",
+          "bytes": 32,
+          "instructions": [
+            {
+              "va": "0x40d5c",
+              "bytes": "103095e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r5, #0x10]"
+            },
+            {
+              "va": "0x40d60",
+              "bytes": "000053e3",
+              "mnemonic": "cmp",
+              "operands": "r3, #0"
+            },
+            {
+              "va": "0x40d64",
+              "bytes": "c1ffff0a",
+              "mnemonic": "beq",
+              "operands": "#0x40c70"
+            },
+            {
+              "va": "0x40d68",
+              "bytes": "0300a0e3",
+              "mnemonic": "mov",
+              "operands": "r0, #3"
+            },
+            {
+              "va": "0x40d6c",
+              "bytes": "111e8de2",
+              "mnemonic": "add",
+              "operands": "r1, sp, #0x110"
+            },
+            {
+              "va": "0x40d70",
+              "bytes": "33ff2fe1",
+              "mnemonic": "blx",
+              "operands": "r3"
+            },
+            {
+              "va": "0x40d74",
+              "bytes": "0100a0e3",
+              "mnemonic": "mov",
+              "operands": "r0, #1"
+            },
+            {
+              "va": "0x40d78",
+              "bytes": "bdffffea",
+              "mnemonic": "b",
+              "operands": "#0x40c74"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x213a8",
+          "file_offset": "0x213a8",
+          "bytes": 44,
+          "instructions": [
+            {
+              "va": "0x213a8",
+              "bytes": "f0452de9",
+              "mnemonic": "push",
+              "operands": "{r4, r5, r6, r7, r8, sl, lr}"
+            },
+            {
+              "va": "0x213ac",
+              "bytes": "45df4de2",
+              "mnemonic": "sub",
+              "operands": "sp, sp, #0x114"
+            },
+            {
+              "va": "0x213b0",
+              "bytes": "2c419fe5",
+              "mnemonic": "ldr",
+              "operands": "r4, [pc, #0x12c]"
+            },
+            {
+              "va": "0x213b4",
+              "bytes": "2c319fe5",
+              "mnemonic": "ldr",
+              "operands": "r3, [pc, #0x12c]"
+            },
+            {
+              "va": "0x213b8",
+              "bytes": "04408fe0",
+              "mnemonic": "add",
+              "operands": "r4, pc, r4"
+            },
+            {
+              "va": "0x213bc",
+              "bytes": "033094e7",
+              "mnemonic": "ldr",
+              "operands": "r3, [r4, r3]"
+            },
+            {
+              "va": "0x213c0",
+              "bytes": "006093e5",
+              "mnemonic": "ldr",
+              "operands": "r6, [r3]"
+            },
+            {
+              "va": "0x213c4",
+              "bytes": "000056e3",
+              "mnemonic": "cmp",
+              "operands": "r6, #0"
+            },
+            {
+              "va": "0x213c8",
+              "bytes": "0300000a",
+              "mnemonic": "beq",
+              "operands": "#0x213dc"
+            },
+            {
+              "va": "0x213cc",
+              "bytes": "36ff2fe1",
+              "mnemonic": "blx",
+              "operands": "r6"
+            },
+            {
+              "va": "0x213d0",
+              "bytes": "0100a0e3",
+              "mnemonic": "mov",
+              "operands": "r0, #1"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x16148",
+          "file_offset": "0x16148",
+          "bytes": 24,
+          "instructions": [
+            {
+              "va": "0x16148",
+              "bytes": "10309fe5",
+              "mnemonic": "ldr",
+              "operands": "r3, [pc, #0x10]"
+            },
+            {
+              "va": "0x1614c",
+              "bytes": "10209fe5",
+              "mnemonic": "ldr",
+              "operands": "r2, [pc, #0x10]"
+            },
+            {
+              "va": "0x16150",
+              "bytes": "03308fe0",
+              "mnemonic": "add",
+              "operands": "r3, pc, r3"
+            },
+            {
+              "va": "0x16154",
+              "bytes": "023093e7",
+              "mnemonic": "ldr",
+              "operands": "r3, [r3, r2]"
+            },
+            {
+              "va": "0x16158",
+              "bytes": "000083e5",
+              "mnemonic": "str",
+              "operands": "r0, [r3]"
+            },
+            {
+              "va": "0x1615c",
+              "bytes": "1eff2fe1",
+              "mnemonic": "bx",
+              "operands": "lr"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x4c15c",
+          "file_offset": "0x4c15c",
+          "bytes": 48,
+          "instructions": [
+            {
+              "va": "0x4c15c",
+              "bytes": "0c2095e5",
+              "mnemonic": "ldr",
+              "operands": "r2, [r5, #0xc]"
+            },
+            {
+              "va": "0x4c160",
+              "bytes": "64c0a0e3",
+              "mnemonic": "mov",
+              "operands": "ip, #0x64"
+            },
+            {
+              "va": "0x4c164",
+              "bytes": "780095e5",
+              "mnemonic": "ldr",
+              "operands": "r0, [r5, #0x78]"
+            },
+            {
+              "va": "0x4c168",
+              "bytes": "0430a0e1",
+              "mnemonic": "mov",
+              "operands": "r3, r4"
+            },
+            {
+              "va": "0x4c16c",
+              "bytes": "3cc08de5",
+              "mnemonic": "str",
+              "operands": "ip, [sp, #0x3c]"
+            },
+            {
+              "va": "0x4c170",
+              "bytes": "0310a0e3",
+              "mnemonic": "mov",
+              "operands": "r1, #3"
+            },
+            {
+              "va": "0x4c174",
+              "bytes": "40208de5",
+              "mnemonic": "str",
+              "operands": "r2, [sp, #0x40]"
+            },
+            {
+              "va": "0x4c178",
+              "bytes": "0020a0e3",
+              "mnemonic": "mov",
+              "operands": "r2, #0"
+            },
+            {
+              "va": "0x4c17c",
+              "bytes": "00c090e5",
+              "mnemonic": "ldr",
+              "operands": "ip, [r0]"
+            },
+            {
+              "va": "0x4c180",
+              "bytes": "00c09ce5",
+              "mnemonic": "ldr",
+              "operands": "ip, [ip]"
+            },
+            {
+              "va": "0x4c184",
+              "bytes": "3cff2fe1",
+              "mnemonic": "blx",
+              "operands": "ip"
+            },
+            {
+              "va": "0x4c188",
+              "bytes": "fbfeffea",
+              "mnemonic": "b",
+              "operands": "#0x4bd7c"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x4c28c",
+          "file_offset": "0x4c28c",
+          "bytes": 52,
+          "instructions": [
+            {
+              "va": "0x4c28c",
+              "bytes": "8f7f8de2",
+              "mnemonic": "add",
+              "operands": "r7, sp, #0x23c"
+            },
+            {
+              "va": "0x4c290",
+              "bytes": "6809ffeb",
+              "mnemonic": "bl",
+              "operands": "#0xe838"
+            },
+            {
+              "va": "0x4c294",
+              "bytes": "0060a0e1",
+              "mnemonic": "mov",
+              "operands": "r6, r0"
+            },
+            {
+              "va": "0x4c298",
+              "bytes": "730bffeb",
+              "mnemonic": "bl",
+              "operands": "#0xf06c"
+            },
+            {
+              "va": "0x4c29c",
+              "bytes": "000056e3",
+              "mnemonic": "cmp",
+              "operands": "r6, #0"
+            },
+            {
+              "va": "0x4c2a0",
+              "bytes": "406085e5",
+              "mnemonic": "str",
+              "operands": "r6, [r5, #0x40]"
+            },
+            {
+              "va": "0x4c2a4",
+              "bytes": "2903000a",
+              "mnemonic": "beq",
+              "operands": "#0x4cf50"
+            },
+            {
+              "va": "0x4c2a8",
+              "bytes": "003096e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r6]"
+            },
+            {
+              "va": "0x4c2ac",
+              "bytes": "0600a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r6"
+            },
+            {
+              "va": "0x4c2b0",
+              "bytes": "681095e5",
+              "mnemonic": "ldr",
+              "operands": "r1, [r5, #0x68]"
+            },
+            {
+              "va": "0x4c2b4",
+              "bytes": "8f7f8de2",
+              "mnemonic": "add",
+              "operands": "r7, sp, #0x23c"
+            },
+            {
+              "va": "0x4c2b8",
+              "bytes": "083093e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r3, #8]"
+            },
+            {
+              "va": "0x4c2bc",
+              "bytes": "33ff2fe1",
+              "mnemonic": "blx",
+              "operands": "r3"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x4d400",
+          "file_offset": "0x4d400",
+          "bytes": 36,
+          "instructions": [
+            {
+              "va": "0x4d400",
+              "bytes": "0a10a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, sl"
+            },
+            {
+              "va": "0x4d404",
+              "bytes": "40028de5",
+              "mnemonic": "str",
+              "operands": "r0, [sp, #0x240]"
+            },
+            {
+              "va": "0x4d408",
+              "bytes": "052aa0e3",
+              "mnemonic": "mov",
+              "operands": "r2, #0x5000"
+            },
+            {
+              "va": "0x4d40c",
+              "bytes": "093d8de2",
+              "mnemonic": "add",
+              "operands": "r3, sp, #0x240"
+            },
+            {
+              "va": "0x4d410",
+              "bytes": "00c09ee5",
+              "mnemonic": "ldr",
+              "operands": "ip, [lr]"
+            },
+            {
+              "va": "0x4d414",
+              "bytes": "0e00a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, lr"
+            },
+            {
+              "va": "0x4d418",
+              "bytes": "10c09ce5",
+              "mnemonic": "ldr",
+              "operands": "ip, [ip, #0x10]"
+            },
+            {
+              "va": "0x4d41c",
+              "bytes": "3cff2fe1",
+              "mnemonic": "blx",
+              "operands": "ip"
+            },
+            {
+              "va": "0x4d420",
+              "bytes": "000050e3",
+              "mnemonic": "cmp",
+              "operands": "r0, #0"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x4bcd8",
+          "file_offset": "0x4bcd8",
+          "bytes": 100,
+          "instructions": [
+            {
+              "va": "0x4bcd8",
+              "bytes": "100095e5",
+              "mnemonic": "ldr",
+              "operands": "r0, [r5, #0x10]"
+            },
+            {
+              "va": "0x4bcdc",
+              "bytes": "000050e3",
+              "mnemonic": "cmp",
+              "operands": "r0, #0"
+            },
+            {
+              "va": "0x4bce0",
+              "bytes": "0100000a",
+              "mnemonic": "beq",
+              "operands": "#0x4bcec"
+            },
+            {
+              "va": "0x4bce4",
+              "bytes": "8f7f8de2",
+              "mnemonic": "add",
+              "operands": "r7, sp, #0x23c"
+            },
+            {
+              "va": "0x4bce8",
+              "bytes": "8b0fffeb",
+              "mnemonic": "bl",
+              "operands": "#0xfb1c"
+            },
+            {
+              "va": "0x4bcec",
+              "bytes": "400095e5",
+              "mnemonic": "ldr",
+              "operands": "r0, [r5, #0x40]"
+            },
+            {
+              "va": "0x4bcf0",
+              "bytes": "000050e3",
+              "mnemonic": "cmp",
+              "operands": "r0, #0"
+            },
+            {
+              "va": "0x4bcf4",
+              "bytes": "0c00000a",
+              "mnemonic": "beq",
+              "operands": "#0x4bd2c"
+            },
+            {
+              "va": "0x4bcf8",
+              "bytes": "003090e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r0]"
+            },
+            {
+              "va": "0x4bcfc",
+              "bytes": "8f7f8de2",
+              "mnemonic": "add",
+              "operands": "r7, sp, #0x23c"
+            },
+            {
+              "va": "0x4bd00",
+              "bytes": "0c3093e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r3, #0xc]"
+            },
+            {
+              "va": "0x4bd04",
+              "bytes": "33ff2fe1",
+              "mnemonic": "blx",
+              "operands": "r3"
+            },
+            {
+              "va": "0x4bd08",
+              "bytes": "400095e5",
+              "mnemonic": "ldr",
+              "operands": "r0, [r5, #0x40]"
+            },
+            {
+              "va": "0x4bd0c",
+              "bytes": "000050e3",
+              "mnemonic": "cmp",
+              "operands": "r0, #0"
+            },
+            {
+              "va": "0x4bd10",
+              "bytes": "0300000a",
+              "mnemonic": "beq",
+              "operands": "#0x4bd24"
+            },
+            {
+              "va": "0x4bd14",
+              "bytes": "003090e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r0]"
+            },
+            {
+              "va": "0x4bd18",
+              "bytes": "8f7f8de2",
+              "mnemonic": "add",
+              "operands": "r7, sp, #0x23c"
+            },
+            {
+              "va": "0x4bd1c",
+              "bytes": "043093e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r3, #4]"
+            },
+            {
+              "va": "0x4bd20",
+              "bytes": "33ff2fe1",
+              "mnemonic": "blx",
+              "operands": "r3"
+            },
+            {
+              "va": "0x4bd24",
+              "bytes": "0030a0e3",
+              "mnemonic": "mov",
+              "operands": "r3, #0"
+            },
+            {
+              "va": "0x4bd28",
+              "bytes": "403085e5",
+              "mnemonic": "str",
+              "operands": "r3, [r5, #0x40]"
+            },
+            {
+              "va": "0x4bd2c",
+              "bytes": "00005ae3",
+              "mnemonic": "cmp",
+              "operands": "sl, #0"
+            },
+            {
+              "va": "0x4bd30",
+              "bytes": "0100000a",
+              "mnemonic": "beq",
+              "operands": "#0x4bd3c"
+            },
+            {
+              "va": "0x4bd34",
+              "bytes": "0a00a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, sl"
+            },
+            {
+              "va": "0x4bd38",
+              "bytes": "de0effeb",
+              "mnemonic": "bl",
+              "operands": "#0xf8b8"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x43328",
+          "file_offset": "0x43328",
+          "bytes": 88,
+          "instructions": [
+            {
+              "va": "0x43328",
+              "bytes": "0020a0e1",
+              "mnemonic": "mov",
+              "operands": "r2, r0"
+            },
+            {
+              "va": "0x4332c",
+              "bytes": "9fffffea",
+              "mnemonic": "b",
+              "operands": "#0x431b0"
+            },
+            {
+              "va": "0x43330",
+              "bytes": "58129fe5",
+              "mnemonic": "ldr",
+              "operands": "r1, [pc, #0x258]"
+            },
+            {
+              "va": "0x43334",
+              "bytes": "0600a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r6"
+            },
+            {
+              "va": "0x43338",
+              "bytes": "01108fe0",
+              "mnemonic": "add",
+              "operands": "r1, pc, r1"
+            },
+            {
+              "va": "0x4333c",
+              "bytes": "8b33ffeb",
+              "mnemonic": "bl",
+              "operands": "#0x10170"
+            },
+            {
+              "va": "0x43340",
+              "bytes": "000050e3",
+              "mnemonic": "cmp",
+              "operands": "r0, #0"
+            },
+            {
+              "va": "0x43344",
+              "bytes": "0080a0e1",
+              "mnemonic": "mov",
+              "operands": "r8, r0"
+            },
+            {
+              "va": "0x43348",
+              "bytes": "18008ae5",
+              "mnemonic": "str",
+              "operands": "r0, [sl, #0x18]"
+            },
+            {
+              "va": "0x4334c",
+              "bytes": "4200000a",
+              "mnemonic": "beq",
+              "operands": "#0x4345c"
+            },
+            {
+              "va": "0x43350",
+              "bytes": "0710a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r7"
+            },
+            {
+              "va": "0x43354",
+              "bytes": "6820a0e3",
+              "mnemonic": "mov",
+              "operands": "r2, #0x68"
+            },
+            {
+              "va": "0x43358",
+              "bytes": "110e8de2",
+              "mnemonic": "add",
+              "operands": "r0, sp, #0x110"
+            },
+            {
+              "va": "0x4335c",
+              "bytes": "0f2fffeb",
+              "mnemonic": "bl",
+              "operands": "#0xefa0"
+            },
+            {
+              "va": "0x43360",
+              "bytes": "0800a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r8"
+            },
+            {
+              "va": "0x43364",
+              "bytes": "9c30ffeb",
+              "mnemonic": "bl",
+              "operands": "#0xf5dc"
+            },
+            {
+              "va": "0x43368",
+              "bytes": "112e8de2",
+              "mnemonic": "add",
+              "operands": "r2, sp, #0x110"
+            },
+            {
+              "va": "0x4336c",
+              "bytes": "0010a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r0"
+            },
+            {
+              "va": "0x43370",
+              "bytes": "0300a0e3",
+              "mnemonic": "mov",
+              "operands": "r0, #3"
+            },
+            {
+              "va": "0x43374",
+              "bytes": "0f2fffeb",
+              "mnemonic": "bl",
+              "operands": "#0xefb8"
+            },
+            {
+              "va": "0x43378",
+              "bytes": "023c8de2",
+              "mnemonic": "add",
+              "operands": "r3, sp, #0x200"
+            },
+            {
+              "va": "0x4337c",
+              "bytes": "0710a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r7"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x42d30",
+          "file_offset": "0x42d30",
+          "bytes": 48,
+          "instructions": [
+            {
+              "va": "0x42d30",
+              "bytes": "0280a0e1",
+              "mnemonic": "mov",
+              "operands": "r8, r2"
+            },
+            {
+              "va": "0x42d34",
+              "bytes": "0090a0e3",
+              "mnemonic": "mov",
+              "operands": "sb, #0"
+            },
+            {
+              "va": "0x42d38",
+              "bytes": "080050e1",
+              "mnemonic": "cmp",
+              "operands": "r0, r8"
+            },
+            {
+              "va": "0x42d3c",
+              "bytes": "0930d1e0",
+              "mnemonic": "sbcs",
+              "operands": "r3, r1, sb"
+            },
+            {
+              "va": "0x42d40",
+              "bytes": "0530a0e1",
+              "mnemonic": "mov",
+              "operands": "r3, r5"
+            },
+            {
+              "va": "0x42d44",
+              "bytes": "0080a0b1",
+              "mnemonic": "movlt",
+              "operands": "r8, r0"
+            },
+            {
+              "va": "0x42d48",
+              "bytes": "0190a0b1",
+              "mnemonic": "movlt",
+              "operands": "sb, r1"
+            },
+            {
+              "va": "0x42d4c",
+              "bytes": "0c00a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, ip"
+            },
+            {
+              "va": "0x42d50",
+              "bytes": "0110a0e3",
+              "mnemonic": "mov",
+              "operands": "r1, #1"
+            },
+            {
+              "va": "0x42d54",
+              "bytes": "0820a0e1",
+              "mnemonic": "mov",
+              "operands": "r2, r8"
+            },
+            {
+              "va": "0x42d58",
+              "bytes": "0a32ffeb",
+              "mnemonic": "bl",
+              "operands": "#0xf588"
+            },
+            {
+              "va": "0x42d5c",
+              "bytes": "000058e1",
+              "mnemonic": "cmp",
+              "operands": "r8, r0"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x430a0",
+          "file_offset": "0x430a0",
+          "bytes": 48,
+          "instructions": [
+            {
+              "va": "0x430a0",
+              "bytes": "180095e5",
+              "mnemonic": "ldr",
+              "operands": "r0, [r5, #0x18]"
+            },
+            {
+              "va": "0x430a4",
+              "bytes": "000050e3",
+              "mnemonic": "cmp",
+              "operands": "r0, #0"
+            },
+            {
+              "va": "0x430a8",
+              "bytes": "0200000a",
+              "mnemonic": "beq",
+              "operands": "#0x430b8"
+            },
+            {
+              "va": "0x430ac",
+              "bytes": "5433ffeb",
+              "mnemonic": "bl",
+              "operands": "#0xfe04"
+            },
+            {
+              "va": "0x430b0",
+              "bytes": "0030a0e3",
+              "mnemonic": "mov",
+              "operands": "r3, #0"
+            },
+            {
+              "va": "0x430b4",
+              "bytes": "183085e5",
+              "mnemonic": "str",
+              "operands": "r3, [r5, #0x18]"
+            },
+            {
+              "va": "0x430b8",
+              "bytes": "0020a0e3",
+              "mnemonic": "mov",
+              "operands": "r2, #0"
+            },
+            {
+              "va": "0x430bc",
+              "bytes": "0030a0e3",
+              "mnemonic": "mov",
+              "operands": "r3, #0"
+            },
+            {
+              "va": "0x430c0",
+              "bytes": "f820c5e1",
+              "mnemonic": "strd",
+              "operands": "r2, r3, [r5, #8]"
+            },
+            {
+              "va": "0x430c4",
+              "bytes": "11de8de2",
+              "mnemonic": "add",
+              "operands": "sp, sp, #0x110"
+            },
+            {
+              "va": "0x430c8",
+              "bytes": "f081bde8",
+              "mnemonic": "pop",
+              "operands": "{r4, r5, r6, r7, r8, pc}"
+            },
+            {
+              "va": "0x430cc",
+              "bytes": "0030a0e3",
+              "mnemonic": "mov",
+              "operands": "r3, #0"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x55ae4",
+          "file_offset": "0x55ae4",
+          "bytes": 20,
+          "instructions": [
+            {
+              "va": "0x55ae4",
+              "bytes": "042095e5",
+              "mnemonic": "ldr",
+              "operands": "r2, [r5, #4]"
+            },
+            {
+              "va": "0x55ae8",
+              "bytes": "6410a0e3",
+              "mnemonic": "mov",
+              "operands": "r1, #0x64"
+            },
+            {
+              "va": "0x55aec",
+              "bytes": "4900a0e3",
+              "mnemonic": "mov",
+              "operands": "r0, #0x49"
+            },
+            {
+              "va": "0x55af0",
+              "bytes": "f2e9feeb",
+              "mnemonic": "bl",
+              "operands": "#0x102c0"
+            },
+            {
+              "va": "0x55af4",
+              "bytes": "51ffffea",
+              "mnemonic": "b",
+              "operands": "#0x55840"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x41890",
+          "file_offset": "0x41890",
+          "bytes": 40,
+          "instructions": [
+            {
+              "va": "0x41890",
+              "bytes": "042096e5",
+              "mnemonic": "ldr",
+              "operands": "r2, [r6, #4]"
+            },
+            {
+              "va": "0x41894",
+              "bytes": "0130a0e3",
+              "mnemonic": "mov",
+              "operands": "r3, #1"
+            },
+            {
+              "va": "0x41898",
+              "bytes": "080092e7",
+              "mnemonic": "ldr",
+              "operands": "r0, [r2, r8]"
+            },
+            {
+              "va": "0x4189c",
+              "bytes": "0a30c0e5",
+              "mnemonic": "strb",
+              "operands": "r3, [r0, #0xa]"
+            },
+            {
+              "va": "0x418a0",
+              "bytes": "0a35ffeb",
+              "mnemonic": "bl",
+              "operands": "#0xecd0"
+            },
+            {
+              "va": "0x418a4",
+              "bytes": "043096e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r6, #4]"
+            },
+            {
+              "va": "0x418a8",
+              "bytes": "0600a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r6"
+            },
+            {
+              "va": "0x418ac",
+              "bytes": "081093e7",
+              "mnemonic": "ldr",
+              "operands": "r1, [r3, r8]"
+            },
+            {
+              "va": "0x418b0",
+              "bytes": "4f3affeb",
+              "mnemonic": "bl",
+              "operands": "#0x101f4"
+            },
+            {
+              "va": "0x418b4",
+              "bytes": "043096e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r6, #4]"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x47e6c",
+          "file_offset": "0x47e6c",
+          "bytes": 56,
+          "instructions": [
+            {
+              "va": "0x47e6c",
+              "bytes": "10402de9",
+              "mnemonic": "push",
+              "operands": "{r4, lr}"
+            },
+            {
+              "va": "0x47e70",
+              "bytes": "0130a0e3",
+              "mnemonic": "mov",
+              "operands": "r3, #1"
+            },
+            {
+              "va": "0x47e74",
+              "bytes": "08d04de2",
+              "mnemonic": "sub",
+              "operands": "sp, sp, #8"
+            },
+            {
+              "va": "0x47e78",
+              "bytes": "0830c0e5",
+              "mnemonic": "strb",
+              "operands": "r3, [r0, #8]"
+            },
+            {
+              "va": "0x47e7c",
+              "bytes": "0040a0e1",
+              "mnemonic": "mov",
+              "operands": "r4, r0"
+            },
+            {
+              "va": "0x47e80",
+              "bytes": "491cffeb",
+              "mnemonic": "bl",
+              "operands": "#0xefac"
+            },
+            {
+              "va": "0x47e84",
+              "bytes": "043094e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r4, #4]"
+            },
+            {
+              "va": "0x47e88",
+              "bytes": "000053e1",
+              "mnemonic": "cmp",
+              "operands": "r3, r0"
+            },
+            {
+              "va": "0x47e8c",
+              "bytes": "0200000a",
+              "mnemonic": "beq",
+              "operands": "#0x47e9c"
+            },
+            {
+              "va": "0x47e90",
+              "bytes": "040094e5",
+              "mnemonic": "ldr",
+              "operands": "r0, [r4, #4]"
+            },
+            {
+              "va": "0x47e94",
+              "bytes": "04108de2",
+              "mnemonic": "add",
+              "operands": "r1, sp, #4"
+            },
+            {
+              "va": "0x47e98",
+              "bytes": "771bffeb",
+              "mnemonic": "bl",
+              "operands": "#0xec7c"
+            },
+            {
+              "va": "0x47e9c",
+              "bytes": "08d08de2",
+              "mnemonic": "add",
+              "operands": "sp, sp, #8"
+            },
+            {
+              "va": "0x47ea0",
+              "bytes": "1080bde8",
+              "mnemonic": "pop",
+              "operands": "{r4, pc}"
+            }
+          ]
+        }
+      ],
+      "relocations": [
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x81358",
+          "file_offset": "0x79358",
+          "type_number": 2,
+          "stored_addend_u32": "0x8",
+          "symbol": "_ZTVN10__cxxabiv117__class_type_infoE",
+          "symbol_value": "0x0",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": false
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x81344",
+          "file_offset": "0x79344",
+          "type_number": 2,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZTI15SPClientManager",
+          "symbol_value": "0x81330",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x81348",
+          "file_offset": "0x79348",
+          "type_number": 2,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZN15SPClientManager19notifyServiceStatusE18eSPNotifyClntEventiP19SvcClientNotifyInfo",
+          "symbol_value": "0x40c14",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x8134c",
+          "file_offset": "0x7934c",
+          "type_number": 2,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZN15SPClientManagerD1Ev",
+          "symbol_value": "0x40bb8",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x81350",
+          "file_offset": "0x79350",
+          "type_number": 2,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZN15SPClientManagerD0Ev",
+          "symbol_value": "0x40bf8",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x8135c",
+          "file_offset": "0x7935c",
+          "type_number": 2,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZTS12SPFileStream",
+          "symbol_value": "0x74ef4",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x81364",
+          "file_offset": "0x79364",
+          "type_number": 2,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZTI12SPFileStream",
+          "symbol_value": "0x81358",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x81368",
+          "file_offset": "0x79368",
+          "type_number": 2,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZN12SPFileStreamD1Ev",
+          "symbol_value": "0x430fc",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x8136c",
+          "file_offset": "0x7936c",
+          "type_number": 2,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZN12SPFileStreamD0Ev",
+          "symbol_value": "0x435c8",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x81370",
+          "file_offset": "0x79370",
+          "type_number": 2,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZN12SPFileStream4OpenEPKc",
+          "symbol_value": "0x4313c",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x81374",
+          "file_offset": "0x79374",
+          "type_number": 2,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZN12SPFileStream5CloseEv",
+          "symbol_value": "0x42fd4",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x81378",
+          "file_offset": "0x79378",
+          "type_number": 2,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZN12SPFileStream7GetDataEPhmPm",
+          "symbol_value": "0x42cec",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x8137c",
+          "file_offset": "0x7937c",
+          "type_number": 2,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZNK12SPFileStream3EOSEv",
+          "symbol_value": "0x42cc8",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x82038",
+          "file_offset": "0x7a038",
+          "type_number": 21,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZTV12SPFileStream",
+          "symbol_value": "0x81360",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x820e0",
+          "file_offset": "0x7a0e0",
+          "type_number": 21,
+          "stored_addend_u32": "0x0",
+          "symbol": "_Z32SNPushClientNotificationCallback18eSPNotifyClntEventP12stSPClntInfo",
+          "symbol_value": "0x55804",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x820e4",
+          "file_offset": "0x7a0e4",
+          "type_number": 21,
+          "stored_addend_u32": "0x0",
+          "symbol": "_ZTV15SPClientManager",
+          "symbol_value": "0x81340",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.dyn",
+          "original_elf_va": "0x82100",
+          "file_offset": "0x7a100",
+          "type_number": 21,
+          "stored_addend_u32": "0x0",
+          "symbol": "gSelectivePushCallback",
+          "symbol_value": "0x84280",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.plt",
+          "original_elf_va": "0x81784",
+          "file_offset": "0x79784",
+          "type_number": 22,
+          "stored_addend_u32": "0xe788",
+          "symbol": "_ZN19SPHTTPClientHandlerC1EPKci",
+          "symbol_value": "0x4ea84",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.plt",
+          "original_elf_va": "0x81948",
+          "file_offset": "0x79948",
+          "type_number": 22,
+          "stored_addend_u32": "0xe788",
+          "symbol": "__fxstat64",
+          "symbol_value": "0x0",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": false
+        },
+        {
+          "section": ".rel.plt",
+          "original_elf_va": "0x8195c",
+          "file_offset": "0x7995c",
+          "type_number": 22,
+          "stored_addend_u32": "0xe788",
+          "symbol": "_ZN19SPHTTPClientHandlerC1EP16SPClientNotifierPKcS3_iS3_",
+          "symbol_value": "0x4edd8",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.plt",
+          "original_elf_va": "0x81984",
+          "file_offset": "0x79984",
+          "type_number": 22,
+          "stored_addend_u32": "0xe788",
+          "symbol": "_ZN12SPFileStreamC1Ev",
+          "symbol_value": "0x435e4",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.plt",
+          "original_elf_va": "0x81a88",
+          "file_offset": "0x79a88",
+          "type_number": 22,
+          "stored_addend_u32": "0xe788",
+          "symbol": "_ZN15SPClientManager11setCallbackEPFv18eSPNotifyClntEventP12stSPClntInfoE",
+          "symbol_value": "0x411f8",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.plt",
+          "original_elf_va": "0x81ae0",
+          "file_offset": "0x79ae0",
+          "type_number": 22,
+          "stored_addend_u32": "0xe788",
+          "symbol": "_ZN19SPHTTPClientHandlerC1EP16SPClientNotifierPKcS3_i",
+          "symbol_value": "0x4f6a8",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": true
+        },
+        {
+          "section": ".rel.plt",
+          "original_elf_va": "0x81b38",
+          "file_offset": "0x79b38",
+          "type_number": 22,
+          "stored_addend_u32": "0xe788",
+          "symbol": "fread",
+          "symbol_value": "0x0",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": false
+        },
+        {
+          "section": ".rel.plt",
+          "original_elf_va": "0x81b54",
+          "file_offset": "0x79b54",
+          "type_number": 22,
+          "stored_addend_u32": "0xe788",
+          "symbol": "fileno",
+          "symbol_value": "0x0",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": false
+        },
+        {
+          "section": ".rel.plt",
+          "original_elf_va": "0x81e0c",
+          "file_offset": "0x79e0c",
+          "type_number": 22,
+          "stored_addend_u32": "0xe788",
+          "symbol": "fclose",
+          "symbol_value": "0x0",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": false
+        },
+        {
+          "section": ".rel.plt",
+          "original_elf_va": "0x81f30",
+          "file_offset": "0x79f30",
+          "type_number": 22,
+          "stored_addend_u32": "0xe788",
+          "symbol": "fopen64",
+          "symbol_value": "0x0",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": false
+        }
+      ],
+      "dynamic_tags": [
+        "<DynamicTag (DT_NEEDED) \"liblogutil.so\">",
+        "<DynamicTag (DT_NEEDED) \"librt.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libdlog.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libpthread.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libasl.so\">",
+        "<DynamicTag (DT_NEEDED) \"libdi-network-dlna-stack.so\">",
+        "<DynamicTag (DT_NEEDED) \"libdi-network-dlna-extlib.so\">",
+        "<DynamicTag (DT_NEEDED) \"libdi-network-dlna-dmsui.so\">",
+        "<DynamicTag (DT_NEEDED) \"libdi-network-dlna-autobackup.so\">",
+        "<DynamicTag (DT_NEEDED) \"libdi-network-dlna-rvf.so\">",
+        "<DynamicTag (DT_NEEDED) \"libstdc++.so.6\">",
+        "<DynamicTag (DT_NEEDED) \"libm.so.6\">",
+        "<DynamicTag (DT_NEEDED) \"libgcc_s.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libc.so.6\">"
+      ],
+      "resolved_literals": [
+        {
+          "label": "manager_vtable_got",
+          "pc_base": "0x4133c",
+          "literal_1_va": "0x41378",
+          "literal_1_u32": "0x4034c",
+          "literal_2_va": "0x4137c",
+          "literal_2_u32": "0xa5c",
+          "computed_got_va": "0x820e4"
+        },
+        {
+          "label": "file_vtable_got",
+          "pc_base": "0x435f8",
+          "literal_1_va": "0x43620",
+          "literal_1_u32": "0x3e090",
+          "literal_2_va": "0x43624",
+          "literal_2_u32": "0x9b0",
+          "computed_got_va": "0x82038"
+        },
+        {
+          "label": "registered_client_callback_got",
+          "pc_base": "0x58fb4",
+          "literal_1_va": "0x590bc",
+          "literal_1_u32": "0x286d4",
+          "literal_2_va": "0x590e0",
+          "literal_2_u32": "0xa58",
+          "computed_got_va": "0x820e0"
+        },
+        {
+          "label": "set_ui_callback_global_got",
+          "pc_base": "0x16158",
+          "literal_1_va": "0x16160",
+          "literal_1_u32": "0x6b530",
+          "literal_2_va": "0x16164",
+          "literal_2_u32": "0xa78",
+          "computed_got_va": "0x82100"
+        },
+        {
+          "label": "dispatch_ui_callback_global_got",
+          "pc_base": "0x213c0",
+          "literal_1_va": "0x214e4",
+          "literal_1_u32": "0x602c8",
+          "literal_2_va": "0x214e8",
+          "literal_2_u32": "0xa78",
+          "computed_got_va": "0x82100"
+        },
+        {
+          "label": "fopen64_mode",
+          "pc_base": "0x43340",
+          "literal_va": "0x43590",
+          "resolved_string_va": "0x74fb8",
+          "value": "rb"
+        }
+      ]
+    },
+    {
+      "firmware_path": "/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app",
+      "staged_path": ".work/run002/inputs/smart-wifi-app",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "original_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "windows": [
+        {
+          "original_elf_va": "0x59464",
+          "file_offset": "0x51464",
+          "bytes": 12,
+          "instructions": [
+            {
+              "va": "0x59464",
+              "bytes": "c0009fe5",
+              "mnemonic": "ldr",
+              "operands": "r0, [pc, #0xc0]"
+            },
+            {
+              "va": "0x59468",
+              "bytes": "0295ffeb",
+              "mnemonic": "bl",
+              "operands": "#0x3e878"
+            },
+            {
+              "va": "0x5946c",
+              "bytes": "7affffea",
+              "mnemonic": "b",
+              "operands": "#0x5925c"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x5a368",
+          "file_offset": "0x52368",
+          "bytes": 64,
+          "instructions": [
+            {
+              "va": "0x5a368",
+              "bytes": "0030a0e1",
+              "mnemonic": "mov",
+              "operands": "r3, r0"
+            },
+            {
+              "va": "0x5a36c",
+              "bytes": "070ca0e3",
+              "mnemonic": "mov",
+              "operands": "r0, #0x700"
+            },
+            {
+              "va": "0x5a370",
+              "bytes": "70402de9",
+              "mnemonic": "push",
+              "operands": "{r4, r5, r6, lr}"
+            },
+            {
+              "va": "0x5a374",
+              "bytes": "0140a0e1",
+              "mnemonic": "mov",
+              "operands": "r4, r1"
+            },
+            {
+              "va": "0x5a378",
+              "bytes": "0310a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r3"
+            },
+            {
+              "va": "0x5a37c",
+              "bytes": "0250a0e1",
+              "mnemonic": "mov",
+              "operands": "r5, r2"
+            },
+            {
+              "va": "0x5a380",
+              "bytes": "80feffeb",
+              "mnemonic": "bl",
+              "operands": "#0x59d88"
+            },
+            {
+              "va": "0x5a384",
+              "bytes": "0410a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r4"
+            },
+            {
+              "va": "0x5a388",
+              "bytes": "0060a0e1",
+              "mnemonic": "mov",
+              "operands": "r6, r0"
+            },
+            {
+              "va": "0x5a38c",
+              "bytes": "e5ffffeb",
+              "mnemonic": "bl",
+              "operands": "#0x5a328"
+            },
+            {
+              "va": "0x5a390",
+              "bytes": "0520a0e1",
+              "mnemonic": "mov",
+              "operands": "r2, r5"
+            },
+            {
+              "va": "0x5a394",
+              "bytes": "0030a0e3",
+              "mnemonic": "mov",
+              "operands": "r3, #0"
+            },
+            {
+              "va": "0x5a398",
+              "bytes": "0010a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r0"
+            },
+            {
+              "va": "0x5a39c",
+              "bytes": "0600a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r6"
+            },
+            {
+              "va": "0x5a3a0",
+              "bytes": "7040bde8",
+              "mnemonic": "pop",
+              "operands": "{r4, r5, r6, lr}"
+            },
+            {
+              "va": "0x5a3a4",
+              "bytes": "a6f7ffea",
+              "mnemonic": "b",
+              "operands": "#0x58244"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x5a1dc",
+          "file_offset": "0x521dc",
+          "bytes": 40,
+          "instructions": [
+            {
+              "va": "0x5a1dc",
+              "bytes": "6f0700e3",
+              "mnemonic": "movw",
+              "operands": "r0, #0x76f"
+            },
+            {
+              "va": "0x5a1e0",
+              "bytes": "1effffea",
+              "mnemonic": "b",
+              "operands": "#0x59e60"
+            },
+            {
+              "va": "0x5a1e4",
+              "bytes": "6e0700e3",
+              "mnemonic": "movw",
+              "operands": "r0, #0x76e"
+            },
+            {
+              "va": "0x5a1e8",
+              "bytes": "1cffffea",
+              "mnemonic": "b",
+              "operands": "#0x59e60"
+            },
+            {
+              "va": "0x5a1ec",
+              "bytes": "6d0700e3",
+              "mnemonic": "movw",
+              "operands": "r0, #0x76d"
+            },
+            {
+              "va": "0x5a1f0",
+              "bytes": "1affffea",
+              "mnemonic": "b",
+              "operands": "#0x59e60"
+            },
+            {
+              "va": "0x5a1f4",
+              "bytes": "6c0700e3",
+              "mnemonic": "movw",
+              "operands": "r0, #0x76c"
+            },
+            {
+              "va": "0x5a1f8",
+              "bytes": "18ffffea",
+              "mnemonic": "b",
+              "operands": "#0x59e60"
+            },
+            {
+              "va": "0x5a1fc",
+              "bytes": "6b0700e3",
+              "mnemonic": "movw",
+              "operands": "r0, #0x76b"
+            },
+            {
+              "va": "0x5a200",
+              "bytes": "16ffffea",
+              "mnemonic": "b",
+              "operands": "#0x59e60"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x58300",
+          "file_offset": "0x50300",
+          "bytes": 88,
+          "instructions": [
+            {
+              "va": "0x58300",
+              "bytes": "33ff2fe1",
+              "mnemonic": "blx",
+              "operands": "r3"
+            },
+            {
+              "va": "0x58304",
+              "bytes": "003094e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r4]"
+            },
+            {
+              "va": "0x58308",
+              "bytes": "0400a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r4"
+            },
+            {
+              "va": "0x5830c",
+              "bytes": "0710a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r7"
+            },
+            {
+              "va": "0x58310",
+              "bytes": "143093e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r3, #0x14]"
+            },
+            {
+              "va": "0x58314",
+              "bytes": "33ff2fe1",
+              "mnemonic": "blx",
+              "operands": "r3"
+            },
+            {
+              "va": "0x58318",
+              "bytes": "003094e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r4]"
+            },
+            {
+              "va": "0x5831c",
+              "bytes": "0400a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r4"
+            },
+            {
+              "va": "0x58320",
+              "bytes": "0810a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r8"
+            },
+            {
+              "va": "0x58324",
+              "bytes": "183093e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r3, #0x18]"
+            },
+            {
+              "va": "0x58328",
+              "bytes": "33ff2fe1",
+              "mnemonic": "blx",
+              "operands": "r3"
+            },
+            {
+              "va": "0x5832c",
+              "bytes": "003094e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r4]"
+            },
+            {
+              "va": "0x58330",
+              "bytes": "0400a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r4"
+            },
+            {
+              "va": "0x58334",
+              "bytes": "0a10a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, sl"
+            },
+            {
+              "va": "0x58338",
+              "bytes": "1c3093e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r3, #0x1c]"
+            },
+            {
+              "va": "0x5833c",
+              "bytes": "33ff2fe1",
+              "mnemonic": "blx",
+              "operands": "r3"
+            },
+            {
+              "va": "0x58340",
+              "bytes": "0010a0e3",
+              "mnemonic": "mov",
+              "operands": "r1, #0"
+            },
+            {
+              "va": "0x58344",
+              "bytes": "fc20a0e3",
+              "mnemonic": "mov",
+              "operands": "r2, #0xfc"
+            },
+            {
+              "va": "0x58348",
+              "bytes": "24008de2",
+              "mnemonic": "add",
+              "operands": "r0, sp, #0x24"
+            },
+            {
+              "va": "0x5834c",
+              "bytes": "1490c4e5",
+              "mnemonic": "strb",
+              "operands": "sb, [r4, #0x14]"
+            },
+            {
+              "va": "0x58350",
+              "bytes": "1b3b05e3",
+              "mnemonic": "movw",
+              "operands": "r3, #0x5b1b"
+            },
+            {
+              "va": "0x58354",
+              "bytes": "6d3040e3",
+              "mnemonic": "movt",
+              "operands": "r3, #0x6d"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x58418",
+          "file_offset": "0x50418",
+          "bytes": 24,
+          "instructions": [
+            {
+              "va": "0x58418",
+              "bytes": "0410a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r4"
+            },
+            {
+              "va": "0x5841c",
+              "bytes": "74009fe5",
+              "mnemonic": "ldr",
+              "operands": "r0, [pc, #0x74]"
+            },
+            {
+              "va": "0x58420",
+              "bytes": "749cffeb",
+              "mnemonic": "bl",
+              "operands": "#0x3f5f8"
+            },
+            {
+              "va": "0x58424",
+              "bytes": "0100a0e3",
+              "mnemonic": "mov",
+              "operands": "r0, #1"
+            },
+            {
+              "va": "0x58428",
+              "bytes": "12de8de2",
+              "mnemonic": "add",
+              "operands": "sp, sp, #0x120"
+            },
+            {
+              "va": "0x5842c",
+              "bytes": "f087bde8",
+              "mnemonic": "pop",
+              "operands": "{r4, r5, r6, r7, r8, sb, sl, pc}"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x4a0c4",
+          "file_offset": "0x420c4",
+          "bytes": 28,
+          "instructions": [
+            {
+              "va": "0x4a0c4",
+              "bytes": "7ecfffeb",
+              "mnemonic": "bl",
+              "operands": "#0x3dec4"
+            },
+            {
+              "va": "0x4a0c8",
+              "bytes": "770a00eb",
+              "mnemonic": "bl",
+              "operands": "#0x4caac"
+            },
+            {
+              "va": "0x4a0cc",
+              "bytes": "0410a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r4"
+            },
+            {
+              "va": "0x4a0d0",
+              "bytes": "003090e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r0]"
+            },
+            {
+              "va": "0x4a0d4",
+              "bytes": "0c3093e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r3, #0xc]"
+            },
+            {
+              "va": "0x4a0d8",
+              "bytes": "33ff2fe1",
+              "mnemonic": "blx",
+              "operands": "r3"
+            },
+            {
+              "va": "0x4a0dc",
+              "bytes": "0000a0e3",
+              "mnemonic": "mov",
+              "operands": "r0, #0"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x4cd30",
+          "file_offset": "0x44d30",
+          "bytes": 56,
+          "instructions": [
+            {
+              "va": "0x4cd30",
+              "bytes": "10402de9",
+              "mnemonic": "push",
+              "operands": "{r4, lr}"
+            },
+            {
+              "va": "0x4cd34",
+              "bytes": "0140a0e1",
+              "mnemonic": "mov",
+              "operands": "r4, r1"
+            },
+            {
+              "va": "0x4cd38",
+              "bytes": "62ceffeb",
+              "mnemonic": "bl",
+              "operands": "#0x406c8"
+            },
+            {
+              "va": "0x4cd3c",
+              "bytes": "003094e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r4]"
+            },
+            {
+              "va": "0x4cd40",
+              "bytes": "0400a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r4"
+            },
+            {
+              "va": "0x4cd44",
+              "bytes": "003093e5",
+              "mnemonic": "ldr",
+              "operands": "r3, [r3]"
+            },
+            {
+              "va": "0x4cd48",
+              "bytes": "33ff2fe1",
+              "mnemonic": "blx",
+              "operands": "r3"
+            },
+            {
+              "va": "0x4cd4c",
+              "bytes": "130050e3",
+              "mnemonic": "cmp",
+              "operands": "r0, #0x13"
+            },
+            {
+              "va": "0x4cd50",
+              "bytes": "1080bd18",
+              "mnemonic": "popne",
+              "operands": "{r4, pc}"
+            },
+            {
+              "va": "0x4cd54",
+              "bytes": "1430d4e5",
+              "mnemonic": "ldrb",
+              "operands": "r3, [r4, #0x14]"
+            },
+            {
+              "va": "0x4cd58",
+              "bytes": "000053e3",
+              "mnemonic": "cmp",
+              "operands": "r3, #0"
+            },
+            {
+              "va": "0x4cd5c",
+              "bytes": "0030a013",
+              "mnemonic": "movne",
+              "operands": "r3, #0"
+            },
+            {
+              "va": "0x4cd60",
+              "bytes": "1430c415",
+              "mnemonic": "strbne",
+              "operands": "r3, [r4, #0x14]"
+            },
+            {
+              "va": "0x4cd64",
+              "bytes": "1080bde8",
+              "mnemonic": "pop",
+              "operands": "{r4, pc}"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x810c8",
+          "file_offset": "0x790c8",
+          "bytes": 16,
+          "instructions": [
+            {
+              "va": "0x810c8",
+              "bytes": "010040e2",
+              "mnemonic": "sub",
+              "operands": "r0, r0, #1"
+            },
+            {
+              "va": "0x810cc",
+              "bytes": "120050e3",
+              "mnemonic": "cmp",
+              "operands": "r0, #0x12"
+            },
+            {
+              "va": "0x810d0",
+              "bytes": "00f19f97",
+              "mnemonic": "ldrls",
+              "operands": "pc, [pc, r0, lsl #2]"
+            },
+            {
+              "va": "0x810d4",
+              "bytes": "5b0000ea",
+              "mnemonic": "b",
+              "operands": "#0x81248"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x81220",
+          "file_offset": "0x79220",
+          "bytes": 40,
+          "instructions": [
+            {
+              "va": "0x81220",
+              "bytes": "45df8de2",
+              "mnemonic": "add",
+              "operands": "sp, sp, #0x114"
+            },
+            {
+              "va": "0x81224",
+              "bytes": "f085bde8",
+              "mnemonic": "pop",
+              "operands": "{r4, r5, r6, r7, r8, sl, pc}"
+            },
+            {
+              "va": "0x81228",
+              "bytes": "0400a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r4"
+            },
+            {
+              "va": "0x8122c",
+              "bytes": "0510a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r5"
+            },
+            {
+              "va": "0x81230",
+              "bytes": "2ff6ffeb",
+              "mnemonic": "bl",
+              "operands": "#0x7eaf4"
+            },
+            {
+              "va": "0x81234",
+              "bytes": "f9ffffea",
+              "mnemonic": "b",
+              "operands": "#0x81220"
+            },
+            {
+              "va": "0x81238",
+              "bytes": "0400a0e1",
+              "mnemonic": "mov",
+              "operands": "r0, r4"
+            },
+            {
+              "va": "0x8123c",
+              "bytes": "0510a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r5"
+            },
+            {
+              "va": "0x81240",
+              "bytes": "35feffeb",
+              "mnemonic": "bl",
+              "operands": "#0x80b1c"
+            },
+            {
+              "va": "0x81244",
+              "bytes": "f5ffffea",
+              "mnemonic": "b",
+              "operands": "#0x81220"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x7b0bc",
+          "file_offset": "0x730bc",
+          "bytes": 4,
+          "instructions": [
+            {
+              "va": "0x7b0bc",
+              "bytes": "1eff2fe1",
+              "mnemonic": "bx",
+              "operands": "lr"
+            }
+          ]
+        },
+        {
+          "original_elf_va": "0x64068",
+          "file_offset": "0x5c068",
+          "bytes": 36,
+          "instructions": [
+            {
+              "va": "0x64068",
+              "bytes": "08402de9",
+              "mnemonic": "push",
+              "operands": "{r3, lr}"
+            },
+            {
+              "va": "0x6406c",
+              "bytes": "0120a0e1",
+              "mnemonic": "mov",
+              "operands": "r2, r1"
+            },
+            {
+              "va": "0x64070",
+              "bytes": "0030a0e3",
+              "mnemonic": "mov",
+              "operands": "r3, #0"
+            },
+            {
+              "va": "0x64074",
+              "bytes": "0010a0e1",
+              "mnemonic": "mov",
+              "operands": "r1, r0"
+            },
+            {
+              "va": "0x64078",
+              "bytes": "630700e3",
+              "mnemonic": "movw",
+              "operands": "r0, #0x763"
+            },
+            {
+              "va": "0x6407c",
+              "bytes": "40d6ffeb",
+              "mnemonic": "bl",
+              "operands": "#0x59984"
+            },
+            {
+              "va": "0x64080",
+              "bytes": "010070e2",
+              "mnemonic": "rsbs",
+              "operands": "r0, r0, #1"
+            },
+            {
+              "va": "0x64084",
+              "bytes": "0000a033",
+              "mnemonic": "movlo",
+              "operands": "r0, #0"
+            },
+            {
+              "va": "0x64088",
+              "bytes": "0880bde8",
+              "mnemonic": "pop",
+              "operands": "{r3, pc}"
+            }
+          ]
+        }
+      ],
+      "relocations": [
+        {
+          "section": ".rel.plt",
+          "original_elf_va": "0x13c508",
+          "file_offset": "0x12c508",
+          "type_number": 22,
+          "stored_addend_u32": "0x3dd3c",
+          "symbol": "DlnaSelective_NPush_Initialize",
+          "symbol_value": "0x3e878",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": false
+        },
+        {
+          "section": ".rel.plt",
+          "original_elf_va": "0x13c988",
+          "file_offset": "0x12c988",
+          "type_number": 22,
+          "stored_addend_u32": "0x3dd3c",
+          "symbol": "g_idle_add",
+          "symbol_value": "0x3f5f8",
+          "symbol_binding": "STB_GLOBAL",
+          "symbol_visibility": "STV_DEFAULT",
+          "defined": false
+        }
+      ],
+      "dynamic_tags": [
+        "<DynamicTag (DT_NEEDED) \"libappcore-efl.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libelementary.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libeet.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libecore_file.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libefreet.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libefreet_mime.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libefreet_trash.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libedbus.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libethumb_client.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libecore_imf.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libecore_con.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libappcore-common.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libsensor.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libaul.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libbundle.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libail.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libxdgmime.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libSLP-db-util.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libsqlite3.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libicui18n.so.52\">",
+        "<DynamicTag (DT_NEEDED) \"libicuuc.so.52\">",
+        "<DynamicTag (DT_NEEDED) \"libicudata.so.52\">",
+        "<DynamicTag (DT_NEEDED) \"libecore.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libecore_x.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libecore_evas.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libecore_input.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libevas.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libedje.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libeina.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libdi-elementary.so\">",
+        "<DynamicTag (DT_NEEDED) \"libgui.so\">",
+        "<DynamicTag (DT_NEEDED) \"libapex.so\">",
+        "<DynamicTag (DT_NEEDED) \"libutilX.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libmmfsound.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libavsysaudio.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libmmfsession.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libascenario-0.2.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libpulse-simple.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libasound.so.2\">",
+        "<DynamicTag (DT_NEEDED) \"libpulse.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libaudio-session-mgr.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libvconf.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libhibernation.so\">",
+        "<DynamicTag (DT_NEEDED) \"libsys-mmap-manager.so\">",
+        "<DynamicTag (DT_NEEDED) \"libtbm.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libdrm.so.2\">",
+        "<DynamicTag (DT_NEEDED) \"libnetwork.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libgio-2.0.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libgthread-2.0.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libdi-network-dlna-api.so\">",
+        "<DynamicTag (DT_NEEDED) \"libcapture-fw-prod.so\">",
+        "<DynamicTag (DT_NEEDED) \"libsysman.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libprefman.so\">",
+        "<DynamicTag (DT_NEEDED) \"libuser-spec.so\">",
+        "<DynamicTag (DT_NEEDED) \"libproduction-mode.so\">",
+        "<DynamicTag (DT_NEEDED) \"libversion-info.so\">",
+        "<DynamicTag (DT_NEEDED) \"libXrandr.so.2\">",
+        "<DynamicTag (DT_NEEDED) \"libhdmi-cec.so\">",
+        "<DynamicTag (DT_NEEDED) \"libXtst.so.6\">",
+        "<DynamicTag (DT_NEEDED) \"libfirmware-upgrade.so\">",
+        "<DynamicTag (DT_NEEDED) \"libdi-sensor.so\">",
+        "<DynamicTag (DT_NEEDED) \"libdiosal.so\">",
+        "<DynamicTag (DT_NEEDED) \"libcapi-appfw-application.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libcapi-content-media-content.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libfilelist-manager.so\">",
+        "<DynamicTag (DT_NEEDED) \"libshell-command.so\">",
+        "<DynamicTag (DT_NEEDED) \"libdevice-node.so.0.1\">",
+        "<DynamicTag (DT_NEEDED) \"libdeviced.so.0.1.0\">",
+        "<DynamicTag (DT_NEEDED) \"libmm-type.so\">",
+        "<DynamicTag (DT_NEEDED) \"libmmf_player.so\">",
+        "<DynamicTag (DT_NEEDED) \"libmmf-camcorder.so\">",
+        "<DynamicTag (DT_NEEDED) \"libmmfcore.so\">",
+        "<DynamicTag (DT_NEEDED) \"libexif.so.12\">",
+        "<DynamicTag (DT_NEEDED) \"libmm_ta.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libmm-photo.so\">",
+        "<DynamicTag (DT_NEEDED) \"libmm-slideshow.so\">",
+        "<DynamicTag (DT_NEEDED) \"libmmffile.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libmmfile_utils.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libmmfcommon.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libmmutil_movie.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libmm-displayer.so\">",
+        "<DynamicTag (DT_NEEDED) \"libmulticore-bridge.so\">",
+        "<DynamicTag (DT_NEEDED) \"libmicom-node.so.0.1\">",
+        "<DynamicTag (DT_NEEDED) \"libfactory-mode.so\">",
+        "<DynamicTag (DT_NEEDED) \"libX11.so.6\">",
+        "<DynamicTag (DT_NEEDED) \"libdbus-glib-1.so.2\">",
+        "<DynamicTag (DT_NEEDED) \"libdbus-1.so.3\">",
+        "<DynamicTag (DT_NEEDED) \"libgobject-2.0.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libglib-2.0.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libtint-util.so\">",
+        "<DynamicTag (DT_NEEDED) \"libwifi-sns.so\">",
+        "<DynamicTag (DT_NEEDED) \"libasl.so\">",
+        "<DynamicTag (DT_NEEDED) \"liblogutil.so\">",
+        "<DynamicTag (DT_NEEDED) \"librt.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libssl.so.1.0.0\">",
+        "<DynamicTag (DT_NEEDED) \"libcrypto.so.1.0.0\">",
+        "<DynamicTag (DT_NEEDED) \"libdcm.so\">",
+        "<DynamicTag (DT_NEEDED) \"libdlog.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libpthread.so.0\">",
+        "<DynamicTag (DT_NEEDED) \"libstdc++.so.6\">",
+        "<DynamicTag (DT_NEEDED) \"libm.so.6\">",
+        "<DynamicTag (DT_NEEDED) \"libgcc_s.so.1\">",
+        "<DynamicTag (DT_NEEDED) \"libc.so.6\">"
+      ],
+      "resolved_literals": [
+        {
+          "literal_va": "0x5952c",
+          "pointer_value": "0x5a368"
+        },
+        {
+          "literal_va": "0x58498",
+          "pointer_value": "0x49fb0"
+        }
+      ]
+    }
+  ],
+  "decompiled_selections": [
+    {
+      "artifact": ".work/run004/transfer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "artifact_sha256": "b23c103f6217fdc98ca3574181bd6253d2b7576ff1fa66f6c8610580157d6584",
+      "name": "SelectivePushSendEventToUI",
+      "original_elf_va": "0x213a8",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "undefined4 SelectivePushSendEventToUI(void)"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "{"
+        },
+        {
+          "line": 5,
+          "text": "  undefined4 uVar1;"
+        },
+        {
+          "line": 6,
+          "text": "  size_t sVar2;"
+        },
+        {
+          "line": 7,
+          "text": "  undefined4 local_120;"
+        },
+        {
+          "line": 8,
+          "text": "  undefined2 local_11c;"
+        },
+        {
+          "line": 9,
+          "text": "  undefined1 auStack_11a [254];"
+        },
+        {
+          "line": 10,
+          "text": "  "
+        },
+        {
+          "line": 11,
+          "text": "  if (gSelectivePushCallback == (code *)0x0) {"
+        },
+        {
+          "line": 12,
+          "text": "    local_120 = 0x31335b1b;"
+        },
+        {
+          "line": 13,
+          "text": "    local_11c = 0x6d;"
+        },
+        {
+          "line": 14,
+          "text": "    memset(auStack_11a,0,0xfa);"
+        },
+        {
+          "line": 15,
+          "text": "    snprintf((char *)((int)&local_11c + 1),0xf6,\"ERROR : gDMSCallback is NULL\\n\");"
+        },
+        {
+          "line": 16,
+          "text": "    sVar2 = strlen((char *)&local_120);"
+        },
+        {
+          "line": 17,
+          "text": "    if (auStack_11a[sVar2 - 7] == '\\n') {"
+        },
+        {
+          "line": 18,
+          "text": "      auStack_11a[sVar2 - 7] = 0;"
+        },
+        {
+          "line": 19,
+          "text": "      sVar2 = strlen((char *)&local_120);"
+        },
+        {
+          "line": 20,
+          "text": "    }"
+        },
+        {
+          "line": 21,
+          "text": "    builtin_strncpy((char *)((int)&local_120 + sVar2),\"\\x1b[m\\n\",4);"
+        },
+        {
+          "line": 22,
+          "text": "    auStack_11a[sVar2 - 2] = 0;"
+        },
+        {
+          "line": 23,
+          "text": "    __dlog_print(3,6,\"DLNA_SP\",\"%s: %s(%d) > %s\",\"Dlna_interface.cpp\",\"SelectivePushSendEventToUI\","
+        },
+        {
+          "line": 24,
+          "text": "                 0xddf,&local_120);"
+        },
+        {
+          "line": 25,
+          "text": "    fprintf(stderr,\"[%-10s] %s\",\"DLNA_SP\",&local_120);"
+        },
+        {
+          "line": 26,
+          "text": "    uVar1 = 0;"
+        },
+        {
+          "line": 27,
+          "text": "  }"
+        },
+        {
+          "line": 28,
+          "text": "  else {"
+        },
+        {
+          "line": 29,
+          "text": "    (*gSelectivePushCallback)();"
+        },
+        {
+          "line": 30,
+          "text": "    uVar1 = 1;"
+        },
+        {
+          "line": 31,
+          "text": "  }"
+        },
+        {
+          "line": 32,
+          "text": "  return uVar1;"
+        },
+        {
+          "line": 33,
+          "text": "}"
+        },
+        {
+          "line": 34,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "artifact_sha256": "b23c103f6217fdc98ca3574181bd6253d2b7576ff1fa66f6c8610580157d6584",
+      "name": "SPClientManager::setCallback",
+      "original_elf_va": "0x411f8",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "/* SPClientManager::setCallback(void (*)(eSPNotifyClntEvent, stSPClntInfo*)) */"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "void __thiscall"
+        },
+        {
+          "line": 5,
+          "text": "SPClientManager::setCallback"
+        },
+        {
+          "line": 6,
+          "text": "          (SPClientManager *this,_func_void_eSPNotifyClntEvent_stSPClntInfo_ptr *param_1)"
+        },
+        {
+          "line": 7,
+          "text": ""
+        },
+        {
+          "line": 8,
+          "text": "{"
+        },
+        {
+          "line": 9,
+          "text": "  *(_func_void_eSPNotifyClntEvent_stSPClntInfo_ptr **)(this + 0x10) = param_1;"
+        },
+        {
+          "line": 10,
+          "text": "  return;"
+        },
+        {
+          "line": 11,
+          "text": "}"
+        },
+        {
+          "line": 12,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "artifact_sha256": "b23c103f6217fdc98ca3574181bd6253d2b7576ff1fa66f6c8610580157d6584",
+      "name": "SPClientManager::SPClientManager",
+      "original_elf_va": "0x41328",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "/* SPClientManager::SPClientManager() */"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "SPClientManager * __thiscall SPClientManager::SPClientManager(SPClientManager *this)"
+        },
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "{"
+        },
+        {
+          "line": 7,
+          "text": "  *(undefined4 *)(this + 4) = 0;"
+        },
+        {
+          "line": 8,
+          "text": "  *(undefined4 *)(this + 8) = 0;"
+        },
+        {
+          "line": 9,
+          "text": "  *(undefined ***)this = &PTR_notifyServiceStatus_00091348;"
+        },
+        {
+          "line": 10,
+          "text": "  *(undefined4 *)(this + 0xc) = 0;"
+        },
+        {
+          "line": 11,
+          "text": "  ClearResizeHistory();"
+        },
+        {
+          "line": 12,
+          "text": "  return this;"
+        },
+        {
+          "line": 13,
+          "text": "}"
+        },
+        {
+          "line": 14,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "artifact_sha256": "b23c103f6217fdc98ca3574181bd6253d2b7576ff1fa66f6c8610580157d6584",
+      "name": "SPFileStream::GetData",
+      "original_elf_va": "0x42cec",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 14,
+          "text": "  undefined1 auStack_11a [250];"
+        },
+        {
+          "line": 15,
+          "text": "  "
+        },
+        {
+          "line": 16,
+          "text": "  if (*(FILE **)(this + 0x18) == (FILE *)0x0) {"
+        },
+        {
+          "line": 17,
+          "text": "    *param_3 = 0;"
+        },
+        {
+          "line": 18,
+          "text": "    local_120 = 0x31335b1b;"
+        },
+        {
+          "line": 19,
+          "text": "    local_11c = 0x6d;"
+        },
+        {
+          "line": 41,
+          "text": "        param_2 = uVar1;"
+        },
+        {
+          "line": 42,
+          "text": "      }"
+        },
+        {
+          "line": 43,
+          "text": "      sVar3 = fread(param_1,1,param_2,*(FILE **)(this + 0x18));"
+        },
+        {
+          "line": 44,
+          "text": "      if (param_2 == sVar3) {"
+        },
+        {
+          "line": 45,
+          "text": "        uVar1 = *(uint *)(this + 8);"
+        },
+        {
+          "line": 46,
+          "text": "        iVar4 = *(int *)(this + 0xc);"
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "artifact_sha256": "b23c103f6217fdc98ca3574181bd6253d2b7576ff1fa66f6c8610580157d6584",
+      "name": "SPFileStream::Close",
+      "original_elf_va": "0x42fd4",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "/* SPFileStream::Close() */"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "void __thiscall SPFileStream::Close(SPFileStream *this)"
+        },
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "{"
+        },
+        {
+          "line": 7,
+          "text": "  size_t sVar1;"
+        },
+        {
+          "line": 8,
+          "text": "  char local_118 [256];"
+        },
+        {
+          "line": 9,
+          "text": "  "
+        },
+        {
+          "line": 10,
+          "text": "  builtin_strncpy(local_118,\"\\x1b[m\",4);"
+        },
+        {
+          "line": 11,
+          "text": "  memset(local_118 + 4,0,0xfc);"
+        },
+        {
+          "line": 12,
+          "text": "  snprintf(local_118 + 3,0xf8,\"Binary Close() (m_pFile : %x)-iljoo\\n\",*(undefined4 *)(this + 0x18));"
+        },
+        {
+          "line": 13,
+          "text": "  sVar1 = strlen(local_118);"
+        },
+        {
+          "line": 14,
+          "text": "  if (local_118[sVar1 - 1] == '\\n') {"
+        },
+        {
+          "line": 15,
+          "text": "    local_118[sVar1 - 1] = '\\0';"
+        },
+        {
+          "line": 16,
+          "text": "    sVar1 = strlen(local_118);"
+        },
+        {
+          "line": 17,
+          "text": "  }"
+        },
+        {
+          "line": 18,
+          "text": "  builtin_strncpy(local_118 + sVar1,\"\\x1b[m\\n\",5);"
+        },
+        {
+          "line": 19,
+          "text": "  __dlog_print(3,4,\"DLNA_SP\",\"%s: %s(%d) > %s\",\"SPFileStream.cpp\",\"Close\",0x49,local_118);"
+        },
+        {
+          "line": 20,
+          "text": "  if (*(FILE **)(this + 0x18) != (FILE *)0x0) {"
+        },
+        {
+          "line": 21,
+          "text": "    fclose(*(FILE **)(this + 0x18));"
+        },
+        {
+          "line": 22,
+          "text": "    *(undefined4 *)(this + 0x18) = 0;"
+        },
+        {
+          "line": 23,
+          "text": "  }"
+        },
+        {
+          "line": 24,
+          "text": "  *(undefined4 *)(this + 8) = 0;"
+        },
+        {
+          "line": 25,
+          "text": "  *(undefined4 *)(this + 0xc) = 0;"
+        },
+        {
+          "line": 26,
+          "text": "  return;"
+        },
+        {
+          "line": 27,
+          "text": "}"
+        },
+        {
+          "line": 28,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "artifact_sha256": "b23c103f6217fdc98ca3574181bd6253d2b7576ff1fa66f6c8610580157d6584",
+      "name": "SPFileStream::Open",
+      "original_elf_va": "0x4313c",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 25,
+          "text": "  auStack_182[sVar1 - 2] = 0;"
+        },
+        {
+          "line": 26,
+          "text": "  __dlog_print(3,4,\"DLNA_SP\",\"%s: %s(%d) > %s\",\"SPFileStream.cpp\",&DAT_00084eec,0x27,&local_188);"
+        },
+        {
+          "line": 27,
+          "text": "  if (*(int *)(this + 0x18) == 0) {"
+        },
+        {
+          "line": 28,
+          "text": "    __stream = fopen64(param_1,\"rb\");"
+        },
+        {
+          "line": 29,
+          "text": "    *(FILE **)(this + 0x18) = __stream;"
+        },
+        {
+          "line": 30,
+          "text": "    if (__stream == (FILE *)0x0) {"
+        },
+        {
+          "line": 31,
+          "text": "      local_188 = 0x31335b1b;"
+        },
+        {
+          "line": 32,
+          "text": "      local_184 = 0x6d;"
+        },
+        {
+          "line": 47,
+          "text": "    else {"
+        },
+        {
+          "line": 48,
+          "text": "      memset(&sStack_88,0,0x68);"
+        },
+        {
+          "line": 49,
+          "text": "      __fildes = fileno(__stream);"
+        },
+        {
+          "line": 50,
+          "text": "      __fxstat64(3,__fildes,&sStack_88);"
+        },
+        {
+          "line": 51,
+          "text": "      local_188 = 0x6d5b1b;"
+        },
+        {
+          "line": 52,
+          "text": "      *(undefined4 *)(this + 0x10) = (undefined4)sStack_88.st_size;"
+        },
+        {
+          "line": 53,
+          "text": "      *(undefined4 *)(this + 0x14) = sStack_88.st_size._4_4_;"
+        },
+        {
+          "line": 54,
+          "text": "      *(undefined4 *)(this + 8) = (undefined4)sStack_88.st_size;"
+        },
+        {
+          "line": 55,
+          "text": "      *(undefined4 *)(this + 0xc) = sStack_88.st_size._4_4_;"
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "artifact_sha256": "b23c103f6217fdc98ca3574181bd6253d2b7576ff1fa66f6c8610580157d6584",
+      "name": "SPFileStream::SPFileStream",
+      "original_elf_va": "0x435e4",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "/* SPFileStream::SPFileStream() */"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "void __thiscall SPFileStream::SPFileStream(SPFileStream *this)"
+        },
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "{"
+        },
+        {
+          "line": 7,
+          "text": "  *(undefined4 *)(this + 0x18) = 0;"
+        },
+        {
+          "line": 8,
+          "text": "  *(undefined4 *)(this + 8) = 0;"
+        },
+        {
+          "line": 9,
+          "text": "  *(undefined4 *)(this + 0xc) = 0;"
+        },
+        {
+          "line": 10,
+          "text": "  *(undefined ***)this = &PTR__SPFileStream_00091368;"
+        },
+        {
+          "line": 11,
+          "text": "  *(undefined4 *)(this + 0x10) = 0;"
+        },
+        {
+          "line": 12,
+          "text": "  *(undefined4 *)(this + 0x14) = 0;"
+        },
+        {
+          "line": 13,
+          "text": "  return;"
+        },
+        {
+          "line": 14,
+          "text": "}"
+        },
+        {
+          "line": 15,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer-consumer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "artifact_sha256": "89f039a06417b3b3a3d1824ad768096cdb883a4cb6aee4ae1d9cd9fea1dc8f1b",
+      "name": "DlnaSelectivePushSetCallback",
+      "original_elf_va": "0x16148",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "/* DlnaSelectivePushSetCallback(void (*)(SMP_CALLBACK_EVENT, void*, int)) */"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "void DlnaSelectivePushSetCallback(_func_void_SMP_CALLBACK_EVENT_void_ptr_int *param_1)"
+        },
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "{"
+        },
+        {
+          "line": 7,
+          "text": "  gSelectivePushCallback = param_1;"
+        },
+        {
+          "line": 8,
+          "text": "  return;"
+        },
+        {
+          "line": 9,
+          "text": "}"
+        },
+        {
+          "line": 10,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer-consumer/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "artifact_sha256": "89f039a06417b3b3a3d1824ad768096cdb883a4cb6aee4ae1d9cd9fea1dc8f1b",
+      "name": "DlnaSelective_NPush_Initialize",
+      "original_elf_va": "0x21914",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 56,
+          "text": "  }"
+        },
+        {
+          "line": 57,
+          "text": "  else {"
+        },
+        {
+          "line": 58,
+          "text": "    DlnaSelectivePushSetCallback(param_1);"
+        },
+        {
+          "line": 59,
+          "text": "    SPSetImageTransferSize(DAT_0009422c == 0);"
+        },
+        {
+          "line": 60,
+          "text": "    iVar2 = SMPGetModelName();"
+        },
+        {
+          "line": 61,
+          "text": "    if ((iVar2 != 0) && (iVar2 = SMPString::ReadString(), iVar2 != 0)) {"
+        },
+        {
+          "line": 62,
+          "text": "      SMPString::ReadString();"
+        },
+        {
+          "line": 63,
+          "text": "      SNPushStart();"
+        },
+        {
+          "line": 64,
+          "text": "      return 1;"
+        },
+        {
+          "line": 65,
+          "text": "    }"
+        },
+        {
+          "line": 66,
+          "text": "    local_120 = 0x31335b1b;"
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer-consumer/outputs/ghidra/smart-wifi-app-1a3cd718c355/decompiled.jsonl",
+      "artifact_sha256": "db7df8af3f8a0f5a17f27f49e334fe74e37c5e94ca78fedadae4d9d96f5742c6",
+      "name": "CSNetworkAPI::responseToUI",
+      "original_elf_va": "0x58244",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "/* CSNetworkAPI::responseToUI(int, int, int, bool) */"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "undefined4 CSNetworkAPI::responseToUI(int param_1,int param_2,int param_3,bool param_4)"
+        },
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "{"
+        },
+        {
+          "line": 7,
+          "text": "  int iVar1;"
+        },
+        {
+          "line": 8,
+          "text": "  undefined4 uVar2;"
+        },
+        {
+          "line": 9,
+          "text": "  size_t sVar3;"
+        },
+        {
+          "line": 10,
+          "text": "  int *piVar4;"
+        },
+        {
+          "line": 11,
+          "text": "  char *__s;"
+        },
+        {
+          "line": 12,
+          "text": "  CSAFEvent *this;"
+        },
+        {
+          "line": 13,
+          "text": "  char acStack_121 [257];"
+        },
+        {
+          "line": 14,
+          "text": "  "
+        },
+        {
+          "line": 15,
+          "text": "  this = (CSAFEvent *)&DAT_001440ac;"
+        },
+        {
+          "line": 16,
+          "text": "  if (((DAT_001448e0 & 1) == 0) && (iVar1 = __cxa_guard_acquire(&DAT_001448e0), iVar1 != 0)) {"
+        },
+        {
+          "line": 17,
+          "text": "    iVar1 = 99;"
+        },
+        {
+          "line": 18,
+          "text": "    do {"
+        },
+        {
+          "line": 19,
+          "text": "      CSAFEvent::CSAFEvent(this);"
+        },
+        {
+          "line": 20,
+          "text": "      iVar1 = iVar1 + -1;"
+        },
+        {
+          "line": 21,
+          "text": "      this = this + 0x15;"
+        },
+        {
+          "line": 22,
+          "text": "    } while (iVar1 != -1);"
+        },
+        {
+          "line": 23,
+          "text": "    __cxa_guard_release(&DAT_001448e0);"
+        },
+        {
+          "line": 24,
+          "text": "    __aeabi_atexit(0,FUN_000575b4,&DAT_0013ca44);"
+        },
+        {
+          "line": 25,
+          "text": "  }"
+        },
+        {
+          "line": 26,
+          "text": "  __s = acStack_121 + 1;"
+        },
+        {
+          "line": 27,
+          "text": "  iVar1 = DAT_001448e4 * 0x15;"
+        },
+        {
+          "line": 28,
+          "text": "  piVar4 = (int *)(&DAT_001440ac + iVar1);"
+        },
+        {
+          "line": 29,
+          "text": "  DAT_001448e4 = (DAT_001448e4 + 1) % 100;"
+        },
+        {
+          "line": 30,
+          "text": "  (**(code **)(*piVar4 + 0x10))(piVar4,0x13);"
+        },
+        {
+          "line": 31,
+          "text": "  (**(code **)(*piVar4 + 0x14))(piVar4,param_1);"
+        },
+        {
+          "line": 32,
+          "text": "  (**(code **)(*piVar4 + 0x18))(piVar4,param_2);"
+        },
+        {
+          "line": 33,
+          "text": "  (**(code **)(*piVar4 + 0x1c))(piVar4,param_3);"
+        },
+        {
+          "line": 34,
+          "text": "  (&DAT_001440c0)[iVar1] = param_4;"
+        },
+        {
+          "line": 35,
+          "text": "  builtin_strncpy(acStack_121 + 1,\"\\x1b[m\",4);"
+        },
+        {
+          "line": 36,
+          "text": "  memset(acStack_121 + 5,0,0xfc);"
+        },
+        {
+          "line": 37,
+          "text": "  iVar1 = DAT_001448e4;"
+        },
+        {
+          "line": 38,
+          "text": "  uVar2 = CSNetworkAPIMsgId::getString(param_1);"
+        },
+        {
+          "line": 39,
+          "text": "  snprintf(acStack_121 + 4,0xf8,\"[%s][%d:0x%X] UI <= NetworkAPI [0x%04X]%s, %d, %d, %d\","
+        },
+        {
+          "line": 40,
+          "text": "           \"responseToUI\",iVar1,piVar4,param_1,uVar2,param_2,param_3,(uint)param_4);"
+        },
+        {
+          "line": 41,
+          "text": "  sVar3 = strlen(__s);"
+        },
+        {
+          "line": 42,
+          "text": "  if (acStack_121[sVar3] == '\\n') {"
+        },
+        {
+          "line": 43,
+          "text": "    acStack_121[sVar3] = '\\0';"
+        },
+        {
+          "line": 44,
+          "text": "    sVar3 = strlen(__s);"
+        },
+        {
+          "line": 45,
+          "text": "  }"
+        },
+        {
+          "line": 46,
+          "text": "  builtin_strncpy(acStack_121 + sVar3 + 1,\"\\x1b[m\\n\",5);"
+        },
+        {
+          "line": 47,
+          "text": "  __dlog_print(3,4,\"APP_WIFI\",\"%s: %s(%d) > %s\",\"CSNetworkAPI.cpp\",\"responseToUI\",0x11f,__s);"
+        },
+        {
+          "line": 48,
+          "text": "  g_idle_add(UI_Event_Send_Manager,piVar4);"
+        },
+        {
+          "line": 49,
+          "text": "  return 1;"
+        },
+        {
+          "line": 50,
+          "text": "}"
+        },
+        {
+          "line": 51,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer-binding/outputs/ghidra/smart-wifi-app-1a3cd718c355/decompiled.jsonl",
+      "artifact_sha256": "56fc95de72d9385a112a0304ffb20641606253ba21ad7545a16daedebbb5b759",
+      "name": "CSNetworkAPI::handleSmartphoneLink",
+      "original_elf_va": "0x59068",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 58,
+          "text": "    DlnaSelectivePush_SendUserStartEvent(param_2 != 0);"
+        },
+        {
+          "line": 59,
+          "text": "    break;"
+        },
+        {
+          "line": 60,
+          "text": "  case 0x760:"
+        },
+        {
+          "line": 61,
+          "text": "    DlnaSelective_NPush_Initialize(&LAB_0005a368);"
+        },
+        {
+          "line": 62,
+          "text": "    break;"
+        },
+        {
+          "line": 63,
+          "text": "  case 0x761:"
+        },
+        {
+          "line": 64,
+          "text": "    DlnaSelective_NPush_Terminate();"
+        },
+        {
+          "line": 65,
+          "text": "    break;"
+        },
+        {
+          "line": 66,
+          "text": "  case 0x762:"
+        },
+        {
+          "line": 67,
+          "text": "    DlnaSelective_NPush_StartFileTransfer(param_2,param_3);"
+        },
+        {
+          "line": 68,
+          "text": "    break;"
+        },
+        {
+          "line": 69,
+          "text": "  case 0x763:"
+        },
+        {
+          "line": 70,
+          "text": "    DlnaSelective_NPush_StopFileTransfer(param_2,param_3);"
+        },
+        {
+          "line": 71,
+          "text": "    break;"
+        },
+        {
+          "line": 72,
+          "text": "  case 0x764:"
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer-binding/outputs/ghidra/smart-wifi-app-1a3cd718c355/decompiled.jsonl",
+      "artifact_sha256": "56fc95de72d9385a112a0304ffb20641606253ba21ad7545a16daedebbb5b759",
+      "name": "CSNetworkAPI::ConvertNetworkToUiEventId",
+      "original_elf_va": "0x59d88",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 101,
+          "text": "    }"
+        },
+        {
+          "line": 102,
+          "text": "  }"
+        },
+        {
+          "line": 103,
+          "text": "  else if (param_1 == 0x700) {"
+        },
+        {
+          "line": 104,
+          "text": "    switch(param_2) {"
+        },
+        {
+          "line": 105,
+          "text": "    case 4:"
+        },
+        {
+          "line": 106,
+          "text": "      return 0x701;"
+        },
+        {
+          "line": 139,
+          "text": "    case 0x48:"
+        },
+        {
+          "line": 140,
+          "text": "      return 0x76b;"
+        },
+        {
+          "line": 141,
+          "text": "    case 0x49:"
+        },
+        {
+          "line": 142,
+          "text": "      return 0x76c;"
+        },
+        {
+          "line": 143,
+          "text": "    case 0x4a:"
+        },
+        {
+          "line": 144,
+          "text": "      return 0x76d;"
+        },
+        {
+          "line": 145,
+          "text": "    case 0x4b:"
+        },
+        {
+          "line": 146,
+          "text": "      return 0x76e;"
+        },
+        {
+          "line": 147,
+          "text": "    case 0x4c:"
+        },
+        {
+          "line": 148,
+          "text": "      return 0x76f;"
+        },
+        {
+          "line": 149,
+          "text": "    case 0x4d:"
+        },
+        {
+          "line": 150,
+          "text": "      return 0x770;"
+        },
+        {
+          "line": 151,
+          "text": "    case 0x4e:"
+        },
+        {
+          "line": 152,
+          "text": "      return 0x769;"
+        },
+        {
+          "line": 153,
+          "text": "    case 0x4f:"
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer-binding/outputs/ghidra/smart-wifi-app-1a3cd718c355/decompiled.jsonl",
+      "artifact_sha256": "56fc95de72d9385a112a0304ffb20641606253ba21ad7545a16daedebbb5b759",
+      "name": "CSNetworkAPI::ConvertNetworkToUiEventStatus",
+      "original_elf_va": "0x5a328",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "/* CSNetworkAPI::ConvertNetworkToUiEventStatus(int, int) */"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "int CSNetworkAPI::ConvertNetworkToUiEventStatus(int param_1,int param_2)"
+        },
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "{"
+        },
+        {
+          "line": 7,
+          "text": "  if (((param_1 & 0xff00U) == 0x500) && (param_1 == 0x516)) {"
+        },
+        {
+          "line": 8,
+          "text": "    if (param_2 - 1U < 5) {"
+        },
+        {
+          "line": 9,
+          "text": "      param_2 = *(int *)(&DAT_00108510 + (param_2 - 1U) * 4);"
+        },
+        {
+          "line": 10,
+          "text": "    }"
+        },
+        {
+          "line": 11,
+          "text": "    else {"
+        },
+        {
+          "line": 12,
+          "text": "      param_2 = 2;"
+        },
+        {
+          "line": 13,
+          "text": "    }"
+        },
+        {
+          "line": 14,
+          "text": "  }"
+        },
+        {
+          "line": 15,
+          "text": "  return param_2;"
+        },
+        {
+          "line": 16,
+          "text": "}"
+        },
+        {
+          "line": 17,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer-binding/outputs/ghidra/smart-wifi-app-1a3cd718c355/decompiled.jsonl",
+      "artifact_sha256": "56fc95de72d9385a112a0304ffb20641606253ba21ad7545a16daedebbb5b759",
+      "name": "CAPPNetworkSmartphoneLinkState::handleNetworkEvent",
+      "original_elf_va": "0x7b0bc",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "/* CAPPNetworkSmartphoneLinkState::handleNetworkEvent(ISAFEvent const*) */"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "ISAFEvent * CAPPNetworkSmartphoneLinkState::handleNetworkEvent(ISAFEvent *param_1)"
+        },
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "{"
+        },
+        {
+          "line": 7,
+          "text": "  return param_1;"
+        },
+        {
+          "line": 8,
+          "text": "}"
+        },
+        {
+          "line": 9,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer-binding/outputs/ghidra/smart-wifi-app-1a3cd718c355/decompiled.jsonl",
+      "artifact_sha256": "56fc95de72d9385a112a0304ffb20641606253ba21ad7545a16daedebbb5b759",
+      "name": "CAPPNetworkSmartphoneLinkState::handle",
+      "original_elf_va": "0x810a8",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "/* CAPPNetworkSmartphoneLinkState::handle(ISAFEvent const*) */"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "void __thiscall"
+        },
+        {
+          "line": 5,
+          "text": "CAPPNetworkSmartphoneLinkState::handle(CAPPNetworkSmartphoneLinkState *this,ISAFEvent *param_1)"
+        },
+        {
+          "line": 6,
+          "text": ""
+        },
+        {
+          "line": 7,
+          "text": "{"
+        },
+        {
+          "line": 8,
+          "text": "  undefined4 uVar1;"
+        },
+        {
+          "line": 9,
+          "text": "  int iVar2;"
+        },
+        {
+          "line": 10,
+          "text": "  undefined4 uVar3;"
+        },
+        {
+          "line": 11,
+          "text": "  size_t sVar4;"
+        },
+        {
+          "line": 12,
+          "text": "  int *piVar5;"
+        },
+        {
+          "line": 13,
+          "text": "  char local_120 [260];"
+        },
+        {
+          "line": 14,
+          "text": "  "
+        },
+        {
+          "line": 15,
+          "text": "  uVar1 = (*(code *)**(undefined4 **)param_1)(param_1);"
+        },
+        {
+          "line": 16,
+          "text": "  switch(uVar1) {"
+        },
+        {
+          "line": 17,
+          "text": "  case 1:"
+        },
+        {
+          "line": 18,
+          "text": "    handleKeyEvent(this,param_1);"
+        },
+        {
+          "line": 19,
+          "text": "    break;"
+        },
+        {
+          "line": 20,
+          "text": "  default:"
+        },
+        {
+          "line": 21,
+          "text": "    piVar5 = (int *)(**(code **)(*(int *)this + 0xc))(this);"
+        },
+        {
+          "line": 22,
+          "text": "    (**(code **)(*piVar5 + 8))(piVar5,param_1);"
+        },
+        {
+          "line": 23,
+          "text": "    break;"
+        },
+        {
+          "line": 24,
+          "text": "  case 3:"
+        },
+        {
+          "line": 25,
+          "text": "    iVar2 = (**(code **)(*(int *)param_1 + 8))(param_1);"
+        },
+        {
+          "line": 26,
+          "text": "    if (iVar2 == 1) {"
+        },
+        {
+          "line": 27,
+          "text": "      builtin_strncpy(local_120,\"\\x1b[m\",4);"
+        },
+        {
+          "line": 28,
+          "text": "      memset(local_120 + 4,0,0xfc);"
+        },
+        {
+          "line": 29,
+          "text": "      uVar1 = (**(code **)(*(int *)this + 0x20))(this);"
+        },
+        {
+          "line": 30,
+          "text": "      uVar3 = CUSLNetworkWifi::GetSoftApCreateFlag();"
+        },
+        {
+          "line": 31,
+          "text": "      snprintf(local_120 + 3,0xf8,\"[%s::%s] eEVENT_ID_MODE_DIAL:%d\",uVar1,\"handle\",uVar3);"
+        },
+        {
+          "line": 32,
+          "text": "      sVar4 = strlen(local_120);"
+        },
+        {
+          "line": 33,
+          "text": "      if (local_120[sVar4 - 1] == '\\n') {"
+        },
+        {
+          "line": 34,
+          "text": "        local_120[sVar4 - 1] = '\\0';"
+        },
+        {
+          "line": 35,
+          "text": "        sVar4 = strlen(local_120);"
+        },
+        {
+          "line": 36,
+          "text": "      }"
+        },
+        {
+          "line": 37,
+          "text": "      builtin_strncpy(local_120 + sVar4,\"\\x1b[m\\n\",5);"
+        },
+        {
+          "line": 38,
+          "text": "      __dlog_print(3,4,\"APP_WIFI\",\"%s: %s(%d) > %s\",\"CAPPNetworkSmartphoneLinkState.cpp\",\"handle\","
+        },
+        {
+          "line": 39,
+          "text": "                   0x1e0,local_120);"
+        },
+        {
+          "line": 40,
+          "text": "      DAT_0014df8c = DAT_0014df8c + 1;"
+        },
+        {
+          "line": 41,
+          "text": "      if (DAT_0014df8c == 1) {"
+        },
+        {
+          "line": 42,
+          "text": "        Terminate(this,0x3f9);"
+        },
+        {
+          "line": 43,
+          "text": "      }"
+        },
+        {
+          "line": 44,
+          "text": "    }"
+        },
+        {
+          "line": 45,
+          "text": "    break;"
+        },
+        {
+          "line": 46,
+          "text": "  case 0x12:"
+        },
+        {
+          "line": 47,
+          "text": "    handleGUIEvent(this,param_1);"
+        },
+        {
+          "line": 48,
+          "text": "    break;"
+        },
+        {
+          "line": 49,
+          "text": "  case 0x13:"
+        },
+        {
+          "line": 50,
+          "text": "    break;"
+        },
+        {
+          "line": 51,
+          "text": "  }"
+        },
+        {
+          "line": 52,
+          "text": "  return;"
+        },
+        {
+          "line": 53,
+          "text": "}"
+        },
+        {
+          "line": 54,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer-outcome/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/decompiled.jsonl",
+      "artifact_sha256": "307ff830ff2b4983c3d3af7761d03785614d81fc50c51ad8240207ff7f0c3d8b",
+      "name": "SNPushStart",
+      "original_elf_va": "0x58f60",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "void SNPushStart(void)"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "{"
+        },
+        {
+          "line": 5,
+          "text": "  size_t sVar1;"
+        },
+        {
+          "line": 6,
+          "text": "  SPServer *this;"
+        },
+        {
+          "line": 7,
+          "text": "  SPClientManager *pSVar2;"
+        },
+        {
+          "line": 8,
+          "text": "  char local_118 [256];"
+        },
+        {
+          "line": 9,
+          "text": "  "
+        },
+        {
+          "line": 10,
+          "text": "  builtin_strncpy(local_118,\"\\x1b[m\",4);"
+        },
+        {
+          "line": 11,
+          "text": "  memset(local_118 + 4,0,0xfc);"
+        },
+        {
+          "line": 12,
+          "text": "  snprintf(local_118 + 3,0xf8,\" Entry \\n\");"
+        },
+        {
+          "line": 13,
+          "text": "  sVar1 = strlen(local_118);"
+        },
+        {
+          "line": 14,
+          "text": "  if (local_118[sVar1 - 1] == '\\n') {"
+        },
+        {
+          "line": 15,
+          "text": "    local_118[sVar1 - 1] = '\\0';"
+        },
+        {
+          "line": 16,
+          "text": "    sVar1 = strlen(local_118);"
+        },
+        {
+          "line": 17,
+          "text": "  }"
+        },
+        {
+          "line": 18,
+          "text": "  builtin_strncpy(local_118 + sVar1,\"\\x1b[m\\n\",5);"
+        },
+        {
+          "line": 19,
+          "text": "  __dlog_print(3,4,\"DLNA_SP\",\"%s: %s(%d) > %s\",\"SPInterface.cpp\",\"SNPushStart\",0x15c,local_118);"
+        },
+        {
+          "line": 20,
+          "text": "  this = operator_new(0x58);"
+        },
+        {
+          "line": 21,
+          "text": "  SPServer::SPServer(this);"
+        },
+        {
+          "line": 22,
+          "text": "  ptheSpServer = this;"
+        },
+        {
+          "line": 23,
+          "text": "  SPServer::setCallback(this,SNPushControlNotificationCallback);"
+        },
+        {
+          "line": 24,
+          "text": "  SPGenericThread::start((SPGenericThread *)ptheSpServer);"
+        },
+        {
+          "line": 25,
+          "text": "  FUN_000656a4(1);"
+        },
+        {
+          "line": 26,
+          "text": "  pSVar2 = (SPClientManager *)SPClientManager::getInstance();"
+        },
+        {
+          "line": 27,
+          "text": "  SPClientManager::setImageTransferSize(pSVar2,DAT_00094538);"
+        },
+        {
+          "line": 28,
+          "text": "  pSVar2 = (SPClientManager *)SPClientManager::getInstance();"
+        },
+        {
+          "line": 29,
+          "text": "  SPClientManager::setCallback(pSVar2,SNPushClientNotificationCallback);"
+        },
+        {
+          "line": 30,
+          "text": "  return;"
+        },
+        {
+          "line": 31,
+          "text": "}"
+        },
+        {
+          "line": 32,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer-outcome/outputs/ghidra/smart-wifi-app-1a3cd718c355/decompiled.jsonl",
+      "artifact_sha256": "8a2776f1456c6c236ff947e17d0dd5d9f85191a7b32068fb273a5bcd72bd25ed",
+      "name": "UI_Event_Send_Manager",
+      "original_elf_va": "0x49fb0",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "/* UI_Event_Send_Manager(void*) */"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "undefined4 UI_Event_Send_Manager(void *param_1)"
+        },
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "{"
+        },
+        {
+          "line": 7,
+          "text": "  undefined4 uVar1;"
+        },
+        {
+          "line": 8,
+          "text": "  undefined4 uVar2;"
+        },
+        {
+          "line": 9,
+          "text": "  undefined4 uVar3;"
+        },
+        {
+          "line": 10,
+          "text": "  undefined4 uVar4;"
+        },
+        {
+          "line": 11,
+          "text": "  size_t sVar5;"
+        },
+        {
+          "line": 12,
+          "text": "  int *piVar6;"
+        },
+        {
+          "line": 13,
+          "text": "  char local_118 [256];"
+        },
+        {
+          "line": 14,
+          "text": "  "
+        },
+        {
+          "line": 15,
+          "text": "  if (param_1 != (void *)0x0) {"
+        },
+        {
+          "line": 16,
+          "text": "    builtin_strncpy(local_118,\"\\x1b[m\",4);"
+        },
+        {
+          "line": 17,
+          "text": "    memset(local_118 + 4,0,0xfc);"
+        },
+        {
+          "line": 18,
+          "text": "    uVar1 = (*(code *)**(undefined4 **)param_1)(param_1);"
+        },
+        {
+          "line": 19,
+          "text": "    uVar2 = (**(code **)(*(int *)param_1 + 4))(param_1);"
+        },
+        {
+          "line": 20,
+          "text": "    uVar3 = (**(code **)(*(int *)param_1 + 8))(param_1);"
+        },
+        {
+          "line": 21,
+          "text": "    uVar4 = (**(code **)(*(int *)param_1 + 0xc))(param_1);"
+        },
+        {
+          "line": 22,
+          "text": "    snprintf(local_118 + 3,0xf8,\"[%s][0x%X] type[%d], id[%d], status[%d], param[%d], wifi[%d]\","
+        },
+        {
+          "line": 23,
+          "text": "             \"UI_Event_Send_Manager\",param_1,uVar1,uVar2,uVar3,uVar4,"
+        },
+        {
+          "line": 24,
+          "text": "             (uint)*(byte *)((int)param_1 + 0x14));"
+        },
+        {
+          "line": 25,
+          "text": "    sVar5 = strlen(local_118);"
+        },
+        {
+          "line": 26,
+          "text": "    if (local_118[sVar5 - 1] == '\\n') {"
+        },
+        {
+          "line": 27,
+          "text": "      local_118[sVar5 - 1] = '\\0';"
+        },
+        {
+          "line": 28,
+          "text": "      sVar5 = strlen(local_118);"
+        },
+        {
+          "line": 29,
+          "text": "    }"
+        },
+        {
+          "line": 30,
+          "text": "    builtin_strncpy(local_118 + sVar5,\"\\x1b[m\\n\",5);"
+        },
+        {
+          "line": 31,
+          "text": "    __dlog_print(3,4,\"APP_WIFI\",\"%s: %s(%d) > %s\",\"ui_event_manager.cpp\",\"UI_Event_Send_Manager\","
+        },
+        {
+          "line": 32,
+          "text": "                 0x11c,local_118);"
+        },
+        {
+          "line": 33,
+          "text": "    piVar6 = (int *)CAPPUIApplication::getInstance();"
+        },
+        {
+          "line": 34,
+          "text": "    (**(code **)(*piVar6 + 0xc))(piVar6,param_1);"
+        },
+        {
+          "line": 35,
+          "text": "  }"
+        },
+        {
+          "line": 36,
+          "text": "  return 0;"
+        },
+        {
+          "line": 37,
+          "text": "}"
+        },
+        {
+          "line": 38,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "artifact": ".work/run004/transfer-dispatch/outputs/ghidra/smart-wifi-app-1a3cd718c355/decompiled.jsonl",
+      "artifact_sha256": "cd8bb005699d07003a57f32d65b4e1647fbf186753cb046fa407e6245229fa24",
+      "name": "CAPPUIApplication::dispatch",
+      "original_elf_va": "0x4cd30",
+      "completed": true,
+      "error": "",
+      "selected_c": [
+        {
+          "line": 1,
+          "text": ""
+        },
+        {
+          "line": 2,
+          "text": "/* CAPPUIApplication::dispatch(ISAFEvent*) const */"
+        },
+        {
+          "line": 3,
+          "text": ""
+        },
+        {
+          "line": 4,
+          "text": "void __thiscall CAPPUIApplication::dispatch(CAPPUIApplication *this,ISAFEvent *param_1)"
+        },
+        {
+          "line": 5,
+          "text": ""
+        },
+        {
+          "line": 6,
+          "text": "{"
+        },
+        {
+          "line": 7,
+          "text": "  int iVar1;"
+        },
+        {
+          "line": 8,
+          "text": "  "
+        },
+        {
+          "line": 9,
+          "text": "  CSAFStateMachine::dispatch((ISAFEvent *)this);"
+        },
+        {
+          "line": 10,
+          "text": "  iVar1 = (*(code *)**(undefined4 **)param_1)(param_1);"
+        },
+        {
+          "line": 11,
+          "text": "  if (iVar1 == 0x13) {"
+        },
+        {
+          "line": 12,
+          "text": "    if (param_1[0x14] != (ISAFEvent)0x0) {"
+        },
+        {
+          "line": 13,
+          "text": "      param_1[0x14] = (ISAFEvent)0x0;"
+        },
+        {
+          "line": 14,
+          "text": "    }"
+        },
+        {
+          "line": 15,
+          "text": "    return;"
+        },
+        {
+          "line": 16,
+          "text": "  }"
+        },
+        {
+          "line": 17,
+          "text": "  return;"
+        },
+        {
+          "line": 18,
+          "text": "}"
+        },
+        {
+          "line": 19,
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No target execution, live symbol binding, device I/O or receiver durability observations.",
+    "Default-visible dynamic symbols can be interposed. Relocations establish intended link references, not observed runtime resolution.",
+    "Inferred types and object fields need ABI validation."
+  ]
+}

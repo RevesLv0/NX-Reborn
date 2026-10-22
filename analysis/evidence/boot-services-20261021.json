@@ -1,0 +1,2891 @@
+{
+  "schema_version": 1,
+  "method": "read extracted configuration and raw module strings; no target execution",
+  "limitations": [
+    "Unit declarations are not evaluated as a systemd transaction.",
+    "No runtime target selection, conditions, generator output or D-Bus traffic observed.",
+    "Module metadata strings are not proof of module loading."
+  ],
+  "units": [
+    {
+      "path": "/etc/systemd/system/opt-usr.mount",
+      "bytes": 224,
+      "sha256": "bc689508974c3846662d79418f44cd69e38ff12ae3240f9fc439281eb4d8c503",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "System user data directory on /opt/usr",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "DefaultDependencies",
+          "value": "no",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "Before",
+          "value": "local-fs.target",
+          "line": 4
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "local-fs-pre.target opt.mount",
+          "line": 5
+        },
+        {
+          "section": "Mount",
+          "key": "What",
+          "value": "/dev/mmcblk0p14",
+          "line": 8
+        },
+        {
+          "section": "Mount",
+          "key": "Where",
+          "value": "/opt/usr",
+          "line": 9
+        },
+        {
+          "section": "Mount",
+          "key": "Type",
+          "value": "ext4",
+          "line": 10
+        },
+        {
+          "section": "Mount",
+          "key": "Options",
+          "value": "errors=panic,nosuid",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "path": "/etc/systemd/system/opt.mount",
+      "bytes": 201,
+      "sha256": "7d6fa1e8d64ed030c34e734df01f0db8245cd729da4c0c9a396e99248ba21770",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "System data directory on /opt",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "DefaultDependencies",
+          "value": "no",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "Before",
+          "value": "local-fs.target",
+          "line": 4
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "local-fs-pre.target",
+          "line": 5
+        },
+        {
+          "section": "Mount",
+          "key": "What",
+          "value": "/dev/mmcblk0p11",
+          "line": 8
+        },
+        {
+          "section": "Mount",
+          "key": "Where",
+          "value": "/opt",
+          "line": 9
+        },
+        {
+          "section": "Mount",
+          "key": "Type",
+          "value": "ext4",
+          "line": 10
+        },
+        {
+          "section": "Mount",
+          "key": "Options",
+          "value": "errors=panic,nosuid",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/allshare-dms.service",
+      "bytes": 153,
+      "sha256": "df63a8b3465bf8adad382e29330720b8af7454480a383e67f2c73211b54f7908",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "NearbyDevices DMS",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "tizen-runtime.target",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "Requires",
+          "value": "tizen-runtime.target",
+          "line": 4
+        },
+        {
+          "section": "Service",
+          "key": "Type",
+          "value": "simple",
+          "line": 7
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/usr/bin/allshare-dms.sh",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/connman.service",
+      "bytes": 300,
+      "sha256": "165f12ea5bebdffe69ac6c76d8ba0d3698f53e6242091418df4ee2ca0d00b18b",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Connection service",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "tizen-system.target shutdown.target",
+          "line": 3
+        },
+        {
+          "section": "Service",
+          "key": "Type",
+          "value": "dbus",
+          "line": 6
+        },
+        {
+          "section": "Service",
+          "key": "BusName",
+          "value": "net.connman",
+          "line": 7
+        },
+        {
+          "section": "Service",
+          "key": "RemainAfterExit",
+          "value": "yes",
+          "line": 8
+        },
+        {
+          "section": "Service",
+          "key": "ExecStartPre",
+          "value": "/usr/bin/dbus-send --system --dest=net.netconfig / net.netconfig.auto.activate",
+          "line": 9
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/usr/sbin/connmand",
+          "line": 10
+        },
+        {
+          "section": "Install",
+          "key": "WantedBy",
+          "value": "multi-user.target",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/dbus.service",
+      "bytes": 353,
+      "sha256": "9899a0ac23caed638f4c9c950c7b4649037bf36fcfeb55fb27a11ab9b69c359b",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "D-Bus System Message Bus",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "Requires",
+          "value": "dbus.socket",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "syslog.target",
+          "line": 4
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation",
+          "line": 7
+        },
+        {
+          "section": "Service",
+          "key": "ExecReload",
+          "value": "/usr/bin/dbus-send --print-reply --system --type=method_call --dest=org.freedesktop.DBus / org.freedesktop.DBus.ReloadConfig",
+          "line": 8
+        },
+        {
+          "section": "Service",
+          "key": "OOMScoreAdjust",
+          "value": "-900",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/dbus.socket",
+      "bytes": 141,
+      "sha256": "061b55d0f9000e8f59b70afe091756f4305f91a528202425f3b237d63eb6db09",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "D-Bus System Message Bus Socket",
+          "line": 2
+        },
+        {
+          "section": "Socket",
+          "key": "ListenStream",
+          "value": "/var/run/dbus/system_bus_socket",
+          "line": 5
+        },
+        {
+          "section": "Socket",
+          "key": "SmackLabelIPIn",
+          "value": "*",
+          "line": 6
+        },
+        {
+          "section": "Socket",
+          "key": "SmackLabelIPOut",
+          "value": "@",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/deviced-pre.service",
+      "bytes": 145,
+      "sha256": "b9a1c056c626e7e1ed974d89649d2ec3a350ef9aa158933e4726c04d7dd118d2",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "prepare device daemon",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "DefaultDependencies",
+          "value": "no",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "Before",
+          "value": "deviced.service",
+          "line": 4
+        },
+        {
+          "section": "Service",
+          "key": "Type",
+          "value": "oneshot",
+          "line": 7
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/usr/bin/deviced-pre.sh",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/deviced.service",
+      "bytes": 332,
+      "sha256": "e8a99931eb47fb6adc5da7ec1b950ee25b840aee08d8fc07858eebb91e03d32a",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "System device daemon",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "deviced-pre.service immvibed.service pulseaudio.service sound-init.service",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "Requires",
+          "value": "deviced-pre.service",
+          "line": 4
+        },
+        {
+          "section": "Service",
+          "key": "EnvironmentFile",
+          "value": "/run/deviced/deviced_env",
+          "line": 7
+        },
+        {
+          "section": "Service",
+          "key": "StandardError",
+          "value": "tty",
+          "line": 8
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/usr/bin/deviced",
+          "line": 9
+        },
+        {
+          "section": "Service",
+          "key": "Restart",
+          "value": "always",
+          "line": 10
+        },
+        {
+          "section": "Service",
+          "key": "RestartSec",
+          "value": "0",
+          "line": 11
+        },
+        {
+          "section": "Service",
+          "key": "KillSignal",
+          "value": "SIGUSR1",
+          "line": 12
+        },
+        {
+          "section": "Install",
+          "key": "WantedBy",
+          "value": "multi-user.target",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/di-camera-app.service",
+      "bytes": 321,
+      "sha256": "5f7824afd875a7073618401d3e157af1f909530be12f1db7dee179c2a79d7f5c",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Start di-camera-app",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "hib_ready.service xorg.service default.target wm_ready.service deviced.service",
+          "line": 3
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "line": 6
+        },
+        {
+          "section": "Service",
+          "key": "StandardOutput",
+          "value": "tty",
+          "line": 7
+        },
+        {
+          "section": "Service",
+          "key": "EnvironmentFile",
+          "value": "/run/tizen-mobile-env",
+          "line": 8
+        },
+        {
+          "section": "Install",
+          "key": "WantedBy",
+          "value": "default.target",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/graphical.target",
+      "bytes": 523,
+      "sha256": "884644c1177d92cc4b05bfa6981a4e8d782f40d51c01dcc84752c7ba6eed8cba",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Graphical Interface",
+          "line": 9
+        },
+        {
+          "section": "Unit",
+          "key": "Documentation",
+          "value": "man:systemd.special(7)",
+          "line": 10
+        },
+        {
+          "section": "Unit",
+          "key": "Requires",
+          "value": "multi-user.target",
+          "line": 11
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "multi-user.target",
+          "line": 12
+        },
+        {
+          "section": "Unit",
+          "key": "Conflicts",
+          "value": "rescue.target",
+          "line": 13
+        },
+        {
+          "section": "Unit",
+          "key": "AllowIsolate",
+          "value": "yes",
+          "line": 15
+        },
+        {
+          "section": "Install",
+          "key": "Alias",
+          "value": "default.target",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/hib_post.path",
+      "bytes": 142,
+      "sha256": "59c9006b53597a0f8ce17fe3068e390fdc00472c7529160f15ddeb3c77530027",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Hibernation Postproc Requests",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "DefaultDependencies",
+          "value": "no",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "Before",
+          "value": "paths.target shutdown.target",
+          "line": 4
+        },
+        {
+          "section": "Path",
+          "key": "PathExists",
+          "value": "/tmp/.hib_post",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/hib_post.service",
+      "bytes": 239,
+      "sha256": "9fc3e5aa13b282b63a68c45bb7277497b61195aac0a8c585dd9d189553cfe4f8",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Hibernation Postproc",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "DefaultDependencies",
+          "value": "no",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "default.target wm_ready.service deviced.service di-camera-app.service",
+          "line": 4
+        },
+        {
+          "section": "Service",
+          "key": "Type",
+          "value": "oneshot",
+          "line": 7
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/bin/sh -c \"/sbin/swapoff -a\"",
+          "line": 8
+        },
+        {
+          "section": "Install",
+          "key": "WantedBy",
+          "value": "default.target",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/hib_tmp.service",
+      "bytes": 458,
+      "sha256": "d8cf027789ba64d56eeff74a6ed5066e9d6309fd237837cd3bfdc70996a93161",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Preparing snapshot image...",
+          "line": 9
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "opt.mount tmp.mount",
+          "line": 10
+        },
+        {
+          "section": "Service",
+          "key": "Type",
+          "value": "oneshot",
+          "line": 13
+        },
+        {
+          "section": "Service",
+          "key": "RemainAfterExit",
+          "value": "yes",
+          "line": 14
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/usr/bin/hib_tmp.sh",
+          "line": 15
+        },
+        {
+          "section": "Service",
+          "key": "StandardOutput",
+          "value": "tty",
+          "line": 16
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/hibernation.service",
+      "bytes": 670,
+      "sha256": "6d89c8788aca583164d63f055948809901adbf601626f36bbce9a0f9a4d73636",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Preparing snapshot image...",
+          "line": 9
+        },
+        {
+          "section": "Unit",
+          "key": "DefaultDependencies",
+          "value": "no",
+          "line": 11
+        },
+        {
+          "section": "Unit",
+          "key": "Conflicts",
+          "value": "shutdown.target",
+          "line": 12
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "systemd-readahead-collect.service systemd-readahead-replay.service systemd-fsck-root.service",
+          "line": 13
+        },
+        {
+          "section": "Unit",
+          "key": "Before",
+          "value": "local-fs-pre.target local-fs.target shutdown.target",
+          "line": 14
+        },
+        {
+          "section": "Unit",
+          "key": "Wants",
+          "value": "local-fs-pre.target",
+          "line": 15
+        },
+        {
+          "section": "Service",
+          "key": "Type",
+          "value": "oneshot",
+          "line": 18
+        },
+        {
+          "section": "Service",
+          "key": "RemainAfterExit",
+          "value": "yes",
+          "line": 19
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/usr/bin/hibernation.sh",
+          "line": 20
+        },
+        {
+          "section": "Service",
+          "key": "StandardOutput",
+          "value": "tty",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/multi-user.target",
+      "bytes": 642,
+      "sha256": "0ce2e5bf5b6155801484c3275e66dc565836e07ad30e6dff09ad6e4aae62adbd",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Multi-User System",
+          "line": 9
+        },
+        {
+          "section": "Unit",
+          "key": "Documentation",
+          "value": "man:systemd.special(7)",
+          "line": 10
+        },
+        {
+          "section": "Unit",
+          "key": "Requires",
+          "value": "basic.target tizen-boot.target tizen-system.target tizen-runtime.target",
+          "line": 11
+        },
+        {
+          "section": "Unit",
+          "key": "Conflicts",
+          "value": "rescue.service rescue.target",
+          "line": 12
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "basic.target rescue.service rescue.target tizen-boot.target tizen-system.target tizen-runtime.target",
+          "line": 13
+        },
+        {
+          "section": "Unit",
+          "key": "AllowIsolate",
+          "value": "yes",
+          "line": 14
+        },
+        {
+          "section": "Install",
+          "key": "Alias",
+          "value": "default.target",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/net-config.service",
+      "bytes": 249,
+      "sha256": "83aabf38928b2bcc2f7e5739c8ca67e10af0d01deb05d759e665029ffa57103a",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Network Configuration service",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "tizen-system.target",
+          "line": 3
+        },
+        {
+          "section": "Service",
+          "key": "Type",
+          "value": "dbus",
+          "line": 6
+        },
+        {
+          "section": "Service",
+          "key": "BusName",
+          "value": "net.netconfig",
+          "line": 7
+        },
+        {
+          "section": "Service",
+          "key": "RemainAfterExit",
+          "value": "yes",
+          "line": 8
+        },
+        {
+          "section": "Service",
+          "key": "ExecStartPre",
+          "value": "/usr/sbin/net-config.service",
+          "line": 9
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/usr/sbin/net-config",
+          "line": 10
+        },
+        {
+          "section": "Install",
+          "key": "WantedBy",
+          "value": "multi-user.target",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/nfc-manager.service",
+      "bytes": 217,
+      "sha256": "2bc098524e97bff6dabbe94b99242ed6632646df18c8fd0b9c74311783000162",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "NFC manager",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "system-server.service",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "Requires",
+          "value": "system-server.service",
+          "line": 4
+        },
+        {
+          "section": "Service",
+          "key": "Type",
+          "value": "simple",
+          "line": 7
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/usr/bin/nfc-manager-daemon --daemon",
+          "line": 8
+        },
+        {
+          "section": "Service",
+          "key": "KillSignal",
+          "value": "SIGKILL",
+          "line": 9
+        },
+        {
+          "section": "Install",
+          "key": "WantedBy",
+          "value": "multi-user.target",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/starter.service",
+      "bytes": 277,
+      "sha256": "f6c4102e4d656ca8ab11f924ecbaadca1065f204fce492a392198b929ecb6991",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Start the \"starter\" program",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "ac.service system-server.service launchpad-preload.service wm_ready.service",
+          "line": 3
+        },
+        {
+          "section": "Service",
+          "key": "Type",
+          "value": "forking",
+          "line": 6
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/etc/init.d/rd3starter",
+          "line": 7
+        },
+        {
+          "section": "Service",
+          "key": "Restart",
+          "value": "on-failure",
+          "line": 8
+        },
+        {
+          "section": "Service",
+          "key": "RestartSec",
+          "value": "0",
+          "line": 9
+        },
+        {
+          "section": "Service",
+          "key": "KillSignal",
+          "value": "SIGKILL",
+          "line": 10
+        },
+        {
+          "section": "Install",
+          "key": "WantedBy",
+          "value": "tizen-system.target",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/tizen-boot.target",
+      "bytes": 139,
+      "sha256": "a1d03cc64de5bea33d78818a8931395203c2259ebaf162844af7a1805a0810f0",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Tizen Boot",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "Requires",
+          "value": "basic.target",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "Conflicts",
+          "value": "rescue.service rescue.target",
+          "line": 4
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "basic.target rescue.service rescue.target",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/tizen-runtime.target",
+      "bytes": 218,
+      "sha256": "1c1c50adbf38b64dd6e854361416cebb1a330640c0ddbdc70d8a1ded08de1ef4",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Tizen Runtime",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "Requires",
+          "value": "basic.target tizen-boot.target tizen-system.target",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "Conflicts",
+          "value": "rescue.service rescue.target",
+          "line": 4
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "basic.target tizen-boot.target tizen-system.target rescue.service rescue.target",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/tizen-system.target",
+      "bytes": 177,
+      "sha256": "225bf267b50aeb11d8b1db5ce49bd5b0a021fc41276e40b8fb0d97845f5b609f",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "Tizen System",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "Requires",
+          "value": "basic.target tizen-boot.target",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "Conflicts",
+          "value": "rescue.service rescue.target",
+          "line": 4
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "basic.target tizen-boot.target rescue.service rescue.target",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "path": "/usr/lib/systemd/system/wm_ready.service",
+      "bytes": 227,
+      "sha256": "7fe8547c045fb18da5724078ec4e85e3d0b8b7de4b07bd1dd4d0c79f0bd82164",
+      "directives": [
+        {
+          "section": "Unit",
+          "key": "Description",
+          "value": "waiting for window mananger",
+          "line": 2
+        },
+        {
+          "section": "Unit",
+          "key": "After",
+          "value": "xorg.service",
+          "line": 3
+        },
+        {
+          "section": "Unit",
+          "key": "Before",
+          "value": "tizen-boot.target",
+          "line": 4
+        },
+        {
+          "section": "Service",
+          "key": "Type",
+          "value": "oneshot",
+          "line": 7
+        },
+        {
+          "section": "Service",
+          "key": "ExecStart",
+          "value": "/bin/sh -c 'while [ ! -e /tmp/.wm_ready ]; do sleep 0.1 ; done'",
+          "line": 8
+        },
+        {
+          "section": "Install",
+          "key": "WantedBy",
+          "value": "tizen-boot.target",
+          "line": 11
+        }
+      ]
+    }
+  ],
+  "symlinks": [
+    {
+      "path": "/etc/systemd/system/systemd-remount-fs.service",
+      "target": "/dev/null"
+    },
+    {
+      "path": "/etc/systemd/system/local-fs.target.wants/opt-usr.mount",
+      "target": "../opt-usr.mount"
+    },
+    {
+      "path": "/etc/systemd/system/local-fs.target.wants/opt.mount",
+      "target": "../opt.mount"
+    },
+    {
+      "path": "/usr/lib/systemd/system/default.target",
+      "target": "graphical.target"
+    },
+    {
+      "path": "/usr/lib/systemd/system/local-fs.target.wants/hib_tmp.service",
+      "target": "../hib_tmp.service"
+    },
+    {
+      "path": "/usr/lib/systemd/system/local-fs.target.wants/hibernation.service",
+      "target": "../hibernation.service"
+    },
+    {
+      "path": "/usr/lib/systemd/system/local-fs.target.wants/systemd-remount-fs.service",
+      "target": "../systemd-remount-fs.service"
+    },
+    {
+      "path": "/usr/lib/systemd/system/default.target.wants/di-camera-app.service",
+      "target": "../di-camera-app.service"
+    },
+    {
+      "path": "/usr/lib/systemd/system/default.target.wants/hib_post.path",
+      "target": "../hib_post.path"
+    },
+    {
+      "path": "/usr/lib/systemd/system/default.target.wants/systemd-udevd-kill.timer",
+      "target": "../systemd-udevd-kill.timer"
+    },
+    {
+      "path": "/usr/lib/systemd/system/default.target.wants/tizen-initial-boot-done.service",
+      "target": "../tizen-initial-boot-done.service"
+    }
+  ],
+  "selected_sources": [
+    {
+      "path": "/etc/fstab",
+      "bytes": 1319,
+      "sha256": "62fd39efedbc22cbfbd09d97ed9f1b08f02c8cab854d02ecd12c5dbe4c57c734",
+      "lines": [
+        {
+          "line": 1,
+          "text": "# fstab(5)"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "# NOTE: systemd tries to mount following filesystems on every boot:"
+        },
+        {
+          "line": 4,
+          "text": "#"
+        },
+        {
+          "line": 5,
+          "text": "#  - proc on /proc"
+        },
+        {
+          "line": 6,
+          "text": "#  - sysfs on /sys"
+        },
+        {
+          "line": 7,
+          "text": "#  - devtmpfs on /dev"
+        },
+        {
+          "line": 8,
+          "text": "#  - securityfs on /sys/kernel/security"
+        },
+        {
+          "line": 9,
+          "text": "#  - tmpfs on /dev/shm"
+        },
+        {
+          "line": 10,
+          "text": "#  - devpts on /dev/pts"
+        },
+        {
+          "line": 11,
+          "text": "#  - tmpfs on /run"
+        },
+        {
+          "line": 12,
+          "text": "#  - tmpfs on /sys/fs/cgroup"
+        },
+        {
+          "line": 13,
+          "text": "#  - cgroup on /sys/fs/cgroup/systemd"
+        },
+        {
+          "line": 14,
+          "text": "#  - <all or configured cgroup controllers> on /sys/fs/cgroup/<controller name>"
+        },
+        {
+          "line": 15,
+          "text": "#"
+        },
+        {
+          "line": 16,
+          "text": "# Information about above filesystems is hardcoded into systemd.  systemd will"
+        },
+        {
+          "line": 17,
+          "text": "# _try_ to apply mount options from this file by systemd-remount-fs.service."
+        },
+        {
+          "line": 18,
+          "text": "#"
+        },
+        {
+          "line": 19,
+          "text": "# Please see: http://www.freedesktop.org/wiki/Software/systemd/APIFileSystems"
+        },
+        {
+          "line": 20,
+          "text": ""
+        },
+        {
+          "line": 21,
+          "text": "#<file system>          <mount point>           <type>  <options>       <dump>  <pass>"
+        },
+        {
+          "line": 22,
+          "text": ""
+        },
+        {
+          "line": 23,
+          "text": "#tmpfs                   /tmp                    tmpfs   comment=havefs-smackfs-smackfsroot=* 0 0"
+        },
+        {
+          "line": 24,
+          "text": ""
+        },
+        {
+          "line": 25,
+          "text": "# For new partition - 2012/06/26 add csa partition."
+        },
+        {
+          "line": 26,
+          "text": "#/dev/disk/by-partlabel/rootfs   /               ext4    ro              0       1"
+        },
+        {
+          "line": 27,
+          "text": "#/dev/disk/by-partlabel/system-data      /opt            ext4    errors=panic,nosuid    0       2"
+        },
+        {
+          "line": 28,
+          "text": "#/dev/disk/by-partlabel/user     /opt/usr        ext4    errors=panic,nofail,nosuid     0       2"
+        },
+        {
+          "line": 29,
+          "text": ""
+        },
+        {
+          "line": 30,
+          "text": "# nx1 partitions"
+        },
+        {
+          "line": 31,
+          "text": "/dev/root\t\t/\t\t\text4\tdefaults,noatime\t0\t0"
+        },
+        {
+          "line": 32,
+          "text": "/dev/mmcblk0p7\t\t/opt\t\t\text4\terrors=panic,nosuid\t0\t0"
+        },
+        {
+          "line": 33,
+          "text": "/dev/mmcblk0p11\t\t/opt/usr\t\text4\terrors=panic,nosuid\t0\t0"
+        }
+      ]
+    },
+    {
+      "path": "/initrd/sbin/init",
+      "bytes": 3108,
+      "sha256": "66fe916625bc44e1e526896f721f830575e8aba09cd0609738d0ba38330e8a7a",
+      "lines": [
+        {
+          "line": 1,
+          "text": "#!/bin/bash"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "FAKE_ROOT=/system"
+        },
+        {
+          "line": 4,
+          "text": ""
+        },
+        {
+          "line": 5,
+          "text": "UPI_NO_DELTA_ERROR=FDFA"
+        },
+        {
+          "line": 6,
+          "text": "UPI_NO_UA_ERROR=FDFB"
+        },
+        {
+          "line": 7,
+          "text": ""
+        },
+        {
+          "line": 8,
+          "text": "STATUS_DIR=${FAKE_ROOT}/opt/data/recovery"
+        },
+        {
+          "line": 9,
+          "text": "STATUS_FILE=${STATUS_DIR}/RW.STATUS"
+        },
+        {
+          "line": 10,
+          "text": "DELTA_PATH_FILE=${STATUS_DIR}/DELTA.PATH"
+        },
+        {
+          "line": 11,
+          "text": ""
+        },
+        {
+          "line": 12,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 13,
+          "text": "#\thandle_no_delta"
+        },
+        {
+          "line": 14,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 15,
+          "text": "handle_no_delta() {"
+        },
+        {
+          "line": 16,
+          "text": "\techo \"delta does not exist ...\""
+        },
+        {
+          "line": 17,
+          "text": ""
+        },
+        {
+          "line": 18,
+          "text": "\techo \"${UPI_NO_DELTA_ERROR}\" > ${RESULT_FILE}"
+        },
+        {
+          "line": 19,
+          "text": "}"
+        },
+        {
+          "line": 20,
+          "text": ""
+        },
+        {
+          "line": 21,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 22,
+          "text": "#\thandle_no_ua"
+        },
+        {
+          "line": 23,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 24,
+          "text": "handle_no_ua() {"
+        },
+        {
+          "line": 25,
+          "text": "\techo \"ua does not exist ...\""
+        },
+        {
+          "line": 26,
+          "text": ""
+        },
+        {
+          "line": 27,
+          "text": "\techo \"${UPI_NO_UA_ERROR}\" > ${RESULT_FILE}"
+        },
+        {
+          "line": 28,
+          "text": "}"
+        },
+        {
+          "line": 29,
+          "text": ""
+        },
+        {
+          "line": 30,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 31,
+          "text": "#\tdo_fota_update"
+        },
+        {
+          "line": 32,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 33,
+          "text": "do_fota_update() {"
+        },
+        {
+          "line": 34,
+          "text": "\techo \"fota update start ...\""
+        },
+        {
+          "line": 35,
+          "text": ""
+        },
+        {
+          "line": 36,
+          "text": "\tFOTA_PATH=`cat ${DELTA_PATH_FILE}`"
+        },
+        {
+          "line": 37,
+          "text": "\tif [ \"$FOTA_PATH\" ]; then"
+        },
+        {
+          "line": 38,
+          "text": "\t\techo \"FOTA_PATH = $FOTA_PATH\""
+        },
+        {
+          "line": 39,
+          "text": "\telse"
+        },
+        {
+          "line": 40,
+          "text": "\t\techo \"Default FOTA_PATH\""
+        },
+        {
+          "line": 41,
+          "text": "\t\tFOTA_PATH=/opt/usr/data/fota"
+        },
+        {
+          "line": 42,
+          "text": ""
+        },
+        {
+          "line": 43,
+          "text": "\tfi"
+        },
+        {
+          "line": 44,
+          "text": ""
+        },
+        {
+          "line": 45,
+          "text": "\tRESULT_FILE=${FAKE_ROOT}${FOTA_PATH}/result"
+        },
+        {
+          "line": 46,
+          "text": "\tif [ -e ${RESULT_FILE} ]; then"
+        },
+        {
+          "line": 47,
+          "text": "\t\trm -fr ${RESULT_FILE}"
+        },
+        {
+          "line": 48,
+          "text": "\tfi"
+        },
+        {
+          "line": 49,
+          "text": ""
+        },
+        {
+          "line": 50,
+          "text": "\tUA=${FAKE_ROOT}${FOTA_PATH}/delta.ua"
+        },
+        {
+          "line": 51,
+          "text": "\tif [ ! -e ${UA} ]; then"
+        },
+        {
+          "line": 52,
+          "text": "\t\thandle_no_ua"
+        },
+        {
+          "line": 53,
+          "text": "\t\treturn 1"
+        },
+        {
+          "line": 54,
+          "text": "\tfi"
+        },
+        {
+          "line": 55,
+          "text": ""
+        },
+        {
+          "line": 56,
+          "text": "\tDELTA=${FAKE_ROOT}${FOTA_PATH}/delta.tar"
+        },
+        {
+          "line": 57,
+          "text": "\tif [ ! -e ${DELTA} ]; then"
+        },
+        {
+          "line": 58,
+          "text": "\t\thandle_no_delta"
+        },
+        {
+          "line": 59,
+          "text": "\t\treturn 1"
+        },
+        {
+          "line": 60,
+          "text": "\tfi"
+        },
+        {
+          "line": 61,
+          "text": ""
+        },
+        {
+          "line": 62,
+          "text": ""
+        },
+        {
+          "line": 63,
+          "text": "\t${UA} ${FAKE_ROOT} ${FOTA_PATH} 0"
+        },
+        {
+          "line": 64,
+          "text": "\tif [ $? -ne 0 ]; then"
+        },
+        {
+          "line": 65,
+          "text": "\t\techo \"update agent fail!!!\""
+        },
+        {
+          "line": 66,
+          "text": "\t\treturn 1"
+        },
+        {
+          "line": 67,
+          "text": "\telse"
+        },
+        {
+          "line": 68,
+          "text": "\t\techo \"update agent success\""
+        },
+        {
+          "line": 69,
+          "text": "\t\treturn 0"
+        },
+        {
+          "line": 70,
+          "text": "\tfi"
+        },
+        {
+          "line": 71,
+          "text": ""
+        },
+        {
+          "line": 72,
+          "text": "}"
+        },
+        {
+          "line": 73,
+          "text": ""
+        },
+        {
+          "line": 74,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 75,
+          "text": "#\tdo_reboot"
+        },
+        {
+          "line": 76,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 77,
+          "text": "do_reboot() {"
+        },
+        {
+          "line": 78,
+          "text": "\techo \"reboot\""
+        },
+        {
+          "line": 79,
+          "text": "\t/bin/sync"
+        },
+        {
+          "line": 80,
+          "text": "\t/sbin/reboot "
+        },
+        {
+          "line": 81,
+          "text": "\twhile [ 1 ]"
+        },
+        {
+          "line": 82,
+          "text": "\tdo"
+        },
+        {
+          "line": 83,
+          "text": "\t\tsleep 1"
+        },
+        {
+          "line": 84,
+          "text": "\t\techo \".\""
+        },
+        {
+          "line": 85,
+          "text": "\tdone"
+        },
+        {
+          "line": 86,
+          "text": "}"
+        },
+        {
+          "line": 87,
+          "text": ""
+        },
+        {
+          "line": 88,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 89,
+          "text": "#\tdo_rw_update"
+        },
+        {
+          "line": 90,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 91,
+          "text": "do_rw_update() {"
+        },
+        {
+          "line": 92,
+          "text": "\techo \"change into rw update mode\""
+        },
+        {
+          "line": 93,
+          "text": "\tNEW_ROOT=${FAKE_ROOT}"
+        },
+        {
+          "line": 94,
+          "text": "\tNEW_INIT=/etc/rc.d/init.d/rw-update-init.sh"
+        },
+        {
+          "line": 95,
+          "text": ""
+        },
+        {
+          "line": 96,
+          "text": "\tif [ ! -e ${NEW_ROOT}${NEW_INIT} ]; then"
+        },
+        {
+          "line": 97,
+          "text": "\t\tdo_reboot"
+        },
+        {
+          "line": 98,
+          "text": "\tfi"
+        },
+        {
+          "line": 99,
+          "text": ""
+        },
+        {
+          "line": 100,
+          "text": "\texec /sbin/switch_root ${NEW_ROOT} ${NEW_INIT}"
+        },
+        {
+          "line": 101,
+          "text": ""
+        },
+        {
+          "line": 102,
+          "text": "\tdo_reboot"
+        },
+        {
+          "line": 103,
+          "text": "}"
+        },
+        {
+          "line": 104,
+          "text": ""
+        },
+        {
+          "line": 105,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 106,
+          "text": "#\tmount_partitions"
+        },
+        {
+          "line": 107,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 108,
+          "text": "mount_partitions() {"
+        },
+        {
+          "line": 109,
+          "text": ""
+        },
+        {
+          "line": 110,
+          "text": "\t/bin/mount -t proc none /proc"
+        },
+        {
+          "line": 111,
+          "text": "\t/bin/mount -t sysfs none /sys"
+        },
+        {
+          "line": 112,
+          "text": "\t/bin/mount -t tmpfs tmpfs /tmp"
+        },
+        {
+          "line": 113,
+          "text": ""
+        },
+        {
+          "line": 114,
+          "text": "\t/bin/mount -t ext4 /dev/mmcblk0p15 ${FAKE_ROOT}"
+        },
+        {
+          "line": 115,
+          "text": "\t/bin/mount -t ext4 /dev/mmcblk0p13 ${FAKE_ROOT}/opt"
+        },
+        {
+          "line": 116,
+          "text": "\t/bin/mount -t ext4 /dev/mmcblk0p12 ${FAKE_ROOT}/opt/system/csc"
+        },
+        {
+          "line": 117,
+          "text": "\t/bin/mount -t ext4 /dev/mmcblk0p14 ${FAKE_ROOT}/opt/usr"
+        },
+        {
+          "line": 118,
+          "text": ""
+        },
+        {
+          "line": 119,
+          "text": "}"
+        },
+        {
+          "line": 120,
+          "text": ""
+        },
+        {
+          "line": 121,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 122,
+          "text": "#\tMain Routine Start"
+        },
+        {
+          "line": 123,
+          "text": "#------------------------------------------------"
+        },
+        {
+          "line": 124,
+          "text": "echo \"You entered into /sbin/init on initrd\""
+        },
+        {
+          "line": 125,
+          "text": ""
+        },
+        {
+          "line": 126,
+          "text": "mount_partitions"
+        },
+        {
+          "line": 127,
+          "text": ""
+        },
+        {
+          "line": 128,
+          "text": "cat /proc/cmdline"
+        },
+        {
+          "line": 129,
+          "text": ""
+        },
+        {
+          "line": 130,
+          "text": "# make /opt symlink so that vconf works"
+        },
+        {
+          "line": 131,
+          "text": "cd /"
+        },
+        {
+          "line": 132,
+          "text": ""
+        },
+        {
+          "line": 133,
+          "text": "BOOT_MODE_FOTA=`/bin/grep bootmode=fota /proc/cmdline`"
+        },
+        {
+          "line": 134,
+          "text": "BOOT_MODE_FUS=`/bin/grep bootmode=fus_rw /proc/cmdline`"
+        },
+        {
+          "line": 135,
+          "text": ""
+        },
+        {
+          "line": 136,
+          "text": "if [ -r ${STATUS_FILE} ]; then"
+        },
+        {
+          "line": 137,
+          "text": "\tdo_rw_update"
+        },
+        {
+          "line": 138,
+          "text": "else"
+        },
+        {
+          "line": 139,
+          "text": ""
+        },
+        {
+          "line": 140,
+          "text": "\tif [ \"z${BOOT_MODE_FUS}\" != \"z\" ]; then"
+        },
+        {
+          "line": 141,
+          "text": "\t\tdo_rw_update"
+        },
+        {
+          "line": 142,
+          "text": "\telif [ \"z${BOOT_MODE_FOTA}\" != \"z\" ]; then"
+        },
+        {
+          "line": 143,
+          "text": "\t\tdo_fota_update"
+        },
+        {
+          "line": 144,
+          "text": "\t\tif [ \"$?\" = \"0\" ]; then"
+        },
+        {
+          "line": 145,
+          "text": "\t\t\tdo_rw_update"
+        },
+        {
+          "line": 146,
+          "text": "\t\telse"
+        },
+        {
+          "line": 147,
+          "text": "\t\t\tdo_reboot"
+        },
+        {
+          "line": 148,
+          "text": "\t\tfi"
+        },
+        {
+          "line": 149,
+          "text": "\telse"
+        },
+        {
+          "line": 150,
+          "text": "\t\techo \"Invalid bootmode\""
+        },
+        {
+          "line": 151,
+          "text": "\t\tdo_reboot"
+        },
+        {
+          "line": 152,
+          "text": "\tfi"
+        },
+        {
+          "line": 153,
+          "text": ""
+        },
+        {
+          "line": 154,
+          "text": "fi"
+        },
+        {
+          "line": 155,
+          "text": ""
+        },
+        {
+          "line": 156,
+          "text": ""
+        },
+        {
+          "line": 157,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "path": "/usr/bin/hibernation.sh",
+      "bytes": 1916,
+      "sha256": "dd3687d3231ec32bbdcaaf3aac3015842f4ec703269a5eef71213e3e75447361",
+      "lines": [
+        {
+          "line": 1,
+          "text": "#!/bin/sh"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "bootmode=\"`cat /sys/power/bootmode`\""
+        },
+        {
+          "line": 4,
+          "text": "if [ $bootmode -eq 4 ]; then"
+        },
+        {
+          "line": 5,
+          "text": "\techo -e \"\\nbootshell set to cold-boot... \\n\"\t"
+        },
+        {
+          "line": 6,
+          "text": "\t/bin/touch /tmp/.hib_ready\t"
+        },
+        {
+          "line": 7,
+          "text": "\texit"
+        },
+        {
+          "line": 8,
+          "text": "fi"
+        },
+        {
+          "line": 9,
+          "text": ""
+        },
+        {
+          "line": 10,
+          "text": "if [ ! -e /etc/snapshot ]; then"
+        },
+        {
+          "line": 11,
+          "text": "\t/bin/touch /tmp/.hib_ready"
+        },
+        {
+          "line": 12,
+          "text": "\texit"
+        },
+        {
+          "line": 13,
+          "text": "fi"
+        },
+        {
+          "line": 14,
+          "text": ""
+        },
+        {
+          "line": 15,
+          "text": "#LOGPATH=\"/mnt/ubi1/fw/log\""
+        },
+        {
+          "line": 16,
+          "text": "#LOGFILE=\"$LOGPATH/hib.txt\""
+        },
+        {
+          "line": 17,
+          "text": "SNAPSHOT_DEV=\"/dev/mmcblk0p9\""
+        },
+        {
+          "line": 18,
+          "text": "#DI_CAMERA_BIN=\"`readlink /usr/bin/di-camera-app`\""
+        },
+        {
+          "line": 19,
+          "text": ""
+        },
+        {
+          "line": 20,
+          "text": "# exit script if any command failed."
+        },
+        {
+          "line": 21,
+          "text": "set -e"
+        },
+        {
+          "line": 22,
+          "text": ""
+        },
+        {
+          "line": 23,
+          "text": "# print shell command on console"
+        },
+        {
+          "line": 24,
+          "text": "set -x"
+        },
+        {
+          "line": 25,
+          "text": ""
+        },
+        {
+          "line": 26,
+          "text": "# verbosity level: 0 - quiet, 1 - output, 2 - output and log"
+        },
+        {
+          "line": 27,
+          "text": "#_verbose=2"
+        },
+        {
+          "line": 28,
+          "text": ""
+        },
+        {
+          "line": 29,
+          "text": "#if [ $_verbose -ge 2 ]; then"
+        },
+        {
+          "line": 30,
+          "text": "#\tmkdir -m 777 -p $LOGPATH"
+        },
+        {
+          "line": 31,
+          "text": "#\techo \"`date` ------------------\" > $LOGFILE"
+        },
+        {
+          "line": 32,
+          "text": "#fi"
+        },
+        {
+          "line": 33,
+          "text": ""
+        },
+        {
+          "line": 34,
+          "text": "#logexec()"
+        },
+        {
+          "line": 35,
+          "text": "#{"
+        },
+        {
+          "line": 36,
+          "text": "#\t[ \"$_verbose\" -lt 1 ] || echo \"[exec] $*\""
+        },
+        {
+          "line": 37,
+          "text": "#\t[ \"$_verbose\" -lt 2 ] || echo \"[exec] $*\" >> $LOGFILE"
+        },
+        {
+          "line": 38,
+          "text": "#\t\"$@\""
+        },
+        {
+          "line": 39,
+          "text": "#}"
+        },
+        {
+          "line": 40,
+          "text": ""
+        },
+        {
+          "line": 41,
+          "text": "#logmsg()"
+        },
+        {
+          "line": 42,
+          "text": "#{"
+        },
+        {
+          "line": 43,
+          "text": "#\t[ \"$_verbose\" -lt 1 ] || echo \"$*\""
+        },
+        {
+          "line": 44,
+          "text": "#\t[ \"$_verbose\" -lt 2 ] || echo \"$*\" >> $LOGFILE"
+        },
+        {
+          "line": 45,
+          "text": "#\tsync"
+        },
+        {
+          "line": 46,
+          "text": "#}"
+        },
+        {
+          "line": 47,
+          "text": ""
+        },
+        {
+          "line": 48,
+          "text": "echo \"Starting hibernation ... \""
+        },
+        {
+          "line": 49,
+          "text": "echo timer > /sys/class/leds/card/trigger"
+        },
+        {
+          "line": 50,
+          "text": "#/usr/sbin/fw_upgrade_display on ./usr/sbin/hib_gui.raw"
+        },
+        {
+          "line": 51,
+          "text": ""
+        },
+        {
+          "line": 52,
+          "text": "# make swap device to use zram."
+        },
+        {
+          "line": 53,
+          "text": "echo \"Set RAMZ size\""
+        },
+        {
+          "line": 54,
+          "text": "/bin/sh -c \"echo -n $((50*1024*1024)) > /sys/block/zram0/disksize\""
+        },
+        {
+          "line": 55,
+          "text": "mkswap /dev/zram0"
+        },
+        {
+          "line": 56,
+          "text": "swapon /dev/zram0"
+        },
+        {
+          "line": 57,
+          "text": ""
+        },
+        {
+          "line": 58,
+          "text": "# make swap device to save hibernation image."
+        },
+        {
+          "line": 59,
+          "text": "/bin/dd if=/dev/zero of=$SNAPSHOT_DEV bs=512 count=1"
+        },
+        {
+          "line": 60,
+          "text": "mkswap -c $SNAPSHOT_DEV"
+        },
+        {
+          "line": 61,
+          "text": "swapon $SNAPSHOT_DEV"
+        },
+        {
+          "line": 62,
+          "text": ""
+        },
+        {
+          "line": 63,
+          "text": "# set environment variable to let app do hibernation. "
+        },
+        {
+          "line": 64,
+          "text": "#export HIB=a"
+        },
+        {
+          "line": 65,
+          "text": ""
+        },
+        {
+          "line": 66,
+          "text": "# clear dirty corresponding to adj partition."
+        },
+        {
+          "line": 67,
+          "text": "#logexec sh -c \"echo 0 > /pref/dirty_adj\""
+        },
+        {
+          "line": 68,
+          "text": ""
+        },
+        {
+          "line": 69,
+          "text": "# remount /mnt/ubi2 with read-only"
+        },
+        {
+          "line": 70,
+          "text": "#logexec mount -o ro,remount,noatime,nodiratime /mnt/ubi2"
+        },
+        {
+          "line": 71,
+          "text": ""
+        },
+        {
+          "line": 72,
+          "text": ""
+        },
+        {
+          "line": 73,
+          "text": "# umount opt"
+        },
+        {
+          "line": 74,
+          "text": "#umount /opt/usr"
+        },
+        {
+          "line": 75,
+          "text": "#umount /opt"
+        },
+        {
+          "line": 76,
+          "text": ""
+        },
+        {
+          "line": 77,
+          "text": "# remount / with read-only"
+        },
+        {
+          "line": 78,
+          "text": "mount -o ro,remount /"
+        },
+        {
+          "line": 79,
+          "text": ""
+        },
+        {
+          "line": 80,
+          "text": "#mount -t ext4 /dev/mmcblk0p7 /opt"
+        },
+        {
+          "line": 81,
+          "text": "#mount -t ext4 /dev/mmcblk0p11 /opt/usr"
+        },
+        {
+          "line": 82,
+          "text": ""
+        },
+        {
+          "line": 83,
+          "text": ""
+        },
+        {
+          "line": 84,
+          "text": "# disable upgrade gui"
+        },
+        {
+          "line": 85,
+          "text": "#fw_upgrade_display off"
+        },
+        {
+          "line": 86,
+          "text": ""
+        },
+        {
+          "line": 87,
+          "text": "#logexec startx"
+        },
+        {
+          "line": 88,
+          "text": "#logexec sleep 1"
+        },
+        {
+          "line": 89,
+          "text": "#logexec /usr/bin/hib_exjob -r"
+        },
+        {
+          "line": 90,
+          "text": "#logmsg \"launch di-camera-app\""
+        },
+        {
+          "line": 91,
+          "text": "#$DI_CAMERA_BIN &"
+        },
+        {
+          "line": 92,
+          "text": ""
+        },
+        {
+          "line": 93,
+          "text": "touch /tmp/.hib_ready"
+        }
+      ]
+    },
+    {
+      "path": "/usr/sbin/fw_upgrade_start",
+      "bytes": 3896,
+      "sha256": "b577ff789b20dd68b7070cd5072a2b239dbc8ad01dcadba787864437bd77847d",
+      "text_status": "binary; line evidence not generated"
+    },
+    {
+      "path": "/usr/sbin/fw_upgrade_display.sh",
+      "bytes": 200,
+      "sha256": "0658ecb8714e5ba212c27270098149e014b91f40f0ba007ddeebaf9bd3d27327",
+      "lines": [
+        {
+          "line": 1,
+          "text": "#!/bin/sh"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "if [ -e /sys/power/boot ]; then"
+        },
+        {
+          "line": 4,
+          "text": "\tread BOOT_MODE < /sys/power/boot"
+        },
+        {
+          "line": 5,
+          "text": "\tif [ \"$BOOT_MODE\" = \"n\" ]; then"
+        },
+        {
+          "line": 6,
+          "text": "\t\texit 0"
+        },
+        {
+          "line": 7,
+          "text": "\tfi"
+        },
+        {
+          "line": 8,
+          "text": "fi"
+        },
+        {
+          "line": 9,
+          "text": ""
+        },
+        {
+          "line": 10,
+          "text": "if [ -e /opt/nx/fw/snapshot ]; then"
+        },
+        {
+          "line": 11,
+          "text": "\t/usr/sbin/fw_upgrade_display on"
+        },
+        {
+          "line": 12,
+          "text": "fi"
+        },
+        {
+          "line": 13,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "path": "/etc/dbus-1/system.conf",
+      "bytes": 2817,
+      "sha256": "98d88263ba931a35b33f7f82724058812292a819e386f05ac2a6a1c83b1aecd3",
+      "lines": [
+        {
+          "line": 1,
+          "text": "<!-- This configuration file controls the systemwide message bus."
+        },
+        {
+          "line": 2,
+          "text": "     Add a system-local.conf and edit that rather than changing this "
+        },
+        {
+          "line": 3,
+          "text": "     file directly. -->"
+        },
+        {
+          "line": 4,
+          "text": ""
+        },
+        {
+          "line": 5,
+          "text": "<!-- Note that there are any number of ways you can hose yourself"
+        },
+        {
+          "line": 6,
+          "text": "     security-wise by screwing up this file; in particular, you"
+        },
+        {
+          "line": 7,
+          "text": "     probably don't want to listen on any more addresses, add any more"
+        },
+        {
+          "line": 8,
+          "text": "     auth mechanisms, run as a different user, etc. -->"
+        },
+        {
+          "line": 9,
+          "text": ""
+        },
+        {
+          "line": 10,
+          "text": "<!DOCTYPE busconfig PUBLIC \"-//freedesktop//DTD D-Bus Bus Configuration 1.0//EN\""
+        },
+        {
+          "line": 11,
+          "text": " \"http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd\">"
+        },
+        {
+          "line": 12,
+          "text": "<busconfig>"
+        },
+        {
+          "line": 13,
+          "text": ""
+        },
+        {
+          "line": 14,
+          "text": "  <!-- Our well-known bus type, do not change this -->"
+        },
+        {
+          "line": 15,
+          "text": "  <type>system</type>"
+        },
+        {
+          "line": 16,
+          "text": ""
+        },
+        {
+          "line": 17,
+          "text": "  <!-- Run as special user -->"
+        },
+        {
+          "line": 18,
+          "text": "  <!-- <user>root</user> -->"
+        },
+        {
+          "line": 19,
+          "text": ""
+        },
+        {
+          "line": 20,
+          "text": "  <!-- Fork into daemon mode -->"
+        },
+        {
+          "line": 21,
+          "text": "  <fork/>"
+        },
+        {
+          "line": 22,
+          "text": ""
+        },
+        {
+          "line": 23,
+          "text": "  <servicedir>/usr/share/dbus-1/services</servicedir>"
+        },
+        {
+          "line": 24,
+          "text": ""
+        },
+        {
+          "line": 25,
+          "text": "  <!-- Write a pid file -->"
+        },
+        {
+          "line": 26,
+          "text": "  <pidfile>/var/run/messagebus.pid</pidfile>"
+        },
+        {
+          "line": 27,
+          "text": ""
+        },
+        {
+          "line": 28,
+          "text": "  <!-- Enable logging to syslog -->"
+        },
+        {
+          "line": 29,
+          "text": "  <syslog/>"
+        },
+        {
+          "line": 30,
+          "text": ""
+        },
+        {
+          "line": 31,
+          "text": "  <!-- Only allow socket-credentials-based authentication -->"
+        },
+        {
+          "line": 32,
+          "text": "  <auth>EXTERNAL</auth>"
+        },
+        {
+          "line": 33,
+          "text": ""
+        },
+        {
+          "line": 34,
+          "text": "  <!-- Only listen on a local socket. (abstract=/path/to/socket "
+        },
+        {
+          "line": 35,
+          "text": "       means use abstract namespace, don't really create filesystem "
+        },
+        {
+          "line": 36,
+          "text": "       file; only Linux supports this. Use path=/whatever on other "
+        },
+        {
+          "line": 37,
+          "text": "       systems.) -->"
+        },
+        {
+          "line": 38,
+          "text": "  <listen>unix:path=/var/run/dbus/system_bus_socket</listen>"
+        },
+        {
+          "line": 39,
+          "text": ""
+        },
+        {
+          "line": 40,
+          "text": "  <policy context=\"default\">"
+        },
+        {
+          "line": 41,
+          "text": "    <!-- All users can connect to system bus -->"
+        },
+        {
+          "line": 42,
+          "text": "    <allow user=\"*\"/>"
+        },
+        {
+          "line": 43,
+          "text": ""
+        },
+        {
+          "line": 44,
+          "text": "    <!-- Holes must be punched in service configuration files for"
+        },
+        {
+          "line": 45,
+          "text": "         name ownership and sending method calls -->"
+        },
+        {
+          "line": 46,
+          "text": "    <allow own=\"*\"/>"
+        },
+        {
+          "line": 47,
+          "text": "    <allow send_type=\"method_call\"/>"
+        },
+        {
+          "line": 48,
+          "text": ""
+        },
+        {
+          "line": 49,
+          "text": "    <!-- Signals and reply messages (method returns, errors) are allowed"
+        },
+        {
+          "line": 50,
+          "text": "         by default -->"
+        },
+        {
+          "line": 51,
+          "text": "    <allow send_type=\"signal\"/>"
+        },
+        {
+          "line": 52,
+          "text": "    <allow send_requested_reply=\"true\" send_type=\"method_return\"/>"
+        },
+        {
+          "line": 53,
+          "text": "    <allow send_requested_reply=\"true\" send_type=\"error\"/>"
+        },
+        {
+          "line": 54,
+          "text": ""
+        },
+        {
+          "line": 55,
+          "text": "    <!-- All messages may be received by default -->"
+        },
+        {
+          "line": 56,
+          "text": "    <allow receive_type=\"method_call\"/>"
+        },
+        {
+          "line": 57,
+          "text": "    <allow receive_type=\"method_return\"/>"
+        },
+        {
+          "line": 58,
+          "text": "    <allow receive_type=\"error\"/>"
+        },
+        {
+          "line": 59,
+          "text": "    <allow receive_type=\"signal\"/>"
+        },
+        {
+          "line": 60,
+          "text": ""
+        },
+        {
+          "line": 61,
+          "text": "    <!-- Allow anyone to talk to the message bus -->"
+        },
+        {
+          "line": 62,
+          "text": "    <allow send_destination=\"org.freedesktop.DBus\"/>"
+        },
+        {
+          "line": 63,
+          "text": "    <!-- But disallow some specific bus services -->"
+        },
+        {
+          "line": 64,
+          "text": "    <deny send_destination=\"org.freedesktop.DBus\""
+        },
+        {
+          "line": 65,
+          "text": "          send_interface=\"org.freedesktop.DBus\""
+        },
+        {
+          "line": 66,
+          "text": "          send_member=\"UpdateActivationEnvironment\"/>"
+        },
+        {
+          "line": 67,
+          "text": "  </policy>"
+        },
+        {
+          "line": 68,
+          "text": ""
+        },
+        {
+          "line": 69,
+          "text": "  <!-- Config files are placed here that among other things, punch "
+        },
+        {
+          "line": 70,
+          "text": "       holes in the above policy for specific services. -->"
+        },
+        {
+          "line": 71,
+          "text": "  <includedir>system.d</includedir>"
+        },
+        {
+          "line": 72,
+          "text": ""
+        },
+        {
+          "line": 73,
+          "text": "  <!-- This is included last so local configuration can override what's "
+        },
+        {
+          "line": 74,
+          "text": "       in this standard file -->"
+        },
+        {
+          "line": 75,
+          "text": "  <include ignore_missing=\"yes\">system-local.conf</include>"
+        },
+        {
+          "line": 76,
+          "text": ""
+        },
+        {
+          "line": 77,
+          "text": "  <include if_selinux_enabled=\"yes\" selinux_root_relative=\"yes\">contexts/dbus_contexts</include>"
+        },
+        {
+          "line": 78,
+          "text": ""
+        },
+        {
+          "line": 79,
+          "text": "</busconfig>"
+        }
+      ]
+    },
+    {
+      "path": "/etc/deviced/mmc.conf",
+      "bytes": 117,
+      "sha256": "688cb19e9f2d9ed2aec1a4cc944bde4906ebbb71a984d07409d837279c4c186f",
+      "lines": [
+        {
+          "line": 1,
+          "text": "[MMC]"
+        },
+        {
+          "line": 2,
+          "text": "#mmc bdi max ratio"
+        },
+        {
+          "line": 3,
+          "text": "MaxRatio=10"
+        },
+        {
+          "line": 4,
+          "text": "[MMC]"
+        },
+        {
+          "line": 5,
+          "text": "#mmc bdi min ratio"
+        },
+        {
+          "line": 6,
+          "text": "MinRatio=0"
+        },
+        {
+          "line": 7,
+          "text": "[MMC]"
+        },
+        {
+          "line": 8,
+          "text": "#mmc bdi read ahead kb"
+        },
+        {
+          "line": 9,
+          "text": "ReadAhead=4096"
+        }
+      ]
+    },
+    {
+      "path": "/usr/bin/allshare-dms.sh",
+      "bytes": 66,
+      "sha256": "859b3b6208b56e51185d42584877b9d66858d26d74afe8a22a75fe8090b56d6b",
+      "lines": [
+        {
+          "line": 1,
+          "text": "#!/bin/sh"
+        },
+        {
+          "line": 2,
+          "text": "/usr/bin/vconftool set -t bool db/allshare/status 0 -f"
+        },
+        {
+          "line": 3,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "path": "/usr/bin/hib_tmp.sh",
+      "bytes": 147,
+      "sha256": "60d2d6540c594796b16bff995fb805881ac3949268749256972562ebf8afd9c4",
+      "lines": [
+        {
+          "line": 1,
+          "text": "#!/bin/sh"
+        },
+        {
+          "line": 2,
+          "text": ""
+        },
+        {
+          "line": 3,
+          "text": "if [ ! -e /opt/_dbspace ]; then"
+        },
+        {
+          "line": 4,
+          "text": "\tmv /opt/dbspace /opt/_dbspace"
+        },
+        {
+          "line": 5,
+          "text": "\tln -sf /tmp/dbspace /opt/dbspace"
+        },
+        {
+          "line": 6,
+          "text": "fi"
+        },
+        {
+          "line": 7,
+          "text": "\tcp -Rf /opt/_dbspace /tmp/dbspace"
+        },
+        {
+          "line": 8,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "path": "/usr/share/dbus-1/services/net.connman.service",
+      "bytes": 74,
+      "sha256": "70659b3d7703f0b0e93de67f65f0550d961a83cc66f8a854f4ad71ca7afeb1f4",
+      "lines": [
+        {
+          "line": 1,
+          "text": "[D-BUS Service]"
+        },
+        {
+          "line": 2,
+          "text": "Name=net.connman"
+        },
+        {
+          "line": 3,
+          "text": "Exec=/usr/sbin/connman.service"
+        },
+        {
+          "line": 4,
+          "text": "User=root"
+        }
+      ]
+    },
+    {
+      "path": "/usr/share/dbus-1/services/net.netconfig.service",
+      "bytes": 71,
+      "sha256": "0950a6db345a94f3ca2c03dd60819da9bfff63b4e1b4ff0c32a7431c751374c1",
+      "lines": [
+        {
+          "line": 1,
+          "text": "[D-BUS Service]"
+        },
+        {
+          "line": 2,
+          "text": "Name=net.netconfig"
+        },
+        {
+          "line": 3,
+          "text": "Exec=/usr/sbin/net-config"
+        },
+        {
+          "line": 4,
+          "text": "User=root"
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "path": "/lib/modules/bt8887.ko",
+      "sha256": "9fb7cef6e7b9aae6fe5c7ce5c886f59c534792485b6e7bde3615800f9ea7c405",
+      "modinfo": [
+        {
+          "file_offset": 698111,
+          "value": "alias=sdio:c*v02DFd912E*"
+        },
+        {
+          "file_offset": 698136,
+          "value": "alias=sdio:c*v02DFd9136*"
+        },
+        {
+          "file_offset": 698161,
+          "value": "alias=sdio:c*v02DFd9132*"
+        },
+        {
+          "file_offset": 698186,
+          "value": "alias=sdio:c*v02DFd911A*"
+        },
+        {
+          "file_offset": 698212,
+          "value": "depends="
+        },
+        {
+          "file_offset": 698230,
+          "value": "vermagic=3.5.0 preempt mod_unload ARMv7 p2v8 "
+        }
+      ]
+    },
+    {
+      "path": "/lib/modules/cfg80211.ko",
+      "sha256": "71a51f0d264ebe1bb949510d9dcdc89d2fb8d7cf6e7c6d4bcdd8825987f5589e",
+      "modinfo": [
+        {
+          "file_offset": 125540,
+          "value": "depends="
+        },
+        {
+          "file_offset": 125558,
+          "value": "vermagic=3.5.0 preempt mod_unload ARMv7 p2v8 "
+        }
+      ]
+    },
+    {
+      "path": "/lib/modules/mlan.ko",
+      "sha256": "48fd2818dbec3be10b3c43e5612f239af83728dda5452b042d9d592c0480305e",
+      "modinfo": [
+        {
+          "file_offset": 336636,
+          "value": "depends="
+        },
+        {
+          "file_offset": 336654,
+          "value": "vermagic=3.5.0 preempt mod_unload ARMv7 p2v8 "
+        }
+      ]
+    },
+    {
+      "path": "/lib/modules/sd8xxx.ko",
+      "sha256": "bd52606fb1ecbd4c1691d3ddcb8db917225964048bd7f71c46cd9b9939e88b90",
+      "modinfo": [
+        {
+          "file_offset": 316771,
+          "value": "alias=sdio:c*v02DFd912D*"
+        },
+        {
+          "file_offset": 316796,
+          "value": "alias=sdio:c*v02DFd9139*"
+        },
+        {
+          "file_offset": 316821,
+          "value": "alias=sdio:c*v02DFd9135*"
+        },
+        {
+          "file_offset": 316846,
+          "value": "alias=sdio:c*v02DFd9119*"
+        },
+        {
+          "file_offset": 316871,
+          "value": "alias=sdio:c*v02DFd9131*"
+        },
+        {
+          "file_offset": 316896,
+          "value": "depends=cfg80211,mlan"
+        },
+        {
+          "file_offset": 316927,
+          "value": "vermagic=3.5.0 preempt mod_unload ARMv7 p2v8 "
+        }
+      ]
+    },
+    {
+      "path": "/lib/modules/3.5.0/exfat/exfat_core.ko",
+      "sha256": "591e26587d6c28d26bc88aaeb00f4ae73a529c73ac24e0c3aef4ac36908f2f4b",
+      "modinfo": [
+        {
+          "file_offset": 60708,
+          "value": "depends="
+        },
+        {
+          "file_offset": 60717,
+          "value": "vermagic=3.5.0 preempt mod_unload ARMv7 p2v8 "
+        }
+      ]
+    },
+    {
+      "path": "/lib/modules/3.5.0/exfat/exfat_fs.ko",
+      "sha256": "b52d3805af4cffdc2c79371907ca6868e924f1c0db0c72c5ad965cd1aef1bb84",
+      "modinfo": [
+        {
+          "file_offset": 20968,
+          "value": "depends=exfat_core"
+        },
+        {
+          "file_offset": 20987,
+          "value": "vermagic=3.5.0 preempt mod_unload ARMv7 p2v8 "
+        }
+      ]
+    }
+  ],
+  "input": {
+    "firmware_bin_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+    "rootfs_image_sha256": "9c66f76f3124acb3b8d0c31374ca209d333fcb76267bb86ed9bc18c9e8ea73f7"
+  },
+  "missing_regular_unit_names_in_scanned_paths": [
+    "system-server.service",
+    "hib_ready.service"
+  ],
+  "namespace_symlinks": [
+    {
+      "path": "/sbin/init",
+      "target": "/usr/lib/systemd/systemd"
+    },
+    {
+      "path": "/sdcard",
+      "target": "/mnt/mmc"
+    },
+    {
+      "path": "/pref",
+      "target": "/opt/pref"
+    }
+  ]
+}

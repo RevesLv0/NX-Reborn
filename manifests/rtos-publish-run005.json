@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "run": "RUN005",
+  "static_only": true,
+  "source_bin_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+  "section_index": 5,
+  "section_sha256": "f8e417cb5b55768851ba7e2b8017d3a98dc0b0c8444cc0a5061265cc08dbbf7f",
+  "section_bin_start": 15680257,
+  "inferred_link_base": "0x80000000",
+  "method": "Whole source hash validation; bounded original ARM instructions and PC-relative literal/string references",
+  "commands": [
+    "PYTHONPATH=.work/python python tools/firmware/rtos_publish.py --bin .work/full/NX500.bin --manifest manifests/full-source-layout.json --output analysis/evidence/rtos-publish-run005.json"
+  ],
+  "artifacts": [
+    {
+      "path": "tools/firmware/rtos_publish.py",
+      "bytes": 3389,
+      "sha256": "cf84e1a902d0aec03bbbea083573a4f62f45293528903a5283dd47c7ec28a371"
+    },
+    {
+      "path": "analysis/evidence/rtos-publish-run005.json",
+      "bytes": 55714,
+      "sha256": "5165476f63544aa4205bf6712db6818dcca0771e3f4086895e81bac43cbe9d93"
+    },
+    {
+      "path": "analysis/architecture/RTOS_PUBLISH_RUN005.md",
+      "bytes": 5487,
+      "sha256": "35c1f7a6453cefba65a0a3fbd8e6902013d8bfdf80138232357152dee1ae9546"
+    }
+  ],
+  "verification": {
+    "windows": 8,
+    "instruction_rows": 229,
+    "all_windows_fully_decoded": true
+  },
+  "elf_coverage_contribution": 0,
+  "reviewed_findings": [
+    {
+      "id": "P005-publish-route",
+      "section_offsets": [
+        "0x61484",
+        "0x614b0",
+        "0x602ac",
+        "0x60300",
+        "0x60350"
+      ],
+      "claim": "Readiness preference write precedes a gated local publisher request with event0x01010006, routed to publisher+4.",
+      "limitations": [
+        "Inferred link base; gate helper and pre-dispatch hook semantics incomplete."
+      ]
+    },
+    {
+      "id": "P005-observer-call",
+      "section_offsets": [
+        "0x96574",
+        "0x965d4",
+        "0x96638",
+        "0x96654"
+      ],
+      "claim": "Normal subscriber loop matches exact event or0xffffffff and invokes observer vtable+8 with event/parameter; return is not tested by the loop.",
+      "limitations": [
+        "Subscriber registration/virtual target/runtime behavior not established; no serialized frame or peer acknowledgement."
+      ]
+    }
+  ]
+}

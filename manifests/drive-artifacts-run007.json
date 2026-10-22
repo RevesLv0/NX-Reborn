@@ -1,0 +1,29 @@
+{
+  "run": "20261022_run007",
+  "previous_run": "manifests/drive-artifacts-run006.json",
+  "research_commit": "c9c1064b6adddd119e25d9dc8618374487778273",
+  "ci_run_id": 39634968901,
+  "ci_conclusion": "success",
+  "artifacts": [
+    {
+      "name": "NX500_RUN007_RESEARCH_EXPORTS_PLUGIN_SNAPSHOT_20261022.zip",
+      "bytes": 10780948,
+      "sha256": "d80f0d7641ee010572549e1bc162f79119d1d71f2c3aa5488ccd826a554fa11e",
+      "id": "1U6K4dxZ0aw2hsrzzrlacys-Q2Ps5VEXS",
+      "url": "https://drive.google.com/file/d/1U6K4dxZ0aw2hsrzzrlacys-Q2Ps5VEXS/view",
+      "verified_parent_id": "1qWBUqiXxBFfDLA6AQ6UGjYaNCfcZJuV3",
+      "remote_verification": "Full authenticated redownload SHA-256 and ZIP CRC; parent/size metadata verified",
+      "scope": "Tracked research and complete Git bundle; all RUN007 outputs/receipts/logs, including failed reference attempts; unlocked new OEM plugin Ghidra database; original inputs and caches excluded."
+    }
+  ],
+  "independent_semantic_review_completed": false,
+  "new_subagents": 0,
+  "restore_guide": {
+    "id": "1PctWgwAZQU_ro-7JJPyKS9PyhUZn85BU",
+    "url": "https://drive.google.com/file/d/1PctWgwAZQU_ro-7JJPyKS9PyhUZn85BU/view",
+    "path": "docs/DRIVE_RUN007_20261022.md",
+    "sha256": "71e663195ab104fd544df3a9c9f1cb7fa40495e1312bb3261e81605931bb75e0",
+    "verified_parent_id": "198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+    "remote_verification": "Full readable content matched exact local text; parent verified"
+  }
+}

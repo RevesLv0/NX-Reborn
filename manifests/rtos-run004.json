@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "run": "RUN004",
+  "date_utc": "2026-10-21",
+  "static_only": true,
+  "source": {
+    "bin_path": ".work/full/NX500.bin",
+    "bin_bytes": 352121435,
+    "bin_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+    "section_index": 5,
+    "section_bin_start": 15680257,
+    "section_bytes": 12075648,
+    "section_sha256": "f8e417cb5b55768851ba7e2b8017d3a98dc0b0c8444cc0a5061265cc08dbbf7f",
+    "inferred_link_base": "0x80000000"
+  },
+  "source_manifest": "manifests/full-source-layout.json",
+  "source_manifest_sha256": "7364768d337e4c2127fb94caf6959aaf1be33887f72256f2cea21ffa9f202f01",
+  "method": "whole-section aligned ARM encoding candidates followed by selected bounded Capstone 5.0.6 ARM disassembly and manual register/control-flow review",
+  "new_imports": 0,
+  "auto_analysis_runs": 0,
+  "decompilation_attempts": 0,
+  "commands": [
+    "PYTHONPATH=.work/python python tools/firmware/rtos_readiness.py --bin .work/full/NX500.bin --manifest manifests/full-source-layout.json --output analysis/evidence/rtos-readiness-run004.json --raw-output-dir .work/run004/rtos",
+    "PYTHONPATH=.work/python python -m unittest discover -s tests -p test_rtos_readiness.py -v"
+  ],
+  "verification": {
+    "unit_tests_passed": 3,
+    "code_regions": 16,
+    "all_windows_decode_full_requested_lengths": true,
+    "instruction_byte_records_verified_against_full_bin": 379,
+    "selected_string_byte_records_verified_against_full_bin": 88,
+    "region_byte_and_sha_records_verified_against_full_bin": 16
+  },
+  "artifacts": [
+    {
+      "path": "tools/firmware/rtos_readiness.py",
+      "bytes": 7704,
+      "sha256": "8dd2c75d36b725664098286756eb680b14bbf34fadc00a20ce577a265492f1f8"
+    },
+    {
+      "path": "tests/test_rtos_readiness.py",
+      "bytes": 2136,
+      "sha256": "d233563dcf4b83d6c0178db2e5576612355dc262de579da2b6d56b9a81d7f3b5"
+    },
+    {
+      "path": "analysis/evidence/rtos-readiness-run004.json",
+      "bytes": 110476,
+      "sha256": "e44236aae5a10c4c4d3cf6bee95ddb00569bc3f49cdf1e3fe930dc24023150d9"
+    },
+    {
+      "path": "analysis/architecture/RTOS_READINESS_RUN004.md",
+      "bytes": 10180,
+      "sha256": "26fbcdd93849325731cd2ed1c372ae7a1753a24cb8b87dcdc7776c8ddd9eeb3a"
+    }
+  ],
+  "reviewed_findings": [
+    {
+      "id": "rtos-run004-producer",
+      "claim": "Named T-Kernel setter reaches STRB at selector 0xff base 0x85400000 plus offset0x1c4d; matches Linux consumer numerically.",
+      "section_offsets": [
+        "0xc8430",
+        "0x4e2ba4",
+        "0x4e2f48"
+      ],
+      "limitations": "Inferred link base, not runtime ownership or visibility."
+    },
+    {
+      "id": "rtos-run004-transitions",
+      "claim": "Eight reviewed direct ARM callers supply four one writes and four zero writes, with raw-buffer and notification code associations.",
+      "section_offsets": [
+        "0x61484",
+        "0x6151c",
+        "0x73294",
+        "0x733ac",
+        "0xa3994",
+        "0xc9810",
+        "0xc9840",
+        "0xc9864"
+      ],
+      "limitations": "No indirect/Thumb completeness or complete state-machine interpretation."
+    },
+    {
+      "id": "rtos-run004-publication",
+      "claim": "NotifyNextShotReady-associated routine sets byte then supplies identifier 0x01010006 to local publisher helper.",
+      "section_offsets": [
+        "0x6144c",
+        "0x61484",
+        "0x614b0"
+      ],
+      "limitations": "No serialized protocol, receiver acknowledgement, file completion, or durability guarantee."
+    },
+    {
+      "id": "rtos-run004-getter-width",
+      "claim": "Neighbor getter calls same selector/offset and uses word LDR followed by UXTB.",
+      "section_offsets": [
+        "0xc8484",
+        "0x4e30d8",
+        "0x4e30fc"
+      ],
+      "limitations": "Runtime alignment and memory attributes unknown; no fault conclusion."
+    }
+  ],
+  "limitations": [
+    "Whole-section 4-byte-aligned ARM encoding candidate scan is not executable-region discovery.",
+    "Data and instruction boundaries are manually reviewed only in selected bounded windows; code-like bytes elsewhere remain candidates.",
+    "No exhaustive Thumb, indirect-call, alias, relocation, or whole-program analysis.",
+    "No device observation, target execution, file durability, capture completion, or complete shared-memory ownership proof."
+  ]
+}

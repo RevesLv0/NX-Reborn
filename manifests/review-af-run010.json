@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "run": "RUN010",
+  "reviewed_findings": [
+    {
+      "id": "AF010-REGISTER",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "original_elf_va": "0x12dbd4",
+      "evidence": "analysis/evidence/af-lens-run010.json",
+      "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+      "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+      "claim": "Three app instructions load UI_Set_Lens_Callback_Fn at 0x220038 and call lens registration wrapper 0x1e3f5c; wrapper uses ioctl 0x13 and capture translator maps it to 0x1050007.",
+      "limitations": [
+        "This is a selected registration site, not proof it runs at every boot or completes initialization.",
+        "Independent semantic review and runtime observations are not completed."
+      ],
+      "unresolved_questions": [
+        "This is a selected registration site, not proof it runs at every boot or completes initialization."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
+    },
+    {
+      "id": "AF010-LISTENER",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "original_path": "/usr/lib/libcapture-fw-prod.so",
+      "original_elf_va": "0x853a0",
+      "evidence": "analysis/evidence/af-lens-run010.json",
+      "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+      "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+      "claim": "Lens registration overwrites a single global listener; unregister requires the same nonnull pointer. App removal wrapper sends null through the registration opcode; the inspected ControlLens branch leaves the listener unchanged and can return zero.",
+      "limitations": [
+        "Concurrent callback lifetime and actual shutdown sequencing remain unobserved.",
+        "Independent semantic review and runtime observations are not completed."
+      ],
+      "unresolved_questions": [
+        "Concurrent callback lifetime and actual shutdown sequencing remain unobserved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
+    },
+    {
+      "id": "AF010-TRANSPORT",
+      "source_sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+      "original_path": "/usr/lib/libmulticore-bridge.so",
+      "original_elf_va": "0x7898",
+      "evidence": "analysis/evidence/af-lens-run010.json",
+      "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+      "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+      "claim": "Capture SendCommand supplies category 0x83; bridge send fetches CSender, creates a frame and takes immediate-send or destination-not-alive queue branches.",
+      "limitations": [
+        "Frame packing, inferred types, queue lifetime, errors and delivery completion require further review.",
+        "Independent semantic review and runtime observations are not completed."
+      ],
+      "unresolved_questions": [
+        "Frame packing, inferred types, queue lifetime, errors and delivery completion require further review."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
+    },
+    {
+      "id": "AF010-DISPATCH",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "original_path": "/usr/lib/libcapture-fw-prod.so",
+      "original_elf_va": "0x8e23c",
+      "evidence": "analysis/evidence/af-lens-run010.json",
+      "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+      "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+      "claim": "Registered category 0x82 selects CNotifyHandler via holder index 2 and installed vtable; message halfword +4 high/low bytes select notification category/subcategory.",
+      "limitations": [
+        "Conditional on successful subscriptions and unchanged constructed objects; runtime source of received frames is not observed.",
+        "Independent semantic review and runtime observations are not completed."
+      ],
+      "unresolved_questions": [
+        "Conditional on successful subscriptions and unchanged constructed objects; runtime source of received frames is not observed."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
+    },
+    {
+      "id": "AF010-LENS-EVENT",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "original_path": "/usr/lib/libcapture-fw-prod.so",
+      "original_elf_va": "0x8d28c",
+      "evidence": "analysis/evidence/af-lens-run010.json",
+      "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+      "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+      "claim": "Lens table slot 25 selects onLensEvent; stored count/length 8 extracts two words at message +8/+0xc and forwards them to the lens listener with null third argument.",
+      "limitations": [
+        "Full event-ID/status meanings, message backing-buffer bounds and hardware completion are unresolved.",
+        "Independent semantic review and runtime observations are not completed."
+      ],
+      "unresolved_questions": [
+        "Full event-ID/status meanings, message backing-buffer bounds and hardware completion are unresolved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
+    },
+    {
+      "id": "AF010-AF-SCAN",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "original_path": "/usr/lib/libcapture-fw-prod.so",
+      "original_elf_va": "0x8bf5c",
+      "evidence": "analysis/evidence/af-lens-run010.json",
+      "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+      "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+      "claim": "Liveview table slot 5 selects onAFScanDone; count/length 1 branch calls SetFocusScanResult, reads first byte and publishes app callback 0x1040001. Setter copies 12 bytes and getter sends 12 bytes at opcode 0x365.",
+      "limitations": [
+        "The stored count/length1 versus12-byte copy relationship is unresolved; no one-byte allocation or memory-safety flaw is asserted.",
+        "Independent semantic review and runtime observations are not completed."
+      ],
+      "unresolved_questions": [
+        "The stored count/length1 versus12-byte copy relationship is unresolved; no one-byte allocation or memory-safety flaw is asserted."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
+    },
+    {
+      "id": "AF010-UI-QUEUE",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "original_elf_va": "0x220038",
+      "evidence": "analysis/evidence/af-lens-run010.json",
+      "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+      "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+      "claim": "App lens callback applies state/error/event-mask gates then schedules GLib idle work; common helper unpacks ID/status halves before downstream UI dispatch.",
+      "limitations": [
+        "Accepted callback is not a proven displayed transition; downstream helper0x221d64 remains unreviewed.",
+        "Independent semantic review and runtime observations are not completed."
+      ],
+      "unresolved_questions": [
+        "Accepted callback is not a proven displayed transition; downstream helper0x221d64 remains unreviewed."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
+    },
+    {
+      "id": "AF010-COMMAND",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "original_path": "/usr/lib/libcapture-fw-prod.so",
+      "original_elf_va": "0x43db4",
+      "evidence": "analysis/evidence/af-lens-run010.json",
+      "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+      "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+      "claim": "ControlLens encodes concrete 0x50x lens opcodes/payload transforms; app CAF request 5 maps to 0x1040005 and command 0x206 with boolean inversion, AF-lock request 9 maps to 0x1040009 and command 0x204 bytes 2/0x12.",
+      "limitations": [
+        "Payload types and hardware meanings remain bounded to code expressions; no focus or motor behavior observed.",
+        "Independent semantic review and runtime observations are not completed."
+      ],
+      "unresolved_questions": [
+        "Payload types and hardware meanings remain bounded to code expressions; no focus or motor behavior observed."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
+    },
+    {
+      "id": "AF010-PREFERENCES",
+      "source_sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec",
+      "original_path": "/usr/lib/libuser-spec.so",
+      "original_elf_va": "0x1df74",
+      "evidence": "analysis/evidence/af-lens-run010.json",
+      "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+      "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+      "claim": "Lens property getter reads 0x6c bytes at preference 0x120; lens info getter reads 0x38 bytes at 0x20; readiness wrapper distinguishes magic values read from 0xd28.",
+      "limitations": [
+        "Writers, coherence, freshness and RTOS preference layout remain unresolved; another capture wrapper reads0x40 bytes from0x20.",
+        "Independent semantic review and runtime observations are not completed."
+      ],
+      "unresolved_questions": [
+        "Writers, coherence, freshness and RTOS preference layout remain unresolved; another capture wrapper reads0x40 bytes from0x20."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
+    }
+  ]
+}

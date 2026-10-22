@@ -1,0 +1,1748 @@
+{
+  "schema_version": 1,
+  "static_only": true,
+  "input_inventory": {
+    "path": ".work/full/inventory/full_filesystem_inventory.json",
+    "sha256": "c874bc1a39049f8f6afb508aa34e9fb0b4aacd1480e7603afade30a4613d461f",
+    "bytes": 16667394
+  },
+  "collector": {
+    "path": "/workspace/NX-Reborn/tools/firmware/transfer_state_evidence.py",
+    "sha256": "8e8f884eb8b24436e17dda4113ec16298384c8e6f891867bf0651862c9c8677d",
+    "bytes": 10277
+  },
+  "evidence": {
+    "path": "analysis/evidence/transfer-state-run010.json",
+    "sha256": "ae4c0286e28001f255ec659ed6376c4ec5f7817bf298cb939d28214a6885281e",
+    "bytes": 1836029
+  },
+  "sources": [
+    {
+      "path": "/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app",
+      "partition": "rootfs",
+      "sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "staged_path": ".work/run010/transfer/network/inputs/smart-wifi-app"
+    },
+    {
+      "path": "/usr/lib/libdi-network-dlna-api.so",
+      "partition": "rootfs",
+      "sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "staged_path": ".work/run010/transfer/network/inputs/libdi-network-dlna-api.so"
+    }
+  ],
+  "generations": [
+    {
+      "work": ".work/run010/transfer/network/api",
+      "receipt": {
+        "run_id": "3c5bfd63-e7d6-4df7-bf23-ad710c62038a",
+        "started_unix": 1792629073.0763648,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_FULL_RUN002",
+          "-process",
+          "libdi-network-dlna-api.so",
+          "-analysisTimeoutPerFile",
+          "300",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportEvidence.java",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/api/outputs/ghidra",
+          "^(SPHTTPClientHandler::(entry|readResponse|sendData)|SP_HTTP_Response::parse|SPClientManager::(notifyServiceStatus|SPClientManager|setCallback)|SNPushClientNotificationCallback|SNPushStart|SelectivePushSendEventToUI)$",
+          "12",
+          "3c5bfd63-e7d6-4df7-bf23-ad710c62038a",
+          "45",
+          "0",
+          "-log",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/api/logs/NX500_FULL_RUN002.log",
+          "-scriptlog",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/api/logs/NX500_FULL_RUN002-script.log",
+          "-recursive",
+          "-noanalysis"
+        ],
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "decompile_timeout_seconds": 45,
+        "decompile_payload_mb_override": 0,
+        "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629089.2834654
+      },
+      "receipt_artifact": {
+        "path": ".work/run010/transfer/network/api/logs/NX500_FULL_RUN002-3c5bfd63-e7d6-4df7-bf23-ad710c62038a.json",
+        "sha256": "24cdf71fa5539fbd9e061834d9740eef016acbe12e54d59cb3d2ec6d7b5fb072",
+        "bytes": 1397
+      },
+      "input_manifest": {
+        "path": ".work/run010/transfer/network/api/input-manifest.json",
+        "sha256": "742b3347d9b9442174e1ece55ecbe4637e39ccd3ec731d7b7cc71e6ce0b3ab6b",
+        "bytes": 276
+      },
+      "summaries": [
+        {
+          "program": "libdi-network-dlna-api.so",
+          "sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1426,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 2230,
+          "decompile_budget": 12,
+          "decompile_attempted": 10,
+          "decompile_completed": 10,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^(SPHTTPClientHandler::(entry|readResponse|sendData)|SP_HTTP_Response::parse|SPClientManager::(notifyServiceStatus|SPClientManager|setCallback)|SNPushClientNotificationCallback|SNPushStart|SelectivePushSendEventToUI)$",
+          "matched_functions": 10,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "3c5bfd63-e7d6-4df7-bf23-ad710c62038a",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 359122,
+              "sha256": "fb82a83c90b8dfbee996cd57daabf3df9f6e6bf978186d41168a310fac34bf2e"
+            },
+            "calls.jsonl": {
+              "bytes": 548537,
+              "sha256": "2d15307c28fca2068b6c2fde40d687189e4f711acea91fa03ece13fb94a3623f"
+            },
+            "decompiled.jsonl": {
+              "bytes": 210920,
+              "sha256": "d136c304698f5ac20374060051b2adcd5522392717de981d9c1d6e61236b849f"
+            },
+            "strings.jsonl": {
+              "bytes": 408219,
+              "sha256": "cb5c0b6a97a94097960f702b30bfbd507097dc53b6bf80d6fe2fccc3505d4190"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "work": ".work/run010/transfer/network/api-binding",
+      "receipt": {
+        "run_id": "37371fbc-6ca4-402b-8afc-3a69d8f30b0b",
+        "started_unix": 1792629236.4140048,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_FULL_RUN002",
+          "-process",
+          "libdi-network-dlna-api.so",
+          "-analysisTimeoutPerFile",
+          "300",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportEvidence.java",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/api-binding/outputs/ghidra",
+          "^(SPHTTPClientHandler::SPHTTPClientHandler|SPClientManager::createFileTransfer)$",
+          "8",
+          "37371fbc-6ca4-402b-8afc-3a69d8f30b0b",
+          "45",
+          "0",
+          "-log",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/api-binding/logs/NX500_FULL_RUN002.log",
+          "-scriptlog",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/api-binding/logs/NX500_FULL_RUN002-script.log",
+          "-recursive",
+          "-noanalysis"
+        ],
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "decompile_timeout_seconds": 45,
+        "decompile_payload_mb_override": 0,
+        "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629252.6689785
+      },
+      "receipt_artifact": {
+        "path": ".work/run010/transfer/network/api-binding/logs/NX500_FULL_RUN002-37371fbc-6ca4-402b-8afc-3a69d8f30b0b.json",
+        "sha256": "33ccc304b4ee863a805f5ea9d8895cc83acb03a2f849f1826546ccbd259f3a15",
+        "bytes": 1283
+      },
+      "input_manifest": {
+        "path": ".work/run010/transfer/network/api-binding/input-manifest.json",
+        "sha256": "742b3347d9b9442174e1ece55ecbe4637e39ccd3ec731d7b7cc71e6ce0b3ab6b",
+        "bytes": 276
+      },
+      "summaries": [
+        {
+          "program": "libdi-network-dlna-api.so",
+          "sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1426,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 2230,
+          "decompile_budget": 8,
+          "decompile_attempted": 7,
+          "decompile_completed": 7,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^(SPHTTPClientHandler::SPHTTPClientHandler|SPClientManager::createFileTransfer)$",
+          "matched_functions": 7,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "37371fbc-6ca4-402b-8afc-3a69d8f30b0b",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 359122,
+              "sha256": "fb82a83c90b8dfbee996cd57daabf3df9f6e6bf978186d41168a310fac34bf2e"
+            },
+            "calls.jsonl": {
+              "bytes": 548537,
+              "sha256": "b0ae29dd33760a5f08fff116f43150a2ae1dbbfa5246af3e4c644e6b3951c044"
+            },
+            "decompiled.jsonl": {
+              "bytes": 87748,
+              "sha256": "ed009a4e28ed957cfebaf3257204b9f280a31dee2eec118cf4b7f881f2672136"
+            },
+            "strings.jsonl": {
+              "bytes": 408219,
+              "sha256": "cb5c0b6a97a94097960f702b30bfbd507097dc53b6bf80d6fe2fccc3505d4190"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "work": ".work/run010/transfer/network/app",
+      "receipt": {
+        "run_id": "12372bef-9fd0-4f93-b984-6ae56c16fc50",
+        "started_unix": 1792629106.8941998,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_FULL_RUN002",
+          "-process",
+          "smart-wifi-app",
+          "-analysisTimeoutPerFile",
+          "300",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportEvidence.java",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/app/outputs/ghidra",
+          "^(CSNetworkAPI::(convertEventID|convertStatus|responseToUI)|CAPPUIApplication::dispatch|CSAFStateMachine::dispatch|CAPPNetworkSmartphoneLinkState::(handle|nPushCheckSendComplete)|UI_Event_Send_Manager)$",
+          "12",
+          "12372bef-9fd0-4f93-b984-6ae56c16fc50",
+          "45",
+          "0",
+          "-log",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/app/logs/NX500_FULL_RUN002.log",
+          "-scriptlog",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/app/logs/NX500_FULL_RUN002-script.log",
+          "-recursive",
+          "-noanalysis"
+        ],
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "decompile_timeout_seconds": 45,
+        "decompile_payload_mb_override": 0,
+        "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629126.2099385
+      },
+      "receipt_artifact": {
+        "path": ".work/run010/transfer/network/app/logs/NX500_FULL_RUN002-12372bef-9fd0-4f93-b984-6ae56c16fc50.json",
+        "sha256": "c849afd4f69b839c72e475e0e38a936f3b88962439a66d74151fd77e49370140",
+        "bytes": 1371
+      },
+      "input_manifest": {
+        "path": ".work/run010/transfer/network/app/input-manifest.json",
+        "sha256": "a76d26a330a6e2d1ac88e0ff7dd1ac8a4f1b1beae2540086c7e149bf34b61767",
+        "bytes": 287
+      },
+      "summaries": [
+        {
+          "program": "smart-wifi-app",
+          "sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 3522,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 8159,
+          "decompile_budget": 12,
+          "decompile_attempted": 6,
+          "decompile_completed": 6,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^(CSNetworkAPI::(convertEventID|convertStatus|responseToUI)|CAPPUIApplication::dispatch|CSAFStateMachine::dispatch|CAPPNetworkSmartphoneLinkState::(handle|nPushCheckSendComplete)|UI_Event_Send_Manager)$",
+          "matched_functions": 6,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "12372bef-9fd0-4f93-b984-6ae56c16fc50",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 899382,
+              "sha256": "c8b279c4f3d0c247efdb9b07b3f017dd69b172dc66b6de486b62339b48fa12ea"
+            },
+            "calls.jsonl": {
+              "bytes": 1877012,
+              "sha256": "9e441bdaf5f2c7f1eae54e1936a92b5351d7aa5d71fc3ec0e0f0bee7df809eb6"
+            },
+            "decompiled.jsonl": {
+              "bytes": 16241,
+              "sha256": "870235a4a8166d13e6b9fa611930c0ade64dfdf59512f6cf3996f104b85988a3"
+            },
+            "strings.jsonl": {
+              "bytes": 1274490,
+              "sha256": "5a17f2f47264958a10753a3a346d5db09d3ad91850488650b82860b1b3e25c57"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "work": ".work/run010/transfer/network/app-binding",
+      "receipt": {
+        "run_id": "2ed6b5db-1f74-4b82-8af3-e7c03739712f",
+        "started_unix": 1792629150.122174,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_FULL_RUN002",
+          "-process",
+          "smart-wifi-app",
+          "-analysisTimeoutPerFile",
+          "300",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportEvidence.java",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/app-binding/outputs/ghidra",
+          "^(CSNetworkAPI::(ConvertNetworkToUiEventId|ConvertNetworkToUiEventStatus|handleSmartphoneLink)|CAPPUIApplication::(CAPPUIApplication|getInstance)|CSAFEvent::CSAFEvent)$",
+          "8",
+          "2ed6b5db-1f74-4b82-8af3-e7c03739712f",
+          "45",
+          "0",
+          "-log",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/app-binding/logs/NX500_FULL_RUN002.log",
+          "-scriptlog",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/app-binding/logs/NX500_FULL_RUN002-script.log",
+          "-recursive",
+          "-noanalysis"
+        ],
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "decompile_timeout_seconds": 45,
+        "decompile_payload_mb_override": 0,
+        "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629165.4729
+      },
+      "receipt_artifact": {
+        "path": ".work/run010/transfer/network/app-binding/logs/NX500_FULL_RUN002-2ed6b5db-1f74-4b82-8af3-e7c03739712f.json",
+        "sha256": "0e2a84d57ab17ddebe5a6fecf8edbb517002c1960056287d120cb4f81e1eff46",
+        "bytes": 1356
+      },
+      "input_manifest": {
+        "path": ".work/run010/transfer/network/app-binding/input-manifest.json",
+        "sha256": "a76d26a330a6e2d1ac88e0ff7dd1ac8a4f1b1beae2540086c7e149bf34b61767",
+        "bytes": 287
+      },
+      "summaries": [
+        {
+          "program": "smart-wifi-app",
+          "sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 3522,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 8159,
+          "decompile_budget": 8,
+          "decompile_attempted": 7,
+          "decompile_completed": 7,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^(CSNetworkAPI::(ConvertNetworkToUiEventId|ConvertNetworkToUiEventStatus|handleSmartphoneLink)|CAPPUIApplication::(CAPPUIApplication|getInstance)|CSAFEvent::CSAFEvent)$",
+          "matched_functions": 7,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "2ed6b5db-1f74-4b82-8af3-e7c03739712f",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 899382,
+              "sha256": "c8b279c4f3d0c247efdb9b07b3f017dd69b172dc66b6de486b62339b48fa12ea"
+            },
+            "calls.jsonl": {
+              "bytes": 1877012,
+              "sha256": "66e3f132b1f164c9b57d52bfacd254ebc65bb158429e50e9e5e2c29ea96a7e11"
+            },
+            "decompiled.jsonl": {
+              "bytes": 21533,
+              "sha256": "336e48d6e9532649478e9095c4b3b0e016bd84e2e37dbe741adc405c37492834"
+            },
+            "strings.jsonl": {
+              "bytes": 1274490,
+              "sha256": "5a17f2f47264958a10753a3a346d5db09d3ad91850488650b82860b1b3e25c57"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "work": ".work/run010/transfer-budget-attempts/api-binding",
+      "receipt": {
+        "run_id": "73567524-840c-40f8-9b86-b923896ec6a2",
+        "started_unix": 1792629196.2650108,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_FULL_RUN002",
+          "-process",
+          "libdi-network-dlna-api.so",
+          "-analysisTimeoutPerFile",
+          "300",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportEvidence.java",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/api-binding/outputs/ghidra",
+          "^(SPHTTPClientHandler::SPHTTPClientHandler|SPClientManager::createFileTransfer)$",
+          "6",
+          "73567524-840c-40f8-9b86-b923896ec6a2",
+          "45",
+          "0",
+          "-log",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/api-binding/logs/NX500_FULL_RUN002.log",
+          "-scriptlog",
+          "/workspace/NX-Reborn/.work/run010/transfer/network/api-binding/logs/NX500_FULL_RUN002-script.log",
+          "-recursive",
+          "-noanalysis"
+        ],
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "decompile_timeout_seconds": 45,
+        "decompile_payload_mb_override": 0,
+        "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629213.5182445
+      },
+      "receipt_artifact": {
+        "path": ".work/run010/transfer-budget-attempts/api-binding/logs/NX500_FULL_RUN002-73567524-840c-40f8-9b86-b923896ec6a2.json",
+        "sha256": "319b9c1647b16cca1d9a9445c6ba1b6cfd860f060bf9b75ed7529b5cd9c2348c",
+        "bytes": 1283
+      },
+      "input_manifest": {
+        "path": ".work/run010/transfer-budget-attempts/api-binding/input-manifest.json",
+        "sha256": "742b3347d9b9442174e1ece55ecbe4637e39ccd3ec731d7b7cc71e6ce0b3ab6b",
+        "bytes": 276
+      },
+      "summaries": [
+        {
+          "program": "libdi-network-dlna-api.so",
+          "sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 1426,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 2230,
+          "decompile_budget": 6,
+          "decompile_attempted": 6,
+          "decompile_completed": 6,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^(SPHTTPClientHandler::SPHTTPClientHandler|SPClientManager::createFileTransfer)$",
+          "matched_functions": 7,
+          "decompile_omitted_by_budget": 1,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "73567524-840c-40f8-9b86-b923896ec6a2",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 359122,
+              "sha256": "fb82a83c90b8dfbee996cd57daabf3df9f6e6bf978186d41168a310fac34bf2e"
+            },
+            "calls.jsonl": {
+              "bytes": 548537,
+              "sha256": "df4895417f817024df5ad2013dd5cc471575226d3e6a950e4d78d14b6814ec9b"
+            },
+            "decompiled.jsonl": {
+              "bytes": 85366,
+              "sha256": "3bd40876da99afb16e5e93ed6f9380eadd821f3218ee372a286a8ebc5db8c2c1"
+            },
+            "strings.jsonl": {
+              "bytes": 408219,
+              "sha256": "cb5c0b6a97a94097960f702b30bfbd507097dc53b6bf80d6fe2fccc3505d4190"
+            }
+          }
+        }
+      ],
+      "relocated_from": ".work/run010/transfer/network/api-binding",
+      "limitation": "One requested match omitted by budget; subsequent full repeat recovered all seven."
+    }
+  ],
+  "mode_queries": [
+    {
+      "receipt": {
+        "started_unix": 1792629260.2736006,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_FULL_RUN002",
+          "-process",
+          "libdi-network-dlna-api.so",
+          "-recursive",
+          "-noanalysis",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportAddressReferences.java",
+          "/workspace/NX-Reborn/.work/run010/transfer/modes/api/references.json",
+          "0x000313a8",
+          "0x00050c14",
+          "0x000511f8",
+          "0x00051328",
+          "0x000513d8",
+          "0x00051d08",
+          "0x0005873c",
+          "0x00058bf0",
+          "0x0005a9ec",
+          "0x0005b848",
+          "0x0005ea84",
+          "0x0005ec74",
+          "0x0005edd8",
+          "0x0005f6a8",
+          "0x0005ff4c",
+          "0x00065804",
+          "0x00068f60"
+        ],
+        "source_path": ".work/run010/transfer/network/inputs/libdi-network-dlna-api.so",
+        "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+        "script_sha256": "a4300a57933d33d4e7da28b2876d9aae1c499c0ad53da12b3fe0815a53187cfd",
+        "runner_sha256": "be0efe2397efe29c7d0edbfadb32f78397b1aa4f360798d52d51aee902c4fbfb",
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629274.8242862,
+        "output_sha256": "aad88fe12894f1013ca8126c8c35202fd8f3cf31beaf4c7f7236f01b6490c1e8"
+      },
+      "query": {
+        "program": "libdi-network-dlna-api.so",
+        "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+        "address_convention": "Ghidra program VAs only; translate through recorded ELF mapping before claiming original VAs",
+        "method": "Incoming references known to this saved Ghidra database; not an exhaustive indirect-call or pointer scan",
+        "static_only": true,
+        "targets": [
+          {
+            "target_va": "000313a8",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00091fa0",
+                "type": "DATA",
+                "operand_index": 0
+              },
+              {
+                "from_va": "000202c8",
+                "type": "COMPUTED_CALL",
+                "operand_index": 0,
+                "containing_function": "SelectivePushSendEventToUI",
+                "containing_function_va": "000202c0"
+              }
+            ]
+          },
+          {
+            "target_va": "00050c14",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00091348",
+                "type": "DATA",
+                "operand_index": 0
+              }
+            ]
+          },
+          {
+            "target_va": "000511f8",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00091a88",
+                "type": "DATA",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0001f380",
+                "type": "COMPUTED_CALL",
+                "operand_index": 0,
+                "containing_function": "SPClientManager::setCallback",
+                "containing_function_va": "0001f378"
+              }
+            ]
+          },
+          {
+            "target_va": "00051328",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00091d58",
+                "type": "DATA",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0001fbf0",
+                "type": "COMPUTED_CALL",
+                "operand_index": 0,
+                "containing_function": "SPClientManager::SPClientManager",
+                "containing_function_va": "0001fbe8"
+              }
+            ]
+          },
+          {
+            "target_va": "000513d8",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              }
+            ]
+          },
+          {
+            "target_va": "00051d08",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00091a0c",
+                "type": "DATA",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0001f20c",
+                "type": "COMPUTED_CALL",
+                "operand_index": 0,
+                "containing_function": "SPClientManager::createFileTransfer",
+                "containing_function_va": "0001f204"
+              }
+            ]
+          },
+          {
+            "target_va": "0005873c",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "000917f4",
+                "type": "DATA",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0001ebc4",
+                "type": "COMPUTED_CALL",
+                "operand_index": 0,
+                "containing_function": "SPHTTPClientHandler::readResponse",
+                "containing_function_va": "0001ebbc"
+              }
+            ]
+          },
+          {
+            "target_va": "00058bf0",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00091dec",
+                "type": "DATA",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0001fdac",
+                "type": "COMPUTED_CALL",
+                "operand_index": 0,
+                "containing_function": "SPHTTPClientHandler::sendData",
+                "containing_function_va": "0001fda4"
+              }
+            ]
+          },
+          {
+            "target_va": "0005a9ec",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00091ec4",
+                "type": "DATA",
+                "operand_index": 0
+              },
+              {
+                "from_va": "00020034",
+                "type": "COMPUTED_CALL",
+                "operand_index": 0,
+                "containing_function": "SP_HTTP_Response::parse",
+                "containing_function_va": "0002002c"
+              }
+            ]
+          },
+          {
+            "target_va": "0005b848",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00091490",
+                "type": "DATA",
+                "operand_index": 0
+              }
+            ]
+          },
+          {
+            "target_va": "0005ea84",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00091784",
+                "type": "DATA",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0001ea74",
+                "type": "COMPUTED_CALL",
+                "operand_index": 0,
+                "containing_function": "SPHTTPClientHandler::SPHTTPClientHandler",
+                "containing_function_va": "0001ea6c"
+              }
+            ]
+          },
+          {
+            "target_va": "0005ec74",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              }
+            ]
+          },
+          {
+            "target_va": "0005edd8",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "0009195c",
+                "type": "DATA",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0001effc",
+                "type": "COMPUTED_CALL",
+                "operand_index": 0,
+                "containing_function": "SPHTTPClientHandler::SPHTTPClientHandler",
+                "containing_function_va": "0001eff4"
+              }
+            ]
+          },
+          {
+            "target_va": "0005f6a8",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00091ae0",
+                "type": "DATA",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0001f488",
+                "type": "COMPUTED_CALL",
+                "operand_index": 0,
+                "containing_function": "SPHTTPClientHandler::SPHTTPClientHandler",
+                "containing_function_va": "0001f480"
+              }
+            ]
+          },
+          {
+            "target_va": "0005ff4c",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              }
+            ]
+          },
+          {
+            "target_va": "00065804",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "000920e0",
+                "type": "DATA",
+                "operand_index": 0
+              },
+              {
+                "from_va": "00069084",
+                "type": "PARAM",
+                "operand_index": 0,
+                "containing_function": "SNPushStart",
+                "containing_function_va": "00068f60"
+              }
+            ]
+          },
+          {
+            "target_va": "00068f60",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "000918e0",
+                "type": "DATA",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0001ee88",
+                "type": "COMPUTED_CALL",
+                "operand_index": 0,
+                "containing_function": "SNPushStart",
+                "containing_function_va": "0001ee80"
+              }
+            ]
+          }
+        ]
+      },
+      "artifact": {
+        "path": ".work/run010/transfer/modes/api/references.json",
+        "sha256": "aad88fe12894f1013ca8126c8c35202fd8f3cf31beaf4c7f7236f01b6490c1e8",
+        "bytes": 8439
+      }
+    },
+    {
+      "receipt": {
+        "started_unix": 1792629274.8675115,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_FULL_RUN002",
+          "-process",
+          "smart-wifi-app",
+          "-recursive",
+          "-noanalysis",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportAddressReferences.java",
+          "/workspace/NX-Reborn/.work/run010/transfer/modes/app/references.json",
+          "0x000406c8",
+          "0x00040be4",
+          "0x00040c0c",
+          "0x40c34",
+          "0x40c54",
+          "0x00049fb0",
+          "0x0004ca8c",
+          "0x0004caac",
+          "0x0004cd30",
+          "0x00058244",
+          "0x00059068",
+          "0x00059d88",
+          "0x0005a328",
+          "0x5a368",
+          "0x0007ddc0",
+          "0x000810a8"
+        ],
+        "source_path": ".work/run010/transfer/network/inputs/smart-wifi-app",
+        "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+        "script_sha256": "a4300a57933d33d4e7da28b2876d9aae1c499c0ad53da12b3fe0815a53187cfd",
+        "runner_sha256": "be0efe2397efe29c7d0edbfadb32f78397b1aa4f360798d52d51aee902c4fbfb",
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629285.9807146,
+        "output_sha256": "4cb782971ca9ff9d7925eebba5c454ba24b050d1e484e762d5d6c09909d52865"
+      },
+      "query": {
+        "program": "smart-wifi-app",
+        "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+        "address_convention": "Ghidra program VAs only; translate through recorded ELF mapping before claiming original VAs",
+        "method": "Incoming references known to this saved Ghidra database; not an exhaustive indirect-call or pointer scan",
+        "static_only": true,
+        "targets": [
+          {
+            "target_va": "000406c8",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00040d00",
+                "type": "UNCONDITIONAL_JUMP",
+                "operand_index": 0,
+                "containing_function": "CSAFApplication::dispatch",
+                "containing_function_va": "00040d00"
+              },
+              {
+                "from_va": "0004cd38",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CAPPUIApplication::dispatch",
+                "containing_function_va": "0004cd30"
+              },
+              {
+                "from_va": "000f59d4",
+                "type": "DATA",
+                "operand_index": 0
+              }
+            ]
+          },
+          {
+            "target_va": "00040be4",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00048868",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Event_USB_Value_Manager",
+                "containing_function_va": "0004871c"
+              },
+              {
+                "from_va": "00048a00",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Event_Card_Value_Manager",
+                "containing_function_va": "000488c8"
+              },
+              {
+                "from_va": "0005828c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::responseToUI",
+                "containing_function_va": "00058244"
+              },
+              {
+                "from_va": "00048194",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Hdmi_Event_Connect_Manager",
+                "containing_function_va": "0004809c"
+              },
+              {
+                "from_va": "0004a240",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Event_GUI_Manager",
+                "containing_function_va": "0004a228"
+              },
+              {
+                "from_va": "00050fc4",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_ApSetting_Exit_Type_Run",
+                "containing_function_va": "00050dcc"
+              },
+              {
+                "from_va": "00050fe8",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_ApSetting_Exit_Type_Run",
+                "containing_function_va": "00050dcc"
+              },
+              {
+                "from_va": "000639ac",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CAPPNetworkApSettingState::wlan_engine_callback",
+                "containing_function_va": "000638c8"
+              }
+            ]
+          },
+          {
+            "target_va": "00040c0c",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "0004a3ac",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Event_Up_Manager",
+                "containing_function_va": "0004a360"
+              },
+              {
+                "from_va": "0004a5d8",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Event_Down_Manager",
+                "containing_function_va": "0004a58c"
+              },
+              {
+                "from_va": "0004a89c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "__logKeyPlus",
+                "containing_function_va": "0004a7b8"
+              },
+              {
+                "from_va": "00050ec0",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_ApSetting_Exit_Type_Run",
+                "containing_function_va": "00050dcc"
+              },
+              {
+                "from_va": "0006a7f4",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CAPPNetworkPcBackupState::handleGUIEvent",
+                "containing_function_va": "0006a310"
+              },
+              {
+                "from_va": "0007e5b8",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CAPPNetworkSmartphoneLinkState::Terminate",
+                "containing_function_va": "0007df88"
+              },
+              {
+                "from_va": "0006a208",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CAPPNetworkPcBackupState::handleTimerEvent",
+                "containing_function_va": "00069e18"
+              },
+              {
+                "from_va": "00042ba0",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_00042ac4",
+                "containing_function_va": "00042ac4"
+              },
+              {
+                "from_va": "0004606c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_00045994",
+                "containing_function_va": "00045994"
+              }
+            ]
+          },
+          {
+            "target_va": "00040c34",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "000f5a48",
+                "type": "DATA",
+                "operand_index": 0
+              }
+            ]
+          },
+          {
+            "target_va": "00040c54",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "000f5a58",
+                "type": "DATA",
+                "operand_index": 0
+              }
+            ]
+          },
+          {
+            "target_va": "00049fb0",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "000489c4",
+                "type": "PARAM",
+                "operand_index": 0,
+                "containing_function": "UI_Event_Card_Value_Manager",
+                "containing_function_va": "000488c8"
+              },
+              {
+                "from_va": "00050f4c",
+                "type": "PARAM",
+                "operand_index": 0,
+                "containing_function": "UI_ApSetting_Exit_Type_Run",
+                "containing_function_va": "00050dcc"
+              },
+              {
+                "from_va": "00050f9c",
+                "type": "PARAM",
+                "operand_index": 0,
+                "containing_function": "UI_ApSetting_Exit_Type_Run",
+                "containing_function_va": "00050dcc"
+              },
+              {
+                "from_va": "000481d0",
+                "type": "PARAM",
+                "operand_index": 0,
+                "containing_function": "UI_Hdmi_Event_Connect_Manager",
+                "containing_function_va": "0004809c"
+              },
+              {
+                "from_va": "0005841c",
+                "type": "PARAM",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::responseToUI",
+                "containing_function_va": "00058244"
+              },
+              {
+                "from_va": "00048838",
+                "type": "PARAM",
+                "operand_index": 0,
+                "containing_function": "UI_Event_USB_Value_Manager",
+                "containing_function_va": "0004871c"
+              }
+            ]
+          },
+          {
+            "target_va": "0004ca8c",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "0004cadc",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CAPPUIApplication::getInstance",
+                "containing_function_va": "0004caac"
+              }
+            ]
+          },
+          {
+            "target_va": "0004caac",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "0004a0c8",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Event_Send_Manager",
+                "containing_function_va": "00049fb0"
+              },
+              {
+                "from_va": "0004a11c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Delayed_APPInit_Test",
+                "containing_function_va": "0004a118"
+              },
+              {
+                "from_va": "0004a2fc",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Event_GUI_Manager",
+                "containing_function_va": "0004a228"
+              },
+              {
+                "from_va": "0004a460",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Event_Up_Manager",
+                "containing_function_va": "0004a360"
+              },
+              {
+                "from_va": "0004a68c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Event_Down_Manager",
+                "containing_function_va": "0004a58c"
+              },
+              {
+                "from_va": "0004a938",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "__logKeyPlus",
+                "containing_function_va": "0004a7b8"
+              },
+              {
+                "from_va": "00050544",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Idle_CB_execDirectLink",
+                "containing_function_va": "00050540"
+              },
+              {
+                "from_va": "00050ed0",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_ApSetting_Exit_Type_Run",
+                "containing_function_va": "00050dcc"
+              },
+              {
+                "from_va": "00042bc8",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_00042ac4",
+                "containing_function_va": "00042ac4"
+              },
+              {
+                "from_va": "00045c5c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_00045994",
+                "containing_function_va": "00045994"
+              },
+              {
+                "from_va": "00046114",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_00045994",
+                "containing_function_va": "00045994"
+              }
+            ]
+          },
+          {
+            "target_va": "0004cd30",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "0010517c",
+                "type": "DATA",
+                "operand_index": 0
+              }
+            ]
+          },
+          {
+            "target_va": "00058244",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00050c98",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "UI_Set_WiFi_Status_Icon",
+                "containing_function_va": "000508f0"
+              },
+              {
+                "from_va": "00058540",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::handleCommon",
+                "containing_function_va": "00058524"
+              },
+              {
+                "from_va": "0005f9bc",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CAPPNetworkApSettingState::HandleNetworkEvent",
+                "containing_function_va": "0005ecd4"
+              },
+              {
+                "from_va": "0005a758",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "dispatchWifiEvent",
+                "containing_function_va": "0005a730"
+              },
+              {
+                "from_va": "0005a778",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "dummyNetworkEvent",
+                "containing_function_va": "0005a75c"
+              },
+              {
+                "from_va": "0006375c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CAPPNetworkApSettingState::onEnter",
+                "containing_function_va": "000631c0"
+              },
+              {
+                "from_va": "000587b0",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::handleAllshare",
+                "containing_function_va": "000586ec"
+              },
+              {
+                "from_va": "00058828",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::handleAllshare",
+                "containing_function_va": "000586ec"
+              },
+              {
+                "from_va": "00059360",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::handleSmartphoneLink",
+                "containing_function_va": "00059068"
+              },
+              {
+                "from_va": "0005937c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::handleSmartphoneLink",
+                "containing_function_va": "00059068"
+              },
+              {
+                "from_va": "00058ce8",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::handlePcBackup",
+                "containing_function_va": "0005883c"
+              },
+              {
+                "from_va": "00058e2c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::handlePcBackup",
+                "containing_function_va": "0005883c"
+              },
+              {
+                "from_va": "00058e68",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::handlePcBackup",
+                "containing_function_va": "0005883c"
+              },
+              {
+                "from_va": "00058eb8",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::handlePcBackup",
+                "containing_function_va": "0005883c"
+              },
+              {
+                "from_va": "00058ea0",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::handlePcBackup",
+                "containing_function_va": "0005883c"
+              },
+              {
+                "from_va": "0005a54c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_0005a428",
+                "containing_function_va": "0005a428"
+              },
+              {
+                "from_va": "0005a2f8",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_0005a2d0",
+                "containing_function_va": "0005a2d0"
+              },
+              {
+                "from_va": "0005a324",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_0005a2fc",
+                "containing_function_va": "0005a2fc"
+              },
+              {
+                "from_va": "0005a684",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_0005a428",
+                "containing_function_va": "0005a428"
+              },
+              {
+                "from_va": "0005a6a0",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_0005a428",
+                "containing_function_va": "0005a428"
+              },
+              {
+                "from_va": "0005a2cc",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_0005a2a4",
+                "containing_function_va": "0005a2a4"
+              },
+              {
+                "from_va": "0005a3a4",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0005a3e4",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0005a424",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0005a724",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0
+              }
+            ]
+          },
+          {
+            "target_va": "00059068",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "00059934",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::handle",
+                "containing_function_va": "000597e8"
+              }
+            ]
+          },
+          {
+            "target_va": "00059d88",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "0005a744",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "dispatchWifiEvent",
+                "containing_function_va": "0005a730"
+              },
+              {
+                "from_va": "0005a764",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "dummyNetworkEvent",
+                "containing_function_va": "0005a75c"
+              },
+              {
+                "from_va": "0005a2e4",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_0005a2d0",
+                "containing_function_va": "0005a2d0"
+              },
+              {
+                "from_va": "0005a310",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_0005a2fc",
+                "containing_function_va": "0005a2fc"
+              },
+              {
+                "from_va": "0005a52c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_0005a428",
+                "containing_function_va": "0005a428"
+              },
+              {
+                "from_va": "0005a2b8",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_0005a2a4",
+                "containing_function_va": "0005a2a4"
+              },
+              {
+                "from_va": "0005a380",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0005a3c0",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0005a400",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0005a700",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0
+              }
+            ]
+          },
+          {
+            "target_va": "0005a328",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "0005a538",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0,
+                "containing_function": "FUN_0005a428",
+                "containing_function_va": "0005a428"
+              },
+              {
+                "from_va": "0005a38c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0005a3cc",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0005a40c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0
+              },
+              {
+                "from_va": "0005a70c",
+                "type": "UNCONDITIONAL_CALL",
+                "operand_index": 0
+              }
+            ]
+          },
+          {
+            "target_va": "0005a368",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "00059464",
+                "type": "PARAM",
+                "operand_index": 0,
+                "containing_function": "CSNetworkAPI::handleSmartphoneLink",
+                "containing_function_va": "00059068"
+              }
+            ]
+          },
+          {
+            "target_va": "0007ddc0",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              }
+            ]
+          },
+          {
+            "target_va": "000810a8",
+            "thumb_mode_context": 0,
+            "incoming": [
+              {
+                "from_va": "Entry Point",
+                "type": "EXTERNAL",
+                "operand_index": -1
+              },
+              {
+                "from_va": "0010e358",
+                "type": "DATA",
+                "operand_index": 0
+              }
+            ]
+          }
+        ]
+      },
+      "artifact": {
+        "path": ".work/run010/transfer/modes/app/references.json",
+        "sha256": "4cb782971ca9ff9d7925eebba5c454ba24b050d1e484e762d5d6c09909d52865",
+        "bytes": 21199
+      }
+    }
+  ],
+  "export_generations": 5,
+  "selected_attempts": 36,
+  "selected_completed": 36,
+  "unique_selected_functions": 30,
+  "imported_programs": 0,
+  "auto_analysis_programs": 0,
+  "budget_omissions": 1,
+  "budget_omissions_recovered_by_repeat": 1,
+  "independent_semantic_review_completed": false,
+  "limitations": [
+    "Selected decompilation and primary-agent byte verification only; no independent semantic review or runtime observation.",
+    "Original ELF VAs use per-source Ghidra delta; original file offsets use PT_LOAD independently.",
+    "Recovered instruction addresses are decoded in saved TMode context and split at gaps; C signatures remain inferred.",
+    "Five generations include one budget-limited attempt and its complete repeat; no decompiler failure or target execution."
+  ]
+}

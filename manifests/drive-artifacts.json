@@ -1,0 +1,56 @@
+{
+  "run": "20261021_run001",
+  "artifacts": [
+    {
+      "id": "1WySJImu8Uq_PVzC9T1aQ4q-oaNbXsO_D",
+      "name": "NX500_FW112_Ghidra_20261021_run001.zip",
+      "url": "https://drive.google.com/file/d/1WySJImu8Uq_PVzC9T1aQ4q-oaNbXsO_D/view?usp=drivesdk",
+      "bytes": 68264385,
+      "sha256_local": "e2af81f29c7cbf933748c35a19d6b18c8badf3dc333365ec74f4af495b2df3f2",
+      "verified_parent_id": "1qWBUqiXxBFfDLA6AQ6UGjYaNCfcZJuV3",
+      "remote_verification": "metadata size and parent readback; server SHA256 not exposed"
+    },
+    {
+      "id": "1GpcmWEBa3EmSsuYt5qRUa_BB8Ycf0tTp",
+      "name": "NX500_Codex_분석코드_20261021_run001.zip",
+      "url": "https://drive.google.com/file/d/1GpcmWEBa3EmSsuYt5qRUa_BB8Ycf0tTp/view?usp=drivesdk",
+      "bytes": 56936,
+      "sha256_local": "0ac9301243ab9463ee2a8f92426f66484bf4621913f6f3b1ee4974195e461e02",
+      "verified_parent_id": "198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+      "remote_verification": "metadata size and parent readback; server SHA256 not exposed"
+    },
+    {
+      "id": "18PwSs-QqvkjssdJiJlfEc2Jzt-I9-Cvr",
+      "name": "NX500_FW112_전체인덱스_20261021_run001.zip",
+      "url": "https://drive.google.com/file/d/18PwSs-QqvkjssdJiJlfEc2Jzt-I9-Cvr/view?usp=drivesdk",
+      "bytes": 708377,
+      "sha256_local": "fbacb56a8a5a165cdce42df1b0f78bf35f745f5298198b6a3d74a197c17a233d",
+      "verified_parent_id": "1cIz9Sldkq1stFttm6RI_XOZfQ29UrOGd",
+      "remote_verification": "metadata size and parent readback; server SHA256 not exposed"
+    },
+    {
+      "id": "1SivnL0pTgHe4wpldyXkMo_KBQm6Y_fwI",
+      "name": "WHOLE_FIRMWARE_MAP.md",
+      "url": "https://drive.google.com/file/d/1SivnL0pTgHe4wpldyXkMo_KBQm6Y_fwI/view?usp=drivesdk",
+      "parent": "10xY2YyYAyarseUKK24i-rwA0ZMiTrm6G"
+    },
+    {
+      "id": "1jopqR5xltlF1p0pgrjdSd8fS_moK_E0I",
+      "name": "STORAGE_CROSSCHECK.md",
+      "url": "https://drive.google.com/file/d/1jopqR5xltlF1p0pgrjdSd8fS_moK_E0I/view?usp=drivesdk",
+      "parent": "10xY2YyYAyarseUKK24i-rwA0ZMiTrm6G"
+    },
+    {
+      "id": "1x4oLibPH9KLkz9H-mq3yp41i22cxMRO5",
+      "name": "STATUS_20261021.md",
+      "url": "https://drive.google.com/file/d/1x4oLibPH9KLkz9H-mq3yp41i22cxMRO5/view?usp=drivesdk",
+      "parent": "1CZcxRYF9R-YziuZTGl8Rw3n2M3wWOY0g"
+    },
+    {
+      "id": "11PmfxTaoCRZXwP-cRiaaoXY-6MWySKYx",
+      "name": "research-baseline.json",
+      "url": "https://drive.google.com/file/d/11PmfxTaoCRZXwP-cRiaaoXY-6MWySKYx/view?usp=drivesdk",
+      "parent": "178-0nFtvKvRXjLZvrIn-ubyWEjACsI-G"
+    }
+  ]
+}

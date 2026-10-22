@@ -1,0 +1,14 @@
+{
+  "entries": 17394,
+  "overlapping_path_hints": {
+    "unclassified": 8489,
+    "boot_update_recovery": 778,
+    "storage_media": 150,
+    "connectivity": 2017,
+    "video_audio_display": 2678,
+    "ui_configuration": 7166,
+    "capture_af_lens": 25,
+    "power_thermal": 176
+  },
+  "warning": "Groups are overlapping filename hints. Pending remains pending after import; no full-firmware completion claim."
+}

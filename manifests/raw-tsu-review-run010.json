@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run": "RUN010",
+  "reviewed_raw_findings": [
+    {
+      "id": "TSU010-KERNEL-PRODUCER",
+      "source_sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+      "source": ".work/full/kernel-2.raw",
+      "kernel_link_va": "0xc02e3c1c",
+      "decoded_offset": 2997276,
+      "evidence": "analysis/evidence/kernel-tsu-run010.json",
+      "evidence_sha256": "9795a102c245fc0cd658ec7ba3bf0fb32de49137f621de055130f625f29c0c6f",
+      "claim": "Platform/driver/attribute bindings reach calibrated CPU/ISP bytes minus21; combined formatter labels same integers degC.",
+      "method": "Original raw ARM, symbol/data binding and independent original-byte review",
+      "limitations": [
+        "Active kernel/driver binding and physical sensor accuracy remain unobserved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/KERNEL_TSU_REVIEW_RUN010.md"
+    },
+    {
+      "id": "TSU010-KERNEL-CMOS-READ",
+      "source_sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+      "source": ".work/full/kernel-2.raw",
+      "kernel_link_va": "0xc027b064",
+      "decoded_offset": 2568292,
+      "evidence": "analysis/evidence/kernel-tsu-run010.json",
+      "evidence_sha256": "9795a102c245fc0cd658ec7ba3bf0fb32de49137f621de055130f625f29c0c6f",
+      "claim": "Ten channel7 words are scaled by documented unsigned arithmetic; conditional division equivalence reproduced,40bytes copied,copy failure returnspositive1.",
+      "method": "Original raw ARM, symbol/data binding and independent original-byte review",
+      "limitations": [
+        "ADC physical range/units and live copy failure are not established."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/KERNEL_TSU_REVIEW_RUN010.md"
+    }
+  ]
+}

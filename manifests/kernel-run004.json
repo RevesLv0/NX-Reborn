@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "task": "NX500 RUN004 raw kernel symbols and bounded IPCC / HEVC handler survey",
+  "static_only": true,
+  "source_bin_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+  "source_headers": {
+    "path": "analysis/evidence/kernel-headers.json",
+    "sha256": "754f9f247d7c424549a6e7fe9f209df47fcd7108ac67eddb30d67f678dc27734",
+    "bytes": 4435
+  },
+  "collector": {
+    "path": "tools/firmware/kernel_symbols.py",
+    "sha256": "9d46dc1ab35f8fc014f5a179a56ab4021596659367a22b65f895f2bf9e17f322",
+    "bytes": 18220
+  },
+  "tests": {
+    "path": "tests/test_kernel_symbols.py",
+    "sha256": "cf3f264f17725b4179d9a2f50a8e3b5ee45cc6e6ef1a67d91fc7a5f160bba39e",
+    "bytes": 4585
+  },
+  "python_version": "3.12.14",
+  "capstone_version": "5.0.6",
+  "inputs": [
+    {
+      "section_index": 0,
+      "binary_path": ".work/full/kernel-0.raw",
+      "sha256": "942492550b303d203a5ab43614aafd46bc4644ae8afa474f3676db3b809a072b",
+      "bytes": 9201060,
+      "source_section_sha256": "f847a8bb1617e7413270cecf588c39ddc2a44ceb56d2da199df982a15ca61b8a",
+      "compressed_stream_bin_offset": 22256
+    },
+    {
+      "section_index": 2,
+      "binary_path": ".work/full/kernel-2.raw",
+      "sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+      "bytes": 7474108,
+      "source_section_sha256": "9aacd82b09bce302dd72109c750fadfba2cedcc86f0e75a2b3f012826c1d796e",
+      "compressed_stream_bin_offset": 6239169
+    },
+    {
+      "section_index": 3,
+      "binary_path": ".work/full/kernel-3.raw",
+      "sha256": "fc38d13a10fdf4ae964f5100c0f043c7650f3e11385c90d7e07d58e9a3fecf9c",
+      "bytes": 9201060,
+      "source_section_sha256": "4672e0c2c46d1472aa492264523dc0d5919ec0cf8a1ba7a94e82757f6dd418d4",
+      "compressed_stream_bin_offset": 9415209
+    }
+  ],
+  "commands": [
+    "PYTHONPATH=.work/python python tools/firmware/kernel_symbols.py --kernel-dir .work/full --headers analysis/evidence/kernel-headers.json --raw-output-dir .work/run004/kernel --output analysis/evidence/kernel-symbols-run004.json --handler-output analysis/evidence/kernel-handlers-run004.json",
+    "python -m unittest discover -s tests -p test_kernel_symbols.py -v"
+  ],
+  "validation": {
+    "synthetic_tests_passed": 6,
+    "failures": 0,
+    "verified_decoded_inputs": 3,
+    "complete_kallsyms_tables": 1,
+    "recovered_symbol_entries": 37167,
+    "exact_export_name_mapping_checks": 4795,
+    "mapping_mismatches": 0
+  },
+  "completion_accounting": {
+    "unit": "raw packaged decoded kernel image, independently of ELF inventory",
+    "images_examined": 3,
+    "images_with_validated_kallsyms": 1,
+    "raw_metadata_reviewed_findings": 1,
+    "bounded_handler_reviewed_findings": 2,
+    "new_ELF_imports": 0,
+    "new_ELF_auto_analysis": 0,
+    "new_decompilation_attempts": 0,
+    "ELF_progress_denominator_contribution": 0,
+    "warning": "Symbol recovery and selected original instruction review are not whole-driver semantic completion"
+  },
+  "reviewed_findings": [
+    {
+      "id": "K004-01",
+      "kind": "raw_kernel_metadata_and_mapping",
+      "section_index": 2,
+      "input_sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+      "binary_path": ".work/full/kernel-2.raw",
+      "locations": {
+        "addresses_file_offset": "0x5ac740",
+        "count_file_offset": "0x5d0c00",
+        "names_file_offset": "0x5d0c10",
+        "markers_file_offset": "0x639eb0",
+        "tokens_file_offset": "0x63a100",
+        "index_file_offset": "0x63a490",
+        "text_link_va": "0xc0008000"
+      },
+      "claim": "Complete 37167-symbol absolute ARM32 kallsyms; 4795/4795 exact __kstrtab string checks validate decoded offset + 0xc0008000 link VA mapping",
+      "limitations": "Metadata/static image mapping only; section boot role and live mapping unknown"
+    },
+    {
+      "id": "K004-02",
+      "kind": "bounded_original_ARM_handler_review",
+      "section_index": 2,
+      "input_sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+      "binary_path": ".work/full/kernel-2.raw",
+      "locations": {
+        "handler_link_va": "0xc02cfa94",
+        "handler_file_offset": "0x2c7a94",
+        "read_request_compare_va": "0xc02cfafc",
+        "write_request_compare_va": "0xc02cfb0c"
+      },
+      "claim": "Exact IPCC requests 0xc0107406/7407 reach recovered named read/write helpers; 16-byte record +0 selector,+4 length,+8 helper result,+12 buffer; handler return follows separate copy accounting",
+      "limitations": "Packaged section 2 only; peer consumption, packet completion and active device unproven"
+    },
+    {
+      "id": "K004-03",
+      "kind": "bounded_original_ARM_handler_review",
+      "section_index": 2,
+      "input_sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+      "binary_path": ".work/full/kernel-2.raw",
+      "locations": {
+        "handler_link_va": "0xc02d5a58",
+        "handler_file_offset": "0x2cda58",
+        "request_compare_va": "0xc02d5b00",
+        "host_model_call_va": "0xc02d5ed4"
+      },
+      "claim": "HEVC request 0xc10c7408 copies 0x10c record, transforms nested pointers, calls host_model_main and returns its result in record +0xd0; initialization path reaches recovered Send_HOST_to_FW/Receive_FW_to_HOST names",
+      "limitations": "Packaged section 2 only; firmware protocol, processing completion and encoding limits unproven"
+    }
+  ],
+  "negative_searches": {
+    "kallsyms_sections_0_3": "No complete accepted table in documented profile; not proof of absent symbols/functions/drivers",
+    "micom": "No case-insensitive printable MICOM hits in any image or recovered section-2 names; no aligned request literals; split immediates/other implementations remain unexcluded"
+  },
+  "selected_artifacts": [
+    {
+      "path": "analysis/evidence/kernel-symbols-run004.json",
+      "sha256": "5c4f49c0d44d26ffb75ec79930b102c2b0e2bdb922f295d80bfe57120a30f099",
+      "bytes": 13132
+    },
+    {
+      "path": "analysis/evidence/kernel-handlers-run004.json",
+      "sha256": "13adde4b01dead459024c1d8520503ae7a063a6660f523baa1f80dfc7755c903",
+      "bytes": 63233
+    },
+    {
+      "path": "analysis/architecture/KERNEL_HANDLERS_RUN004.md",
+      "sha256": "1d98fdaa482fcb75690630f2e109e51ef7171545148e83d67c46b38d866cd11d",
+      "bytes": 11195
+    }
+  ],
+  "ignored_artifacts": [
+    {
+      "path": ".work/run004/kernel/kernel-0-driver-strings.json",
+      "sha256": "5960a48354b1aded0cf207b4780128eeb4d89d871d16a049257fe45dbe235007",
+      "bytes": 16401
+    },
+    {
+      "path": ".work/run004/kernel/kernel-2-driver-strings.json",
+      "sha256": "a5293b83a9ee3107d3e904a238bb20c1027030ed51166b50f8d247e1e93225f6",
+      "bytes": 24970
+    },
+    {
+      "path": ".work/run004/kernel/kernel-2-handler-windows.json",
+      "sha256": "bd0bfe85fad9e1e2251af3c5653da6af703babd5801318b1c2b7173604888b8b",
+      "bytes": 375663
+    },
+    {
+      "path": ".work/run004/kernel/kernel-2-symbols.json",
+      "sha256": "b34ac51a6ca1c2c3876a60c55571eece33e9b20e65aadf3599fca830fea73bfc",
+      "bytes": 4007907
+    },
+    {
+      "path": ".work/run004/kernel/kernel-3-driver-strings.json",
+      "sha256": "79aa1bfc2a575f2f4c4f231ee7d85aed9292a1bc44ac2f84a699895e6a1ce21f",
+      "bytes": 16401
+    }
+  ],
+  "limitations": [
+    "No recovered table is proof of loaded boot slot or live mapping.",
+    "No candidate found is not proof CONFIG_KALLSYMS is disabled.",
+    "Symbol names identify metadata; handler semantics need original instruction review.",
+    "Decoded offsets cannot be directly converted into compressed firmware BIN offsets.",
+    "All handler evidence concerns packaged section 2; active boot role unknown.",
+    "Linear next-symbol windows may include literal pools, not proven executable instructions.",
+    "Pointer table names/values do not alone establish C structure layout or live registration."
+  ]
+}

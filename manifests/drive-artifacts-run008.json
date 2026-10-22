@@ -1,0 +1,29 @@
+{
+  "run": "20261022_run008",
+  "previous_run": "manifests/drive-artifacts-run007.json",
+  "research_commit": "3209188d04b6bfdcc9c0a7cf20b0f01966ab62f2",
+  "ci_run_id": 39637472135,
+  "ci_conclusion": "success",
+  "artifacts": [
+    {
+      "name": "NX500_RUN008_RESEARCH_AND_EXPORTS_20261022.zip",
+      "bytes": 9496435,
+      "sha256": "19634b3529b4ea0e011b423360fd49e598b679a7579e7dbfbf41e9a19893b4e6",
+      "id": "1hNe58kaBu0WMZGrktvL2NLZuAkUwOxUR",
+      "url": "https://drive.google.com/file/d/1hNe58kaBu0WMZGrktvL2NLZuAkUwOxUR/view",
+      "verified_parent_id": "1qWBUqiXxBFfDLA6AQ6UGjYaNCfcZJuV3",
+      "remote_verification": "Full authenticated download SHA-256 and ZIP CRC; parent/size metadata verified",
+      "scope": "Tracked research and complete branch Git bundle; complete RUN008 Ghidra outputs, mode/reference queries, receipts and logs. Original inputs, existing Ghidra databases and caches excluded; prior verified sources and snapshots are required."
+    }
+  ],
+  "independent_semantic_review_completed": false,
+  "new_subagents": 0,
+  "restore_guide": {
+    "id": "1ezN9Cz7EqBkdIzw8F3iSAcRoCJCaT6gE",
+    "url": "https://drive.google.com/file/d/1ezN9Cz7EqBkdIzw8F3iSAcRoCJCaT6gE/view",
+    "path": "docs/DRIVE_RUN008_20261022.md",
+    "sha256": "64a2582f25ff196df27104f6ada863b5925889da65dc31449c3a806c894a6f0b",
+    "verified_parent_id": "198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+    "remote_verification": "Full readable text matched exact local content and expected parent"
+  }
+}

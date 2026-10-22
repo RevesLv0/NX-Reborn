@@ -20,6 +20,10 @@ Early research and development.
 
 The project currently focuses on the Samsung NX500. Planned features are experimental and should not be considered implemented or verified until tested on actual hardware.
 
+## Firmware Research
+
+Offline analysis tooling, source manifests, and research notes are being developed for the NX500 v1.12 firmware. See the [research workflow](docs/FIRMWARE_RESEARCH.md), [initial findings](analysis/architecture/INITIAL_FINDINGS.md), and [current status](docs/STATUS_20261022_RUN011.md). Automated analysis does not establish that a feature works on a physical camera.
+
 ## Disclaimer
 
 NX Reborn is an independent community project and is not affiliated with, endorsed by, or supported by Samsung Electronics.
@@ -55,6 +59,10 @@ NX Reborn은 삼성 NX 시리즈 미러리스 카메라의 기능을 확장하�
 초기 연구 및 개발 단계입니다.
 
 현재 프로젝트는 삼성 NX500을 중심으로 진행되고 있습니다. 계획된 기능들은 실험 단계에 있으며, 실제 카메라에서 테스트를 통해 검증되기 전까지는 구현이나 정상 작동이 확인된 기능으로 간주해서는 안 됩니다.
+
+## 펌웨어 역설계
+
+NX500 v1.12 펌웨어의 오프라인 분석 도구·원본 매니페스트·연구 기록을 구축하고 있습니다. [연구 운영 기준](docs/FIRMWARE_RESEARCH.md), [초기 분석 결과](analysis/architecture/INITIAL_FINDINGS.md), [현재 진행 상황](docs/STATUS_20261022_RUN011.md)을 확인할 수 있습니다. 자동 분석 결과는 실제 카메라에서 기능이 작동한다는 검증을 뜻하지 않습니다.
 
 ## 면책 및 비공식 프로젝트 안내
 

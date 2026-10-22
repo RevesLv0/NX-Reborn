@@ -1,0 +1,140 @@
+{
+  "path": "/workspace/NX-Reborn/.work/inputs/libsif.so",
+  "sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+  "symbol": "_ZN11DscOsalFile5closeEv",
+  "elf_va": "0x5ad4c",
+  "file_offset": "0x5ad4c",
+  "size": 80,
+  "mode": "ARM",
+  "instructions": [
+    {
+      "elf_va": "0x5ad4c",
+      "bytes": "00482de9",
+      "mnemonic": "push",
+      "operands": "{fp, lr}"
+    },
+    {
+      "elf_va": "0x5ad50",
+      "bytes": "04b08de2",
+      "mnemonic": "add",
+      "operands": "fp, sp, #4"
+    },
+    {
+      "elf_va": "0x5ad54",
+      "bytes": "10d04de2",
+      "mnemonic": "sub",
+      "operands": "sp, sp, #0x10"
+    },
+    {
+      "elf_va": "0x5ad58",
+      "bytes": "10000be5",
+      "mnemonic": "str",
+      "operands": "r0, [fp, #-0x10]"
+    },
+    {
+      "elf_va": "0x5ad5c",
+      "bytes": "10301be5",
+      "mnemonic": "ldr",
+      "operands": "r3, [fp, #-0x10]"
+    },
+    {
+      "elf_va": "0x5ad60",
+      "bytes": "043093e5",
+      "mnemonic": "ldr",
+      "operands": "r3, [r3, #4]"
+    },
+    {
+      "elf_va": "0x5ad64",
+      "bytes": "000053e3",
+      "mnemonic": "cmp",
+      "operands": "r3, #0"
+    },
+    {
+      "elf_va": "0x5ad68",
+      "bytes": "0800000a",
+      "mnemonic": "beq",
+      "operands": "#0x5ad90"
+    },
+    {
+      "elf_va": "0x5ad6c",
+      "bytes": "10301be5",
+      "mnemonic": "ldr",
+      "operands": "r3, [fp, #-0x10]"
+    },
+    {
+      "elf_va": "0x5ad70",
+      "bytes": "043093e5",
+      "mnemonic": "ldr",
+      "operands": "r3, [r3, #4]"
+    },
+    {
+      "elf_va": "0x5ad74",
+      "bytes": "08300be5",
+      "mnemonic": "str",
+      "operands": "r3, [fp, #-8]"
+    },
+    {
+      "elf_va": "0x5ad78",
+      "bytes": "08001be5",
+      "mnemonic": "ldr",
+      "operands": "r0, [fp, #-8]"
+    },
+    {
+      "elf_va": "0x5ad7c",
+      "bytes": "54cbfeeb",
+      "mnemonic": "bl",
+      "operands": "#0xdad4"
+    },
+    {
+      "elf_va": "0x5ad80",
+      "bytes": "10301be5",
+      "mnemonic": "ldr",
+      "operands": "r3, [fp, #-0x10]"
+    },
+    {
+      "elf_va": "0x5ad84",
+      "bytes": "0020a0e3",
+      "mnemonic": "mov",
+      "operands": "r2, #0"
+    },
+    {
+      "elf_va": "0x5ad88",
+      "bytes": "042083e5",
+      "mnemonic": "str",
+      "operands": "r2, [r3, #4]"
+    },
+    {
+      "elf_va": "0x5ad8c",
+      "bytes": "000000ea",
+      "mnemonic": "b",
+      "operands": "#0x5ad94"
+    },
+    {
+      "elf_va": "0x5ad90",
+      "bytes": "0000a0e1",
+      "mnemonic": "mov",
+      "operands": "r0, r0"
+    },
+    {
+      "elf_va": "0x5ad94",
+      "bytes": "04d04be2",
+      "mnemonic": "sub",
+      "operands": "sp, fp, #4"
+    },
+    {
+      "elf_va": "0x5ad98",
+      "bytes": "0088bde8",
+      "mnemonic": "pop",
+      "operands": "{fp, pc}"
+    }
+  ],
+  "fclose_relocations": [
+    {
+      "section": ".rel.plt",
+      "got_elf_va": "0xa6420",
+      "symbol": "fclose",
+      "type": 22
+    }
+  ],
+  "limitation": "Linear symbol disassembly; does not independently resolve indirect calls or prove runtime behavior"
+}

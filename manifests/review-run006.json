@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "run": "RUN006",
+  "reviewed_findings": [
+    {
+      "id": "STO006-CANCEL",
+      "source_sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109",
+      "original_path": "/usr/lib/libsif.so",
+      "original_elf_va": "0x2d590",
+      "evidence": "analysis/evidence/storage-errors-run006.json",
+      "evidence_sha256": "479b7054630359a9696149fc2872ccf204cacdbc1b98457943dc0a1875885f01",
+      "method": "Primary-agent bounded C/control-flow interpretation corroborated by SHA-verified original PT_LOAD-mapped ARM bytes and tables/relocations where applicable",
+      "claim": "Entry and inner-loop state2 cancellation select return1; this local Boolean is not exclusive successful file completion.",
+      "limitations": [
+        "Actual cancellation timing and buffer correlation remain unobserved.",
+        "Independent RUN006 semantic review incomplete after actual agent usage-limit error."
+      ],
+      "unresolved_questions": [
+        "Actual cancellation timing and buffer correlation remain unobserved."
+      ],
+      "reviewer": "primary agent",
+      "independent_review_completed": false
+    },
+    {
+      "id": "STO006-SYNC",
+      "source_sha256": "ea4ae65608a6f9ea0761e35c18764401cf7b876652f7949c322e880fa9f68ca9",
+      "original_path": "/usr/lib/libmm-photo.so",
+      "original_elf_va": "0x9f080",
+      "evidence": "analysis/evidence/storage-errors-run006.json",
+      "evidence_sha256": "479b7054630359a9696149fc2872ccf204cacdbc1b98457943dc0a1875885f01",
+      "method": "Primary-agent bounded C/control-flow interpretation corroborated by SHA-verified original PT_LOAD-mapped ARM bytes and tables/relocations where applicable",
+      "claim": "SIFListener case3 decrements only for second argument other than1 and syncs at count zero before resource release/idle scheduling; case4 has a separate sync.",
+      "limitations": [
+        "sync is not a checked per-file close result or observed durability acknowledgement.",
+        "Independent RUN006 semantic review incomplete after actual agent usage-limit error."
+      ],
+      "unresolved_questions": [
+        "sync is not a checked per-file close result or observed durability acknowledgement."
+      ],
+      "reviewer": "primary agent",
+      "independent_review_completed": false
+    },
+    {
+      "id": "STO006-EXCEPTION",
+      "source_sha256": "ea4ae65608a6f9ea0761e35c18764401cf7b876652f7949c322e880fa9f68ca9",
+      "original_path": "/usr/lib/libmm-photo.so",
+      "original_elf_va": "0xa18d0",
+      "evidence": "analysis/evidence/storage-errors-run006.json",
+      "evidence_sha256": "479b7054630359a9696149fc2872ccf204cacdbc1b98457943dc0a1875885f01",
+      "method": "Primary-agent bounded C/control-flow interpretation corroborated by SHA-verified original PT_LOAD-mapped ARM bytes and tables/relocations where applicable",
+      "claim": "Condition2 passes true to DscImage::StorageException and all supplied conditions are stored at object+0x90; the separate storage-state API0x300b8 only logs in its inspected body.",
+      "limitations": [
+        "Indirect setters and external card-event ordering are not exhaustively established.",
+        "Independent RUN006 semantic review incomplete after actual agent usage-limit error."
+      ],
+      "unresolved_questions": [
+        "Indirect setters and external card-event ordering are not exhaustively established."
+      ],
+      "reviewer": "primary agent",
+      "independent_review_completed": false
+    },
+    {
+      "id": "STO006-PENDING",
+      "source_sha256": "ea4ae65608a6f9ea0761e35c18764401cf7b876652f7949c322e880fa9f68ca9",
+      "original_path": "/usr/lib/libmm-photo.so",
+      "original_elf_va": "0xa14a8",
+      "evidence": "analysis/evidence/storage-errors-run006.json",
+      "evidence_sha256": "479b7054630359a9696149fc2872ccf204cacdbc1b98457943dc0a1875885f01",
+      "method": "Primary-agent bounded C/control-flow interpretation corroborated by SHA-verified original PT_LOAD-mapped ARM bytes and tables/relocations where applicable",
+      "claim": "isCaptureNotProcessing tests pending-message count zero; captureSaveDone is scheduled and independently drains path/status queues.",
+      "limitations": [
+        "Count zero does not prove app callback delivery or queue/thread ordering.",
+        "Independent RUN006 semantic review incomplete after actual agent usage-limit error."
+      ],
+      "unresolved_questions": [
+        "Count zero does not prove app callback delivery or queue/thread ordering."
+      ],
+      "reviewer": "primary agent",
+      "independent_review_completed": false
+    },
+    {
+      "id": "APP006-SKIP",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "original_elf_va": "0x1e45a8",
+      "evidence": "analysis/evidence/app-error-consumers-run006.json",
+      "evidence_sha256": "18fc07e9280608a476a423412feb903d3a48e3e561ad06bdaf7f9e2313c18ef9",
+      "method": "Primary-agent bounded C/control-flow interpretation corroborated by SHA-verified original PT_LOAD-mapped ARM bytes and tables/relocations where applicable",
+      "claim": "Original tables map mm-camera raw3a to UI39 named CB_STL_SKIP_FILE_WRITE; the idle dispatcher branch calls File_Write_Done.",
+      "limitations": [
+        "Conditional on installed callback and entry guards; dual notification for one capture is not established.",
+        "Independent RUN006 semantic review incomplete after actual agent usage-limit error."
+      ],
+      "unresolved_questions": [
+        "Conditional on installed callback and entry guards; dual notification for one capture is not established."
+      ],
+      "reviewer": "primary agent",
+      "independent_review_completed": false
+    },
+    {
+      "id": "APP006-RVF",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "original_elf_va": "0x184c3c",
+      "evidence": "analysis/evidence/app-error-consumers-run006.json",
+      "evidence_sha256": "18fc07e9280608a476a423412feb903d3a48e3e561ad06bdaf7f9e2313c18ef9",
+      "method": "Primary-agent bounded C/control-flow interpretation corroborated by SHA-verified original PT_LOAD-mapped ARM bytes and tables/relocations where applicable",
+      "claim": "Gated event1 path calls error conversion without using its return; nonnull path containing .JPG reaches DlnaRVFEvent24.",
+      "limitations": [
+        "No file-success or remote-receipt inference; substring test is not an extension parser.",
+        "Independent RUN006 semantic review incomplete after actual agent usage-limit error."
+      ],
+      "unresolved_questions": [
+        "No file-success or remote-receipt inference; substring test is not an extension parser."
+      ],
+      "reviewer": "primary agent",
+      "independent_review_completed": false
+    },
+    {
+      "id": "APP006-URLAPI",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_path": "/usr/lib/libdi-network-dlna-api.so",
+      "original_elf_va": "0x110a0",
+      "evidence": "analysis/evidence/transfer-boundaries-run006.json",
+      "evidence_sha256": "8795f9c4013105182391e2ff84cb64197f477e1b285119b2e7c20273366dc421",
+      "method": "Primary-agent bounded C/control-flow interpretation corroborated by SHA-verified original PT_LOAD-mapped ARM bytes and tables/relocations where applicable",
+      "claim": "With termination inactive, case24 calls RVF URL event for nonnull input and returns1 without checking its result; null input also returns1.",
+      "limitations": [
+        "Downstream delivery and global termination-state synchronization remain unobserved.",
+        "Independent RUN006 semantic review incomplete after actual agent usage-limit error."
+      ],
+      "unresolved_questions": [
+        "Downstream delivery and global termination-state synchronization remain unobserved."
+      ],
+      "reviewer": "primary agent",
+      "independent_review_completed": false
+    },
+    {
+      "id": "APP006-URLBUILD",
+      "source_sha256": "a7c8f03e4fdcc035762f83a2168efbbb4a4d93ac34802d1d4e097eb74404f567",
+      "original_path": "/usr/lib/libdi-network-dlna-rvf.so",
+      "original_elf_va": "0x59c1c",
+      "evidence": "analysis/evidence/app-error-consumers-run006.json",
+      "evidence_sha256": "18fc07e9280608a476a423412feb903d3a48e3e561ad06bdaf7f9e2313c18ef9",
+      "method": "Primary-agent bounded C/control-flow interpretation corroborated by SHA-verified original PT_LOAD-mapped ARM bytes and tables/relocations where applicable",
+      "claim": "getURLInfo builds strings using IP/card status and path; selected caller3255c submits RVF_LAST_PHOTO_URL_VALUE then frees the string without checking update result.",
+      "limitations": [
+        "Helper internals/string ABI and later HTTP delivery are not proved; no global absence-of-file-check claim.",
+        "Independent RUN006 semantic review incomplete after actual agent usage-limit error."
+      ],
+      "unresolved_questions": [
+        "Helper internals/string ABI and later HTTP delivery are not proved; no global absence-of-file-check claim."
+      ],
+      "reviewer": "primary agent",
+      "independent_review_completed": false
+    },
+    {
+      "id": "IPC006-FRAMELENGTH",
+      "source_sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+      "original_path": "/usr/lib/libmulticore-bridge.so",
+      "original_elf_va": "0x5e50",
+      "evidence": "analysis/evidence/app-error-consumers-run006.json",
+      "evidence_sha256": "18fc07e9280608a476a423412feb903d3a48e3e561ad06bdaf7f9e2313c18ef9",
+      "method": "Primary-agent bounded C/control-flow interpretation corroborated by SHA-verified original PT_LOAD-mapped ARM bytes and tables/relocations where applicable",
+      "claim": "Integer constructor receives L-8, allocates L+4, stores lengthL and aligns pointer; Handle broadcasts same packet pointer with L-10.",
+      "limitations": [
+        "This is static arithmetic conditional on successful receive/allocation, not observed payload delivery.",
+        "Independent RUN006 semantic review incomplete after actual agent usage-limit error."
+      ],
+      "unresolved_questions": [
+        "This is static arithmetic conditional on successful receive/allocation, not observed payload delivery."
+      ],
+      "reviewer": "primary agent",
+      "independent_review_completed": false
+    },
+    {
+      "id": "IPC006-HANDLER",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "original_path": "/usr/lib/libcapture-fw-prod.so",
+      "original_elf_va": "0x8e2f8",
+      "evidence": "analysis/evidence/app-error-consumers-run006.json",
+      "evidence_sha256": "18fc07e9280608a476a423412feb903d3a48e3e561ad06bdaf7f9e2313c18ef9",
+      "method": "Primary-agent bounded C/control-flow interpretation corroborated by SHA-verified original PT_LOAD-mapped ARM bytes and tables/relocations where applicable",
+      "claim": "Category82 maps to slot2; holder ctor installs notify handler; ctor GOT/vtable plus ABS32 relocation b02c8 binds virtual slot8 to Run8a628.",
+      "limitations": [
+        "Dynamic symbol interposition/replacement and malformed packet safety are not established.",
+        "Independent RUN006 semantic review incomplete after actual agent usage-limit error."
+      ],
+      "unresolved_questions": [
+        "Dynamic symbol interposition/replacement and malformed packet safety are not established."
+      ],
+      "reviewer": "primary agent",
+      "independent_review_completed": false
+    },
+    {
+      "id": "NET006-DISPATCH",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "original_path": "/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app",
+      "original_elf_va": "0x406c8",
+      "evidence": "analysis/evidence/transfer-boundaries-run006.json",
+      "evidence_sha256": "8795f9c4013105182391e2ff84cb64197f477e1b285119b2e7c20273366dc421",
+      "method": "Primary-agent bounded C/control-flow interpretation corroborated by SHA-verified original PT_LOAD-mapped ARM bytes and tables/relocations where applicable",
+      "claim": "State-machine dispatch calls current-state virtual slot8; selected smartphone handle810a8 has empty event13 branch.",
+      "limitations": [
+        "Active state reachability and final callback consumer remain unresolved.",
+        "Independent RUN006 semantic review incomplete after actual agent usage-limit error."
+      ],
+      "unresolved_questions": [
+        "Active state reachability and final callback consumer remain unresolved."
+      ],
+      "reviewer": "primary agent",
+      "independent_review_completed": false
+    },
+    {
+      "id": "NET006-WAIT",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "original_path": "/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app",
+      "original_elf_va": "0x7d490",
+      "evidence": "analysis/evidence/transfer-boundaries-run006.json",
+      "evidence_sha256": "8795f9c4013105182391e2ff84cb64197f477e1b285119b2e7c20273366dc421",
+      "method": "Primary-agent bounded C/control-flow interpretation corroborated by SHA-verified original PT_LOAD-mapped ARM bytes and tables/relocations where applicable",
+      "claim": "Selected wait predicate requires UI1b3 zero and each client state2 or6; each-file predicate uses index equality or state6.",
+      "limitations": [
+        "No state enum meaning or remote success is inferred; empty-client cases can satisfy loops.",
+        "Independent RUN006 semantic review incomplete after actual agent usage-limit error."
+      ],
+      "unresolved_questions": [
+        "No state enum meaning or remote success is inferred; empty-client cases can satisfy loops."
+      ],
+      "reviewer": "primary agent",
+      "independent_review_completed": false
+    }
+  ],
+  "independent_semantic_review_completed": false
+}

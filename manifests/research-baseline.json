@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "recorded_date_kst": "2026-10-21",
+  "source": {
+    "version": "1.12",
+    "official_listing_date": "2016-05-16",
+    "verified_against_current_support_listing": true,
+    "official_urls": [
+      "https://www.samsung.com/uk/support/model.EV-NX500ZBMJDE/",
+      "https://www.samsung.com/es/support/model/EV-NX500ZBMIES/"
+    ],
+    "original_drive_id": "1aRDIHiq_6HEoHIunxXmDuYmld5w67-sY",
+    "original_zip_bytes": 281999904,
+    "zip_sha256_inherited": "bceabae2bfef9faf90fe0bef0782f6458605ce4dc187bad39497ab7ec3305af1",
+    "bin_sha256_inherited": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+    "full_source_newly_verified": false,
+    "full_bin_newly_verified": true,
+    "full_source_verification_scope": "Complete BIN and every section remeasured; original ZIP not re-downloaded",
+    "bin_sha256_measured": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+    "bin_bytes_measured": 352121435,
+    "verification_receipt": "manifests/full-reproduction-run002.json"
+  },
+  "inputs": {
+    "selected_bundle_drive_id": "18DNuKi8a88e5FmqqyCHGPox_DgmIrq3h",
+    "selected_bundle_sha256": "bc37aa6383b7fe720733fc29392082863b1389ef117e363fec860f1117aa0a8e",
+    "selected_files_verified": 28,
+    "additional_libsif_drive_id": "1TN5gO3Seom6z9yH3DpyuVP_ejIVbGuOe",
+    "additional_libsif_sha256": "9790fc02fe5b9793fc09da7eb5fd9453c730a55880654c84caf02dd3d1001109"
+  },
+  "tools": {
+    "ghidra": {
+      "version": "12.1.4",
+      "release_url": "https://github.com/NationalSecurityAgency/ghidra/releases/tag/Ghidra_12.1.4_build",
+      "archive_sha256": "ddac49f903da9d5bac833e5cc79395098b9c33cfd3279be5f31bd00387d2d4db",
+      "hash_status": "matched_official_release_published_digest"
+    },
+    "jdk": {
+      "vendor": "Eclipse Temurin",
+      "version": "21.0.12.1+1",
+      "archive_sha256": "ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94",
+      "hash_status": "matched_official_release_checksum"
+    },
+    "pyelftools": "0.32",
+    "capstone": "5.0.6"
+  },
+  "constraints": {
+    "drive_fetch_max_bytes": 268435456,
+    "sediment_tool_max_bytes": 33554432,
+    "large_stream_host": "sdmntprkoreacentral.oaiusercontent.com",
+    "large_stream_currently_blocked": false
+  },
+  "device_access_performed": false,
+  "firmware_installation_performed": false
+}

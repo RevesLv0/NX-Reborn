@@ -1,0 +1,12 @@
+.work/
+ghidra-projects/
+__pycache__/
+*.pyc
+*.gpr
+*.rep/
+*.bin
+*.binpart
+*.so
+*.zip
+*.ext4
+*.partial

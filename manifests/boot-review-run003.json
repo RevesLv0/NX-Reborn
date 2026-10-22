@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "report": "analysis/architecture/BOOT_PARTITIONS_RUN003.md",
+  "non_elf_scope": "Section 1 bootloader, section 4 M4-initializer candidate, section 5 T-Kernel candidate and three decoded kernels are excluded from the ELF stage denominator; their input hashes and offset evidence are in the referenced report and JSON.",
+  "reviewed_findings": [
+    {
+      "id": "BOOT003-SYSTEMD-PRECEDENCE",
+      "source_sha256": "240d910b3c8ef7824b864f7c19a57b9bf456cb4500b710502135a2b0f0c1333d",
+      "original_elf_va": "0x45b3c",
+      "evidence": "analysis/evidence/boot-partitions-run003.json",
+      "method": "Original ELF Thumb instruction/literal inspection of systemd lookup_paths_init, manager argument mapping and unit loader; explicit mount configuration hash/line crosscheck.",
+      "limitations": "Conditional shipped system-manager search path only. SYSTEMD_UNIT_PATH, early generators, masks, altered files, load errors and actual runtime transactions remain unverified. No Ghidra import is required for this direct disassembly finding.",
+      "unresolved_questions": [
+        "What unit search overrides and generated units exist on a running NX500?",
+        "Which actual block devices mount at /opt and /opt/usr?"
+      ]
+    },
+    {
+      "id": "BOOT003-FSTAB-GENERATOR",
+      "source_sha256": "07ed714dc7e7af36945125abd022f5240279a29d4c790ecd85536ed32163bd2b",
+      "original_elf_va": "0xa2a2",
+      "evidence": "analysis/evidence/boot-partitions-run003.json",
+      "method": "Original ELF Thumb call/argument and literal inspection follows argv[1] into output path cell, /etc/fstab reader, mount writer and fopen64 wxe mode.",
+      "limitations": "This generator writes unit files in its supplied directory. Exclusive create does not independently test /etc/systemd/system and does not prove a live mount. Direct static disassembly, not target execution.",
+      "unresolved_questions": [
+        "Which generator invocation and output directory are used during actual boot?",
+        "How do initrd and resume paths change the live mount transaction?"
+      ]
+    }
+  ]
+}

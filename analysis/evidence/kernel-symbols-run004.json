@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "bin_sha256": "f4c238e811970cf858b5d734119477ea191d35cd29d9f84b584157ecfc4ee997",
+  "method": "Recover validated pre-relative ARM32 kallsyms from decoded kernels, offline.\n\nAn address-like run is only a candidate. Acceptance requires the adjacent count,\nevery compressed name, every 256-name marker, all 256 tokens and the entire\n16-bit token index to agree. Absence is limited to this format/search envelope.\n",
+  "search_envelope": {
+    "word_bits": 32,
+    "endian": "little",
+    "format": "pre-relative absolute kallsyms",
+    "minimum_symbols": 1024,
+    "address_min": "0x80000000",
+    "address_max_exclusive": "0xffff0000",
+    "maximum_address_span": "0x10000000",
+    "maximum_zero_alignment_bytes": 15
+  },
+  "kernels": [
+    {
+      "section_index": 0,
+      "binary_path": ".work/full/kernel-0.raw",
+      "sha256": "942492550b303d203a5ab43614aafd46bc4644ae8afa474f3676db3b809a072b",
+      "bytes": 9201060,
+      "source_section_sha256": "f847a8bb1617e7413270cecf588c39ddc2a44ceb56d2da199df982a15ca61b8a",
+      "compressed_stream_bin_offset": 22256,
+      "address_candidates": [],
+      "validated_tables": [],
+      "driver_string_catalog": {
+        "path": ".work/run004/kernel/kernel-0-driver-strings.json",
+        "count": 215,
+        "sha256": "5960a48354b1aded0cf207b4780128eeb4d89d871d16a049257fe45dbe235007"
+      },
+      "keyword_string_counts": {
+        "ipcc": 0,
+        "hevc": 0,
+        "micom": 0,
+        "drime5": 215
+      },
+      "selected_driver_strings": [
+        {
+          "file_offset": 2525792,
+          "text": "drime5_i2s_clk_setrate"
+        },
+        {
+          "file_offset": 2630860,
+          "text": "drime5_drm_init"
+        },
+        {
+          "file_offset": 2630876,
+          "text": "drime5_drm_exit"
+        },
+        {
+          "file_offset": 2630892,
+          "text": "drime5_drm_platform_remove"
+        }
+      ],
+      "aligned_literal_word_hits": {
+        "0xc0107406": [],
+        "0xc0107407": [],
+        "0xc10c7408": [],
+        "0x80044d00": [],
+        "0x80044d05": []
+      },
+      "status": "no validated table in stated search envelope"
+    },
+    {
+      "section_index": 2,
+      "binary_path": ".work/full/kernel-2.raw",
+      "sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+      "bytes": 7474108,
+      "source_section_sha256": "9aacd82b09bce302dd72109c750fadfba2cedcc86f0e75a2b3f012826c1d796e",
+      "compressed_stream_bin_offset": 6239169,
+      "address_candidates": [
+        {
+          "addresses_offset": 5949248,
+          "symbol_count": 37167
+        }
+      ],
+      "validated_tables": [
+        {
+          "addresses_offset": 5949248,
+          "count_offset": 6097920,
+          "names_offset": 6097936,
+          "names_end": 6528687,
+          "markers_offset": 6528688,
+          "markers_count": 146,
+          "token_table_offset": 6529280,
+          "token_table_end": 6530180,
+          "token_index_offset": 6530192,
+          "symbol_count": 37167,
+          "validation": "all addresses, compressed names, markers, 256 tokens and 256 index entries checked",
+          "catalog_path": ".work/run004/kernel/kernel-2-symbols.json",
+          "catalog_sha256": "b34ac51a6ca1c2c3876a60c55571eece33e9b20e65aadf3599fca830fea73bfc",
+          "mapping": {
+            "base": 3221258240,
+            "method": "_text anchor agrees with every __kstrtab_* exact name byte string",
+            "matched_export_strings": 4795,
+            "mismatched_export_strings": 0,
+            "examples": [
+              {
+                "symbol": "__kstrtab_loops_per_jiffy",
+                "address": 3228098344,
+                "file_offset": 6840104
+              },
+              {
+                "symbol": "__kstrtab_reset_devices",
+                "address": 3228098360,
+                "file_offset": 6840120
+              },
+              {
+                "symbol": "__kstrtab_system_state",
+                "address": 3228098374,
+                "file_offset": 6840134
+              },
+              {
+                "symbol": "__kstrtab_init_uts_ns",
+                "address": 3228098387,
+                "file_offset": 6840147
+              },
+              {
+                "symbol": "__kstrtab_init_task",
+                "address": 3228098399,
+                "file_offset": 6840159
+              },
+              {
+                "symbol": "__kstrtab_arm_elf_read_implies_exec",
+                "address": 3228098409,
+                "file_offset": 6840169
+              }
+            ]
+          },
+          "keyword_symbol_counts": {
+            "ipcc": 104,
+            "hevc": 33,
+            "micom": 0,
+            "drime5": 578
+          },
+          "selected_symbols": [
+            {
+              "index": 0,
+              "address": 3221258240,
+              "type": "T",
+              "name": "stext"
+            },
+            {
+              "index": 1,
+              "address": 3221258240,
+              "type": "T",
+              "name": "_text"
+            },
+            {
+              "index": 8,
+              "address": 3221258752,
+              "type": "T",
+              "name": "_stext"
+            },
+            {
+              "index": 588,
+              "address": 3221351756,
+              "type": "T",
+              "name": "d5_uservirt_to_phys"
+            },
+            {
+              "index": 7395,
+              "address": 3222992776,
+              "type": "T",
+              "name": "__copy_from_user"
+            },
+            {
+              "index": 7398,
+              "address": 3222993856,
+              "type": "W",
+              "name": "__copy_to_user"
+            },
+            {
+              "index": 12706,
+              "address": 3224169668,
+              "type": "T",
+              "name": "_conv_coretoid"
+            },
+            {
+              "index": 12708,
+              "address": 3224169920,
+              "type": "T",
+              "name": "_ipcc_read_srj"
+            },
+            {
+              "index": 12711,
+              "address": 3224170648,
+              "type": "T",
+              "name": "_ipcc_write_srj"
+            },
+            {
+              "index": 12725,
+              "address": 3224173204,
+              "type": "T",
+              "name": "ipcc_ioctl"
+            },
+            {
+              "index": 12923,
+              "address": 3224195952,
+              "type": "T",
+              "name": "hevc_init"
+            },
+            {
+              "index": 12924,
+              "address": 3224196240,
+              "type": "T",
+              "name": "host_model_main"
+            },
+            {
+              "index": 12934,
+              "address": 3224197720,
+              "type": "t",
+              "name": "d5_hevc_ioctl"
+            },
+            {
+              "index": 12940,
+              "address": 3224200688,
+              "type": "T",
+              "name": "setHEVCEncOption"
+            },
+            {
+              "index": 12941,
+              "address": 3224200960,
+              "type": "T",
+              "name": "Send_HOST_to_FW"
+            },
+            {
+              "index": 12942,
+              "address": 3224202164,
+              "type": "T",
+              "name": "Receive_FW_to_HOST"
+            },
+            {
+              "index": 19927,
+              "address": 3227030432,
+              "type": "R",
+              "name": "ipcc_ops"
+            },
+            {
+              "index": 19939,
+              "address": 3227031048,
+              "type": "R",
+              "name": "d5_hevc_ops"
+            },
+            {
+              "index": 34410,
+              "address": 3228686972,
+              "type": "d",
+              "name": "ipcc_miscdev"
+            },
+            {
+              "index": 34424,
+              "address": 3228689900,
+              "type": "d",
+              "name": "d5_hevc_miscdev"
+            }
+          ]
+        }
+      ],
+      "driver_string_catalog": {
+        "path": ".work/run004/kernel/kernel-2-driver-strings.json",
+        "count": 327,
+        "sha256": "a5293b83a9ee3107d3e904a238bb20c1027030ed51166b50f8d247e1e93225f6"
+      },
+      "keyword_string_counts": {
+        "ipcc": 16,
+        "hevc": 19,
+        "micom": 0,
+        "drime5": 293
+      },
+      "selected_driver_strings": [
+        {
+          "file_offset": 5772024,
+          "text": "_ipcc_write_srj"
+        },
+        {
+          "file_offset": 5772040,
+          "text": "_ipcc_write"
+        },
+        {
+          "file_offset": 5772088,
+          "text": "ipcc_raw_irq_handler"
+        },
+        {
+          "file_offset": 5772112,
+          "text": "ipcc_fmt_irq_handler"
+        },
+        {
+          "file_offset": 5772136,
+          "text": "ipcc_raw_int_set_callback"
+        },
+        {
+          "file_offset": 5772164,
+          "text": "ipcc_fmt_int_set_callback"
+        },
+        {
+          "file_offset": 5772912,
+          "text": "_d5_hevc_int_set_callback"
+        },
+        {
+          "file_offset": 6249093,
+          "text": "tHEVCEncOp\\"
+        },
+        {
+          "file_offset": 6523982,
+          "text": "bIPCC_RAW_ISR_T}"
+        },
+        {
+          "file_offset": 6524000,
+          "text": "bIPCC_FMT_ISR_T}"
+        },
+        {
+          "file_offset": 6524477,
+          "text": "HEVC_ISR_T}"
+        },
+        {
+          "file_offset": 6549856,
+          "text": "d5_ipcc"
+        },
+        {
+          "file_offset": 6551064,
+          "text": "d5_hevc"
+        },
+        {
+          "file_offset": 6715408,
+          "text": "<b>s%d key %s!(ipcc raw int[a7_2:%d])"
+        },
+        {
+          "file_offset": 6725245,
+          "text": "Read but IPCC_FRM_START_FLAG not detected!!"
+        },
+        {
+          "file_offset": 6725460,
+          "text": "[Error][ipcc_intr_handle][private_dev is null]"
+        },
+        {
+          "file_offset": 6725548,
+          "text": "[Error][ipcc_intr_handle][miscdev is null]"
+        },
+        {
+          "file_offset": 6725672,
+          "text": "failed to request_irq : d5_ipccc "
+        },
+        {
+          "file_offset": 6725708,
+          "text": "failed to allocate drime5 ipcc."
+        },
+        {
+          "file_offset": 6725777,
+          "text": "[ERROR]UNKOWN IPCC RESET IP"
+        },
+        {
+          "file_offset": 6725992,
+          "text": "HEVC:Invalid codec ID"
+        },
+        {
+          "file_offset": 6726016,
+          "text": "HEVC:Invalid Seq ID"
+        },
+        {
+          "file_offset": 6726040,
+          "text": "HEVC:First start frame then get data"
+        },
+        {
+          "file_offset": 6726216,
+          "text": "HEVC:Invalid Type"
+        },
+        {
+          "file_offset": 4208476,
+          "text": "_drime5_isp_set_clk"
+        },
+        {
+          "file_offset": 4208496,
+          "text": "_drime5_isp_dvfs_set"
+        },
+        {
+          "file_offset": 4208520,
+          "text": "drime5_isp_dvfs_set"
+        },
+        {
+          "file_offset": 4208584,
+          "text": "drime5_ddrfreq_set"
+        }
+      ],
+      "aligned_literal_word_hits": {
+        "0xc0107406": [],
+        "0xc0107407": [],
+        "0xc10c7408": [],
+        "0x80044d00": [],
+        "0x80044d05": []
+      },
+      "status": "validated absolute ARM32 kallsyms"
+    },
+    {
+      "section_index": 3,
+      "binary_path": ".work/full/kernel-3.raw",
+      "sha256": "fc38d13a10fdf4ae964f5100c0f043c7650f3e11385c90d7e07d58e9a3fecf9c",
+      "bytes": 9201060,
+      "source_section_sha256": "4672e0c2c46d1472aa492264523dc0d5919ec0cf8a1ba7a94e82757f6dd418d4",
+      "compressed_stream_bin_offset": 9415209,
+      "address_candidates": [],
+      "validated_tables": [],
+      "driver_string_catalog": {
+        "path": ".work/run004/kernel/kernel-3-driver-strings.json",
+        "count": 215,
+        "sha256": "79aa1bfc2a575f2f4c4f231ee7d85aed9292a1bc44ac2f84a699895e6a1ce21f"
+      },
+      "keyword_string_counts": {
+        "ipcc": 0,
+        "hevc": 0,
+        "micom": 0,
+        "drime5": 215
+      },
+      "selected_driver_strings": [
+        {
+          "file_offset": 2525796,
+          "text": "drime5_i2s_clk_setrate"
+        },
+        {
+          "file_offset": 2630860,
+          "text": "drime5_drm_init"
+        },
+        {
+          "file_offset": 2630876,
+          "text": "drime5_drm_exit"
+        },
+        {
+          "file_offset": 2630892,
+          "text": "drime5_drm_platform_remove"
+        }
+      ],
+      "aligned_literal_word_hits": {
+        "0xc0107406": [],
+        "0xc0107407": [],
+        "0xc10c7408": [],
+        "0x80044d00": [],
+        "0x80044d05": []
+      },
+      "status": "no validated table in stated search envelope"
+    }
+  ],
+  "limitations": [
+    "No recovered table is proof of loaded boot slot or live mapping.",
+    "No candidate found is not proof CONFIG_KALLSYMS is disabled.",
+    "Symbol names identify metadata; handler semantics need original instruction review.",
+    "Decoded offsets cannot be directly converted into compressed firmware BIN offsets."
+  ]
+}

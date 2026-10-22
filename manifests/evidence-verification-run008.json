@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "static_only": true,
+  "verifier_sha256": "7bef67016f38e0291c20ee43cd4d3e2660bb1066c60297cc5f5e1fee43d942e1",
+  "checked_evidence": [
+    {
+      "path": "analysis/evidence/thermal-userspace-run008.json",
+      "sha256": "15e9407dc66bd03f420830915512a5cd332817e2ee697b30d0e479161d9bc1d8",
+      "code_windows": 31,
+      "data_blocks": 0,
+      "strings": 176
+    },
+    {
+      "path": "analysis/evidence/thermal-kernel-run008.json",
+      "sha256": "a7535132e3a2a449836d5e549cc07c4660e326b57c974b159551b39ca82a6955",
+      "code_windows": 5,
+      "data_blocks": 4,
+      "strings": 3
+    }
+  ],
+  "independent_semantic_review_completed": false,
+  "limitations": [
+    "Primary-agent original-byte and artifact consistency checks, not independent semantic review.",
+    "No camera observations, active-boot proof, sensor calibration or runtime policy validation."
+  ]
+}

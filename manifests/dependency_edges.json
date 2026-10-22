@@ -1,0 +1,1006 @@
+[
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libappcore-efl.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libelementary.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libeet.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libecore_file.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libefreet.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libefreet_mime.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libefreet_trash.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libedbus.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libethumb_client.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libecore_imf.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libecore_con.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libappcore-common.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libsensor.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libaul.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libbundle.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libail.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libxdgmime.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libSLP-db-util.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libsqlite3.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libicui18n.so.52"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libicuuc.so.52"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libicudata.so.52"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libecore.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libecore_x.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libecore_evas.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libecore_input.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libevas.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libedje.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libeina.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdi-elementary.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libgui.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libapex.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libutilX.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmmfsound.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libavsysaudio.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmmfsession.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libascenario-0.2.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libpulse-simple.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libasound.so.2"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libpulse.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libaudio-session-mgr.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libhibernation.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libtbm.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdrm.so.2"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libnetwork.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libgio-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libgthread-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libwifi-direct.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libcapi-network-tethering.so.0.1.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdbus-glib-1.so.2"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libvconf.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libss-client.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmdm.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libcsc-feature.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdbus-1.so.3"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libgobject-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libiniparser.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdi-network-dlna-api.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdi-network-bt-app.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libcapture-fw-prod.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libsysman.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libprefman.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libuser-spec.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libversion-info.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libXrandr.so.2"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libhdmi-cec.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libXtst.so.6"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libfirmware-upgrade.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libsystem-tools.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdi-sensor.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdiosal.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libcapi-appfw-application.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libcapi-content-media-content.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libfilelist-manager.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libshell-command.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdevice-node.so.0.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdeviced.so.0.1.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmicom-node.so.0.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libtint-util.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmm-type.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmmf_player.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmmf-camcorder.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmmfcore.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libexif.so.12"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmm_ta.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmm-photo.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmm-slideshow.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmmffile.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmmfile_utils.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmmfcommon.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libglib-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmmutil_movie.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmm-displayer.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libmulticore-bridge.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libfactory-mode.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libX11.so.6"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdi-alg-prosuggest.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libcapi-network-nfc.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libcapi-network-wifi.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "liboic-tables.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libwifi-sns.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libasl.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "liblogutil.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "librt.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libssl.so.1.0.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libcrypto.so.1.0.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdcm.so"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libdlog.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libpthread.so.0"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libstdc++.so.6"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libm.so.6"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libgcc_s.so.1"
+  },
+  {
+    "binary": "rootfs/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libuser-spec.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "liblogutil.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "librt.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libdlog.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libpthread.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libversion-info.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libdiosal.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libmulticore-bridge.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libprefman.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libface.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libpalm.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libtint-util.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libdevice-node.so.0.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libstdc++.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libm.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libgcc_s.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libcapture-fw-prod.so",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libface.so",
+    "needed": "libdevice-node.so.0.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libface.so",
+    "needed": "libgcc_s.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libface.so",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libdlog.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libpthread.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libsif.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libgthread-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "librt.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libglib-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libredeye.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libudd5.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libface.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libdi-alg-ipplatform.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libdevice-node.so.0.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libdeviced.so.0.1.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libcapture-fw-prod.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "liblogutil.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libtint-util.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libmm-type.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libmm-displayer.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libmulticore-bridge.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libstdc++.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libm.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmm-photo.so",
+    "needed": "libgcc_s.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmmf-camcorder.so",
+    "needed": "libmmfcore.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmmf-camcorder.so",
+    "needed": "libgcc_s.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libmmf-camcorder.so",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "libdiosal.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "libasl.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "liblogutil.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "librt.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "libdlog.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "libpthread.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "libdi-network-dlna-stack.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "libdi-network-dlna-extlib.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "libdi-network-dlna-dmsui.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "libdi-network-dlna-api.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "libdl.so.2"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "libstdc++.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "libgcc_s.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-dlna-rvf.so",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "liblogutil.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "librt.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libdlog.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libpthread.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libasl.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libcapi-network-bluetooth.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libsap-api.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libsap-client-stub-api.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libjson.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libvconf.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libglib-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libstdc++.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libm.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libgcc_s.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libdi-network-bt-app.so",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libcapi-network-bluetooth.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libpkgmgr-client.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libpkgmgr-info.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libgio-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libaul.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libbundle.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libvconf.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libSLP-db-util.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libsqlite3.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libdlog.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libpthread.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libglib-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "librt.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libwsm.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libgcc_s.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsap-api.so.1.0.0",
+    "needed": "ld-linux.so.3"
+  },
+  {
+    "binary": "rootfs/usr/bin/mtp-responder",
+    "needed": "libvconf.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/mtp-responder",
+    "needed": "libdlog.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/mtp-responder",
+    "needed": "libgobject-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/mtp-responder",
+    "needed": "libglib-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/mtp-responder",
+    "needed": "libpthread.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/mtp-responder",
+    "needed": "libgcc_s.so.1"
+  },
+  {
+    "binary": "rootfs/usr/bin/mtp-responder",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/bin/mtp-responder",
+    "needed": "ld-linux.so.3"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libgio-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libSLP-tapi.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libappsvc.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libbluetooth-api.so.1"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libcrypto.so.1.0.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libgobject-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libpkgmgr-info.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libecore_x.so.1"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libaul.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libbundle.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libvconf.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libdlog.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libpthread.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libglib-2.0.so.0"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libdl.so.2"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libnfc-common-lib.so.1"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libgcc_s.so.1"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/bin/nfc-manager-daemon",
+    "needed": "ld-linux.so.3"
+  },
+  {
+    "binary": "rootfs/usr/sbin/fw_upgrade_recovery",
+    "needed": "libpthread.so.0"
+  },
+  {
+    "binary": "rootfs/usr/sbin/fw_upgrade_recovery",
+    "needed": "libgcc_s.so.1"
+  },
+  {
+    "binary": "rootfs/usr/sbin/fw_upgrade_recovery",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/sbin/fw_upgrade_recovery",
+    "needed": "ld-linux.so.3"
+  },
+  {
+    "binary": "rootfs/usr/bin/system-recovery",
+    "needed": "libcairo.so.2"
+  },
+  {
+    "binary": "rootfs/usr/bin/system-recovery",
+    "needed": "libgcc_s.so.1"
+  },
+  {
+    "binary": "rootfs/usr/bin/system-recovery",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/bin/system-recovery",
+    "needed": "ld-linux.so.3"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsif.so",
+    "needed": "librt.so.1"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsif.so",
+    "needed": "libpthread.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsif.so",
+    "needed": "libtint-util.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsif.so",
+    "needed": "liblogutil.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsif.so",
+    "needed": "libudd5.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsif.so",
+    "needed": "libversion-info.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsif.so",
+    "needed": "libmm-type.so"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsif.so",
+    "needed": "libdlog.so.0"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsif.so",
+    "needed": "libstdc++.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsif.so",
+    "needed": "libm.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsif.so",
+    "needed": "libc.so.6"
+  },
+  {
+    "binary": "rootfs/usr/lib/libsif.so",
+    "needed": "libgcc_s.so.1"
+  }
+]

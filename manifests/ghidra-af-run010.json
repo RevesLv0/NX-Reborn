@@ -1,0 +1,1080 @@
+{
+  "schema_version": 1,
+  "run": "RUN010",
+  "scope": "Offline AF/lens app ioctl, capture dispatch/callbacks and multicore bridge boundary",
+  "project": "NX500_RUN010_AF",
+  "evidence": {
+    "path": "analysis/evidence/af-lens-run010.json",
+    "sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42"
+  },
+  "sources": [
+    {
+      "path": "/usr/lib/libuser-spec.so",
+      "partition": "rootfs",
+      "sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec",
+      "staged_path": ".work/run010/af/core/inputs/libuser-spec.so"
+    },
+    {
+      "path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "partition": "rootfs",
+      "sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "staged_path": ".work/run010/af/core/inputs/di-camera-app"
+    },
+    {
+      "path": "/usr/lib/libcapture-fw-prod.so",
+      "partition": "rootfs",
+      "sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "staged_path": ".work/run010/af/core/inputs/libcapture-fw-prod.so"
+    },
+    {
+      "path": "/usr/lib/libmulticore-bridge.so",
+      "partition": "rootfs",
+      "sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+      "staged_path": ".work/run010/af/core/inputs/libmulticore-bridge.so"
+    }
+  ],
+  "metrics": {
+    "source_verified_contents": 4,
+    "imported_contents": 4,
+    "auto_analysis_completed_contents": 4,
+    "validated_export_generations": 10,
+    "selected_attempts": 59,
+    "selected_completed": 59,
+    "unique_selected_functions": 59,
+    "selected_failures": 0,
+    "budget_omissions": 0,
+    "failed_generations": 0,
+    "original_code_windows": 68,
+    "original_data_blocks": 4,
+    "selected_original_strings": 24,
+    "mode_queries": 7
+  },
+  "generations": [
+    {
+      "work": ".work/run010/af/core/initial",
+      "receipt": {
+        "run_id": "38c8d77b-1065-4c21-97d3-afe41022529f",
+        "started_unix": 1792628977.3899732,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN010_AF",
+          "-import",
+          "/workspace/NX-Reborn/.work/run010/af/core/inputs",
+          "-analysisTimeoutPerFile",
+          "600",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportEvidence.java",
+          "/workspace/NX-Reborn/.work/run010/af/core/initial/outputs/ghidra",
+          "^(ControlLens|Control3A|.*RegisterLensEventListener.*|.*UnregisterLensEventListener.*|.*NotifyLensEvent.*|.*execLensNotify.*|.*CNotifyHandler3Run.*|.*onAFScanDone.*|.*onInitializedFocus.*|.*onLensModeChangeDone.*|.*onLensEvent.*|.*CMCBAdapter4Send.*|.*CMCBAdapter11SendCommand.*|.*CMulticoreBridge4Send.*|.*CMulticoreBridge8Register.*|mcb_register_handler|mcb_send|.*User_Spec_Get_Rtos_Pref_Lens_Info.*|User_Spec_Get_Lens_Property|User_Spec_Get_Lens_Info|.*UI_Mm_Camera_Set_Lens_Callback_Init.*|.*UI_Mm_Camera_Set_Lens_Init.*|.*UI_Set_Lens_Callback_Fn.*|.*UI_Mm_Camera_Set_.*Af.*|.*UI_Mm_Camera_Set_.*AF.*|.*UI_Mm_Camera_Lens_.*)$",
+          "80",
+          "38c8d77b-1065-4c21-97d3-afe41022529f",
+          "45",
+          "0",
+          "-log",
+          "/workspace/NX-Reborn/.work/run010/af/core/initial/logs/NX500_RUN010_AF.log",
+          "-scriptlog",
+          "/workspace/NX-Reborn/.work/run010/af/core/initial/logs/NX500_RUN010_AF-script.log",
+          "-recursive"
+        ],
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "decompile_timeout_seconds": 45,
+        "decompile_payload_mb_override": 0,
+        "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629219.507904
+      },
+      "receipt_artifact": {
+        "path": ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json",
+        "sha256": "d5dff2d16013191be579e874337e73f2c2096f8693a659ae7a12d43683bc6076",
+        "bytes": 1791
+      },
+      "input_manifest": {
+        "path": ".work/run010/af/core/initial/input-manifest.json",
+        "sha256": "af81e8c822c5b4cd1d21f5057d310cc098aa8b75d51f664f4a9ac33a141c7e03",
+        "bytes": 1736
+      },
+      "summaries": [
+        {
+          "program": "di-camera-app",
+          "sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 9258,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 29264,
+          "decompile_budget": 80,
+          "decompile_attempted": 8,
+          "decompile_completed": 8,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^(ControlLens|Control3A|.*RegisterLensEventListener.*|.*UnregisterLensEventListener.*|.*NotifyLensEvent.*|.*execLensNotify.*|.*CNotifyHandler3Run.*|.*onAFScanDone.*|.*onInitializedFocus.*|.*onLensModeChangeDone.*|.*onLensEvent.*|.*CMCBAdapter4Send.*|.*CMCBAdapter11SendCommand.*|.*CMulticoreBridge4Send.*|.*CMulticoreBridge8Register.*|mcb_register_handler|mcb_send|.*User_Spec_Get_Rtos_Pref_Lens_Info.*|User_Spec_Get_Lens_Property|User_Spec_Get_Lens_Info|.*UI_Mm_Camera_Set_Lens_Callback_Init.*|.*UI_Mm_Camera_Set_Lens_Init.*|.*UI_Set_Lens_Callback_Fn.*|.*UI_Mm_Camera_Set_.*Af.*|.*UI_Mm_Camera_Set_.*AF.*|.*UI_Mm_Camera_Lens_.*)$",
+          "matched_functions": 8,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "38c8d77b-1065-4c21-97d3-afe41022529f",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": true,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 2283106,
+              "sha256": "bd8746b46263892a265f7a6cad0075ccd8c0ad182bd18c73917cd7ad2106c3e3"
+            },
+            "calls.jsonl": {
+              "bytes": 7526575,
+              "sha256": "4e5944a848d4760b71fd8a5737dbb06e21896633e8bbdcda319c6c2a20e44588"
+            },
+            "decompiled.jsonl": {
+              "bytes": 38983,
+              "sha256": "5411d909a056e7b77b0c907a2269ef55d37a724fc4545c7193c7dfb4a6007009"
+            },
+            "strings.jsonl": {
+              "bytes": 4565592,
+              "sha256": "320da26a087944f141be7a88a6f49984ae821eec0535243c9d470df3e22296d5"
+            }
+          }
+        },
+        {
+          "program": "libcapture-fw-prod.so",
+          "sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 2679,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 3575,
+          "decompile_budget": 80,
+          "decompile_attempted": 10,
+          "decompile_completed": 10,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^(ControlLens|Control3A|.*RegisterLensEventListener.*|.*UnregisterLensEventListener.*|.*NotifyLensEvent.*|.*execLensNotify.*|.*CNotifyHandler3Run.*|.*onAFScanDone.*|.*onInitializedFocus.*|.*onLensModeChangeDone.*|.*onLensEvent.*|.*CMCBAdapter4Send.*|.*CMCBAdapter11SendCommand.*|.*CMulticoreBridge4Send.*|.*CMulticoreBridge8Register.*|mcb_register_handler|mcb_send|.*User_Spec_Get_Rtos_Pref_Lens_Info.*|User_Spec_Get_Lens_Property|User_Spec_Get_Lens_Info|.*UI_Mm_Camera_Set_Lens_Callback_Init.*|.*UI_Mm_Camera_Set_Lens_Init.*|.*UI_Set_Lens_Callback_Fn.*|.*UI_Mm_Camera_Set_.*Af.*|.*UI_Mm_Camera_Set_.*AF.*|.*UI_Mm_Camera_Lens_.*)$",
+          "matched_functions": 10,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "38c8d77b-1065-4c21-97d3-afe41022529f",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": true,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 785112,
+              "sha256": "e0ad37c0a5cca5e1e4b26b1eacc31f040d28f86cc764747053db84d807e32ad9"
+            },
+            "calls.jsonl": {
+              "bytes": 829961,
+              "sha256": "a703d5363113143d50d8666bc39f25bfac5be00bb947032f37a6f85b8e3ec9c6"
+            },
+            "decompiled.jsonl": {
+              "bytes": 91143,
+              "sha256": "a4cfbc015a4004c5a5687b902841a1f9280446c4ea63144868d07932a289e0f4"
+            },
+            "strings.jsonl": {
+              "bytes": 582689,
+              "sha256": "1230f2c846bfe8c402c93724c31257592861d4b1a0626fe8bbe0256b9d731e3c"
+            }
+          }
+        },
+        {
+          "program": "libmulticore-bridge.so",
+          "sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 390,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 432,
+          "decompile_budget": 80,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^(ControlLens|Control3A|.*RegisterLensEventListener.*|.*UnregisterLensEventListener.*|.*NotifyLensEvent.*|.*execLensNotify.*|.*CNotifyHandler3Run.*|.*onAFScanDone.*|.*onInitializedFocus.*|.*onLensModeChangeDone.*|.*onLensEvent.*|.*CMCBAdapter4Send.*|.*CMCBAdapter11SendCommand.*|.*CMulticoreBridge4Send.*|.*CMulticoreBridge8Register.*|mcb_register_handler|mcb_send|.*User_Spec_Get_Rtos_Pref_Lens_Info.*|User_Spec_Get_Lens_Property|User_Spec_Get_Lens_Info|.*UI_Mm_Camera_Set_Lens_Callback_Init.*|.*UI_Mm_Camera_Set_Lens_Init.*|.*UI_Set_Lens_Callback_Fn.*|.*UI_Mm_Camera_Set_.*Af.*|.*UI_Mm_Camera_Set_.*AF.*|.*UI_Mm_Camera_Lens_.*)$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "38c8d77b-1065-4c21-97d3-afe41022529f",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": true,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 92036,
+              "sha256": "9a849c59a4b3118e9becc3bee8561c04b88e33d02f6309cd78edde3ebec08a69"
+            },
+            "calls.jsonl": {
+              "bytes": 67970,
+              "sha256": "90056b0c91a0de177f776f9abb75b28488399ec7382f9988a1f29f733c92a969"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 58023,
+              "sha256": "3237bf907cf3d3702d7ebc5cc5f91ef1c6d705e8df8feea0c09b444c52d3c562"
+            }
+          }
+        },
+        {
+          "program": "libuser-spec.so",
+          "sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 379,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1104,
+          "decompile_budget": 80,
+          "decompile_attempted": 3,
+          "decompile_completed": 3,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^(ControlLens|Control3A|.*RegisterLensEventListener.*|.*UnregisterLensEventListener.*|.*NotifyLensEvent.*|.*execLensNotify.*|.*CNotifyHandler3Run.*|.*onAFScanDone.*|.*onInitializedFocus.*|.*onLensModeChangeDone.*|.*onLensEvent.*|.*CMCBAdapter4Send.*|.*CMCBAdapter11SendCommand.*|.*CMulticoreBridge4Send.*|.*CMulticoreBridge8Register.*|mcb_register_handler|mcb_send|.*User_Spec_Get_Rtos_Pref_Lens_Info.*|User_Spec_Get_Lens_Property|User_Spec_Get_Lens_Info|.*UI_Mm_Camera_Set_Lens_Callback_Init.*|.*UI_Mm_Camera_Set_Lens_Init.*|.*UI_Set_Lens_Callback_Fn.*|.*UI_Mm_Camera_Set_.*Af.*|.*UI_Mm_Camera_Set_.*AF.*|.*UI_Mm_Camera_Lens_.*)$",
+          "matched_functions": 3,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "38c8d77b-1065-4c21-97d3-afe41022529f",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": true,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 89459,
+              "sha256": "16bd64bc790abe2cc6cbf02f48d8d0a779901d68b2902a39f645482fd10022db"
+            },
+            "calls.jsonl": {
+              "bytes": 198290,
+              "sha256": "e155be0356b5f4ba93c3633eb0730bfbf1061078fd4f4ebbd839f6eabcdcfdb9"
+            },
+            "decompiled.jsonl": {
+              "bytes": 7241,
+              "sha256": "44a5bcb24a4ae3a920ceb54593e190ea456d787a2b91978eed730e0823625d79"
+            },
+            "strings.jsonl": {
+              "bytes": 161398,
+              "sha256": "ee6c628821ea9c805646fabe7eade8d19b0ed59a3e68d80b73765e08c9a38c4e"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "work": ".work/run010/af/core/refine-libcapture-fw-prod.so",
+      "receipt": {
+        "run_id": "8483d9a6-ed90-4656-b602-b9ee47016602",
+        "started_unix": 1792629417.241902,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN010_AF",
+          "-process",
+          "libcapture-fw-prod.so",
+          "-analysisTimeoutPerFile",
+          "300",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportEvidence.java",
+          "/workspace/NX-Reborn/.work/run010/af/core/refine-libcapture-fw-prod.so/outputs/ghidra",
+          "^FUN_00040b30$|^FUN_0005d3a0$|^CCategoryHandleHolder::(CCategoryHandleHolder|Run|toTableID)$|^CMCBAdapter::subscribe$|^CNotifyHandler::CNotifyHandler$",
+          "20",
+          "8483d9a6-ed90-4656-b602-b9ee47016602",
+          "45",
+          "0",
+          "-log",
+          "/workspace/NX-Reborn/.work/run010/af/core/refine-libcapture-fw-prod.so/logs/NX500_RUN010_AF.log",
+          "-scriptlog",
+          "/workspace/NX-Reborn/.work/run010/af/core/refine-libcapture-fw-prod.so/logs/NX500_RUN010_AF-script.log",
+          "-recursive",
+          "-noanalysis"
+        ],
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "decompile_timeout_seconds": 45,
+        "decompile_payload_mb_override": 0,
+        "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629426.0995612
+      },
+      "receipt_artifact": {
+        "path": ".work/run010/af/core/refine-libcapture-fw-prod.so/logs/NX500_RUN010_AF-8483d9a6-ed90-4656-b602-b9ee47016602.json",
+        "sha256": "78eb5b4dc816f4ffa7c78ef5f3182b6ae496981782dd3528ae5483c75e17ebd7",
+        "bytes": 1367
+      },
+      "input_manifest": {
+        "path": ".work/run010/af/core/refine-libcapture-fw-prod.so/input-manifest.json",
+        "sha256": "5005c29ccf557773b8bbf0c95f384004ed12f8a213b6ff5edf265826721c12fb",
+        "bytes": 431
+      },
+      "summaries": [
+        {
+          "program": "libcapture-fw-prod.so",
+          "sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 2679,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 3575,
+          "decompile_budget": 20,
+          "decompile_attempted": 7,
+          "decompile_completed": 7,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^FUN_00040b30$|^FUN_0005d3a0$|^CCategoryHandleHolder::(CCategoryHandleHolder|Run|toTableID)$|^CMCBAdapter::subscribe$|^CNotifyHandler::CNotifyHandler$",
+          "matched_functions": 7,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "8483d9a6-ed90-4656-b602-b9ee47016602",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 785112,
+              "sha256": "e0ad37c0a5cca5e1e4b26b1eacc31f040d28f86cc764747053db84d807e32ad9"
+            },
+            "calls.jsonl": {
+              "bytes": 829961,
+              "sha256": "6884f483cfc17e119b1030ebb30b370a358f432c0ca0ae2a20a8ac8959e349ae"
+            },
+            "decompiled.jsonl": {
+              "bytes": 85042,
+              "sha256": "24a56d1ccda181b8d3371d2b2b10ca32980cbebca7fc1c5dbf117bf2fd96eac3"
+            },
+            "strings.jsonl": {
+              "bytes": 582689,
+              "sha256": "1230f2c846bfe8c402c93724c31257592861d4b1a0626fe8bbe0256b9d731e3c"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "work": ".work/run010/af/core/refine-libmulticore-bridge.so",
+      "receipt": {
+        "run_id": "f759180e-4650-4700-a833-303e67e0306d",
+        "started_unix": 1792629426.133622,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN010_AF",
+          "-process",
+          "libmulticore-bridge.so",
+          "-analysisTimeoutPerFile",
+          "300",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportEvidence.java",
+          "/workspace/NX-Reborn/.work/run010/af/core/refine-libmulticore-bridge.so/outputs/ghidra",
+          "^CMulticoreBridge::send$|^CFrame::(Build|Handle)$",
+          "20",
+          "f759180e-4650-4700-a833-303e67e0306d",
+          "45",
+          "0",
+          "-log",
+          "/workspace/NX-Reborn/.work/run010/af/core/refine-libmulticore-bridge.so/logs/NX500_RUN010_AF.log",
+          "-scriptlog",
+          "/workspace/NX-Reborn/.work/run010/af/core/refine-libmulticore-bridge.so/logs/NX500_RUN010_AF-script.log",
+          "-recursive",
+          "-noanalysis"
+        ],
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "decompile_timeout_seconds": 45,
+        "decompile_payload_mb_override": 0,
+        "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629433.008775
+      },
+      "receipt_artifact": {
+        "path": ".work/run010/af/core/refine-libmulticore-bridge.so/logs/NX500_RUN010_AF-f759180e-4650-4700-a833-303e67e0306d.json",
+        "sha256": "8fa448dcb419473a2c106d8ad1dd390ebe23470111e4ccbc2260d340fe53afd3",
+        "bytes": 1269
+      },
+      "input_manifest": {
+        "path": ".work/run010/af/core/refine-libmulticore-bridge.so/input-manifest.json",
+        "sha256": "8f7e5a06c60a07d6109d53d97ab2e65b9327a8d92a504c3da6afcb82a6270691",
+        "bytes": 432
+      },
+      "summaries": [
+        {
+          "program": "libmulticore-bridge.so",
+          "sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 390,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 432,
+          "decompile_budget": 20,
+          "decompile_attempted": 3,
+          "decompile_completed": 3,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^CMulticoreBridge::send$|^CFrame::(Build|Handle)$",
+          "matched_functions": 3,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "f759180e-4650-4700-a833-303e67e0306d",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 92036,
+              "sha256": "9a849c59a4b3118e9becc3bee8561c04b88e33d02f6309cd78edde3ebec08a69"
+            },
+            "calls.jsonl": {
+              "bytes": 67970,
+              "sha256": "a3ea3600ea680030adcdf0878dee2d4bfec3dfb1286ed517343f0c87ce47b3f5"
+            },
+            "decompiled.jsonl": {
+              "bytes": 3996,
+              "sha256": "e8e7c9912c490f292b916642164b65c1c3c8440b9a56298fcc9e86a17d0bd539"
+            },
+            "strings.jsonl": {
+              "bytes": 58023,
+              "sha256": "3237bf907cf3d3702d7ebc5cc5f91ef1c6d705e8df8feea0c09b444c52d3c562"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "work": ".work/run010/af/core/routing",
+      "receipt": {
+        "run_id": "a06f82af-d73a-4ca0-80ed-eeadda7f2851",
+        "started_unix": 1792629245.7811103,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN010_AF",
+          "-process",
+          "*",
+          "-analysisTimeoutPerFile",
+          "300",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportEvidence.java",
+          "/workspace/NX-Reborn/.work/run010/af/core/routing/outputs/ghidra",
+          "^mm_camera_ioctl$|^CMCBAdapter::(Send|SendCommand|SyncSendCommand|OnReceiveEvent|OnReceived|Initialize|subscribeToMCB)$|^CNotifyHandler::(Run|notifyCategory|subCategory|execLiveviewNotify)$|^CAttributeHandler::getAFScanResult$|^CCommonProperty::(SetFocusScanResult|SetAFResult|GetAFResult)$|^CMulticoreBridge::(Send|Register)$|^CSender::(createFrame|Send)$|^CReceiver::(receive|Subscribe)$|^UI_Mm_Camera_(Set_Ioctl_3A_Caf|Af_Lock|Remove_Lens_Callback)$|^FUN_001e2818$|^FUN_00223db0$",
+          "65",
+          "a06f82af-d73a-4ca0-80ed-eeadda7f2851",
+          "45",
+          "0",
+          "-log",
+          "/workspace/NX-Reborn/.work/run010/af/core/routing/logs/NX500_RUN010_AF.log",
+          "-scriptlog",
+          "/workspace/NX-Reborn/.work/run010/af/core/routing/logs/NX500_RUN010_AF-script.log",
+          "-recursive",
+          "-noanalysis"
+        ],
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "decompile_timeout_seconds": 45,
+        "decompile_payload_mb_override": 0,
+        "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629286.979517
+      },
+      "receipt_artifact": {
+        "path": ".work/run010/af/core/routing/logs/NX500_RUN010_AF-a06f82af-d73a-4ca0-80ed-eeadda7f2851.json",
+        "sha256": "4515a05a62afdd4ef723117af7257973e13191da156b90822efcc68da8f8621a",
+        "bytes": 1616
+      },
+      "input_manifest": {
+        "path": ".work/run010/af/core/routing/input-manifest.json",
+        "sha256": "af81e8c822c5b4cd1d21f5057d310cc098aa8b75d51f664f4a9ac33a141c7e03",
+        "bytes": 1736
+      },
+      "summaries": [
+        {
+          "program": "di-camera-app",
+          "sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00008000",
+          "functions": 9258,
+          "elf_original_image_base": "0x8000",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 29264,
+          "decompile_budget": 65,
+          "decompile_attempted": 5,
+          "decompile_completed": 5,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^mm_camera_ioctl$|^CMCBAdapter::(Send|SendCommand|SyncSendCommand|OnReceiveEvent|OnReceived|Initialize|subscribeToMCB)$|^CNotifyHandler::(Run|notifyCategory|subCategory|execLiveviewNotify)$|^CAttributeHandler::getAFScanResult$|^CCommonProperty::(SetFocusScanResult|SetAFResult|GetAFResult)$|^CMulticoreBridge::(Send|Register)$|^CSender::(createFrame|Send)$|^CReceiver::(receive|Subscribe)$|^UI_Mm_Camera_(Set_Ioctl_3A_Caf|Af_Lock|Remove_Lens_Callback)$|^FUN_001e2818$|^FUN_00223db0$",
+          "matched_functions": 5,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "a06f82af-d73a-4ca0-80ed-eeadda7f2851",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 2283106,
+              "sha256": "bd8746b46263892a265f7a6cad0075ccd8c0ad182bd18c73917cd7ad2106c3e3"
+            },
+            "calls.jsonl": {
+              "bytes": 7526575,
+              "sha256": "db5f31d2735e7981a55aeb23439bb9170143a8c27aa7446abc34a303f5d08eda"
+            },
+            "decompiled.jsonl": {
+              "bytes": 11758,
+              "sha256": "7e66c37172f54ac2679dc6247c1615788f5a7be7dbf0dd5b2f0ad401b9f36a4a"
+            },
+            "strings.jsonl": {
+              "bytes": 4565592,
+              "sha256": "320da26a087944f141be7a88a6f49984ae821eec0535243c9d470df3e22296d5"
+            }
+          }
+        },
+        {
+          "program": "libcapture-fw-prod.so",
+          "sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 2679,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 3575,
+          "decompile_budget": 65,
+          "decompile_attempted": 16,
+          "decompile_completed": 16,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^mm_camera_ioctl$|^CMCBAdapter::(Send|SendCommand|SyncSendCommand|OnReceiveEvent|OnReceived|Initialize|subscribeToMCB)$|^CNotifyHandler::(Run|notifyCategory|subCategory|execLiveviewNotify)$|^CAttributeHandler::getAFScanResult$|^CCommonProperty::(SetFocusScanResult|SetAFResult|GetAFResult)$|^CMulticoreBridge::(Send|Register)$|^CSender::(createFrame|Send)$|^CReceiver::(receive|Subscribe)$|^UI_Mm_Camera_(Set_Ioctl_3A_Caf|Af_Lock|Remove_Lens_Callback)$|^FUN_001e2818$|^FUN_00223db0$",
+          "matched_functions": 16,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "a06f82af-d73a-4ca0-80ed-eeadda7f2851",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 785112,
+              "sha256": "e0ad37c0a5cca5e1e4b26b1eacc31f040d28f86cc764747053db84d807e32ad9"
+            },
+            "calls.jsonl": {
+              "bytes": 829961,
+              "sha256": "f121dcc11c56aba16e493c960f2a79e2605c4c31ee6b27d51cc4ecf0e84441ef"
+            },
+            "decompiled.jsonl": {
+              "bytes": 223749,
+              "sha256": "45e9d84f580bc4640d9ccede23d2dd834f0d28a2395016fd7800c52612e1cbf3"
+            },
+            "strings.jsonl": {
+              "bytes": 582689,
+              "sha256": "1230f2c846bfe8c402c93724c31257592861d4b1a0626fe8bbe0256b9d731e3c"
+            }
+          }
+        },
+        {
+          "program": "libmulticore-bridge.so",
+          "sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 390,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 432,
+          "decompile_budget": 65,
+          "decompile_attempted": 7,
+          "decompile_completed": 7,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^mm_camera_ioctl$|^CMCBAdapter::(Send|SendCommand|SyncSendCommand|OnReceiveEvent|OnReceived|Initialize|subscribeToMCB)$|^CNotifyHandler::(Run|notifyCategory|subCategory|execLiveviewNotify)$|^CAttributeHandler::getAFScanResult$|^CCommonProperty::(SetFocusScanResult|SetAFResult|GetAFResult)$|^CMulticoreBridge::(Send|Register)$|^CSender::(createFrame|Send)$|^CReceiver::(receive|Subscribe)$|^UI_Mm_Camera_(Set_Ioctl_3A_Caf|Af_Lock|Remove_Lens_Callback)$|^FUN_001e2818$|^FUN_00223db0$",
+          "matched_functions": 7,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "a06f82af-d73a-4ca0-80ed-eeadda7f2851",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 92036,
+              "sha256": "9a849c59a4b3118e9becc3bee8561c04b88e33d02f6309cd78edde3ebec08a69"
+            },
+            "calls.jsonl": {
+              "bytes": 67970,
+              "sha256": "aae61f57889354510ce536e08ab6dcce76f4aa66feccaf65c495bd26ed12ddd8"
+            },
+            "decompiled.jsonl": {
+              "bytes": 11153,
+              "sha256": "9f96cecac02638f2b6854a5445a64f465bee81a15ffe4cea0ef0c9abcabb2879"
+            },
+            "strings.jsonl": {
+              "bytes": 58023,
+              "sha256": "3237bf907cf3d3702d7ebc5cc5f91ef1c6d705e8df8feea0c09b444c52d3c562"
+            }
+          }
+        },
+        {
+          "program": "libuser-spec.so",
+          "sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec",
+          "language": "ARM:LE:32:v8",
+          "compiler_spec": "default",
+          "image_base": "00010000",
+          "functions": 379,
+          "elf_original_image_base": "0x0",
+          "address_convention": "va/instructions/C use Ghidra program VA; elf_va converts to original ELF link-time VA. Neither is a file offset.",
+          "strings": 1104,
+          "decompile_budget": 65,
+          "decompile_attempted": 0,
+          "decompile_completed": 0,
+          "decompile_timeout_seconds": 45,
+          "decompile_max_payload_mb": 50,
+          "decompile_pattern": "^mm_camera_ioctl$|^CMCBAdapter::(Send|SendCommand|SyncSendCommand|OnReceiveEvent|OnReceived|Initialize|subscribeToMCB)$|^CNotifyHandler::(Run|notifyCategory|subCategory|execLiveviewNotify)$|^CAttributeHandler::getAFScanResult$|^CCommonProperty::(SetFocusScanResult|SetAFResult|GetAFResult)$|^CMulticoreBridge::(Send|Register)$|^CSender::(createFrame|Send)$|^CReceiver::(receive|Subscribe)$|^UI_Mm_Camera_(Set_Ioctl_3A_Caf|Af_Lock|Remove_Lens_Callback)$|^FUN_001e2818$|^FUN_00223db0$",
+          "matched_functions": 0,
+          "decompile_omitted_by_budget": 0,
+          "ghidra_version": "12.1.4",
+          "exporter_version": "2026-10-21.3",
+          "export_schema_version": 2,
+          "run_id": "a06f82af-d73a-4ca0-80ed-eeadda7f2851",
+          "static_only": true,
+          "scope": "auto-analysis; selected decompilation, not full semantic verification",
+          "auto_analysis_timed_out": false,
+          "auto_analysis_enabled_this_run": false,
+          "unresolved_calls": "Direct call edges only; indirect/vtable calls may be missing. External programs are not executed.",
+          "export_completed": true,
+          "artifacts": {
+            "functions.jsonl": {
+              "bytes": 89459,
+              "sha256": "16bd64bc790abe2cc6cbf02f48d8d0a779901d68b2902a39f645482fd10022db"
+            },
+            "calls.jsonl": {
+              "bytes": 198290,
+              "sha256": "f7434fcadbda1b2a6d448af0437d7a21d4e62b251a0f162bdc299b72d292ce5d"
+            },
+            "decompiled.jsonl": {
+              "bytes": 0,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "strings.jsonl": {
+              "bytes": 161398,
+              "sha256": "ee6c628821ea9c805646fabe7eade8d19b0ed59a3e68d80b73765e08c9a38c4e"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "mode_queries": [
+    {
+      "receipt": {
+        "started_unix": 1792629365.9130766,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN010_AF",
+          "-process",
+          "di-camera-app",
+          "-recursive",
+          "-noanalysis",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportAddressReferences.java",
+          "/workspace/NX-Reborn/.work/run010/af/modes/di-camera-app/references.json",
+          "001e2818",
+          "001e3f5c",
+          "001e4478",
+          "001e5b3c",
+          "001e7240",
+          "001e73ac",
+          "001e7480",
+          "001e7580",
+          "001e7678",
+          "001e7778",
+          "001e7878",
+          "00220038",
+          "00223db0"
+        ],
+        "source_path": ".work/run010/af/core/inputs/di-camera-app",
+        "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+        "script_sha256": "a4300a57933d33d4e7da28b2876d9aae1c499c0ad53da12b3fe0815a53187cfd",
+        "runner_sha256": "be0efe2397efe29c7d0edbfadb32f78397b1aa4f360798d52d51aee902c4fbfb",
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629372.3202162,
+        "output_sha256": "e0b97b65522faea0eae9eb3216d8fbbfca2f8ef81f2af041af62bd8f4f630a24"
+      },
+      "artifact": {
+        "path": ".work/run010/af/modes/di-camera-app/references.json",
+        "sha256": "e0b97b65522faea0eae9eb3216d8fbbfca2f8ef81f2af041af62bd8f4f630a24",
+        "bytes": 23213
+      }
+    },
+    {
+      "receipt": {
+        "started_unix": 1792629345.7075772,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN010_AF",
+          "-process",
+          "libcapture-fw-prod.so",
+          "-recursive",
+          "-noanalysis",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportAddressReferences.java",
+          "/workspace/NX-Reborn/.work/run010/af/modes/libcapture-fw-prod.so/references.json",
+          "0003ab30",
+          "000526d8",
+          "00053db4",
+          "000938bc",
+          "0009390c",
+          "00093950",
+          "00093dc8",
+          "00093e14",
+          "00093f60",
+          "000953a0",
+          "00095400",
+          "00095478",
+          "00095688",
+          "0009855c",
+          "00098600",
+          "00098664",
+          "0009a628",
+          "0009a954",
+          "0009ab8c",
+          "0009bf5c",
+          "0009ce68",
+          "0009d204",
+          "0009d28c",
+          "0009dacc",
+          "0009db54",
+          "000a1c64"
+        ],
+        "source_path": ".work/run010/af/core/inputs/libcapture-fw-prod.so",
+        "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+        "script_sha256": "a4300a57933d33d4e7da28b2876d9aae1c499c0ad53da12b3fe0815a53187cfd",
+        "runner_sha256": "be0efe2397efe29c7d0edbfadb32f78397b1aa4f360798d52d51aee902c4fbfb",
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629352.6950529,
+        "output_sha256": "8d1502e45f61ccda8852cc7c4ae8fbff4f8e0cf7a9cb405f059ecead5ae6c8d3"
+      },
+      "artifact": {
+        "path": ".work/run010/af/modes/libcapture-fw-prod.so/references.json",
+        "sha256": "8d1502e45f61ccda8852cc7c4ae8fbff4f8e0cf7a9cb405f059ecead5ae6c8d3",
+        "bytes": 17150
+      }
+    },
+    {
+      "receipt": {
+        "started_unix": 1792629352.7311373,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN010_AF",
+          "-process",
+          "libmulticore-bridge.so",
+          "-recursive",
+          "-noanalysis",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportAddressReferences.java",
+          "/workspace/NX-Reborn/.work/run010/af/modes/libmulticore-bridge.so/references.json",
+          "000165f4",
+          "00016700",
+          "0001689c",
+          "00016940",
+          "00016994",
+          "000173fc",
+          "00017898"
+        ],
+        "source_path": ".work/run010/af/core/inputs/libmulticore-bridge.so",
+        "source_sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+        "script_sha256": "a4300a57933d33d4e7da28b2876d9aae1c499c0ad53da12b3fe0815a53187cfd",
+        "runner_sha256": "be0efe2397efe29c7d0edbfadb32f78397b1aa4f360798d52d51aee902c4fbfb",
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629359.142412,
+        "output_sha256": "799a20516bc7a356d22d605cb9ef43002404dd2a1af2388edb4d9e9cd1c08d2c"
+      },
+      "artifact": {
+        "path": ".work/run010/af/modes/libmulticore-bridge.so/references.json",
+        "sha256": "799a20516bc7a356d22d605cb9ef43002404dd2a1af2388edb4d9e9cd1c08d2c",
+        "bytes": 4257
+      }
+    },
+    {
+      "receipt": {
+        "started_unix": 1792629359.174971,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN010_AF",
+          "-process",
+          "libuser-spec.so",
+          "-recursive",
+          "-noanalysis",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportAddressReferences.java",
+          "/workspace/NX-Reborn/.work/run010/af/modes/libuser-spec.so/references.json",
+          "00013e10",
+          "0002df74",
+          "0002df84"
+        ],
+        "source_path": ".work/run010/af/core/inputs/libuser-spec.so",
+        "source_sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec",
+        "script_sha256": "a4300a57933d33d4e7da28b2876d9aae1c499c0ad53da12b3fe0815a53187cfd",
+        "runner_sha256": "be0efe2397efe29c7d0edbfadb32f78397b1aa4f360798d52d51aee902c4fbfb",
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629365.875514,
+        "output_sha256": "748562aaaa5787fac883842cd060cbb6c72a85d54e66589c40c2d65725380de4"
+      },
+      "artifact": {
+        "path": ".work/run010/af/modes/libuser-spec.so/references.json",
+        "sha256": "748562aaaa5787fac883842cd060cbb6c72a85d54e66589c40c2d65725380de4",
+        "bytes": 1735
+      }
+    },
+    {
+      "receipt": {
+        "started_unix": 1792629476.4603662,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN010_AF",
+          "-process",
+          "di-camera-app",
+          "-recursive",
+          "-noanalysis",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportAddressReferences.java",
+          "/workspace/NX-Reborn/.work/run010/af/modes/refine-di-camera-app/references.json",
+          "0012dbd4"
+        ],
+        "source_path": ".work/run010/af/core/inputs/di-camera-app",
+        "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+        "script_sha256": "a4300a57933d33d4e7da28b2876d9aae1c499c0ad53da12b3fe0815a53187cfd",
+        "runner_sha256": "be0efe2397efe29c7d0edbfadb32f78397b1aa4f360798d52d51aee902c4fbfb",
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629483.2706182,
+        "output_sha256": "208ffe3679af7a26b82d01c0ef3b92414352456424d2d0df440006af5e1da3c9"
+      },
+      "artifact": {
+        "path": ".work/run010/af/modes/refine-di-camera-app/references.json",
+        "sha256": "208ffe3679af7a26b82d01c0ef3b92414352456424d2d0df440006af5e1da3c9",
+        "bytes": 498
+      }
+    },
+    {
+      "receipt": {
+        "started_unix": 1792629463.3660622,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN010_AF",
+          "-process",
+          "libcapture-fw-prod.so",
+          "-recursive",
+          "-noanalysis",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportAddressReferences.java",
+          "/workspace/NX-Reborn/.work/run010/af/modes/refine-libcapture-fw-prod.so/references.json",
+          "00040b30",
+          "0005d3a0",
+          "00095610",
+          "0009a524",
+          "0009dfa4",
+          "0009e23c",
+          "0009e2f8"
+        ],
+        "source_path": ".work/run010/af/core/inputs/libcapture-fw-prod.so",
+        "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+        "script_sha256": "a4300a57933d33d4e7da28b2876d9aae1c499c0ad53da12b3fe0815a53187cfd",
+        "runner_sha256": "be0efe2397efe29c7d0edbfadb32f78397b1aa4f360798d52d51aee902c4fbfb",
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629469.8095703,
+        "output_sha256": "edac3fd36220dac56c83ad1adb2977dcacf52fabbcf11ea63670840ee0667920"
+      },
+      "artifact": {
+        "path": ".work/run010/af/modes/refine-libcapture-fw-prod.so/references.json",
+        "sha256": "edac3fd36220dac56c83ad1adb2977dcacf52fabbcf11ea63670840ee0667920",
+        "bytes": 5641
+      }
+    },
+    {
+      "receipt": {
+        "started_unix": 1792629469.8436148,
+        "command": [
+          "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+          "/workspace/NX-Reborn/ghidra-projects",
+          "NX500_RUN010_AF",
+          "-process",
+          "libmulticore-bridge.so",
+          "-recursive",
+          "-noanalysis",
+          "-max-cpu",
+          "1",
+          "-scriptPath",
+          "/workspace/NX-Reborn/tools/ghidra",
+          "-postScript",
+          "ExportAddressReferences.java",
+          "/workspace/NX-Reborn/.work/run010/af/modes/refine-libmulticore-bridge.so/references.json",
+          "00015eac",
+          "00015f5c",
+          "000166c8"
+        ],
+        "source_path": ".work/run010/af/core/inputs/libmulticore-bridge.so",
+        "source_sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+        "script_sha256": "a4300a57933d33d4e7da28b2876d9aae1c499c0ad53da12b3fe0815a53187cfd",
+        "runner_sha256": "be0efe2397efe29c7d0edbfadb32f78397b1aa4f360798d52d51aee902c4fbfb",
+        "max_memory": "1024M",
+        "max_cpu": 1,
+        "completed": true,
+        "returncode": 0,
+        "finished_unix": 1792629476.426705,
+        "output_sha256": "5656f673867d752e4000b9b793e5e23a580720b83fd6c710aea1484832d6355d"
+      },
+      "artifact": {
+        "path": ".work/run010/af/modes/refine-libmulticore-bridge.so/references.json",
+        "sha256": "5656f673867d752e4000b9b793e5e23a580720b83fd6c710aea1484832d6355d",
+        "bytes": 2053
+      }
+    }
+  ],
+  "original_byte_verification": {
+    "schema_version": 1,
+    "static_only": true,
+    "verifier_sha256": "1419ef41af0682f1d257cd8afa77a6646b0ee62886da9df23a7ef1b59420792e",
+    "checked_evidence": [
+      {
+        "path": "analysis/evidence/af-lens-run010.json",
+        "sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+        "code_windows": 68,
+        "data_blocks": 4,
+        "strings": 24
+      }
+    ],
+    "independent_semantic_review_completed": false,
+    "limitations": [
+      "Primary-agent original-byte and artifact consistency checks, not independent semantic review.",
+      "No camera observations, active-boot proof, sensor calibration or runtime policy validation."
+    ]
+  },
+  "static_only": true,
+  "limitations": [
+    "Selected decompilation and primary-agent byte verification only; no independent semantic review or runtime observation.",
+    "Original ELF VAs use per-source Ghidra delta; original file offsets use PT_LOAD independently.",
+    "Recovered instruction addresses are decoded in saved TMode context and split at gaps; C signatures remain inferred.",
+    "All four inputs already belonged to the earlier loaded corpus; no new unique loaded-content coverage.",
+    "Dynamic import/export symbol equality identifies candidates; actual runtime binding and successful delivery are unobserved."
+  ]
+}
