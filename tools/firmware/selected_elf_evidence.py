@@ -36,7 +36,7 @@ def main():
     ap.add_argument('--relocation-term',action='append',default=[])
     ap.add_argument('--string-term',action='append',default=[])
     a=ap.parse_args()
-    output=dict(schema_version=1,static_only=True,generations=[],sources=[],mode_queries=[],
+    output=dict(schema_version=1,static_only=True,generations=[],failed_generations=[],sources=[],mode_queries=[],
                 ghidra=[],windows=[],relocations=[],strings_collection='Full strings remain in validated exports; no selective string extraction is performed.',limitations=[
                     'Selected decompilation and primary-agent byte verification only; no independent semantic review or runtime observation.',
                     'Original ELF VAs use per-source Ghidra delta; original file offsets use PT_LOAD independently.',
@@ -58,11 +58,21 @@ def main():
         output['mode_queries'].append(dict(receipt=receipt,query=query,artifact=artifact(root/'references.json')))
     for folder in sorted(a.root.glob('*/*/outputs/ghidra')):
         work=folder.parent.parent
+        receipts=list((work/'logs').glob('NX500*.json'));assert len(receipts)==1
+        receipt=load(receipts[0])
+        if not receipt['completed']:
+            assert receipt.get('returncode', 0) != 0, 'Unfinished generation: wait for the process before collecting'
+            assert not list(folder.glob('*/summary.json')), 'Partially exported failure requires explicit review'
+            output['failed_generations'].append(dict(work=str(work),receipt=receipt,receipt_artifact=artifact(receipts[0])))
+            continue
+        assert receipt['returncode']==0
         master=work.parent/'input-manifest.json'
         inputs=load(master)
         paired=work/'input-manifest.json'
         if paired.exists():
-            assert load(paired)==inputs
+            selected=load(paired)
+            assert all(row in inputs for row in selected), 'Generation inputs must be a subset of the subsystem manifest'
+            inputs=selected
         else:
             paired.write_text(json.dumps(inputs,indent=2)+'\n')
         for row in inputs:
@@ -71,8 +81,6 @@ def main():
             original=Path('.work/full/extracted')/partition/original_path.lstrip('/')
             assert sha(original)==sha(row['staged_path'])==row['sha256']
             sources[row['sha256']]=dict(path=original_path,partition=partition,sha256=row['sha256'],staged_path=row['staged_path'])
-        receipts=list((work/'logs').glob('NX500*.json'));assert len(receipts)==1
-        receipt=load(receipts[0]);assert receipt['completed'] is True and receipt['returncode']==0
         summaries=[]
         for p in sorted(folder.glob('*/summary.json')):
             summary=load(p);validate_export(p.parent,summary['sha256'],receipt['run_id']);summaries.append(summary)

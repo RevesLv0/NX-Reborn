@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "static_only": true,
+  "verifier_sha256": "7bef67016f38e0291c20ee43cd4d3e2660bb1066c60297cc5f5e1fee43d942e1",
+  "checked_evidence": [
+    {
+      "path": "analysis/evidence/thermal-policy-run009.json",
+      "sha256": "63313d3d7218eef6872880638331fb72341d9d65816fb758cfbf35ce5654c69f",
+      "code_windows": 53,
+      "data_blocks": 0,
+      "strings": 28
+    },
+    {
+      "path": "analysis/evidence/thermal-policy-data-run009.json",
+      "sha256": "40253df03669c320d48afd83abf8f644f2751d09656c3bc09708ddaca1f2b19a",
+      "code_windows": 0,
+      "data_blocks": 19,
+      "strings": 0
+    }
+  ],
+  "independent_semantic_review_completed": false,
+  "limitations": [
+    "Primary-agent original-byte and artifact consistency checks, not independent semantic review.",
+    "No camera observations, active-boot proof, sensor calibration or runtime policy validation."
+  ]
+}

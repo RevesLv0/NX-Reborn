@@ -1,6 +1,6 @@
 # NX500 firmware research
 
-Latest offline survey: `docs/STATUS_20261022_RUN008.md`; measured stage coverage:
+Latest offline survey: `docs/STATUS_20261022_RUN009.md`; measured stage coverage:
 `docs/ANALYSIS_PROGRESS.md`. Coverage percentages describe their stated ELF stages,
 not whole-firmware semantic completion.
 

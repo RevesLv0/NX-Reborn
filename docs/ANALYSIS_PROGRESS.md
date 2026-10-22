@@ -7,13 +7,13 @@ The filesystem corpus contains **1,895 unique ELF contents across 1,956 paths**.
 | Stage | Unique ELF numerator / denominator | Content coverage |
 |---|---:|---:|
 | source verified | 1895 / 1895 | 100.0% |
-| imported with success receipt | 29 / 1895 | 1.53% |
-| loaded program export validated | 42 / 1895 | 2.216% |
-| auto analysis completed with success receipt | 29 / 1895 | 1.53% |
-| selected decompilation completed | 33 / 1895 | 1.741% |
-| reviewed static findings | 22 / 1895 | 1.161% |
+| imported with success receipt | 30 / 1895 | 1.583% |
+| loaded program export validated | 43 / 1895 | 2.269% |
+| auto analysis completed with success receipt | 30 / 1895 | 1.583% |
+| selected decompilation completed | 34 / 1895 | 1.794% |
+| reviewed static findings | 23 / 1895 | 1.214% |
 
-Validated export generations: 502; rejected generations: 11. Deduplicated mapped nonexternal function entries: 46,893. Selected function attempts: 553; completed: 553. There is no whole-corpus function denominator. ABI-unverified mapped entries: 46,893.
+Validated export generations: 541; rejected generations: 11. Deduplicated mapped nonexternal function entries: 47,799. Selected function attempts: 597; completed: 597. There is no whole-corpus function denominator. ABI-unverified mapped entries: 47,799.
 
 Successful `-import` receipts count only when their input manifest SHA and firmware path agree with the source inventory. Restored `-process -noanalysis` exports establish a loaded program and valid export; they do not establish a newly measured import or completed auto-analysis. Artifact bytes, SHA-256, row counts, run IDs and receipt exit state are checked on every rebuild. Failed runs and stale exports remain visible as errors and do not count as coverage.
 
@@ -28,7 +28,7 @@ Reproduce from the repository root:
 ```sh
 python tools/firmware/analysis_progress.py \
   --inventory .work/full/inventory/full_filesystem_inventory.json \
-  --run-root .work/restored-run001 --run-root .work/run002 --run-root .work/run003 --run-root .work/run004 --run-root .work/run005 --run-root .work/run006 --run-root .work/run007 --run-root .work/run008 \
+  --run-root .work/restored-run001 --run-root .work/run002 --run-root .work/run003 --run-root .work/run004 --run-root .work/run005 --run-root .work/run006 --run-root .work/run007 --run-root .work/run008 --run-root .work/run009 \
   --review-ledger manifests/ghidra-capture-run003.json \
   --review-ledger manifests/ghidra-video-power-run003.json \
   --review-ledger manifests/ghidra-transfer-run003.json \
@@ -41,12 +41,13 @@ python tools/firmware/analysis_progress.py \
   --review-ledger manifests/review-run006.json \
   --review-ledger manifests/review-run007.json \
   --review-ledger manifests/review-run008.json \
+  --review-ledger manifests/review-run009.json \
   --output manifests/analysis-progress.json --markdown docs/ANALYSIS_PROGRESS.md
 ```
 
 Review counts are unmeasured unless explicit `--review-ledger` inputs are provided. Review inputs accept a list or a manifest containing `reviewed_findings`. Each reviewed unit must record a stable ID, inventory source SHA, original ELF VA or file offset, existing evidence path, method, limitations and unresolved questions. Prose reports and generated pseudocode are never silently classified as reviewed findings.
 
-Registered reviewed static units: 73. Review content coverage counts primary source SHA associations only; extra source anchors stay attached to each unit. It does not measure the fraction of semantics understood.
+Registered reviewed static units: 81. Review content coverage counts primary source SHA associations only; extra source anchors stay attached to each unit. It does not measure the fraction of semantics understood.
 
 Inventory SHA-256: `c874bc1a39049f8f6afb508aa34e9fb0b4aacd1480e7603afade30a4613d461f`. All source SHA, original paths, export artifact hashes, receipt locations and per-SHA work units are preserved in [the ledger](../manifests/analysis-progress.json).
 

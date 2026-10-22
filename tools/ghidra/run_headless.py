@@ -26,6 +26,7 @@ parser.add_argument('--max-memory', default='3G', help='Maximum Java heap, e.g. 
 parser.add_argument('--max-cpu', default=2, type=int)
 parser.add_argument('--pattern')
 parser.add_argument('--process',action='store_true',help='Export an already imported program')
+parser.add_argument('--recursive-process',action='store_true',help='Find a named existing program in project subfolders without processing every program')
 parser.add_argument('--skip-analysis',action='store_true')
 args = parser.parse_args()
 if min(args.timeout, args.decompile_timeout, args.max_cpu) <= 0 or min(args.decompile_budget, args.decompile_payload_mb) < 0:
@@ -53,7 +54,7 @@ command=[str(args.ghidra.resolve()/'support/analyzeHeadless'),str(project_dir),a
          '-scriptPath',str(scripts),'-postScript','ExportEvidence.java',str(args.work/'outputs/ghidra'),
          pattern,str(args.decompile_budget),run_id,str(args.decompile_timeout),str(args.decompile_payload_mb),'-log',str(args.work/'logs'/f'{args.project}.log'),
          '-scriptlog',str(args.work/'logs'/f'{args.project}-script.log')]
-if args.input.is_dir(): command+=['-recursive']
+if args.input.is_dir() or args.recursive_process: command+=['-recursive']
 if args.skip_analysis: command+=['-noanalysis']
 started=time.time()
 receipt=args.work/'logs'/f'{args.project}-{run_id}.json'

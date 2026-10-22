@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "run": "RUN009",
+  "reviewed_findings": [
+    {
+      "id": "THERM009-CALLBACK",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "original_elf_va": "0x271f6c",
+      "evidence": "analysis/evidence/thermal-policy-run009.json",
+      "evidence_sha256": "63313d3d7218eef6872880638331fb72341d9d65816fb758cfbf35ce5654c69f",
+      "method": "Original PT_LOAD-mapped ARM windows, saved TMode contexts, copied selected C and original data/relocation checks",
+      "claim": "App callback ID3 registers module2/code0; gated callback accepts unsigned levels0\u20132 and queues UI handler that writes UI83a.",
+      "limitations": [
+        "Pending idle delivery and alternate gates remain unobserved."
+      ],
+      "unresolved_questions": [
+        "Pending idle delivery and alternate gates remain unobserved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/THERMAL_POLICY_REVIEW_RUN009.md",
+      "independent_review_scope": "See report table: selected original instruction/data paths; not every function semantics."
+    },
+    {
+      "id": "THERM009-ELIGIBILITY",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "original_elf_va": "0xe4868",
+      "evidence": "analysis/evidence/thermal-policy-run009.json",
+      "evidence_sha256": "63313d3d7218eef6872880638331fb72341d9d65816fb758cfbf35ce5654c69f",
+      "method": "Original PT_LOAD-mapped ARM windows, saved TMode contexts, copied selected C and original data/relocation checks",
+      "claim": "One recording eligibility path queries sensorapi level and returns0 on level2 after a popup request.",
+      "limitations": [
+        "Preceding early returns mean this check is not proven to dominate all eligibility paths."
+      ],
+      "unresolved_questions": [
+        "Preceding early returns mean this check is not proven to dominate all eligibility paths."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/THERMAL_POLICY_REVIEW_RUN009.md",
+      "independent_review_scope": "See report table: selected original instruction/data paths; not every function semantics."
+    },
+    {
+      "id": "THERM009-STOP",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "original_elf_va": "0xe7284",
+      "evidence": "analysis/evidence/thermal-policy-run009.json",
+      "evidence_sha256": "63313d3d7218eef6872880638331fb72341d9d65816fb758cfbf35ce5654c69f",
+      "method": "Original PT_LOAD-mapped ARM windows, saved TMode contexts, copied selected C and original data/relocation checks",
+      "claim": "Level2/UI27a6 handler requests reason7, named HIGH_TEMPERATURE; normal manager reason7 path submits a commit through helper e2c00 subject to state/time/flag guards.",
+      "limitations": [
+        "Manager early return, time less than1 and alternative flag branches prevent unconditional-stop claims."
+      ],
+      "unresolved_questions": [
+        "Manager early return, time less than1 and alternative flag branches prevent unconditional-stop claims."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/THERMAL_POLICY_REVIEW_RUN009.md",
+      "independent_review_scope": "See report table: selected original instruction/data paths; not every function semantics."
+    },
+    {
+      "id": "THERM009-COMMIT",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "original_elf_va": "0x1d5138",
+      "evidence": "analysis/evidence/thermal-policy-run009.json",
+      "evidence_sha256": "63313d3d7218eef6872880638331fb72341d9d65816fb758cfbf35ce5654c69f",
+      "method": "Original PT_LOAD-mapped ARM windows, saved TMode contexts, copied selected C and original data/relocation checks",
+      "claim": "App wrapper invokes mmf_camcorder_commit only for states5/6; nonzero status is logged and is not propagated as a checked return to the UI manager.",
+      "limitations": [
+        "Asynchronous completion, finalized file, runtime state and persistence are not established."
+      ],
+      "unresolved_questions": [
+        "Asynchronous completion, finalized file, runtime state and persistence are not established."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/THERMAL_POLICY_REVIEW_RUN009.md",
+      "independent_review_scope": "See report table: selected original instruction/data paths; not every function semantics."
+    },
+    {
+      "id": "THERM009-ADJUSTMENT",
+      "source_sha256": "364075adfec81e43e416944541be0890649c24f20aebbe341add1eee510ab434",
+      "original_path": "/usr/lib/libfactory-mode.so",
+      "original_elf_va": "0xb8874",
+      "evidence": "analysis/evidence/thermal-policy-run009.json",
+      "evidence_sha256": "63313d3d7218eef6872880638331fb72341d9d65816fb758cfbf35ce5654c69f",
+      "method": "Original PT_LOAD-mapped ARM windows, saved TMode contexts, copied selected C and original data/relocation checks",
+      "claim": "64-bit adjustment ID high85600000 selects preferencegroup4; accessor returns mappedbase+0x200+lowoffset.",
+      "limitations": [
+        "The high ID also matches configured physical mapping; live mapping/content initialization is unobserved."
+      ],
+      "unresolved_questions": [
+        "The high ID also matches configured physical mapping; live mapping/content initialization is unobserved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/THERMAL_POLICY_REVIEW_RUN009.md",
+      "independent_review_scope": "See report table: selected original instruction/data paths; not every function semantics."
+    },
+    {
+      "id": "THERM009-FACTORY-DEFAULTS",
+      "source_sha256": "364075adfec81e43e416944541be0890649c24f20aebbe341add1eee510ab434",
+      "original_path": "/usr/lib/libfactory-mode.so",
+      "original_elf_va": "0xccc10",
+      "evidence": "analysis/evidence/thermal-policy-data-run009.json",
+      "evidence_sha256": "40253df03669c320d48afd83abf8f644f2751d09656c3bc09708ddaca1f2b19a",
+      "method": "Original PT_LOAD-mapped ARM windows, saved TMode contexts, copied selected C and original data/relocation checks",
+      "claim": "Original 96-byte descriptors and factory default bytes bind mode4, CIS106/110, CPU102/105 and ISP106/110.",
+      "limitations": [
+        "These factory bytes do not prove active runtime preferences; units require driver evidence."
+      ],
+      "unresolved_questions": [
+        "These factory bytes do not prove active runtime preferences; units require driver evidence."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/THERMAL_POLICY_REVIEW_RUN009.md",
+      "independent_review_scope": "See report table: selected original instruction/data paths; not every function semantics."
+    },
+    {
+      "id": "THERM009-MAPPING",
+      "source_sha256": "c44802d1983bd07eaf53f02761cf402143bce245b7e5d20499c62ce1164df18d",
+      "original_path": "/usr/lib/libprefman.so",
+      "original_elf_va": "0x54e0",
+      "evidence": "analysis/evidence/thermal-policy-run009.json",
+      "evidence_sha256": "63313d3d7218eef6872880638331fb72341d9d65816fb758cfbf35ce5654c69f",
+      "method": "Original PT_LOAD-mapped ARM windows, saved TMode contexts, copied selected C and original data/relocation checks",
+      "claim": "Group4 maps configured physical85600000 via /dev/mem; ABS32 default pointer resolves pref_sys_default with separate zero temperature words.",
+      "limitations": [
+        "Physical mapping success and active initialization path are unobserved; zero prefman bytes differ from factory defaults."
+      ],
+      "unresolved_questions": [
+        "Physical mapping success and active initialization path are unobserved; zero prefman bytes differ from factory defaults."
+      ],
+      "independent_review_completed": false,
+      "independent_review_report": "analysis/architecture/THERMAL_POLICY_REVIEW_RUN009.md",
+      "independent_review_scope": "See report table: selected original instruction/data paths; not every function semantics."
+    },
+    {
+      "id": "THERM009-NVD",
+      "source_sha256": "c44802d1983bd07eaf53f02761cf402143bce245b7e5d20499c62ce1164df18d",
+      "original_path": "/usr/lib/libprefman.so",
+      "original_elf_va": "0x56b0",
+      "evidence": "analysis/evidence/thermal-policy-run009.json",
+      "evidence_sha256": "63313d3d7218eef6872880638331fb72341d9d65816fb758cfbf35ce5654c69f",
+      "method": "Original PT_LOAD-mapped ARM windows, saved TMode contexts, copied selected C and original data/relocation checks",
+      "claim": "Group4 NVD selector0/1/2 paths are mmcblk0p1/p3/p5 with shifted offsets0/180000/0; pref_load checks size/magic/CRC.",
+      "limitations": [
+        "Actual backing slot and content are not observed; companionword8 units and all error paths remain separate questions."
+      ],
+      "unresolved_questions": [
+        "Actual backing slot and content are not observed; companionword8 units and all error paths remain separate questions."
+      ],
+      "independent_review_completed": false,
+      "independent_review_report": "analysis/architecture/THERMAL_POLICY_REVIEW_RUN009.md",
+      "independent_review_scope": "See report table: selected original instruction/data paths; not every function semantics."
+    }
+  ]
+}
