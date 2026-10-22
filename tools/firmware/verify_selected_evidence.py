@@ -4,9 +4,12 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import sys
 
 from capstone import Cs,CS_ARCH_ARM,CS_MODE_ARM,CS_MODE_THUMB
 from elftools.elf.elffile import ELFFile
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'ghidra'))
+from validate_exports import validate_export
 
 
 def sha(path):
@@ -20,6 +23,60 @@ def decode(row,va,raw):
         (r.get('va',r.get('original_elf_va')),r.get('bytes',r.get('raw_hex')),r['mnemonic'],r['operands']) for r in row['instructions']]
 
 
+def audit_media(d, counts):
+    sources={s['sha256']:s for s in d['sources']}
+    saved={}
+    for generation in d['generations']:
+        folder=Path(generation['path']);summary=generation['summary']
+        assert sha(folder/'summary.json')==generation['summary_sha256']
+        assert json.loads((folder/'summary.json').read_text())==summary
+        validate_export(folder,summary['sha256'],summary['run_id'])
+        saved[(generation['generation'],summary['sha256'])]={int(r['elf_va'],16):r for r in map(json.loads,(folder/'decompiled.jsonl').read_text().splitlines())}
+    counts.update(selected_functions=0,instruction_records=0,relocations=0,configurations=0,exports=len(d['generations']))
+    for source_sha, source in sources.items():
+        original=Path('.work/full/extracted')/source['partition']/source['original_path'].lstrip('/')
+        assert sha(original)==source_sha
+        with original.open('rb') as stream:
+            elf=ELFFile(stream)
+            def read(va,size):
+                seg=next(s for s in elf.iter_segments() if s['p_type']=='PT_LOAD' and s['p_vaddr']<=va and va+size<=s['p_vaddr']+s['p_filesz'])
+                offset=seg['p_offset']+va-seg['p_vaddr'];stream.seek(offset)
+                return offset,stream.read(size)
+            actual=set()
+            for section in elf.iter_sections():
+                if section['sh_type'] not in ('SHT_REL','SHT_RELA'):continue
+                for relocation in section.iter_relocations():
+                    symbol=elf.get_section(section['sh_link']).get_symbol(relocation['r_info_sym'])
+                    actual.add((section.name,hex(relocation['r_offset']),relocation['r_info_type'],symbol.name,hex(symbol['st_value'])))
+            for row in source['relocations']:
+                assert (row['section'],row['original_elf_va'],row['relocation_type'],row['symbol'],row['symbol_value']) in actual
+                offset,raw=read(int(row['original_elf_va'],16),4)
+                assert offset==int(row['file_offset'],16) and raw.hex()==row['raw_word_hex']
+                counts['relocations']+=1
+            for row in source['strings']:
+                raw=row['value'].encode('utf-8')+b'\0';offset,actual_raw=read(int(row['original_elf_va'],16),len(raw))
+                assert offset==int(row['file_offset'],16) and raw==actual_raw
+                counts['strings']+=1
+            for row in d['selected_functions']:
+                if row['source_sha256']!=source_sha:continue
+                copied=saved[(row['generation'],source_sha)][int(row['original_elf_va'],16)]
+                assert copied['c']==row['c'] and copied['completed']==row['completed']
+                decoder=Cs(CS_ARCH_ARM,CS_MODE_THUMB if row['instruction_mode']=='Thumb' else CS_MODE_ARM)
+                for instruction in row['original_instructions']:
+                    va=int(instruction['original_elf_va'],16);raw=bytes.fromhex(instruction['bytes']);offset,original_raw=read(va,len(raw))
+                    assert offset==int(instruction['file_offset'],16) and raw==original_raw
+                    decoded=list(decoder.disasm(raw,va));assert len(decoded)==1 and decoded[0].size==len(raw)
+                    assert (decoded[0].mnemonic,decoded[0].op_str)==(instruction['mnemonic'],instruction['operands'])
+                    counts['instruction_records']+=1
+                counts['selected_functions']+=1
+    for row in d['configurations']:
+        original=Path('.work/full/extracted/rootfs')/row['original_path'].lstrip('/')
+        assert sha(original)==row['sha256']
+        raw=row['text'].encode('utf-8');offset=row['file_offset']
+        assert original.read_bytes()[offset:offset+len(raw)]==raw
+        counts['configurations']+=1
+
+
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--evidence',type=Path,action='append',required=True)
@@ -27,7 +84,9 @@ def main():
     a=ap.parse_args();checks=[]
     for path in a.evidence:
         d=json.loads(path.read_text());counts=dict(code_windows=0,data_blocks=0,strings=0)
-        if isinstance(d.get('sources'),list):
+        if 'selected_functions' in d and 'configurations' in d:
+            audit_media(d,counts)
+        elif isinstance(d.get('sources'),list):
             sources={s['sha256']:s for s in d['sources']}
             for source in sources.values():
                 original=Path('.work/full/extracted')/source.get('partition','rootfs')/source['path'].lstrip('/')
@@ -95,11 +154,11 @@ def main():
                             assert relocation['r_info_type']==row['relocation_type'] and hex(relocation['r_offset'])==row['got_va']
                             assert symbol.name==row['symbol'] and hex(symbol['st_value'])==row['symbol_defined_va']
                     counts[count_name]=counts.get(count_name,0)+1
-        elif 'code_regions' in d and 'decoded_base' in d:
-            source=Path(d['source']);assert sha(source)==d['source_sha256'];blob=source.read_bytes();base=int(d['decoded_base'],16)
+        elif 'code_regions' in d and ('decoded_base' in d or 'decoded_link_base' in d):
+            source=Path(d['source']);assert sha(source)==d['source_sha256'];blob=source.read_bytes();base=int(d.get('decoded_base',d.get('decoded_link_base')),16)
             for field,count_name in [('code_regions','code_windows'),('data_blocks','data_blocks'),('strings','strings')]:
                 for row in d.get(field,[]):
-                    va=int(row['kernel_link_va'],16);offset=row['decoded_offset'];assert va==base+offset
+                    va=int(row.get('kernel_link_va',row.get('va')),16);offset=row.get('decoded_offset',row.get('decoded_file_offset'));assert va==base+offset
                     raw=bytes.fromhex(row['raw_hex']);assert raw==blob[offset:offset+len(raw)]
                     assert hashlib.sha256(raw).hexdigest()==row['sha256']
                     if 'instructions' in row:decode(row,va,raw)

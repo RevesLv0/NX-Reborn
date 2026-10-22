@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "static_only": true,
+  "verifier_sha256": "c1375573e0d9df8a98a3fc279a0101836acfd9bc20494c49f111d99e4543a1c6",
+  "checked_evidence": [
+    {
+      "path": "analysis/evidence/packaged-preferences-run011.json",
+      "sha256": "caf51350001f6654f8f6ab7a15c0bdb9992f7555ec1516dff6c42adf103580b1",
+      "code_windows": 7,
+      "data_blocks": 22,
+      "strings": 19
+    }
+  ],
+  "independent_semantic_review_completed": false,
+  "limitations": [
+    "Primary-agent original-byte and artifact consistency checks, not independent semantic review.",
+    "No camera observations, active-boot proof, sensor calibration or runtime policy validation."
+  ]
+}

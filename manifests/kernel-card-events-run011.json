@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "static_only": true,
+  "command": "PYTHONPATH=.work/python python tools/firmware/kernel_card_events_evidence.py",
+  "source": {
+    "path": ".work/full/kernel-2.raw",
+    "sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587"
+  },
+  "artifacts": [
+    {
+      "path": "tools/firmware/kernel_card_events_evidence.py",
+      "sha256": "36d2019e25bb1ced1122892be1a0cee9b15d1511c198d09e311b0a3810fc278f",
+      "size": 8826
+    },
+    {
+      "path": "analysis/evidence/kernel-card-events-run011.json",
+      "sha256": "ed9b3e2241aee7c14af03be967d376f0ff7f3dfd3f3a0547e39780fe20f24157",
+      "size": 591363
+    },
+    {
+      "path": "analysis/architecture/KERNEL_CARD_EVENTS_RUN011.md",
+      "sha256": "2463e27d9c5b78f22889865bdb53fba222ec3179356370ae1eb889a2795d8bde",
+      "size": 14150
+    }
+  ],
+  "limitations": [
+    "Packaged kernel active boot role remains unknown.",
+    "Static producer/order evidence does not prove live delivery or per-file association.",
+    "No target execution, device I/O, firmware modification, Ghidra mutation, commit or push."
+  ]
+}

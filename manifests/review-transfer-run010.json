@@ -19,7 +19,8 @@
       "unresolved_questions": [
         "Malformed headers, unchecked sscanf conversion, socket-read semantics and actual receiver responses remain unobserved."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/TRANSFER_STATE_REVIEW_RUN012.md"
     },
     {
       "id": "TRANSFER010-OUTCOME",
@@ -38,7 +39,8 @@
       "unresolved_questions": [
         "Worker-local outcomes are distinct from APP client states; remote persistence, successful join and camera quiescence are not established."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/TRANSFER_STATE_REVIEW_RUN012.md"
     },
     {
       "id": "TRANSFER010-APP-SINGLETON",
@@ -57,7 +59,8 @@
       "unresolved_questions": [
         "Active state at delivery, alternate observers and concrete APP +0xac terminal-state writers remain unresolved."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/TRANSFER_STATE_REVIEW_RUN012.md"
     }
   ]
 }

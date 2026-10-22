@@ -33,6 +33,7 @@ def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--root',type=Path,required=True)
     ap.add_argument('--output',type=Path,required=True)
+    ap.add_argument('--subsystem',action='append',default=[],help='Collect only these direct subsystem folders beneath the run root')
     ap.add_argument('--relocation-term',action='append',default=[])
     ap.add_argument('--string-term',action='append',default=[])
     a=ap.parse_args()
@@ -57,6 +58,8 @@ def main():
             mapping[va]=target['thumb_mode_context']
         output['mode_queries'].append(dict(receipt=receipt,query=query,artifact=artifact(root/'references.json')))
     for folder in sorted(a.root.glob('*/*/outputs/ghidra')):
+        if a.subsystem and folder.relative_to(a.root).parts[0] not in a.subsystem:
+            continue
         work=folder.parent.parent
         receipts=list((work/'logs').glob('NX500*.json'));assert len(receipts)==1
         receipt=load(receipts[0])

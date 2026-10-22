@@ -1,0 +1,530 @@
+{
+  "schema_version": 1,
+  "run": "RUN011",
+  "derived_from": "manifests/review-media-run011.json",
+  "reviewed_findings": [
+    {
+      "id": "MEDIA011-M01",
+      "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+      "original_path": "/usr/lib/libfilelist-manager.so",
+      "original_elf_va": "0x130e4",
+      "evidence": "analysis/evidence/media-database-run011.json",
+      "evidence_sha256": "8b992b69afe7953d2a3eee11f7640b3d0eaeaf0b8ec31b596494eebdcea7e825",
+      "method": "Source-bound selected C, original PT_LOAD instruction rows, data/ELF relocations and primary-agent independent byte/artifact audit",
+      "claim": "DCF list uses directory enumeration and constructor defaults",
+      "anchors": [
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0x130e4",
+          "generation": "g1",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0x1318c",
+          "generation": "g1",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0xdf08",
+          "generation": "g3",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0x7e68",
+          "generation": "g3",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0x12480",
+          "generation": "g3",
+          "completed": true
+        }
+      ],
+      "limitations": [
+        "Static only: no target execution, camera access, filesystem writes to extracted sources, DB SQL execution or firmware modification.",
+        "Source C signatures are inferred; original instruction/register and relocation evidence governs bounded ABI claims.",
+        "Direct call exports omit unresolved indirect/virtual calls. Vtable rows prove intended ELF binding, not runtime object identity or interposition.",
+        "A reserved DCF item, DB row, queued callback or service notification does not prove complete capture, successful close, persistence or remote delivery.",
+        "Only selected bodies were semantically inspected. No complete cancellation rollback, service startup, IPC protocol or media DB runtime snapshot is established.",
+        "Semantic review is limited to the listed claims/anchors; 68 selected bodies are not 68 independently peer-reviewed functions.",
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved.",
+        "No successful capture, durable medium write, runtime database row or service startup is inferred."
+      ],
+      "unresolved_questions": [
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/MEDIA_DATABASE_REVIEW_RUN013.md"
+    },
+    {
+      "id": "MEDIA011-M02",
+      "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+      "original_path": "/usr/lib/libfilelist-manager.so",
+      "original_elf_va": "0xdd6c",
+      "evidence": "analysis/evidence/media-database-run011.json",
+      "evidence_sha256": "8b992b69afe7953d2a3eee11f7640b3d0eaeaf0b8ec31b596494eebdcea7e825",
+      "method": "Source-bound selected C, original PT_LOAD instruction rows, data/ELF relocations and primary-agent independent byte/artifact audit",
+      "claim": "Filename allocation adds a DCF item and increments count before storage completion",
+      "anchors": [
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0xdd6c",
+          "generation": "g3",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0xa55c",
+          "generation": "g3",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0x7bc0",
+          "generation": "g3",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_elf_va": "0x1ce9cc",
+          "generation": "g2",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_elf_va": "0x121670",
+          "generation": "g2",
+          "completed": true
+        }
+      ],
+      "limitations": [
+        "Static only: no target execution, camera access, filesystem writes to extracted sources, DB SQL execution or firmware modification.",
+        "Source C signatures are inferred; original instruction/register and relocation evidence governs bounded ABI claims.",
+        "Direct call exports omit unresolved indirect/virtual calls. Vtable rows prove intended ELF binding, not runtime object identity or interposition.",
+        "A reserved DCF item, DB row, queued callback or service notification does not prove complete capture, successful close, persistence or remote delivery.",
+        "Only selected bodies were semantically inspected. No complete cancellation rollback, service startup, IPC protocol or media DB runtime snapshot is established.",
+        "Semantic review is limited to the listed claims/anchors; 68 selected bodies are not 68 independently peer-reviewed functions.",
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved.",
+        "No successful capture, durable medium write, runtime database row or service startup is inferred."
+      ],
+      "unresolved_questions": [
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/MEDIA_DATABASE_REVIEW_RUN013.md"
+    },
+    {
+      "id": "MEDIA011-M03",
+      "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+      "original_path": "/usr/lib/libfilelist-manager.so",
+      "original_elf_va": "0x6480",
+      "evidence": "analysis/evidence/media-database-run011.json",
+      "evidence_sha256": "8b992b69afe7953d2a3eee11f7640b3d0eaeaf0b8ec31b596494eebdcea7e825",
+      "method": "Source-bound selected C, original PT_LOAD instruction rows, data/ELF relocations and primary-agent independent byte/artifact audit",
+      "claim": "Concrete app object/callback/vtable intended bindings",
+      "anchors": [
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0x6480",
+          "generation": "g3",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0x12480",
+          "generation": "g3",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_elf_va": "0x120434",
+          "generation": "g4",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_elf_va": "0x1ce584",
+          "generation": "g4",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_elf_va": "0x1ce6b4",
+          "generation": "g4",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_elf_va": "0x1d0498",
+          "generation": "g2",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_elf_va": "0x1dc294",
+          "generation": "g4",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_elf_va": "0x1dc2a0",
+          "generation": "g4",
+          "completed": true
+        }
+      ],
+      "limitations": [
+        "Static only: no target execution, camera access, filesystem writes to extracted sources, DB SQL execution or firmware modification.",
+        "Source C signatures are inferred; original instruction/register and relocation evidence governs bounded ABI claims.",
+        "Direct call exports omit unresolved indirect/virtual calls. Vtable rows prove intended ELF binding, not runtime object identity or interposition.",
+        "A reserved DCF item, DB row, queued callback or service notification does not prove complete capture, successful close, persistence or remote delivery.",
+        "Only selected bodies were semantically inspected. No complete cancellation rollback, service startup, IPC protocol or media DB runtime snapshot is established.",
+        "Semantic review is limited to the listed claims/anchors; 68 selected bodies are not 68 independently peer-reviewed functions.",
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved.",
+        "No successful capture, durable medium write, runtime database row or service startup is inferred."
+      ],
+      "unresolved_questions": [
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/MEDIA_DATABASE_REVIEW_RUN013.md"
+    },
+    {
+      "id": "MEDIA011-M04",
+      "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+      "original_path": "/usr/lib/libfilelist-manager.so",
+      "original_elf_va": "0xc23c",
+      "evidence": "analysis/evidence/media-database-run011.json",
+      "evidence_sha256": "8b992b69afe7953d2a3eee11f7640b3d0eaeaf0b8ec31b596494eebdcea7e825",
+      "method": "Source-bound selected C, original PT_LOAD instruction rows, data/ELF relocations and primary-agent independent byte/artifact audit",
+      "claim": "DCF physical-delete calls do not gate the reviewed item removal",
+      "anchors": [
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0xc23c",
+          "generation": "g1",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0x13278",
+          "generation": "g1",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libfilelist-manager.so",
+          "source_sha256": "112671b699b07e58b4221d8b654ea6f35b48a43059091bab4f69923484c8e357",
+          "original_elf_va": "0x11484",
+          "generation": "g1",
+          "completed": true
+        }
+      ],
+      "limitations": [
+        "Static only: no target execution, camera access, filesystem writes to extracted sources, DB SQL execution or firmware modification.",
+        "Source C signatures are inferred; original instruction/register and relocation evidence governs bounded ABI claims.",
+        "Direct call exports omit unresolved indirect/virtual calls. Vtable rows prove intended ELF binding, not runtime object identity or interposition.",
+        "A reserved DCF item, DB row, queued callback or service notification does not prove complete capture, successful close, persistence or remote delivery.",
+        "Only selected bodies were semantically inspected. No complete cancellation rollback, service startup, IPC protocol or media DB runtime snapshot is established.",
+        "Semantic review is limited to the listed claims/anchors; 68 selected bodies are not 68 independently peer-reviewed functions.",
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved.",
+        "No successful capture, durable medium write, runtime database row or service startup is inferred."
+      ],
+      "unresolved_questions": [
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/MEDIA_DATABASE_REVIEW_RUN013.md"
+    },
+    {
+      "id": "MEDIA011-M05",
+      "source_sha256": "a626848eb85966888ebc9b54c42197b07c3fd78b276328603b7cf0e0bf67b1ce",
+      "original_path": "/usr/lib/libcapi-content-media-content.so.0.2.108",
+      "original_elf_va": "0x1bca4",
+      "evidence": "analysis/evidence/media-database-run011.json",
+      "evidence_sha256": "8b992b69afe7953d2a3eee11f7640b3d0eaeaf0b8ec31b596494eebdcea7e825",
+      "method": "Source-bound selected C, original PT_LOAD instruction rows, data/ELF relocations and primary-agent independent byte/artifact audit",
+      "claim": "CAPI scan has separate exists/refresh/insert/delete and converted local error branches",
+      "anchors": [
+        {
+          "source_path": "/usr/lib/libcapi-content-media-content.so.0.2.108",
+          "source_sha256": "a626848eb85966888ebc9b54c42197b07c3fd78b276328603b7cf0e0bf67b1ce",
+          "original_elf_va": "0x1bca4",
+          "generation": "g1",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libcapi-content-media-content.so.0.2.108",
+          "source_sha256": "a626848eb85966888ebc9b54c42197b07c3fd78b276328603b7cf0e0bf67b1ce",
+          "original_elf_va": "0xb260",
+          "generation": "g1",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libcapi-content-media-content.so.0.2.108",
+          "source_sha256": "a626848eb85966888ebc9b54c42197b07c3fd78b276328603b7cf0e0bf67b1ce",
+          "original_elf_va": "0xb6ac",
+          "generation": "g1",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libcapi-content-media-content.so.0.2.108",
+          "source_sha256": "a626848eb85966888ebc9b54c42197b07c3fd78b276328603b7cf0e0bf67b1ce",
+          "original_elf_va": "0x18a5c",
+          "generation": "g3",
+          "completed": true
+        }
+      ],
+      "limitations": [
+        "Static only: no target execution, camera access, filesystem writes to extracted sources, DB SQL execution or firmware modification.",
+        "Source C signatures are inferred; original instruction/register and relocation evidence governs bounded ABI claims.",
+        "Direct call exports omit unresolved indirect/virtual calls. Vtable rows prove intended ELF binding, not runtime object identity or interposition.",
+        "A reserved DCF item, DB row, queued callback or service notification does not prove complete capture, successful close, persistence or remote delivery.",
+        "Only selected bodies were semantically inspected. No complete cancellation rollback, service startup, IPC protocol or media DB runtime snapshot is established.",
+        "Semantic review is limited to the listed claims/anchors; 68 selected bodies are not 68 independently peer-reviewed functions.",
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved.",
+        "No successful capture, durable medium write, runtime database row or service startup is inferred."
+      ],
+      "unresolved_questions": [
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/MEDIA_DATABASE_REVIEW_RUN013.md"
+    },
+    {
+      "id": "MEDIA011-M06",
+      "source_sha256": "11a07486570485e865050c82ee743e5528e366e0e45d70191a4149f76e8f0214",
+      "original_path": "/usr/lib/libmedia-service.so.1.0.0",
+      "original_elf_va": "0x4b90",
+      "evidence": "analysis/evidence/media-database-run011.json",
+      "evidence_sha256": "8b992b69afe7953d2a3eee11f7640b3d0eaeaf0b8ec31b596494eebdcea7e825",
+      "method": "Source-bound selected C, original PT_LOAD instruction rows, data/ELF relocations and primary-agent independent byte/artifact audit",
+      "claim": "Service SQL targets media; schema, local insertion and notification results are distinct",
+      "anchors": [
+        {
+          "source_path": "/usr/lib/libmedia-service.so.1.0.0",
+          "source_sha256": "11a07486570485e865050c82ee743e5528e366e0e45d70191a4149f76e8f0214",
+          "original_elf_va": "0x4b90",
+          "generation": "g1",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libmedia-service.so.1.0.0",
+          "source_sha256": "11a07486570485e865050c82ee743e5528e366e0e45d70191a4149f76e8f0214",
+          "original_elf_va": "0x8688",
+          "generation": "g1",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libmedia-service.so.1.0.0",
+          "source_sha256": "11a07486570485e865050c82ee743e5528e366e0e45d70191a4149f76e8f0214",
+          "original_elf_va": "0xa854",
+          "generation": "g3",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libmedia-service.so.1.0.0",
+          "source_sha256": "11a07486570485e865050c82ee743e5528e366e0e45d70191a4149f76e8f0214",
+          "original_elf_va": "0x9d40",
+          "generation": "g3",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libmedia-service.so.1.0.0",
+          "source_sha256": "11a07486570485e865050c82ee743e5528e366e0e45d70191a4149f76e8f0214",
+          "original_elf_va": "0x105f0",
+          "generation": "g3",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libmedia-service.so.1.0.0",
+          "source_sha256": "11a07486570485e865050c82ee743e5528e366e0e45d70191a4149f76e8f0214",
+          "original_elf_va": "0x5e38",
+          "generation": "g1",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libmedia-service.so.1.0.0",
+          "source_sha256": "11a07486570485e865050c82ee743e5528e366e0e45d70191a4149f76e8f0214",
+          "original_elf_va": "0x7ba4",
+          "generation": "g1",
+          "completed": true
+        }
+      ],
+      "limitations": [
+        "Static only: no target execution, camera access, filesystem writes to extracted sources, DB SQL execution or firmware modification.",
+        "Source C signatures are inferred; original instruction/register and relocation evidence governs bounded ABI claims.",
+        "Direct call exports omit unresolved indirect/virtual calls. Vtable rows prove intended ELF binding, not runtime object identity or interposition.",
+        "A reserved DCF item, DB row, queued callback or service notification does not prove complete capture, successful close, persistence or remote delivery.",
+        "Only selected bodies were semantically inspected. No complete cancellation rollback, service startup, IPC protocol or media DB runtime snapshot is established.",
+        "Semantic review is limited to the listed claims/anchors; 68 selected bodies are not 68 independently peer-reviewed functions.",
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved.",
+        "No successful capture, durable medium write, runtime database row or service startup is inferred."
+      ],
+      "unresolved_questions": [
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/MEDIA_DATABASE_REVIEW_RUN013.md"
+    },
+    {
+      "id": "MEDIA011-M07",
+      "source_sha256": "11a07486570485e865050c82ee743e5528e366e0e45d70191a4149f76e8f0214",
+      "original_path": "/usr/lib/libmedia-service.so.1.0.0",
+      "original_elf_va": "0xb824",
+      "evidence": "analysis/evidence/media-database-run011.json",
+      "evidence_sha256": "8b992b69afe7953d2a3eee11f7640b3d0eaeaf0b8ec31b596494eebdcea7e825",
+      "method": "Source-bound selected C, original PT_LOAD instruction rows, data/ELF relocations and primary-agent independent byte/artifact audit",
+      "claim": "Concrete .media.db pathname belongs to selected ATTACH/backup consumer; ordinary connect delegates externally",
+      "anchors": [
+        {
+          "source_path": "/usr/lib/libmedia-service.so.1.0.0",
+          "source_sha256": "11a07486570485e865050c82ee743e5528e366e0e45d70191a4149f76e8f0214",
+          "original_elf_va": "0xb824",
+          "generation": "g3",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libmedia-service.so.1.0.0",
+          "source_sha256": "11a07486570485e865050c82ee743e5528e366e0e45d70191a4149f76e8f0214",
+          "original_elf_va": "0x4094",
+          "generation": "g1",
+          "completed": true
+        }
+      ],
+      "limitations": [
+        "Static only: no target execution, camera access, filesystem writes to extracted sources, DB SQL execution or firmware modification.",
+        "Source C signatures are inferred; original instruction/register and relocation evidence governs bounded ABI claims.",
+        "Direct call exports omit unresolved indirect/virtual calls. Vtable rows prove intended ELF binding, not runtime object identity or interposition.",
+        "A reserved DCF item, DB row, queued callback or service notification does not prove complete capture, successful close, persistence or remote delivery.",
+        "Only selected bodies were semantically inspected. No complete cancellation rollback, service startup, IPC protocol or media DB runtime snapshot is established.",
+        "Semantic review is limited to the listed claims/anchors; 68 selected bodies are not 68 independently peer-reviewed functions.",
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved.",
+        "No successful capture, durable medium write, runtime database row or service startup is inferred."
+      ],
+      "unresolved_questions": [
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/MEDIA_DATABASE_REVIEW_RUN013.md"
+    },
+    {
+      "id": "MEDIA011-M08",
+      "source_sha256": "a626848eb85966888ebc9b54c42197b07c3fd78b276328603b7cf0e0bf67b1ce",
+      "original_path": "/usr/lib/libcapi-content-media-content.so.0.2.108",
+      "original_elf_va": "0x1c09c",
+      "evidence": "analysis/evidence/media-database-run011.json",
+      "evidence_sha256": "8b992b69afe7953d2a3eee11f7640b3d0eaeaf0b8ec31b596494eebdcea7e825",
+      "method": "Source-bound selected C, original PT_LOAD instruction rows, data/ELF relocations and primary-agent independent byte/artifact audit",
+      "claim": "Folder scan completion and DB-update subscription use separate callbacks/records",
+      "anchors": [
+        {
+          "source_path": "/usr/lib/libcapi-content-media-content.so.0.2.108",
+          "source_sha256": "a626848eb85966888ebc9b54c42197b07c3fd78b276328603b7cf0e0bf67b1ce",
+          "original_elf_va": "0x1c09c",
+          "generation": "g1",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libcapi-content-media-content.so.0.2.108",
+          "source_sha256": "a626848eb85966888ebc9b54c42197b07c3fd78b276328603b7cf0e0bf67b1ce",
+          "original_elf_va": "0x183c8",
+          "generation": "g1",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libcapi-content-media-content.so.0.2.108",
+          "source_sha256": "a626848eb85966888ebc9b54c42197b07c3fd78b276328603b7cf0e0bf67b1ce",
+          "original_elf_va": "0x1c230",
+          "generation": "g3",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/lib/libcapi-content-media-content.so.0.2.108",
+          "source_sha256": "a626848eb85966888ebc9b54c42197b07c3fd78b276328603b7cf0e0bf67b1ce",
+          "original_elf_va": "0x18384",
+          "generation": "g3",
+          "completed": true
+        }
+      ],
+      "limitations": [
+        "Static only: no target execution, camera access, filesystem writes to extracted sources, DB SQL execution or firmware modification.",
+        "Source C signatures are inferred; original instruction/register and relocation evidence governs bounded ABI claims.",
+        "Direct call exports omit unresolved indirect/virtual calls. Vtable rows prove intended ELF binding, not runtime object identity or interposition.",
+        "A reserved DCF item, DB row, queued callback or service notification does not prove complete capture, successful close, persistence or remote delivery.",
+        "Only selected bodies were semantically inspected. No complete cancellation rollback, service startup, IPC protocol or media DB runtime snapshot is established.",
+        "Semantic review is limited to the listed claims/anchors; 68 selected bodies are not 68 independently peer-reviewed functions.",
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved.",
+        "No successful capture, durable medium write, runtime database row or service startup is inferred."
+      ],
+      "unresolved_questions": [
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/MEDIA_DATABASE_REVIEW_RUN013.md"
+    },
+    {
+      "id": "MEDIA011-M09",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+      "original_elf_va": "0x217cac",
+      "evidence": "analysis/evidence/media-database-run011.json",
+      "evidence_sha256": "8b992b69afe7953d2a3eee11f7640b3d0eaeaf0b8ec31b596494eebdcea7e825",
+      "method": "Source-bound selected C, original PT_LOAD instruction rows, data/ELF relocations and primary-agent independent byte/artifact audit",
+      "claim": "Selected app completion bodies have no direct DCF reservation rollback; descendants/global cancellation remain open",
+      "anchors": [
+        {
+          "source_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_elf_va": "0x217cac",
+          "generation": "g2",
+          "completed": true
+        },
+        {
+          "source_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_elf_va": "0x21b978",
+          "generation": "g2",
+          "completed": true
+        }
+      ],
+      "limitations": [
+        "Static only: no target execution, camera access, filesystem writes to extracted sources, DB SQL execution or firmware modification.",
+        "Source C signatures are inferred; original instruction/register and relocation evidence governs bounded ABI claims.",
+        "Direct call exports omit unresolved indirect/virtual calls. Vtable rows prove intended ELF binding, not runtime object identity or interposition.",
+        "A reserved DCF item, DB row, queued callback or service notification does not prove complete capture, successful close, persistence or remote delivery.",
+        "Only selected bodies were semantically inspected. No complete cancellation rollback, service startup, IPC protocol or media DB runtime snapshot is established.",
+        "Semantic review is limited to the listed claims/anchors; 68 selected bodies are not 68 independently peer-reviewed functions.",
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved.",
+        "No successful capture, durable medium write, runtime database row or service startup is inferred."
+      ],
+      "unresolved_questions": [
+        "Lower media-utils DB connection/write IPC, scanner daemon/plugin request dispatch, complete cancellation rollback and dynamic callback correlation remain unresolved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/MEDIA_DATABASE_REVIEW_RUN013.md"
+    }
+  ]
+}

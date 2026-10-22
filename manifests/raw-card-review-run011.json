@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "run": "RUN011",
+  "reviewed_raw_findings": [
+    {
+      "id": "CARD011-KERNEL-BINDING",
+      "source_sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+      "source": ".work/full/kernel-2.raw",
+      "kernel_link_va": "0xc0301b48",
+      "decoded_offset": 3119944,
+      "evidence": "analysis/evidence/kernel-card-events-run011.json",
+      "evidence_sha256": "ed9b3e2241aee7c14af03be967d376f0ff7f3dfd3f3a0547e39780fe20f24157",
+      "method": "Original kernel ARM and symbol/data bindings; primary-agent raw byte/decoder audit",
+      "claim": "Kernel2 board/platform/driver/ops data bind dw_mmc_sdcard.0 and event generator for this host configuration.",
+      "limitations": [
+        "Actual active kernel and successful registration/delivery are unobserved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/KERNEL_CARD_EVENTS_REVIEW_RUN013.md"
+    },
+    {
+      "id": "CARD011-KERNEL-PAYLOAD",
+      "source_sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+      "source": ".work/full/kernel-2.raw",
+      "kernel_link_va": "0xc0301d08",
+      "decoded_offset": 3120392,
+      "evidence": "analysis/evidence/kernel-card-events-run011.json",
+      "evidence_sha256": "ed9b3e2241aee7c14af03be967d376f0ff7f3dfd3f3a0547e39780fe20f24157",
+      "method": "Original kernel ARM and symbol/data bindings; primary-agent raw byte/decoder audit",
+      "claim": "Four vendor EVENT strings all use platform ACTION=remove, including sdcard_insert; original action table and uevent formatting bind the exact payload.",
+      "limitations": [
+        "This is not block-device removal and contains no file/capture identity; helper success is unchecked."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/KERNEL_CARD_EVENTS_REVIEW_RUN013.md"
+    },
+    {
+      "id": "CARD011-KERNEL-ADMISSION",
+      "source_sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+      "source": ".work/full/kernel-2.raw",
+      "kernel_link_va": "0xc02fc910",
+      "decoded_offset": 3098896,
+      "evidence": "analysis/evidence/kernel-card-events-run011.json",
+      "evidence_sha256": "ed9b3e2241aee7c14af03be967d376f0ff7f3dfd3f3a0547e39780fe20f24157",
+      "method": "Original kernel ARM and symbol/data bindings; primary-agent raw byte/decoder audit",
+      "claim": "Shared local error state suppresses init/data errors at0/2; queued worker scans selected event bits in fixed local order.",
+      "limitations": [
+        "No global event ordering, delivered udev order, per-file error result or checked emission is established."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/KERNEL_CARD_EVENTS_REVIEW_RUN013.md"
+    },
+    {
+      "id": "CARD011-KERNEL-ERROR-PRODUCERS",
+      "source_sha256": "25bdca5cde4a5c10710d02dbaa904c62cd77b0b4562b8bf4d73c675f50bdb587",
+      "source": ".work/full/kernel-2.raw",
+      "kernel_link_va": "0xc02ebf48",
+      "decoded_offset": 3030856,
+      "evidence": "analysis/evidence/kernel-card-events-run011.json",
+      "evidence_sha256": "ed9b3e2241aee7c14af03be967d376f0ff7f3dfd3f3a0547e39780fe20f24157",
+      "method": "Original kernel ARM and symbol/data bindings; primary-agent raw byte/decoder audit",
+      "claim": "Bound generic MMC rescan and block error paths invoke the configured error callback with selectors0/1; retry/reset paths are separate from userspace retry timers.",
+      "limitations": [
+        "The inspected local guards do not prove a universal retry budget or successful card recovery."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/KERNEL_CARD_EVENTS_REVIEW_RUN013.md"
+    }
+  ]
+}

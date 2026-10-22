@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "static_only": true,
+  "verifier_sha256": "c1375573e0d9df8a98a3fc279a0101836acfd9bc20494c49f111d99e4543a1c6",
+  "checked_evidence": [
+    {
+      "path": "analysis/evidence/media-database-run011.json",
+      "sha256": "8b992b69afe7953d2a3eee11f7640b3d0eaeaf0b8ec31b596494eebdcea7e825",
+      "code_windows": 0,
+      "data_blocks": 0,
+      "strings": 103,
+      "selected_functions": 68,
+      "instruction_records": 11409,
+      "relocations": 183,
+      "configurations": 3,
+      "exports": 8
+    },
+    {
+      "path": "analysis/evidence/kernel-card-events-run011.json",
+      "sha256": "ed9b3e2241aee7c14af03be967d376f0ff7f3dfd3f3a0547e39780fe20f24157",
+      "code_windows": 26,
+      "data_blocks": 18,
+      "strings": 26
+    }
+  ],
+  "independent_semantic_review_completed": false,
+  "limitations": [
+    "Primary-agent original-byte and artifact consistency checks, not independent semantic review.",
+    "No camera observations, active-boot proof, sensor calibration or runtime policy validation."
+  ]
+}

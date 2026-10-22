@@ -18,7 +18,8 @@
       "unresolved_questions": [
         "This is a selected registration site, not proof it runs at every boot or completes initialization."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
     },
     {
       "id": "AF010-LISTENER",
@@ -36,7 +37,8 @@
       "unresolved_questions": [
         "Concurrent callback lifetime and actual shutdown sequencing remain unobserved."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
     },
     {
       "id": "AF010-TRANSPORT",
@@ -54,7 +56,8 @@
       "unresolved_questions": [
         "Frame packing, inferred types, queue lifetime, errors and delivery completion require further review."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
     },
     {
       "id": "AF010-DISPATCH",
@@ -72,7 +75,8 @@
       "unresolved_questions": [
         "Conditional on successful subscriptions and unchanged constructed objects; runtime source of received frames is not observed."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
     },
     {
       "id": "AF010-LENS-EVENT",
@@ -90,7 +94,8 @@
       "unresolved_questions": [
         "Full event-ID/status meanings, message backing-buffer bounds and hardware completion are unresolved."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
     },
     {
       "id": "AF010-AF-SCAN",
@@ -108,7 +113,8 @@
       "unresolved_questions": [
         "The stored count/length1 versus12-byte copy relationship is unresolved; no one-byte allocation or memory-safety flaw is asserted."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
     },
     {
       "id": "AF010-UI-QUEUE",
@@ -126,7 +132,8 @@
       "unresolved_questions": [
         "Accepted callback is not a proven displayed transition; downstream helper0x221d64 remains unreviewed."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
     },
     {
       "id": "AF010-COMMAND",
@@ -144,7 +151,8 @@
       "unresolved_questions": [
         "Payload types and hardware meanings remain bounded to code expressions; no focus or motor behavior observed."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
     },
     {
       "id": "AF010-PREFERENCES",
@@ -162,7 +170,8 @@
       "unresolved_questions": [
         "Writers, coherence, freshness and RTOS preference layout remain unresolved; another capture wrapper reads0x40 bytes from0x20."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/AF_LENS_REVIEW_RUN012.md"
     }
   ]
 }
