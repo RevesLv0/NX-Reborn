@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "run": "RUN009",
+  "analysis_commit": "56d165b87c79462492b8aabaec201372954b6abb",
+  "archive": {
+    "file_id": "1XY67nrOZ1BWAhTq_l-IQ4G7TQBrK6CK3",
+    "parent_id": "10xY2YyYAyarseUKK24i-rwA0ZMiTrm6G",
+    "name": "NX500_RUN009_RESEARCH_EXPORTS_FACTORY_SNAPSHOT_20261022.zip",
+    "bytes": 18813304,
+    "sha256": "16116d69f3212b50de602a4c130968b7f034c1acf785f6c61ac4e286f1a35617",
+    "authenticated_full_download_sha256_matched": true,
+    "zip_crc_passed": true
+  },
+  "guide": {
+    "file_id": "1IIRiXW5x6s2Zb0H0NK1C_lXz8XnyeFab",
+    "parent_id": "198u4DDTmX2RL8UBj1cqIRqoEzGbPrxAl",
+    "path": "docs/DRIVE_RUN009_20261022.md",
+    "sha256": "d650e9ac874007e3f5af42702edafa6e64cede5380e135e59c24bf58a6878afd",
+    "full_text_readback_matched": true,
+    "parent_readback_matched": true
+  },
+  "ci": {
+    "run_id": 39700667262,
+    "conclusion": "success"
+  },
+  "limitations": [
+    "Archive captures analysis commit; guide/publication metadata are recorded later.",
+    "No original firmware inputs are included; restore from linked prior archives."
+  ]
+}

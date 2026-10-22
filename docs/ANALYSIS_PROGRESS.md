@@ -7,17 +7,17 @@ The filesystem corpus contains **1,895 unique ELF contents across 1,956 paths**.
 | Stage | Unique ELF numerator / denominator | Content coverage |
 |---|---:|---:|
 | source verified | 1895 / 1895 | 100.0% |
-| imported with success receipt | 30 / 1895 | 1.583% |
+| imported with success receipt | 32 / 1895 | 1.689% |
 | loaded program export validated | 43 / 1895 | 2.269% |
-| auto analysis completed with success receipt | 30 / 1895 | 1.583% |
+| auto analysis completed with success receipt | 32 / 1895 | 1.689% |
 | selected decompilation completed | 34 / 1895 | 1.794% |
 | reviewed static findings | 23 / 1895 | 1.214% |
 
-Validated export generations: 541; rejected generations: 11. Deduplicated mapped nonexternal function entries: 47,799. Selected function attempts: 597; completed: 597. There is no whole-corpus function denominator. ABI-unverified mapped entries: 47,799.
+Validated export generations: 556; rejected generations: 11. Deduplicated mapped nonexternal function entries: 47,799. Selected function attempts: 639; completed: 639. There is no whole-corpus function denominator. ABI-unverified mapped entries: 47,799.
 
 Successful `-import` receipts count only when their input manifest SHA and firmware path agree with the source inventory. Restored `-process -noanalysis` exports establish a loaded program and valid export; they do not establish a newly measured import or completed auto-analysis. Artifact bytes, SHA-256, row counts, run IDs and receipt exit state are checked on every rebuild. Failed runs and stale exports remain visible as errors and do not count as coverage.
 
-13 exported contents lack a matching successful auto-analysis export generation in the scanned records. The restored run001 exports were generated with `-process -noanalysis` from previously documented analyzed programs. This conservative stage count does not mean those programs were never analyzed, and it does not erase earlier work; the matching current-generation evidence is simply an export receipt, not an auto-analysis receipt. Earlier narrative/log history is distinct from the validated-generation numerator.
+11 exported contents lack a matching successful auto-analysis export generation in the scanned records. The restored run001 exports were generated with `-process -noanalysis` from previously documented analyzed programs. This conservative stage count does not mean those programs were never analyzed, and it does not erase earlier work; the matching current-generation evidence is simply an export receipt, not an auto-analysis receipt. Earlier narrative/log history is distinct from the validated-generation numerator.
 
 Function counts deduplicate source SHA-256 plus original ELF virtual address. External/unmapped entries are reported per generation separately. Analyzer timeouts, decompiler failures/errors, budget omissions, signatures with unverified ABI, and explicit reviewed-unit unresolved questions remain in the JSON ledger. Repeated failures are attempt history, not additional analyzed functions.
 
@@ -28,7 +28,7 @@ Reproduce from the repository root:
 ```sh
 python tools/firmware/analysis_progress.py \
   --inventory .work/full/inventory/full_filesystem_inventory.json \
-  --run-root .work/restored-run001 --run-root .work/run002 --run-root .work/run003 --run-root .work/run004 --run-root .work/run005 --run-root .work/run006 --run-root .work/run007 --run-root .work/run008 --run-root .work/run009 \
+  --run-root .work/restored-run001 --run-root .work/run002 --run-root .work/run003 --run-root .work/run004 --run-root .work/run005 --run-root .work/run006 --run-root .work/run007 --run-root .work/run008 --run-root .work/run009 --run-root .work/run010/af --run-root .work/run010/transfer --run-root .work/run010/transfer-budget-attempts \
   --review-ledger manifests/ghidra-capture-run003.json \
   --review-ledger manifests/ghidra-video-power-run003.json \
   --review-ledger manifests/ghidra-transfer-run003.json \
@@ -42,12 +42,15 @@ python tools/firmware/analysis_progress.py \
   --review-ledger manifests/review-run007.json \
   --review-ledger manifests/review-run008.json \
   --review-ledger manifests/review-run009.json \
+  --review-ledger manifests/review-af-run010.json \
+  --review-ledger manifests/review-transfer-run010.json \
+  --review-ledger manifests/review-tsu-run010.json \
   --output manifests/analysis-progress.json --markdown docs/ANALYSIS_PROGRESS.md
 ```
 
 Review counts are unmeasured unless explicit `--review-ledger` inputs are provided. Review inputs accept a list or a manifest containing `reviewed_findings`. Each reviewed unit must record a stable ID, inventory source SHA, original ELF VA or file offset, existing evidence path, method, limitations and unresolved questions. Prose reports and generated pseudocode are never silently classified as reviewed findings.
 
-Registered reviewed static units: 81. Review content coverage counts primary source SHA associations only; extra source anchors stay attached to each unit. It does not measure the fraction of semantics understood.
+Registered reviewed static units: 95. Review content coverage counts primary source SHA associations only; extra source anchors stay attached to each unit. It does not measure the fraction of semantics understood.
 
 Inventory SHA-256: `c874bc1a39049f8f6afb508aa34e9fb0b4aacd1480e7603afade30a4613d461f`. All source SHA, original paths, export artifact hashes, receipt locations and per-SHA work units are preserved in [the ledger](../manifests/analysis-progress.json).
 

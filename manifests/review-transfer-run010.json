@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "run": "RUN010",
+  "reviewed_findings": [
+    {
+      "id": "TRANSFER010-SUBCODE",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_path": "/usr/lib/libdi-network-dlna-api.so",
+      "original_elf_va": "0x4a9ec",
+      "file_offset": 305644,
+      "evidence": "analysis/evidence/transfer-state-run010.json",
+      "evidence_sha256": "ae4c0286e28001f255ec659ed6376c4ec5f7817bf298cb939d28214a6885281e",
+      "method": "Sub-agent selected C; original PT_LOAD-mapped ARM windows and mode queries; original literals, vtables and ELF relocation checks.",
+      "claim": "Response parser writes Sub-ErrorCode via sscanf into response +0x10, the worker handler +0x28; initial non-100 status containing 500 selects decimal subcodes 2502 and 2503.",
+      "limitations": [
+        "Malformed headers, unchecked sscanf conversion, socket-read semantics and actual receiver responses remain unobserved.",
+        "Bounded static interpretation; no target execution or independent semantic review."
+      ],
+      "unresolved_questions": [
+        "Malformed headers, unchecked sscanf conversion, socket-read semantics and actual receiver responses remain unobserved."
+      ],
+      "independent_review_completed": false
+    },
+    {
+      "id": "TRANSFER010-OUTCOME",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "original_path": "/usr/lib/libdi-network-dlna-api.so",
+      "original_elf_va": "0x4b848",
+      "file_offset": 309320,
+      "evidence": "analysis/evidence/transfer-state-run010.json",
+      "evidence_sha256": "ae4c0286e28001f255ec659ed6376c4ec5f7817bf298cb939d28214a6885281e",
+      "method": "Sub-agent selected C; original PT_LOAD-mapped ARM windows and mode queries; original literals, vtables and ELF relocation checks.",
+      "claim": "Worker outcomes two/three/four/default dispatch notifier events three/four/six/five, mapping to API UI events 0x49/0x4d/0x4c/0x4b; diagnostics associate subcodes2502/2503 with storage-space/unsupported-file errors.",
+      "limitations": [
+        "Worker-local outcomes are distinct from APP client states; remote persistence, successful join and camera quiescence are not established.",
+        "Bounded static interpretation; no target execution or independent semantic review."
+      ],
+      "unresolved_questions": [
+        "Worker-local outcomes are distinct from APP client states; remote persistence, successful join and camera quiescence are not established."
+      ],
+      "independent_review_completed": false
+    },
+    {
+      "id": "TRANSFER010-APP-SINGLETON",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "original_path": "/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app",
+      "original_elf_va": "0x4ca8c",
+      "file_offset": 281228,
+      "evidence": "analysis/evidence/transfer-state-run010.json",
+      "evidence_sha256": "ae4c0286e28001f255ec659ed6376c4ec5f7817bf298cb939d28214a6885281e",
+      "method": "Sub-agent selected C; original PT_LOAD-mapped ARM windows and mode queries; original literals, vtables and ELF relocation checks.",
+      "claim": "APP singleton constructor installs address point0x105170; its original vtable slot+0xc is dispatch0x4cd30, concretely binding the UI idle callback application dispatch.",
+      "limitations": [
+        "Active state at delivery, alternate observers and concrete APP +0xac terminal-state writers remain unresolved.",
+        "Bounded static interpretation; no target execution or independent semantic review."
+      ],
+      "unresolved_questions": [
+        "Active state at delivery, alternate observers and concrete APP +0xac terminal-state writers remain unresolved."
+      ],
+      "independent_review_completed": false
+    }
+  ]
+}

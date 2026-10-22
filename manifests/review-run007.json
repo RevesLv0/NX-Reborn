@@ -18,7 +18,8 @@
       "unresolved_questions": [
         "Kernel emission and monitor installation timing remain unobserved."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/CARD_EVENTS_REVIEW_RUN011.md"
     },
     {
       "id": "CARD007-REGISTRY",
@@ -36,7 +37,8 @@
       "unresolved_questions": [
         "Callback registration success, event timing and invocation on a camera remain unobserved."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/CARD_EVENTS_REVIEW_RUN011.md"
     },
     {
       "id": "CARD007-STATE",
@@ -54,7 +56,8 @@
       "unresolved_questions": [
         "No per-buffer fwrite correlation; multiple vconf keys are not treated as an atomic update."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/CARD_EVENTS_REVIEW_RUN011.md"
     },
     {
       "id": "CARD007-LOAD",
@@ -72,7 +75,8 @@
       "unresolved_questions": [
         "Loader interposition and active runtime initialization remain unobserved."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/CARD_EVENTS_REVIEW_RUN011.md"
     },
     {
       "id": "CARD007-DISPATCH",
@@ -90,7 +94,8 @@
       "unresolved_questions": [
         "These two targets lack Ghidra recovered functions and completed C; original byte/table review is separate."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/CARD_EVENTS_REVIEW_RUN011.md"
     },
     {
       "id": "CARD007-READ",
@@ -108,7 +113,8 @@
       "unresolved_questions": [
         "Node existence, parse-input validity and runtime hardware state remain unobserved."
       ],
-      "independent_review_completed": false
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/CARD_EVENTS_REVIEW_RUN011.md"
     }
   ],
   "independent_semantic_review_completed": false

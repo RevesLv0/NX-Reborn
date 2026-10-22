@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "run": "RUN010",
+  "reviewed_findings": [
+    {
+      "id": "TSU010-CONVERSION",
+      "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+      "original_path": "/usr/lib/libdi-sensor.so",
+      "original_elf_va": "0x4728",
+      "evidence": "analysis/evidence/kernel-tsu-run010.json",
+      "evidence_sha256": "9795a102c245fc0cd658ec7ba3bf0fb32de49137f621de055130f625f29c0c6f",
+      "method": "Original ARM CFG, PT_LOAD mapping, PLT/GOT relocation binding, arithmetic reconstruction and separate original-byte review",
+      "claim": "Original thermometer update applies documented signed nonzero average, sqrt(2676588-469*a)-1482 conversion and truncation, with a real NaN sqrt fallback; cleared second buffer gives DSP153 under bounded reads.",
+      "limitations": [
+        "CMOS physical Celsius calibration, negative-radicand result and actual ADC input domain remain unobserved."
+      ],
+      "unresolved_questions": [
+        "CMOS physical Celsius calibration, negative-radicand result and actual ADC input domain remain unobserved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/KERNEL_TSU_REVIEW_RUN010.md"
+    },
+    {
+      "id": "TSU010-FAILURE-PATHS",
+      "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+      "original_path": "/usr/lib/libdi-sensor.so",
+      "original_elf_va": "0x4790",
+      "evidence": "analysis/evidence/kernel-tsu-run010.json",
+      "evidence_sha256": "9795a102c245fc0cd658ec7ba3bf0fb32de49137f621de055130f625f29c0c6f",
+      "method": "Original ARM CFG, PT_LOAD mapping, PLT/GOT relocation binding, arithmetic reconstruction and separate original-byte review",
+      "claim": "Both negative TSU-open branches return through48e0 without local unlock; CPU-open failure also skips ISP close; read checks are sign-only and TSU parsing ignores read results.",
+      "limitations": [
+        "Conditional local omissions, not observed device stall/leak; dynamic binding and lock-acquisition outcomes remain unobserved."
+      ],
+      "unresolved_questions": [
+        "Conditional local omissions, not observed device stall/leak; dynamic binding and lock-acquisition outcomes remain unobserved."
+      ],
+      "independent_review_completed": true,
+      "independent_review_report": "analysis/architecture/KERNEL_TSU_REVIEW_RUN010.md"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "static_only": true,
+  "task": "Packaged Kernel2 TSU producers and CMOS conversion/failure paths",
+  "command": "PYTHONPATH=.work/python python tools/firmware/kernel_tsu_evidence.py",
+  "artifacts": [
+    {
+      "path": "tools/firmware/kernel_tsu_evidence.py",
+      "sha256": "93c303acd9cd044f934a0954d91c9b37136e151191b216cba068878dda17f6a4",
+      "size": 8654
+    },
+    {
+      "path": "analysis/evidence/kernel-tsu-run010.json",
+      "sha256": "9795a102c245fc0cd658ec7ba3bf0fb32de49137f621de055130f625f29c0c6f",
+      "size": 147926
+    },
+    {
+      "path": "analysis/architecture/KERNEL_TSU_RUN010.md",
+      "sha256": "fbf6b1ad0bcb5fb5962de5358b9e4a328acea11754c4107c9db0a3b985035819",
+      "size": 11558
+    }
+  ],
+  "limitations": [
+    "No active-kernel or device observations.",
+    "No firmware modification, target execution, Ghidra mutations, commit or push."
+  ]
+}

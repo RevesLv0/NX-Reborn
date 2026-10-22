@@ -32,9 +32,10 @@ for recovered functions. Manual getter/setter targets use descriptor pointer bit
 run receipts, selected C, original code windows, descriptor/jump-table/literal
 data and relocation records. The extraction tool independently maps original
 bytes and decodes contiguous recovered instruction addresses, splitting at gaps.
-Inline TBB entries and literal pools are kept as data. Review is by the primary
-agent; the separate independent reviewer remains unavailable after its actual
-quota failure. There is no runtime/device observation here.
+Inline TBB entries and literal pools are kept as data. The initial review was by the primary agent after an actual reviewer quota
+failure. A subsequent [independent review](CARD_EVENTS_REVIEW_RUN011.md) verifies
+the six bounded claims and narrows the local null-guard wording below. There is
+no runtime/device observation here.
 
 ```mermaid
 flowchart LR
@@ -74,8 +75,10 @@ The udev receive callback `0x260c0` supplies concrete keys and arguments:
 | Same platform filter, `EVENT=sdcard_init_error` | key 3, 2 |
 | Same platform filter, `EVENT=sdcard_data_error` | key 3, 3 |
 
-Missing monitor/device/property values and unmatched events do not take these
-branches. This proves how an accepted event is interpreted; the kernel producer,
+The received device, EVENT value, and block action/devnode have local checks;
+unmatched events do not take these branches. The inspected callback has no local
+null guards before monitor receive, subsystem strcmp or devpath fnmatch. See
+[the independent review](CARD_EVENTS_REVIEW_RUN011.md) for this qualification. This proves how an accepted event is interpreted; the kernel producer,
 monitor installation timing and actual emitted sequence remain separate work.
 
 Callback `0x23ba8` writes MMC state 0 for arguments 0 and 1. Argument 2 writes

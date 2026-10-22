@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "static_only": true,
+  "verifier_sha256": "1419ef41af0682f1d257cd8afa77a6646b0ee62886da9df23a7ef1b59420792e",
+  "checked_evidence": [
+    {
+      "path": "analysis/evidence/kernel-tsu-run010.json",
+      "sha256": "9795a102c245fc0cd658ec7ba3bf0fb32de49137f621de055130f625f29c0c6f",
+      "code_windows": 9,
+      "data_blocks": 5,
+      "strings": 12,
+      "plt_bindings": 11
+    }
+  ],
+  "independent_semantic_review_completed": false,
+  "limitations": [
+    "Primary-agent original-byte and artifact consistency checks, not independent semantic review.",
+    "No camera observations, active-boot proof, sensor calibration or runtime policy validation."
+  ]
+}

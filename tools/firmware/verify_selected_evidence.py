@@ -17,7 +17,7 @@ def decode(row,va,raw):
     decoder=Cs(CS_ARCH_ARM,CS_MODE_THUMB if row.get('mode')=='Thumb' else CS_MODE_ARM)
     actual=list(decoder.disasm(raw,va));assert sum(i.size for i in actual)==len(raw)
     assert [(hex(i.address),i.bytes.hex(),i.mnemonic,i.op_str) for i in actual]==[
-        (r.get('va',r.get('original_elf_va')),r['bytes'],r['mnemonic'],r['operands']) for r in row['instructions']]
+        (r.get('va',r.get('original_elf_va')),r.get('bytes',r.get('raw_hex')),r['mnemonic'],r['operands']) for r in row['instructions']]
 
 
 def main():
@@ -63,6 +63,38 @@ def main():
                             actual.add((hex(rel['r_offset']),rel['r_info_type'],sym.name,hex(sym['st_value'])))
                     for row in recorded:
                         assert (row['original_elf_va'],row['type'],row['symbol'],row['symbol_value']) in actual
+        elif isinstance(d.get('sources'),dict) and 'kernel_link_base' in d and 'code_regions' in d:
+            sources=d['sources'];blobs={}
+            for name,source in sources.items():
+                assert sha(source['path'])==source['sha256']
+                blobs[name]=Path(source['path']).read_bytes()
+                assert len(blobs[name])==source['size']
+            for field,count_name in [('code_regions','code_windows'),('data_blocks','data_blocks'),('strings','strings'),('plt_bindings','plt_bindings')]:
+                for row in d.get(field,[]):
+                    blob=blobs[row['source']];va=int(row['va'],16);raw=bytes.fromhex(row['raw_hex'])
+                    if blob[:4]==b'\x7fELF':
+                        with Path(sources[row['source']]['path']).open('rb') as stream:
+                            elf=ELFFile(stream)
+                            seg=next(s for s in elf.iter_segments() if s['p_type']=='PT_LOAD' and s['p_vaddr']<=va and va+len(raw)<=s['p_vaddr']+s['p_filesz'])
+                            offset=seg['p_offset']+va-seg['p_vaddr']
+                    else:
+                        offset=va-int(d['kernel_link_base'],16)
+                    assert offset==row['file_offset'] and offset>=0
+                    assert blob[offset:offset+len(raw)]==raw and hashlib.sha256(raw).hexdigest()==row['sha256']
+                    if 'instructions' in row:decode(row,va,raw)
+                    if field=='strings':assert raw==row['value'].encode('ascii')+b'\0'
+                    if field=='plt_bindings':
+                        rel_offset=row['relocation_file_offset'];rel_raw=bytes.fromhex(row['relocation_raw_hex'])
+                        assert blob[rel_offset:rel_offset+len(rel_raw)]==rel_raw
+                        with Path(sources[row['source']]['path']).open('rb') as stream:
+                            elf=ELFFile(stream);section=elf.get_section_by_name('.rel.plt')
+                            index=(rel_offset-section['sh_offset'])//section['sh_entsize']
+                            assert section['sh_offset']+index*section['sh_entsize']==rel_offset
+                            relocation=section.get_relocation(index)
+                            symbol=elf.get_section(section['sh_link']).get_symbol(relocation['r_info_sym'])
+                            assert relocation['r_info_type']==row['relocation_type'] and hex(relocation['r_offset'])==row['got_va']
+                            assert symbol.name==row['symbol'] and hex(symbol['st_value'])==row['symbol_defined_va']
+                    counts[count_name]=counts.get(count_name,0)+1
         elif 'code_regions' in d and 'decoded_base' in d:
             source=Path(d['source']);assert sha(source)==d['source_sha256'];blob=source.read_bytes();base=int(d['decoded_base'],16)
             for field,count_name in [('code_regions','code_windows'),('data_blocks','data_blocks'),('strings','strings')]:

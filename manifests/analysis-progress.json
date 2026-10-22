@@ -30,9 +30,9 @@
       "percent_unique_elf_contents": 100.0
     },
     "imported_with_success_receipt": {
-      "numerator_unique_elf_contents": 30,
+      "numerator_unique_elf_contents": 32,
       "denominator_unique_elf_contents": 1895,
-      "percent_unique_elf_contents": 1.583113
+      "percent_unique_elf_contents": 1.688654
     },
     "loaded_program_export_validated": {
       "numerator_unique_elf_contents": 43,
@@ -40,9 +40,9 @@
       "percent_unique_elf_contents": 2.269129
     },
     "auto_analysis_completed_with_success_receipt": {
-      "numerator_unique_elf_contents": 30,
+      "numerator_unique_elf_contents": 32,
       "denominator_unique_elf_contents": 1895,
-      "percent_unique_elf_contents": 1.583113
+      "percent_unique_elf_contents": 1.688654
     },
     "selected_decompilation_completed": {
       "numerator_unique_elf_contents": 34,
@@ -56,18 +56,18 @@
     }
   },
   "totals": {
-    "run_receipts_completed": 81,
+    "run_receipts_completed": 90,
     "run_receipts_failed": 2,
     "run_receipts_incomplete": 1,
-    "valid_export_generations": 541,
+    "valid_export_generations": 556,
     "duplicate_export_generations_excluded": 0,
     "invalid_export_generations": 11,
-    "exported_without_matching_auto_analysis_generation": 13,
+    "exported_without_matching_auto_analysis_generation": 11,
     "unique_exported_functions": 47799,
-    "unique_selected_decompile_attempted": 597,
-    "unique_selected_decompile_completed": 597,
+    "unique_selected_decompile_attempted": 639,
+    "unique_selected_decompile_completed": 639,
     "unique_abi_unverified_functions": 47799,
-    "reviewed_static_units": 81
+    "reviewed_static_units": 95
   },
   "run_roots": [
     ".work/restored-run001",
@@ -78,7 +78,10 @@
     ".work/run006",
     ".work/run007",
     ".work/run008",
-    ".work/run009"
+    ".work/run009",
+    ".work/run010/af",
+    ".work/run010/transfer",
+    ".work/run010/transfer-budget-attempts"
   ],
   "run_receipts": [
     {
@@ -3463,6 +3466,374 @@
       "finished_unix": 1792628646.786857,
       "receipt_path": ".work/run009/sensor/callback/logs/NX500_RUN003_CAPTURE-9dddd3dc-48ed-40ae-8194-ed25506056e8.json",
       "receipt_sha256": "dd9b63f7fafa005ec93ff1081d5f572d5a5332df05baaeceb0e0c953f8f4a978"
+    },
+    {
+      "run_id": "38c8d77b-1065-4c21-97d3-afe41022529f",
+      "started_unix": 1792628977.3899732,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_RUN010_AF",
+        "-import",
+        "/workspace/NX-Reborn/.work/run010/af/core/inputs",
+        "-analysisTimeoutPerFile",
+        "600",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run010/af/core/initial/outputs/ghidra",
+        "^(ControlLens|Control3A|.*RegisterLensEventListener.*|.*UnregisterLensEventListener.*|.*NotifyLensEvent.*|.*execLensNotify.*|.*CNotifyHandler3Run.*|.*onAFScanDone.*|.*onInitializedFocus.*|.*onLensModeChangeDone.*|.*onLensEvent.*|.*CMCBAdapter4Send.*|.*CMCBAdapter11SendCommand.*|.*CMulticoreBridge4Send.*|.*CMulticoreBridge8Register.*|mcb_register_handler|mcb_send|.*User_Spec_Get_Rtos_Pref_Lens_Info.*|User_Spec_Get_Lens_Property|User_Spec_Get_Lens_Info|.*UI_Mm_Camera_Set_Lens_Callback_Init.*|.*UI_Mm_Camera_Set_Lens_Init.*|.*UI_Set_Lens_Callback_Fn.*|.*UI_Mm_Camera_Set_.*Af.*|.*UI_Mm_Camera_Set_.*AF.*|.*UI_Mm_Camera_Lens_.*)$",
+        "80",
+        "38c8d77b-1065-4c21-97d3-afe41022529f",
+        "45",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run010/af/core/initial/logs/NX500_RUN010_AF.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run010/af/core/initial/logs/NX500_RUN010_AF-script.log",
+        "-recursive"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 45,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792629219.507904,
+      "receipt_path": ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json",
+      "receipt_sha256": "d5dff2d16013191be579e874337e73f2c2096f8693a659ae7a12d43683bc6076"
+    },
+    {
+      "run_id": "8483d9a6-ed90-4656-b602-b9ee47016602",
+      "started_unix": 1792629417.241902,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_RUN010_AF",
+        "-process",
+        "libcapture-fw-prod.so",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run010/af/core/refine-libcapture-fw-prod.so/outputs/ghidra",
+        "^FUN_00040b30$|^FUN_0005d3a0$|^CCategoryHandleHolder::(CCategoryHandleHolder|Run|toTableID)$|^CMCBAdapter::subscribe$|^CNotifyHandler::CNotifyHandler$",
+        "20",
+        "8483d9a6-ed90-4656-b602-b9ee47016602",
+        "45",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run010/af/core/refine-libcapture-fw-prod.so/logs/NX500_RUN010_AF.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run010/af/core/refine-libcapture-fw-prod.so/logs/NX500_RUN010_AF-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 45,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792629426.0995612,
+      "receipt_path": ".work/run010/af/core/refine-libcapture-fw-prod.so/logs/NX500_RUN010_AF-8483d9a6-ed90-4656-b602-b9ee47016602.json",
+      "receipt_sha256": "78eb5b4dc816f4ffa7c78ef5f3182b6ae496981782dd3528ae5483c75e17ebd7"
+    },
+    {
+      "run_id": "f759180e-4650-4700-a833-303e67e0306d",
+      "started_unix": 1792629426.133622,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_RUN010_AF",
+        "-process",
+        "libmulticore-bridge.so",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run010/af/core/refine-libmulticore-bridge.so/outputs/ghidra",
+        "^CMulticoreBridge::send$|^CFrame::(Build|Handle)$",
+        "20",
+        "f759180e-4650-4700-a833-303e67e0306d",
+        "45",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run010/af/core/refine-libmulticore-bridge.so/logs/NX500_RUN010_AF.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run010/af/core/refine-libmulticore-bridge.so/logs/NX500_RUN010_AF-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 45,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792629433.008775,
+      "receipt_path": ".work/run010/af/core/refine-libmulticore-bridge.so/logs/NX500_RUN010_AF-f759180e-4650-4700-a833-303e67e0306d.json",
+      "receipt_sha256": "8fa448dcb419473a2c106d8ad1dd390ebe23470111e4ccbc2260d340fe53afd3"
+    },
+    {
+      "run_id": "a06f82af-d73a-4ca0-80ed-eeadda7f2851",
+      "started_unix": 1792629245.7811103,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_RUN010_AF",
+        "-process",
+        "*",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run010/af/core/routing/outputs/ghidra",
+        "^mm_camera_ioctl$|^CMCBAdapter::(Send|SendCommand|SyncSendCommand|OnReceiveEvent|OnReceived|Initialize|subscribeToMCB)$|^CNotifyHandler::(Run|notifyCategory|subCategory|execLiveviewNotify)$|^CAttributeHandler::getAFScanResult$|^CCommonProperty::(SetFocusScanResult|SetAFResult|GetAFResult)$|^CMulticoreBridge::(Send|Register)$|^CSender::(createFrame|Send)$|^CReceiver::(receive|Subscribe)$|^UI_Mm_Camera_(Set_Ioctl_3A_Caf|Af_Lock|Remove_Lens_Callback)$|^FUN_001e2818$|^FUN_00223db0$",
+        "65",
+        "a06f82af-d73a-4ca0-80ed-eeadda7f2851",
+        "45",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run010/af/core/routing/logs/NX500_RUN010_AF.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run010/af/core/routing/logs/NX500_RUN010_AF-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 45,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792629286.979517,
+      "receipt_path": ".work/run010/af/core/routing/logs/NX500_RUN010_AF-a06f82af-d73a-4ca0-80ed-eeadda7f2851.json",
+      "receipt_sha256": "4515a05a62afdd4ef723117af7257973e13191da156b90822efcc68da8f8621a"
+    },
+    {
+      "run_id": "3c5bfd63-e7d6-4df7-bf23-ad710c62038a",
+      "started_unix": 1792629073.0763648,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_FULL_RUN002",
+        "-process",
+        "libdi-network-dlna-api.so",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/api/outputs/ghidra",
+        "^(SPHTTPClientHandler::(entry|readResponse|sendData)|SP_HTTP_Response::parse|SPClientManager::(notifyServiceStatus|SPClientManager|setCallback)|SNPushClientNotificationCallback|SNPushStart|SelectivePushSendEventToUI)$",
+        "12",
+        "3c5bfd63-e7d6-4df7-bf23-ad710c62038a",
+        "45",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/api/logs/NX500_FULL_RUN002.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/api/logs/NX500_FULL_RUN002-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 45,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792629089.2834654,
+      "receipt_path": ".work/run010/transfer/network/api/logs/NX500_FULL_RUN002-3c5bfd63-e7d6-4df7-bf23-ad710c62038a.json",
+      "receipt_sha256": "24cdf71fa5539fbd9e061834d9740eef016acbe12e54d59cb3d2ec6d7b5fb072"
+    },
+    {
+      "run_id": "37371fbc-6ca4-402b-8afc-3a69d8f30b0b",
+      "started_unix": 1792629236.4140048,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_FULL_RUN002",
+        "-process",
+        "libdi-network-dlna-api.so",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/api-binding/outputs/ghidra",
+        "^(SPHTTPClientHandler::SPHTTPClientHandler|SPClientManager::createFileTransfer)$",
+        "8",
+        "37371fbc-6ca4-402b-8afc-3a69d8f30b0b",
+        "45",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/api-binding/logs/NX500_FULL_RUN002.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/api-binding/logs/NX500_FULL_RUN002-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 45,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792629252.6689785,
+      "receipt_path": ".work/run010/transfer/network/api-binding/logs/NX500_FULL_RUN002-37371fbc-6ca4-402b-8afc-3a69d8f30b0b.json",
+      "receipt_sha256": "33ccc304b4ee863a805f5ea9d8895cc83acb03a2f849f1826546ccbd259f3a15"
+    },
+    {
+      "run_id": "12372bef-9fd0-4f93-b984-6ae56c16fc50",
+      "started_unix": 1792629106.8941998,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_FULL_RUN002",
+        "-process",
+        "smart-wifi-app",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/app/outputs/ghidra",
+        "^(CSNetworkAPI::(convertEventID|convertStatus|responseToUI)|CAPPUIApplication::dispatch|CSAFStateMachine::dispatch|CAPPNetworkSmartphoneLinkState::(handle|nPushCheckSendComplete)|UI_Event_Send_Manager)$",
+        "12",
+        "12372bef-9fd0-4f93-b984-6ae56c16fc50",
+        "45",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/app/logs/NX500_FULL_RUN002.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/app/logs/NX500_FULL_RUN002-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 45,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792629126.2099385,
+      "receipt_path": ".work/run010/transfer/network/app/logs/NX500_FULL_RUN002-12372bef-9fd0-4f93-b984-6ae56c16fc50.json",
+      "receipt_sha256": "c849afd4f69b839c72e475e0e38a936f3b88962439a66d74151fd77e49370140"
+    },
+    {
+      "run_id": "2ed6b5db-1f74-4b82-8af3-e7c03739712f",
+      "started_unix": 1792629150.122174,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_FULL_RUN002",
+        "-process",
+        "smart-wifi-app",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/app-binding/outputs/ghidra",
+        "^(CSNetworkAPI::(ConvertNetworkToUiEventId|ConvertNetworkToUiEventStatus|handleSmartphoneLink)|CAPPUIApplication::(CAPPUIApplication|getInstance)|CSAFEvent::CSAFEvent)$",
+        "8",
+        "2ed6b5db-1f74-4b82-8af3-e7c03739712f",
+        "45",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/app-binding/logs/NX500_FULL_RUN002.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/app-binding/logs/NX500_FULL_RUN002-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 45,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792629165.4729,
+      "receipt_path": ".work/run010/transfer/network/app-binding/logs/NX500_FULL_RUN002-2ed6b5db-1f74-4b82-8af3-e7c03739712f.json",
+      "receipt_sha256": "0e2a84d57ab17ddebe5a6fecf8edbb517002c1960056287d120cb4f81e1eff46"
+    },
+    {
+      "run_id": "73567524-840c-40f8-9b86-b923896ec6a2",
+      "started_unix": 1792629196.2650108,
+      "command": [
+        "/workspace/NX-Reborn/.work/tools/ghidra_12.1.4_PUBLIC/support/analyzeHeadless",
+        "/workspace/NX-Reborn/ghidra-projects",
+        "NX500_FULL_RUN002",
+        "-process",
+        "libdi-network-dlna-api.so",
+        "-analysisTimeoutPerFile",
+        "300",
+        "-max-cpu",
+        "1",
+        "-scriptPath",
+        "/workspace/NX-Reborn/tools/ghidra",
+        "-postScript",
+        "ExportEvidence.java",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/api-binding/outputs/ghidra",
+        "^(SPHTTPClientHandler::SPHTTPClientHandler|SPClientManager::createFileTransfer)$",
+        "6",
+        "73567524-840c-40f8-9b86-b923896ec6a2",
+        "45",
+        "0",
+        "-log",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/api-binding/logs/NX500_FULL_RUN002.log",
+        "-scriptlog",
+        "/workspace/NX-Reborn/.work/run010/transfer/network/api-binding/logs/NX500_FULL_RUN002-script.log",
+        "-recursive",
+        "-noanalysis"
+      ],
+      "max_memory": "1024M",
+      "max_cpu": 1,
+      "decompile_timeout_seconds": 45,
+      "decompile_payload_mb_override": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073",
+      "completed": true,
+      "returncode": 0,
+      "finished_unix": 1792629213.5182445,
+      "receipt_path": ".work/run010/transfer-budget-attempts/api-binding/logs/NX500_FULL_RUN002-73567524-840c-40f8-9b86-b923896ec6a2.json",
+      "receipt_sha256": "319b9c1647b16cca1d9a9445c6ba1b6cfd860f060bf9b75ed7529b5cd9c2348c"
     }
   ],
   "export_generations": [
@@ -26704,6 +27075,636 @@
       "decompile_completed": 0,
       "decompile_omitted_by_budget": 0,
       "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/af/core/initial/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
+      "summary_sha256": "f2e9a957a32fbbed0a787f4f4086ee0219b3691d1060d38491f1de44d7afc15b",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "run_id": "38c8d77b-1065-4c21-97d3-afe41022529f",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 2283106,
+          "sha256": "bd8746b46263892a265f7a6cad0075ccd8c0ad182bd18c73917cd7ad2106c3e3"
+        },
+        "calls.jsonl": {
+          "bytes": 7526575,
+          "sha256": "4e5944a848d4760b71fd8a5737dbb06e21896633e8bbdcda319c6c2a20e44588"
+        },
+        "decompiled.jsonl": {
+          "bytes": 38983,
+          "sha256": "5411d909a056e7b77b0c907a2269ef55d37a724fc4545c7193c7dfb4a6007009"
+        },
+        "strings.jsonl": {
+          "bytes": 4565592,
+          "sha256": "320da26a087944f141be7a88a6f49984ae821eec0535243c9d470df3e22296d5"
+        }
+      },
+      "receipt_path": ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json",
+      "receipt_sha256": "d5dff2d16013191be579e874337e73f2c2096f8693a659ae7a12d43683bc6076",
+      "valid": true,
+      "program": "di-camera-app",
+      "input_manifest": ".work/run010/af/core/initial/input-manifest.json",
+      "input_manifest_sha256": "af81e8c822c5b4cd1d21f5057d310cc098aa8b75d51f664f4a9ac33a141c7e03",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": true,
+      "auto_analysis_enabled_this_run": true,
+      "function_records": 9258,
+      "mapped_nonexternal_functions": 9258,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 8,
+      "decompile_completed": 8,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/af/core/initial/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+      "summary_sha256": "637a93d3204aa687403215a2534f7a5e9255c8c0c775d40ead0879eed4780c1f",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "run_id": "38c8d77b-1065-4c21-97d3-afe41022529f",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 785112,
+          "sha256": "e0ad37c0a5cca5e1e4b26b1eacc31f040d28f86cc764747053db84d807e32ad9"
+        },
+        "calls.jsonl": {
+          "bytes": 829961,
+          "sha256": "a703d5363113143d50d8666bc39f25bfac5be00bb947032f37a6f85b8e3ec9c6"
+        },
+        "decompiled.jsonl": {
+          "bytes": 91143,
+          "sha256": "a4cfbc015a4004c5a5687b902841a1f9280446c4ea63144868d07932a289e0f4"
+        },
+        "strings.jsonl": {
+          "bytes": 582689,
+          "sha256": "1230f2c846bfe8c402c93724c31257592861d4b1a0626fe8bbe0256b9d731e3c"
+        }
+      },
+      "receipt_path": ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json",
+      "receipt_sha256": "d5dff2d16013191be579e874337e73f2c2096f8693a659ae7a12d43683bc6076",
+      "valid": true,
+      "program": "libcapture-fw-prod.so",
+      "input_manifest": ".work/run010/af/core/initial/input-manifest.json",
+      "input_manifest_sha256": "af81e8c822c5b4cd1d21f5057d310cc098aa8b75d51f664f4a9ac33a141c7e03",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": true,
+      "auto_analysis_enabled_this_run": true,
+      "function_records": 2679,
+      "mapped_nonexternal_functions": 2679,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 10,
+      "decompile_completed": 10,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/af/core/initial/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+      "summary_sha256": "fcc8cf2405311588b91d44c9f4daa0490f67292a61f80b8a3c26c2647c4d582c",
+      "source_sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+      "run_id": "38c8d77b-1065-4c21-97d3-afe41022529f",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 92036,
+          "sha256": "9a849c59a4b3118e9becc3bee8561c04b88e33d02f6309cd78edde3ebec08a69"
+        },
+        "calls.jsonl": {
+          "bytes": 67970,
+          "sha256": "90056b0c91a0de177f776f9abb75b28488399ec7382f9988a1f29f733c92a969"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 58023,
+          "sha256": "3237bf907cf3d3702d7ebc5cc5f91ef1c6d705e8df8feea0c09b444c52d3c562"
+        }
+      },
+      "receipt_path": ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json",
+      "receipt_sha256": "d5dff2d16013191be579e874337e73f2c2096f8693a659ae7a12d43683bc6076",
+      "valid": true,
+      "program": "libmulticore-bridge.so",
+      "input_manifest": ".work/run010/af/core/initial/input-manifest.json",
+      "input_manifest_sha256": "af81e8c822c5b4cd1d21f5057d310cc098aa8b75d51f664f4a9ac33a141c7e03",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": true,
+      "auto_analysis_enabled_this_run": true,
+      "function_records": 390,
+      "mapped_nonexternal_functions": 390,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/af/core/initial/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+      "summary_sha256": "767d405e736cbb87a309596c38ad52983193690e6f6275d6748804e8b7eca843",
+      "source_sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec",
+      "run_id": "38c8d77b-1065-4c21-97d3-afe41022529f",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 89459,
+          "sha256": "16bd64bc790abe2cc6cbf02f48d8d0a779901d68b2902a39f645482fd10022db"
+        },
+        "calls.jsonl": {
+          "bytes": 198290,
+          "sha256": "e155be0356b5f4ba93c3633eb0730bfbf1061078fd4f4ebbd839f6eabcdcfdb9"
+        },
+        "decompiled.jsonl": {
+          "bytes": 7241,
+          "sha256": "44a5bcb24a4ae3a920ceb54593e190ea456d787a2b91978eed730e0823625d79"
+        },
+        "strings.jsonl": {
+          "bytes": 161398,
+          "sha256": "ee6c628821ea9c805646fabe7eade8d19b0ed59a3e68d80b73765e08c9a38c4e"
+        }
+      },
+      "receipt_path": ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json",
+      "receipt_sha256": "d5dff2d16013191be579e874337e73f2c2096f8693a659ae7a12d43683bc6076",
+      "valid": true,
+      "program": "libuser-spec.so",
+      "input_manifest": ".work/run010/af/core/initial/input-manifest.json",
+      "input_manifest_sha256": "af81e8c822c5b4cd1d21f5057d310cc098aa8b75d51f664f4a9ac33a141c7e03",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": true,
+      "auto_analysis_enabled_this_run": true,
+      "function_records": 379,
+      "mapped_nonexternal_functions": 379,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 3,
+      "decompile_completed": 3,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/af/core/refine-libcapture-fw-prod.so/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+      "summary_sha256": "e6acb9abb4b21888ead894788fc0f0d872fd1cd914d64eb4e8abd59c6d35b33c",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "run_id": "8483d9a6-ed90-4656-b602-b9ee47016602",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 785112,
+          "sha256": "e0ad37c0a5cca5e1e4b26b1eacc31f040d28f86cc764747053db84d807e32ad9"
+        },
+        "calls.jsonl": {
+          "bytes": 829961,
+          "sha256": "6884f483cfc17e119b1030ebb30b370a358f432c0ca0ae2a20a8ac8959e349ae"
+        },
+        "decompiled.jsonl": {
+          "bytes": 85042,
+          "sha256": "24a56d1ccda181b8d3371d2b2b10ca32980cbebca7fc1c5dbf117bf2fd96eac3"
+        },
+        "strings.jsonl": {
+          "bytes": 582689,
+          "sha256": "1230f2c846bfe8c402c93724c31257592861d4b1a0626fe8bbe0256b9d731e3c"
+        }
+      },
+      "receipt_path": ".work/run010/af/core/refine-libcapture-fw-prod.so/logs/NX500_RUN010_AF-8483d9a6-ed90-4656-b602-b9ee47016602.json",
+      "receipt_sha256": "78eb5b4dc816f4ffa7c78ef5f3182b6ae496981782dd3528ae5483c75e17ebd7",
+      "valid": true,
+      "program": "libcapture-fw-prod.so",
+      "input_manifest": ".work/run010/af/core/refine-libcapture-fw-prod.so/input-manifest.json",
+      "input_manifest_sha256": "5005c29ccf557773b8bbf0c95f384004ed12f8a213b6ff5edf265826721c12fb",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 2679,
+      "mapped_nonexternal_functions": 2679,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 7,
+      "decompile_completed": 7,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/af/core/refine-libmulticore-bridge.so/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+      "summary_sha256": "2a16bd573f1828c6ae16b5b04afe973a7fe6ef5f311a95919834feeb646ee509",
+      "source_sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+      "run_id": "f759180e-4650-4700-a833-303e67e0306d",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 92036,
+          "sha256": "9a849c59a4b3118e9becc3bee8561c04b88e33d02f6309cd78edde3ebec08a69"
+        },
+        "calls.jsonl": {
+          "bytes": 67970,
+          "sha256": "a3ea3600ea680030adcdf0878dee2d4bfec3dfb1286ed517343f0c87ce47b3f5"
+        },
+        "decompiled.jsonl": {
+          "bytes": 3996,
+          "sha256": "e8e7c9912c490f292b916642164b65c1c3c8440b9a56298fcc9e86a17d0bd539"
+        },
+        "strings.jsonl": {
+          "bytes": 58023,
+          "sha256": "3237bf907cf3d3702d7ebc5cc5f91ef1c6d705e8df8feea0c09b444c52d3c562"
+        }
+      },
+      "receipt_path": ".work/run010/af/core/refine-libmulticore-bridge.so/logs/NX500_RUN010_AF-f759180e-4650-4700-a833-303e67e0306d.json",
+      "receipt_sha256": "8fa448dcb419473a2c106d8ad1dd390ebe23470111e4ccbc2260d340fe53afd3",
+      "valid": true,
+      "program": "libmulticore-bridge.so",
+      "input_manifest": ".work/run010/af/core/refine-libmulticore-bridge.so/input-manifest.json",
+      "input_manifest_sha256": "8f7e5a06c60a07d6109d53d97ab2e65b9327a8d92a504c3da6afcb82a6270691",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 390,
+      "mapped_nonexternal_functions": 390,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 3,
+      "decompile_completed": 3,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/af/core/routing/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
+      "summary_sha256": "1e67de1463aface483553483172d0419dd21d692e1fed7235371493e6687bb76",
+      "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+      "run_id": "a06f82af-d73a-4ca0-80ed-eeadda7f2851",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 2283106,
+          "sha256": "bd8746b46263892a265f7a6cad0075ccd8c0ad182bd18c73917cd7ad2106c3e3"
+        },
+        "calls.jsonl": {
+          "bytes": 7526575,
+          "sha256": "db5f31d2735e7981a55aeb23439bb9170143a8c27aa7446abc34a303f5d08eda"
+        },
+        "decompiled.jsonl": {
+          "bytes": 11758,
+          "sha256": "7e66c37172f54ac2679dc6247c1615788f5a7be7dbf0dd5b2f0ad401b9f36a4a"
+        },
+        "strings.jsonl": {
+          "bytes": 4565592,
+          "sha256": "320da26a087944f141be7a88a6f49984ae821eec0535243c9d470df3e22296d5"
+        }
+      },
+      "receipt_path": ".work/run010/af/core/routing/logs/NX500_RUN010_AF-a06f82af-d73a-4ca0-80ed-eeadda7f2851.json",
+      "receipt_sha256": "4515a05a62afdd4ef723117af7257973e13191da156b90822efcc68da8f8621a",
+      "valid": true,
+      "program": "di-camera-app",
+      "input_manifest": ".work/run010/af/core/routing/input-manifest.json",
+      "input_manifest_sha256": "af81e8c822c5b4cd1d21f5057d310cc098aa8b75d51f664f4a9ac33a141c7e03",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 9258,
+      "mapped_nonexternal_functions": 9258,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 5,
+      "decompile_completed": 5,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/af/core/routing/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+      "summary_sha256": "6be5eb4e528b227c65e2a253c2e61f10649a048c2f7cb3f2f00d8a89ad4e0b01",
+      "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+      "run_id": "a06f82af-d73a-4ca0-80ed-eeadda7f2851",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 785112,
+          "sha256": "e0ad37c0a5cca5e1e4b26b1eacc31f040d28f86cc764747053db84d807e32ad9"
+        },
+        "calls.jsonl": {
+          "bytes": 829961,
+          "sha256": "f121dcc11c56aba16e493c960f2a79e2605c4c31ee6b27d51cc4ecf0e84441ef"
+        },
+        "decompiled.jsonl": {
+          "bytes": 223749,
+          "sha256": "45e9d84f580bc4640d9ccede23d2dd834f0d28a2395016fd7800c52612e1cbf3"
+        },
+        "strings.jsonl": {
+          "bytes": 582689,
+          "sha256": "1230f2c846bfe8c402c93724c31257592861d4b1a0626fe8bbe0256b9d731e3c"
+        }
+      },
+      "receipt_path": ".work/run010/af/core/routing/logs/NX500_RUN010_AF-a06f82af-d73a-4ca0-80ed-eeadda7f2851.json",
+      "receipt_sha256": "4515a05a62afdd4ef723117af7257973e13191da156b90822efcc68da8f8621a",
+      "valid": true,
+      "program": "libcapture-fw-prod.so",
+      "input_manifest": ".work/run010/af/core/routing/input-manifest.json",
+      "input_manifest_sha256": "af81e8c822c5b4cd1d21f5057d310cc098aa8b75d51f664f4a9ac33a141c7e03",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 2679,
+      "mapped_nonexternal_functions": 2679,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 16,
+      "decompile_completed": 16,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/af/core/routing/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+      "summary_sha256": "23cd7daa486477243c0db0e8810454e7b8d2a699dda3ee09b556d224edd19c0b",
+      "source_sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+      "run_id": "a06f82af-d73a-4ca0-80ed-eeadda7f2851",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 92036,
+          "sha256": "9a849c59a4b3118e9becc3bee8561c04b88e33d02f6309cd78edde3ebec08a69"
+        },
+        "calls.jsonl": {
+          "bytes": 67970,
+          "sha256": "aae61f57889354510ce536e08ab6dcce76f4aa66feccaf65c495bd26ed12ddd8"
+        },
+        "decompiled.jsonl": {
+          "bytes": 11153,
+          "sha256": "9f96cecac02638f2b6854a5445a64f465bee81a15ffe4cea0ef0c9abcabb2879"
+        },
+        "strings.jsonl": {
+          "bytes": 58023,
+          "sha256": "3237bf907cf3d3702d7ebc5cc5f91ef1c6d705e8df8feea0c09b444c52d3c562"
+        }
+      },
+      "receipt_path": ".work/run010/af/core/routing/logs/NX500_RUN010_AF-a06f82af-d73a-4ca0-80ed-eeadda7f2851.json",
+      "receipt_sha256": "4515a05a62afdd4ef723117af7257973e13191da156b90822efcc68da8f8621a",
+      "valid": true,
+      "program": "libmulticore-bridge.so",
+      "input_manifest": ".work/run010/af/core/routing/input-manifest.json",
+      "input_manifest_sha256": "af81e8c822c5b4cd1d21f5057d310cc098aa8b75d51f664f4a9ac33a141c7e03",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 390,
+      "mapped_nonexternal_functions": 390,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 7,
+      "decompile_completed": 7,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/af/core/routing/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+      "summary_sha256": "6245e4e8f2afad9d270d78a27f6db1c8f43c37fa5ad93781a4fdc2343817bd3e",
+      "source_sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec",
+      "run_id": "a06f82af-d73a-4ca0-80ed-eeadda7f2851",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 89459,
+          "sha256": "16bd64bc790abe2cc6cbf02f48d8d0a779901d68b2902a39f645482fd10022db"
+        },
+        "calls.jsonl": {
+          "bytes": 198290,
+          "sha256": "f7434fcadbda1b2a6d448af0437d7a21d4e62b251a0f162bdc299b72d292ce5d"
+        },
+        "decompiled.jsonl": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "strings.jsonl": {
+          "bytes": 161398,
+          "sha256": "ee6c628821ea9c805646fabe7eade8d19b0ed59a3e68d80b73765e08c9a38c4e"
+        }
+      },
+      "receipt_path": ".work/run010/af/core/routing/logs/NX500_RUN010_AF-a06f82af-d73a-4ca0-80ed-eeadda7f2851.json",
+      "receipt_sha256": "4515a05a62afdd4ef723117af7257973e13191da156b90822efcc68da8f8621a",
+      "valid": true,
+      "program": "libuser-spec.so",
+      "input_manifest": ".work/run010/af/core/routing/input-manifest.json",
+      "input_manifest_sha256": "af81e8c822c5b4cd1d21f5057d310cc098aa8b75d51f664f4a9ac33a141c7e03",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 379,
+      "mapped_nonexternal_functions": 379,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 0,
+      "decompile_completed": 0,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/transfer/network/api/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
+      "summary_sha256": "9c543d028df7c4356d8ebbcc06996f872dc52f3f15230506b3b6f15eb903a358",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "run_id": "3c5bfd63-e7d6-4df7-bf23-ad710c62038a",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 359122,
+          "sha256": "fb82a83c90b8dfbee996cd57daabf3df9f6e6bf978186d41168a310fac34bf2e"
+        },
+        "calls.jsonl": {
+          "bytes": 548537,
+          "sha256": "2d15307c28fca2068b6c2fde40d687189e4f711acea91fa03ece13fb94a3623f"
+        },
+        "decompiled.jsonl": {
+          "bytes": 210920,
+          "sha256": "d136c304698f5ac20374060051b2adcd5522392717de981d9c1d6e61236b849f"
+        },
+        "strings.jsonl": {
+          "bytes": 408219,
+          "sha256": "cb5c0b6a97a94097960f702b30bfbd507097dc53b6bf80d6fe2fccc3505d4190"
+        }
+      },
+      "receipt_path": ".work/run010/transfer/network/api/logs/NX500_FULL_RUN002-3c5bfd63-e7d6-4df7-bf23-ad710c62038a.json",
+      "receipt_sha256": "24cdf71fa5539fbd9e061834d9740eef016acbe12e54d59cb3d2ec6d7b5fb072",
+      "valid": true,
+      "program": "libdi-network-dlna-api.so",
+      "input_manifest": ".work/run010/transfer/network/api/input-manifest.json",
+      "input_manifest_sha256": "742b3347d9b9442174e1ece55ecbe4637e39ccd3ec731d7b7cc71e6ce0b3ab6b",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 1426,
+      "mapped_nonexternal_functions": 1426,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 10,
+      "decompile_completed": 10,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/transfer/network/api-binding/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
+      "summary_sha256": "1c5a7373b0b17f7bb4056ae38ea89b94cb0e0bd3842749a20f666c2582ee58e3",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "run_id": "37371fbc-6ca4-402b-8afc-3a69d8f30b0b",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 359122,
+          "sha256": "fb82a83c90b8dfbee996cd57daabf3df9f6e6bf978186d41168a310fac34bf2e"
+        },
+        "calls.jsonl": {
+          "bytes": 548537,
+          "sha256": "b0ae29dd33760a5f08fff116f43150a2ae1dbbfa5246af3e4c644e6b3951c044"
+        },
+        "decompiled.jsonl": {
+          "bytes": 87748,
+          "sha256": "ed009a4e28ed957cfebaf3257204b9f280a31dee2eec118cf4b7f881f2672136"
+        },
+        "strings.jsonl": {
+          "bytes": 408219,
+          "sha256": "cb5c0b6a97a94097960f702b30bfbd507097dc53b6bf80d6fe2fccc3505d4190"
+        }
+      },
+      "receipt_path": ".work/run010/transfer/network/api-binding/logs/NX500_FULL_RUN002-37371fbc-6ca4-402b-8afc-3a69d8f30b0b.json",
+      "receipt_sha256": "33ccc304b4ee863a805f5ea9d8895cc83acb03a2f849f1826546ccbd259f3a15",
+      "valid": true,
+      "program": "libdi-network-dlna-api.so",
+      "input_manifest": ".work/run010/transfer/network/api-binding/input-manifest.json",
+      "input_manifest_sha256": "742b3347d9b9442174e1ece55ecbe4637e39ccd3ec731d7b7cc71e6ce0b3ab6b",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 1426,
+      "mapped_nonexternal_functions": 1426,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 7,
+      "decompile_completed": 7,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/transfer/network/app/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
+      "summary_sha256": "062ab8945f835b3b9c067e72b9448975c6ff1e2bedb9617ef3ba49ddc46b35ea",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "run_id": "12372bef-9fd0-4f93-b984-6ae56c16fc50",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 899382,
+          "sha256": "c8b279c4f3d0c247efdb9b07b3f017dd69b172dc66b6de486b62339b48fa12ea"
+        },
+        "calls.jsonl": {
+          "bytes": 1877012,
+          "sha256": "9e441bdaf5f2c7f1eae54e1936a92b5351d7aa5d71fc3ec0e0f0bee7df809eb6"
+        },
+        "decompiled.jsonl": {
+          "bytes": 16241,
+          "sha256": "870235a4a8166d13e6b9fa611930c0ade64dfdf59512f6cf3996f104b85988a3"
+        },
+        "strings.jsonl": {
+          "bytes": 1274490,
+          "sha256": "5a17f2f47264958a10753a3a346d5db09d3ad91850488650b82860b1b3e25c57"
+        }
+      },
+      "receipt_path": ".work/run010/transfer/network/app/logs/NX500_FULL_RUN002-12372bef-9fd0-4f93-b984-6ae56c16fc50.json",
+      "receipt_sha256": "c849afd4f69b839c72e475e0e38a936f3b88962439a66d74151fd77e49370140",
+      "valid": true,
+      "program": "smart-wifi-app",
+      "input_manifest": ".work/run010/transfer/network/app/input-manifest.json",
+      "input_manifest_sha256": "a76d26a330a6e2d1ac88e0ff7dd1ac8a4f1b1beae2540086c7e149bf34b61767",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 3522,
+      "mapped_nonexternal_functions": 3522,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 6,
+      "decompile_completed": 6,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/transfer/network/app-binding/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
+      "summary_sha256": "826fe854c428dda4b66a19cf1a0add189be07b4df17539ee1fe9cb58483e68e5",
+      "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+      "run_id": "2ed6b5db-1f74-4b82-8af3-e7c03739712f",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 899382,
+          "sha256": "c8b279c4f3d0c247efdb9b07b3f017dd69b172dc66b6de486b62339b48fa12ea"
+        },
+        "calls.jsonl": {
+          "bytes": 1877012,
+          "sha256": "66e3f132b1f164c9b57d52bfacd254ebc65bb158429e50e9e5e2c29ea96a7e11"
+        },
+        "decompiled.jsonl": {
+          "bytes": 21533,
+          "sha256": "336e48d6e9532649478e9095c4b3b0e016bd84e2e37dbe741adc405c37492834"
+        },
+        "strings.jsonl": {
+          "bytes": 1274490,
+          "sha256": "5a17f2f47264958a10753a3a346d5db09d3ad91850488650b82860b1b3e25c57"
+        }
+      },
+      "receipt_path": ".work/run010/transfer/network/app-binding/logs/NX500_FULL_RUN002-2ed6b5db-1f74-4b82-8af3-e7c03739712f.json",
+      "receipt_sha256": "0e2a84d57ab17ddebe5a6fecf8edbb517002c1960056287d120cb4f81e1eff46",
+      "valid": true,
+      "program": "smart-wifi-app",
+      "input_manifest": ".work/run010/transfer/network/app-binding/input-manifest.json",
+      "input_manifest_sha256": "a76d26a330a6e2d1ac88e0ff7dd1ac8a4f1b1beae2540086c7e149bf34b61767",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 3522,
+      "mapped_nonexternal_functions": 3522,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 7,
+      "decompile_completed": 7,
+      "decompile_omitted_by_budget": 0,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
+    },
+    {
+      "summary_path": ".work/run010/transfer-budget-attempts/api-binding/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
+      "summary_sha256": "ec631e388590445f9bbf70f5e008f91c15f6c08776846a1c601085d2a27b1eed",
+      "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+      "run_id": "73567524-840c-40f8-9b86-b923896ec6a2",
+      "auto_analysis_timed_out": false,
+      "artifacts": {
+        "functions.jsonl": {
+          "bytes": 359122,
+          "sha256": "fb82a83c90b8dfbee996cd57daabf3df9f6e6bf978186d41168a310fac34bf2e"
+        },
+        "calls.jsonl": {
+          "bytes": 548537,
+          "sha256": "df4895417f817024df5ad2013dd5cc471575226d3e6a950e4d78d14b6814ec9b"
+        },
+        "decompiled.jsonl": {
+          "bytes": 85366,
+          "sha256": "3bd40876da99afb16e5e93ed6f9380eadd821f3218ee372a286a8ebc5db8c2c1"
+        },
+        "strings.jsonl": {
+          "bytes": 408219,
+          "sha256": "cb5c0b6a97a94097960f702b30bfbd507097dc53b6bf80d6fe2fccc3505d4190"
+        }
+      },
+      "receipt_path": ".work/run010/transfer-budget-attempts/api-binding/logs/NX500_FULL_RUN002-73567524-840c-40f8-9b86-b923896ec6a2.json",
+      "receipt_sha256": "319b9c1647b16cca1d9a9445c6ba1b6cfd860f060bf9b75ed7529b5cd9c2348c",
+      "valid": true,
+      "program": "libdi-network-dlna-api.so",
+      "input_manifest": ".work/run010/transfer-budget-attempts/api-binding/input-manifest.json",
+      "input_manifest_sha256": "742b3347d9b9442174e1ece55ecbe4637e39ccd3ec731d7b7cc71e6ce0b3ab6b",
+      "input_bytes_sha256_rechecked": true,
+      "input_association": "manifest_sha_and_inventory_path",
+      "import_this_run": false,
+      "auto_analysis_enabled_this_run": false,
+      "function_records": 1426,
+      "mapped_nonexternal_functions": 1426,
+      "unmapped_or_external_function_records": 0,
+      "decompile_attempted": 6,
+      "decompile_completed": 6,
+      "decompile_omitted_by_budget": 1,
+      "exporter_sha256": "c848492c48924f173209e1a5f3ede547bf0d55a18e8ab9fabfb6782d4258a073"
     }
   ],
   "validation_errors": [
@@ -26795,7 +27796,7 @@
     },
     {
       "path": "manifests/review-run007.json",
-      "sha256": "559e21f99427d458d4e6d17432593b1a9e754985b1cb87a3bbb7cff08b0f22d8"
+      "sha256": "f04bf1c5c657f9b7a950d67faf749917b5ecfcb69b292d61183e6ad03203be74"
     },
     {
       "path": "manifests/review-run008.json",
@@ -26804,6 +27805,18 @@
     {
       "path": "manifests/review-run009.json",
       "sha256": "220092c70e1680be7b77c1a2cbb6c6c9c7e5a97f2e1f447577275e3bf8e63765"
+    },
+    {
+      "path": "manifests/review-af-run010.json",
+      "sha256": "f52ea48eb0e60677764dd7f29036f8a7fa6ef2654849ef46f4e7c9b078a0f809"
+    },
+    {
+      "path": "manifests/review-transfer-run010.json",
+      "sha256": "9bd8bb5ca03493c855b8786d6dab3481e6138a3440e4c10f0170c919b708d7f0"
+    },
+    {
+      "path": "manifests/review-tsu-run010.json",
+      "sha256": "e99d9f8cfcb922159a67ccc56580a9ce374b1b08a7cb32086d9b14f1379d7257"
     }
   ],
   "programs": [
@@ -34651,7 +35664,9 @@
         ".work/run007/device/binding/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
         ".work/run007/device/initial/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
         ".work/run007/device/mmc/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
-        ".work/run007/device/nodes/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json"
+        ".work/run007/device/nodes/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
+        ".work/run010/transfer/network/app/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
+        ".work/run010/transfer/network/app-binding/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json"
       ],
       "import_receipts": [
         ".work/run002/logs/NX500_FULL_RUN002-09c11306-a965-433c-bbac-7ff29e203155.json"
@@ -34676,7 +35691,9 @@
         ".work/run007/device/binding/logs/NX500_FULL_RUN002-647d6e5b-780f-4bc0-9bab-b450e02f17d2.json",
         ".work/run007/device/initial/logs/NX500_FULL_RUN002-2e708bfe-f560-4689-8150-73e02cda90ca.json",
         ".work/run007/device/mmc/logs/NX500_FULL_RUN002-76c4f9db-08b6-4abf-a944-1b30afb6a849.json",
-        ".work/run007/device/nodes/logs/NX500_FULL_RUN002-010aa784-8777-4d31-b571-2b7eccf5049a.json"
+        ".work/run007/device/nodes/logs/NX500_FULL_RUN002-010aa784-8777-4d31-b571-2b7eccf5049a.json",
+        ".work/run010/transfer/network/app-binding/logs/NX500_FULL_RUN002-2ed6b5db-1f74-4b82-8af3-e7c03739712f.json",
+        ".work/run010/transfer/network/app/logs/NX500_FULL_RUN002-12372bef-9fd0-4f93-b984-6ae56c16fc50.json"
       ],
       "reviewed_units": [
         {
@@ -34775,6 +35792,25 @@
           ],
           "reviewer": "primary agent",
           "independent_review_completed": false
+        },
+        {
+          "id": "TRANSFER010-APP-SINGLETON",
+          "source_sha256": "1a3cd718c3554bc1f4ad53e6eb602176a7b3616a6d92699eea848309b3953b87",
+          "original_path": "/usr/apps/com.samsung.smart-wifi-app/bin/smart-wifi-app",
+          "original_elf_va": "0x4ca8c",
+          "file_offset": 281228,
+          "evidence": "analysis/evidence/transfer-state-run010.json",
+          "evidence_sha256": "ae4c0286e28001f255ec659ed6376c4ec5f7817bf298cb939d28214a6885281e",
+          "method": "Sub-agent selected C; original PT_LOAD-mapped ARM windows and mode queries; original literals, vtables and ELF relocation checks.",
+          "claim": "APP singleton constructor installs address point0x105170; its original vtable slot+0xc is dispatch0x4cd30, concretely binding the UI idle callback application dispatch.",
+          "limitations": [
+            "Active state at delivery, alternate observers and concrete APP +0xac terminal-state writers remain unresolved.",
+            "Bounded static interpretation; no target execution or independent semantic review."
+          ],
+          "unresolved_questions": [
+            "Active state at delivery, alternate observers and concrete APP +0xac terminal-state writers remain unresolved."
+          ],
+          "independent_review_completed": false
         }
       ],
       "decompile_failed_attempts": [],
@@ -34869,6 +35905,16 @@
           "summary_path": ".work/run007/device/nodes/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
           "pattern": "^_INIT_([2-9]|1[0-9]|2[0-2])$|^FUN_00011788$",
           "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/transfer/network/app/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
+          "pattern": "^(CSNetworkAPI::(convertEventID|convertStatus|responseToUI)|CAPPUIApplication::dispatch|CSAFStateMachine::dispatch|CAPPNetworkSmartphoneLinkState::(handle|nPushCheckSendComplete)|UI_Event_Send_Manager)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/transfer/network/app-binding/outputs/ghidra/smart-wifi-app-1a3cd718c355/summary.json",
+          "pattern": "^(CSNetworkAPI::(ConvertNetworkToUiEventId|ConvertNetworkToUiEventStatus|handleSmartphoneLink)|CAPPUIApplication::(CAPPUIApplication|getInstance)|CSAFEvent::CSAFEvent)$",
+          "omitted_by_budget": 0
         }
       ],
       "stages": {
@@ -34881,8 +35927,8 @@
       },
       "function_counts": {
         "mapped_nonexternal_exported": 3522,
-        "selected_attempted_unique": 72,
-        "selected_completed_unique": 72,
+        "selected_attempted_unique": 76,
+        "selected_completed_unique": 76,
         "abi_unverified_unique": 3522
       },
       "pending_work_units": [
@@ -34894,7 +35940,8 @@
         "Which state-machine/global observer consumes event0x76c?",
         "Who writes per-client numeric terminal states3..6, and which represent errors/cancellation?",
         "Active state reachability and final callback consumer remain unresolved.",
-        "No state enum meaning or remote success is inferred; empty-client cases can satisfy loops."
+        "No state enum meaning or remote success is inferred; empty-client cases can satisfy loops.",
+        "Active state at delivery, alternate observers and concrete APP +0xac terminal-state writers remain unresolved."
       ]
     },
     {
@@ -40321,13 +41368,17 @@
         ".work/run008/sensor/initial/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
         ".work/run008/sensor/levels/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
         ".work/run008/sensor/thermometer/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
-        ".work/run009/sensor/callback/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json"
+        ".work/run009/sensor/callback/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+        ".work/run010/af/core/initial/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+        ".work/run010/af/core/routing/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json"
       ],
       "import_receipts": [
-        ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json"
+        ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json",
+        ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json"
       ],
       "auto_analysis_completed_receipts": [
-        ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json"
+        ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json",
+        ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json"
       ],
       "noanalysis_export_receipts": [
         ".work/run003/capture/followup/logs/NX500_RUN003_CAPTURE-d5e2998f-c8f1-437b-9bee-956109001def.json",
@@ -40337,7 +41388,8 @@
         ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
         ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
         ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json",
-        ".work/run009/sensor/callback/logs/NX500_RUN003_CAPTURE-9dddd3dc-48ed-40ae-8194-ed25506056e8.json"
+        ".work/run009/sensor/callback/logs/NX500_RUN003_CAPTURE-9dddd3dc-48ed-40ae-8194-ed25506056e8.json",
+        ".work/run010/af/core/routing/logs/NX500_RUN010_AF-a06f82af-d73a-4ca0-80ed-eeadda7f2851.json"
       ],
       "reviewed_units": [
         {
@@ -40387,6 +41439,24 @@
             "Where are actual lens commands dispatched?"
           ],
           "evidence_sha256": "daa4b3b2bbdae78772b6b81b7bfdade00718ad6937f3546c19b126a454486b70"
+        },
+        {
+          "id": "AF010-PREFERENCES",
+          "source_sha256": "2d04ab487cc9980cb87e513b25ff09011839203756d28857eedfd50a9cc730ec",
+          "original_path": "/usr/lib/libuser-spec.so",
+          "original_elf_va": "0x1df74",
+          "evidence": "analysis/evidence/af-lens-run010.json",
+          "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+          "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+          "claim": "Lens property getter reads 0x6c bytes at preference 0x120; lens info getter reads 0x38 bytes at 0x20; readiness wrapper distinguishes magic values read from 0xd28.",
+          "limitations": [
+            "Writers, coherence, freshness and RTOS preference layout remain unresolved; another capture wrapper reads0x40 bytes from0x20.",
+            "Independent semantic review and runtime observations are not completed."
+          ],
+          "unresolved_questions": [
+            "Writers, coherence, freshness and RTOS preference layout remain unresolved; another capture wrapper reads0x40 bytes from0x20."
+          ],
+          "independent_review_completed": false
         }
       ],
       "decompile_failed_attempts": [],
@@ -40436,6 +41506,16 @@
           "summary_path": ".work/run009/sensor/callback/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
           "pattern": "^(csensor_module::(set_callback|unset_callback|send_callback)|sensorapi::(set_callback|unset_callback|main_loop|start|stop))$",
           "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/af/core/initial/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+          "pattern": "^(ControlLens|Control3A|.*RegisterLensEventListener.*|.*UnregisterLensEventListener.*|.*NotifyLensEvent.*|.*execLensNotify.*|.*CNotifyHandler3Run.*|.*onAFScanDone.*|.*onInitializedFocus.*|.*onLensModeChangeDone.*|.*onLensEvent.*|.*CMCBAdapter4Send.*|.*CMCBAdapter11SendCommand.*|.*CMulticoreBridge4Send.*|.*CMulticoreBridge8Register.*|mcb_register_handler|mcb_send|.*User_Spec_Get_Rtos_Pref_Lens_Info.*|User_Spec_Get_Lens_Property|User_Spec_Get_Lens_Info|.*UI_Mm_Camera_Set_Lens_Callback_Init.*|.*UI_Mm_Camera_Set_Lens_Init.*|.*UI_Set_Lens_Callback_Fn.*|.*UI_Mm_Camera_Set_.*Af.*|.*UI_Mm_Camera_Set_.*AF.*|.*UI_Mm_Camera_Lens_.*)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/af/core/routing/outputs/ghidra/libuser-spec.so-2d04ab487cc9/summary.json",
+          "pattern": "^mm_camera_ioctl$|^CMCBAdapter::(Send|SendCommand|SyncSendCommand|OnReceiveEvent|OnReceived|Initialize|subscribeToMCB)$|^CNotifyHandler::(Run|notifyCategory|subCategory|execLiveviewNotify)$|^CAttributeHandler::getAFScanResult$|^CCommonProperty::(SetFocusScanResult|SetAFResult|GetAFResult)$|^CMulticoreBridge::(Send|Register)$|^CSender::(createFrame|Send)$|^CReceiver::(receive|Subscribe)$|^UI_Mm_Camera_(Set_Ioctl_3A_Caf|Af_Lock|Remove_Lens_Callback)$|^FUN_001e2818$|^FUN_00223db0$",
+          "omitted_by_budget": 0
         }
       ],
       "stages": {
@@ -40448,8 +41528,8 @@
       },
       "function_counts": {
         "mapped_nonexternal_exported": 379,
-        "selected_attempted_unique": 8,
-        "selected_completed_unique": 8,
+        "selected_attempted_unique": 10,
+        "selected_completed_unique": 10,
         "abi_unverified_unique": 379
       },
       "pending_work_units": [
@@ -40461,7 +41541,8 @@
         "Who writes the byte?",
         "What state transitions and file/SD ordering does it represent?",
         "Which producer writes this field?",
-        "Where are actual lens commands dispatched?"
+        "Where are actual lens commands dispatched?",
+        "Writers, coherence, freshness and RTOS preference layout remain unresolved; another capture wrapper reads0x40 bytes from0x20."
       ]
     },
     {
@@ -54276,10 +55357,16 @@
         ".work/run009/app/callback-wildcard/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
         ".work/run009/app/consumers/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
         ".work/run009/app/policy/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
-        ".work/run009/app/stop-path/outputs/ghidra/di-camera-app-55dcc7814372/summary.json"
+        ".work/run009/app/stop-path/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
+        ".work/run010/af/core/initial/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
+        ".work/run010/af/core/routing/outputs/ghidra/di-camera-app-55dcc7814372/summary.json"
       ],
-      "import_receipts": [],
-      "auto_analysis_completed_receipts": [],
+      "import_receipts": [
+        ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json"
+      ],
+      "auto_analysis_completed_receipts": [
+        ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json"
+      ],
       "noanalysis_export_receipts": [
         ".work/restored-run001/logs/NX500_FW112_SURVEY-141d6216-2bdb-429e-b302-da137643017b.json",
         ".work/run004/capture/followup/logs/NX500_FW112_SURVEY-c74cc999-a9f8-4e15-bc6f-09305f2402b9.json",
@@ -54302,7 +55389,8 @@
         ".work/run009/app/callback-wildcard/logs/NX500_FW112_SURVEY-1990bb6e-de54-4134-bd65-e902e04fb3a2.json",
         ".work/run009/app/consumers/logs/NX500_FW112_SURVEY-03ed1ed8-14b0-41a2-b06b-aa7d8f5dfef5.json",
         ".work/run009/app/policy/logs/NX500_FW112_SURVEY-2d87a2bd-39d9-474c-a32a-c5faf5d061e3.json",
-        ".work/run009/app/stop-path/logs/NX500_FW112_SURVEY-4d9761df-112f-4b2a-b898-c3194bc2b50c.json"
+        ".work/run009/app/stop-path/logs/NX500_FW112_SURVEY-4d9761df-112f-4b2a-b898-c3194bc2b50c.json",
+        ".work/run010/af/core/routing/logs/NX500_RUN010_AF-a06f82af-d73a-4ca0-80ed-eeadda7f2851.json"
       ],
       "reviewed_units": [
         {
@@ -54571,6 +55659,42 @@
           "independent_review_completed": true,
           "independent_review_report": "analysis/architecture/THERMAL_POLICY_REVIEW_RUN009.md",
           "independent_review_scope": "See report table: selected original instruction/data paths; not every function semantics."
+        },
+        {
+          "id": "AF010-REGISTER",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "original_elf_va": "0x12dbd4",
+          "evidence": "analysis/evidence/af-lens-run010.json",
+          "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+          "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+          "claim": "Three app instructions load UI_Set_Lens_Callback_Fn at 0x220038 and call lens registration wrapper 0x1e3f5c; wrapper uses ioctl 0x13 and capture translator maps it to 0x1050007.",
+          "limitations": [
+            "This is a selected registration site, not proof it runs at every boot or completes initialization.",
+            "Independent semantic review and runtime observations are not completed."
+          ],
+          "unresolved_questions": [
+            "This is a selected registration site, not proof it runs at every boot or completes initialization."
+          ],
+          "independent_review_completed": false
+        },
+        {
+          "id": "AF010-UI-QUEUE",
+          "source_sha256": "55dcc78143724435a2e38b9e0d809960bd728668634bbcf7532ce137f882eb04",
+          "original_path": "/usr/apps/com.samsung.di-camera-app/bin/di-camera-app",
+          "original_elf_va": "0x220038",
+          "evidence": "analysis/evidence/af-lens-run010.json",
+          "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+          "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+          "claim": "App lens callback applies state/error/event-mask gates then schedules GLib idle work; common helper unpacks ID/status halves before downstream UI dispatch.",
+          "limitations": [
+            "Accepted callback is not a proven displayed transition; downstream helper0x221d64 remains unreviewed.",
+            "Independent semantic review and runtime observations are not completed."
+          ],
+          "unresolved_questions": [
+            "Accepted callback is not a proven displayed transition; downstream helper0x221d64 remains unreviewed."
+          ],
+          "independent_review_completed": false
         }
       ],
       "decompile_failed_attempts": [],
@@ -54685,24 +55809,33 @@
           "summary_path": ".work/run009/app/stop-path/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
           "pattern": "^FUN_000e2a7c$|^FUN_000e2c00$|^FUN_000e6ca0$|^get_mov_stop_str$|^Ui_Check_Wifi_Or_Power_Off$",
           "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/af/core/initial/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
+          "pattern": "^(ControlLens|Control3A|.*RegisterLensEventListener.*|.*UnregisterLensEventListener.*|.*NotifyLensEvent.*|.*execLensNotify.*|.*CNotifyHandler3Run.*|.*onAFScanDone.*|.*onInitializedFocus.*|.*onLensModeChangeDone.*|.*onLensEvent.*|.*CMCBAdapter4Send.*|.*CMCBAdapter11SendCommand.*|.*CMulticoreBridge4Send.*|.*CMulticoreBridge8Register.*|mcb_register_handler|mcb_send|.*User_Spec_Get_Rtos_Pref_Lens_Info.*|User_Spec_Get_Lens_Property|User_Spec_Get_Lens_Info|.*UI_Mm_Camera_Set_Lens_Callback_Init.*|.*UI_Mm_Camera_Set_Lens_Init.*|.*UI_Set_Lens_Callback_Fn.*|.*UI_Mm_Camera_Set_.*Af.*|.*UI_Mm_Camera_Set_.*AF.*|.*UI_Mm_Camera_Lens_.*)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/af/core/routing/outputs/ghidra/di-camera-app-55dcc7814372/summary.json",
+          "pattern": "^mm_camera_ioctl$|^CMCBAdapter::(Send|SendCommand|SyncSendCommand|OnReceiveEvent|OnReceived|Initialize|subscribeToMCB)$|^CNotifyHandler::(Run|notifyCategory|subCategory|execLiveviewNotify)$|^CAttributeHandler::getAFScanResult$|^CCommonProperty::(SetFocusScanResult|SetAFResult|GetAFResult)$|^CMulticoreBridge::(Send|Register)$|^CSender::(createFrame|Send)$|^CReceiver::(receive|Subscribe)$|^UI_Mm_Camera_(Set_Ioctl_3A_Caf|Af_Lock|Remove_Lens_Callback)$|^FUN_001e2818$|^FUN_00223db0$",
+          "omitted_by_budget": 0
         }
       ],
       "stages": {
         "source_verified": true,
-        "imported_with_success_receipt": false,
+        "imported_with_success_receipt": true,
         "loaded_program_export_validated": true,
-        "auto_analysis_completed_with_success_receipt": false,
+        "auto_analysis_completed_with_success_receipt": true,
         "selected_decompilation_completed": true,
         "reviewed_static_findings": true
       },
       "function_counts": {
         "mapped_nonexternal_exported": 9258,
-        "selected_attempted_unique": 86,
-        "selected_completed_unique": 86,
+        "selected_attempted_unique": 99,
+        "selected_completed_unique": 99,
         "abi_unverified_unique": 9258
       },
       "pending_work_units": [
-        "Obtain measured successful auto-analysis receipt; process/noanalysis export cannot establish it",
         "Resolve ABI/types and indirect/runtime call behavior with independent evidence"
       ],
       "unresolved_questions": [
@@ -54721,7 +55854,9 @@
         "Pending idle delivery and alternate gates remain unobserved.",
         "Preceding early returns mean this check is not proven to dominate all eligibility paths.",
         "Manager early return, time less than1 and alternative flag branches prevent unconditional-stop claims.",
-        "Asynchronous completion, finalized file, runtime state and persistence are not established."
+        "Asynchronous completion, finalized file, runtime state and persistence are not established.",
+        "This is a selected registration site, not proof it runs at every boot or completes initialization.",
+        "Accepted callback is not a proven displayed transition; downstream helper0x221d64 remains unreviewed."
       ]
     },
     {
@@ -65795,6 +66930,42 @@
             "Actual adjustment words, mode0/default behavior, cadence, callback delivery and final stop/shutdown policy remain unresolved."
           ],
           "independent_review_completed": false
+        },
+        {
+          "id": "TSU010-CONVERSION",
+          "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+          "original_path": "/usr/lib/libdi-sensor.so",
+          "original_elf_va": "0x4728",
+          "evidence": "analysis/evidence/kernel-tsu-run010.json",
+          "evidence_sha256": "9795a102c245fc0cd658ec7ba3bf0fb32de49137f621de055130f625f29c0c6f",
+          "method": "Original ARM CFG, PT_LOAD mapping, PLT/GOT relocation binding, arithmetic reconstruction and separate original-byte review",
+          "claim": "Original thermometer update applies documented signed nonzero average, sqrt(2676588-469*a)-1482 conversion and truncation, with a real NaN sqrt fallback; cleared second buffer gives DSP153 under bounded reads.",
+          "limitations": [
+            "CMOS physical Celsius calibration, negative-radicand result and actual ADC input domain remain unobserved."
+          ],
+          "unresolved_questions": [
+            "CMOS physical Celsius calibration, negative-radicand result and actual ADC input domain remain unobserved."
+          ],
+          "independent_review_completed": true,
+          "independent_review_report": "analysis/architecture/KERNEL_TSU_REVIEW_RUN010.md"
+        },
+        {
+          "id": "TSU010-FAILURE-PATHS",
+          "source_sha256": "75541051bc8e6090ec32d75e1b1b921a965b5a1cad26bf9a0683f7feb93bed07",
+          "original_path": "/usr/lib/libdi-sensor.so",
+          "original_elf_va": "0x4790",
+          "evidence": "analysis/evidence/kernel-tsu-run010.json",
+          "evidence_sha256": "9795a102c245fc0cd658ec7ba3bf0fb32de49137f621de055130f625f29c0c6f",
+          "method": "Original ARM CFG, PT_LOAD mapping, PLT/GOT relocation binding, arithmetic reconstruction and separate original-byte review",
+          "claim": "Both negative TSU-open branches return through48e0 without local unlock; CPU-open failure also skips ISP close; read checks are sign-only and TSU parsing ignores read results.",
+          "limitations": [
+            "Conditional local omissions, not observed device stall/leak; dynamic binding and lock-acquisition outcomes remain unobserved."
+          ],
+          "unresolved_questions": [
+            "Conditional local omissions, not observed device stall/leak; dynamic binding and lock-acquisition outcomes remain unobserved."
+          ],
+          "independent_review_completed": true,
+          "independent_review_report": "analysis/architecture/KERNEL_TSU_REVIEW_RUN010.md"
         }
       ],
       "decompile_failed_attempts": [],
@@ -65868,7 +67039,9 @@
         "How is failure propagated elsewhere?",
         "Conditional on initialization and stable callback/object binding; dynamic replacement remains unobserved.",
         "Physical units, conversion correctness, partial/error reads and complete resource/lock lifecycle are not established.",
-        "Actual adjustment words, mode0/default behavior, cadence, callback delivery and final stop/shutdown policy remain unresolved."
+        "Actual adjustment words, mode0/default behavior, cadence, callback delivery and final stop/shutdown policy remain unresolved.",
+        "CMOS physical Celsius calibration, negative-radicand result and actual ADC input domain remain unobserved.",
+        "Conditional local omissions, not observed device stall/leak; dynamic binding and lock-acquisition outcomes remain unobserved."
       ]
     },
     {
@@ -69341,7 +70514,8 @@
           "unresolved_questions": [
             "Kernel emission and monitor installation timing remain unobserved."
           ],
-          "independent_review_completed": false
+          "independent_review_completed": true,
+          "independent_review_report": "analysis/architecture/CARD_EVENTS_REVIEW_RUN011.md"
         },
         {
           "id": "CARD007-REGISTRY",
@@ -69359,7 +70533,8 @@
           "unresolved_questions": [
             "Callback registration success, event timing and invocation on a camera remain unobserved."
           ],
-          "independent_review_completed": false
+          "independent_review_completed": true,
+          "independent_review_report": "analysis/architecture/CARD_EVENTS_REVIEW_RUN011.md"
         },
         {
           "id": "CARD007-STATE",
@@ -69377,7 +70552,8 @@
           "unresolved_questions": [
             "No per-buffer fwrite correlation; multiple vconf keys are not treated as an atomic update."
           ],
-          "independent_review_completed": false
+          "independent_review_completed": true,
+          "independent_review_report": "analysis/architecture/CARD_EVENTS_REVIEW_RUN011.md"
         }
       ],
       "decompile_failed_attempts": [],
@@ -71280,7 +72456,8 @@
           "unresolved_questions": [
             "Loader interposition and active runtime initialization remain unobserved."
           ],
-          "independent_review_completed": false
+          "independent_review_completed": true,
+          "independent_review_report": "analysis/architecture/CARD_EVENTS_REVIEW_RUN011.md"
         },
         {
           "id": "CARD007-DISPATCH",
@@ -71298,7 +72475,8 @@
           "unresolved_questions": [
             "These two targets lack Ghidra recovered functions and completed C; original byte/table review is separate."
           ],
-          "independent_review_completed": false
+          "independent_review_completed": true,
+          "independent_review_report": "analysis/architecture/CARD_EVENTS_REVIEW_RUN011.md"
         }
       ],
       "decompile_failed_attempts": [],
@@ -80857,10 +82035,17 @@
         ".work/run008/app/initial/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
         ".work/run008/app/sensor/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
         ".work/run009/app/callback-wildcard/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
-        ".work/run009/app/policy/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json"
+        ".work/run009/app/policy/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+        ".work/run010/af/core/initial/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+        ".work/run010/af/core/refine-libcapture-fw-prod.so/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+        ".work/run010/af/core/routing/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json"
       ],
-      "import_receipts": [],
-      "auto_analysis_completed_receipts": [],
+      "import_receipts": [
+        ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json"
+      ],
+      "auto_analysis_completed_receipts": [
+        ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json"
+      ],
       "noanalysis_export_receipts": [
         ".work/restored-run001/logs/NX500_FW112_SURVEY-141d6216-2bdb-429e-b302-da137643017b.json",
         ".work/run004/capture/followup/logs/NX500_FW112_SURVEY-c74cc999-a9f8-4e15-bc6f-09305f2402b9.json",
@@ -80880,7 +82065,9 @@
         ".work/run008/app/initial/logs/NX500_FW112_SURVEY-90b7f60b-fad3-4d81-a7e3-e0ef22347a5c.json",
         ".work/run008/app/sensor/logs/NX500_FW112_SURVEY-0bbdeef4-ad31-4a19-9573-5344a212fbee.json",
         ".work/run009/app/callback-wildcard/logs/NX500_FW112_SURVEY-1990bb6e-de54-4134-bd65-e902e04fb3a2.json",
-        ".work/run009/app/policy/logs/NX500_FW112_SURVEY-2d87a2bd-39d9-474c-a32a-c5faf5d061e3.json"
+        ".work/run009/app/policy/logs/NX500_FW112_SURVEY-2d87a2bd-39d9-474c-a32a-c5faf5d061e3.json",
+        ".work/run010/af/core/refine-libcapture-fw-prod.so/logs/NX500_RUN010_AF-8483d9a6-ed90-4656-b602-b9ee47016602.json",
+        ".work/run010/af/core/routing/logs/NX500_RUN010_AF-a06f82af-d73a-4ca0-80ed-eeadda7f2851.json"
       ],
       "reviewed_units": [
         {
@@ -80930,6 +82117,96 @@
             "Dynamic symbol interposition/replacement and malformed packet safety are not established."
           ],
           "reviewer": "primary agent",
+          "independent_review_completed": false
+        },
+        {
+          "id": "AF010-LISTENER",
+          "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+          "original_path": "/usr/lib/libcapture-fw-prod.so",
+          "original_elf_va": "0x853a0",
+          "evidence": "analysis/evidence/af-lens-run010.json",
+          "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+          "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+          "claim": "Lens registration overwrites a single global listener; unregister requires the same nonnull pointer. App removal wrapper sends null through the registration opcode; the inspected ControlLens branch leaves the listener unchanged and can return zero.",
+          "limitations": [
+            "Concurrent callback lifetime and actual shutdown sequencing remain unobserved.",
+            "Independent semantic review and runtime observations are not completed."
+          ],
+          "unresolved_questions": [
+            "Concurrent callback lifetime and actual shutdown sequencing remain unobserved."
+          ],
+          "independent_review_completed": false
+        },
+        {
+          "id": "AF010-DISPATCH",
+          "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+          "original_path": "/usr/lib/libcapture-fw-prod.so",
+          "original_elf_va": "0x8e23c",
+          "evidence": "analysis/evidence/af-lens-run010.json",
+          "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+          "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+          "claim": "Registered category 0x82 selects CNotifyHandler via holder index 2 and installed vtable; message halfword +4 high/low bytes select notification category/subcategory.",
+          "limitations": [
+            "Conditional on successful subscriptions and unchanged constructed objects; runtime source of received frames is not observed.",
+            "Independent semantic review and runtime observations are not completed."
+          ],
+          "unresolved_questions": [
+            "Conditional on successful subscriptions and unchanged constructed objects; runtime source of received frames is not observed."
+          ],
+          "independent_review_completed": false
+        },
+        {
+          "id": "AF010-LENS-EVENT",
+          "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+          "original_path": "/usr/lib/libcapture-fw-prod.so",
+          "original_elf_va": "0x8d28c",
+          "evidence": "analysis/evidence/af-lens-run010.json",
+          "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+          "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+          "claim": "Lens table slot 25 selects onLensEvent; stored count/length 8 extracts two words at message +8/+0xc and forwards them to the lens listener with null third argument.",
+          "limitations": [
+            "Full event-ID/status meanings, message backing-buffer bounds and hardware completion are unresolved.",
+            "Independent semantic review and runtime observations are not completed."
+          ],
+          "unresolved_questions": [
+            "Full event-ID/status meanings, message backing-buffer bounds and hardware completion are unresolved."
+          ],
+          "independent_review_completed": false
+        },
+        {
+          "id": "AF010-AF-SCAN",
+          "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+          "original_path": "/usr/lib/libcapture-fw-prod.so",
+          "original_elf_va": "0x8bf5c",
+          "evidence": "analysis/evidence/af-lens-run010.json",
+          "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+          "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+          "claim": "Liveview table slot 5 selects onAFScanDone; count/length 1 branch calls SetFocusScanResult, reads first byte and publishes app callback 0x1040001. Setter copies 12 bytes and getter sends 12 bytes at opcode 0x365.",
+          "limitations": [
+            "The stored count/length1 versus12-byte copy relationship is unresolved; no one-byte allocation or memory-safety flaw is asserted.",
+            "Independent semantic review and runtime observations are not completed."
+          ],
+          "unresolved_questions": [
+            "The stored count/length1 versus12-byte copy relationship is unresolved; no one-byte allocation or memory-safety flaw is asserted."
+          ],
+          "independent_review_completed": false
+        },
+        {
+          "id": "AF010-COMMAND",
+          "source_sha256": "a07867292610ac6376e29e3cd64bc79a274452412387fb7853c5a3fb3f96bba5",
+          "original_path": "/usr/lib/libcapture-fw-prod.so",
+          "original_elf_va": "0x43db4",
+          "evidence": "analysis/evidence/af-lens-run010.json",
+          "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+          "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+          "claim": "ControlLens encodes concrete 0x50x lens opcodes/payload transforms; app CAF request 5 maps to 0x1040005 and command 0x206 with boolean inversion, AF-lock request 9 maps to 0x1040009 and command 0x204 bytes 2/0x12.",
+          "limitations": [
+            "Payload types and hardware meanings remain bounded to code expressions; no focus or motor behavior observed.",
+            "Independent semantic review and runtime observations are not completed."
+          ],
+          "unresolved_questions": [
+            "Payload types and hardware meanings remain bounded to code expressions; no focus or motor behavior observed."
+          ],
           "independent_review_completed": false
         }
       ],
@@ -81030,30 +82307,49 @@
           "summary_path": ".work/run009/app/policy/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
           "pattern": "^FUN_00271678$|^UI_Init_Sensor_Detection_Event$|^UI_Check_Enable_Movie_rec$",
           "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/af/core/initial/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+          "pattern": "^(ControlLens|Control3A|.*RegisterLensEventListener.*|.*UnregisterLensEventListener.*|.*NotifyLensEvent.*|.*execLensNotify.*|.*CNotifyHandler3Run.*|.*onAFScanDone.*|.*onInitializedFocus.*|.*onLensModeChangeDone.*|.*onLensEvent.*|.*CMCBAdapter4Send.*|.*CMCBAdapter11SendCommand.*|.*CMulticoreBridge4Send.*|.*CMulticoreBridge8Register.*|mcb_register_handler|mcb_send|.*User_Spec_Get_Rtos_Pref_Lens_Info.*|User_Spec_Get_Lens_Property|User_Spec_Get_Lens_Info|.*UI_Mm_Camera_Set_Lens_Callback_Init.*|.*UI_Mm_Camera_Set_Lens_Init.*|.*UI_Set_Lens_Callback_Fn.*|.*UI_Mm_Camera_Set_.*Af.*|.*UI_Mm_Camera_Set_.*AF.*|.*UI_Mm_Camera_Lens_.*)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/af/core/refine-libcapture-fw-prod.so/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+          "pattern": "^FUN_00040b30$|^FUN_0005d3a0$|^CCategoryHandleHolder::(CCategoryHandleHolder|Run|toTableID)$|^CMCBAdapter::subscribe$|^CNotifyHandler::CNotifyHandler$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/af/core/routing/outputs/ghidra/libcapture-fw-prod.so-a07867292610/summary.json",
+          "pattern": "^mm_camera_ioctl$|^CMCBAdapter::(Send|SendCommand|SyncSendCommand|OnReceiveEvent|OnReceived|Initialize|subscribeToMCB)$|^CNotifyHandler::(Run|notifyCategory|subCategory|execLiveviewNotify)$|^CAttributeHandler::getAFScanResult$|^CCommonProperty::(SetFocusScanResult|SetAFResult|GetAFResult)$|^CMulticoreBridge::(Send|Register)$|^CSender::(createFrame|Send)$|^CReceiver::(receive|Subscribe)$|^UI_Mm_Camera_(Set_Ioctl_3A_Caf|Af_Lock|Remove_Lens_Callback)$|^FUN_001e2818$|^FUN_00223db0$",
+          "omitted_by_budget": 0
         }
       ],
       "stages": {
         "source_verified": true,
-        "imported_with_success_receipt": false,
+        "imported_with_success_receipt": true,
         "loaded_program_export_validated": true,
-        "auto_analysis_completed_with_success_receipt": false,
+        "auto_analysis_completed_with_success_receipt": true,
         "selected_decompilation_completed": true,
         "reviewed_static_findings": true
       },
       "function_counts": {
         "mapped_nonexternal_exported": 2679,
-        "selected_attempted_unique": 38,
-        "selected_completed_unique": 38,
+        "selected_attempted_unique": 59,
+        "selected_completed_unique": 59,
         "abi_unverified_unique": 2679
       },
       "pending_work_units": [
-        "Obtain measured successful auto-analysis receipt; process/noanalysis export cannot establish it",
         "Resolve ABI/types and indirect/runtime call behavior with independent evidence"
       ],
       "unresolved_questions": [
         "Which RTOS caller emits this exact frame, and what ordering relates it to preference writes?",
         "Which backend buffer/producer supplies the identifier?",
-        "Dynamic symbol interposition/replacement and malformed packet safety are not established."
+        "Dynamic symbol interposition/replacement and malformed packet safety are not established.",
+        "Concurrent callback lifetime and actual shutdown sequencing remain unobserved.",
+        "Conditional on successful subscriptions and unchanged constructed objects; runtime source of received frames is not observed.",
+        "Full event-ID/status meanings, message backing-buffer bounds and hardware completion are unresolved.",
+        "The stored count/length1 versus12-byte copy relationship is unresolved; no one-byte allocation or memory-safety flaw is asserted.",
+        "Payload types and hardware meanings remain bounded to code expressions; no focus or motor behavior observed."
       ]
     },
     {
@@ -83978,7 +85274,8 @@
           "unresolved_questions": [
             "Node existence, parse-input validity and runtime hardware state remain unobserved."
           ],
-          "independent_review_completed": false
+          "independent_review_completed": true,
+          "independent_review_report": "analysis/architecture/CARD_EVENTS_REVIEW_RUN011.md"
         },
         {
           "id": "THERM008-OEM",
@@ -95882,7 +97179,10 @@
         ".work/run007/device/binding/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
         ".work/run007/device/initial/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
         ".work/run007/device/mmc/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
-        ".work/run007/device/nodes/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json"
+        ".work/run007/device/nodes/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
+        ".work/run010/transfer/network/api/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
+        ".work/run010/transfer/network/api-binding/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
+        ".work/run010/transfer-budget-attempts/api-binding/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json"
       ],
       "import_receipts": [
         ".work/run002/logs/NX500_FULL_RUN002-09c11306-a965-433c-bbac-7ff29e203155.json"
@@ -95907,7 +97207,10 @@
         ".work/run007/device/binding/logs/NX500_FULL_RUN002-647d6e5b-780f-4bc0-9bab-b450e02f17d2.json",
         ".work/run007/device/initial/logs/NX500_FULL_RUN002-2e708bfe-f560-4689-8150-73e02cda90ca.json",
         ".work/run007/device/mmc/logs/NX500_FULL_RUN002-76c4f9db-08b6-4abf-a944-1b30afb6a849.json",
-        ".work/run007/device/nodes/logs/NX500_FULL_RUN002-010aa784-8777-4d31-b571-2b7eccf5049a.json"
+        ".work/run007/device/nodes/logs/NX500_FULL_RUN002-010aa784-8777-4d31-b571-2b7eccf5049a.json",
+        ".work/run010/transfer-budget-attempts/api-binding/logs/NX500_FULL_RUN002-73567524-840c-40f8-9b86-b923896ec6a2.json",
+        ".work/run010/transfer/network/api-binding/logs/NX500_FULL_RUN002-37371fbc-6ca4-402b-8afc-3a69d8f30b0b.json",
+        ".work/run010/transfer/network/api/logs/NX500_FULL_RUN002-3c5bfd63-e7d6-4df7-bf23-ad710c62038a.json"
       ],
       "reviewed_units": [
         {
@@ -96087,6 +97390,44 @@
           ],
           "reviewer": "primary agent",
           "independent_review_completed": false
+        },
+        {
+          "id": "TRANSFER010-SUBCODE",
+          "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+          "original_path": "/usr/lib/libdi-network-dlna-api.so",
+          "original_elf_va": "0x4a9ec",
+          "file_offset": 305644,
+          "evidence": "analysis/evidence/transfer-state-run010.json",
+          "evidence_sha256": "ae4c0286e28001f255ec659ed6376c4ec5f7817bf298cb939d28214a6885281e",
+          "method": "Sub-agent selected C; original PT_LOAD-mapped ARM windows and mode queries; original literals, vtables and ELF relocation checks.",
+          "claim": "Response parser writes Sub-ErrorCode via sscanf into response +0x10, the worker handler +0x28; initial non-100 status containing 500 selects decimal subcodes 2502 and 2503.",
+          "limitations": [
+            "Malformed headers, unchecked sscanf conversion, socket-read semantics and actual receiver responses remain unobserved.",
+            "Bounded static interpretation; no target execution or independent semantic review."
+          ],
+          "unresolved_questions": [
+            "Malformed headers, unchecked sscanf conversion, socket-read semantics and actual receiver responses remain unobserved."
+          ],
+          "independent_review_completed": false
+        },
+        {
+          "id": "TRANSFER010-OUTCOME",
+          "source_sha256": "cdd6ffee8b95ab688fb4180ae473feca557317af1310447cc80869c2c737dac1",
+          "original_path": "/usr/lib/libdi-network-dlna-api.so",
+          "original_elf_va": "0x4b848",
+          "file_offset": 309320,
+          "evidence": "analysis/evidence/transfer-state-run010.json",
+          "evidence_sha256": "ae4c0286e28001f255ec659ed6376c4ec5f7817bf298cb939d28214a6885281e",
+          "method": "Sub-agent selected C; original PT_LOAD-mapped ARM windows and mode queries; original literals, vtables and ELF relocation checks.",
+          "claim": "Worker outcomes two/three/four/default dispatch notifier events three/four/six/five, mapping to API UI events 0x49/0x4d/0x4c/0x4b; diagnostics associate subcodes2502/2503 with storage-space/unsupported-file errors.",
+          "limitations": [
+            "Worker-local outcomes are distinct from APP client states; remote persistence, successful join and camera quiescence are not established.",
+            "Bounded static interpretation; no target execution or independent semantic review."
+          ],
+          "unresolved_questions": [
+            "Worker-local outcomes are distinct from APP client states; remote persistence, successful join and camera quiescence are not established."
+          ],
+          "independent_review_completed": false
         }
       ],
       "decompile_failed_attempts": [],
@@ -96181,6 +97522,21 @@
           "summary_path": ".work/run007/device/nodes/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
           "pattern": "^_INIT_([2-9]|1[0-9]|2[0-2])$|^FUN_00011788$",
           "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/transfer/network/api/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
+          "pattern": "^(SPHTTPClientHandler::(entry|readResponse|sendData)|SP_HTTP_Response::parse|SPClientManager::(notifyServiceStatus|SPClientManager|setCallback)|SNPushClientNotificationCallback|SNPushStart|SelectivePushSendEventToUI)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/transfer/network/api-binding/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
+          "pattern": "^(SPHTTPClientHandler::SPHTTPClientHandler|SPClientManager::createFileTransfer)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/transfer-budget-attempts/api-binding/outputs/ghidra/libdi-network-dlna-api.so-cdd6ffee8b95/summary.json",
+          "pattern": "^(SPHTTPClientHandler::SPHTTPClientHandler|SPClientManager::createFileTransfer)$",
+          "omitted_by_budget": 1
         }
       ],
       "stages": {
@@ -96193,8 +97549,8 @@
       },
       "function_counts": {
         "mapped_nonexternal_exported": 1426,
-        "selected_attempted_unique": 54,
-        "selected_completed_unique": 54,
+        "selected_attempted_unique": 55,
+        "selected_completed_unique": 55,
         "abi_unverified_unique": 1426
       },
       "pending_work_units": [
@@ -96214,7 +97570,9 @@
         "What synchronization protects callback replacement and handler destruction?",
         "Is there any separately checked thread-completion acknowledgement?",
         "When can capture/AF/SD/power activity safely coexist with transfer?",
-        "Downstream delivery and global termination-state synchronization remain unobserved."
+        "Downstream delivery and global termination-state synchronization remain unobserved.",
+        "Malformed headers, unchecked sscanf conversion, socket-read semantics and actual receiver responses remain unobserved.",
+        "Worker-local outcomes are distinct from APP client states; remote persistence, successful join and camera quiescence are not established."
       ]
     },
     {
@@ -108384,13 +109742,18 @@
         ".work/run008/sensor/initial/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
         ".work/run008/sensor/levels/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
         ".work/run008/sensor/thermometer/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
-        ".work/run009/sensor/callback/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json"
+        ".work/run009/sensor/callback/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+        ".work/run010/af/core/initial/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+        ".work/run010/af/core/refine-libmulticore-bridge.so/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+        ".work/run010/af/core/routing/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json"
       ],
       "import_receipts": [
-        ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json"
+        ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json",
+        ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json"
       ],
       "auto_analysis_completed_receipts": [
-        ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json"
+        ".work/run003/capture/logs/NX500_RUN003_CAPTURE-9d7311f3-5d87-4d1f-9c84-f9a75e4a1aae.json",
+        ".work/run010/af/core/initial/logs/NX500_RUN010_AF-38c8d77b-1065-4c21-97d3-afe41022529f.json"
       ],
       "noanalysis_export_receipts": [
         ".work/run003/capture/followup/logs/NX500_RUN003_CAPTURE-d5e2998f-c8f1-437b-9bee-956109001def.json",
@@ -108400,7 +109763,9 @@
         ".work/run008/sensor/initial/logs/NX500_RUN003_CAPTURE-baf39394-3e04-4b87-897d-4c5e3ccdb6d5.json",
         ".work/run008/sensor/levels/logs/NX500_RUN003_CAPTURE-9c645b50-fdb5-4633-a97c-b1e26a539652.json",
         ".work/run008/sensor/thermometer/logs/NX500_RUN003_CAPTURE-07d57750-9f47-466e-bd59-3505e2f4c51e.json",
-        ".work/run009/sensor/callback/logs/NX500_RUN003_CAPTURE-9dddd3dc-48ed-40ae-8194-ed25506056e8.json"
+        ".work/run009/sensor/callback/logs/NX500_RUN003_CAPTURE-9dddd3dc-48ed-40ae-8194-ed25506056e8.json",
+        ".work/run010/af/core/refine-libmulticore-bridge.so/logs/NX500_RUN010_AF-f759180e-4650-4700-a833-303e67e0306d.json",
+        ".work/run010/af/core/routing/logs/NX500_RUN010_AF-a06f82af-d73a-4ca0-80ed-eeadda7f2851.json"
       ],
       "reviewed_units": [
         {
@@ -108453,6 +109818,24 @@
           ],
           "reviewer": "primary agent",
           "independent_review_completed": false
+        },
+        {
+          "id": "AF010-TRANSPORT",
+          "source_sha256": "f14a12e4d9172989d73c8dff0fd59580c65ccd1972264c9d94c8d1a736820390",
+          "original_path": "/usr/lib/libmulticore-bridge.so",
+          "original_elf_va": "0x7898",
+          "evidence": "analysis/evidence/af-lens-run010.json",
+          "evidence_sha256": "39582784b5860864c39c5b122ada5d9c295b460515cdd7ffba69501c93bb8c42",
+          "method": "Agent static interpretation of completed selected Ghidra C, source-verified PT_LOAD ARM windows, saved TMode contexts and original ELF relocations; separate three-instruction registration callsite where stated",
+          "claim": "Capture SendCommand supplies category 0x83; bridge send fetches CSender, creates a frame and takes immediate-send or destination-not-alive queue branches.",
+          "limitations": [
+            "Frame packing, inferred types, queue lifetime, errors and delivery completion require further review.",
+            "Independent semantic review and runtime observations are not completed."
+          ],
+          "unresolved_questions": [
+            "Frame packing, inferred types, queue lifetime, errors and delivery completion require further review."
+          ],
+          "independent_review_completed": false
         }
       ],
       "decompile_failed_attempts": [],
@@ -108502,6 +109885,21 @@
           "summary_path": ".work/run009/sensor/callback/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
           "pattern": "^(csensor_module::(set_callback|unset_callback|send_callback)|sensorapi::(set_callback|unset_callback|main_loop|start|stop))$",
           "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/af/core/initial/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+          "pattern": "^(ControlLens|Control3A|.*RegisterLensEventListener.*|.*UnregisterLensEventListener.*|.*NotifyLensEvent.*|.*execLensNotify.*|.*CNotifyHandler3Run.*|.*onAFScanDone.*|.*onInitializedFocus.*|.*onLensModeChangeDone.*|.*onLensEvent.*|.*CMCBAdapter4Send.*|.*CMCBAdapter11SendCommand.*|.*CMulticoreBridge4Send.*|.*CMulticoreBridge8Register.*|mcb_register_handler|mcb_send|.*User_Spec_Get_Rtos_Pref_Lens_Info.*|User_Spec_Get_Lens_Property|User_Spec_Get_Lens_Info|.*UI_Mm_Camera_Set_Lens_Callback_Init.*|.*UI_Mm_Camera_Set_Lens_Init.*|.*UI_Set_Lens_Callback_Fn.*|.*UI_Mm_Camera_Set_.*Af.*|.*UI_Mm_Camera_Set_.*AF.*|.*UI_Mm_Camera_Lens_.*)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/af/core/refine-libmulticore-bridge.so/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+          "pattern": "^CMulticoreBridge::send$|^CFrame::(Build|Handle)$",
+          "omitted_by_budget": 0
+        },
+        {
+          "summary_path": ".work/run010/af/core/routing/outputs/ghidra/libmulticore-bridge.so-f14a12e4d917/summary.json",
+          "pattern": "^mm_camera_ioctl$|^CMCBAdapter::(Send|SendCommand|SyncSendCommand|OnReceiveEvent|OnReceived|Initialize|subscribeToMCB)$|^CNotifyHandler::(Run|notifyCategory|subCategory|execLiveviewNotify)$|^CAttributeHandler::getAFScanResult$|^CCommonProperty::(SetFocusScanResult|SetAFResult|GetAFResult)$|^CMulticoreBridge::(Send|Register)$|^CSender::(createFrame|Send)$|^CReceiver::(receive|Subscribe)$|^UI_Mm_Camera_(Set_Ioctl_3A_Caf|Af_Lock|Remove_Lens_Callback)$|^FUN_001e2818$|^FUN_00223db0$",
+          "omitted_by_budget": 0
         }
       ],
       "stages": {
@@ -108514,8 +109912,8 @@
       },
       "function_counts": {
         "mapped_nonexternal_exported": 390,
-        "selected_attempted_unique": 31,
-        "selected_completed_unique": 31,
+        "selected_attempted_unique": 32,
+        "selected_completed_unique": 32,
         "abi_unverified_unique": 390
       },
       "pending_work_units": [
@@ -108526,7 +109924,8 @@
         "What constraints does driver enforce?",
         "When is global byte updated?",
         "Does queued frame reach receiver, and how is completion reported?",
-        "This is static arithmetic conditional on successful receive/allocation, not observed payload delivery."
+        "This is static arithmetic conditional on successful receive/allocation, not observed payload delivery.",
+        "Frame packing, inferred types, queue lifetime, errors and delivery completion require further review."
       ]
     },
     {
@@ -119418,7 +120817,6 @@
         "ui_configuration"
       ],
       "pending_work_units": [
-        "Obtain measured successful auto-analysis receipt; process/noanalysis export cannot establish it",
         "Resolve ABI/types and indirect/runtime call behavior with independent evidence"
       ],
       "rank": 325
@@ -119445,7 +120843,6 @@
         "capture_af_lens"
       ],
       "pending_work_units": [
-        "Obtain measured successful auto-analysis receipt; process/noanalysis export cannot establish it",
         "Resolve ABI/types and indirect/runtime call behavior with independent evidence"
       ],
       "rank": 327
